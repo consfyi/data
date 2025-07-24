@@ -43,7 +43,11 @@ def pred(con):
 json.dump(
     sorted(
         [con for con in cons if pred(con)],
-        key=lambda con: (whenever.Date.parse_common_iso(con["endDate"]), con["id"]),
+        key=lambda con: (
+            whenever.Date.parse_common_iso(con["startDate"]),
+            whenever.Date.parse_common_iso(con["endDate"]),
+            con["id"],
+        ),
     ),
     sys.stdout,
 )

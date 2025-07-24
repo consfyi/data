@@ -50,4 +50,5 @@ json.dump(
         ),
     ),
     sys.stdout,
+    ensure_ascii=False,
 )

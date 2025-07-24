@@ -19,5 +19,5 @@ jobs:
       - run: ./.tools/create_active_json.py > $RUNNER_TEMP/out/active.json
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: "$RUNNER_TEMP/out"
+          path: "${{ runner.temp }}/out"
       - uses: actions/deploy-pages@v4

@@ -1,7 +1,7 @@
 name = "Japan Meeting of Furries 2026"
 url = "http://furrycons.com/event/26241/japan-meeting-of-furries-2026"
-start_date = "2026-01-09"
-end_date = "2026-01-11"
+startDate = "2026-01-09"
+endDate = "2026-01-11"
 address = "Loisir Hotel Toyohashi, Toyohashi, Aichi, Japan"
 country = "JP"
-lat_lng = [34.743506, 137.3703027]
+latLng = [34.743506, 137.3703027]

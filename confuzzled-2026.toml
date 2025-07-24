@@ -1,7 +1,7 @@
 name = "ConFuzzled 2026"
 url = "http://furrycons.com/event/26134/confuzzled-2026"
-start_date = "2026-05-22"
-end_date = "2026-05-26"
+startDate = "2026-05-22"
+endDate = "2026-05-26"
 address = "Hilton Birmingham Metropole, Birmingham, UK"
 country = "GB"
-lat_lng = [52.4505297, -1.7156676]
+latLng = [52.4505297, -1.7156676]

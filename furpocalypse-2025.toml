@@ -1,7 +1,7 @@
 name = "Furpocalypse 2025"
 url = "http://furrycons.com/event/25964/furpocalypse-2025"
-start_date = "2025-10-30"
-end_date = "2025-11-02"
+startDate = "2025-10-30"
+endDate = "2025-11-02"
 address = "Hilton Stamford Hotel & Executive Meeting Center, Stamford, CT, USA"
 country = "US"
-lat_lng = [41.0432058, -73.5503999]
+latLng = [41.0432058, -73.5503999]

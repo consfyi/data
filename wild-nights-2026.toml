@@ -1,7 +1,7 @@
 name = "Wild Nights 2026"
 url = "http://furrycons.com/event/25897/wild-nights-2026"
-start_date = "2026-04-23"
-end_date = "2026-04-28"
+startDate = "2026-04-23"
+endDate = "2026-04-28"
 address = "Robbers Cave State Park, Wilburton, OK, USA"
 country = "US"
-lat_lng = [34.9803592, -95.3500819]
+latLng = [34.9803592, -95.3500819]

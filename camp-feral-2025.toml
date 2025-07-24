@@ -1,7 +1,7 @@
 name = "Camp Feral! 2025"
 url = "http://furrycons.com/event/26010/camp-feral-2025"
-start_date = "2025-08-21"
-end_date = "2025-08-25"
+startDate = "2025-08-21"
+endDate = "2025-08-25"
 address = "Camp Arowhon, Algonquin Park, Ontario, Canada"
 country = "CA"
-lat_lng = [45.5959331, -78.7310513]
+latLng = [45.5959331, -78.7310513]

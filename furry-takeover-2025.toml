@@ -1,7 +1,7 @@
 name = "Furry Takeover 2025"
 url = "http://furrycons.com/event/24518/furry-takeover-2025"
-start_date = "2025-09-26"
-end_date = "2025-09-28"
+startDate = "2025-09-26"
+endDate = "2025-09-28"
 address = "Fontana Village Resort & Marina, Fontana Dam, NC, USA"
 country = "US"
-lat_lng = [35.4325502, -83.821559]
+latLng = [35.4325502, -83.821559]

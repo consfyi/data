@@ -1,7 +1,7 @@
 name = "Painted Desert Fur Con 2026"
 url = "http://furrycons.com/event/26302/painted-desert-fur-con-2026"
-start_date = "2026-01-02"
-end_date = "2026-01-04"
+startDate = "2026-01-02"
+endDate = "2026-01-04"
 address = "Sheraton Phoenix Downtown, Phoenix, AZ, USA"
 country = "US"
-lat_lng = [33.452514, -112.0706161]
+latLng = [33.452514, -112.0706161]

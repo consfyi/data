@@ -1,7 +1,7 @@
 name = "Heartland Howloween 2025"
 url = "http://furrycons.com/event/26063/heartland-howloween-2025"
-start_date = "2025-10-10"
-end_date = "2025-10-12"
+startDate = "2025-10-10"
+endDate = "2025-10-12"
 address = "Comfort Inn & Suites Omaha Central, Omaha, NE, USA"
 country = "US"
-lat_lng = [41.226076, -96.022218]
+latLng = [41.226076, -96.022218]

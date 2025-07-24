@@ -1,7 +1,7 @@
 name = "Anthro Weekend Utah 2025"
 url = "http://furrycons.com/event/25134/anthro-weekend-utah-2025"
-start_date = "2025-08-01"
-end_date = "2025-08-03"
+startDate = "2025-08-01"
+endDate = "2025-08-03"
 address = "Davis Conference Center, Layton, UT, USA"
 country = "US"
-lat_lng = [41.084361, -111.980789]
+latLng = [41.084361, -111.980789]

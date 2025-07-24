@@ -1,7 +1,7 @@
 name = "Spooktacufur 2025"
 url = "http://furrycons.com/event/25962/spooktacufur-2025"
-start_date = "2025-10-25"
-end_date = "2025-10-25"
+startDate = "2025-10-25"
+endDate = "2025-10-25"
 address = "Embassy Suites by Hilton Salt Lake West Valley City, West Valley City, UT, USA"
 country = "US"
-lat_lng = [40.6961989, -111.9608941]
+latLng = [40.6961989, -111.9608941]

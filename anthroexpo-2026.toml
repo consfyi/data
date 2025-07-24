@@ -1,7 +1,7 @@
 name = "AnthroExpo 2026"
 url = "http://furrycons.com/event/25873/anthroexpo-2026"
-start_date = "2026-02-05"
-end_date = "2026-02-08"
+startDate = "2026-02-05"
+endDate = "2026-02-08"
 address = "Embassy Suites by Hilton Norman Hotel & Conference Center, Norman, OK, USA"
 country = "US"
-lat_lng = [35.2436797, -97.4789113]
+latLng = [35.2436797, -97.4789113]

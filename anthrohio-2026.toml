@@ -1,7 +1,7 @@
 name = "AnthrOhio 2026"
 url = "http://furrycons.com/event/25880/anthrohio-2026"
-start_date = "2026-05-22"
-end_date = "2026-05-24"
+startDate = "2026-05-22"
+endDate = "2026-05-24"
 address = "Hilton Columbus Downtown, Columbus, OH, USA"
 country = "US"
-lat_lng = [39.9707463, -83.0018939]
+latLng = [39.9707463, -83.0018939]

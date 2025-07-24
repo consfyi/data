@@ -1,7 +1,7 @@
 name = "Awoostria 2025"
 url = "http://furrycons.com/event/25220/awoostria-2025"
-start_date = "2025-07-24"
-end_date = "2025-07-27"
+startDate = "2025-07-24"
+endDate = "2025-07-27"
 address = "Arcotel Wimberger Wien, Vienna, Austria"
 country = "AT"
-lat_lng = [48.2006444, 16.3384067]
+latLng = [48.2006444, 16.3384067]

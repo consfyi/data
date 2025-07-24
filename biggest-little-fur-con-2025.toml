@@ -1,7 +1,7 @@
 name = "Biggest Little Fur Con 2025"
 url = "http://furrycons.com/event/25877/biggest-little-fur-con-2025"
-start_date = "2025-10-13"
-end_date = "2025-10-16"
+startDate = "2025-10-13"
+endDate = "2025-10-16"
 address = "Grand Sierra Resort and Casino, Reno, NV, USA"
 country = "US"
-lat_lng = [39.5233959, -119.77935]
+latLng = [39.5233959, -119.77935]

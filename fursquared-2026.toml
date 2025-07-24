@@ -1,7 +1,7 @@
 name = "FurSquared 2026"
 url = "http://furrycons.com/event/26023/fursquared-2026"
-start_date = "2026-02-05"
-end_date = "2026-02-08"
+startDate = "2026-02-05"
+endDate = "2026-02-08"
 address = "Hilton Milwaukee City Center, Milwaukee, WI, USA"
 country = "US"
-lat_lng = [43.0384665, -87.9182643]
+latLng = [43.0384665, -87.9182643]

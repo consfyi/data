@@ -1,7 +1,7 @@
 name = "Pawstral 2025"
 url = "http://furrycons.com/event/25789/pawstral-2025"
-start_date = "2025-08-29"
-end_date = "2025-08-31"
+startDate = "2025-08-29"
+endDate = "2025-08-31"
 address = "Icon Hotel Santiago, Las Condes, Chile"
 country = "CL"
-lat_lng = [-33.4078048, -70.5680306]
+latLng = [-33.4078048, -70.5680306]

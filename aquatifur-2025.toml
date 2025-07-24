@@ -1,7 +1,7 @@
 name = "AquatiFur 2025"
 url = "http://furrycons.com/event/25478/aquatifur-2025"
-start_date = "2025-11-07"
-end_date = "2025-11-09"
+startDate = "2025-11-07"
+endDate = "2025-11-09"
 address = "Chula Vista Resort - Wisconsin Dells Waterpark Resort, Wisconsin Dells, WI, USA"
 country = "US"
-lat_lng = [43.666426, -89.7858552]
+latLng = [43.666426, -89.7858552]

@@ -1,7 +1,7 @@
 name = "Wild North 2025"
 url = "http://furrycons.com/event/25992/wild-north-2025"
-start_date = "2025-09-26"
-end_date = "2025-09-29"
+startDate = "2025-09-26"
+endDate = "2025-09-29"
 address = "Lumley Castle, Chester-le-Street, UK"
 country = "GB"
-lat_lng = [54.8533855, -1.5532119]
+latLng = [54.8533855, -1.5532119]

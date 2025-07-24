@@ -1,7 +1,7 @@
 name = "Another Furry Con 2025"
 url = "http://furrycons.com/event/25548/another-furry-con-2025"
-start_date = "2025-09-19"
-end_date = "2025-09-21"
+startDate = "2025-09-19"
+endDate = "2025-09-21"
 address = "Ontario Convention Center, Ontario, CA, USA"
 country = "US"
-lat_lng = [34.0658075, -117.6067298]
+latLng = [34.0658075, -117.6067298]

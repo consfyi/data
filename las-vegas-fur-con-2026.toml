@@ -1,7 +1,7 @@
 name = "Las Vegas Fur Con 2026"
 url = "http://furrycons.com/event/26132/las-vegas-fur-con-2026"
-start_date = "2026-04-02"
-end_date = "2026-04-05"
+startDate = "2026-04-02"
+endDate = "2026-04-05"
 address = "Alexis Park Resort, Las Vegas, NV, USA"
 country = "US"
-lat_lng = [36.1073746, -115.1566743]
+latLng = [36.1073746, -115.1566743]

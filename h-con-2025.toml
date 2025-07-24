@@ -1,7 +1,7 @@
 name = "H-Con 2025"
 url = "http://furrycons.com/event/26061/h-con-2025"
-start_date = "2025-10-01"
-end_date = "2025-10-05"
+startDate = "2025-10-01"
+endDate = "2025-10-05"
 address = "Petershof, Erbach, Germany"
 country = "DE"
-lat_lng = [49.6404757, 9.0459292]
+latLng = [49.6404757, 9.0459292]

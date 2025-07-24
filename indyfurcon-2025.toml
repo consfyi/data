@@ -1,7 +1,7 @@
 name = "IndyFurCon 2025"
 url = "http://furrycons.com/event/25911/indyfurcon-2025"
-start_date = "2025-08-15"
-end_date = "2025-08-17"
+startDate = "2025-08-15"
+endDate = "2025-08-17"
 address = "Wyndham Indianapolis Airport, Indianapolis, IN, USA"
 country = "US"
-lat_lng = [39.7290633, -86.2586527]
+latLng = [39.7290633, -86.2586527]

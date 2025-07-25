@@ -4,13 +4,16 @@ on:
     - cron: "0 * * * *"
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   import:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
-          token: ${{ secrets.GITHUB_TOKEN }
+          token: ${{ secrets.GITHUB_TOKEN }}
       - uses: astral-sh/setup-uv@v6
       - run: |
           git config --global user.name "cons.fyi GitHub bot"

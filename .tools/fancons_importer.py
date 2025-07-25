@@ -182,7 +182,7 @@ async def main():
                     "url": url,
                     "startDate": start_date.isoformat(),
                     "endDate": end_date.isoformat(),
-                    "address": full_address,
+                    "location": full_address,
                     "country": country_code,
                     "latLng": lat_lng,
                     "source": "fancons.com",

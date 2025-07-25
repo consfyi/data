@@ -85,7 +85,7 @@ with open(OUTPUT_DIR / "calendar.ics", "w") as f:
         f.write(f"DTEND;VALUE=DATE:{end_date}\r\n")
         f.write(f"DTSTAMP:{dtstamp}\r\n")
         f.write(f"URL:{con['url']}\r\n")
-        f.write(f"LOCATION:{con['address']}\r\n")
+        f.write(f"LOCATION:{con['location']}\r\n")
         f.write("END:VEVENT\r\n")
     f.write("END:VCALENDAR\r\n")
 

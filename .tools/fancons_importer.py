@@ -7,7 +7,6 @@
 #   "googlemaps",
 #   "PyICU",
 #   "regex",
-#   "toml",
 # ]
 # ///
 import asyncio
@@ -23,7 +22,6 @@ import logging
 import pathlib
 import regex
 import os
-import toml
 import typing
 import unicodedata
 import xml.etree.ElementTree as ET
@@ -135,7 +133,7 @@ async def main():
                     raise ValueError(f"Unknown country: {country_name}")
 
                 event_id = slugify(name, guess_language_for_region(country_code))
-                path = pathlib.Path(OUTPUT_DIR) / f"{event_id}.toml"
+                path = pathlib.Path(OUTPUT_DIR) / f"{event_id}.json"
 
                 if status not in [
                     "https://schema.org/EventScheduled",
@@ -144,10 +142,15 @@ async def main():
                     canceled = True
                     if path.exists():
                         with open(path, "r") as f:
-                            con = toml.load(f)
+                            con = json.load(f)
                         con["canceled"] = canceled
                         with atomicwrites.atomic_write(path, overwrite=True) as f:
-                            toml.dump(con, f)
+                            json.dump(
+                                con,
+                                f,
+                                ensure_ascii=False,
+                                indent=2,
+                            )
                         logging.info(f"Canceled: {path}")
                         continue
 
@@ -182,14 +185,18 @@ async def main():
                     "address": full_address,
                     "country": country_code,
                     "latLng": lat_lng,
-                    "previousId": None,
                     "source": "fancons.com",
                 }
                 if canceled:
                     event_data["canceled"] = True
 
                 with atomicwrites.atomic_write(path, overwrite=True) as f:
-                    toml.dump(event_data, f)
+                    json.dump(
+                        event_data,
+                        f,
+                        ensure_ascii=False,
+                        indent=2,
+                    )
 
                 logging.info(f"Added: {path}")
 

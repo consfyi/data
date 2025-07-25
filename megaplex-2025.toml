@@ -1,8 +1,8 @@
 name = "Megaplex 2025"
-url = "http://furrycons.com/event/25484/megaplex-2025"
+url = "https://megaplexcon.org"
 startDate = "2025-08-30"
 endDate = "2025-09-01"
 address = "Hyatt Regency Orlando, Orlando, FL, USA"
 country = "US"
-latLng = [ 28.4271946, -81.46749,]
+latLng = [28.4271946, -81.46749]
 source = "fancons.com"

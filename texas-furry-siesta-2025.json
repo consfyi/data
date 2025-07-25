@@ -1,15 +1,10 @@
 {
   "name": "Texas Furry Siesta 2025",
-  "url": "http://furrycons.com/event/25353/texas-furry-siesta-2025",
+  "url": "https://www.furrysiesta.org",
   "startDate": "2025-08-14",
   "endDate": "2025-08-17",
   "location": "Hyatt Regency Dallas, Dallas, TX, USA",
   "country": "US",
-  "latLng": [
-    32.7755992,
-    -96.809601
-  ],
-  "sources": [
-    "fancons.com"
-  ]
+  "latLng": [32.7755992, -96.809601],
+  "sources": ["fancons.com"]
 }

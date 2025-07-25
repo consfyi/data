@@ -4,4 +4,4 @@ startDate = "2025-11-21"
 endDate = "2025-11-23"
 address = "Holiday Inn Auckland Airport, Auckland, New Zealand"
 country = "NZ"
-latLng = [-36.9731132, 174.7855693]
+latLng = [ -36.9731132, 174.7855693,]

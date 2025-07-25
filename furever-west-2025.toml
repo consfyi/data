@@ -4,4 +4,4 @@ startDate = "2025-09-19"
 endDate = "2025-09-21"
 address = "Hilton Garden Inn Laramie, Laramie, WY, USA"
 country = "US"
-latLng = [41.3101524, -105.5638466]
+latLng = [ 41.3101524, -105.5638466,]

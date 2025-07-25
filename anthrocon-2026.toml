@@ -4,4 +4,4 @@ startDate = "2026-07-02"
 endDate = "2026-07-05"
 address = "David L. Lawrence Convention Center, Pittsburgh, PA, USA"
 country = "US"
-latLng = [40.4456408, -79.9963595]
+latLng = [ 40.4456408, -79.9963595,]

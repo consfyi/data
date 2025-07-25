@@ -4,4 +4,4 @@ startDate = "2026-01-02"
 endDate = "2026-01-04"
 address = "Sheraton Phoenix Downtown, Phoenix, AZ, USA"
 country = "US"
-latLng = [33.452514, -112.0706161]
+latLng = [ 33.452514, -112.0706161,]

@@ -4,4 +4,4 @@ startDate = "2026-02-05"
 endDate = "2026-02-08"
 address = "Hilton Milwaukee City Center, Milwaukee, WI, USA"
 country = "US"
-latLng = [43.0384665, -87.9182643]
+latLng = [ 43.0384665, -87.9182643,]

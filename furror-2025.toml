@@ -4,4 +4,4 @@ startDate = "2025-10-10"
 endDate = "2025-10-12"
 address = "Boutique Hotel's III Piłsudskiego, Łódź, Poland"
 country = "PL"
-latLng = [51.7601428, 19.460568]
+latLng = [ 51.7601428, 19.460568,]

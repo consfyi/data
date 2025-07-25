@@ -4,4 +4,4 @@ startDate = "2025-10-31"
 endDate = "2025-11-02"
 address = "Fullon Hotel Lihpao Land, Taichung City, Taiwan"
 country = "TW"
-latLng = [24.3236953, 120.6963401]
+latLng = [ 24.3236953, 120.6963401,]

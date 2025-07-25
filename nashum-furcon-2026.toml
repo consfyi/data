@@ -4,4 +4,4 @@ startDate = "2026-05-22"
 endDate = "2026-05-24"
 address = "Sheraton Music City Nashville Airport, Nashville, TN, USA"
 country = "US"
-latLng = [36.144359, -86.6830745]
+latLng = [ 36.144359, -86.6830745,]

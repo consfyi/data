@@ -4,4 +4,4 @@ startDate = "2026-01-29"
 endDate = "2026-02-01"
 address = "Sole Gjestegård, Noresund, Norway"
 country = "NO"
-latLng = [60.1755457, 9.6308097]
+latLng = [ 60.1755457, 9.6308097,]

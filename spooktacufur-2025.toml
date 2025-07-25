@@ -4,4 +4,4 @@ startDate = "2025-10-25"
 endDate = "2025-10-25"
 address = "Embassy Suites by Hilton Salt Lake West Valley City, West Valley City, UT, USA"
 country = "US"
-latLng = [40.6961989, -111.9608941]
+latLng = [ 40.6961989, -111.9608941,]

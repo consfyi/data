@@ -4,4 +4,4 @@ startDate = "2025-08-29"
 endDate = "2025-08-31"
 address = "Icon Hotel Santiago, Las Condes, Chile"
 country = "CL"
-latLng = [-33.4078048, -70.5680306]
+latLng = [ -33.4078048, -70.5680306,]

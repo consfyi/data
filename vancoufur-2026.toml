@@ -4,4 +4,4 @@ startDate = "2026-03-05"
 endDate = "2026-03-08"
 address = "Richmond Conference Centre, Richmond, British Columbia, Canada"
 country = "CA"
-latLng = [49.1710571, -123.1414519]
+latLng = [ 49.1710571, -123.1414519,]

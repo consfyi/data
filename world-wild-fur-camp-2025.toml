@@ -4,4 +4,4 @@ startDate = "2025-10-17"
 endDate = "2025-10-19"
 address = "YMCA Camp Willson, Bellefontaine, OH, USA"
 country = "US"
-latLng = [40.3537857, -83.8093439]
+latLng = [ 40.3537857, -83.8093439,]

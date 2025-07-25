@@ -4,4 +4,4 @@ startDate = "2025-09-03"
 endDate = "2025-09-06"
 address = "Congress Center Hamburg, Hamburg, Germany"
 country = "DE"
-latLng = [53.561764, 9.9857445]
+latLng = [ 53.561764, 9.9857445,]

@@ -4,4 +4,4 @@ startDate = "2025-09-17"
 endDate = "2025-09-21"
 address = "Ringberg Hotel Suhl, Suhl, Germany"
 country = "DE"
-latLng = [50.6169277, 10.7229427]
+latLng = [ 50.6169277, 10.7229427,]

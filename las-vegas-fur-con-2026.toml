@@ -4,4 +4,4 @@ startDate = "2026-04-02"
 endDate = "2026-04-05"
 address = "Alexis Park Resort, Las Vegas, NV, USA"
 country = "US"
-latLng = [36.1073746, -115.1566743]
+latLng = [ 36.1073746, -115.1566743,]

@@ -1,6 +1,9 @@
 # data.cons.fyi
 
-This repository contains all the convention data for cons.fyi.
+This repository contains all the convention data for [cons.fyi](https://cons.fyi).
+
+The following files are materialized:
+- [data.cons.fyi/active.json](https://data.cons.fyi/active.json): A JSON file containing all current or upcoming cons.
 
 ## Usage of data from FanCons.com
 

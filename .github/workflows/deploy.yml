@@ -29,3 +29,6 @@ jobs:
         with:
           path: "${{ runner.temp }}/out"
       - uses: actions/deploy-pages@v4
+      - run: curl --fail-with-body -u $TRIGGER_KEY -XPOST https://bsky-labeler.cons.fyi/trigger
+        env:
+          TRIGGER_KEY: ${{ secrets.TRIGGER_KEY }}

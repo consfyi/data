@@ -37,7 +37,7 @@ def pred(con):
         .at(whenever.Time(12, 0))
         .assume_tz(con["timezone"] if "timezone" in con else "Utc")
     )
-    return now < end_date.add(days=7)
+    return now < end_date.add(days=7) and not con.get("canceled", False)
 
 
 json.dump(

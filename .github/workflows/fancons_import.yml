@@ -19,6 +19,8 @@ jobs:
           git config --global user.name "cons.fyi GitHub bot"
           git config --global user.email "github@cons.fyi"
       - run: ./.tools/fancons_importer.py
+        env:
+          GOOGLE_MAPS_API_KEY: ${{ secrets.GOOGLE_MAPS_API_KEY }}
       - run: |
           git add .
           git diff-index --quiet HEAD || git commit -m "Automated update from script"

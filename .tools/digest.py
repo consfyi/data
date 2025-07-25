@@ -58,7 +58,7 @@ active.sort(
     )
 )
 
-now = whenever.Instant.now().to_tz("Utc")
+now = whenever.Instant.now().to_tz("UTC")
 
 with open(OUTPUT_DIR / "calendar.ics", "w") as f:
     f.write("BEGIN:VCALENDAR\r\n")

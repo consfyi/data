@@ -5,3 +5,4 @@ endDate = "2025-10-06"
 address = "Robbers Cave State Park, Wilburton, OK, USA"
 country = "US"
 latLng = [ 34.9803592, -95.3500819,]
+source = "fancons.com"

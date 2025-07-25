@@ -5,3 +5,4 @@ endDate = "2026-01-04"
 address = "Hyatt Regency Seattle, Seattle, WA, USA"
 country = "US"
 latLng = [ 47.6145295, -122.3342642,]
+source = "fancons.com"

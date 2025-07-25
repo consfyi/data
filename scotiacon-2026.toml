@@ -5,3 +5,4 @@ endDate = "2026-02-09"
 address = "Crowne Plaza Glasgow, Glasgow, UK"
 country = "GB"
 latLng = [ 55.8597859, -4.2897379,]
+source = "fancons.com"

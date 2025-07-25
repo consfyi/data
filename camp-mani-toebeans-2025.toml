@@ -5,3 +5,4 @@ endDate = "2025-09-01"
 address = "Camp Wasaga, Onanole, Manitoba, Canada"
 country = "CA"
 latLng = [ 50.6643164, -100.0189377,]
+source = "fancons.com"

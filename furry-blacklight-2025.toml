@@ -5,3 +5,4 @@ endDate = "2025-11-02"
 address = "H4 Hotel Wyndham Paris Pleyel Resort, Saint-Denis, France"
 country = "FR"
 latLng = [ 48.9201886, 2.3452041,]
+source = "fancons.com"

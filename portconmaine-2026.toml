@@ -5,3 +5,4 @@ endDate = "2026-06-28"
 address = "Holiday Inn Portland-By The Bay, Portland, ME, USA"
 country = "US"
 latLng = [ 43.6534888, -70.2608888,]
+source = "fancons.com"

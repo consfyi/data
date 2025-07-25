@@ -5,3 +5,4 @@ endDate = "2026-01-18"
 address = "The Westin Boston Seaport District, Boston, MA, USA"
 country = "US"
 latLng = [ 42.3459634, -71.0433385,]
+source = "fancons.com"

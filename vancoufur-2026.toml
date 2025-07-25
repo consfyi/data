@@ -5,3 +5,4 @@ endDate = "2026-03-08"
 address = "Richmond Conference Centre, Richmond, British Columbia, Canada"
 country = "CA"
 latLng = [ 49.1710571, -123.1414519,]
+source = "fancons.com"

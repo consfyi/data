@@ -5,3 +5,4 @@ endDate = "2025-11-30"
 address = "Amber Hotel Gdańsk, Gdańsk, Poland"
 country = "PL"
 latLng = [ 54.3580297, 18.6215472,]
+source = "fancons.com"

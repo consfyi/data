@@ -5,3 +5,4 @@ endDate = "2025-11-09"
 address = "DoubleTree by Hilton Hotel San Jose, San Jose, CA, USA"
 country = "US"
 latLng = [ 37.3718206, -121.9228001,]
+source = "fancons.com"

@@ -5,3 +5,4 @@ endDate = "2025-09-21"
 address = "Ontario Convention Center, Ontario, CA, USA"
 country = "US"
 latLng = [ 34.0658075, -117.6067298,]
+source = "fancons.com"

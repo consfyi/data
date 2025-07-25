@@ -5,3 +5,4 @@ endDate = "2025-11-02"
 address = "Hilton Stamford Hotel & Executive Meeting Center, Stamford, CT, USA"
 country = "US"
 latLng = [ 41.0432058, -73.5503999,]
+source = "fancons.com"

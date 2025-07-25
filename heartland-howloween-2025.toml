@@ -5,3 +5,4 @@ endDate = "2025-10-12"
 address = "Comfort Inn & Suites Omaha Central, Omaha, NE, USA"
 country = "US"
 latLng = [ 41.226076, -96.022218,]
+source = "fancons.com"

@@ -5,3 +5,4 @@ endDate = "2025-08-31"
 address = "Memphis Vitality Hotel, Memphis, TN, USA"
 country = "US"
 latLng = [ 35.0768111, -89.903563,]
+source = "fancons.com"

@@ -5,3 +5,4 @@ endDate = "2025-10-12"
 address = "Embassy Suites by Hilton San Marcos Hotel Conference Center, San Marcos, TX, USA"
 country = "US"
 latLng = [ 29.839588, -97.9695576,]
+source = "fancons.com"

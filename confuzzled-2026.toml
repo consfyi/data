@@ -5,3 +5,4 @@ endDate = "2026-05-26"
 address = "Hilton Birmingham Metropole, Birmingham, UK"
 country = "GB"
 latLng = [ 52.4505297, -1.7156676,]
+source = "fancons.com"

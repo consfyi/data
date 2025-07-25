@@ -5,3 +5,4 @@ endDate = "2025-12-07"
 address = "Donald E. Stephens Convention Center, Rosemont, IL, USA"
 country = "US"
 latLng = [ 41.9792212, -87.8611418,]
+source = "fancons.com"

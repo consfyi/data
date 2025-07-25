@@ -5,3 +5,4 @@ endDate = "2025-09-13"
 address = "Sears think[box], Cleveland, OH, USA"
 country = "US"
 latLng = [ 41.5005593, -81.6056834,]
+source = "fancons.com"

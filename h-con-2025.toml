@@ -5,3 +5,4 @@ endDate = "2025-10-05"
 address = "Petershof, Erbach, Germany"
 country = "DE"
 latLng = [ 49.6404757, 9.0459292,]
+source = "fancons.com"

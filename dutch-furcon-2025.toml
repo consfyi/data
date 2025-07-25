@@ -5,3 +5,4 @@ endDate = "2025-08-10"
 address = "Vakantiepark de Oude Molen, Groesbeek, Netherlands"
 country = "NL"
 latLng = [ 51.7845123, 5.9351461,]
+source = "fancons.com"

@@ -5,3 +5,4 @@ endDate = "2026-05-24"
 address = "Hilton Columbus Downtown, Columbus, OH, USA"
 country = "US"
 latLng = [ 39.9707463, -83.0018939,]
+source = "fancons.com"

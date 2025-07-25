@@ -5,3 +5,4 @@ endDate = "2026-09-06"
 address = "The Glenmore Inn & Convention Centre, Calgary, Alberta, Canada"
 country = "CA"
 latLng = [ 50.9802653, -113.9969993,]
+source = "fancons.com"

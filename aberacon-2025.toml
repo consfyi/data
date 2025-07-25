@@ -5,3 +5,4 @@ endDate = "2025-08-24"
 address = "Best Western Aberavon Beach Hotel, Port Talbot, UK"
 country = "GB"
 latLng = [ 51.5934371, -3.8149078,]
+source = "fancons.com"

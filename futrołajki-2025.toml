@@ -5,3 +5,4 @@ endDate = "2025-11-16"
 address = "Grand Hotel Kielce, Kielce, Poland"
 country = "PL"
 latLng = [ 50.8742279, 20.6202811,]
+source = "fancons.com"

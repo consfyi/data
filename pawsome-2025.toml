@@ -5,3 +5,4 @@ endDate = "2025-10-06"
 address = "Mercure Gloucester Bowden Hall Hotel, Gloucester, UK"
 country = "GB"
 latLng = [ 51.8340083, -2.1883852,]
+source = "fancons.com"

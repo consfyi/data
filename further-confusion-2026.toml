@@ -5,3 +5,4 @@ endDate = "2026-01-19"
 address = "San Jose McEnery Convention Center, San Jose, CA, USA"
 country = "US"
 latLng = [ 37.329061, -121.8888761,]
+source = "fancons.com"

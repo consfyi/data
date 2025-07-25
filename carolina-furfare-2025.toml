@@ -5,3 +5,4 @@ endDate = "2025-11-09"
 address = "Hickory Metro Convention Center, Hickory, NC, USA"
 country = "US"
 latLng = [ 35.7091466, -81.3040744,]
+source = "fancons.com"

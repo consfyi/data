@@ -5,3 +5,4 @@ endDate = "2025-07-27"
 address = "ParkRoyal Parramatta, Parramatta, New South Wales, Australia"
 country = "AU"
 latLng = [ -33.8122336, 151.0050208,]
+source = "fancons.com"

@@ -5,3 +5,4 @@ endDate = "2025-08-03"
 address = "Davis Conference Center, Layton, UT, USA"
 country = "US"
 latLng = [ 41.084361, -111.980789,]
+source = "fancons.com"

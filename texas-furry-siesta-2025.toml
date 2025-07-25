@@ -5,3 +5,4 @@ endDate = "2025-08-17"
 address = "Hyatt Regency Dallas, Dallas, TX, USA"
 country = "US"
 latLng = [ 32.7755992, -96.809601,]
+source = "fancons.com"

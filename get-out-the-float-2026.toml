@@ -5,3 +5,4 @@ endDate = "2026-02-15"
 address = "Seaside Civic & Convention Center, Seaside, OR, USA"
 country = "US"
 latLng = [ 45.9941334, -123.9253055,]
+source = "fancons.com"

@@ -5,3 +5,4 @@ endDate = "2025-09-07"
 address = "Hyatt Regency Minneapolis, Minneapolis, MN, USA"
 country = "US"
 latLng = [ 44.9706891, -93.2784744,]
+source = "fancons.com"

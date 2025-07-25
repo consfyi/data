@@ -5,3 +5,4 @@ endDate = "2026-03-01"
 address = "Almacruz Hotel y Centro de Convenciones, Santiago, Chile"
 country = "CL"
 latLng = [ -33.442136, -70.6474291,]
+source = "fancons.com"

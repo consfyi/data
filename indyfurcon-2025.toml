@@ -5,3 +5,4 @@ endDate = "2025-08-17"
 address = "Wyndham Indianapolis Airport, Indianapolis, IN, USA"
 country = "US"
 latLng = [ 39.7290633, -86.2586527,]
+source = "fancons.com"

@@ -5,3 +5,4 @@ endDate = "2026-02-08"
 address = "Embassy Suites by Hilton Norman Hotel & Conference Center, Norman, OK, USA"
 country = "US"
 latLng = [ 35.2436797, -97.4789113,]
+source = "fancons.com"

@@ -5,3 +5,4 @@ endDate = "2026-05-17"
 address = "Van der Valk Hotel Mons Congrès & Spa, Mons, Belgium"
 country = "BE"
 latLng = [ 50.4563266, 3.9406037,]
+source = "fancons.com"

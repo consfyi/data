@@ -5,3 +5,4 @@ endDate = "2025-08-03"
 address = "Hilton Strasbourg, Strasbourg, France"
 country = "FR"
 latLng = [ 48.5969119, 7.7550027,]
+source = "fancons.com"

@@ -1,0 +1,22 @@
+name: fancons_import
+on:
+  schedule:
+    - cron: "0 * * * *"
+  workflow_dispatch:
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }
+      - uses: astral-sh/setup-uv@v6
+      - run: |
+          git config --global user.name "cons.fyi GitHub bot"
+          git config --global user.email "github@cons.fyi"
+      - run: ./.tools/fancons_importer.py
+      - run: |
+          git add .
+          git diff-index --quiet HEAD || git commit -m "Automated update from script"
+          git push

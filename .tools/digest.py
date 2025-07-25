@@ -58,14 +58,14 @@ active.sort(
     )
 )
 
+now = whenever.Instant.now().to_tz("Utc")
 
 with open(OUTPUT_DIR / "calendar.ics", "w") as f:
-    f.write("BEGIN:VCALENDAR\n")
-    f.write("VERSION:2.0\n")
-    f.write("PRODID:-//cons.fyi//EN\n")
-    f.write("X-WR-CALNAME:cons.fyi\n")
+    f.write("BEGIN:VCALENDAR\r\n")
+    f.write("VERSION:2.0\r\n")
+    f.write("PRODID:-//cons.fyi//EN\r\n")
+    f.write("X-WR-CALNAME:cons.fyi\r\n")
     for con in active:
-        timezone = con.get("timezone", "Utc")
         start_date = (
             whenever.Date.parse_common_iso(con["startDate"])
             .py_date()
@@ -77,15 +77,17 @@ with open(OUTPUT_DIR / "calendar.ics", "w") as f:
             .py_date()
             .strftime("%Y%m%d")
         )
-        f.write("BEGIN:VEVENT\n")
-        f.write(f"UID:{con['id']}\n")
-        f.write(f"SUMMARY:{con['name']}\n")
-        f.write(f"DTSTART;TZID={timezone};VALUE=DATE:{start_date}\n")
-        f.write(f"DTEND;TZID={timezone};VALUE=DATE:{end_date}\n")
-        f.write(f"URL:{con['url']}\n")
-        f.write(f"LOCATION:{con['address']}\n")
-        f.write("END:VEVENT\n")
-    f.write("END:VCALENDAR\n")
+        dtstamp = now.py_datetime().strftime("%Y%m%dT%H%M%SZ")
+        f.write("BEGIN:VEVENT\r\n")
+        f.write(f"UID:{con['id']}\r\n")
+        f.write(f"SUMMARY:{con['name']}\r\n")
+        f.write(f"DTSTART;VALUE=DATE:{start_date}\r\n")
+        f.write(f"DTEND;VALUE=DATE:{end_date}\r\n")
+        f.write(f"DTSTAMP:{dtstamp}\r\n")
+        f.write(f"URL:{con['url']}\r\n")
+        f.write(f"LOCATION:{con['address']}\r\n")
+        f.write("END:VEVENT\r\n")
+    f.write("END:VCALENDAR\r\n")
 
 with open(OUTPUT_DIR / "active.json", "w") as f:
     json.dump(

@@ -13,7 +13,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -23,8 +23,17 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: astral-sh/setup-uv@v6
+      - run: |
+          git config --global user.name "cons.fyi GitHub bot"
+          git config --global user.email "github@cons.fyi"
       - run: mkdir $RUNNER_TEMP/out
-      - run: ./.tools/create_active_json.py > $RUNNER_TEMP/out/active.json
+      - run: ./.tools/digest.py
+        env:
+          OUTPUT_DIR: "${{ runner.temp }}/out"
+      - run: |
+          git add .
+          git diff-index --quiet HEAD || git commit -m "via digest"
+          git push
       - uses: actions/upload-pages-artifact@v3
         with:
           path: "${{ runner.temp }}/out"

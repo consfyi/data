@@ -9,5 +9,8 @@
     42.3459634,
     -71.0433385
   ],
-  "source": "fancons.com"
+  "sources": [
+    "fancons.com",
+    "coyo.tl"
+  ]
 }

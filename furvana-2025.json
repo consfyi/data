@@ -1,6 +1,6 @@
 {
   "name": "Furvana 2025",
-  "url": "http://furrycons.com/event/25983/furvana-2025",
+  "url": "https://www.furvana.org",
   "startDate": "2025-09-05",
   "endDate": "2025-09-07",
   "location": "Ocean Shores Convention Center, Ocean Shores, WA, USA",
@@ -9,5 +9,8 @@
     47.0084857,
     -124.1635001
   ],
-  "source": "fancons.com"
+  "sources": [
+    "fancons.com",
+    "coyo.tl"
+  ]
 }

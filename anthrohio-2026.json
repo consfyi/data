@@ -1,6 +1,6 @@
 {
   "name": "AnthrOhio 2026",
-  "url": "http://furrycons.com/event/25880/anthrohio-2026",
+  "url": "https://anthrohio.org",
   "startDate": "2026-05-22",
   "endDate": "2026-05-24",
   "location": "Hilton Columbus Downtown, Columbus, OH, USA",
@@ -9,5 +9,8 @@
     39.9707463,
     -83.0018939
   ],
-  "source": "fancons.com"
+  "sources": [
+    "fancons.com",
+    "coyo.tl"
+  ]
 }

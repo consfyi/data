@@ -1,6 +1,6 @@
 {
   "name": "Confuror 2025",
-  "url": "http://furrycons.com/event/26051/confuror-2025",
+  "url": "https://confuror.org",
   "startDate": "2025-10-23",
   "endDate": "2025-10-26",
   "location": "Expo Guadalajara, Guadalajara, JAL, Mexico",
@@ -9,5 +9,8 @@
     20.6529938,
     -103.3917165
   ],
-  "source": "fancons.com"
+  "sources": [
+    "fancons.com",
+    "coyo.tl"
+  ]
 }

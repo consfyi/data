@@ -1,6 +1,6 @@
 {
   "name": "H-Con 2025",
-  "url": "http://furrycons.com/event/26061/h-con-2025",
+  "url": "https://h-con.org",
   "startDate": "2025-10-01",
   "endDate": "2025-10-05",
   "location": "Petershof, Erbach, Germany",
@@ -9,5 +9,8 @@
     49.6404757,
     9.0459292
   ],
-  "source": "fancons.com"
+  "sources": [
+    "fancons.com",
+    "coyo.tl"
+  ]
 }

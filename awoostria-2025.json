@@ -1,6 +1,6 @@
 {
   "name": "Awoostria 2025",
-  "url": "http://furrycons.com/event/25220/awoostria-2025",
+  "url": "https://awoostria.at",
   "startDate": "2025-07-24",
   "endDate": "2025-07-27",
   "location": "Arcotel Wimberger Wien, Vienna, Austria",
@@ -9,5 +9,8 @@
     48.2006444,
     16.3384067
   ],
-  "source": "fancons.com"
+  "sources": [
+    "fancons.com",
+    "coyo.tl"
+  ]
 }

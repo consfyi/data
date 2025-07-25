@@ -1,6 +1,6 @@
 {
   "name": "Japan Meeting of Furries 2026",
-  "url": "http://furrycons.com/event/26241/japan-meeting-of-furries-2026",
+  "url": "https://www.jmof.jp",
   "startDate": "2026-01-09",
   "endDate": "2026-01-11",
   "location": "Loisir Hotel Toyohashi, Toyohashi, Aichi, Japan",
@@ -9,5 +9,8 @@
     34.743506,
     137.3703027
   ],
-  "source": "fancons.com"
+  "sources": [
+    "fancons.com",
+    "coyo.tl"
+  ]
 }

@@ -1,6 +1,6 @@
 {
   "name": "Furror 2025",
-  "url": "http://furrycons.com/event/26209/furror-2025",
+  "url": "https://furror.pl",
   "startDate": "2025-10-10",
   "endDate": "2025-10-12",
   "location": "Boutique Hotel's III Piłsudskiego, Łódź, Poland",
@@ -9,5 +9,8 @@
     51.7601428,
     19.460568
   ],
-  "source": "fancons.com"
+  "sources": [
+    "fancons.com",
+    "coyo.tl"
+  ]
 }

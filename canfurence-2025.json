@@ -1,6 +1,6 @@
 {
   "name": "CanFURence 2025",
-  "url": "http://furrycons.com/event/24718/canfurence-2025",
+  "url": "https://www.canfurence.ca",
   "startDate": "2025-08-01",
   "endDate": "2025-08-03",
   "location": "Delta Hotels by Marriott Ottawa City Centre, Ottawa, Ontario, Canada",
@@ -9,5 +9,8 @@
     45.4186734,
     -75.7042909
   ],
-  "source": "fancons.com"
+  "sources": [
+    "fancons.com",
+    "coyo.tl"
+  ]
 }

@@ -1,6 +1,6 @@
 {
   "name": "VancouFur 2026",
-  "url": "http://furrycons.com/event/26299/vancoufur-2026",
+  "url": "https://vancoufur.org",
   "startDate": "2026-03-05",
   "endDate": "2026-03-08",
   "location": "Richmond Conference Centre, Richmond, British Columbia, Canada",
@@ -9,5 +9,8 @@
     49.1710571,
     -123.1414519
   ],
-  "source": "fancons.com"
+  "sources": [
+    "fancons.com",
+    "coyo.tl"
+  ]
 }

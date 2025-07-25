@@ -1,6 +1,6 @@
 {
   "name": "Anthro Weekend Utah 2025",
-  "url": "http://furrycons.com/event/25134/anthro-weekend-utah-2025",
+  "url": "https://www.anthroweekendutah.org",
   "startDate": "2025-08-01",
   "endDate": "2025-08-03",
   "location": "Davis Conference Center, Layton, UT, USA",
@@ -9,5 +9,8 @@
     41.084361,
     -111.980789
   ],
-  "source": "fancons.com"
+  "sources": [
+    "fancons.com",
+    "coyo.tl"
+  ]
 }

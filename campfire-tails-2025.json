@@ -1,6 +1,6 @@
 {
   "name": "Campfire Tails 2025",
-  "url": "http://furrycons.com/event/25694/campfire-tails-2025",
+  "url": "https://campfiretails.org",
   "startDate": "2025-07-31",
   "endDate": "2025-08-04",
   "location": "Deschutes National Forest, Ogden Group Camp, La Pine, OR, USA",
@@ -9,5 +9,8 @@
     43.7291532,
     -121.422049
   ],
-  "source": "fancons.com"
+  "sources": [
+    "fancons.com",
+    "coyo.tl"
+  ]
 }

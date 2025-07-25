@@ -1,6 +1,6 @@
 {
   "name": "Aurawra 2025",
-  "url": "http://furrycons.com/event/24629/aurawra-2025",
+  "url": "https://www.aurawra.org",
   "startDate": "2025-07-25",
   "endDate": "2025-07-27",
   "location": "ParkRoyal Parramatta, Parramatta, New South Wales, Australia",
@@ -9,5 +9,8 @@
     -33.8122336,
     151.0050208
   ],
-  "source": "fancons.com"
+  "sources": [
+    "fancons.com",
+    "coyo.tl"
+  ]
 }

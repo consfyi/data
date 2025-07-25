@@ -1,6 +1,6 @@
 {
   "name": "Camp Mani-Toebeans 2025",
-  "url": "http://furrycons.com/event/26064/camp-mani-toebeans-2025",
+  "url": "https://manitobafurries.org/camp",
   "startDate": "2025-08-29",
   "endDate": "2025-09-01",
   "location": "Camp Wasaga, Onanole, Manitoba, Canada",
@@ -9,5 +9,8 @@
     50.6643164,
     -100.0189377
   ],
-  "source": "fancons.com"
+  "sources": [
+    "fancons.com",
+    "coyo.tl"
+  ]
 }

@@ -1,6 +1,6 @@
 {
   "name": "Tails and Tornadoes Fur Con 2025",
-  "url": "http://furrycons.com/event/25772/tails-and-tornadoes-fur-con-2025",
+  "url": "https://tailsandtornadoes.org",
   "startDate": "2025-09-05",
   "endDate": "2025-09-07",
   "location": "Renaissance Tulsa Hotel & Convention Center, Tulsa, OK, USA",
@@ -9,5 +9,8 @@
     36.0650505,
     -95.8577575
   ],
-  "source": "fancons.com"
+  "sources": [
+    "fancons.com",
+    "coyo.tl"
+  ]
 }

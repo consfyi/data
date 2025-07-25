@@ -1,6 +1,6 @@
 {
   "name": "West Aussie Fur Frenzy 2025",
-  "url": "http://furrycons.com/event/26043/west-aussie-fur-frenzy-2025",
+  "url": "https://www.waff.net.au",
   "startDate": "2025-09-19",
   "endDate": "2025-09-21",
   "location": "Esplanade Hotel Fremantle by Rydges, Fremantle, Western Australia, Australia",
@@ -9,5 +9,8 @@
     -32.056909,
     115.7458664
   ],
-  "source": "fancons.com"
+  "sources": [
+    "fancons.com",
+    "coyo.tl"
+  ]
 }

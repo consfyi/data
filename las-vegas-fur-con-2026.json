@@ -1,6 +1,6 @@
 {
   "name": "Las Vegas Fur Con 2026",
-  "url": "http://furrycons.com/event/26132/las-vegas-fur-con-2026",
+  "url": "https://lasvegasfurcon.org",
   "startDate": "2026-04-02",
   "endDate": "2026-04-05",
   "location": "Alexis Park Resort, Las Vegas, NV, USA",
@@ -9,5 +9,8 @@
     36.1073746,
     -115.1566743
   ],
-  "source": "fancons.com"
+  "sources": [
+    "fancons.com",
+    "coyo.tl"
+  ]
 }

@@ -1,6 +1,6 @@
 {
   "name": "Wild North 2025",
-  "url": "http://furrycons.com/event/25992/wild-north-2025",
+  "url": "https://www.wildnorth.uk",
   "startDate": "2025-09-26",
   "endDate": "2025-09-29",
   "location": "Lumley Castle, Chester-le-Street, UK",
@@ -9,5 +9,8 @@
     54.8533855,
     -1.5532119
   ],
-  "source": "fancons.com"
+  "sources": [
+    "fancons.com",
+    "coyo.tl"
+  ]
 }

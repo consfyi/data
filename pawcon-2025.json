@@ -1,6 +1,6 @@
 {
   "name": "PAWCon 2025",
-  "url": "http://furrycons.com/event/25717/pawcon-2025",
+  "url": "https://pacanthro.org",
   "startDate": "2025-11-07",
   "endDate": "2025-11-09",
   "location": "DoubleTree by Hilton Hotel San Jose, San Jose, CA, USA",
@@ -9,5 +9,8 @@
     37.3718206,
     -121.9228001
   ],
-  "source": "fancons.com"
+  "sources": [
+    "fancons.com",
+    "coyo.tl"
+  ]
 }

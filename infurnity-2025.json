@@ -1,6 +1,6 @@
 {
   "name": "Infurnity 2025",
-  "url": "http://furrycons.com/event/25984/infurnity-2025",
+  "url": "https://www.infurnity.com",
   "startDate": "2025-10-31",
   "endDate": "2025-11-02",
   "location": "Fullon Hotel Lihpao Land, Taichung City, Taiwan",
@@ -9,5 +9,8 @@
     24.3236953,
     120.6963401
   ],
-  "source": "fancons.com"
+  "sources": [
+    "fancons.com",
+    "coyo.tl"
+  ]
 }

@@ -1,6 +1,6 @@
 {
   "name": "GoldenHorn 2025",
-  "url": "http://furrycons.com/event/25058/goldenhorn-2025",
+  "url": "https://goldenhorn.si",
   "startDate": "2025-11-13",
   "endDate": "2025-11-16",
   "location": "Adria Ankaran Hotel & Resort, Ankaran, Slovenia",
@@ -9,5 +9,8 @@
     45.5782072,
     13.7338598
   ],
-  "source": "fancons.com"
+  "sources": [
+    "fancons.com",
+    "coyo.tl"
+  ]
 }

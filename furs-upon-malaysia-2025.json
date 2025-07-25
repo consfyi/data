@@ -1,6 +1,6 @@
 {
   "name": "Furs Upon Malaysia 2025",
-  "url": "http://furrycons.com/event/26210/furs-upon-malaysia-2025",
+  "url": "https://www.furum.org",
   "startDate": "2025-12-13",
   "endDate": "2025-12-14",
   "location": "Hotel Armada Petaling Jaya, Petaling Jaya, Selangor, Malaysia",
@@ -9,5 +9,8 @@
     3.1042927,
     101.6408144
   ],
-  "source": "fancons.com"
+  "sources": [
+    "fancons.com",
+    "coyo.tl"
+  ]
 }

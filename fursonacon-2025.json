@@ -1,6 +1,6 @@
 {
   "name": "FursonaCon 2025",
-  "url": "http://furrycons.com/event/25369/fursonacon-2025",
+  "url": "https://fursonacon.com",
   "startDate": "2025-08-28",
   "endDate": "2025-08-31",
   "location": "Newport News Marriott at City Center, Newport News, VA, USA",
@@ -9,5 +9,8 @@
     37.0869102,
     -76.4712476
   ],
-  "source": "fancons.com"
+  "sources": [
+    "fancons.com",
+    "coyo.tl"
+  ]
 }

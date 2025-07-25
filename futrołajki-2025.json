@@ -1,6 +1,6 @@
 {
   "name": "Futrołajki 2025",
-  "url": "http://furrycons.com/event/25887/futroajki-2025",
+  "url": "https://futrolajki.pl",
   "startDate": "2025-11-12",
   "endDate": "2025-11-16",
   "location": "Grand Hotel Kielce, Kielce, Poland",
@@ -9,5 +9,8 @@
     50.8742279,
     20.6202811
   ],
-  "source": "fancons.com"
+  "sources": [
+    "fancons.com",
+    "coyo.tl"
+  ]
 }

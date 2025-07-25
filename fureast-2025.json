@@ -1,6 +1,6 @@
 {
   "name": "FurEast 2025",
-  "url": "http://furrycons.com/event/25482/fureast-2025",
+  "url": "https://fureast.fr",
   "startDate": "2025-08-01",
   "endDate": "2025-08-03",
   "location": "Hilton Strasbourg, Strasbourg, France",
@@ -9,5 +9,8 @@
     48.5969119,
     7.7550027
   ],
-  "source": "fancons.com"
+  "sources": [
+    "fancons.com",
+    "coyo.tl"
+  ]
 }

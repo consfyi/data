@@ -1,6 +1,6 @@
 {
   "name": "Aberacon 2025",
-  "url": "http://furrycons.com/event/26025/aberacon-2025",
+  "url": "https://aberacon.wales",
   "startDate": "2025-08-23",
   "endDate": "2025-08-24",
   "location": "Best Western Aberavon Beach Hotel, Port Talbot, UK",
@@ -9,5 +9,8 @@
     51.5934371,
     -3.8149078
   ],
-  "source": "fancons.com"
+  "sources": [
+    "fancons.com",
+    "coyo.tl"
+  ]
 }

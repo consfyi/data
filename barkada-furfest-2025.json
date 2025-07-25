@@ -1,6 +1,6 @@
 {
   "name": "Barkada Furfest 2025",
-  "url": "http://furrycons.com/event/26207/barkada-furfest-2025",
+  "url": "https://barkadafurfest.ph",
   "startDate": "2025-09-06",
   "endDate": "2025-09-07",
   "location": "Sequoia Hotel Manila Bay, Paranaque City, Metro Manila, Philippines",
@@ -9,5 +9,8 @@
     14.5264269,
     120.991848
   ],
-  "source": "fancons.com"
+  "sources": [
+    "fancons.com",
+    "coyo.tl"
+  ]
 }

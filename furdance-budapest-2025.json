@@ -1,6 +1,6 @@
 {
   "name": "Furdance Budapest 2025",
-  "url": "http://furrycons.com/event/25421/furdance-budapest-2025",
+  "url": "https://www.furdance.hu",
   "startDate": "2025-09-26",
   "endDate": "2025-09-28",
   "location": "Csokonai Kulturális Központ, Budapest, Hungary",
@@ -9,5 +9,8 @@
     47.5564366,
     19.1133933
   ],
-  "source": "fancons.com"
+  "sources": [
+    "fancons.com",
+    "coyo.tl"
+  ]
 }

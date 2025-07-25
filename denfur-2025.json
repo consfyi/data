@@ -1,6 +1,6 @@
 {
   "name": "DenFur 2025",
-  "url": "http://furrycons.com/event/25259/denfur-2025",
+  "url": "https://denfur.org",
   "startDate": "2025-08-29",
   "endDate": "2025-08-31",
   "location": "Sheraton Denver Downtown Hotel, Denver, CO, USA",
@@ -9,5 +9,8 @@
     39.7419647,
     -104.9891354
   ],
-  "source": "fancons.com"
+  "sources": [
+    "fancons.com",
+    "coyo.tl"
+  ]
 }

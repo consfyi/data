@@ -1,6 +1,6 @@
 {
   "name": "Gateway FurMeet 2025",
-  "url": "http://furrycons.com/event/25614/gateway-furmeet-2025",
+  "url": "https://www.gatewayfurmeet.org",
   "startDate": "2025-10-03",
   "endDate": "2025-10-05",
   "location": "Hilton St. Louis at the Ballpark, St. Louis, MO, USA",
@@ -9,5 +9,8 @@
     38.6252565,
     -90.1912512
   ],
-  "source": "fancons.com"
+  "sources": [
+    "fancons.com",
+    "coyo.tl"
+  ]
 }

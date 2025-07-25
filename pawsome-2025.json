@@ -1,6 +1,6 @@
 {
   "name": "Pawsome 2025",
-  "url": "http://furrycons.com/event/25963/pawsome-2025",
+  "url": "https://www.pawsome.org.uk",
   "startDate": "2025-10-03",
   "endDate": "2025-10-06",
   "location": "Mercure Gloucester Bowden Hall Hotel, Gloucester, UK",
@@ -9,5 +9,8 @@
     51.8340083,
     -2.1883852
   ],
-  "source": "fancons.com"
+  "sources": [
+    "fancons.com",
+    "coyo.tl"
+  ]
 }

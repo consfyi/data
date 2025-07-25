@@ -1,6 +1,6 @@
 {
   "name": "East 2025",
-  "url": "http://furrycons.com/event/26011/east-2025",
+  "url": "https://www.sachsenfurs.de/de/east",
   "startDate": "2025-09-17",
   "endDate": "2025-09-21",
   "location": "Ringberg Hotel Suhl, Suhl, Germany",
@@ -9,5 +9,8 @@
     50.6169277,
     10.7229427
   ],
-  "source": "fancons.com"
+  "sources": [
+    "fancons.com",
+    "coyo.tl"
+  ]
 }

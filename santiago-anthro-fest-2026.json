@@ -1,6 +1,6 @@
 {
   "name": "Santiago Anthro Fest 2026",
-  "url": "http://furrycons.com/event/26345/santiago-anthro-fest-2026",
+  "url": "https://www.furcrew.cl",
   "startDate": "2026-02-26",
   "endDate": "2026-03-01",
   "location": "Almacruz Hotel y Centro de Convenciones, Santiago, Chile",
@@ -9,5 +9,8 @@
     -33.442136,
     -70.6474291
   ],
-  "source": "fancons.com"
+  "sources": [
+    "fancons.com",
+    "coyo.tl"
+  ]
 }

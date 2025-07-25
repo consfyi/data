@@ -1,6 +1,6 @@
 {
   "name": "FurSquared 2026",
-  "url": "http://furrycons.com/event/26023/fursquared-2026",
+  "url": "https://fursquared.com",
   "startDate": "2026-02-05",
   "endDate": "2026-02-08",
   "location": "Hilton Milwaukee City Center, Milwaukee, WI, USA",
@@ -9,5 +9,8 @@
     43.0384665,
     -87.9182643
   ],
-  "source": "fancons.com"
+  "sources": [
+    "fancons.com",
+    "coyo.tl"
+  ]
 }

@@ -1,6 +1,6 @@
 {
   "name": "AnthroExpo 2026",
-  "url": "http://furrycons.com/event/25873/anthroexpo-2026",
+  "url": "https://www.anthroexpo.net",
   "startDate": "2026-02-05",
   "endDate": "2026-02-08",
   "location": "Embassy Suites by Hilton Norman Hotel & Conference Center, Norman, OK, USA",
@@ -9,5 +9,8 @@
     35.2436797,
     -97.4789113
   ],
-  "source": "fancons.com"
+  "sources": [
+    "fancons.com",
+    "coyo.tl"
+  ]
 }

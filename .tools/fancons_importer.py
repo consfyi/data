@@ -1,6 +1,7 @@
 #!/usr/bin/env -S uv run --script
 # /// script
 # dependencies = [
+#   "atomicwrites",
 #   "bs4",
 #   "httpx",
 #   "googlemaps",
@@ -10,6 +11,7 @@
 # ]
 # ///
 import asyncio
+import atomicwrites
 from bs4 import BeautifulSoup
 import datetime
 import html
@@ -128,6 +130,7 @@ async def main():
                 address = location["address"]
                 country_name = address["addressCountry"]
                 country_code = COUNTRIES.get(country_name)
+                canceled = False
                 if not country_code:
                     raise ValueError(f"Unknown country: {country_name}")
 
@@ -138,10 +141,15 @@ async def main():
                     "https://schema.org/EventScheduled",
                     "https://schema.org/EventRescheduled",
                 ]:
+                    canceled = True
                     if path.exists():
-                        path.unlink()
-                        logging.info(f"Removed: {path}")
-                    continue
+                        with open(path, "r") as f:
+                            con = toml.load(f)
+                        con["canceled"] = canceled
+                        with atomicwrites.atomic_write(path, overwrite=True) as f:
+                            toml.dump(con, f)
+                        logging.info(f"Canceled: {path}")
+                        continue
 
                 if path.exists():
                     continue
@@ -177,13 +185,11 @@ async def main():
                     "previousId": None,
                     "source": "fancons.com",
                 }
+                if canceled:
+                    event_data["canceled"] = True
 
-                with open(path, "w") as f:
-                    try:
-                        toml.dump(event_data, f)
-                    except:
-                        os.unlink(path)
-                        raise
+                with atomicwrites.atomic_write(path, overwrite=True) as f:
+                    toml.dump(event_data, f)
 
                 logging.info(f"Added: {path}")
 

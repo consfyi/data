@@ -58,7 +58,7 @@ with open(os.path.join(os.path.dirname(__file__), "countries.json"), "rb") as f:
 
 OUTPUT_DIR = pathlib.Path(os.environ.get("OUTPUT_DIR", "."))
 CALENDAR_URL = os.environ.get(
-    "CALENDAR_URL", "https://furrycons.com/calendar/calendar.php?year=2025"
+    "CALENDAR_URL", "https://furrycons.com/calendar/calendar.php"
 )
 MAP_URL = os.environ.get(
     "MAP_URL", "https://furrycons.com/calendar/map/yc-maps/map-upcoming.xml"

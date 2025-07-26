@@ -1,0 +1,22 @@
+{
+  "name": "Heartland Howloween",
+  "url": "https://heartlandhowloween.com",
+  "events": [
+    {
+      "id": "heartland-howloween-2025",
+      "name": "Heartland Howloween 2025",
+      "startDate": "2025-10-10",
+      "endDate": "2025-10-12",
+      "location": "Comfort Inn & Suites Omaha Central, Omaha, NE, USA",
+      "country": "US",
+      "latLng": [
+        41.226076,
+        -96.022218
+      ],
+      "sources": [
+        "fancons.com",
+        "coyo.tl"
+      ]
+    }
+  ]
+}

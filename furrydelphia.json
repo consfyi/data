@@ -1,0 +1,22 @@
+{
+  "name": "Furrydelphia",
+  "url": "https://www.furrydelphia.org",
+  "events": [
+    {
+      "id": "furrydelphia-2025",
+      "name": "Furrydelphia 2025",
+      "startDate": "2025-08-22",
+      "endDate": "2025-08-24",
+      "location": "Sheraton Downtown Philadelphia, Philadelphia, PA, USA",
+      "country": "US",
+      "latLng": [
+        39.9572347,
+        -75.1670743
+      ],
+      "sources": [
+        "fancons.com",
+        "coyo.tl"
+      ]
+    }
+  ]
+}

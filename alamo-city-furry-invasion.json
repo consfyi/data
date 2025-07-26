@@ -1,0 +1,22 @@
+{
+  "name": "Alamo City Furry Invasion",
+  "url": "https://www.furryinvasion.org",
+  "events": [
+    {
+      "id": "alamo-city-furry-invasion-2025",
+      "name": "Alamo City Furry Invasion 2025",
+      "startDate": "2025-10-09",
+      "endDate": "2025-10-12",
+      "location": "Embassy Suites by Hilton San Marcos Hotel Conference Center, San Marcos, TX, USA",
+      "country": "US",
+      "latLng": [
+        29.839588,
+        -97.9695576
+      ],
+      "sources": [
+        "fancons.com",
+        "coyo.tl"
+      ]
+    }
+  ]
+}

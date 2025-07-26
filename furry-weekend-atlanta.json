@@ -1,0 +1,18 @@
+{
+  "name": "Furry Weekend Atlanta",
+  "url": "https://www.furryweekend.com",
+  "events": [
+    {
+      "id": "furry-weekend-atlanta-2026",
+      "name": "Furry Weekend Atlanta 2026",
+      "startDate": "2026-05-07",
+      "endDate": "2026-05-10",
+      "location": "Atlanta Marriott Marquis, Atlanta, GA, USA",
+      "country": "US",
+      "latLng": [
+        33.76165,
+        -84.3851105
+      ]
+    }
+  ]
+}

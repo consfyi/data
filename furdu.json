@@ -1,0 +1,18 @@
+{
+  "name": "FurDU",
+  "url": "https://furdu.com.au",
+  "events": [
+    {
+      "id": "furdu-2026",
+      "name": "FurDU 2026",
+      "startDate": "2026-04-17",
+      "endDate": "2026-04-19",
+      "location": "Crowne Plaza Surfers Paradise, an IHG Hotel, Gold Coast Highway, Surfers Paradise QLD, Australia",
+      "country": "AU",
+      "latLng": [
+        -28.0176652,
+        153.4299021
+      ]
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "name": "Wild Nights",
+  "url": "https://wildnights.org",
+  "events": [
+    {
+      "id": "wild-nights-2026",
+      "name": "Wild Nights 2026",
+      "startDate": "2026-04-23",
+      "endDate": "2026-04-28",
+      "location": "Robbers Cave State Park, Wilburton, OK, USA",
+      "country": "US",
+      "latLng": [
+        34.9803592,
+        -95.3500819
+      ],
+      "sources": [
+        "fancons.com",
+        "coyo.tl"
+      ]
+    }
+  ]
+}

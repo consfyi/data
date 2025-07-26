@@ -1,0 +1,22 @@
+{
+  "name": "Get Out The Float",
+  "url": "https://getoutthefloat.com",
+  "events": [
+    {
+      "id": "get-out-the-float-2026",
+      "name": "Get Out The Float 2026",
+      "startDate": "2026-02-12",
+      "endDate": "2026-02-15",
+      "location": "Seaside Civic & Convention Center, Seaside, OR, USA",
+      "country": "US",
+      "latLng": [
+        45.9941334,
+        -123.9253055
+      ],
+      "sources": [
+        "fancons.com",
+        "coyo.tl"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "name": "Big Sky Camp Paw",
+  "url": "https://www.camppaw.org",
+  "events": [
+    {
+      "id": "big-sky-camp-paw-2025",
+      "name": "Big Sky Camp Paw 2025",
+      "startDate": "2025-08-07",
+      "endDate": "2025-08-11",
+      "location": "Hellgate Campground, Helena, MT, USA",
+      "country": "US",
+      "latLng": [
+        46.6186255,
+        -111.645415
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    }
+  ]
+}

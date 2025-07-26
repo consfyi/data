@@ -1,0 +1,22 @@
+{
+  "name": "Howloween",
+  "url": "https://www.howloween.ca",
+  "events": [
+    {
+      "id": "howloween-2025",
+      "name": "Howloween 2025",
+      "startDate": "2025-10-23",
+      "endDate": "2025-10-26",
+      "location": "Executive Hotel Vancouver Airport, Richmond, British Columbia, Canada",
+      "country": "CA",
+      "latLng": [
+        49.1706812,
+        -123.1451646
+      ],
+      "sources": [
+        "fancons.com",
+        "coyo.tl"
+      ]
+    }
+  ]
+}

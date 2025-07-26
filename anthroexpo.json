@@ -1,0 +1,22 @@
+{
+  "name": "AnthroExpo",
+  "url": "https://www.anthroexpo.net",
+  "events": [
+    {
+      "id": "anthroexpo-2026",
+      "name": "AnthroExpo 2026",
+      "startDate": "2026-02-05",
+      "endDate": "2026-02-08",
+      "location": "Embassy Suites by Hilton Norman Hotel & Conference Center, Norman, OK, USA",
+      "country": "US",
+      "latLng": [
+        35.2436797,
+        -97.4789113
+      ],
+      "sources": [
+        "fancons.com",
+        "coyo.tl"
+      ]
+    }
+  ]
+}

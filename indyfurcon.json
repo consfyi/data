@@ -1,0 +1,21 @@
+{
+  "name": "IndyFurCon",
+  "url": "https://indyfurcon.org",
+  "events": [
+    {
+      "id": "indyfurcon-2025",
+      "name": "IndyFurCon 2025",
+      "startDate": "2025-08-15",
+      "endDate": "2025-08-17",
+      "location": "Wyndham Indianapolis Airport, Indianapolis, IN, USA",
+      "country": "US",
+      "latLng": [
+        39.7290633,
+        -86.2586527
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "name": "Reffurence",
+  "url": "https://www.reffurence.com",
+  "events": [
+    {
+      "id": "reffurence-2025",
+      "name": "Reffurence 2025",
+      "startDate": "2025-10-30",
+      "endDate": "2025-11-02",
+      "location": "Hotel Zuiderduin, Egmond aan Zee, Netherlands",
+      "country": "NL",
+      "latLng": [
+        52.6164703,
+        4.6247934
+      ],
+      "sources": [
+        "fancons.com",
+        "coyo.tl"
+      ]
+    }
+  ]
+}

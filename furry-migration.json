@@ -1,0 +1,22 @@
+{
+  "name": "Furry Migration",
+  "url": "https://www.furrymigration.org",
+  "events": [
+    {
+      "id": "furry-migration-2025",
+      "name": "Furry Migration 2025",
+      "startDate": "2025-09-05",
+      "endDate": "2025-09-07",
+      "location": "Hyatt Regency Minneapolis, Minneapolis, MN, USA",
+      "country": "US",
+      "latLng": [
+        44.9706891,
+        -93.2784744
+      ],
+      "sources": [
+        "fancons.com",
+        "coyo.tl"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "name": "Spooktacufur",
+  "url": "https://spooktacufur.com",
+  "events": [
+    {
+      "id": "spooktacufur-2025",
+      "name": "Spooktacufur 2025",
+      "startDate": "2025-10-25",
+      "endDate": "2025-10-25",
+      "location": "Embassy Suites by Hilton Salt Lake West Valley City, West Valley City, UT, USA",
+      "country": "US",
+      "latLng": [
+        40.6961989,
+        -111.9608941
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "name": "FurcoNZ Hotel",
+  "url": "https://furconz.org.nz",
+  "events": [
+    {
+      "id": "furconz-hotel-2025",
+      "name": "FurcoNZ Hotel 2025",
+      "startDate": "2025-11-21",
+      "endDate": "2025-11-23",
+      "location": "Holiday Inn Auckland Airport, Auckland, New Zealand",
+      "country": "NZ",
+      "latLng": [
+        -36.9731132,
+        174.7855693
+      ],
+      "sources": [
+        "fancons.com",
+        "coyo.tl"
+      ]
+    }
+  ]
+}

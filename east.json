@@ -1,0 +1,22 @@
+{
+  "name": "East",
+  "url": "https://www.sachsenfurs.de/de/east",
+  "events": [
+    {
+      "id": "east-2025",
+      "name": "East 13",
+      "startDate": "2025-09-17",
+      "endDate": "2025-09-21",
+      "location": "Ringberg Hotel Suhl, Suhl, Germany",
+      "country": "DE",
+      "latLng": [
+        50.6169277,
+        10.7229427
+      ],
+      "sources": [
+        "fancons.com",
+        "coyo.tl"
+      ]
+    }
+  ]
+}

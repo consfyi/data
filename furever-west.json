@@ -1,0 +1,22 @@
+{
+  "name": "Furever West",
+  "url": "https://www.wyofurcon.com",
+  "events": [
+    {
+      "id": "furever-west-2025",
+      "name": "Furever West 2025",
+      "startDate": "2025-09-19",
+      "endDate": "2025-09-21",
+      "location": "Hilton Garden Inn Laramie, Laramie, WY, USA",
+      "country": "US",
+      "latLng": [
+        41.3101524,
+        -105.5638466
+      ],
+      "sources": [
+        "fancons.com",
+        "coyo.tl"
+      ]
+    }
+  ]
+}

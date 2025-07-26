@@ -1,0 +1,21 @@
+{
+  "name": "Anthros & Alpine",
+  "url": "https://anthroalpine.org",
+  "events": [
+    {
+      "id": "anthros-and-alpine-2026",
+      "name": "Anthros & Alpine 2026",
+      "startDate": "2026-01-29",
+      "endDate": "2026-02-01",
+      "location": "Sole Gjestegård, Noresund, Norway",
+      "country": "NO",
+      "latLng": [
+        60.1755457,
+        9.6308097
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    }
+  ]
+}

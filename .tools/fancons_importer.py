@@ -1,7 +1,6 @@
 #!/usr/bin/env -S uv run --script
 # /// script
 # dependencies = [
-#   "atomicwrites",
 #   "bs4",
 #   "httpx",
 #   "googlemaps",
@@ -10,8 +9,8 @@
 # ]
 # ///
 import asyncio
-import atomicwrites
 from bs4 import BeautifulSoup
+import dataclasses
 import datetime
 import html
 import httpx
@@ -28,13 +27,6 @@ import xml.etree.ElementTree as ET
 
 
 logging.basicConfig(level=logging.INFO)
-
-NUMBERED_CONS = {
-    "kemocon",
-    "east",
-    "anthro-northwest",
-    "eurofurence",
-}
 
 
 def guess_language_for_region(region_code: str) -> icu.Locale:
@@ -112,10 +104,47 @@ async def fetch_calendar(
     return events
 
 
-async def main():
-    os.makedirs(OUTPUT_DIR, exist_ok=True)
+@dataclasses.dataclass
+class Event:
+    con_id: str
+    con_name: str
+    id: str
+    name: str
+    url: str
+    start_date: str
+    end_date: str
+    location: str
+    country: str
+    canceled: bool
+    lat_lng: tuple[float, float] | None
 
-    gmaps = googlemaps.Client(key=GOOGLE_MAPS_API_KEY)
+    def geocode_lat_lng(self, gmaps: googlemaps.Client):
+        if self.lat_lng is not None:
+            return
+
+        geocode = gmaps.geocode(self.location)
+        if not geocode:
+            return
+
+        location = geocode[0]["geometry"]["location"]
+        self.lat_lng = (location["lat"], location["lng"])
+
+    def materialize_entry(self, gmaps: googlemaps.Client):
+        self.geocode_lat_lng(gmaps)
+        return {
+            "id": self.id,
+            "name": self.name,
+            "startDate": self.start_date,
+            "endDate": self.end_date,
+            "location": self.location,
+            "country": self.country,
+            "latLng": self.lat_lng,
+            "sources": ["fancons.com"],
+            **({"canceled": True} if self.canceled else {}),
+        }
+
+
+async def fetch_events():
 
     async with httpx.AsyncClient() as client:
         calendar, markers = await asyncio.gather(
@@ -129,92 +158,81 @@ async def main():
                 prefix, year = entry["name"].rsplit(" ", 1)
                 year = int(year)
 
-                status = entry["eventStatus"]
                 url = entry["url"]
                 start_date = datetime.date.fromisoformat(entry["startDate"])
                 end_date = datetime.date.fromisoformat(entry["endDate"])
-                location = entry["location"]
-                loc_name = location["name"]
-                address = location["address"]
-                country_name = address["addressCountry"]
-                country_code = COUNTRIES.get(country_name)
-                canceled = False
-                if not country_code:
-                    raise ValueError(f"Unknown country: {country_name}")
-
-                slug_prefix = slugify(prefix, guess_language_for_region(country_code))
-                event_id = f"{slug_prefix}-{year}"
-                path = pathlib.Path(OUTPUT_DIR) / f"{event_id}.json"
-
-                if status not in [
+                loc = entry["location"]
+                loc_name = loc["name"]
+                address = loc["address"]
+                country_name = loc["address"]["addressCountry"]
+                country = COUNTRIES[country_name]
+                location = ", ".join(
+                    part
+                    for part in [
+                        loc_name,
+                        address.get("addressLocality", ""),
+                        address.get("addressRegion", ""),
+                        country_name,
+                    ]
+                    if part
+                )
+                canceled = entry["eventStatus"] not in {
                     "https://schema.org/EventScheduled",
                     "https://schema.org/EventRescheduled",
-                ]:
-                    canceled = True
-                    if path.exists():
-                        with open(path, "r") as f:
-                            con = json.load(f)
-                        con["canceled"] = canceled
-                        with atomicwrites.atomic_write(path, overwrite=True) as f:
-                            json.dump(
-                                con,
-                                f,
-                                ensure_ascii=False,
-                                indent=2,
-                            )
-                        logging.info(f"Canceled: {path}")
-                        continue
+                }
 
-                if path.exists():
-                    continue
-
-                addr_parts = [
-                    loc_name,
-                    address.get("addressLocality", ""),
-                    address.get("addressRegion", ""),
-                    country_name,
-                ]
-                full_address = ", ".join(part for part in addr_parts if part)
+                lang = guess_language_for_region(country)
+                con_id = slugify(prefix, lang)
+                event_id = f"{con_id}-{year}"
 
                 match = regex.search(r"/event/(\d+)/", url)
                 assert match is not None
                 fc_id = match.group(1)
                 lat_lng = markers.get(fc_id) if fc_id else None
 
-                if not lat_lng:
-                    logging.warning(f"No marker found, geocoding: {event_id}")
-                    geocode = gmaps.geocode(full_address)
-                    if geocode:
-                        location = geocode[0]["geometry"]["location"]
-                        lat_lng = [location["lat"], location["lng"]]
-
-                # Find previous instance of event, if any.
-
-                event_data = {
-                    "name": name,
-                    "url": url,
-                    "startDate": start_date.isoformat(),
-                    "endDate": end_date.isoformat(),
-                    "location": full_address,
-                    "country": country_code,
-                    "latLng": lat_lng,
-                    "sources": ["fancons.com"],
-                }
-                if canceled:
-                    event_data["canceled"] = True
-
-                with atomicwrites.atomic_write(path, overwrite=True) as f:
-                    json.dump(
-                        event_data,
-                        f,
-                        ensure_ascii=False,
-                        indent=2,
-                    )
-
-                logging.info(f"Added: {path}")
+                yield Event(
+                    con_id=con_id,
+                    con_name=prefix,
+                    id=event_id,
+                    name=name,
+                    url=url,
+                    start_date=start_date.isoformat(),
+                    end_date=end_date.isoformat(),
+                    location=location,
+                    country=country,
+                    lat_lng=lat_lng,
+                    canceled=canceled,
+                )
 
             except Exception as e:
                 logging.warning(f"Failed to process event: {e}")
+
+
+async def main():
+    os.makedirs(OUTPUT_DIR, exist_ok=True)
+
+    gmaps = googlemaps.Client(key=GOOGLE_MAPS_API_KEY)
+    async for event in fetch_events():
+        fn = f"{event.con_id}.json"
+
+        if os.path.exists(fn):
+            with open(fn, "r") as f:
+                con = json.load(f)
+        else:
+            fn = os.path.join("import_pending", fn)
+            if os.path.exists(fn):
+                with open(fn, "r") as f:
+                    con = json.load(f)
+            else:
+                logging.info(f"Adding pending con {event.con_id}")
+                con = {"name": event.con_name, "url": event.url, "events": []}
+
+        if any(e["id"] == event.id for e in con["events"]):
+            continue
+        logging.info(f"Adding event {event.id} to {event.con_id}")
+        con["events"].append(event.materialize_entry(gmaps))
+        with open(fn, "w") as f:
+            json.dump(con, f, ensure_ascii=False, indent=2)
 
 
 if __name__ == "__main__":

@@ -56,7 +56,9 @@ with open(os.path.join(os.path.dirname(__file__), "countries.json"), "rb") as f:
 
 
 OUTPUT_DIR = pathlib.Path(os.environ.get("OUTPUT_DIR", "."))
-CALENDAR_URL = os.environ.get("CALENDAR_URL", "https://furrycons.com/calendar/")
+CALENDAR_URL = os.environ.get(
+    "CALENDAR_URL", "https://furrycons.com/calendar/calendar.php"
+)
 MAP_URL = os.environ.get(
     "MAP_URL", "https://furrycons.com/calendar/map/yc-maps/map-upcoming.xml"
 )
@@ -229,6 +231,7 @@ async def main():
             continue
         logging.info(f"Adding event {event.id} to {event.con_id}")
         con["events"].append(event.materialize_entry(gmaps))
+        con["events"].sort(key=lambda event: (event["startDate"], event["endDate"]))
         with open(fn, "w") as f:
             json.dump(con, f, ensure_ascii=False, indent=2)
 

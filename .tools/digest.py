@@ -42,13 +42,7 @@ def pred(con):
     return now < end_date.add(days=7) and not con.get("canceled", False)
 
 
-active = []
-for con in cons:
-    if pred(con):
-        active.append(con)
-    else:
-        id = con["id"]
-        os.rename(f"{id}.toml", f"archived/{id}.toml")
+active = [con for con in cons if pred(con)]
 
 active.sort(
     key=lambda con: (
@@ -103,16 +97,16 @@ os.mkdir(cons_path)
 
 index = []
 
-for dir in [".", "archived"]:
-    for fn in os.listdir(dir):
-        id, ext = os.path.splitext(fn)
-        if ext != ".json":
-            continue
-        with open(os.path.join(dir, fn)) as f:
-            con = json.load(f)
-        with open(cons_path / fn, "w") as f:
-            json.dump(con, f, indent=2, ensure_ascii=False)
-        index.append({"id": id, "con": con["name"]})
+
+for fn in os.listdir("."):
+    id, ext = os.path.splitext(fn)
+    if ext != ".json":
+        continue
+    with open(fn) as f:
+        con = json.load(f)
+    with open(cons_path / fn, "w") as f:
+        json.dump(con, f, indent=2, ensure_ascii=False)
+    index.append({"id": id, "con": con["name"]})
 
 index.sort(key=lambda con: con["id"])
 

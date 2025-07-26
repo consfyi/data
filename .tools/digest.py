@@ -14,6 +14,10 @@ import whenever
 
 OUTPUT_DIR = pathlib.Path(os.environ["OUTPUT_DIR"])
 
+cons_path = OUTPUT_DIR / "cons"
+os.mkdir(cons_path)
+
+index = {}
 events = []
 
 
@@ -21,8 +25,14 @@ for fn in os.listdir("."):
     id, ext = os.path.splitext(fn)
     if ext != ".json":
         continue
+
     with open(fn) as f:
         con = json.load(f)
+
+    with open(cons_path / fn, "w") as f:
+        json.dump(con, f, indent=2, ensure_ascii=False)
+    index[id] = {"name": con["name"]}
+
     for event in con["events"]:
         if "latLng" in event:
             (lat, lng) = event["latLng"]
@@ -32,6 +42,14 @@ for fn in os.listdir("."):
         event["id"] = f"{id}-{event['id']}"
         event["url"] = con["url"]
         events.append(event)
+
+
+with open(OUTPUT_DIR / "index.json", "w") as f:
+    json.dump(
+        index,
+        f,
+        ensure_ascii=False,
+    )
 
 now = whenever.Instant.now()
 
@@ -107,30 +125,3 @@ with open(OUTPUT_DIR / "active.json", "w") as f:
         f,
         ensure_ascii=False,
     )
-
-# cons_path = OUTPUT_DIR / "cons"
-# shutil.rmtree(cons_path, ignore_errors=True)
-
-# os.mkdir(cons_path)
-
-# index = []
-
-
-# for fn in os.listdir("."):
-#     id, ext = os.path.splitext(fn)
-#     if ext != ".json":
-#         continue
-#     with open(fn) as f:
-#         event = json.load(f)
-#     with open(cons_path / fn, "w") as f:
-#         json.dump(event, f, indent=2, ensure_ascii=False)
-#     index.append({"id": id, "con": event["name"]})
-
-# index.sort(key=lambda event: event["id"])
-
-# with open(OUTPUT_DIR / "index.json", "w") as f:
-#     json.dump(
-#         index,
-#         f,
-#         ensure_ascii=False,
-#     )

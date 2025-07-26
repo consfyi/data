@@ -27,6 +27,8 @@ for fn in os.listdir("."):
         if "latLng" in event:
             (lat, lng) = event["latLng"]
             event["timezone"] = tzfpy.get_tz(lng, lat)
+        event["conId"] = id
+        event["eventId"] = event["id"]
         event["id"] = f"{id}-{event['id']}"
         event["url"] = con["url"]
         events.append(event)
@@ -56,6 +58,20 @@ active.sort(
 
 now = whenever.Instant.now().to_tz("UTC")
 
+
+def escape_ics(s):
+    return s.translate(
+        str.maketrans(
+            {
+                "\\": "\\\\",
+                "\n": r"\n",
+                ",": r"\,",
+                ";": r"\;",
+            }
+        )
+    )
+
+
 with open(OUTPUT_DIR / "calendar.ics", "w") as f:
     f.write("BEGIN:VCALENDAR\r\n")
     f.write("VERSION:2.0\r\n")
@@ -75,13 +91,13 @@ with open(OUTPUT_DIR / "calendar.ics", "w") as f:
         )
         dtstamp = now.py_datetime().strftime("%Y%m%dT%H%M%SZ")
         f.write("BEGIN:VEVENT\r\n")
-        f.write(f"UID:{event['id']}\r\n")
-        f.write(f"SUMMARY:{event['name']}\r\n")
+        f.write(f"UID:{event['conId']}/{event['eventId']}\r\n")
+        f.write(f"SUMMARY:{escape_ics(event['name'])}\r\n")
         f.write(f"DTSTART;VALUE=DATE:{start_date}\r\n")
         f.write(f"DTEND;VALUE=DATE:{end_date}\r\n")
         f.write(f"DTSTAMP:{dtstamp}\r\n")
-        f.write(f"URL:{event['url']}\r\n")
-        f.write(f"LOCATION:{event['location']}\r\n")
+        f.write(f"URL:{escape_ics(event['url'])}\r\n")
+        f.write(f"LOCATION:{escape_ics(event['location'])}\r\n")
         f.write("END:VEVENT\r\n")
     f.write("END:VCALENDAR\r\n")
 

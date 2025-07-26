@@ -1,0 +1,16 @@
+{
+  "name": "Bavarian Furdance",
+  "url": "https://www.bayern-furs.de/events/bfd",
+  "events": [
+    {
+      "id": "2025",
+      "name": "Bavarian Furdance 2025",
+      "startDate": "2025-06-21",
+      "endDate": "2025-06-21",
+      "location": "Z-Bau, Nürnberg, Germany",
+      "country": "DE",
+      "latLng": [49.43056139999999, 11.09474],
+      "sources": ["fancons.com"]
+    }
+  ]
+}

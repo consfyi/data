@@ -1,0 +1,21 @@
+{
+  "name": "Noctfurnal",
+  "url": "http://furrycons.com/event/26039/noctfurnal-2025",
+  "events": [
+    {
+      "id": "2025",
+      "name": "Noctfurnal 2025",
+      "startDate": "2025-07-18",
+      "endDate": "2025-07-20",
+      "location": "Hi-Way Drive-In, Carsonville, MI, USA",
+      "country": "US",
+      "latLng": [
+        43.4241108,
+        -82.7204205
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    }
+  ]
+}

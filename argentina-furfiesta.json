@@ -1,0 +1,16 @@
+{
+  "name": "Argentina FurFiesta",
+  "url": "https://magnamart.biz",
+  "events": [
+    {
+      "id": "2025",
+      "name": "Argentina FurFiesta 2025",
+      "startDate": "2025-06-20",
+      "endDate": "2025-06-22",
+      "location": "Abasto Hotel Buenos Aires, Buenos Aires, Argentina",
+      "country": "AR",
+      "latLng": [-34.6042452, -58.41008650000001],
+      "sources": ["fancons.com"]
+    }
+  ]
+}

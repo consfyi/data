@@ -1,0 +1,16 @@
+{
+  "name": "Brasil FurFest",
+  "url": "https://brasilfurfest.com.br",
+  "events": [
+    {
+      "id": "2025",
+      "name": "Brasil FurFest 2025",
+      "startDate": "2025-07-18",
+      "endDate": "2025-07-20",
+      "location": "Hotel Nacional Inn Jaraguá São Paulo, São Paulo, SP, Brazil",
+      "country": "BR",
+      "latLng": [-23.5484133, -46.6429929],
+      "sources": ["fancons.com"]
+    }
+  ]
+}

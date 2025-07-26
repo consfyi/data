@@ -1,0 +1,21 @@
+{
+  "name": "Ibercon",
+  "url": "http://furrycons.com/event/24634/ibercon-2025",
+  "events": [
+    {
+      "id": "2025",
+      "name": "Ibercon 2025",
+      "startDate": "2025-05-01",
+      "endDate": "2025-05-04",
+      "location": "Rafaelhoteles Atocha, Madrid, Spain",
+      "country": "ES",
+      "latLng": [
+        40.40136800000001,
+        -3.6870781
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    }
+  ]
+}

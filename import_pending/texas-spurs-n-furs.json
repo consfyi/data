@@ -1,0 +1,22 @@
+{
+  "name": "Texas Spurs 'N Furs",
+  "url": "http://furrycons.com/event/23947/texas-spurs--n-furs-2025",
+  "events": [
+    {
+      "id": "2025",
+      "name": "Texas Spurs 'N Furs 2025",
+      "startDate": "2025-01-02",
+      "endDate": "2025-01-05",
+      "location": "Hyatt Regency Baytown - Houston, Baytown, TX, USA",
+      "country": "US",
+      "latLng": [
+        29.7092424,
+        -94.9945446
+      ],
+      "sources": [
+        "fancons.com"
+      ],
+      "canceled": true
+    }
+  ]
+}

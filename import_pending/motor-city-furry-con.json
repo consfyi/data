@@ -1,0 +1,25 @@
+{
+  "name": "Motor City Furry Con",
+  "url": "https://motorcityfurrycon.org/",
+  "events": [
+    {
+      "id": "2025",
+      "name": "Motor City Furry Con 2025",
+      "startDate": "2025-03-28",
+      "endDate": "2025-03-30",
+      "location": "Ann Arbor Marriott Ypsilanti at Eagle Crest, Ypsilanti, MI, USA",
+      "country": "US",
+      "latLng": [42.2245823, -83.61332709999999],
+      "sources": ["fancons.com"]
+    },
+    {
+      "id": "2025",
+      "name": "Motor City Furry Con 2026",
+      "startDate": "2026-02-13",
+      "endDate": "2025-02-15",
+      "location": "Detroit Marriott at the Renaissance Center, Detroit, MI, USA",
+      "country": "US",
+      "latLng": [42.32868609983804, -83.04063578388521]
+    }
+  ]
+}

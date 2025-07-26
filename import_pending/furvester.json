@@ -1,0 +1,21 @@
+{
+  "name": "Furvester",
+  "url": "http://furrycons.com/event/24169/furvester-2024",
+  "events": [
+    {
+      "id": "2024",
+      "name": "Furvester 2024",
+      "startDate": "2024-12-29",
+      "endDate": "2025-01-02",
+      "location": "Hotel Fortuna Reutlingen/Tübingen, Reutlingen, Germany",
+      "country": "DE",
+      "latLng": [
+        48.49944439999999,
+        9.1502778
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    }
+  ]
+}

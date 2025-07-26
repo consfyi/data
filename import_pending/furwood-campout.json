@@ -1,0 +1,21 @@
+{
+  "name": "Furwood Campout",
+  "url": "http://furrycons.com/event/25981/furwood-campout-2025",
+  "events": [
+    {
+      "id": "2025",
+      "name": "Furwood Campout 2025",
+      "startDate": "2025-06-13",
+      "endDate": "2025-06-15",
+      "location": "Triangle Recreation Camp, Granite Falls, WA, USA",
+      "country": "US",
+      "latLng": [
+        48.0739803,
+        -121.5889639
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    }
+  ]
+}

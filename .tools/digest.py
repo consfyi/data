@@ -101,27 +101,27 @@ shutil.rmtree(cons_path, ignore_errors=True)
 
 os.mkdir(cons_path)
 
-ids = []
+index = []
 
 for fn in os.listdir("archived"):
     id, ext = os.path.splitext(fn)
     if ext != ".json":
         continue
-    ids.append(id)
+    index.append({"id": id})
     shutil.copy(os.path.join("archived", fn), cons_path / fn)
 
 for fn in os.listdir("."):
     id, ext = os.path.splitext(fn)
     if ext != ".json":
         continue
-    ids.append(id)
+    index.append({"id": id})
     shutil.copy(fn, cons_path / fn)
 
-ids.sort()
+index.sort(key=lambda con: con["id"])
 
 with open(OUTPUT_DIR / "index.json", "w") as f:
     json.dump(
-        ids,
+        index,
         f,
         ensure_ascii=False,
     )

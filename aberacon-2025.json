@@ -5,12 +5,6 @@
   "endDate": "2025-08-24",
   "location": "Best Western Aberavon Beach Hotel, Port Talbot, UK",
   "country": "GB",
-  "latLng": [
-    51.5934371,
-    -3.8149078
-  ],
-  "sources": [
-    "fancons.com",
-    "coyo.tl"
-  ]
+  "latLng": [51.5934371, -3.8149078],
+  "sources": ["fancons.com", "coyo.tl"]
 }

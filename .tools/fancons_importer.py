@@ -29,6 +29,13 @@ import xml.etree.ElementTree as ET
 
 logging.basicConfig(level=logging.INFO)
 
+NUMBERED_CONS = {
+    "kemocon",
+    "east",
+    "anthro-northwest",
+    "eurofurence",
+}
+
 
 def guess_language_for_region(region_code: str) -> icu.Locale:
     return icu.Locale.createFromName(f"und_{region_code}").addLikelySubtags()
@@ -119,6 +126,9 @@ async def main():
         for entry in calendar:
             try:
                 name = entry["name"]
+                prefix, year = entry["name"].rsplit(" ", 1)
+                year = int(year)
+
                 status = entry["eventStatus"]
                 url = entry["url"]
                 start_date = datetime.date.fromisoformat(entry["startDate"])
@@ -132,7 +142,8 @@ async def main():
                 if not country_code:
                     raise ValueError(f"Unknown country: {country_name}")
 
-                event_id = slugify(name, guess_language_for_region(country_code))
+                slug_prefix = slugify(prefix, guess_language_for_region(country_code))
+                event_id = f"{slug_prefix}-{year}"
                 path = pathlib.Path(OUTPUT_DIR) / f"{event_id}.json"
 
                 if status not in [
@@ -177,6 +188,8 @@ async def main():
                         location = geocode[0]["geometry"]["location"]
                         lat_lng = [location["lat"], location["lng"]]
 
+                # Find previous instance of event, if any.
+
                 event_data = {
                     "name": name,
                     "url": url,
@@ -185,7 +198,7 @@ async def main():
                     "location": full_address,
                     "country": country_code,
                     "latLng": lat_lng,
-                    "source": "fancons.com",
+                    "sources": ["fancons.com"],
                 }
                 if canceled:
                     event_data["canceled"] = True

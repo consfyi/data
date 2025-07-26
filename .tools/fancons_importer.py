@@ -9,6 +9,7 @@
 # ]
 # ///
 import asyncio
+import bisect
 from bs4 import BeautifulSoup
 import dataclasses
 import datetime
@@ -230,8 +231,11 @@ async def main():
         if any(e["id"] == event.id for e in con["events"]):
             continue
         logging.info(f"Adding event {event.id} to {event.con_id}")
-        con["events"].append(event.materialize_entry(gmaps))
-        con["events"].sort(key=lambda event: (event["startDate"], event["endDate"]))
+        bisect.insort(
+            con["events"],
+            event.materialize_entry(gmaps),
+            key=lambda event: (event["startDate"], event["endDate"]),
+        )
         with open(fn, "w") as f:
             json.dump(con, f, ensure_ascii=False, indent=2)
 

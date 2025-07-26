@@ -103,19 +103,16 @@ os.mkdir(cons_path)
 
 index = []
 
-for fn in os.listdir("archived"):
-    id, ext = os.path.splitext(fn)
-    if ext != ".json":
-        continue
-    index.append({"id": id})
-    shutil.copy(os.path.join("archived", fn), cons_path / fn)
-
-for fn in os.listdir("."):
-    id, ext = os.path.splitext(fn)
-    if ext != ".json":
-        continue
-    index.append({"id": id})
-    shutil.copy(fn, cons_path / fn)
+for dir in [".", "archived"]:
+    for fn in os.listdir(dir):
+        id, ext = os.path.splitext(fn)
+        if ext != ".json":
+            continue
+        with open(os.path.join(dir, fn)) as f:
+            con = json.load(f)
+        with open(cons_path / fn, "w") as f:
+            json.dump(con, f, indent=2, ensure_ascii=False)
+        index.append({"id": id, "con": con["name"]})
 
 index.sort(key=lambda con: con["id"])
 

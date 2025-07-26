@@ -1,0 +1,15 @@
+{
+  "name": "Thaitails",
+  "url": "https://thaitails.net",
+  "events": [
+    {
+      "id": "2025",
+      "name": "Thaitails 2025",
+      "startDate": "2025-03-22",
+      "endDate": "2025-03-23",
+      "location": "Grand Richmond Stylish Convention Hotel, Nonthaburi, Thailand",
+      "country": "TH",
+      "latLng": [13.885813257724788, 100.50037219086519]
+    }
+  ]
+}

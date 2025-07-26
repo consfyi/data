@@ -1,9 +1,8 @@
 {
   "name": "FursonaCon",
-  "url": "https://fursonacon.com",
   "events": [
     {
-      "id": "2025",
+      "id": "fursonacon-2025",
       "name": "FursonaCon 2025",
       "startDate": "2025-08-28",
       "endDate": "2025-08-31",
@@ -16,7 +15,8 @@
       "sources": [
         "fancons.com",
         "coyo.tl"
-      ]
+      ],
+      "url": "https://fursonacon.com"
     }
   ]
 }

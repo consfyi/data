@@ -1,9 +1,8 @@
 {
   "name": "Get Out The Float",
-  "url": "https://getoutthefloat.com",
   "events": [
     {
-      "id": "2026",
+      "id": "get-out-the-float-2026",
       "name": "Get Out The Float 2026",
       "startDate": "2026-02-12",
       "endDate": "2026-02-15",
@@ -16,7 +15,8 @@
       "sources": [
         "fancons.com",
         "coyo.tl"
-      ]
+      ],
+      "url": "https://getoutthefloat.com"
     }
   ]
 }

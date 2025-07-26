@@ -1,9 +1,8 @@
 {
   "name": "Furdance Budapest",
-  "url": "https://www.furdance.hu",
   "events": [
     {
-      "id": "2025",
+      "id": "furdance-budapest-2025",
       "name": "Furdance Budapest 2025",
       "startDate": "2025-09-26",
       "endDate": "2025-09-28",
@@ -16,7 +15,8 @@
       "sources": [
         "fancons.com",
         "coyo.tl"
-      ]
+      ],
+      "url": "https://www.furdance.hu"
     }
   ]
 }

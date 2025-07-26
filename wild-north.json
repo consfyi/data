@@ -1,9 +1,8 @@
 {
   "name": "Wild North",
-  "url": "https://www.wildnorth.uk",
   "events": [
     {
-      "id": "2025",
+      "id": "wild-north-2025",
       "name": "Wild North 2025",
       "startDate": "2025-09-26",
       "endDate": "2025-09-29",
@@ -16,7 +15,8 @@
       "sources": [
         "fancons.com",
         "coyo.tl"
-      ]
+      ],
+      "url": "https://www.wildnorth.uk"
     }
   ]
 }

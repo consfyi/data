@@ -1,16 +1,21 @@
 {
   "name": "Furry Weekend Holland",
-  "url": "https://www.furryweekend.nl",
   "events": [
     {
-      "id": "2025",
+      "id": "furry-weekend-holland-2025",
       "name": "Furry Weekend Holland 2025",
       "startDate": "2025-04-25",
       "endDate": "2025-04-28",
       "location": "Kasteel de Berckt, Baarlo, Netherlands",
       "country": "NL",
-      "latLng": [51.342657, 6.112067],
-      "sources": ["fancons.com"]
+      "latLng": [
+        51.342657,
+        6.112067
+      ],
+      "sources": [
+        "fancons.com"
+      ],
+      "url": "https://www.furryweekend.nl"
     }
   ]
 }

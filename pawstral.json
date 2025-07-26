@@ -1,9 +1,8 @@
 {
   "name": "Pawstral",
-  "url": "https://pawstral.cl",
   "events": [
     {
-      "id": "2025",
+      "id": "pawstral-2025",
       "name": "Pawstral 2025",
       "startDate": "2025-08-29",
       "endDate": "2025-08-31",
@@ -15,7 +14,8 @@
       ],
       "sources": [
         "fancons.com"
-      ]
+      ],
+      "url": "https://pawstral.cl"
     }
   ]
 }

@@ -1,9 +1,8 @@
 {
   "name": "Japan Meeting of Furries",
-  "url": "https://www.jmof.jp",
   "events": [
     {
-      "id": "2026",
+      "id": "japan-meeting-of-furries-2026",
       "name": "Japan Meeting of Furries 2026",
       "startDate": "2026-01-09",
       "endDate": "2026-01-11",
@@ -16,7 +15,8 @@
       "sources": [
         "fancons.com",
         "coyo.tl"
-      ]
+      ],
+      "url": "https://www.jmof.jp"
     }
   ]
 }

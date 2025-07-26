@@ -1,9 +1,8 @@
 {
   "name": "Calfurry",
-  "url": "https://www.calfurry.ca",
   "events": [
     {
-      "id": "2026",
+      "id": "calfurry-2026",
       "name": "Calfurry 2026",
       "startDate": "2026-09-04",
       "endDate": "2026-09-06",
@@ -16,7 +15,8 @@
       "sources": [
         "fancons.com",
         "coyo.tl"
-      ]
+      ],
+      "url": "https://www.calfurry.ca"
     }
   ]
 }

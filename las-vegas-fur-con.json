@@ -1,9 +1,8 @@
 {
   "name": "Las Vegas Fur Con",
-  "url": "https://lasvegasfurcon.org",
   "events": [
     {
-      "id": "2026",
+      "id": "las-vegas-fur-con-2026",
       "name": "Las Vegas Fur Con 2026",
       "startDate": "2026-04-02",
       "endDate": "2026-04-05",
@@ -16,7 +15,8 @@
       "sources": [
         "fancons.com",
         "coyo.tl"
-      ]
+      ],
+      "url": "https://lasvegasfurcon.org"
     }
   ]
 }

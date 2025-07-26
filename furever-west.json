@@ -1,9 +1,8 @@
 {
   "name": "Furever West",
-  "url": "https://www.wyofurcon.com",
   "events": [
     {
-      "id": "2025",
+      "id": "furever-west-2025",
       "name": "Furever West 2025",
       "startDate": "2025-09-19",
       "endDate": "2025-09-21",
@@ -16,7 +15,8 @@
       "sources": [
         "fancons.com",
         "coyo.tl"
-      ]
+      ],
+      "url": "https://www.wyofurcon.com"
     }
   ]
 }

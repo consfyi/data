@@ -1,9 +1,8 @@
 {
   "name": "Furry Cruise",
-  "url": "https://furrycruise.com",
   "events": [
     {
-      "id": "2025",
+      "id": "furry-cruise-2025",
       "name": "Furry Cruise 2025",
       "startDate": "2025-10-03",
       "endDate": "2025-10-10",
@@ -15,7 +14,8 @@
       ],
       "sources": [
         "fancons.com"
-      ]
+      ],
+      "url": "https://furrycruise.com"
     }
   ]
 }

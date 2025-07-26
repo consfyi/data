@@ -1,9 +1,8 @@
 {
   "name": "Furcamp",
-  "url": "https://www.furcamp.com.br",
   "events": [
     {
-      "id": "2026",
+      "id": "furcamp-2026",
       "name": "Furcamp 2026",
       "startDate": "2026-02-14",
       "endDate": "2026-02-17",
@@ -16,7 +15,8 @@
       "sources": [
         "fancons.com",
         "coyo.tl"
-      ]
+      ],
+      "url": "https://www.furcamp.com.br"
     }
   ]
 }

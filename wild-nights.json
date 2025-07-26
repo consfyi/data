@@ -1,9 +1,8 @@
 {
   "name": "Wild Nights",
-  "url": "https://wildnights.org",
   "events": [
     {
-      "id": "2026",
+      "id": "wild-nights-2026",
       "name": "Wild Nights 2026",
       "startDate": "2026-04-23",
       "endDate": "2026-04-28",
@@ -16,7 +15,8 @@
       "sources": [
         "fancons.com",
         "coyo.tl"
-      ]
+      ],
+      "url": "https://wildnights.org"
     }
   ]
 }

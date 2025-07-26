@@ -1,9 +1,8 @@
 {
   "name": "South Afrifur",
-  "url": "https://south-afrifur.co.za",
   "events": [
     {
-      "id": "2025",
+      "id": "south-afrifur-2025",
       "name": "South Afrifur 2025",
       "startDate": "2025-09-05",
       "endDate": "2025-09-08",
@@ -16,7 +15,8 @@
       "sources": [
         "fancons.com",
         "coyo.tl"
-      ]
+      ],
+      "url": "https://south-afrifur.co.za"
     }
   ]
 }

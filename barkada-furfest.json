@@ -1,9 +1,8 @@
 {
   "name": "Barkada Furfest",
-  "url": "https://barkadafurfest.ph",
   "events": [
     {
-      "id": "2025",
+      "id": "barkada-furfest-2025",
       "name": "Barkada Furfest 2025",
       "startDate": "2025-09-06",
       "endDate": "2025-09-07",
@@ -16,7 +15,8 @@
       "sources": [
         "fancons.com",
         "coyo.tl"
-      ]
+      ],
+      "url": "https://barkadafurfest.ph"
     }
   ]
 }

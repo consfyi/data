@@ -1,9 +1,8 @@
 {
   "name": "Furrydelphia",
-  "url": "https://www.furrydelphia.org",
   "events": [
     {
-      "id": "2025",
+      "id": "furrydelphia-2025",
       "name": "Furrydelphia 2025",
       "startDate": "2025-08-22",
       "endDate": "2025-08-24",
@@ -16,7 +15,8 @@
       "sources": [
         "fancons.com",
         "coyo.tl"
-      ]
+      ],
+      "url": "https://www.furrydelphia.org"
     }
   ]
 }

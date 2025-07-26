@@ -1,9 +1,8 @@
 {
   "name": "Reffurence",
-  "url": "https://www.reffurence.com",
   "events": [
     {
-      "id": "2025",
+      "id": "reffurence-2025",
       "name": "Reffurence 2025",
       "startDate": "2025-10-30",
       "endDate": "2025-11-02",
@@ -16,7 +15,8 @@
       "sources": [
         "fancons.com",
         "coyo.tl"
-      ]
+      ],
+      "url": "https://www.reffurence.com"
     }
   ]
 }

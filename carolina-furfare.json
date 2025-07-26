@@ -1,9 +1,8 @@
 {
   "name": "Carolina Furfare",
-  "url": "https://www.carolinafurfare.org",
   "events": [
     {
-      "id": "2025",
+      "id": "carolina-furfare-2025",
       "name": "Carolina Furfare 2025",
       "startDate": "2025-11-06",
       "endDate": "2025-11-09",
@@ -16,7 +15,8 @@
       "sources": [
         "fancons.com",
         "coyo.tl"
-      ]
+      ],
+      "url": "https://www.carolinafurfare.org"
     }
   ]
 }

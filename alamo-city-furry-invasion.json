@@ -1,9 +1,8 @@
 {
   "name": "Alamo City Furry Invasion",
-  "url": "https://www.furryinvasion.org",
   "events": [
     {
-      "id": "2025",
+      "id": "alamo-city-furry-invasion-2025",
       "name": "Alamo City Furry Invasion 2025",
       "startDate": "2025-10-09",
       "endDate": "2025-10-12",
@@ -16,7 +15,8 @@
       "sources": [
         "fancons.com",
         "coyo.tl"
-      ]
+      ],
+      "url": "https://www.furryinvasion.org"
     }
   ]
 }

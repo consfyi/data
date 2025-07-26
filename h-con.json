@@ -1,9 +1,8 @@
 {
   "name": "H-Con",
-  "url": "https://h-con.org",
   "events": [
     {
-      "id": "2025",
+      "id": "h-con-2025",
       "name": "H-Con 2025",
       "startDate": "2025-10-01",
       "endDate": "2025-10-05",
@@ -16,7 +15,8 @@
       "sources": [
         "fancons.com",
         "coyo.tl"
-      ]
+      ],
+      "url": "https://h-con.org"
     }
   ]
 }

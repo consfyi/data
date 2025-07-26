@@ -1,25 +1,34 @@
 {
   "name": "CanthroFur",
-  "url": "https://canthrofur.org",
   "events": [
     {
-      "id": "2025",
+      "id": "canthrofur-2025",
       "name": "CanthroFur 2025",
       "startDate": "2025-01-16",
       "endDate": "2025-01-20",
       "location": "VTF Le domaine des Puys, Saint-Sauves-d'Auvergne, France",
       "country": "FR",
-      "latLng": [45.6231121, 2.6952037],
-      "sources": ["fancons.com"]
+      "latLng": [
+        45.6231121,
+        2.6952037
+      ],
+      "sources": [
+        "fancons.com"
+      ],
+      "url": "https://canthrofur.org"
     },
     {
-      "id": "2026",
+      "id": "canthrofur-2026",
       "name": "CanthroFur 2026",
       "startDate": "2026-01-15",
       "endDate": "2026-01-19",
       "location": "VTF Le domaine des Puys, Saint-Sauves-d'Auvergne, France",
       "country": "FR",
-      "latLng": [45.6231121, 2.6952037]
+      "latLng": [
+        45.6231121,
+        2.6952037
+      ],
+      "url": "https://canthrofur.org"
     }
   ]
 }

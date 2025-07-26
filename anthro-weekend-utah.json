@@ -1,9 +1,8 @@
 {
   "name": "Anthro Weekend Utah",
-  "url": "https://www.anthroweekendutah.org",
   "events": [
     {
-      "id": "2025",
+      "id": "anthro-weekend-utah-2025",
       "name": "Anthro Weekend Utah 2025",
       "startDate": "2025-08-01",
       "endDate": "2025-08-03",
@@ -16,7 +15,8 @@
       "sources": [
         "fancons.com",
         "coyo.tl"
-      ]
+      ],
+      "url": "https://www.anthroweekendutah.org"
     }
   ]
 }

@@ -1,9 +1,8 @@
 {
   "name": "VancouFur",
-  "url": "https://vancoufur.org",
   "events": [
     {
-      "id": "2026",
+      "id": "vancoufur-2026",
       "name": "VancouFur 2026",
       "startDate": "2026-03-05",
       "endDate": "2026-03-08",
@@ -16,7 +15,8 @@
       "sources": [
         "fancons.com",
         "coyo.tl"
-      ]
+      ],
+      "url": "https://vancoufur.org"
     }
   ]
 }

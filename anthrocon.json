@@ -1,9 +1,8 @@
 {
   "name": "Anthrocon",
-  "url": "https://www.anthrocon.org",
   "events": [
     {
-      "id": "2026",
+      "id": "anthrocon-2026",
       "name": "Anthrocon 2026",
       "startDate": "2026-07-02",
       "endDate": "2026-07-05",
@@ -16,7 +15,8 @@
       "sources": [
         "fancons.com",
         "coyo.tl"
-      ]
+      ],
+      "url": "https://www.anthrocon.org"
     }
   ]
 }

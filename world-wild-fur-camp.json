@@ -1,9 +1,8 @@
 {
   "name": "World Wild Fur Camp",
-  "url": "https://www.worldwildfurcamps.com",
   "events": [
     {
-      "id": "2025",
+      "id": "world-wild-fur-camp-2025",
       "name": "World Wild Fur Camp 2025",
       "startDate": "2025-10-17",
       "endDate": "2025-10-19",
@@ -16,7 +15,8 @@
       "sources": [
         "fancons.com",
         "coyo.tl"
-      ]
+      ],
+      "url": "https://www.worldwildfurcamps.com"
     }
   ]
 }

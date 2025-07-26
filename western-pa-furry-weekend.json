@@ -1,9 +1,8 @@
 {
   "name": "Western PA Furry Weekend",
-  "url": "https://wpafw.org",
   "events": [
     {
-      "id": "2025",
+      "id": "western-pa-furry-weekend-2025",
       "name": "Western PA Furry Weekend 2025",
       "startDate": "2025-10-03",
       "endDate": "2025-10-05",
@@ -15,7 +14,8 @@
       ],
       "sources": [
         "fancons.com"
-      ]
+      ],
+      "url": "https://wpafw.org"
     }
   ]
 }

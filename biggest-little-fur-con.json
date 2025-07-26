@@ -1,9 +1,8 @@
 {
   "name": "Biggest Little Fur Con",
-  "url": "https://goblfc.org",
   "events": [
     {
-      "id": "2025",
+      "id": "biggest-little-fur-con-2025",
       "name": "Biggest Little Fur Con 2025",
       "startDate": "2025-10-13",
       "endDate": "2025-10-16",
@@ -16,7 +15,8 @@
       "sources": [
         "fancons.com",
         "coyo.tl"
-      ]
+      ],
+      "url": "https://goblfc.org"
     }
   ]
 }

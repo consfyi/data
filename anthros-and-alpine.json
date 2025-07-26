@@ -1,9 +1,8 @@
 {
   "name": "Anthros & Alpine",
-  "url": "https://anthroalpine.org",
   "events": [
     {
-      "id": "2026",
+      "id": "anthros-and-alpine-2026",
       "name": "Anthros & Alpine 2026",
       "startDate": "2026-01-29",
       "endDate": "2026-02-01",
@@ -15,7 +14,8 @@
       ],
       "sources": [
         "fancons.com"
-      ]
+      ],
+      "url": "https://anthroalpine.org"
     }
   ]
 }

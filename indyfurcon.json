@@ -1,9 +1,8 @@
 {
   "name": "IndyFurCon",
-  "url": "https://indyfurcon.org",
   "events": [
     {
-      "id": "2025",
+      "id": "indyfurcon-2025",
       "name": "IndyFurCon 2025",
       "startDate": "2025-08-15",
       "endDate": "2025-08-17",
@@ -15,7 +14,8 @@
       ],
       "sources": [
         "fancons.com"
-      ]
+      ],
+      "url": "https://indyfurcon.org"
     }
   ]
 }

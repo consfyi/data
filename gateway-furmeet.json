@@ -1,9 +1,8 @@
 {
   "name": "Gateway FurMeet",
-  "url": "https://www.gatewayfurmeet.org",
   "events": [
     {
-      "id": "2025",
+      "id": "gateway-furmeet-2025",
       "name": "Gateway FurMeet 2025",
       "startDate": "2025-10-03",
       "endDate": "2025-10-05",
@@ -16,7 +15,8 @@
       "sources": [
         "fancons.com",
         "coyo.tl"
-      ]
+      ],
+      "url": "https://www.gatewayfurmeet.org"
     }
   ]
 }

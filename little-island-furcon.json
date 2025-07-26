@@ -1,16 +1,21 @@
 {
   "name": "Little Island Furcon",
-  "url": "https://www.littleislandfur.com/",
   "events": [
     {
-      "id": "2025",
+      "id": "little-island-furcon-2025",
       "name": "Little Island Furcon 2025",
       "startDate": "2025-06-14",
       "endDate": "2025-06-15",
       "location": "One Farrer, Singapore",
       "country": "SG",
-      "latLng": [1.3125457, 103.8543732],
-      "sources": ["fancons.com"]
+      "latLng": [
+        1.3125457,
+        103.8543732
+      ],
+      "sources": [
+        "fancons.com"
+      ],
+      "url": "https://www.littleislandfur.com/"
     }
   ]
 }

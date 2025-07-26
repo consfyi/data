@@ -1,9 +1,8 @@
 {
   "name": "Genderverse FurCon",
-  "url": "https://genderversefurries.com",
   "events": [
     {
-      "id": "2025",
+      "id": "genderverse-furcon-2025",
       "name": "Genderverse FurCon 2025",
       "startDate": "2025-09-20",
       "endDate": "2025-09-20",
@@ -15,7 +14,8 @@
       ],
       "sources": [
         "fancons.com"
-      ]
+      ],
+      "url": "https://genderversefurries.com"
     }
   ]
 }

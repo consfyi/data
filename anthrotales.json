@@ -1,9 +1,8 @@
 {
   "name": "AnthroTales",
-  "url": "https://www.anthrotales.eu",
   "events": [
     {
-      "id": "2026",
+      "id": "anthrotales-2026",
       "name": "AnthroTales 2026",
       "startDate": "2026-05-14",
       "endDate": "2026-05-17",
@@ -16,7 +15,8 @@
       "sources": [
         "fancons.com",
         "coyo.tl"
-      ]
+      ],
+      "url": "https://www.anthrotales.eu"
     }
   ]
 }

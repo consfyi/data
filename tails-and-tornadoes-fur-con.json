@@ -1,9 +1,8 @@
 {
   "name": "Tails and Tornadoes Fur Con",
-  "url": "https://tailsandtornadoes.org",
   "events": [
     {
-      "id": "2025",
+      "id": "tails-and-tornadoes-fur-con-2025",
       "name": "Tails and Tornadoes Fur Con 2025",
       "startDate": "2025-09-05",
       "endDate": "2025-09-07",
@@ -16,7 +15,8 @@
       "sources": [
         "fancons.com",
         "coyo.tl"
-      ]
+      ],
+      "url": "https://tailsandtornadoes.org"
     }
   ]
 }

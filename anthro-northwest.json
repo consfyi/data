@@ -1,9 +1,8 @@
 {
   "name": "Anthro Northwest",
-  "url": "https://anthronw.com",
   "events": [
     {
-      "id": "2026",
+      "id": "anthro-northwest-2026",
       "name": "Anthro Northwest 8",
       "startDate": "2025-12-31",
       "endDate": "2026-01-04",
@@ -16,7 +15,8 @@
       "sources": [
         "fancons.com",
         "coyo.tl"
-      ]
+      ],
+      "url": "https://anthronw.com"
     }
   ]
 }

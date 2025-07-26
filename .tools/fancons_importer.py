@@ -143,6 +143,7 @@ class Event:
             "country": self.country,
             "latLng": self.lat_lng,
             "sources": ["fancons.com"],
+            "url": self.url,
             **({"canceled": True} if self.canceled else {}),
         }
 
@@ -194,7 +195,7 @@ async def fetch_events():
                 yield Event(
                     con_id=con_id,
                     con_name=prefix,
-                    id=year,
+                    id=f"{con_id}-{year}",
                     name=name,
                     url=url,
                     start_date=start_date.isoformat(),
@@ -231,6 +232,8 @@ async def main():
         if any(e["id"] == event.id for e in con["events"]):
             continue
         logging.info(f"Adding event {event.id} to {event.con_id}")
+        if con["events"]:
+            event.url = con["events"][-1]["url"]
         bisect.insort(
             con["events"],
             event.materialize_entry(gmaps),

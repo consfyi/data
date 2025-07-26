@@ -1,9 +1,8 @@
 {
   "name": "DenFur",
-  "url": "https://denfur.org",
   "events": [
     {
-      "id": "2025",
+      "id": "denfur-2025",
       "name": "DenFur 2025",
       "startDate": "2025-08-29",
       "endDate": "2025-08-31",
@@ -16,7 +15,8 @@
       "sources": [
         "fancons.com",
         "coyo.tl"
-      ]
+      ],
+      "url": "https://denfur.org"
     }
   ]
 }

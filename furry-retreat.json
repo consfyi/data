@@ -1,9 +1,8 @@
 {
   "name": "Furry Retreat",
-  "url": "https://www.furryretreat.com",
   "events": [
     {
-      "id": "2025",
+      "id": "furry-retreat-2025",
       "name": "Furry Retreat 2025",
       "startDate": "2025-10-01",
       "endDate": "2025-10-06",
@@ -15,7 +14,8 @@
       ],
       "sources": [
         "fancons.com"
-      ]
+      ],
+      "url": "https://www.furryretreat.com"
     }
   ]
 }

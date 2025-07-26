@@ -1,9 +1,8 @@
 {
   "name": "Pawsome",
-  "url": "https://www.pawsome.org.uk",
   "events": [
     {
-      "id": "2025",
+      "id": "pawsome-2025",
       "name": "Pawsome 2025",
       "startDate": "2025-10-03",
       "endDate": "2025-10-06",
@@ -16,7 +15,8 @@
       "sources": [
         "fancons.com",
         "coyo.tl"
-      ]
+      ],
+      "url": "https://www.pawsome.org.uk"
     }
   ]
 }

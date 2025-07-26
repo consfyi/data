@@ -1,9 +1,8 @@
 {
   "name": "Furry Blacklight",
-  "url": "https://fblacklight.org",
   "events": [
     {
-      "id": "2025",
+      "id": "furry-blacklight-2025",
       "name": "Furry Blacklight 2025",
       "startDate": "2025-10-29",
       "endDate": "2025-11-02",
@@ -16,7 +15,8 @@
       "sources": [
         "fancons.com",
         "coyo.tl"
-      ]
+      ],
+      "url": "https://fblacklight.org"
     }
   ]
 }

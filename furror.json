@@ -1,9 +1,8 @@
 {
   "name": "Furror",
-  "url": "https://furror.pl",
   "events": [
     {
-      "id": "2025",
+      "id": "furror-2025",
       "name": "Furror 2025",
       "startDate": "2025-10-10",
       "endDate": "2025-10-12",
@@ -16,7 +15,8 @@
       "sources": [
         "fancons.com",
         "coyo.tl"
-      ]
+      ],
+      "url": "https://furror.pl"
     }
   ]
 }

@@ -1,9 +1,8 @@
 {
   "name": "GoldenHorn",
-  "url": "https://goldenhorn.si",
   "events": [
     {
-      "id": "2025",
+      "id": "goldenhorn-2025",
       "name": "GoldenHorn 2025",
       "startDate": "2025-11-13",
       "endDate": "2025-11-16",
@@ -16,7 +15,8 @@
       "sources": [
         "fancons.com",
         "coyo.tl"
-      ]
+      ],
+      "url": "https://goldenhorn.si"
     }
   ]
 }

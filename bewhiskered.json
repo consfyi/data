@@ -1,16 +1,21 @@
 {
   "name": "Bewhiskered",
-  "url": "https://bewhiskeredcon.org",
   "events": [
     {
-      "id": "2025",
+      "id": "bewhiskered-2025",
       "name": "Bewhiskered 2025",
       "startDate": "2025-03-07",
       "endDate": "2025-03-09",
       "location": "Sheraton Imperial Hotel Raleigh-Durham Airport at Research Triangle Park, Durham, NC, USA",
       "country": "US",
-      "latLng": [35.8781597, -78.83849920000002],
-      "sources": ["fancons.com"]
+      "latLng": [
+        35.8781597,
+        -78.83849920000002
+      ],
+      "sources": [
+        "fancons.com"
+      ],
+      "url": "https://bewhiskeredcon.org"
     }
   ]
 }

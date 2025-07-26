@@ -1,6 +1,6 @@
 {
   "name": "Furpile",
-  "url": "http://furrycons.com/event/24845/furpile-2025",
+  "url": "https://furpile.pl",
   "events": [
     {
       "id": "2025",
@@ -9,13 +9,8 @@
       "endDate": "2025-05-11",
       "location": "Boutique Hotel's III Łódź, Łódź, Poland",
       "country": "PL",
-      "latLng": [
-        51.7599923,
-        19.4605208
-      ],
-      "sources": [
-        "fancons.com"
-      ]
+      "latLng": [51.7599923, 19.4605208],
+      "sources": ["fancons.com"]
     }
   ]
 }

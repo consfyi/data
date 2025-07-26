@@ -1,6 +1,6 @@
 {
   "name": "KRAZ",
-  "url": "http://furrycons.com/event/26012/kraz-2025",
+  "url": "https://www.kraz.eu",
   "events": [
     {
       "id": "2025",
@@ -9,13 +9,8 @@
       "endDate": "2025-05-04",
       "location": "Westernové městečko Boskovice, s.r.o., Boskovice, Czech Republic",
       "country": "CZ",
-      "latLng": [
-        49.494778,
-        16.6856997
-      ],
-      "sources": [
-        "fancons.com"
-      ]
+      "latLng": [49.494778, 16.6856997],
+      "sources": ["fancons.com"]
     }
   ]
 }

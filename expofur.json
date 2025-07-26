@@ -1,6 +1,6 @@
 {
   "name": "Expofur",
-  "url": "http://furrycons.com/event/25521/expofur-2025",
+  "url": "https://expofur.online",
   "events": [
     {
       "id": "2025",
@@ -9,13 +9,8 @@
       "endDate": "2025-03-09",
       "location": "Hotel Monterrey Macroplaza, Monterrey, Newfoundland and Labrador, Mexico",
       "country": "MX",
-      "latLng": [
-        25.6866142,
-        -100.3161126
-      ],
-      "sources": [
-        "fancons.com"
-      ]
+      "latLng": [25.6866142, -100.3161126],
+      "sources": ["fancons.com"]
     }
   ]
 }

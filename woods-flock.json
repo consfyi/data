@@ -1,6 +1,6 @@
 {
   "name": "Woods Flock",
-  "url": "http://furrycons.com/event/25269/woods-flock-2025",
+  "url": "https://woodsflock.com",
   "events": [
     {
       "id": "2025",
@@ -9,13 +9,8 @@
       "endDate": "2025-04-13",
       "location": "Fall Creek Falls State Park, Newton Ford Bunk Group Lodge, Pikeville, TN, USA",
       "country": "US",
-      "latLng": [
-        35.6409607,
-        -85.3429298
-      ],
-      "sources": [
-        "fancons.com"
-      ]
+      "latLng": [35.6409607, -85.3429298],
+      "sources": ["fancons.com"]
     }
   ]
 }

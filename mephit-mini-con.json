@@ -1,6 +1,6 @@
 {
   "name": "Mephit Mini Con",
-  "url": "http://furrycons.com/event/26009/mephit-mini-con-2025",
+  "url": "https://www.mephitminicon.de",
   "events": [
     {
       "id": "2025",
@@ -9,13 +9,8 @@
       "endDate": "2025-06-01",
       "location": "DJH Jugendherberge Freusburg, Kirchen (Sieg), Germany",
       "country": "DE",
-      "latLng": [
-        50.8266967,
-        7.8811276
-      ],
-      "sources": [
-        "fancons.com"
-      ]
+      "latLng": [50.8266967, 7.8811276],
+      "sources": ["fancons.com"]
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "name": "Galactic Camp",
-  "url": "http://furrycons.com/event/24991/galactic-camp-2025",
+  "url": "https://www.galacticcamp.com",
   "events": [
     {
       "id": "2025",
@@ -9,13 +9,8 @@
       "endDate": "2025-05-26",
       "location": "USS Hornet - Sea, Air and Space Museum, Alameda, CA, USA",
       "country": "US",
-      "latLng": [
-        37.7726482,
-        -122.3025322
-      ],
-      "sources": [
-        "fancons.com"
-      ]
+      "latLng": [37.7726482, -122.3025322],
+      "sources": ["fancons.com"]
     }
   ]
 }

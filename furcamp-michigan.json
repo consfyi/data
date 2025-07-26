@@ -1,6 +1,6 @@
 {
   "name": "FurCamp Michigan",
-  "url": "http://furrycons.com/event/24392/furcamp-michigan-2025",
+  "url": "https://furcampmi.wixsite.com/camping",
   "events": [
     {
       "id": "2025",
@@ -9,13 +9,8 @@
       "endDate": "2025-06-08",
       "location": "Lake Michigan Recreation Area, Free Soil, MI, USA",
       "country": "US",
-      "latLng": [
-        44.11856470000001,
-        -86.42447519999999
-      ],
-      "sources": [
-        "fancons.com"
-      ]
+      "latLng": [44.11856470000001, -86.42447519999999],
+      "sources": ["fancons.com"]
     }
   ]
 }

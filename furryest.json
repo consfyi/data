@@ -1,6 +1,6 @@
 {
   "name": "FurryEST",
-  "url": "http://furrycons.com/event/26048/furryest-2025",
+  "url": "https://furryest.org",
   "events": [
     {
       "id": "2025",
@@ -9,13 +9,8 @@
       "endDate": "2025-07-06",
       "location": "Kabala Barge Houses, Kabala Village, Rapla County, Estonia",
       "country": "EE",
-      "latLng": [
-        58.9246768,
-        24.6496353
-      ],
-      "sources": [
-        "fancons.com"
-      ]
+      "latLng": [58.9246768, 24.6496353],
+      "sources": ["fancons.com"]
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "name": "Pawercon",
-  "url": "http://furrycons.com/event/26015/pawercon-2025",
+  "url": "https://imfur.org",
   "events": [
     {
       "id": "2025",
@@ -9,13 +9,8 @@
       "endDate": "2025-05-18",
       "location": "Hotel Sevilla Palace, Ciudad de México, Mexico",
       "country": "MX",
-      "latLng": [
-        19.4326963,
-        -99.15624989999999
-      ],
-      "sources": [
-        "fancons.com"
-      ]
+      "latLng": [19.4326963, -99.15624989999999],
+      "sources": ["fancons.com"]
     }
   ]
 }

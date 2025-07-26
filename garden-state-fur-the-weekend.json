@@ -1,6 +1,6 @@
 {
   "name": "Garden State Fur The Weekend",
-  "url": "http://furrycons.com/event/24636/garden-state-fur-the-weekend-2025",
+  "url": "https://gsftw.org",
   "events": [
     {
       "id": "2025",
@@ -9,13 +9,8 @@
       "endDate": "2025-05-04",
       "location": "Hyatt Regency New Brunswick, New Brunswick, NJ, USA",
       "country": "US",
-      "latLng": [
-        40.49684999999999,
-        -74.442852
-      ],
-      "sources": [
-        "fancons.com"
-      ]
+      "latLng": [40.49684999999999, -74.442852],
+      "sources": ["fancons.com"]
     }
   ]
 }

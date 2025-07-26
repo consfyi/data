@@ -1,6 +1,6 @@
 {
   "name": "ZodiaCon",
-  "url": "http://furrycons.com/event/26014/zodiacon-2025",
+  "url": "https://www.zodiacon.org",
   "events": [
     {
       "id": "2025",
@@ -9,13 +9,8 @@
       "endDate": "2025-06-08",
       "location": "Oáza Srdce, Horní Bradlo, Czech Republic",
       "country": "CZ",
-      "latLng": [
-        49.8063666,
-        15.7315885
-      ],
-      "sources": [
-        "fancons.com"
-      ]
+      "latLng": [49.8063666, 15.7315885],
+      "sources": ["fancons.com"]
     }
   ]
 }

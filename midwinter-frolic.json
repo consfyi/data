@@ -1,6 +1,6 @@
 {
   "name": "MidWinter Frolic",
-  "url": "http://furrycons.com/event/24817/midwinter-frolic-2025",
+  "url": "https://www.midwinterfrolic.org",
   "events": [
     {
       "id": "2025",
@@ -9,13 +9,8 @@
       "endDate": "2025-01-19",
       "location": "Whitewater State Park, Altura, MN, USA",
       "country": "US",
-      "latLng": [
-        44.06265500000001,
-        -92.04454199999999
-      ],
-      "sources": [
-        "fancons.com"
-      ]
+      "latLng": [44.06265500000001, -92.04454199999999],
+      "sources": ["fancons.com"]
     }
   ]
 }

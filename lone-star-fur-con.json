@@ -1,6 +1,6 @@
 {
   "name": "Lone Star Fur Con",
-  "url": "http://furrycons.com/event/25027/lone-star-fur-con-2025",
+  "url": "https://lonestarfurcon.com",
   "events": [
     {
       "id": "2025",
@@ -9,13 +9,8 @@
       "endDate": "2025-03-02",
       "location": "Holiday Inn Austin Midtown, Austin, TX, USA",
       "country": "US",
-      "latLng": [
-        30.3238733,
-        -97.7108463
-      ],
-      "sources": [
-        "fancons.com"
-      ]
+      "latLng": [30.3238733, -97.7108463],
+      "sources": ["fancons.com"]
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "name": "PragFUR Outing",
-  "url": "http://furrycons.com/event/26104/pragfur-outing-2025",
+  "url": "https://www.pragfur.cz/outing",
   "events": [
     {
       "id": "2025",
@@ -9,13 +9,8 @@
       "endDate": "2025-06-21",
       "location": "Park Podviní - Vysočany, Prague, Czech Republic",
       "country": "CZ",
-      "latLng": [
-        50.1096219,
-        14.4935521
-      ],
-      "sources": [
-        "fancons.com"
-      ]
+      "latLng": [50.1096219, 14.4935521],
+      "sources": ["fancons.com"]
     }
   ]
 }

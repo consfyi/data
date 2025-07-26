@@ -1,6 +1,6 @@
 {
   "name": "Gdakon",
-  "url": "http://furrycons.com/event/24298/gdakon-2025",
+  "url": "https://gdakon.pl",
   "events": [
     {
       "id": "2025",
@@ -9,13 +9,8 @@
       "endDate": "2025-03-02",
       "location": "Novotel Gdansk Marina, Gdańsk, Poland",
       "country": "PL",
-      "latLng": [
-        54.4287746,
-        18.5902129
-      ],
-      "sources": [
-        "fancons.com"
-      ]
+      "latLng": [54.4287746, 18.5902129],
+      "sources": ["fancons.com"]
     }
   ]
 }

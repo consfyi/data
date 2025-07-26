@@ -1,6 +1,6 @@
 {
   "name": "Les Furfurieux",
-  "url": "http://furrycons.com/event/24398/les-furfurieux-2025",
+  "url": "https://furfurieux.com",
   "events": [
     {
       "id": "2025",
@@ -9,13 +9,8 @@
       "endDate": "2025-05-11",
       "location": "Hotel Metz Technopole - Best Western Plus, Metz, France",
       "country": "FR",
-      "latLng": [
-        49.10049189999999,
-        6.2254616
-      ],
-      "sources": [
-        "fancons.com"
-      ]
+      "latLng": [49.10049189999999, 6.2254616],
+      "sources": ["fancons.com"]
     }
   ]
 }

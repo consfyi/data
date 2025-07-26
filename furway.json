@@ -1,6 +1,6 @@
 {
   "name": "Furway",
-  "url": "http://furrycons.com/event/26058/furway-2025",
+  "url": "https://www.furway.no",
   "events": [
     {
       "id": "2025",
@@ -9,13 +9,8 @@
       "endDate": "2025-07-21",
       "location": "Åstjern hyttetun, Brandbu, Norway",
       "country": "NO",
-      "latLng": [
-        60.4955572,
-        10.5827167
-      ],
-      "sources": [
-        "fancons.com"
-      ]
+      "latLng": [60.4955572, 10.5827167],
+      "sources": ["fancons.com"]
     }
   ]
 }

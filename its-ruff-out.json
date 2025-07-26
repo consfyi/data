@@ -1,6 +1,6 @@
 {
   "name": "It's Ruff Out",
-  "url": "http://furrycons.com/event/25254/its-ruff-out-2025",
+  "url": "https://ruffout.org",
   "events": [
     {
       "id": "2025",
@@ -9,13 +9,8 @@
       "endDate": "2025-05-04",
       "location": "Wildcat Mountain State Park, Ontario, WI, USA",
       "country": "US",
-      "latLng": [
-        43.697627,
-        -90.5741755
-      ],
-      "sources": [
-        "fancons.com"
-      ]
+      "latLng": [43.697627, -90.5741755],
+      "sources": ["fancons.com"]
     }
   ]
 }

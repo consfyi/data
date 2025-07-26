@@ -156,7 +156,6 @@ async def fetch_events():
             try:
                 name = entry["name"]
                 prefix, year = entry["name"].rsplit(" ", 1)
-                year = int(year)
 
                 url = entry["url"]
                 start_date = datetime.date.fromisoformat(entry["startDate"])
@@ -183,7 +182,6 @@ async def fetch_events():
 
                 lang = guess_language_for_region(country)
                 con_id = slugify(prefix, lang)
-                event_id = f"{con_id}-{year}"
 
                 match = regex.search(r"/event/(\d+)/", url)
                 assert match is not None
@@ -193,7 +191,7 @@ async def fetch_events():
                 yield Event(
                     con_id=con_id,
                     con_name=prefix,
-                    id=event_id,
+                    id=year,
                     name=name,
                     url=url,
                     start_date=start_date.isoformat(),

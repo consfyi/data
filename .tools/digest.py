@@ -27,6 +27,7 @@ for fn in os.listdir("."):
         if "latLng" in event:
             (lat, lng) = event["latLng"]
             event["timezone"] = tzfpy.get_tz(lng, lat)
+        event["id"] = f"{id}-{event['id']}"
         event["url"] = con["url"]
         events.append(event)
 

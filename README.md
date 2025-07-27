@@ -54,7 +54,8 @@ interface Event {
 
   /// Sources this data is from.
   sources?: string[];
-}```
+}
+```
 
 ### Output
 

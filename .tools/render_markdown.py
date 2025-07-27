@@ -32,7 +32,7 @@ class MyRenderer(mistune.HTMLRenderer):
         return "<pre><code>" + mistune.escape(code) + "</code></pre>"
 
 
-renderer = MyRenderer()
+renderer = MyRenderer(escape=False)
 markdown = mistune.create_markdown(renderer=renderer)
 body = markdown(sys.stdin.read())
 

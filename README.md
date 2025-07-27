@@ -2,7 +2,7 @@
 
 This repository ([github.com/consfyi/data](https://github.com/consfyi/data)) contains all the furry convention data for [cons.fyi](https://cons.fyi).
 
-If there is an issue with data accuracy, [you may file an issue here](https://github.com/consfyi/data/issues/new?template=missing-or-incorrect-convention.md).
+If there is an issue with data accuracy, you may [file an issue here](https://github.com/consfyi/data/issues/new?template=missing-or-incorrect-convention.md).
 
 ## Attribution
 
@@ -10,7 +10,9 @@ Attribution is not required but appreciated. This helps us keep our data up to d
 
 Please note that some data is imported from [FanCons.com](https://fancons.com) and is annotated as such. Usage restrictions may apply.
 
-## Files
+## Technical details
+
+### Files
 
 The following files are available at `https://data.cons.fyi`:
 - [/active.json](/active.json): A JSON file containing all current or upcoming events.
@@ -20,7 +22,7 @@ The following files are available at `https://data.cons.fyi`:
 - [/events/](/events/): JSON files of every event.
 - [/events.json](/events.json): IDs of all events.
 
-## Data model
+### Schema
 
 Each convention is modeled by a **con** record, that contains a list of **events** that describes a specific instance of a convention.
 

@@ -41,7 +41,7 @@ for fn in sorted(os.listdir(".")):
 
     with open(cons_path / fn, "w") as f:
         json.dump(con, f, indent=2, ensure_ascii=False)
-    cons_index.append(con["name"])
+    cons_index.append(id)
 
     for event in con["events"]:
         event["conId"] = id
@@ -60,7 +60,7 @@ with open(output_dir / "cons.json", "w") as f:
 
 with open(output_dir / "events.json", "w") as f:
     json.dump(
-        [event["name"] for event in events],
+        [event["id"] for event in events],
         f,
         ensure_ascii=False,
     )

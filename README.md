@@ -4,7 +4,7 @@ This repository ([github.com/consfyi/data](https://github.com/consfyi/data)) con
 
 If there is an issue with data accuracy, you may [file an issue here](https://github.com/consfyi/data/issues/new?template=missing-or-incorrect-convention.md).
 
-## Attribution
+## Usage
 
 Attribution is not required but appreciated. This helps us keep our data up to date, which in turn helps everyone else!
 

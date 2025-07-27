@@ -1,6 +1,24 @@
 # data.cons.fyi
 
-This repository contains all the convention data for [cons.fyi](https://cons.fyi).
+This repository ([github.com/consfyi/data](https://github.com/consfyi/data)) contains all the furry convention data for [cons.fyi](https://cons.fyi).
+
+If there is an issue with data accuracy, [you may file an issue here](https://github.com/consfyi/data/issues/new).
+
+## Files
+
+The following files are available at `https://data.cons.fyi`:
+- `/active.json`: A JSON file containing all current or upcoming events.
+- `/cons.json`: Names of all the cons in `/cons`.
+- `/events.json`: Names of all the events in `/events`.
+- `/calendar.ics`: All the active events in an ICS calendar.
+- `/cons/$ID.json`: JSON files of every con.
+- `/events/$ID.json`: JSON files of every event.
+
+Events will have the following fields materialized:
+- `relatedEventIds`: The IDs of all other events for the convention.
+- `timezone`: The IANA timezone ID, if `latLng` is present.
+
+## Data model
 
 Each convention is modeled by a **con** record, that contains a list of **events** that describes a specific instance of a convention.
 
@@ -44,20 +62,6 @@ interface Con {
   events: Event[];
 }
 ```
-
-## Files
-
-The following files are available at `https://data.cons.fyi`:
-- `/active.json`: A JSON file containing all current or upcoming events.
-- `/cons.json`: Names of all the cons in `/cons`.
-- `/events.json`: Names of all the events in `/events`.
-- `/calendar.ics`: All the active events in an ICS calendar.
-- `/cons/$ID.json`: JSON files of every con.
-- `/events/$ID.json`: JSON files of every event.
-
-Events will have the following fields materialized:
-- `relatedEventIds`: The IDs of all other events for the convention.
-- `timezone`: The IANA timezone ID, if `latLng` is present.
 
 ## Usage of data from FanCons.com
 

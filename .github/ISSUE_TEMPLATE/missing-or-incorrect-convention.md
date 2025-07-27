@@ -1,10 +1,7 @@
 ---
 name: Missing or incorrect convention
 about: Request a data update
-title: 'Convention request:'
-labels: ''
-assignees: ''
-
+title: 'Missing or incorrect convention:'
 ---
 
 Please fill out the following details:
@@ -13,4 +10,4 @@ Please fill out the following details:
 - Website:
 - Start date:
 - End date:
-- Address:
+- Location:

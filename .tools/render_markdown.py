@@ -10,8 +10,8 @@ import sys
 
 
 class TitleExtractingRenderer(mistune.HTMLRenderer):
-    def __init__(self):
-        super().__init__()
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
         self.title = None
 
     def heading(self, text, level):

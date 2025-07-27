@@ -17,11 +17,14 @@ OUTPUT_DIR = pathlib.Path(os.environ["OUTPUT_DIR"])
 cons_path = OUTPUT_DIR / "cons"
 os.mkdir(cons_path)
 
-index = {}
+events_path = OUTPUT_DIR / "events"
+os.mkdir(events_path)
+
+cons_index = {}
 events = []
 
 
-for fn in os.listdir("."):
+for fn in sorted(os.listdir(".")):
     id, ext = os.path.splitext(fn)
     if ext != ".json":
         continue
@@ -29,20 +32,33 @@ for fn in os.listdir("."):
     with open(fn) as f:
         con = json.load(f)
 
-    with open(cons_path / fn, "w") as f:
-        json.dump(con, f, indent=2, ensure_ascii=False)
-    index[id] = {"name": con["name"]}
-
     for event in con["events"]:
         if "latLng" in event:
             (lat, lng) = event["latLng"]
             event["timezone"] = tzfpy.get_tz(lng, lat)
+
+    with open(cons_path / fn, "w") as f:
+        json.dump(con, f, indent=2, ensure_ascii=False)
+    cons_index[id] = {"name": con["name"]}
+
+    for event in con["events"]:
+        event["relatedEventIds"] = [e["id"] for e in con["events"]]
         events.append(event)
 
+        with open(events_path / f"{event['id']}.json", "w") as f:
+            json.dump(event, f, indent=2, ensure_ascii=False)
 
-with open(OUTPUT_DIR / "index.json", "w") as f:
+
+with open(OUTPUT_DIR / "cons.json", "w") as f:
     json.dump(
-        index,
+        cons_index,
+        f,
+        ensure_ascii=False,
+    )
+
+with open(OUTPUT_DIR / "events.json", "w") as f:
+    json.dump(
+        {event["id"]: {"name": event["name"]} for event in events},
         f,
         ensure_ascii=False,
     )

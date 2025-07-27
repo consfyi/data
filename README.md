@@ -59,7 +59,7 @@ interface Event {
 
 ### Output
 
-The following files are generated at `https://data.cons.fyi`:
+The following files are materialized at `https://data.cons.fyi`:
 - [/active.json](/active.json): A JSON file containing all current or upcoming events.
 - [/calendar.ics](/calendar.ics): All the active events in an ICS calendar.
 - [/cons/](/cons/): JSON files of every `Con` record.
@@ -67,6 +67,21 @@ The following files are generated at `https://data.cons.fyi`:
 - [/events/](/events/): JSON files of every `Event` record, extracted from `Con` records.
 - [/events.json](/events.json): IDs of all `Event`s.
 
-`Event`s will have the following additional fields materialized:
-- `conId: string`: The ID of the con this corresponds to.
-- `timezone: string`: The IANA timezone ID, if `latLng` is present.
+They will be emitted as materialized records which will contain additional details:
+
+```typescript
+/// MaterializedCon is a materialized version of Con.
+interface MaterializedCon extends Con {
+  /// All instances of the convention.
+  events: MaterializedEvent[];
+}
+
+/// MaterializedEvent is a materialized version of Event.
+interface MaterializedEvent extends Event {
+  /// The ID of the con this corresponds to.
+  conId: string;
+
+  /// The IANA timezone ID, if `latLng` is present.
+  timezone?: string;
+}
+```

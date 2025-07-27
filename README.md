@@ -14,12 +14,21 @@ Please note that some data is imported from [FanCons.com](https://fancons.com) a
 
 ### Input
 
-Each convention is modeled by a `Con` record in ([github.com/consfyi/data](https://github.com/consfyi/data)).
+Each convention is modeled by a `Con` record in [github.com/consfyi/data](https://github.com/consfyi/data), one record per `.json` file. The name of the file is the unique ID of the convention.
 
 ```typescript
+/// Con is a collection of events describing a convention.
+interface Con {
+  /// The human-readable name for the convention.
+  name: string;
+
+  /// All instances of the convention.
+  events: Event[];
+}
+
 /// Event is a specific instance of a convention.
 interface Event {
-  /// Globally unique ID. It should include the convention name, e.g. `rainfurrest-2016`.
+  /// Unique ID across all events, including events in other con records. It should include the convention name, e.g. `rainfurrest-2016`.
   id: string;
 
   /// The human-readable name of the convention instance, e.g. "RainFurrest 2016".
@@ -45,17 +54,7 @@ interface Event {
 
   /// Sources this data is from.
   sources?: string[];
-}
-
-/// Con is a collection of events describing a convention.
-interface Con {
-  /// The human-readable name for the convention.
-  name: string;
-
-  /// All instances of the convention.
-  events: Event[];
-}
-```
+}```
 
 ### Output
 

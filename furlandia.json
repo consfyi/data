@@ -8,13 +8,8 @@
       "endDate": "2025-05-25",
       "location": "Sheraton Portland Airport Hotel, Portland, OR, USA",
       "country": "US",
-      "latLng": [
-        45.5830457,
-        -122.5752112
-      ],
-      "sources": [
-        "fancons.com"
-      ],
+      "latLng": [45.5830457, -122.5752112],
+      "sources": ["fancons.com"],
       "url": "https://furlandia.org"
     },
     {
@@ -22,12 +17,9 @@
       "name": "Furlandia 2026",
       "startDate": "2026-05-22",
       "endDate": "2026-05-24",
-      "location": "Hyatt Regency Portland at the Oregon Convention Center, Portland, OR, USA",
+      "location": "Hyatt Regency Portland at the Oregon Convention Center, Northeast Holladay Street, Portland, OR, USA",
       "country": "US",
-      "latLng": [
-        45.53064659000718,
-        -122.66273698415404
-      ],
+      "latLng": [45.530407, -122.6628561],
       "url": "https://furlandia.org"
     }
   ]

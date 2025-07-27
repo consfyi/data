@@ -38,17 +38,16 @@ for fn in sorted(os.listdir(".")):
         if "latLng" in event:
             (lat, lng) = event["latLng"]
             event["timezone"] = tzfpy.get_tz(lng, lat)
-
-    with open(cons_path / fn, "w") as f:
-        json.dump(con, f, indent=2, ensure_ascii=False)
-    cons_index.append(id)
-
-    for event in con["events"]:
         event["conId"] = id
+
         events.append(event)
 
         with open(events_path / f"{event['id']}.json", "w") as f:
             json.dump(event, f, indent=2, ensure_ascii=False)
+
+    with open(cons_path / fn, "w") as f:
+        json.dump(con, f, indent=2, ensure_ascii=False)
+    cons_index.append(id)
 
 
 with open(output_dir / "cons.json", "w") as f:

@@ -6,11 +6,12 @@
 # ]
 # ///
 
+import html
 import mistune
 import sys
 from pygments import highlight
 from pygments.lexers import get_lexer_by_name
-from pygments.formatters import html
+from pygments.formatters import html as pygments_html
 
 
 class MyRenderer(mistune.HTMLRenderer):
@@ -26,14 +27,14 @@ class MyRenderer(mistune.HTMLRenderer):
     def block_code(self, code, info=None):
         if info is not None:
             lexer = get_lexer_by_name(info, stripall=True)
-            formatter = html.HtmlFormatter(cssclass="codehilite")
+            formatter = pygments_html.HtmlFormatter(cssclass="codehilite")
             return highlight(code, lexer, formatter)
         return "<pre><code>" + mistune.escape(code) + "</code></pre>"
 
 
 renderer = MyRenderer()
 markdown = mistune.create_markdown(renderer=renderer)
-html = markdown(sys.stdin.read())
+body = markdown(sys.stdin.read())
 
 print(
     f"""<!doctype html>
@@ -44,10 +45,10 @@ print(
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@lowlighter/matcha@3.0.0/dist/matcha.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pygments-css@1.0.0/friendly.css">
-    <title>{renderer.title}</title>
+    <title>{html.escape(renderer.title)}</title>
 </head>
 <body>
-{html}
+{body}
 </body>
 </html>
 """

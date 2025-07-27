@@ -27,6 +27,7 @@ jobs:
       - run: ./.tools/digest.py
         env:
           OUTPUT_DIR: "${{ runner.temp }}/out"
+      - run: ./.tools/render_markdown.py < README.md > "${{ runner.temp }}/out/index.html"
       - uses: actions/upload-pages-artifact@v3
         with:
           path: "${{ runner.temp }}/out"

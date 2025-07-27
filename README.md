@@ -4,6 +4,12 @@ This repository ([github.com/consfyi/data](https://github.com/consfyi/data)) con
 
 If there is an issue with data accuracy, [you may file an issue here](https://github.com/consfyi/data/issues/new?template=missing-or-incorrect-convention.md).
 
+## Attribution
+
+Attribution is not required but appreciated. This helps us keep our data up to date, which in turn helps everyone else!
+
+Please note that some data is imported from [FanCons.com](https://fancons.com) and is annotated as such. Usage restrictions may apply.
+
 ## Files
 
 The following files are available at `https://data.cons.fyi`:
@@ -62,7 +68,3 @@ interface Con {
   events: Event[];
 }
 ```
-
-## Usage of data from FanCons.com
-
-Note that data regularly gets imported from [FanCons.com](https://fancons.com) for updates. Usage restrictions may apply for any con data that is annotated as being sourced from FanCons.com.

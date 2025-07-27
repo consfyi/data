@@ -1,6 +1,6 @@
 # data.cons.fyi
 
-This repository ([github.com/consfyi/data](https://github.com/consfyi/data)) contains all the furry convention data for [cons.fyi](https://cons.fyi).
+This is the data for [cons.fyi](https://cons.fyi).
 
 If there is an issue with data accuracy, you may [file an issue here](https://github.com/consfyi/data/issues/new?template=missing-or-incorrect-convention.md).
 

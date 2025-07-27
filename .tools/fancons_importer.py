@@ -114,8 +114,8 @@ class Event:
     id: str
     name: str
     url: str
-    start_date: str
-    end_date: str
+    start_date: datetime.date
+    end_date: datetime.date
     location: str
     country: str
     canceled: bool
@@ -137,8 +137,8 @@ class Event:
         return {
             "id": self.id,
             "name": self.name,
-            "startDate": self.start_date,
-            "endDate": self.end_date,
+            "startDate": self.start_date.isoformat(),
+            "endDate": self.end_date.isoformat(),
             "location": self.location,
             "country": self.country,
             "latLng": self.lat_lng,
@@ -198,8 +198,8 @@ async def fetch_events():
                     id=f"{con_id}-{year}",
                     name=name,
                     url=url,
-                    start_date=start_date.isoformat(),
-                    end_date=end_date.isoformat(),
+                    start_date=start_date,
+                    end_date=end_date,
                     location=location,
                     country=country,
                     lat_lng=lat_lng,
@@ -232,8 +232,22 @@ async def main():
         if any(e["id"] == event.id for e in con["events"]):
             continue
         logging.info(f"Adding event {event.id} to {event.con_id}")
+
         if con["events"]:
-            event.url = con["events"][-1]["url"]
+            [*_, previous_event] = con["events"]
+            event.url = previous_event["url"]
+
+            # Handle numbered cons.
+            previous_prefix, previous_suffix = previous_event["name"].rsplit(" ", 1)
+            previous_suffix = int(previous_suffix)
+            if (
+                datetime.date.fromisoformat(previous_event["startDate"]).year
+                != previous_suffix
+                or datetime.date.fromisoformat(previous_event["endDate"]).year
+                != previous_suffix
+            ) and previous_prefix == con["name"]:
+                event.name = f"{con['name']} {previous_suffix + 1}"
+
         bisect.insort(
             con["events"],
             event.materialize_entry(gmaps),

@@ -16,9 +16,9 @@ The following files are available at `https://data.cons.fyi`:
 - [`/active.json`](/active.json): A JSON file containing all current or upcoming events.
 - [`/calendar.ics`](/calendar.ics): All the active events in an ICS calendar.
 - [`/cons/`](/cons/): JSON files of every con.
-- [`/cons.json`](/cons.json): Names of all the cons in `/cons`.
+- [`/cons.json`](/cons.json): IDs of all cons.
 - [`/events/`](/events/): JSON files of every event.
-- [`/events.json`](/events.json): Names of all the events in `/events`.
+- [`/events.json`](/events.json): IDs of all events.
 
 ## Data model
 

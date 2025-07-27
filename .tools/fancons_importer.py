@@ -239,14 +239,18 @@ async def main():
 
             # Handle numbered cons.
             previous_prefix, previous_suffix = previous_event["name"].rsplit(" ", 1)
-            previous_suffix = int(previous_suffix)
-            if (
-                datetime.date.fromisoformat(previous_event["startDate"]).year
-                != previous_suffix
-                or datetime.date.fromisoformat(previous_event["endDate"]).year
-                != previous_suffix
-            ) and previous_prefix == con["name"]:
-                event.name = f"{con['name']} {previous_suffix + 1}"
+            try:
+                previous_suffix = int(previous_suffix)
+            except:
+                pass
+            else:
+                if (
+                    datetime.date.fromisoformat(previous_event["startDate"]).year
+                    != previous_suffix
+                    or datetime.date.fromisoformat(previous_event["endDate"]).year
+                    != previous_suffix
+                ) and previous_prefix == con["name"]:
+                    event.name = f"{con['name']} {previous_suffix + 1}"
 
         bisect.insort(
             con["events"],

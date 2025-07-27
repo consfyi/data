@@ -66,5 +66,5 @@ interface Con {
 ```
 
 Events will have the following fields materialized:
-- `relatedEventIds`: The IDs of all other events for the convention.
+- `conId`: The ID of the con this corresponds to.
 - `timezone`: The IANA timezone ID, if `latLng` is present.

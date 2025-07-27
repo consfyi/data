@@ -22,7 +22,7 @@ os.mkdir(cons_path)
 events_path = output_dir / "events"
 os.mkdir(events_path)
 
-cons_index = {}
+cons_index = []
 events = []
 
 
@@ -41,10 +41,10 @@ for fn in sorted(os.listdir(".")):
 
     with open(cons_path / fn, "w") as f:
         json.dump(con, f, indent=2, ensure_ascii=False)
-    cons_index[id] = {"name": con["name"]}
+    cons_index.append(con["name"])
 
     for event in con["events"]:
-        event["relatedEventIds"] = [e["id"] for e in con["events"]]
+        event["conId"] = id
         events.append(event)
 
         with open(events_path / f"{event['id']}.json", "w") as f:
@@ -60,7 +60,7 @@ with open(output_dir / "cons.json", "w") as f:
 
 with open(output_dir / "events.json", "w") as f:
     json.dump(
-        {event["id"]: {"name": event["name"]} for event in events},
+        [event["name"] for event in events],
         f,
         ensure_ascii=False,
     )

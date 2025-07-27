@@ -36,10 +36,10 @@ interface Event {
   /// Link to the convention website.
   url: string;
 
-  /// The start date of the convention. Should be in yyyy-MM-dd format.
+  /// The start date of the convention instance. Should be in yyyy-MM-dd format.
   startDate: string;
 
-  /// The end date of the convention, inclusive. Should be in yyyy-MM-dd format.
+  /// The end date of the convention instance, inclusive. Should be in yyyy-MM-dd format.
   endDate: string;
 
   /// The human-readable location. This may be a virtual location e.g. "VRChat".

@@ -8,16 +8,18 @@
 
 import json
 import pathlib
+import sys
 import os
 import tzfpy
 import whenever
 
-OUTPUT_DIR = pathlib.Path(os.environ["OUTPUT_DIR"])
+(_, output_dir) = sys.argv
+output_dir = pathlib.Path(output_dir)
 
-cons_path = OUTPUT_DIR / "cons"
+cons_path = output_dir / "cons"
 os.mkdir(cons_path)
 
-events_path = OUTPUT_DIR / "events"
+events_path = output_dir / "events"
 os.mkdir(events_path)
 
 cons_index = {}
@@ -49,14 +51,14 @@ for fn in sorted(os.listdir(".")):
             json.dump(event, f, indent=2, ensure_ascii=False)
 
 
-with open(OUTPUT_DIR / "cons.json", "w") as f:
+with open(output_dir / "cons.json", "w") as f:
     json.dump(
         cons_index,
         f,
         ensure_ascii=False,
     )
 
-with open(OUTPUT_DIR / "events.json", "w") as f:
+with open(output_dir / "events.json", "w") as f:
     json.dump(
         {event["id"]: {"name": event["name"]} for event in events},
         f,
@@ -102,7 +104,7 @@ def escape_ics(s):
     )
 
 
-with open(OUTPUT_DIR / "calendar.ics", "w") as f:
+with open(output_dir / "calendar.ics", "w") as f:
     f.write("BEGIN:VCALENDAR\r\n")
     f.write("VERSION:2.0\r\n")
     f.write("PRODID:-//cons.fyi//EN\r\n")
@@ -131,7 +133,7 @@ with open(OUTPUT_DIR / "calendar.ics", "w") as f:
         f.write("END:VEVENT\r\n")
     f.write("END:VCALENDAR\r\n")
 
-with open(OUTPUT_DIR / "active.json", "w") as f:
+with open(output_dir / "active.json", "w") as f:
     json.dump(
         active,
         f,

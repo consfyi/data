@@ -20,10 +20,6 @@ The following files are available at `https://data.cons.fyi`:
 - [`/events.json`](/events.json): Names of all the events in `/events`.
 - [`/events/$ID.json`](/events): JSON files of every event.
 
-Events will have the following fields materialized:
-- `relatedEventIds`: The IDs of all other events for the convention.
-- `timezone`: The IANA timezone ID, if `latLng` is present.
-
 ## Data model
 
 Each convention is modeled by a **con** record, that contains a list of **events** that describes a specific instance of a convention.
@@ -68,3 +64,7 @@ interface Con {
   events: Event[];
 }
 ```
+
+Events will have the following fields materialized:
+- `relatedEventIds`: The IDs of all other events for the convention.
+- `timezone`: The IANA timezone ID, if `latLng` is present.

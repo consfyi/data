@@ -24,10 +24,11 @@ jobs:
       - uses: actions/checkout@v4
       - uses: astral-sh/setup-uv@v6
       - run: mkdir $RUNNER_TEMP/out
-      - run: ./.tools/digest.py
-        env:
-          OUTPUT_DIR: "${{ runner.temp }}/out"
-      - run: ./.tools/render_markdown.py < README.md > "${{ runner.temp }}/out/index.html"
+      - run: |
+          ./.tools/digest.py &&
+          ./.tools/render_markdown.py < README.md > "${{ runner.temp }}/out/index.html" &&
+          ./.tools/render_index.py "${{ runner.temp }}/out/cons" /cons > "${{ runner.temp }}/out/cons/index.html" &&
+          ./.tools/render_index.py "${{ runner.temp }}/out/events" /events > "${{ runner.temp }}/out/events/index.html"
       - uses: actions/upload-pages-artifact@v3
         with:
           path: "${{ runner.temp }}/out"

@@ -1,12 +1,14 @@
 #!/usr/bin/env -S uv run --script
 # /// script
 # dependencies = [
+#   "jsonschema",
 #   "tzfpy[tzdata]",
 #   "whenever",
 # ]
 # ///
 
 import json
+import jsonschema.validators
 import pathlib
 import sys
 import os
@@ -16,6 +18,10 @@ import whenever
 (_, output_dir) = sys.argv
 output_dir = pathlib.Path(output_dir)
 
+with open(os.path.join(os.path.dirname(__file__), "schema.json")) as f:
+    schema = json.load(f)
+
+
 cons_path = output_dir / "cons"
 os.mkdir(cons_path)
 
@@ -23,31 +29,57 @@ events_path = output_dir / "events"
 os.mkdir(events_path)
 
 cons_index = []
-events = []
+events = {}
+
+validator_cls = jsonschema.validators.validator_for(schema)
+validator_cls.check_schema(schema)
+validator = validator_cls(schema)
+
+errors = {"cons": [], "events": []}
 
 
 for fn in sorted(os.listdir(".")):
-    id, ext = os.path.splitext(fn)
+    con_id, ext = os.path.splitext(fn)
     if ext != ".json":
         continue
 
     with open(fn) as f:
         con = json.load(f)
 
+    has_errors = False
+    for error in validator.iter_errors(con):
+        has_errors = True
+        errors["cons"].append(
+            {
+                "id": con_id,
+                "message": f"{error.json_path}: {error.message}",
+            }
+        )
+    if has_errors:
+        continue
+
     for event in con["events"]:
+        event_id = event["id"]
         if "latLng" in event:
             (lat, lng) = event["latLng"]
             event["timezone"] = tzfpy.get_tz(lng, lat)
-        event["conId"] = id
+        event["conId"] = con_id
 
-        events.append(event)
+        if event_id in events:
+            errors["events"].append(
+                {
+                    "id": event_id,
+                    "message": f"$.id: not globally unique, last seen in {events[event_id]['conId']}",
+                }
+            )
+        events[event_id] = event
 
-        with open(events_path / f"{event['id']}.json", "w") as f:
+        with open(events_path / f"{event_id}.json", "w") as f:
             json.dump(event, f, indent=2, ensure_ascii=False)
 
     with open(cons_path / fn, "w") as f:
         json.dump(con, f, indent=2, ensure_ascii=False)
-    cons_index.append(id)
+    cons_index.append(con_id)
 
 
 with open(output_dir / "cons.json", "w") as f:
@@ -59,7 +91,7 @@ with open(output_dir / "cons.json", "w") as f:
 
 with open(output_dir / "events.json", "w") as f:
     json.dump(
-        [event["id"] for event in events],
+        list(events),
         f,
         ensure_ascii=False,
     )
@@ -77,7 +109,7 @@ def pred(event):
     return now < end_date.add(days=7) and not event.get("canceled", False)
 
 
-active = [event for event in events if pred(event)]
+active = [event for event in events.values() if pred(event)]
 
 active.sort(
     key=lambda event: (
@@ -137,4 +169,13 @@ with open(output_dir / "active.json", "w") as f:
         active,
         f,
         ensure_ascii=False,
+    )
+
+
+with open(output_dir / "errors.json", "w") as f:
+    json.dump(
+        errors,
+        f,
+        ensure_ascii=False,
+        indent=2,
     )

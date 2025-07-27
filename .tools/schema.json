@@ -6,60 +6,56 @@
     },
     "events": {
       "type": "array",
-      "items": [
-        {
-          "type": "object",
-          "properties": {
-            "id": {
-              "type": "string"
-            },
-            "name": {
-              "type": "string"
-            },
-            "startDate": {
-              "type": "string"
-            },
-            "endDate": {
-              "type": "string"
-            },
-            "location": {
-              "type": "string"
-            },
-            "country": {
-              "type": "string"
-            },
-            "latLng": {
-              "type": "array",
-              "items": [
-                {
-                  "type": "number",
-                  "minimum": -90,
-                  "maximum": 90
-                },
-                {
-                  "type": "number",
-                  "minimum": -180,
-                  "maximum": 180
-                }
-              ],
-              "minItems": 2,
-              "maxItems": 2
-            },
-            "sources": {
-              "type": "array",
-              "items": [
-                {
-                  "type": "string"
-                }
-              ]
-            },
-            "url": {
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "startDate": {
+            "type": "string"
+          },
+          "endDate": {
+            "type": "string"
+          },
+          "location": {
+            "type": "string"
+          },
+          "country": {
+            "type": "string"
+          },
+          "latLng": {
+            "type": "array",
+            "prefixItems": [
+              {
+                "type": "number",
+                "minimum": -90,
+                "maximum": 90
+              },
+              {
+                "type": "number",
+                "minimum": -180,
+                "maximum": 180
+              }
+            ],
+            "minItems": 2,
+            "maxItems": 2
+          },
+          "sources": {
+            "type": "array",
+            "items": {
               "type": "string"
             }
           },
-          "required": ["id", "name", "url", "startDate", "endDate", "location"]
-        }
-      ]
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": ["id", "name", "url", "startDate", "endDate", "location"]
+      }
     }
   },
   "required": ["name", "events"]

@@ -13,12 +13,12 @@ Please note that some data is imported from [FanCons.com](https://fancons.com) a
 ## Files
 
 The following files are available at `https://data.cons.fyi`:
-- `/active.json`: A JSON file containing all current or upcoming events.
-- `/cons.json`: Names of all the cons in `/cons`.
-- `/events.json`: Names of all the events in `/events`.
-- `/calendar.ics`: All the active events in an ICS calendar.
-- `/cons/$ID.json`: JSON files of every con.
-- `/events/$ID.json`: JSON files of every event.
+- [`/active.json`](/active.json): A JSON file containing all current or upcoming events.
+- [`/calendar.ics`](/calendar.ics): All the active events in an ICS calendar.
+- [`/cons.json`](/cons.json): Names of all the cons in `/cons`.
+- [`/cons/$ID.json`](/cons): JSON files of every con.
+- [`/events.json`](/events.json): Names of all the events in `/events`.
+- [`/events/$ID.json`](/events): JSON files of every event.
 
 Events will have the following fields materialized:
 - `relatedEventIds`: The IDs of all other events for the convention.

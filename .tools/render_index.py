@@ -10,6 +10,8 @@ import os
 (_, src, path) = sys.argv
 files = sorted(os.listdir(src))
 
+parts = path.split('/')
+
 print(
     f"""<!doctype html>
 <html>
@@ -22,7 +24,7 @@ print(
     <title>{html.escape(path)}</title>
 </head>
 <body>
-<h1>{html.escape(path)}</h1>
+<h1>{'/'.join(f"<a href=\"{"../" * (len(parts) - i - 1)}\">{html.escape(part)}</a>" if i < len(parts) - 1 else html.escape(part) for i, part in enumerate(parts))}</h1>
 <ul>
 {"\n".join(f"<li><a href=\"{html.escape(fn)}\">{html.escape(fn)}</a></li>" for fn in files)}
 </ul>

@@ -27,8 +27,8 @@ jobs:
           mkdir "$RUNNER_TEMP/out" &&
           ./.tools/digest.py "$RUNNER_TEMP/out" &&
           ./.tools/render_markdown.py < README.md > "$RUNNER_TEMP/out/index.html" &&
-          ./.tools/render_index.py "$RUNNER_TEMP/out/cons" /cons > "$RUNNER_TEMP/out/cons/index.html" &&
-          ./.tools/render_index.py "$RUNNER_TEMP/out/events" /events > "$RUNNER_TEMP/out/events/index.html"
+          ./.tools/render_index.py "$RUNNER_TEMP/out/cons" data.cons.fyi/cons > "$RUNNER_TEMP/out/cons/index.html" &&
+          ./.tools/render_index.py "$RUNNER_TEMP/out/events" data.cons.fyi/events > "$RUNNER_TEMP/out/events/index.html"
       - uses: actions/upload-pages-artifact@v3
         with:
           path: "${{ runner.temp }}/out"

@@ -14,15 +14,15 @@ Please note that some data is imported from [FanCons.com](https://fancons.com) a
 
 ### Input
 
-Each convention is modeled by a `Con` record in [github.com/consfyi/data](https://github.com/consfyi/data), one record per `.json` file. The name of the file is the unique ID of the convention.
+Each convention is modeled by a `Series` record in [github.com/consfyi/data](https://github.com/consfyi/data), one record per `.json` file. The name of the file is the unique ID of the convention.
 
 ```typescript
-/// Con is a collection of events describing a convention.
-interface Con {
-  /// The human-readable name for the convention.
+/// Series is a collection of events describing a convention series.
+interface Series {
+  /// The human-readable name for the convention series.
   name: string;
 
-  /// All instances of the convention.
+  /// All instances of the convention series.
   events: Event[];
 }
 
@@ -62,24 +62,24 @@ interface Event {
 The following files are materialized at `https://data.cons.fyi`:
 - [/active.json](/active.json): A JSON file containing all current or upcoming events.
 - [/calendar.ics](/calendar.ics): All the active events in an ICS calendar.
-- [/cons/](/cons/): JSON files of every `Con` record.
-- [/cons.json](/cons.json): IDs of all `Con`s.
-- [/events/](/events/): JSON files of every `Event` record, extracted from `Con` records.
+- [/events/](/events/): JSON files of every `Event` record, extracted from `Series` records.
 - [/events.json](/events.json): IDs of all `Event`s.
+- [/series/](/series/): JSON files of every `Series` record.
+- [/series.json](/series.json): IDs of all `Series`s.
 
 They will be emitted as materialized records which will contain additional details:
 
 ```typescript
-/// MaterializedCon is a materialized version of Con.
-interface MaterializedCon extends Con {
+/// MaterializedSeries is a materialized version of Series.
+interface MaterializedSeries extends Series {
   /// All instances of the convention.
   events: MaterializedEvent[];
 }
 
 /// MaterializedEvent is a materialized version of Event.
 interface MaterializedEvent extends Event {
-  /// The ID of the con this corresponds to.
-  conId: string;
+  /// The ID of the series this corresponds to.
+  seriesId: string;
 
   /// The IANA timezone ID, if `latLng` is present.
   timezone?: string;

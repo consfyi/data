@@ -109,8 +109,8 @@ async def fetch_calendar(
 
 @dataclasses.dataclass
 class Event:
-    con_id: str
-    con_name: str
+    series_id: str
+    series_name: str
     id: str
     name: str
     url: str
@@ -185,7 +185,7 @@ async def fetch_events():
                 }
 
                 lang = guess_language_for_region(country)
-                con_id = slugify(prefix, lang)
+                series_id = slugify(prefix, lang)
 
                 match = regex.search(r"/event/(\d+)/", url)
                 assert match is not None
@@ -193,9 +193,9 @@ async def fetch_events():
                 lat_lng = markers.get(fc_id) if fc_id else None
 
                 yield Event(
-                    con_id=con_id,
-                    con_name=prefix,
-                    id=f"{con_id}-{year}",
+                    series_id=series_id,
+                    series_name=prefix,
+                    id=f"{series_id}-{year}",
                     name=name,
                     url=url,
                     start_date=start_date,
@@ -215,29 +215,29 @@ async def main():
 
     gmaps = googlemaps.Client(key=GOOGLE_MAPS_API_KEY)
     async for event in fetch_events():
-        fn = f"{event.con_id}.json"
+        fn = f"{event.series_id}.json"
 
         if os.path.exists(fn):
             with open(fn, "r") as f:
-                con = json.load(f)
+                series = json.load(f)
         else:
             fn = os.path.join("import_pending", fn)
             if os.path.exists(fn):
                 with open(fn, "r") as f:
-                    con = json.load(f)
+                    series = json.load(f)
             else:
-                logging.info(f"Adding pending con {event.con_id}")
-                con = {"name": event.con_name, "url": event.url, "events": []}
+                logging.info(f"Adding pending series {event.series_id}")
+                series = {"name": event.series_name, "url": event.url, "events": []}
 
-        for i, e in enumerate(con["events"]):
+        for i, e in enumerate(series["events"]):
             start_date = datetime.date.fromisoformat(e["startDate"])
             if start_date <= event.start_date:
                 break
         else:
-            i = len(con["events"])
+            i = len(series["events"])
 
-        if i < len(con["events"]):
-            previous_event = con["events"][i]
+        if i < len(series["events"]):
+            previous_event = series["events"][i]
             if previous_event["id"] == event.id:
                 continue
 
@@ -255,13 +255,13 @@ async def main():
                     != previous_suffix
                     or datetime.date.fromisoformat(previous_event["endDate"]).year
                     != previous_suffix
-                ) and previous_prefix == con["name"]:
-                    event.name = f"{con['name']} {previous_suffix + 1}"
+                ) and previous_prefix == series["name"]:
+                    event.name = f"{series['name']} {previous_suffix + 1}"
 
-        logging.info(f"Adding event {event.id} to {event.con_id}")
-        con["events"].insert(i, event.materialize_entry(gmaps))
+        logging.info(f"Adding event {event.id} to {event.series_id}")
+        series["events"].insert(i, event.materialize_entry(gmaps))
         with open(fn, "w") as f:
-            json.dump(con, f, ensure_ascii=False, indent=2)
+            json.dump(series, f, ensure_ascii=False, indent=2)
 
 
 if __name__ == "__main__":

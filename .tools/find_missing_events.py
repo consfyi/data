@@ -10,27 +10,27 @@ import json
 
 now = datetime.date.today()
 
-cons = []
+all_series = []
 
 for fn in sorted(os.listdir(".")):
-    con_id, ext = os.path.splitext(fn)
+    series_id, ext = os.path.splitext(fn)
     if ext != ".json":
         continue
 
     with open(fn) as f:
-        con = json.load(f)
+        series = json.load(f)
         start = max(
             (
                 datetime.date.fromisoformat(event["startDate"])
-                for event in con["events"]
+                for event in series["events"]
             ),
             default=None,
         )
         if start is None or start < now:
-            cons.append((start, con_id, con))
+            all_series.append((start, series_id, series))
 
-cons.sort()
-for date, id, con in cons:
+all_series.sort()
+for date, id, series in all_series:
     print(date, id)
-    print(con["events"][0]["url"])
+    print(series["events"][0]["url"])
     print()

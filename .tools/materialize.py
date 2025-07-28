@@ -26,13 +26,13 @@ with open(os.path.join(os.path.dirname(__file__), "schema.json")) as f:
     schema = json.load(f)
 
 
-cons_path = output_dir / "cons"
-os.mkdir(cons_path)
+series_path = output_dir / "series"
+os.mkdir(series_path)
 
 events_path = output_dir / "events"
 os.mkdir(events_path)
 
-cons_index = []
+series_index = []
 events = {}
 
 jsonschema.validators.Draft202012Validator.check_schema(schema)
@@ -54,48 +54,48 @@ el = ErrorLogger()
 
 
 for fn in sorted(os.listdir(".")):
-    con_id, ext = os.path.splitext(fn)
+    series_id, ext = os.path.splitext(fn)
     if ext != ".json":
         continue
 
     with open(fn) as f:
-        con = json.load(f)
+        series = json.load(f)
 
     has_errors = False
-    for error in validator.iter_errors(con):
-        el.log(con_id, error.json_path, error.message)
+    for error in validator.iter_errors(series):
+        el.log(series_id, error.json_path, error.message)
     if has_errors:
         continue
 
-    for event in con["events"]:
+    for event in series["events"]:
         event_id = event["id"]
         if "latLng" in event:
             (lat, lng) = event["latLng"]
             event["timezone"] = tzfpy.get_tz(lng, lat)
-        event["conId"] = con_id
+        event["seriesId"] = series_id
 
         if event_id in events:
             el.log(
-                f"{con_id}/{event_id}",
+                f"{series_id}/{event_id}",
                 "$.id",
-                f"not unique across all cons, last seen in {events[event_id]['conId']}",
+                f"not unique across all series, last seen in {events[event_id]['seriesId']}",
             )
         events[event_id] = event
 
         with open(events_path / f"{event_id}.json", "w") as f:
             json.dump(event, f, indent=2, ensure_ascii=False)
 
-    with open(cons_path / fn, "w") as f:
-        json.dump(con, f, indent=2, ensure_ascii=False)
-    cons_index.append(con_id)
+    with open(series_path / fn, "w") as f:
+        json.dump(series, f, indent=2, ensure_ascii=False)
+    series_index.append(series_id)
 
 
 if not el.ok:
     sys.exit(1)
 
-with open(output_dir / "cons.json", "w") as f:
+with open(output_dir / "series.json", "w") as f:
     json.dump(
-        cons_index,
+        series_index,
         f,
         ensure_ascii=False,
     )
@@ -116,7 +116,7 @@ def pred(event):
         whenever.Date.parse_common_iso(event["endDate"])
         .add(days=1)
         .at(whenever.Time(12, 0))
-        .assume_tz(event.get("timezone", "Utc"))
+        .assume_tz(event.get("timezone", "UTC"))
     )
     return now < end_date.add(days=7) and not event.get("canceled", False)
 
@@ -151,7 +151,7 @@ with open(output_dir / "calendar.ics", "w") as f:
     f.write("BEGIN:VCALENDAR\r\n")
     f.write("VERSION:2.0\r\n")
     f.write("PRODID:-//cons.fyi//EN\r\n")
-    f.write("X-WR-CALNAME:cons.fyi\r\n")
+    f.write("X-WR-CALNAME:series.fyi\r\n")
     for event in active:
         start_date = (
             whenever.Date.parse_common_iso(event["startDate"])

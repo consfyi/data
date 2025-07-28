@@ -141,7 +141,7 @@ class Event:
             "endDate": self.end_date.isoformat(),
             "location": self.location,
             "country": self.country,
-            "latLng": self.lat_lng,
+            **({"latLng": self.lat_lng} if self.lat_lng is not None else {}),
             "sources": ["fancons.com"],
             "url": self.url,
             **({"canceled": True} if self.canceled else {}),

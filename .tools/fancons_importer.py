@@ -229,19 +229,18 @@ async def main():
                 logging.info(f"Adding pending con {event.con_id}")
                 con = {"name": event.con_name, "url": event.url, "events": []}
 
-        if any(e["id"] == event.id for e in con["events"]):
-            continue
-        logging.info(f"Adding event {event.id} to {event.con_id}")
-
         for i, e in enumerate(con["events"]):
             start_date = datetime.date.fromisoformat(e["startDate"])
-            if start_date < event.start_date:
+            if start_date <= event.start_date:
                 break
         else:
             i = len(con["events"])
 
         if i < len(con["events"]):
             previous_event = con["events"][i]
+            if previous_event["id"] == event.id:
+                continue
+
             event.url = previous_event["url"]
 
             # Handle numbered cons.
@@ -259,6 +258,7 @@ async def main():
                 ) and previous_prefix == con["name"]:
                     event.name = f"{con['name']} {previous_suffix + 1}"
 
+        logging.info(f"Adding event {event.id} to {event.con_id}")
         con["events"].insert(i, event.materialize_entry(gmaps))
         with open(fn, "w") as f:
             json.dump(con, f, ensure_ascii=False, indent=2)

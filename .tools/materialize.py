@@ -9,11 +9,15 @@
 
 import json
 import jsonschema.validators
+import logging
 import pathlib
 import sys
 import os
 import tzfpy
 import whenever
+
+logging.basicConfig(level=logging.INFO)
+
 
 (_, output_dir) = sys.argv
 output_dir = pathlib.Path(output_dir)
@@ -35,7 +39,17 @@ validator_cls = jsonschema.validators.validator_for(schema)
 validator_cls.check_schema(schema)
 validator = validator_cls(schema)
 
-errors = {"cons": [], "events": []}
+
+class ErrorLogger:
+    def __init__(self):
+        self.ok = True
+
+    def log(self, msg):
+        logging.error(msg)
+        self.ok = False
+
+
+el = ErrorLogger()
 
 
 for fn in sorted(os.listdir(".")):
@@ -48,13 +62,7 @@ for fn in sorted(os.listdir(".")):
 
     has_errors = False
     for error in validator.iter_errors(con):
-        has_errors = True
-        errors["cons"].append(
-            {
-                "id": con_id,
-                "message": f"{error.json_path}: {error.message}",
-            }
-        )
+        el.log(f"{con_id}: {error.json_path}: {error.message}")
     if has_errors:
         continue
 
@@ -66,11 +74,8 @@ for fn in sorted(os.listdir(".")):
         event["conId"] = con_id
 
         if event_id in events:
-            errors["events"].append(
-                {
-                    "id": event_id,
-                    "message": f"$.id: not globally unique, last seen in {events[event_id]['conId']}",
-                }
+            el.log(
+                f"{con_id}/{event_id}: $.id: not globally unique, last seen in {events[event_id]['conId']}"
             )
         events[event_id] = event
 
@@ -81,6 +86,9 @@ for fn in sorted(os.listdir(".")):
         json.dump(con, f, indent=2, ensure_ascii=False)
     cons_index.append(con_id)
 
+
+if not el.ok:
+    sys.exit(1)
 
 with open(output_dir / "cons.json", "w") as f:
     json.dump(
@@ -94,15 +102,6 @@ with open(output_dir / "events.json", "w") as f:
         list(events),
         f,
         ensure_ascii=False,
-    )
-
-
-with open(output_dir / "errors.json", "w") as f:
-    json.dump(
-        errors,
-        f,
-        ensure_ascii=False,
-        indent=2,
     )
 
 

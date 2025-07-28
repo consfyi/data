@@ -2,7 +2,8 @@
   "type": "object",
   "properties": {
     "name": {
-      "type": "string"
+      "type": "string",
+      "minLength": 1
     },
     "events": {
       "type": "array",
@@ -10,10 +11,12 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "string"
+            "type": "string",
+            "minLength": 1
           },
           "name": {
-            "type": "string"
+            "type": "string",
+            "minLength": 1
           },
           "url": {
             "type": "string",
@@ -29,10 +32,13 @@
             "format": "date"
           },
           "location": {
-            "type": "string"
+            "type": "string",
+            "minLength": 1
           },
           "country": {
-            "type": "string"
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 2
           },
           "latLng": {
             "type": "array",

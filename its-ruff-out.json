@@ -2,6 +2,19 @@
   "name": "It's Ruff Out",
   "events": [
     {
+      "id": "its-ruff-out-2026",
+      "name": "It's Ruff Out 2026",
+      "url": "https://ruffout.org",
+      "startDate": "2026-05-01",
+      "endDate": "2026-05-03",
+      "location": "Kettle Moraine State Forest Southern Unit, Dousman, WI, USA",
+      "country": "US",
+      "latLng": [
+        42.9502252,
+        -88.45727219999999
+      ]
+    },
+    {
       "id": "its-ruff-out-2025",
       "name": "It's Ruff Out 2025",
       "startDate": "2025-05-02",

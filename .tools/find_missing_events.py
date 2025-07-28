@@ -27,8 +27,10 @@ for fn in sorted(os.listdir(".")):
             default=None,
         )
         if start is None or start < now:
-            cons.append((start, con_id))
+            cons.append((start, con_id, con))
 
 cons.sort()
-for date, id in cons:
+for date, id, con in cons:
     print(date, id)
+    print(con["events"][0]["url"])
+    print()

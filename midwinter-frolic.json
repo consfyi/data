@@ -2,6 +2,19 @@
   "name": "MidWinter Frolic",
   "events": [
     {
+      "id": "midwinter-frolic-2026",
+      "name": "MidWinter Frolic 2026",
+      "url": "https://www.midwinterfrolic.org",
+      "startDate": "2026-01-16",
+      "endDate": "2026-01-18",
+      "location": "Whitewater State Park, Minnesota 74, Altura, MN, USA",
+      "country": "US",
+      "latLng": [
+        44.06265500000001,
+        -92.04454199999999
+      ]
+    },
+    {
       "id": "midwinter-frolic-2025",
       "name": "MidWinter Frolic 2025",
       "startDate": "2025-01-17",

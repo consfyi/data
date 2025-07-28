@@ -8,8 +8,14 @@
       "endDate": "2026-01-18",
       "location": "The Westin Boston Seaport District, Boston, MA, USA",
       "country": "US",
-      "latLng": [42.3459634, -71.0433385],
-      "sources": ["fancons.com", "coyo.tl"],
+      "latLng": [
+        42.3459634,
+        -71.0433385
+      ],
+      "sources": [
+        "fancons.com",
+        "coyo.tl"
+      ],
       "url": "https://www.anthronewengland.com"
     }
   ]

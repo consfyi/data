@@ -9,7 +9,10 @@
       "endDate": "2025-10-04",
       "location": "Nansha Lingnan Dongfang Hotel, Nansha District, Guangzhou, China",
       "country": "CN",
-      "latLng": [22.75511, 113.53213]
+      "latLng": [
+        22.75511,
+        113.53213
+      ]
     }
   ]
 }

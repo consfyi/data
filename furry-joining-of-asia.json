@@ -9,7 +9,10 @@
       "endDate": "2025-02-23",
       "location": "YMCA Goyang Youth Hostel, Aenigol-gil, Goyang, Gyeonggi-do, South Korea",
       "country": "KR",
-      "latLng": [37.6773607, 126.7914804]
+      "latLng": [
+        37.6773607,
+        126.7914804
+      ]
     }
   ]
 }

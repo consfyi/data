@@ -9,7 +9,10 @@
       "endDate": "2025-08-03",
       "location": "Shanghai World Trade Exhibition Hall, Xingyi Road, Changning District, Shanghai, China",
       "country": "CN",
-      "latLng": [31.20207, 121.40061800000001]
+      "latLng": [
+        31.20207,
+        121.40061800000001
+      ]
     }
   ]
 }

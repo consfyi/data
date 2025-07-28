@@ -2,6 +2,22 @@
   "name": "Anthro Northwest",
   "events": [
     {
+      "id": "anthro-northwest-2026",
+      "name": "Anthro Northwest 8",
+      "startDate": "2025-12-31",
+      "endDate": "2026-01-04",
+      "location": "Hyatt Regency Seattle, Seattle, WA, USA",
+      "country": "US",
+      "latLng": [
+        47.6145295,
+        -122.3342642
+      ],
+      "sources": [
+        "fancons.com"
+      ],
+      "url": "https://anthronw.com"
+    },
+    {
       "id": "anthro-northwest-2025",
       "name": "Anthro Northwest 7",
       "startDate": "2025-01-02",
@@ -15,22 +31,6 @@
       "sources": [
         "fancons.com",
         "coyo.tl"
-      ],
-      "url": "https://anthronw.com"
-    },
-    {
-      "id": "anthro-northwest-2026",
-      "name": "Anthro Northwest 8",
-      "startDate": "2025-12-31",
-      "endDate": "2026-01-04",
-      "location": "Hyatt Regency Seattle, Seattle, WA, USA",
-      "country": "US",
-      "latLng": [
-        47.6145295,
-        -122.3342642
-      ],
-      "sources": [
-        "fancons.com"
       ],
       "url": "https://anthronw.com"
     }

@@ -234,7 +234,7 @@ async def main():
         logging.info(f"Adding event {event.id} to {event.con_id}")
 
         if con["events"]:
-            [*_, previous_event] = con["events"]
+            [previous_event, *_] = con["events"]
             event.url = previous_event["url"]
 
             # Handle numbered cons.
@@ -252,11 +252,7 @@ async def main():
                 ) and previous_prefix == con["name"]:
                     event.name = f"{con['name']} {previous_suffix + 1}"
 
-        bisect.insort(
-            con["events"],
-            event.materialize_entry(gmaps),
-            key=lambda event: (event["startDate"], event["endDate"]),
-        )
+        con["events"].insert(0, event.materialize_entry(gmaps))
         with open(fn, "w") as f:
             json.dump(con, f, ensure_ascii=False, indent=2)
 

@@ -15,6 +15,11 @@
           "name": {
             "type": "string"
           },
+          "url": {
+            "type": "string",
+            "pattern": "^https?://",
+            "format": "uri"
+          },
           "startDate": {
             "type": "string",
             "format": "date"
@@ -51,9 +56,6 @@
             "items": {
               "type": "string"
             }
-          },
-          "url": {
-            "type": "string"
           }
         },
         "required": ["id", "name", "url", "startDate", "endDate", "location"]

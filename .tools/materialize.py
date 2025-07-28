@@ -96,6 +96,16 @@ with open(output_dir / "events.json", "w") as f:
         ensure_ascii=False,
     )
 
+
+with open(output_dir / "errors.json", "w") as f:
+    json.dump(
+        errors,
+        f,
+        ensure_ascii=False,
+        indent=2,
+    )
+
+
 now = whenever.Instant.now()
 
 
@@ -169,13 +179,4 @@ with open(output_dir / "active.json", "w") as f:
         active,
         f,
         ensure_ascii=False,
-    )
-
-
-with open(output_dir / "errors.json", "w") as f:
-    json.dump(
-        errors,
-        f,
-        ensure_ascii=False,
-        indent=2,
     )

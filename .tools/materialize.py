@@ -35,17 +35,18 @@ os.mkdir(events_path)
 cons_index = []
 events = {}
 
-validator_cls = jsonschema.validators.validator_for(schema)
-validator_cls.check_schema(schema)
-validator = validator_cls(schema)
+jsonschema.validators.Draft202012Validator.check_schema(schema)
+validator = jsonschema.validators.Draft202012Validator(
+    schema, format_checker=jsonschema.validators.Draft202012Validator.FORMAT_CHECKER
+)
 
 
 class ErrorLogger:
     def __init__(self):
         self.ok = True
 
-    def log(self, msg):
-        logging.error(msg)
+    def log(self, id, path, msg):
+        logging.error("%s:%s:%s", id, path, msg)
         self.ok = False
 
 
@@ -62,7 +63,7 @@ for fn in sorted(os.listdir(".")):
 
     has_errors = False
     for error in validator.iter_errors(con):
-        el.log(f"{con_id}: {error.json_path}: {error.message}")
+        el.log(con_id, error.json_path, error.message)
     if has_errors:
         continue
 
@@ -75,7 +76,9 @@ for fn in sorted(os.listdir(".")):
 
         if event_id in events:
             el.log(
-                f"{con_id}/{event_id}: $.id: not globally unique, last seen in {events[event_id]['conId']}"
+                f"{con_id}/{event_id}",
+                "$.id",
+                f"not unique across all cons, last seen in {events[event_id]['conId']}",
             )
         events[event_id] = event
 

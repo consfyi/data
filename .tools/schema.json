@@ -29,7 +29,10 @@
           },
           "endDate": {
             "type": "string",
-            "format": "date"
+            "format": "date",
+            "formatMinimum": {
+                "$data": "1/startDate"
+            }
           },
           "location": {
             "type": "string",

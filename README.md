@@ -14,7 +14,7 @@ Please note that some data is imported from [FanCons.com](https://fancons.com) a
 
 ### Input
 
-Each convention is modeled by a `Series` record in [github.com/consfyi/data](https://github.com/consfyi/data), one record per `.json` file. The name of the file is the unique ID of the convention.
+Each convention series is modeled by a `Series` record in [github.com/consfyi/data](https://github.com/consfyi/data), one record per `.json` file. The name of the file is the unique ID of the convention series.
 
 ```typescript
 /// Series is a collection of events describing a convention series.
@@ -28,7 +28,7 @@ interface Series {
 
 /// Event is a specific instance of a convention.
 interface Event {
-  /// Unique ID across all events, including events in other con records. It should include the convention name, e.g. `rainfurrest-2016`.
+  /// Unique ID across all events, including events in other series. It should include the convention name, e.g. `rainfurrest-2016`.
   id: string;
 
   /// The human-readable name of the convention instance, e.g. "RainFurrest 2016".
@@ -61,11 +61,11 @@ interface Event {
 
 The following files are materialized at `https://data.cons.fyi`:
 - [/active.json](/active.json): A JSON file containing all current or upcoming events.
-- [/calendar.ics](/calendar.ics): All the active events in an ICS calendar.
+- [/calendar.ics](/calendar.ics): All the active events as an ICS calendar.
 - [/events/](/events/): JSON files of every `Event` record, extracted from `Series` records.
 - [/events.json](/events.json): IDs of all `Event`s.
 - [/series/](/series/): JSON files of every `Series` record.
-- [/series.json](/series.json): IDs of all `Series`s.
+- [/series.json](/series.json): IDs of all `Series`.
 
 They will be emitted as materialized records which will contain additional details:
 

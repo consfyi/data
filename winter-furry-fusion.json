@@ -1,0 +1,15 @@
+{
+  "name": "Winter Furry Fusion",
+  "events": [
+    {
+      "id": "winter-furry-fusion-2024",
+      "name": "Winter Furry Fusion 2024",
+      "url": "https://www.furrychina.com",
+      "startDate": "2024-12-20",
+      "endDate": "2024-12-22",
+      "location": "Crowne Plaza Shanghai Xiayang Lake, Qingpu District, China",
+      "country": "CN",
+      "latLng": [31.151381999999998, 121.138108]
+    }
+  ]
+}

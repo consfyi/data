@@ -1,0 +1,15 @@
+{
+  "name": "Furry Joining of Asia",
+  "events": [
+    {
+      "id": "furry-joining-of-asia-2025",
+      "name": "Furry Joining of Asia 2025",
+      "url": "https://furryjoa.com",
+      "startDate": "2025-02-22",
+      "endDate": "2025-02-23",
+      "location": "YMCA Goyang Youth Hostel, Aenigol-gil, Goyang, Gyeonggi-do, South Korea",
+      "country": "KR",
+      "latLng": [37.6773607, 126.7914804]
+    }
+  ]
+}

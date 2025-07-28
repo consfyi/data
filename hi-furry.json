@@ -1,0 +1,15 @@
+{
+  "name": "Hi Furry",
+  "events": [
+    {
+      "id": "hi-furry-2025",
+      "name": "Hi Furry 2025",
+      "url": "https://hi-furry.cn",
+      "startDate": "2025-10-01",
+      "endDate": "2025-10-04",
+      "location": "Nansha Lingnan Dongfang Hotel, Nansha District, Guangzhou, China",
+      "country": "CN",
+      "latLng": [22.75253, 113.53751]
+    }
+  ]
+}

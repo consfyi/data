@@ -179,7 +179,7 @@ with open(output_dir / "calendar.ics", "w") as f:
         f.write(f"DTEND;VALUE=DATE:{end_date}\r\n")
         f.write(f"DTSTAMP:{dtstamp}\r\n")
         f.write(f"URL:{escape_ics(event['url'])}\r\n")
-        f.write(f"LOCATION:{escape_ics(event['location'])}\r\n")
+        f.write(f"LOCATION:{escape_ics(event['location'].join(', '))}\r\n")
         f.write("END:VEVENT\r\n")
     f.write("END:VCALENDAR\r\n")
 

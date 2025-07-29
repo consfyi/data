@@ -13,7 +13,7 @@
         "properties": {
           "id": {
             "type": "string",
-            "pattern": "[\\p{Ll}\\p{N}\\s-]+",
+            "pattern": "^[\\p{Ll}\\p{N}-]+$",
             "minLength": 1
           },
           "name": {

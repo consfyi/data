@@ -131,9 +131,8 @@ def pred(event):
     return now < end_date.add(days=7) and not event.get("canceled", False)
 
 
-active = [event for event in events.values() if pred(event)]
-
-active.sort(
+current = [event for event in events.values() if pred(event)]
+current.sort(
     key=lambda event: (
         whenever.Date.parse_common_iso(event["startDate"]),
         whenever.Date.parse_common_iso(event["endDate"]),
@@ -160,7 +159,7 @@ with open(output_dir / "calendar.ics", "w") as f:
     f.write("VERSION:2.0\r\n")
     f.write("PRODID:-//cons.fyi//EN\r\n")
     f.write("X-WR-CALNAME:series.fyi\r\n")
-    for event in active:
+    for event in current:
         start_date = (
             whenever.Date.parse_common_iso(event["startDate"])
             .py_date()
@@ -184,9 +183,9 @@ with open(output_dir / "calendar.ics", "w") as f:
         f.write("END:VEVENT\r\n")
     f.write("END:VCALENDAR\r\n")
 
-with open(output_dir / "active.json", "w") as f:
+with open(output_dir / "current.json", "w") as f:
     json.dump(
-        active,
+        current,
         f,
         ensure_ascii=False,
     )

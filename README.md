@@ -43,8 +43,8 @@ interface Event {
   /// The end date of the convention instance, inclusive. Should be in yyyy-MM-dd format.
   endDate: string;
 
-  /// The human-readable location. This may be a virtual location e.g. "VRChat".
-  location: string;
+  /// The human-readable location. The first item should be the primary text (e.g. the name of the venue) and further items should be the secondary text (e.g. the address).
+  location: string[];
 
   /// The country, if any. This may be unset for e.g. virtual conventions.
   country?: string;

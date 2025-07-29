@@ -6,7 +6,10 @@
       "name": "FurCamp Michigan 2025",
       "startDate": "2025-06-05",
       "endDate": "2025-06-08",
-      "location": "Lake Michigan Recreation Area, Free Soil, MI, USA",
+      "location": [
+        "Lake Michigan Recreation Area",
+        "Free Soil, MI, USA"
+      ],
       "country": "US",
       "latLng": [
         44.11856470000001,

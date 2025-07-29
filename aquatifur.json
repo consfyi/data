@@ -6,7 +6,10 @@
       "name": "AquatiFur 2025",
       "startDate": "2025-11-07",
       "endDate": "2025-11-09",
-      "location": "Chula Vista Resort - Wisconsin Dells Waterpark Resort, Wisconsin Dells, WI, USA",
+      "location": [
+        "Chula Vista Resort - Wisconsin Dells Waterpark Resort",
+        "Wisconsin Dells, WI, USA"
+      ],
       "country": "US",
       "latLng": [
         43.666426,

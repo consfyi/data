@@ -6,7 +6,10 @@
       "name": "Unfurgettable Taiwan Furry Gathering 2025",
       "startDate": "2025-07-19",
       "endDate": "2025-07-20",
-      "location": "Sheraton Hsinchu Hotel, Zhubei City, Hsinchu County, Taiwan",
+      "location": [
+        "Sheraton Hsinchu Hotel",
+        "Zhubei City, Hsinchu County, Taiwan"
+      ],
       "country": "TW",
       "latLng": [
         24.8204603,

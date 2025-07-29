@@ -6,7 +6,10 @@
       "name": "Furgeddaboutit 2025",
       "startDate": "2025-05-02",
       "endDate": "2025-05-04",
-      "location": "DoubleTree Suites by Hilton Hotel Mt. Laurel, Mt Laurel Township, NJ, USA",
+      "location": [
+        "DoubleTree Suites by Hilton Hotel Mt. Laurel",
+        "Mt Laurel Township, NJ, USA"
+      ],
       "country": "US",
       "latLng": [
         39.9358914,

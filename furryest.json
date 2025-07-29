@@ -6,7 +6,10 @@
       "name": "FurryEST 2025",
       "startDate": "2025-07-03",
       "endDate": "2025-07-06",
-      "location": "Kabala Barge Houses, Kabala Village, Rapla County, Estonia",
+      "location": [
+        "Kabala Barge Houses",
+        "Kabala Village, Rapla County, Estonia"
+      ],
       "country": "EE",
       "latLng": [
         58.9246768,

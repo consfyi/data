@@ -6,7 +6,10 @@
       "name": "Furry Weekend Holland 2025",
       "startDate": "2025-04-25",
       "endDate": "2025-04-28",
-      "location": "Kasteel de Berckt, Baarlo, Netherlands",
+      "location": [
+        "Kasteel de Berckt",
+        "Baarlo, Netherlands"
+      ],
       "country": "NL",
       "latLng": [
         51.342657,

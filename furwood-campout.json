@@ -6,7 +6,10 @@
       "name": "Furwood Campout 2025",
       "startDate": "2025-06-13",
       "endDate": "2025-06-15",
-      "location": "Triangle Recreation Camp, Granite Falls, WA, USA",
+      "location": [
+        "Triangle Recreation Camp",
+        "Granite Falls, WA, USA"
+      ],
       "country": "US",
       "latLng": [
         48.0739803,

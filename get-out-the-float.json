@@ -6,7 +6,10 @@
       "name": "Get Out The Float 2026",
       "startDate": "2026-02-12",
       "endDate": "2026-02-15",
-      "location": "Seaside Civic & Convention Center, Seaside, OR, USA",
+      "location": [
+        "Seaside Civic & Convention Center",
+        "Seaside, OR, USA"
+      ],
       "country": "US",
       "latLng": [
         45.9941334,

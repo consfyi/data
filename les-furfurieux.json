@@ -6,7 +6,10 @@
       "name": "Les Furfurieux 2025",
       "startDate": "2025-05-08",
       "endDate": "2025-05-11",
-      "location": "Hotel Metz Technopole - Best Western Plus, Metz, France",
+      "location": [
+        "Hotel Metz Technopole - Best Western Plus",
+        "Metz, France"
+      ],
       "country": "FR",
       "latLng": [
         49.10049189999999,

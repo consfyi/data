@@ -6,7 +6,10 @@
       "name": "NordicFuzzCon 2026",
       "startDate": "2026-02-18",
       "endDate": "2026-02-22",
-      "location": "Clarion Hotel & Congress Malmö Live, Malmö, Sweden",
+      "location": [
+        "Clarion Hotel & Congress Malmö Live",
+        "Malmö, Sweden"
+      ],
       "country": "SE",
       "latLng": [
         55.6074523,

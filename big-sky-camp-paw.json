@@ -6,7 +6,10 @@
       "name": "Big Sky Camp Paw 2025",
       "startDate": "2025-08-07",
       "endDate": "2025-08-11",
-      "location": "Hellgate Campground, Helena, MT, USA",
+      "location": [
+        "Hellgate Campground",
+        "Helena, MT, USA"
+      ],
       "country": "US",
       "latLng": [
         46.6186255,

@@ -6,7 +6,10 @@
       "name": "Furs Upon Malaysia 2025",
       "startDate": "2025-12-13",
       "endDate": "2025-12-14",
-      "location": "Hotel Armada Petaling Jaya, Petaling Jaya, Selangor, Malaysia",
+      "location": [
+        "Hotel Armada Petaling Jaya",
+        "Petaling Jaya, Selangor, Malaysia"
+      ],
       "country": "MY",
       "latLng": [
         3.1042927,

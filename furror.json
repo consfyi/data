@@ -6,7 +6,10 @@
       "name": "Furror 2025",
       "startDate": "2025-10-10",
       "endDate": "2025-10-12",
-      "location": "Boutique Hotel's III Piłsudskiego, Łódź, Poland",
+      "location": [
+        "Boutique Hotel's III Piłsudskiego",
+        "Łódź, Poland"
+      ],
       "country": "PL",
       "latLng": [
         51.7601428,

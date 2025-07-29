@@ -6,7 +6,10 @@
       "name": "Expofur 2025",
       "startDate": "2025-03-07",
       "endDate": "2025-03-09",
-      "location": "Hotel Monterrey Macroplaza, Monterrey, Newfoundland and Labrador, Mexico",
+      "location": [
+        "Hotel Monterrey Macroplaza",
+        "Monterrey, Newfoundland and Labrador, Mexico"
+      ],
       "country": "MX",
       "latLng": [
         25.6866142,

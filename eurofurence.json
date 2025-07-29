@@ -6,7 +6,10 @@
       "name": "Eurofurence 29",
       "startDate": "2025-09-03",
       "endDate": "2025-09-06",
-      "location": "Congress Center Hamburg, Hamburg, Germany",
+      "location": [
+        "Congress Center Hamburg",
+        "Hamburg, Germany"
+      ],
       "country": "DE",
       "latLng": [
         53.561764,

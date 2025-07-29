@@ -6,7 +6,10 @@
       "name": "Furizon 2025",
       "startDate": "2025-06-03",
       "endDate": "2025-06-07",
-      "location": "Devero Hotel, Cavenago di Brianza, Italy",
+      "location": [
+        "Devero Hotel",
+        "Cavenago di Brianza, Italy"
+      ],
       "country": "IT",
       "latLng": [
         45.58023679999999,

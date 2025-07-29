@@ -6,7 +6,10 @@
       "name": "Fur-Eh! 2026",
       "startDate": "2026-07-16",
       "endDate": "2026-07-19",
-      "location": "Wyndham Edmonton Hotel and Conference Centre, Edmonton, Alberta, Canada",
+      "location": [
+        "Wyndham Edmonton Hotel and Conference Centre",
+        "Edmonton, Alberta, Canada"
+      ],
       "country": "CA",
       "latLng": [
         53.4825117,
@@ -22,7 +25,10 @@
       "name": "Fur-Eh! 2025",
       "startDate": "2025-07-17",
       "endDate": "2025-07-20",
-      "location": "Wyndham Edmonton Hotel and Conference Centre, Edmonton, Alberta, Canada",
+      "location": [
+        "Wyndham Edmonton Hotel and Conference Centre",
+        "Edmonton, Alberta, Canada"
+      ],
       "country": "CA",
       "latLng": [
         53.4825117,

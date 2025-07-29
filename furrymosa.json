@@ -6,7 +6,10 @@
       "name": "Furrymosa 7",
       "startDate": "2025-06-14",
       "endDate": "2025-06-14",
-      "location": "New Taipei City Mie Complex, New Taipei City, Taiwan",
+      "location": [
+        "New Taipei City Mie Complex",
+        "New Taipei City, Taiwan"
+      ],
       "country": "TW",
       "latLng": [
         25.0169826,

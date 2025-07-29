@@ -6,7 +6,10 @@
       "name": "Scotiacon 2026",
       "startDate": "2026-02-06",
       "endDate": "2026-02-09",
-      "location": "Crowne Plaza Glasgow, Glasgow, UK",
+      "location": [
+        "Crowne Plaza Glasgow",
+        "Glasgow, UK"
+      ],
       "country": "GB",
       "latLng": [
         55.8597859,

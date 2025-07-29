@@ -6,7 +6,10 @@
       "name": "South Afrifur 2025",
       "startDate": "2025-09-05",
       "endDate": "2025-09-08",
-      "location": "Valverde Eco Hotel, Muldersdrif Lanseria, South Africa",
+      "location": [
+        "Valverde Eco Hotel",
+        "Muldersdrif Lanseria, South Africa"
+      ],
       "country": "ZA",
       "latLng": [
         -25.9556957,

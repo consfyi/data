@@ -6,7 +6,10 @@
       "name": "Furpile 2025",
       "startDate": "2025-05-09",
       "endDate": "2025-05-11",
-      "location": "Boutique Hotel's III Łódź, Łódź, Poland",
+      "location": [
+        "Boutique Hotel's III Łódź",
+        "Łódź, Poland"
+      ],
       "country": "PL",
       "latLng": [
         51.7599923,

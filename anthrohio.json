@@ -6,7 +6,10 @@
       "name": "AnthrOhio 2026",
       "startDate": "2026-05-22",
       "endDate": "2026-05-24",
-      "location": "Hilton Columbus Downtown, Columbus, OH, USA",
+      "location": [
+        "Hilton Columbus Downtown",
+        "Columbus, OH, USA"
+      ],
       "country": "US",
       "latLng": [
         39.9707463,

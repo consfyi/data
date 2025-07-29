@@ -7,7 +7,9 @@
       "url": "https://furality.org",
       "startDate": "2025-06-05",
       "endDate": "2025-06-08",
-      "location": "VRChat"
+      "location": [
+        "VRChat"
+      ]
     }
   ]
 }

@@ -9,7 +9,6 @@
 # ]
 # ///
 import asyncio
-import bisect
 from bs4 import BeautifulSoup
 import dataclasses
 import datetime
@@ -116,7 +115,7 @@ class Event:
     url: str
     start_date: datetime.date
     end_date: datetime.date
-    location: str
+    location: typing.List[str]
     country: str
     canceled: bool
     lat_lng: tuple[float, float] | None
@@ -125,7 +124,7 @@ class Event:
         if self.lat_lng is not None:
             return
 
-        geocode = gmaps.geocode(self.location)
+        geocode = gmaps.geocode(", ".join(self.location))
         if not geocode:
             return
 
@@ -169,16 +168,22 @@ async def fetch_events():
                 address = loc["address"]
                 country_name = loc["address"]["addressCountry"]
                 country = COUNTRIES[country_name]
-                location = ", ".join(
+                location = [
                     part
                     for part in [
                         loc_name,
-                        address.get("addressLocality", ""),
-                        address.get("addressRegion", ""),
-                        country_name,
+                        ", ".join(
+                            part
+                            for part in [
+                                address.get("addressLocality", ""),
+                                address.get("addressRegion", ""),
+                                country_name,
+                            ]
+                            if part
+                        ),
                     ]
                     if part
-                )
+                ]
                 canceled = entry["eventStatus"] not in {
                     "https://schema.org/EventScheduled",
                     "https://schema.org/EventRescheduled",

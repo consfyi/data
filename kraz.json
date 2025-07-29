@@ -6,7 +6,10 @@
       "name": "KRAZ 2025",
       "startDate": "2025-04-30",
       "endDate": "2025-05-04",
-      "location": "Westernové městečko Boskovice, s.r.o., Boskovice, Czech Republic",
+      "location": [
+        "Westernové městečko Boskovice",
+        "s.r.o., Boskovice, Czech Republic"
+      ],
       "country": "CZ",
       "latLng": [
         49.494778,

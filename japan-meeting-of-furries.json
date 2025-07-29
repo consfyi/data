@@ -6,7 +6,10 @@
       "name": "Japan Meeting of Furries 2026",
       "startDate": "2026-01-09",
       "endDate": "2026-01-11",
-      "location": "Loisir Hotel Toyohashi, Toyohashi, Aichi, Japan",
+      "location": [
+        "Loisir Hotel Toyohashi",
+        "Toyohashi, Aichi, Japan"
+      ],
       "country": "JP",
       "latLng": [
         34.743506,

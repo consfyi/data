@@ -6,7 +6,10 @@
       "name": "Furrest City 2025",
       "startDate": "2025-09-13",
       "endDate": "2025-09-13",
-      "location": "Sears think[box], Cleveland, OH, USA",
+      "location": [
+        "Sears think[box]",
+        "Cleveland, OH, USA"
+      ],
       "country": "US",
       "latLng": [
         41.5005593,

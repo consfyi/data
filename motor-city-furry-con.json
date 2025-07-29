@@ -6,7 +6,10 @@
       "name": "Motor City Furry Con 2026",
       "startDate": "2026-02-13",
       "endDate": "2026-02-15",
-      "location": "Detroit Marriott at the Renaissance Center, Renaissance Drive West, Detroit, MI, USA",
+      "location": [
+        "Detroit Marriott at the Renaissance Center",
+        "Renaissance Drive West, Detroit, MI, USA"
+      ],
       "country": "US",
       "latLng": [
         42.328545,
@@ -19,7 +22,10 @@
       "name": "Motor City Furry Con 2025",
       "startDate": "2025-03-28",
       "endDate": "2025-03-30",
-      "location": "Ann Arbor Marriott Ypsilanti at Eagle Crest, Ypsilanti, MI, USA",
+      "location": [
+        "Ann Arbor Marriott Ypsilanti at Eagle Crest",
+        "Ypsilanti, MI, USA"
+      ],
       "country": "US",
       "latLng": [
         42.2245823,

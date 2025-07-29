@@ -6,7 +6,10 @@
       "name": "Alamo City Furry Invasion 2025",
       "startDate": "2025-10-09",
       "endDate": "2025-10-12",
-      "location": "Embassy Suites by Hilton San Marcos Hotel Conference Center, San Marcos, TX, USA",
+      "location": [
+        "Embassy Suites by Hilton San Marcos Hotel Conference Center",
+        "San Marcos, TX, USA"
+      ],
       "country": "US",
       "latLng": [
         29.839588,

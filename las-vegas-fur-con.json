@@ -6,7 +6,10 @@
       "name": "Las Vegas Fur Con 2026",
       "startDate": "2026-04-02",
       "endDate": "2026-04-05",
-      "location": "Alexis Park Resort, Las Vegas, NV, USA",
+      "location": [
+        "Alexis Park Resort",
+        "Las Vegas, NV, USA"
+      ],
       "country": "US",
       "latLng": [
         36.1073746,

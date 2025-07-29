@@ -6,7 +6,10 @@
       "name": "Spooktacufur 2025",
       "startDate": "2025-10-25",
       "endDate": "2025-10-25",
-      "location": "Embassy Suites by Hilton Salt Lake West Valley City, West Valley City, UT, USA",
+      "location": [
+        "Embassy Suites by Hilton Salt Lake West Valley City",
+        "West Valley City, UT, USA"
+      ],
       "country": "US",
       "latLng": [
         40.6961989,

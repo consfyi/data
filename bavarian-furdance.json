@@ -6,7 +6,10 @@
       "name": "Bavarian Furdance 2025",
       "startDate": "2025-06-21",
       "endDate": "2025-06-21",
-      "location": "Z-Bau, Nürnberg, Germany",
+      "location": [
+        "Z-Bau",
+        "Nürnberg, Germany"
+      ],
       "country": "DE",
       "latLng": [
         49.43056139999999,

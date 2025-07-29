@@ -6,7 +6,10 @@
       "name": "Furcamp 2026",
       "startDate": "2026-02-14",
       "endDate": "2026-02-17",
-      "location": "Acampamento Terra do Saber, Franco da Rocha, SP, Brazil",
+      "location": [
+        "Acampamento Terra do Saber",
+        "Franco da Rocha, SP, Brazil"
+      ],
       "country": "BR",
       "latLng": [
         -23.3193571,

@@ -6,7 +6,10 @@
       "name": "Ibercon 2025",
       "startDate": "2025-05-01",
       "endDate": "2025-05-04",
-      "location": "Rafaelhoteles Atocha, Madrid, Spain",
+      "location": [
+        "Rafaelhoteles Atocha",
+        "Madrid, Spain"
+      ],
       "country": "ES",
       "latLng": [
         40.40136800000001,

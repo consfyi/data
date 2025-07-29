@@ -6,7 +6,10 @@
       "name": "Little Island Furcon 2025",
       "startDate": "2025-06-14",
       "endDate": "2025-06-15",
-      "location": "One Farrer, Singapore",
+      "location": [
+        "One Farrer",
+        "Singapore"
+      ],
       "country": "SG",
       "latLng": [
         1.3125457,

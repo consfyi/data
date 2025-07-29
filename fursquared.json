@@ -6,7 +6,10 @@
       "name": "FurSquared 2026",
       "startDate": "2026-02-05",
       "endDate": "2026-02-08",
-      "location": "Hilton Milwaukee City Center, Milwaukee, WI, USA",
+      "location": [
+        "Hilton Milwaukee City Center",
+        "Milwaukee, WI, USA"
+      ],
       "country": "US",
       "latLng": [
         43.0384665,

@@ -7,7 +7,10 @@
       "url": "https://www.babyfurcon.com",
       "startDate": "2025-09-11",
       "endDate": "2025-09-15",
-      "location": "San Jose, CA, USA",
+      "location": [
+        "San Jose",
+        "CA, USA"
+      ],
       "country": "US",
       "latLng": [
         37.33874,

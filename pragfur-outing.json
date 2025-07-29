@@ -6,7 +6,10 @@
       "name": "PragFUR Outing 2025",
       "startDate": "2025-06-21",
       "endDate": "2025-06-21",
-      "location": "Park Podviní - Vysočany, Prague, Czech Republic",
+      "location": [
+        "Park Podviní - Vysočany",
+        "Prague, Czech Republic"
+      ],
       "country": "CZ",
       "latLng": [
         50.1096219,

@@ -6,7 +6,10 @@
       "name": "Wild North 2025",
       "startDate": "2025-09-26",
       "endDate": "2025-09-29",
-      "location": "Lumley Castle, Chester-le-Street, UK",
+      "location": [
+        "Lumley Castle",
+        "Chester-le-Street, UK"
+      ],
       "country": "GB",
       "latLng": [
         54.8533855,

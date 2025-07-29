@@ -6,7 +6,10 @@
       "name": "Furever West 2025",
       "startDate": "2025-09-19",
       "endDate": "2025-09-21",
-      "location": "Hilton Garden Inn Laramie, Laramie, WY, USA",
+      "location": [
+        "Hilton Garden Inn Laramie",
+        "Laramie, WY, USA"
+      ],
       "country": "US",
       "latLng": [
         41.3101524,

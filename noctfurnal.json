@@ -6,7 +6,10 @@
       "name": "Noctfurnal 2025",
       "startDate": "2025-07-18",
       "endDate": "2025-07-20",
-      "location": "Hi-Way Drive-In, Carsonville, MI, USA",
+      "location": [
+        "Hi-Way Drive-In",
+        "Carsonville, MI, USA"
+      ],
       "country": "US",
       "latLng": [
         43.4241108,

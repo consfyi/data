@@ -6,7 +6,10 @@
       "name": "Tails and Tornadoes Fur Con 2025",
       "startDate": "2025-09-05",
       "endDate": "2025-09-07",
-      "location": "Renaissance Tulsa Hotel & Convention Center, Tulsa, OK, USA",
+      "location": [
+        "Renaissance Tulsa Hotel & Convention Center",
+        "Tulsa, OK, USA"
+      ],
       "country": "US",
       "latLng": [
         36.0650505,

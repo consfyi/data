@@ -6,7 +6,10 @@
       "name": "Gdakon 2025",
       "startDate": "2025-02-26",
       "endDate": "2025-03-02",
-      "location": "Novotel Gdansk Marina, Gdańsk, Poland",
+      "location": [
+        "Novotel Gdansk Marina",
+        "Gdańsk, Poland"
+      ],
       "country": "PL",
       "latLng": [
         54.4287746,

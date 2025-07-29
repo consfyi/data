@@ -26,7 +26,7 @@ output_dir = pathlib.Path(output_dir)
 
 
 with open(output_dir / "timestamp", "w") as f:
-    f.write(now.py_datetime().strftime("%Y-%m-%dT%H:%M:%S.%fZ") + "\n")
+    f.write(now.py_datetime().strftime("%Y-%m-%dT%H:%M:%S.%fZ"))
 
 
 with open(os.path.join(os.path.dirname(__file__), "schema.json")) as f:

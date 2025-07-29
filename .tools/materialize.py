@@ -18,9 +18,16 @@ import whenever
 
 logging.basicConfig(level=logging.INFO)
 
+now = whenever.Instant.now().to_tz("UTC")
+
 
 (_, output_dir) = sys.argv
 output_dir = pathlib.Path(output_dir)
+
+
+with open(output_dir / "timestamp", "w") as f:
+    f.write(now.py_datetime().strftime("%Y-%m-%dT%H:%M:%S.%fZ") + "\n")
+
 
 with open(os.path.join(os.path.dirname(__file__), "schema.json")) as f:
     schema = json.load(f)
@@ -93,6 +100,7 @@ for fn in sorted(os.listdir(".")):
 if not el.ok:
     sys.exit(1)
 
+
 with open(output_dir / "series.json", "w") as f:
     json.dump(
         series_index,
@@ -130,8 +138,6 @@ active.sort(
         event["id"],
     )
 )
-
-now = whenever.Instant.now().to_tz("UTC")
 
 
 def escape_ics(s):

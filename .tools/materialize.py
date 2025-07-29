@@ -41,7 +41,7 @@ os.mkdir(series_path)
 events_path = output_dir / "events"
 os.mkdir(events_path)
 
-series_index = []
+all_series = {}
 events = {}
 
 jsonschema.validators.Draft202012Validator.check_schema(schema)
@@ -96,7 +96,7 @@ for fn in sorted(os.listdir(".")):
 
     with open(series_path / fn, "w") as f:
         json.dump(series, f, indent=2, ensure_ascii=False)
-    series_index.append(series_id)
+    all_series[series_id] = series
 
 
 if not el.ok:
@@ -105,7 +105,7 @@ if not el.ok:
 
 with open(output_dir / "series.json", "w") as f:
     json.dump(
-        series_index,
+        sorted(list(all_series.keys())),
         f,
         ensure_ascii=False,
     )
@@ -186,6 +186,28 @@ with open(output_dir / "calendar.ics", "w") as f:
 with open(output_dir / "current.json", "w") as f:
     json.dump(
         current,
+        f,
+        ensure_ascii=False,
+    )
+
+last = [
+    event
+    for event in (
+        next(iter(series["events"]), None) for _, series in all_series.items()
+    )
+    if event is not None
+]
+last.sort(
+    key=lambda event: (
+        whenever.Date.parse_common_iso(event["startDate"]),
+        whenever.Date.parse_common_iso(event["endDate"]),
+        event["id"],
+    )
+)
+
+with open(output_dir / "last.json", "w") as f:
+    json.dump(
+        last,
         f,
         ensure_ascii=False,
     )

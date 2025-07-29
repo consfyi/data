@@ -66,6 +66,7 @@ The following files are materialized at `https://data.cons.fyi`:
 - [/events.json](/events.json): IDs of all `Event`s.
 - [/series/](/series/): JSON files of every `Series` record.
 - [/series.json](/series.json): IDs of all `Series`.
+- [/timestamp](/timestamp): Timestamp for when this data was materialized.
 
 They will be emitted as materialized records which will contain additional details:
 

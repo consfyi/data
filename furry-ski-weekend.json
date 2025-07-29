@@ -1,0 +1,18 @@
+{
+  "name": "Furry Ski Weekend",
+  "events": [
+    {
+      "id": "furry-ski-weekend-2024",
+      "name": "Furry Ski Weekend 2024",
+      "url": "https://furryskiweekend.com/",
+      "startDate": "2024-02-22",
+      "endDate": "2024-02-25",
+      "location": "Copper Mountain, Frisco, CO, USA",
+      "country": "US",
+      "latLng": [
+        39.479013599999995,
+        -106.1612906
+      ]
+    }
+  ]
+}

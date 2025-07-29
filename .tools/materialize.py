@@ -2,6 +2,7 @@
 # /// script
 # dependencies = [
 #   "jsonschema",
+#   "regex-as-re-globally",
 #   "tzfpy[tzdata]",
 #   "whenever",
 # ]
@@ -15,6 +16,7 @@ import sys
 import os
 import tzfpy
 import whenever
+
 
 logging.basicConfig(level=logging.INFO)
 

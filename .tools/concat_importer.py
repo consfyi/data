@@ -13,6 +13,7 @@ import logging
 import googlemaps
 import httpx
 import os
+import uuid
 import whenever
 
 logging.basicConfig(level=logging.INFO)
@@ -51,26 +52,39 @@ with open(fn) as f:
 
         venue = convention["venue"]
         country = config["organization"]["country"]
-        geocode, *_ = gmaps.geocode(f"{venue}, {country}")
 
-        address = ", ".join(
-            [
-                component["short_name"]
-                for component in geocode["address_components"]
-                if set(component["types"])
-                & {"route", "locality", "administrative_area_level_1", "country"}
-            ]
+        session_token = str(uuid.uuid4())
+        predictions = gmaps.places_autocomplete(
+            f"{venue}, {country}", session_token=session_token
         )
-        lat_lng = geocode["geometry"]["location"]
+
+        location = [
+            convention["venue"],
+        ]
+        if len(predictions) == 0:
+            lat_lng = None
+        else:
+            prediction, *_ = predictions
+            st = prediction["structured_formatting"]
+            if "secondary_text" in st:
+                location.append(st["secondary_text"])
+
+            place = gmaps.place(
+                prediction["place_id"],
+                session_token=session_token,
+                fields=["geometry/location"],
+            )
+            l = place["result"]["geometry"]["location"]
+            lat_lng = [l["lat"], l["lng"]]
 
         event = {
             "id": id,
             "name": f"{series['name']} {start_date.year}",
             "startDate": start_date.format_common_iso(),
             "endDate": end_date.format_common_iso(),
-            "location": [convention["venue"], address],
+            "location": location,
             "country": country,
-            "latLng": [lat_lng["lat"], lat_lng["lng"]],
+            "latLng": lat_lng,
             "url": series["events"][0]["url"],
         }
         series["events"].insert(i, event)

@@ -52,6 +52,9 @@ interface Event {
   /// The GPS coordinates of the venue, if any. This may be unset for e.g. virtual conventions.
   latLng?: [number, number];
 
+  /// The number of attendees for historical cons.
+  attendance?: number,
+
   /// Sources this data is from.
   sources?: string[];
 }
@@ -85,5 +88,8 @@ interface MaterializedEvent extends Event {
 
   /// The IANA timezone ID, if `latLng` is present.
   timezone?: string;
+
+  /// The attendance of the previous event in the series, if any.
+  previousAttendance?: number;
 }
 ```

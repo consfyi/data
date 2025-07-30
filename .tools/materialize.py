@@ -10,6 +10,7 @@
 
 import json
 import jsonschema.validators
+import itertools
 import logging
 import pathlib
 import sys
@@ -76,12 +77,19 @@ for fn in sorted(os.listdir(".")):
     if has_errors:
         continue
 
-    for event in series["events"]:
+    for event, previous_event in itertools.zip_longest(
+        series["events"], series["events"][1:], fillvalue=None
+    ):
+        assert event is not None
+
         event_id = event["id"]
         if "latLng" in event:
             (lat, lng) = event["latLng"]
             event["timezone"] = tzfpy.get_tz(lng, lat)
         event["seriesId"] = series_id
+
+        if previous_event is not None and "attendance" in previous_event:
+            event["previousAttendance"] = previous_event["attendance"]
 
         if event_id in events:
             el.log(

@@ -64,6 +64,9 @@
             "minItems": 2,
             "maxItems": 2
           },
+          "attendance": {
+            "type": "integer"
+          },
           "sources": {
             "type": "array",
             "items": {

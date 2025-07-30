@@ -46,7 +46,7 @@ interface Event {
   /// The human-readable location. The first item should be the primary text (e.g. the name of the venue) and further items should be the secondary text (e.g. the address).
   location: string[];
 
-  /// The country, if any. This may be unset for e.g. virtual conventions.
+  /// The country, if any, as an ISO 3166-1 alpha-2 code. This may be unset for e.g. virtual conventions.
   country?: string;
 
   /// The GPS coordinates of the venue, if any. This may be unset for e.g. virtual conventions.

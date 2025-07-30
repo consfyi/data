@@ -1,0 +1,21 @@
+{
+  "name": "Golden Leaves Con",
+  "events": [
+    {
+      "id": "golden-leaves-con-2025",
+      "name": "Golden Leaves Con 2025",
+      "url": "https://glc.furry.ch",
+      "startDate": "2025-10-29",
+      "endDate": "2025-11-02",
+      "location": [
+        "Hostel C’est la Vie",
+        "Engi, Hasliberg, Switzerland"
+      ],
+      "country": "CH",
+      "latLng": [
+        46.7334363,
+        8.2071686
+      ]
+    }
+  ]
+}

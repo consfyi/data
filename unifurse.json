@@ -1,0 +1,21 @@
+{
+  "name": "Unifurse",
+  "events": [
+    {
+      "id": "unifurse-2025",
+      "name": "Unifurse 2025",
+      "url": "https://unifurse.cn",
+      "startDate": "2025-07-18",
+      "endDate": "2025-07-21",
+      "location": [
+        "Shangri-La Hotel, Guangzhou",
+        "Huizhan East Road, Haizhu District, Guangzhou, Guangdong Province, China"
+      ],
+      "country": "CN",
+      "latLng": [
+        23.10505888282043,
+        113.36468067232711
+      ]
+    }
+  ]
+}

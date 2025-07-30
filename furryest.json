@@ -4,21 +4,18 @@
     {
       "id": "furryest-2025",
       "name": "FurryEST 2025",
+      "url": "https://furryest.org",
       "startDate": "2025-07-03",
       "endDate": "2025-07-06",
       "location": [
-        "Kabala Barge Houses",
-        "Kabala Village, Rapla County, Estonia"
+        "Parvemajad",
+        "Kabala, Rapla County, Estonia"
       ],
       "country": "EE",
       "latLng": [
-        58.9246768,
-        24.6496353
-      ],
-      "sources": [
-        "fancons.com"
-      ],
-      "url": "https://furryest.org"
+        58.939282199999994,
+        24.654215
+      ]
     }
   ]
 }

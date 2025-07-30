@@ -1,0 +1,21 @@
+{
+  "name": "ČeSFuR",
+  "events": [
+    {
+      "id": "česfur-2025",
+      "name": "ČeSFuR 2025",
+      "url": "https://www.cesfur.org",
+      "startDate": "2025-06-29",
+      "endDate": "2025-07-04",
+      "location": [
+        "Hotel Skalský dvůr",
+        "Lísek, Lísek u Bystřice nad Pernštejnem, ČR"
+      ],
+      "country": "CZ",
+      "latLng": [
+        49.564785799999996,
+        16.1792244
+      ]
+    }
+  ]
+}

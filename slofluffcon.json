@@ -1,0 +1,21 @@
+{
+  "name": "SloFluffCon",
+  "events": [
+    {
+      "id": "slofluffcon-2026",
+      "name": "SloFluffCon 2026",
+      "url": "https://slofluffcon.org",
+      "startDate": "2026-01-22",
+      "endDate": "2026-01-25",
+      "location": [
+        "Grand Hotel Union Eurostars",
+        "Miklošičeva cesta, Ljubljana, Slovenia"
+      ],
+      "country": "SI",
+      "latLng": [
+        46.0527237,
+        14.506327
+      ]
+    }
+  ]
+}

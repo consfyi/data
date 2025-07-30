@@ -1,0 +1,21 @@
+{
+  "name": "Rügen Furcon",
+  "events": [
+    {
+      "id": "rügen-furcon-2025",
+      "name": "Rügen Furcon 2025",
+      "url": "https://www.baltic-furs.de",
+      "startDate": "2025-09-25",
+      "endDate": "2025-09-28",
+      "location": [
+        "MARIANDL am Meer",
+        "Nordstrand, Binz-Prora, Germany"
+      ],
+      "country": "DE",
+      "latLng": [
+        54.4435715,
+        13.572795399999999
+      ]
+    }
+  ]
+}

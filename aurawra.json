@@ -6,10 +6,6 @@
       "name": "Aurawra 2025",
       "startDate": "2025-07-25",
       "endDate": "2025-07-27",
-      "location": [
-        "ParkRoyal Parramatta",
-        "Parramatta, New South Wales, Australia"
-      ],
       "country": "AU",
       "latLng": [
         -33.8122336,
@@ -19,7 +15,9 @@
         "fancons.com",
         "coyo.tl"
       ],
-      "url": "https://www.aurawra.org"
+      "url": "https://www.aurawra.org",
+      "venue": "ParkRoyal Parramatta",
+      "address": "Parramatta, New South Wales, Australia"
     }
   ]
 }

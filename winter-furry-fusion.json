@@ -7,15 +7,13 @@
       "url": "https://www.furrychina.com",
       "startDate": "2024-12-20",
       "endDate": "2024-12-22",
-      "location": [
-        "Crowne Plaza Shanghai Xiayang Lake",
-        "Qingpu District, China"
-      ],
       "country": "CN",
       "latLng": [
         31.15329194575372,
         121.13352781771808
-      ]
+      ],
+      "venue": "Crowne Plaza Shanghai Xiayang Lake",
+      "address": "Qingpu District, China"
     }
   ]
 }

@@ -6,10 +6,6 @@
       "name": "Lone Star Fur Con 2025",
       "startDate": "2025-02-28",
       "endDate": "2025-03-02",
-      "location": [
-        "Holiday Inn Austin Midtown",
-        "Austin, TX, USA"
-      ],
       "country": "US",
       "latLng": [
         30.3238733,
@@ -18,7 +14,9 @@
       "sources": [
         "fancons.com"
       ],
-      "url": "https://lonestarfurcon.com"
+      "url": "https://lonestarfurcon.com",
+      "venue": "Holiday Inn Austin Midtown",
+      "address": "Austin, TX, USA"
     }
   ]
 }

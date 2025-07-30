@@ -6,10 +6,6 @@
       "name": "LondonFurs Summer Weekend 2025",
       "startDate": "2025-07-18",
       "endDate": "2025-07-19",
-      "location": [
-        "Jewel of London / Tank & Paddle Minster Court",
-        "London, UK"
-      ],
       "country": "GB",
       "latLng": [
         51.5106595,
@@ -18,7 +14,9 @@
       "sources": [
         "fancons.com"
       ],
-      "url": "https://londonfurs.org.uk"
+      "url": "https://londonfurs.org.uk",
+      "venue": "Jewel of London / Tank & Paddle Minster Court",
+      "address": "London, UK"
     }
   ]
 }

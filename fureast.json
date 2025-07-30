@@ -6,10 +6,6 @@
       "name": "FurEast 2025",
       "startDate": "2025-08-01",
       "endDate": "2025-08-03",
-      "location": [
-        "Hilton Strasbourg",
-        "Strasbourg, France"
-      ],
       "country": "FR",
       "latLng": [
         48.5969119,
@@ -19,7 +15,9 @@
         "fancons.com",
         "coyo.tl"
       ],
-      "url": "https://fureast.fr"
+      "url": "https://fureast.fr",
+      "venue": "Hilton Strasbourg",
+      "address": "Strasbourg, France"
     }
   ]
 }

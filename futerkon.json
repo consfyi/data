@@ -6,10 +6,6 @@
       "name": "Futerkon 2025",
       "startDate": "2025-08-06",
       "endDate": "2025-08-10",
-      "location": [
-        "Hotel Ameliówka",
-        "Mąchocice Kapitulne, Poland"
-      ],
       "country": "PL",
       "latLng": [
         50.8977634,
@@ -19,7 +15,9 @@
         "fancons.com",
         "coyo.tl"
       ],
-      "url": "https://futerkon.pl"
+      "url": "https://futerkon.pl",
+      "venue": "Hotel Ameliówka",
+      "address": "Mąchocice Kapitulne, Poland"
     }
   ]
 }

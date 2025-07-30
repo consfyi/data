@@ -6,10 +6,6 @@
       "name": "Camp Feral! 2025",
       "startDate": "2025-08-21",
       "endDate": "2025-08-25",
-      "location": [
-        "Camp Arowhon",
-        "Algonquin Park, Ontario, Canada"
-      ],
       "country": "CA",
       "latLng": [
         45.5959331,
@@ -19,7 +15,9 @@
         "fancons.com",
         "coyo.tl"
       ],
-      "url": "https://campferal.org"
+      "url": "https://campferal.org",
+      "venue": "Camp Arowhon",
+      "address": "Algonquin Park, Ontario, Canada"
     }
   ]
 }

@@ -6,10 +6,6 @@
       "name": "Pawska 2025",
       "startDate": "2025-11-28",
       "endDate": "2025-11-30",
-      "location": [
-        "Amber Hotel Gdańsk",
-        "Gdańsk, Poland"
-      ],
       "country": "PL",
       "latLng": [
         54.3580297,
@@ -19,7 +15,9 @@
         "fancons.com",
         "coyo.tl"
       ],
-      "url": "https://www.volskarfurevents.eu/pl/Pawska"
+      "url": "https://www.volskarfurevents.eu/pl/Pawska",
+      "venue": "Amber Hotel Gdańsk",
+      "address": "Gdańsk, Poland"
     }
   ]
 }

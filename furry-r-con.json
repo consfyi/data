@@ -6,10 +6,6 @@
       "name": "Furry R Con 2025",
       "startDate": "2025-09-11",
       "endDate": "2025-09-14",
-      "location": [
-        "Chaty pod Gýmešom",
-        "Jelenec, Slovakia"
-      ],
       "country": "SK",
       "latLng": [
         48.399078,
@@ -19,7 +15,9 @@
         "fancons.com",
         "coyo.tl"
       ],
-      "url": "https://furryrcon.com"
+      "url": "https://furryrcon.com",
+      "venue": "Chaty pod Gýmešom",
+      "address": "Jelenec, Slovakia"
     }
   ]
 }

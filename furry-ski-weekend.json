@@ -7,15 +7,13 @@
       "url": "https://furryskiweekend.com/",
       "startDate": "2024-02-22",
       "endDate": "2024-02-25",
-      "location": [
-        "Copper Mountain",
-        "Frisco, CO, USA"
-      ],
       "country": "US",
       "latLng": [
         39.479013599999995,
         -106.1612906
-      ]
+      ],
+      "venue": "Copper Mountain",
+      "address": "Frisco, CO, USA"
     }
   ]
 }

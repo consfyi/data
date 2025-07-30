@@ -6,10 +6,6 @@
       "name": "Mephit Mini Con 2025",
       "startDate": "2025-05-29",
       "endDate": "2025-06-01",
-      "location": [
-        "DJH Jugendherberge Freusburg",
-        "Kirchen (Sieg), Germany"
-      ],
       "country": "DE",
       "latLng": [
         50.8266967,
@@ -18,7 +14,9 @@
       "sources": [
         "fancons.com"
       ],
-      "url": "https://www.mephitminicon.de"
+      "url": "https://www.mephitminicon.de",
+      "venue": "DJH Jugendherberge Freusburg",
+      "address": "Kirchen (Sieg), Germany"
     }
   ]
 }

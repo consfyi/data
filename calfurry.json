@@ -6,10 +6,6 @@
       "name": "Calfurry 2026",
       "startDate": "2026-09-04",
       "endDate": "2026-09-06",
-      "location": [
-        "The Glenmore Inn & Convention Centre",
-        "Calgary, Alberta, Canada"
-      ],
       "country": "CA",
       "latLng": [
         50.9802653,
@@ -19,7 +15,9 @@
         "fancons.com",
         "coyo.tl"
       ],
-      "url": "https://www.calfurry.ca"
+      "url": "https://www.calfurry.ca",
+      "venue": "The Glenmore Inn & Convention Centre",
+      "address": "Calgary, Alberta, Canada"
     }
   ]
 }

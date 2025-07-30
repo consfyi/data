@@ -36,13 +36,11 @@
                 "$data": "1/startDate"
             }
           },
-          "location": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "minItems": 1,
-            "maxItems": 2
+          "venue": {
+            "type": "string"
+          },
+          "address": {
+            "type": "string"
           },
           "country": {
             "type": "string",
@@ -75,7 +73,7 @@
             }
           }
         },
-        "required": ["id", "name", "url", "startDate", "endDate", "location"]
+        "required": ["id", "name", "url", "startDate", "endDate", "venue"]
       }
     }
   },

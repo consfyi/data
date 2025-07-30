@@ -6,10 +6,6 @@
       "name": "Futrołajki 2025",
       "startDate": "2025-11-12",
       "endDate": "2025-11-16",
-      "location": [
-        "Grand Hotel Kielce",
-        "Kielce, Poland"
-      ],
       "country": "PL",
       "latLng": [
         50.8742279,
@@ -19,7 +15,9 @@
         "fancons.com",
         "coyo.tl"
       ],
-      "url": "https://futrolajki.pl"
+      "url": "https://futrolajki.pl",
+      "venue": "Grand Hotel Kielce",
+      "address": "Kielce, Poland"
     }
   ]
 }

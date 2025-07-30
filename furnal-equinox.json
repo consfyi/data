@@ -7,25 +7,19 @@
       "url": "https://furnalequinox.com",
       "startDate": "2026-03-20",
       "endDate": "2026-03-22",
-      "location": [
-        "The Westin Harbour Castle",
-        "Harbour Square, Toronto, ON, Canada"
-      ],
       "country": "CA",
       "latLng": [
         43.641180299999995,
         -79.3762173
-      ]
+      ],
+      "venue": "The Westin Harbour Castle",
+      "address": "Harbour Square, Toronto, ON, Canada"
     },
     {
       "id": "furnal-equinox-2025",
       "name": "Furnal Equinox 2025",
       "startDate": "2025-03-21",
       "endDate": "2025-03-23",
-      "location": [
-        "Westin Harbour Castle",
-        "Toronto, Ontario, Canada"
-      ],
       "country": "CA",
       "latLng": [
         43.64118029999999,
@@ -34,7 +28,9 @@
       "sources": [
         "fancons.com"
       ],
-      "url": "https://furnalequinox.com"
+      "url": "https://furnalequinox.com",
+      "venue": "Westin Harbour Castle",
+      "address": "Toronto, Ontario, Canada"
     }
   ]
 }

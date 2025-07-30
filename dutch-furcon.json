@@ -6,10 +6,6 @@
       "name": "Dutch Furcon 2025",
       "startDate": "2025-08-08",
       "endDate": "2025-08-10",
-      "location": [
-        "Vakantiepark de Oude Molen",
-        "Groesbeek, Netherlands"
-      ],
       "country": "NL",
       "latLng": [
         51.7845123,
@@ -19,7 +15,9 @@
         "fancons.com",
         "coyo.tl"
       ],
-      "url": "https://dutchfurcon.com"
+      "url": "https://dutchfurcon.com",
+      "venue": "Vakantiepark de Oude Molen",
+      "address": "Groesbeek, Netherlands"
     }
   ]
 }

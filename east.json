@@ -6,10 +6,6 @@
       "name": "East 13",
       "startDate": "2025-09-17",
       "endDate": "2025-09-21",
-      "location": [
-        "Ringberg Hotel Suhl",
-        "Suhl, Germany"
-      ],
       "country": "DE",
       "latLng": [
         50.6169277,
@@ -19,7 +15,9 @@
         "fancons.com",
         "coyo.tl"
       ],
-      "url": "https://www.sachsenfurs.de/de/east"
+      "url": "https://www.sachsenfurs.de/de/east",
+      "venue": "Ringberg Hotel Suhl",
+      "address": "Suhl, Germany"
     }
   ]
 }

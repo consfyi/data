@@ -7,15 +7,13 @@
       "url": "https://www.cogweekend.com",
       "startDate": "2025-10-23",
       "endDate": "2025-10-26",
-      "location": [
-        "CCBC Resort Hotel",
-        "Gay Resort Drive, Cathedral City, CA, USA"
-      ],
       "country": "US",
       "latLng": [
         33.7797364,
         -116.46929410000001
-      ]
+      ],
+      "venue": "CCBC Resort Hotel",
+      "address": "Gay Resort Drive, Cathedral City, CA, USA"
     }
   ]
 }

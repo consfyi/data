@@ -6,10 +6,6 @@
       "name": "Furry Retreat 2025",
       "startDate": "2025-10-01",
       "endDate": "2025-10-06",
-      "location": [
-        "Robbers Cave State Park",
-        "Wilburton, OK, USA"
-      ],
       "country": "US",
       "latLng": [
         34.9803592,
@@ -18,7 +14,9 @@
       "sources": [
         "fancons.com"
       ],
-      "url": "https://www.furryretreat.com"
+      "url": "https://www.furryretreat.com",
+      "venue": "Robbers Cave State Park",
+      "address": "Wilburton, OK, USA"
     }
   ]
 }

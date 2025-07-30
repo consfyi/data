@@ -7,15 +7,13 @@
       "url": "https://www.furrychina.com",
       "startDate": "2025-08-03",
       "endDate": "2025-08-03",
-      "location": [
-        "Shanghai World Trade Exhibition Hall",
-        "Xingyi Road, Changning District, Shanghai, China"
-      ],
       "country": "CN",
       "latLng": [
         31.203918678111723,
         121.39596908346589
-      ]
+      ],
+      "venue": "Shanghai World Trade Exhibition Hall",
+      "address": "Xingyi Road, Changning District, Shanghai, China"
     }
   ]
 }

@@ -6,10 +6,6 @@
       "name": "Furvester 2024",
       "startDate": "2024-12-29",
       "endDate": "2025-01-02",
-      "location": [
-        "Hotel Fortuna Reutlingen/Tübingen",
-        "Reutlingen, Germany"
-      ],
       "country": "DE",
       "latLng": [
         48.49944439999999,
@@ -18,7 +14,9 @@
       "sources": [
         "fancons.com"
       ],
-      "url": "https://furvester.org"
+      "url": "https://furvester.org",
+      "venue": "Hotel Fortuna Reutlingen/Tübingen",
+      "address": "Reutlingen, Germany"
     }
   ]
 }

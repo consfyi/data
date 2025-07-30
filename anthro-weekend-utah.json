@@ -6,10 +6,6 @@
       "name": "Anthro Weekend Utah 2025",
       "startDate": "2025-08-01",
       "endDate": "2025-08-03",
-      "location": [
-        "Davis Conference Center",
-        "Layton, UT, USA"
-      ],
       "country": "US",
       "latLng": [
         41.084361,
@@ -19,7 +15,9 @@
         "fancons.com",
         "coyo.tl"
       ],
-      "url": "https://www.anthroweekendutah.org"
+      "url": "https://www.anthroweekendutah.org",
+      "venue": "Davis Conference Center",
+      "address": "Layton, UT, USA"
     }
   ]
 }

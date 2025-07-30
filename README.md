@@ -43,8 +43,11 @@ interface Event {
   /// The end date of the convention instance, inclusive. Should be in yyyy-MM-dd format.
   endDate: string;
 
-  /// The human-readable location. The first item should be the primary text (e.g. the name of the venue) and further items should be the secondary text (e.g. the address).
-  location: string[];
+  /// The human-readable name of the venue.
+  venue: string;
+
+  /// The address of the venue, if it is a physical venue. The granularity of this is not specified, it does not need to be exact.
+  address?: string;
 
   /// The country, if any, as an ISO 3166-1 alpha-2 code. This may be unset for e.g. virtual conventions.
   country?: string;

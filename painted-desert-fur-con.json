@@ -6,10 +6,6 @@
       "name": "Painted Desert Fur Con 2026",
       "startDate": "2026-01-02",
       "endDate": "2026-01-04",
-      "location": [
-        "Sheraton Phoenix Downtown",
-        "Phoenix, AZ, USA"
-      ],
       "country": "US",
       "latLng": [
         33.452514,
@@ -19,7 +15,9 @@
         "fancons.com",
         "coyo.tl"
       ],
-      "url": "https://painteddesertfc.com"
+      "url": "https://painteddesertfc.com",
+      "venue": "Sheraton Phoenix Downtown",
+      "address": "Phoenix, AZ, USA"
     }
   ]
 }

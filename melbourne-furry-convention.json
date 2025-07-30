@@ -6,10 +6,6 @@
       "name": "Melbourne Furry Convention 2026",
       "startDate": "2026-02-20",
       "endDate": "2026-02-22",
-      "location": [
-        "Novotel Melbourne Preston",
-        "Preston, Victoria, Australia"
-      ],
       "country": "AU",
       "latLng": [
         -37.7461191,
@@ -18,17 +14,15 @@
       "sources": [
         "fancons.com"
       ],
-      "url": "https://melbfurcon.com"
+      "url": "https://melbfurcon.com",
+      "venue": "Novotel Melbourne Preston",
+      "address": "Preston, Victoria, Australia"
     },
     {
       "id": "melbourne-furry-convention-2025",
       "name": "Melbourne Furry Convention 2025",
       "startDate": "2025-02-21",
       "endDate": "2025-02-23",
-      "location": [
-        "Novotel Melbourne Preston",
-        "Preston, Victoria, Australia"
-      ],
       "country": "AU",
       "latLng": [
         -37.7461191,
@@ -37,7 +31,9 @@
       "sources": [
         "fancons.com"
       ],
-      "url": "https://melbfurcon.com"
+      "url": "https://melbfurcon.com",
+      "venue": "Novotel Melbourne Preston",
+      "address": "Preston, Victoria, Australia"
     }
   ]
 }

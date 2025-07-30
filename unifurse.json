@@ -7,15 +7,13 @@
       "url": "https://unifurse.cn",
       "startDate": "2025-07-18",
       "endDate": "2025-07-21",
-      "location": [
-        "Shangri-La Hotel, Guangzhou",
-        "Huizhan East Road, Haizhu District, Guangzhou, Guangdong Province, China"
-      ],
       "country": "CN",
       "latLng": [
         23.10505888282043,
         113.36468067232711
-      ]
+      ],
+      "venue": "Shangri-La Hotel, Guangzhou",
+      "address": "Huizhan East Road, Haizhu District, Guangzhou, Guangdong Province, China"
     }
   ]
 }

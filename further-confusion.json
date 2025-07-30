@@ -6,10 +6,6 @@
       "name": "Further Confusion 2026",
       "startDate": "2026-01-15",
       "endDate": "2026-01-19",
-      "location": [
-        "San Jose McEnery Convention Center",
-        "San Jose, CA, USA"
-      ],
       "country": "US",
       "latLng": [
         37.329061,
@@ -19,7 +15,9 @@
         "fancons.com",
         "coyo.tl"
       ],
-      "url": "https://furtherconfusion.org"
+      "url": "https://furtherconfusion.org",
+      "venue": "San Jose McEnery Convention Center",
+      "address": "San Jose, CA, USA"
     }
   ]
 }

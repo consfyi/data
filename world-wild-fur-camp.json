@@ -6,10 +6,6 @@
       "name": "World Wild Fur Camp 2025",
       "startDate": "2025-10-17",
       "endDate": "2025-10-19",
-      "location": [
-        "YMCA Camp Willson",
-        "Bellefontaine, OH, USA"
-      ],
       "country": "US",
       "latLng": [
         40.3537857,
@@ -19,7 +15,9 @@
         "fancons.com",
         "coyo.tl"
       ],
-      "url": "https://www.worldwildfurcamps.com"
+      "url": "https://www.worldwildfurcamps.com",
+      "venue": "YMCA Camp Willson",
+      "address": "Bellefontaine, OH, USA"
     }
   ]
 }

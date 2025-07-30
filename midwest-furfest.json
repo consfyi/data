@@ -6,10 +6,6 @@
       "name": "Midwest FurFest 2025",
       "startDate": "2025-12-04",
       "endDate": "2025-12-07",
-      "location": [
-        "Donald E. Stephens Convention Center",
-        "Rosemont, IL, USA"
-      ],
       "country": "US",
       "latLng": [
         41.9792212,
@@ -19,7 +15,9 @@
         "fancons.com",
         "coyo.tl"
       ],
-      "url": "https://www.furfest.org"
+      "url": "https://www.furfest.org",
+      "venue": "Donald E. Stephens Convention Center",
+      "address": "Rosemont, IL, USA"
     }
   ]
 }

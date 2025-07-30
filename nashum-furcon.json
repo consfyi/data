@@ -6,10 +6,6 @@
       "name": "Nashum FurCon 2026",
       "startDate": "2026-05-22",
       "endDate": "2026-05-24",
-      "location": [
-        "Sheraton Music City Nashville Airport",
-        "Nashville, TN, USA"
-      ],
       "country": "US",
       "latLng": [
         36.144359,
@@ -18,7 +14,9 @@
       "sources": [
         "fancons.com"
       ],
-      "url": "https://www.nashumfurcon.org"
+      "url": "https://www.nashumfurcon.org",
+      "venue": "Sheraton Music City Nashville Airport",
+      "address": "Nashville, TN, USA"
     }
   ]
 }

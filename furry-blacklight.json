@@ -6,10 +6,6 @@
       "name": "Furry Blacklight 2025",
       "startDate": "2025-10-29",
       "endDate": "2025-11-02",
-      "location": [
-        "H4 Hotel Wyndham Paris Pleyel Resort",
-        "Saint-Denis, France"
-      ],
       "country": "FR",
       "latLng": [
         48.9201886,
@@ -19,7 +15,9 @@
         "fancons.com",
         "coyo.tl"
       ],
-      "url": "https://fblacklight.org"
+      "url": "https://fblacklight.org",
+      "venue": "H4 Hotel Wyndham Paris Pleyel Resort",
+      "address": "Saint-Denis, France"
     }
   ]
 }

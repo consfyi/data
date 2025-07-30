@@ -6,10 +6,6 @@
       "name": "VancouFur 2026",
       "startDate": "2026-03-05",
       "endDate": "2026-03-08",
-      "location": [
-        "Richmond Conference Centre",
-        "Richmond, British Columbia, Canada"
-      ],
       "country": "CA",
       "latLng": [
         49.1710571,
@@ -19,7 +15,9 @@
         "fancons.com",
         "coyo.tl"
       ],
-      "url": "https://vancoufur.org"
+      "url": "https://vancoufur.org",
+      "venue": "Richmond Conference Centre",
+      "address": "Richmond, British Columbia, Canada"
     }
   ]
 }

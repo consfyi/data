@@ -6,10 +6,6 @@
       "name": "Furpocalypse 2025",
       "startDate": "2025-10-30",
       "endDate": "2025-11-02",
-      "location": [
-        "Hilton Stamford Hotel & Executive Meeting Center",
-        "Stamford, CT, USA"
-      ],
       "country": "US",
       "latLng": [
         41.0432058,
@@ -19,7 +15,9 @@
         "fancons.com",
         "coyo.tl"
       ],
-      "url": "https://furpocalypse.org"
+      "url": "https://furpocalypse.org",
+      "venue": "Hilton Stamford Hotel & Executive Meeting Center",
+      "address": "Stamford, CT, USA"
     }
   ]
 }

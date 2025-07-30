@@ -6,10 +6,6 @@
       "name": "Furrydelphia 2025",
       "startDate": "2025-08-22",
       "endDate": "2025-08-24",
-      "location": [
-        "Sheraton Downtown Philadelphia",
-        "Philadelphia, PA, USA"
-      ],
       "country": "US",
       "latLng": [
         39.9572347,
@@ -19,7 +15,9 @@
         "fancons.com",
         "coyo.tl"
       ],
-      "url": "https://www.furrydelphia.org"
+      "url": "https://www.furrydelphia.org",
+      "venue": "Sheraton Downtown Philadelphia",
+      "address": "Philadelphia, PA, USA"
     }
   ]
 }

@@ -7,15 +7,13 @@
       "url": "https://www.yunisland.cn",
       "startDate": "2025-08-08",
       "endDate": "2025-08-10",
-      "location": [
-        "Steigenberger Chongqing",
-        "Shapingba District, Chongqing, China"
-      ],
       "country": "CN",
       "latLng": [
         29.64347684834779,
         106.3657309402794
-      ]
+      ],
+      "venue": "Steigenberger Chongqing",
+      "address": "Shapingba District, Chongqing, China"
     }
   ]
 }

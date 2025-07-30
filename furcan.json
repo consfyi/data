@@ -1,0 +1,21 @@
+{
+  "name": "FurCan",
+  "events": [
+    {
+      "id": "furcan-2025",
+      "name": "FurCan 2025",
+      "url": "https://furcan.com.mx",
+      "startDate": "2025-07-19",
+      "endDate": "2025-07-20",
+      "location": [
+        "Wyndham Puebla Angelopolis",
+        "Avenida Zeta del Cochero, Reserva Territorial Atlixcáyotl, Corredor Comercial Desarrollo Atlixcayotl, San Andrés Cholula, Puebla, Mexico"
+      ],
+      "country": "MX",
+      "latLng": [
+        19.0264836,
+        -98.2305525
+      ]
+    }
+  ]
+}

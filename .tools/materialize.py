@@ -180,6 +180,9 @@ with open(output_dir / "calendar.ics", "w") as f:
             .strftime("%Y%m%d")
         )
         dtstamp = now.py_datetime().strftime("%Y%m%dT%H%M%SZ")
+        location = event["venue"]
+        if "address" in event:
+            location += f" ,{event['address']}"
         f.write("BEGIN:VEVENT\r\n")
         f.write(f"UID:{event['id']}\r\n")
         f.write(f"SUMMARY:{escape_ics(event['name'])}\r\n")
@@ -187,7 +190,7 @@ with open(output_dir / "calendar.ics", "w") as f:
         f.write(f"DTEND;VALUE=DATE:{end_date}\r\n")
         f.write(f"DTSTAMP:{dtstamp}\r\n")
         f.write(f"URL:{escape_ics(event['url'])}\r\n")
-        f.write(f"LOCATION:{escape_ics(', '.join(event['location']))}\r\n")
+        f.write(f"LOCATION:{escape_ics(location)}\r\n")
         f.write("END:VEVENT\r\n")
     f.write("END:VCALENDAR\r\n")
 

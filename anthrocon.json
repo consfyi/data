@@ -20,6 +20,22 @@
         "coyo.tl"
       ],
       "url": "https://www.anthrocon.org"
+    },
+    {
+      "id": "anthrocon-2025",
+      "name": "Anthrocon 2025",
+      "startDate": "2025-07-03",
+      "endDate": "2025-07-06",
+      "location": [
+        "David L. Lawrence Convention Center",
+        "Fort Duquesne Blvd, Pittsburgh, PA, US"
+      ],
+      "country": "US",
+      "latLng": [
+        40.4455472,
+        -79.9962844
+      ],
+      "url": "https://www.anthrocon.org"
     }
   ]
 }

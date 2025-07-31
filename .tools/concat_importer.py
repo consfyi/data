@@ -28,74 +28,72 @@ series_id, ext = os.path.splitext(fn)
 with open(fn) as f:
     series = json.load(f)
 
-    resp = httpx.get(f"{concat_url}/api/config")
-    resp.raise_for_status()
-    config = resp.json()
-    for convention in config["conventions"]:
-        start_date = whenever.OffsetDateTime.parse_common_iso(
-            convention["startAt"]
-        ).date()
-        end_date = whenever.OffsetDateTime.parse_common_iso(convention["endAt"]).date()
+resp = httpx.get(f"{concat_url}/api/config")
+resp.raise_for_status()
+config = resp.json()
+for convention in config["conventions"]:
+    start_date = whenever.OffsetDateTime.parse_common_iso(convention["startAt"]).date()
+    end_date = whenever.OffsetDateTime.parse_common_iso(convention["endAt"]).date()
 
-        id = f"{series_id}-{start_date.year}"
+    id = f"{series_id}-{start_date.year}"
 
-        for i, e in enumerate(series["events"]):
-            if whenever.Date.parse_common_iso(e["startDate"]) <= start_date:
-                break
-        else:
-            i = len(series["events"])
+    for i, e in enumerate(series["events"]):
+        if whenever.Date.parse_common_iso(e["startDate"]) <= start_date:
+            break
+    else:
+        i = len(series["events"])
 
-        if i < len(series["events"]):
-            previous_event = series["events"][i]
-            if previous_event["id"] == id:
-                continue
+    if i < len(series["events"]):
+        previous_event = series["events"][i]
+        if previous_event["id"] == id:
+            continue
 
-        venue = convention["venue"]
-        country = config["organization"]["country"]
+    venue = convention["venue"]
+    country = config["organization"]["country"]
 
-        session_token = str(uuid.uuid4())
-        predictions = gmaps.places_autocomplete(
-            f"{venue}, {country}", session_token=session_token
+    session_token = str(uuid.uuid4())
+    predictions = gmaps.places_autocomplete(
+        f"{venue}, {country}", session_token=session_token
+    )
+
+    venue = convention["venue"]
+    address = None
+
+    if len(predictions) == 0:
+        lat_lng = None
+    else:
+        prediction, *_ = predictions
+        st = prediction["structured_formatting"]
+        if "secondary_text" in st:
+            address = st["secondary_text"]
+
+        place = gmaps.place(
+            prediction["place_id"],
+            session_token=session_token,
+            fields=["geometry/location"],
         )
+        l = place["result"]["geometry"]["location"]
+        lat_lng = [l["lat"], l["lng"]]
 
-        venue = convention["venue"]
-        address = None
+    url = concat_url
+    if series["events"]:
+        url = series["events"][0]["url"]
+    elif url.startswith("https://reg."):
+        url = f"https://{url.removeprefix('https://reg.')}"
 
-        if len(predictions) == 0:
-            lat_lng = None
-        else:
-            prediction, *_ = predictions
-            st = prediction["structured_formatting"]
-            if "secondary_text" in st:
-                address = st["secondary_text"]
-
-            place = gmaps.place(
-                prediction["place_id"],
-                session_token=session_token,
-                fields=["geometry/location"],
-            )
-            l = place["result"]["geometry"]["location"]
-            lat_lng = [l["lat"], l["lng"]]
-
-        url = concat_url
-        if series["events"]:
-            url = series["events"][0]["url"]
-        elif url.startswith("https://reg."):
-            url = f"https://{url.removeprefix('https://reg.')}"
-
-        event = {
-            "id": id,
-            "name": f"{series['name']} {start_date.year}",
-            "url": url,
-            "startDate": start_date.format_common_iso(),
-            "endDate": end_date.format_common_iso(),
-            "venue": venue,
-            "address": address,
-            "country": country,
-            "latLng": lat_lng,
-        }
-        logging.info(f"imported: {event}")
-        series["events"].insert(i, {k: v for k, v in event.items() if v is not None})
+    event = {
+        "id": id,
+        "name": f"{series['name']} {start_date.year}",
+        "url": url,
+        "startDate": start_date.format_common_iso(),
+        "endDate": end_date.format_common_iso(),
+        "venue": venue,
+        "address": address,
+        "country": country,
+        "latLng": lat_lng,
+    }
+    logging.info(f"imported: {event}")
+    series["events"].insert(i, {k: v for k, v in event.items() if v is not None})
 
 with open(fn, "w") as f:
     json.dump(series, f, indent=2, ensure_ascii=False)

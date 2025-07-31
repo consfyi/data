@@ -88,6 +88,7 @@ with open(fn) as f:
             "country": country,
             "latLng": lat_lng,
         }
+        logging.info(f"imported: {event}")
         series["events"].insert(i, {k: v for k, v in event.items() if v is not None})
 
 with open(fn, "w") as f:

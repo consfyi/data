@@ -31,11 +31,15 @@ def reorder(obj, schema):
         return obj
 
 
-with open(os.path.join(os.path.dirname(__file__), "schema.json")) as f:
-    schema = json.load(f)
+def main():
+    with open(os.path.join(os.path.dirname(__file__), "schema.json")) as f:
+        schema = json.load(f)
+
+    json.dump(
+        reorder(json.load(sys.stdin), schema), sys.stdout, indent=2, ensure_ascii=False
+    )
+    sys.stdout.write("\n")
 
 
-json.dump(
-    reorder(json.load(sys.stdin), schema), sys.stdout, indent=2, ensure_ascii=False
-)
-sys.stdout.write("\n")
+if __name__ == "__main__":
+    main()

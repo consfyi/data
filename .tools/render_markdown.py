@@ -32,24 +32,29 @@ class MyRenderer(mistune.HTMLRenderer):
         return "<pre><code>" + mistune.escape(code) + "</code></pre>"
 
 
-renderer = MyRenderer(escape=False)
-markdown = mistune.create_markdown(renderer=renderer)
-body = markdown(sys.stdin.read())
+def main():
+    renderer = MyRenderer(escape=False)
+    markdown = mistune.create_markdown(renderer=renderer)
+    body = markdown(sys.stdin.read())
 
-print(
-    f"""<!doctype html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@lowlighter/matcha@3.0.0/dist/matcha.lite.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pygments-css@1.0.0/pastie.css">
-    <title>{html.escape(renderer.title)}</title>
-</head>
-<body>
-{body}
-</body>
-</html>
-"""
-)
+    print(
+        f"""<!doctype html>
+    <html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@lowlighter/matcha@3.0.0/dist/matcha.lite.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pygments-css@1.0.0/pastie.css">
+        <title>{html.escape(renderer.title)}</title>
+    </head>
+    <body>
+    {body}
+    </body>
+    </html>
+    """
+    )
+
+
+if __name__ == "__main__":
+    main()

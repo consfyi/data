@@ -7,16 +7,12 @@
       "url": "https://pacanthro.org",
       "startDate": "2025-11-07",
       "endDate": "2025-11-09",
-      "venue": "DoubleTree by Hilton Hotel San Jose",
-      "address": "San Jose, CA, USA",
+      "venue": "San Jose Doubletree",
+      "address": "Gateway Place, San Jose, CA, USA",
       "country": "US",
       "latLng": [
-        37.3718206,
-        -121.9228001
-      ],
-      "sources": [
-        "fancons.com",
-        "coyo.tl"
+        37.3717721,
+        -121.9227129
       ]
     }
   ]

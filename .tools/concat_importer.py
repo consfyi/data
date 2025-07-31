@@ -77,10 +77,16 @@ with open(fn) as f:
             l = place["result"]["geometry"]["location"]
             lat_lng = [l["lat"], l["lng"]]
 
+        url = concat_url
+        if series["events"]:
+            url = series["events"][0]["url"]
+        elif url.startswith("https://reg."):
+            url = f"https://{url.removeprefix('https://reg.')}"
+
         event = {
             "id": id,
             "name": f"{series['name']} {start_date.year}",
-            "url": series["events"][0]["url"],
+            "url": url,
             "startDate": start_date.format_common_iso(),
             "endDate": end_date.format_common_iso(),
             "venue": venue,

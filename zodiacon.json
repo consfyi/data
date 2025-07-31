@@ -4,8 +4,11 @@
     {
       "id": "zodiacon-2025",
       "name": "ZodiaCon 2025",
+      "url": "https://www.zodiacon.org",
       "startDate": "2025-06-04",
       "endDate": "2025-06-08",
+      "venue": "Oáza Srdce",
+      "address": "Horní Bradlo, Czech Republic",
       "country": "CZ",
       "latLng": [
         49.8063666,
@@ -13,10 +16,7 @@
       ],
       "sources": [
         "fancons.com"
-      ],
-      "url": "https://www.zodiacon.org",
-      "venue": "Oáza Srdce",
-      "address": "Horní Bradlo, Czech Republic"
+      ]
     }
   ]
 }

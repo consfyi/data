@@ -4,8 +4,11 @@
     {
       "id": "canfurence-2025",
       "name": "CanFURence 2025",
+      "url": "https://www.canfurence.ca",
       "startDate": "2025-08-01",
       "endDate": "2025-08-03",
+      "venue": "Delta Hotels by Marriott Ottawa City Centre",
+      "address": "Ottawa, Ontario, Canada",
       "country": "CA",
       "latLng": [
         45.4186734,
@@ -14,10 +17,7 @@
       "sources": [
         "fancons.com",
         "coyo.tl"
-      ],
-      "url": "https://www.canfurence.ca",
-      "venue": "Delta Hotels by Marriott Ottawa City Centre",
-      "address": "Ottawa, Ontario, Canada"
+      ]
     }
   ]
 }

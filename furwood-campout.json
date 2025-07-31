@@ -4,8 +4,11 @@
     {
       "id": "furwood-campout-2025",
       "name": "Furwood Campout 2025",
+      "url": "https://furwoodcampout.com",
       "startDate": "2025-06-13",
       "endDate": "2025-06-15",
+      "venue": "Triangle Recreation Camp",
+      "address": "Granite Falls, WA, USA",
       "country": "US",
       "latLng": [
         48.0739803,
@@ -13,10 +16,7 @@
       ],
       "sources": [
         "fancons.com"
-      ],
-      "url": "https://furwoodcampout.com",
-      "venue": "Triangle Recreation Camp",
-      "address": "Granite Falls, WA, USA"
+      ]
     }
   ]
 }

@@ -4,8 +4,11 @@
     {
       "id": "fursquared-2026",
       "name": "FurSquared 2026",
+      "url": "https://fursquared.com",
       "startDate": "2026-02-05",
       "endDate": "2026-02-08",
+      "venue": "Hilton Milwaukee City Center",
+      "address": "Milwaukee, WI, USA",
       "country": "US",
       "latLng": [
         43.0384665,
@@ -14,10 +17,7 @@
       "sources": [
         "fancons.com",
         "coyo.tl"
-      ],
-      "url": "https://fursquared.com",
-      "venue": "Hilton Milwaukee City Center",
-      "address": "Milwaukee, WI, USA"
+      ]
     }
   ]
 }

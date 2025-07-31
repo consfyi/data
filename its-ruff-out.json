@@ -7,19 +7,22 @@
       "url": "https://ruffout.org",
       "startDate": "2026-05-01",
       "endDate": "2026-05-03",
+      "venue": "Kettle Moraine State Forest Southern Unit",
+      "address": "Dousman, WI, USA",
       "country": "US",
       "latLng": [
         42.9502252,
         -88.45727219999999
-      ],
-      "venue": "Kettle Moraine State Forest Southern Unit",
-      "address": "Dousman, WI, USA"
+      ]
     },
     {
       "id": "its-ruff-out-2025",
       "name": "It's Ruff Out 2025",
+      "url": "https://ruffout.org",
       "startDate": "2025-05-02",
       "endDate": "2025-05-04",
+      "venue": "Wildcat Mountain State Park",
+      "address": "Ontario, WI, USA",
       "country": "US",
       "latLng": [
         43.697627,
@@ -27,10 +30,7 @@
       ],
       "sources": [
         "fancons.com"
-      ],
-      "url": "https://ruffout.org",
-      "venue": "Wildcat Mountain State Park",
-      "address": "Ontario, WI, USA"
+      ]
     }
   ]
 }

@@ -4,8 +4,11 @@
     {
       "id": "confuzzled-2026",
       "name": "ConFuzzled 2026",
+      "url": "https://confuzzled.org.uk",
       "startDate": "2026-05-22",
       "endDate": "2026-05-26",
+      "venue": "Hilton Birmingham Metropole",
+      "address": "Birmingham, UK",
       "country": "GB",
       "latLng": [
         52.4505297,
@@ -14,10 +17,7 @@
       "sources": [
         "fancons.com",
         "coyo.tl"
-      ],
-      "url": "https://confuzzled.org.uk",
-      "venue": "Hilton Birmingham Metropole",
-      "address": "Birmingham, UK"
+      ]
     }
   ]
 }

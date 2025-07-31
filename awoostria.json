@@ -4,8 +4,11 @@
     {
       "id": "awoostria-2025",
       "name": "Awoostria 2025",
+      "url": "https://awoostria.at",
       "startDate": "2025-07-24",
       "endDate": "2025-07-27",
+      "venue": "Arcotel Wimberger Wien",
+      "address": "Vienna, Austria",
       "country": "AT",
       "latLng": [
         48.2006444,
@@ -14,10 +17,7 @@
       "sources": [
         "fancons.com",
         "coyo.tl"
-      ],
-      "url": "https://awoostria.at",
-      "venue": "Arcotel Wimberger Wien",
-      "address": "Vienna, Austria"
+      ]
     }
   ]
 }

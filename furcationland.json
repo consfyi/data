@@ -4,8 +4,11 @@
     {
       "id": "furcationland-2025",
       "name": "Furcationland 2025",
+      "url": "https://furcationland.org",
       "startDate": "2025-04-10",
       "endDate": "2025-04-13",
+      "venue": "Holiday Inn Portland-By The Bay",
+      "address": "Portland, ME, USA",
       "country": "US",
       "latLng": [
         43.6534888,
@@ -13,10 +16,7 @@
       ],
       "sources": [
         "fancons.com"
-      ],
-      "url": "https://furcationland.org",
-      "venue": "Holiday Inn Portland-By The Bay",
-      "address": "Portland, ME, USA"
+      ]
     }
   ]
 }

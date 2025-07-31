@@ -4,8 +4,11 @@
     {
       "id": "eufuria-2025",
       "name": "Eufuria 2025",
+      "url": "https://eufuria.org",
       "startDate": "2025-07-17",
       "endDate": "2025-07-19",
+      "venue": "Albany Capital Center",
+      "address": "Albany, NY, USA",
       "country": "US",
       "latLng": [
         42.6499707,
@@ -13,10 +16,7 @@
       ],
       "sources": [
         "fancons.com"
-      ],
-      "url": "https://eufuria.org",
-      "venue": "Albany Capital Center",
-      "address": "Albany, NY, USA"
+      ]
     }
   ]
 }

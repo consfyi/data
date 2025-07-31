@@ -4,8 +4,11 @@
     {
       "id": "noctfurnal-2025",
       "name": "Noctfurnal 2025",
+      "url": "https://www.noctfurnal.com",
       "startDate": "2025-07-18",
       "endDate": "2025-07-20",
+      "venue": "Hi-Way Drive-In",
+      "address": "Carsonville, MI, USA",
       "country": "US",
       "latLng": [
         43.4241108,
@@ -13,10 +16,7 @@
       ],
       "sources": [
         "fancons.com"
-      ],
-      "url": "https://www.noctfurnal.com",
-      "venue": "Hi-Way Drive-In",
-      "address": "Carsonville, MI, USA"
+      ]
     }
   ]
 }

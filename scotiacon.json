@@ -4,8 +4,11 @@
     {
       "id": "scotiacon-2026",
       "name": "Scotiacon 2026",
+      "url": "https://www.scotiacon.org.uk",
       "startDate": "2026-02-06",
       "endDate": "2026-02-09",
+      "venue": "Crowne Plaza Glasgow",
+      "address": "Glasgow, UK",
       "country": "GB",
       "latLng": [
         55.8597859,
@@ -14,10 +17,7 @@
       "sources": [
         "fancons.com",
         "coyo.tl"
-      ],
-      "url": "https://www.scotiacon.org.uk",
-      "venue": "Crowne Plaza Glasgow",
-      "address": "Glasgow, UK"
+      ]
     }
   ]
 }

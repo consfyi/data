@@ -4,8 +4,11 @@
     {
       "id": "h-con-2025",
       "name": "H-Con 2025",
+      "url": "https://h-con.org",
       "startDate": "2025-10-01",
       "endDate": "2025-10-05",
+      "venue": "Petershof",
+      "address": "Erbach, Germany",
       "country": "DE",
       "latLng": [
         49.6404757,
@@ -14,10 +17,7 @@
       "sources": [
         "fancons.com",
         "coyo.tl"
-      ],
-      "url": "https://h-con.org",
-      "venue": "Petershof",
-      "address": "Erbach, Germany"
+      ]
     }
   ]
 }

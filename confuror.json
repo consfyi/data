@@ -4,8 +4,11 @@
     {
       "id": "confuror-2025",
       "name": "Confuror 2025",
+      "url": "https://confuror.org",
       "startDate": "2025-10-23",
       "endDate": "2025-10-26",
+      "venue": "Expo Guadalajara",
+      "address": "Guadalajara, JAL, Mexico",
       "country": "MX",
       "latLng": [
         20.6529938,
@@ -14,10 +17,7 @@
       "sources": [
         "fancons.com",
         "coyo.tl"
-      ],
-      "url": "https://confuror.org",
-      "venue": "Expo Guadalajara",
-      "address": "Guadalajara, JAL, Mexico"
+      ]
     }
   ]
 }

@@ -4,8 +4,11 @@
     {
       "id": "expofur-2025",
       "name": "Expofur 2025",
+      "url": "https://expofur.online",
       "startDate": "2025-03-07",
       "endDate": "2025-03-09",
+      "venue": "Hotel Monterrey Macroplaza",
+      "address": "Monterrey, Newfoundland and Labrador, Mexico",
       "country": "MX",
       "latLng": [
         25.6866142,
@@ -13,10 +16,7 @@
       ],
       "sources": [
         "fancons.com"
-      ],
-      "url": "https://expofur.online",
-      "venue": "Hotel Monterrey Macroplaza",
-      "address": "Monterrey, Newfoundland and Labrador, Mexico"
+      ]
     }
   ]
 }

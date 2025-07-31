@@ -4,8 +4,11 @@
     {
       "id": "pawsome-2025",
       "name": "Pawsome 2025",
+      "url": "https://www.pawsome.org.uk",
       "startDate": "2025-10-03",
       "endDate": "2025-10-06",
+      "venue": "Mercure Gloucester Bowden Hall Hotel",
+      "address": "Gloucester, UK",
       "country": "GB",
       "latLng": [
         51.8340083,
@@ -14,10 +17,7 @@
       "sources": [
         "fancons.com",
         "coyo.tl"
-      ],
-      "url": "https://www.pawsome.org.uk",
-      "venue": "Mercure Gloucester Bowden Hall Hotel",
-      "address": "Gloucester, UK"
+      ]
     }
   ]
 }

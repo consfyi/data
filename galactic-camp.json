@@ -4,8 +4,11 @@
     {
       "id": "galactic-camp-2025",
       "name": "Galactic Camp 2025",
+      "url": "https://www.galacticcamp.com",
       "startDate": "2025-05-24",
       "endDate": "2025-05-26",
+      "venue": "USS Hornet - Sea",
+      "address": "Air and Space Museum, Alameda, CA, USA",
       "country": "US",
       "latLng": [
         37.7726482,
@@ -13,10 +16,7 @@
       ],
       "sources": [
         "fancons.com"
-      ],
-      "url": "https://www.galacticcamp.com",
-      "venue": "USS Hornet - Sea",
-      "address": "Air and Space Museum, Alameda, CA, USA"
+      ]
     }
   ]
 }

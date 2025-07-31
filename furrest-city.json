@@ -4,8 +4,11 @@
     {
       "id": "furrest-city-2025",
       "name": "Furrest City 2025",
+      "url": "https://furrestcity.org",
       "startDate": "2025-09-13",
       "endDate": "2025-09-13",
+      "venue": "Sears think[box]",
+      "address": "Cleveland, OH, USA",
       "country": "US",
       "latLng": [
         41.5005593,
@@ -13,10 +16,7 @@
       ],
       "sources": [
         "fancons.com"
-      ],
-      "url": "https://furrestcity.org",
-      "venue": "Sears think[box]",
-      "address": "Cleveland, OH, USA"
+      ]
     }
   ]
 }

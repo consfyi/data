@@ -7,13 +7,13 @@
       "url": "https://furnavia.org",
       "startDate": "2025-10-01",
       "endDate": "2025-10-04",
+      "venue": "Radisson Blu Caledonien Hotel",
+      "address": "Kristiansand, Vestre Strandgate, Kristiansand, Norway",
       "country": "NO",
       "latLng": [
         58.14253569999999,
         7.9947451
-      ],
-      "venue": "Radisson Blu Caledonien Hotel",
-      "address": "Kristiansand, Vestre Strandgate, Kristiansand, Norway"
+      ]
     }
   ]
 }

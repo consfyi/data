@@ -4,8 +4,11 @@
     {
       "id": "furrymosa-2025",
       "name": "Furrymosa 7",
+      "url": "https://furrymosa.gjs.tw",
       "startDate": "2025-06-14",
       "endDate": "2025-06-14",
+      "venue": "New Taipei City Mie Complex",
+      "address": "New Taipei City, Taiwan",
       "country": "TW",
       "latLng": [
         25.0169826,
@@ -13,10 +16,7 @@
       ],
       "sources": [
         "fancons.com"
-      ],
-      "url": "https://furrymosa.gjs.tw",
-      "venue": "New Taipei City Mie Complex",
-      "address": "New Taipei City, Taiwan"
+      ]
     }
   ]
 }

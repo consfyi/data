@@ -4,8 +4,11 @@
     {
       "id": "indonesia-weekend-anthro-gathering-2025",
       "name": "Indonesia Weekend Anthro Gathering 2025",
+      "url": "https://iwag.furries.id",
       "startDate": "2025-07-12",
       "endDate": "2025-07-13",
+      "venue": "ibis Styles Serpong BSD City",
+      "address": "Kabupaten Tangerang, Banten, Indonesia",
       "country": "ID",
       "latLng": [
         -6.3066606,
@@ -13,10 +16,7 @@
       ],
       "sources": [
         "fancons.com"
-      ],
-      "url": "https://iwag.furries.id",
-      "venue": "ibis Styles Serpong BSD City",
-      "address": "Kabupaten Tangerang, Banten, Indonesia"
+      ]
     }
   ]
 }

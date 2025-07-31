@@ -4,8 +4,11 @@
     {
       "id": "örli-försztivál-2025",
       "name": "Örli Försztivál 2025",
+      "url": "https://orli.hu",
       "startDate": "2025-06-19",
       "endDate": "2025-06-22",
+      "venue": "Villapark Várgesztes",
+      "address": "Várgesztes, Hungary",
       "country": "HU",
       "latLng": [
         47.4855475,
@@ -13,10 +16,7 @@
       ],
       "sources": [
         "fancons.com"
-      ],
-      "url": "https://orli.hu",
-      "venue": "Villapark Várgesztes",
-      "address": "Várgesztes, Hungary"
+      ]
     }
   ]
 }

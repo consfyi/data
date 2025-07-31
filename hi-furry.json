@@ -7,13 +7,13 @@
       "url": "https://hi-furry.cn",
       "startDate": "2025-10-01",
       "endDate": "2025-10-04",
+      "venue": "Nansha Lingnan Dongfang Hotel",
+      "address": "Nansha District, Guangzhou, China",
       "country": "CN",
       "latLng": [
         22.755465878390307,
         113.53235271474686
-      ],
-      "venue": "Nansha Lingnan Dongfang Hotel",
-      "address": "Nansha District, Guangzhou, China"
+      ]
     }
   ]
 }

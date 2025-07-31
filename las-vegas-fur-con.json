@@ -4,58 +4,58 @@
     {
       "id": "las-vegas-fur-con-2026",
       "name": "Las Vegas Fur Con 2026",
+      "url": "https://lasvegasfurcon.org",
       "startDate": "2026-04-02",
       "endDate": "2026-04-05",
+      "venue": "Alexis Park Resort and Serene Boutique",
+      "address": "East Harmon Avenue, Las Vegas, NV, USA",
       "country": "US",
       "latLng": [
         36.1075771,
         -115.1562516
-      ],
-      "url": "https://lasvegasfurcon.org",
-      "venue": "Alexis Park Resort and Serene Boutique",
-      "address": "East Harmon Avenue, Las Vegas, NV, USA"
+      ]
     },
     {
       "id": "las-vegas-fur-con-2025",
       "name": "Las Vegas Fur Con 2025",
+      "url": "https://lasvegasfurcon.org",
       "startDate": "2025-04-17",
       "endDate": "2025-04-20",
+      "venue": "Alexis Park Resort and Serene Boutique",
+      "address": "East Harmon Avenue, Las Vegas, NV, USA",
       "country": "US",
       "latLng": [
         36.1075771,
         -115.1562516
-      ],
-      "url": "https://lasvegasfurcon.org",
-      "venue": "Alexis Park Resort and Serene Boutique",
-      "address": "East Harmon Avenue, Las Vegas, NV, USA"
+      ]
     },
     {
       "id": "las-vegas-fur-con-2024",
       "name": "Las Vegas Fur Con 2024",
+      "url": "https://lasvegasfurcon.org",
       "startDate": "2024-03-29",
       "endDate": "2024-03-31",
+      "venue": "Alexis Park All-Suite Resort",
+      "address": "East Harmon Avenue, Las Vegas, NV, USA",
       "country": "US",
       "latLng": [
         36.1075771,
         -115.1562516
-      ],
-      "url": "https://lasvegasfurcon.org",
-      "venue": "Alexis Park All-Suite Resort",
-      "address": "East Harmon Avenue, Las Vegas, NV, USA"
+      ]
     },
     {
       "id": "las-vegas-fur-con-2023",
       "name": "Las Vegas Fur Con 2023",
+      "url": "https://lasvegasfurcon.org",
       "startDate": "2023-04-14",
       "endDate": "2023-04-16",
+      "venue": "Alexis Park All-Suite Resort",
+      "address": "East Harmon Avenue, Las Vegas, NV, USA",
       "country": "US",
       "latLng": [
         36.1075771,
         -115.1562516
-      ],
-      "url": "https://lasvegasfurcon.org",
-      "venue": "Alexis Park All-Suite Resort",
-      "address": "East Harmon Avenue, Las Vegas, NV, USA"
+      ]
     }
   ]
 }

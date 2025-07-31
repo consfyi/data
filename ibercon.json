@@ -4,8 +4,11 @@
     {
       "id": "ibercon-2025",
       "name": "Ibercon 2025",
+      "url": "https://ibercon.org",
       "startDate": "2025-05-01",
       "endDate": "2025-05-04",
+      "venue": "Rafaelhoteles Atocha",
+      "address": "Madrid, Spain",
       "country": "ES",
       "latLng": [
         40.40136800000001,
@@ -13,10 +16,7 @@
       ],
       "sources": [
         "fancons.com"
-      ],
-      "url": "https://ibercon.org",
-      "venue": "Rafaelhoteles Atocha",
-      "address": "Madrid, Spain"
+      ]
     }
   ]
 }

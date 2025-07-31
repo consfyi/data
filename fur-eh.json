@@ -4,8 +4,11 @@
     {
       "id": "fur-eh-2026",
       "name": "Fur-Eh! 2026",
+      "url": "https://www.fureh.ca",
       "startDate": "2026-07-16",
       "endDate": "2026-07-19",
+      "venue": "Wyndham Edmonton Hotel and Conference Centre",
+      "address": "Edmonton, Alberta, Canada",
       "country": "CA",
       "latLng": [
         53.4825117,
@@ -13,16 +16,16 @@
       ],
       "sources": [
         "fancons.com"
-      ],
-      "url": "https://www.fureh.ca",
-      "venue": "Wyndham Edmonton Hotel and Conference Centre",
-      "address": "Edmonton, Alberta, Canada"
+      ]
     },
     {
       "id": "fur-eh-2025",
       "name": "Fur-Eh! 2025",
+      "url": "https://www.fureh.ca",
       "startDate": "2025-07-17",
       "endDate": "2025-07-20",
+      "venue": "Wyndham Edmonton Hotel and Conference Centre",
+      "address": "Edmonton, Alberta, Canada",
       "country": "CA",
       "latLng": [
         53.4825117,
@@ -30,10 +33,7 @@
       ],
       "sources": [
         "fancons.com"
-      ],
-      "url": "https://www.fureh.ca",
-      "venue": "Wyndham Edmonton Hotel and Conference Centre",
-      "address": "Edmonton, Alberta, Canada"
+      ]
     }
   ]
 }

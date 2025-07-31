@@ -4,8 +4,11 @@
     {
       "id": "campfire-tails-2025",
       "name": "Campfire Tails 2025",
+      "url": "https://campfiretails.org",
       "startDate": "2025-07-31",
       "endDate": "2025-08-04",
+      "venue": "Deschutes National Forest",
+      "address": "Ogden Group Camp, La Pine, OR, USA",
       "country": "US",
       "latLng": [
         43.7291532,
@@ -14,10 +17,7 @@
       "sources": [
         "fancons.com",
         "coyo.tl"
-      ],
-      "url": "https://campfiretails.org",
-      "venue": "Deschutes National Forest",
-      "address": "Ogden Group Camp, La Pine, OR, USA"
+      ]
     }
   ]
 }

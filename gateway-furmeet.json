@@ -4,8 +4,11 @@
     {
       "id": "gateway-furmeet-2025",
       "name": "Gateway FurMeet 2025",
+      "url": "https://www.gatewayfurmeet.org",
       "startDate": "2025-10-03",
       "endDate": "2025-10-05",
+      "venue": "Hilton St. Louis at the Ballpark",
+      "address": "St. Louis, MO, USA",
       "country": "US",
       "latLng": [
         38.6252565,
@@ -14,10 +17,7 @@
       "sources": [
         "fancons.com",
         "coyo.tl"
-      ],
-      "url": "https://www.gatewayfurmeet.org",
-      "venue": "Hilton St. Louis at the Ballpark",
-      "address": "St. Louis, MO, USA"
+      ]
     }
   ]
 }

@@ -4,8 +4,11 @@
     {
       "id": "furror-2025",
       "name": "Furror 2025",
+      "url": "https://furror.pl",
       "startDate": "2025-10-10",
       "endDate": "2025-10-12",
+      "venue": "Boutique Hotel's III Piłsudskiego",
+      "address": "Łódź, Poland",
       "country": "PL",
       "latLng": [
         51.7601428,
@@ -14,10 +17,7 @@
       "sources": [
         "fancons.com",
         "coyo.tl"
-      ],
-      "url": "https://furror.pl",
-      "venue": "Boutique Hotel's III Piłsudskiego",
-      "address": "Łódź, Poland"
+      ]
     }
   ]
 }

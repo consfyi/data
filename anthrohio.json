@@ -4,8 +4,11 @@
     {
       "id": "anthrohio-2026",
       "name": "AnthrOhio 2026",
+      "url": "https://anthrohio.org",
       "startDate": "2026-05-22",
       "endDate": "2026-05-24",
+      "venue": "Hilton Columbus Downtown",
+      "address": "Columbus, OH, USA",
       "country": "US",
       "latLng": [
         39.9707463,
@@ -14,10 +17,7 @@
       "sources": [
         "fancons.com",
         "coyo.tl"
-      ],
-      "url": "https://anthrohio.org",
-      "venue": "Hilton Columbus Downtown",
-      "address": "Columbus, OH, USA"
+      ]
     }
   ]
 }

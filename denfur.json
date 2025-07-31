@@ -4,8 +4,11 @@
     {
       "id": "denfur-2025",
       "name": "DenFur 2025",
+      "url": "https://denfur.org",
       "startDate": "2025-08-29",
       "endDate": "2025-08-31",
+      "venue": "Sheraton Denver Downtown Hotel",
+      "address": "Denver, CO, USA",
       "country": "US",
       "latLng": [
         39.7419647,
@@ -14,10 +17,7 @@
       "sources": [
         "fancons.com",
         "coyo.tl"
-      ],
-      "url": "https://denfur.org",
-      "venue": "Sheraton Denver Downtown Hotel",
-      "address": "Denver, CO, USA"
+      ]
     }
   ]
 }

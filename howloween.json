@@ -4,8 +4,11 @@
     {
       "id": "howloween-2025",
       "name": "Howloween 2025",
+      "url": "https://www.howloween.ca",
       "startDate": "2025-10-23",
       "endDate": "2025-10-26",
+      "venue": "Executive Hotel Vancouver Airport",
+      "address": "Richmond, British Columbia, Canada",
       "country": "CA",
       "latLng": [
         49.1706812,
@@ -14,10 +17,7 @@
       "sources": [
         "fancons.com",
         "coyo.tl"
-      ],
-      "url": "https://www.howloween.ca",
-      "venue": "Executive Hotel Vancouver Airport",
-      "address": "Richmond, British Columbia, Canada"
+      ]
     }
   ]
 }

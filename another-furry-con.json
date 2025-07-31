@@ -4,8 +4,11 @@
     {
       "id": "another-furry-con-2025",
       "name": "Another Furry Con 2025",
+      "url": "https://anotherfurrycon.com",
       "startDate": "2025-09-19",
       "endDate": "2025-09-21",
+      "venue": "Ontario Convention Center",
+      "address": "Ontario, CA, USA",
       "country": "US",
       "latLng": [
         34.0658075,
@@ -14,10 +17,7 @@
       "sources": [
         "fancons.com",
         "coyo.tl"
-      ],
-      "url": "https://anotherfurrycon.com",
-      "venue": "Ontario Convention Center",
-      "address": "Ontario, CA, USA"
+      ]
     }
   ]
 }

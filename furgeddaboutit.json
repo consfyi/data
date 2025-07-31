@@ -4,8 +4,11 @@
     {
       "id": "furgeddaboutit-2025",
       "name": "Furgeddaboutit 2025",
+      "url": "https://furgeddaboutit.org",
       "startDate": "2025-05-02",
       "endDate": "2025-05-04",
+      "venue": "DoubleTree Suites by Hilton Hotel Mt. Laurel",
+      "address": "Mt Laurel Township, NJ, USA",
       "country": "US",
       "latLng": [
         39.9358914,
@@ -13,10 +16,7 @@
       ],
       "sources": [
         "fancons.com"
-      ],
-      "url": "https://furgeddaboutit.org",
-      "venue": "DoubleTree Suites by Hilton Hotel Mt. Laurel",
-      "address": "Mt Laurel Township, NJ, USA"
+      ]
     }
   ]
 }

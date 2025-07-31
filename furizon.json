@@ -4,8 +4,11 @@
     {
       "id": "furizon-2025",
       "name": "Furizon 2025",
+      "url": "https://furizon.net",
       "startDate": "2025-06-03",
       "endDate": "2025-06-07",
+      "venue": "Devero Hotel",
+      "address": "Cavenago di Brianza, Italy",
       "country": "IT",
       "latLng": [
         45.58023679999999,
@@ -13,10 +16,7 @@
       ],
       "sources": [
         "fancons.com"
-      ],
-      "url": "https://furizon.net",
-      "venue": "Devero Hotel",
-      "address": "Cavenago di Brianza, Italy"
+      ]
     }
   ]
 }

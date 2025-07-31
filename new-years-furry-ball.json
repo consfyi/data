@@ -4,8 +4,11 @@
     {
       "id": "new-years-furry-ball-2025",
       "name": "New Years Furry Ball 2025",
+      "url": "https://www.newyearsfurryball.com",
       "startDate": "2024-12-30",
       "endDate": "2025-01-01",
+      "venue": "Embassy Suites by Hilton Newark Wilmington South",
+      "address": "Newark, DE, USA",
       "country": "US",
       "latLng": [
         39.6591405,
@@ -13,10 +16,7 @@
       ],
       "sources": [
         "fancons.com"
-      ],
-      "url": "https://www.newyearsfurryball.com",
-      "venue": "Embassy Suites by Hilton Newark Wilmington South",
-      "address": "Newark, DE, USA"
+      ]
     }
   ]
 }

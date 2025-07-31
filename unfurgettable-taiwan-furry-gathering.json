@@ -4,8 +4,11 @@
     {
       "id": "unfurgettable-taiwan-furry-gathering-2025",
       "name": "Unfurgettable Taiwan Furry Gathering 2025",
+      "url": "https://www.utfg.tw",
       "startDate": "2025-07-19",
       "endDate": "2025-07-20",
+      "venue": "Sheraton Hsinchu Hotel",
+      "address": "Zhubei City, Hsinchu County, Taiwan",
       "country": "TW",
       "latLng": [
         24.8204603,
@@ -13,10 +16,7 @@
       ],
       "sources": [
         "fancons.com"
-      ],
-      "url": "https://www.utfg.tw",
-      "venue": "Sheraton Hsinchu Hotel",
-      "address": "Zhubei City, Hsinchu County, Taiwan"
+      ]
     }
   ]
 }

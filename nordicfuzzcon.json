@@ -4,8 +4,11 @@
     {
       "id": "nordicfuzzcon-2026",
       "name": "NordicFuzzCon 2026",
+      "url": "https://nordicfuzzcon.org",
       "startDate": "2026-02-18",
       "endDate": "2026-02-22",
+      "venue": "Clarion Hotel & Congress Malmö Live",
+      "address": "Malmö, Sweden",
       "country": "SE",
       "latLng": [
         55.6074523,
@@ -14,10 +17,7 @@
       "sources": [
         "fancons.com",
         "coyo.tl"
-      ],
-      "url": "https://nordicfuzzcon.org",
-      "venue": "Clarion Hotel & Congress Malmö Live",
-      "address": "Malmö, Sweden"
+      ]
     }
   ]
 }

@@ -4,8 +4,11 @@
     {
       "id": "megaplex-2025",
       "name": "Megaplex 2025",
+      "url": "https://www.megaplexcon.org",
       "startDate": "2025-08-30",
       "endDate": "2025-09-01",
+      "venue": "Hyatt Regency Orlando",
+      "address": "Orlando, FL, USA",
       "country": "US",
       "latLng": [
         28.4271946,
@@ -14,10 +17,7 @@
       "sources": [
         "fancons.com",
         "coyo.tl"
-      ],
-      "url": "https://www.megaplexcon.org",
-      "venue": "Hyatt Regency Orlando",
-      "address": "Orlando, FL, USA"
+      ]
     }
   ]
 }

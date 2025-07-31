@@ -4,16 +4,16 @@
     {
       "id": "furry-down-under-2026",
       "name": "Furry Down Under 2026",
+      "url": "https://furdu.com.au",
       "startDate": "2026-04-17",
       "endDate": "2026-04-19",
+      "venue": "Crowne Plaza Surfers Paradise, an IHG Hotel",
+      "address": "Gold Coast Highway, Surfers Paradise QLD, Australia",
       "country": "AU",
       "latLng": [
         -28.0176652,
         153.4299021
-      ],
-      "url": "https://furdu.com.au",
-      "venue": "Crowne Plaza Surfers Paradise, an IHG Hotel",
-      "address": "Gold Coast Highway, Surfers Paradise QLD, Australia"
+      ]
     }
   ]
 }

@@ -4,8 +4,11 @@
     {
       "id": "carolina-furfare-2025",
       "name": "Carolina Furfare 2025",
+      "url": "https://www.carolinafurfare.org",
       "startDate": "2025-11-06",
       "endDate": "2025-11-09",
+      "venue": "Hickory Metro Convention Center",
+      "address": "Hickory, NC, USA",
       "country": "US",
       "latLng": [
         35.7091466,
@@ -14,10 +17,7 @@
       "sources": [
         "fancons.com",
         "coyo.tl"
-      ],
-      "url": "https://www.carolinafurfare.org",
-      "venue": "Hickory Metro Convention Center",
-      "address": "Hickory, NC, USA"
+      ]
     }
   ]
 }

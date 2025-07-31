@@ -4,16 +4,16 @@
     {
       "id": "thaitails-2025",
       "name": "Thaitails 2025",
+      "url": "https://thaitails.net",
       "startDate": "2025-03-22",
       "endDate": "2025-03-23",
+      "venue": "Grand Richmond Stylish Convention Hotel",
+      "address": "Rattanathibet Road, Bang Krasaw, Mueang Nonthaburi District, Nonthaburi, Thailand",
       "country": "TH",
       "latLng": [
         13.8615278,
         100.5068041
-      ],
-      "url": "https://thaitails.net",
-      "venue": "Grand Richmond Stylish Convention Hotel",
-      "address": "Rattanathibet Road, Bang Krasaw, Mueang Nonthaburi District, Nonthaburi, Thailand"
+      ]
     }
   ]
 }

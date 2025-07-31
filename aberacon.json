@@ -4,8 +4,11 @@
     {
       "id": "aberacon-2025",
       "name": "Aberacon 2025",
+      "url": "https://aberacon.wales",
       "startDate": "2025-08-23",
       "endDate": "2025-08-24",
+      "venue": "Best Western Aberavon Beach Hotel",
+      "address": "Port Talbot, UK",
       "country": "GB",
       "latLng": [
         51.5934371,
@@ -14,10 +17,7 @@
       "sources": [
         "fancons.com",
         "coyo.tl"
-      ],
-      "url": "https://aberacon.wales",
-      "venue": "Best Western Aberavon Beach Hotel",
-      "address": "Port Talbot, UK"
+      ]
     }
   ]
 }

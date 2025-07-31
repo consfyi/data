@@ -4,8 +4,11 @@
     {
       "id": "woods-flock-2025",
       "name": "Woods Flock 2025",
+      "url": "https://woodsflock.com",
       "startDate": "2025-04-11",
       "endDate": "2025-04-13",
+      "venue": "Fall Creek Falls State Park",
+      "address": "Newton Ford Bunk Group Lodge, Pikeville, TN, USA",
       "country": "US",
       "latLng": [
         35.6409607,
@@ -13,10 +16,7 @@
       ],
       "sources": [
         "fancons.com"
-      ],
-      "url": "https://woodsflock.com",
-      "venue": "Fall Creek Falls State Park",
-      "address": "Newton Ford Bunk Group Lodge, Pikeville, TN, USA"
+      ]
     }
   ]
 }

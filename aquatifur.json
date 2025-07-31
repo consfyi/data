@@ -4,8 +4,11 @@
     {
       "id": "aquatifur-2025",
       "name": "AquatiFur 2025",
+      "url": "https://aquatifur.com",
       "startDate": "2025-11-07",
       "endDate": "2025-11-09",
+      "venue": "Chula Vista Resort - Wisconsin Dells Waterpark Resort",
+      "address": "Wisconsin Dells, WI, USA",
       "country": "US",
       "latLng": [
         43.666426,
@@ -14,10 +17,7 @@
       "sources": [
         "fancons.com",
         "coyo.tl"
-      ],
-      "url": "https://aquatifur.com",
-      "venue": "Chula Vista Resort - Wisconsin Dells Waterpark Resort",
-      "address": "Wisconsin Dells, WI, USA"
+      ]
     }
   ]
 }

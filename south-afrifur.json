@@ -4,8 +4,11 @@
     {
       "id": "south-afrifur-2025",
       "name": "South Afrifur 2025",
+      "url": "https://south-afrifur.co.za",
       "startDate": "2025-09-05",
       "endDate": "2025-09-08",
+      "venue": "Valverde Eco Hotel",
+      "address": "Muldersdrif Lanseria, South Africa",
       "country": "ZA",
       "latLng": [
         -25.9556957,
@@ -14,10 +17,7 @@
       "sources": [
         "fancons.com",
         "coyo.tl"
-      ],
-      "url": "https://south-afrifur.co.za",
-      "venue": "Valverde Eco Hotel",
-      "address": "Muldersdrif Lanseria, South Africa"
+      ]
     }
   ]
 }

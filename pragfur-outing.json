@@ -4,8 +4,11 @@
     {
       "id": "pragfur-outing-2025",
       "name": "PragFUR Outing 2025",
+      "url": "https://www.pragfur.cz/outing",
       "startDate": "2025-06-21",
       "endDate": "2025-06-21",
+      "venue": "Park Podviní - Vysočany",
+      "address": "Prague, Czech Republic",
       "country": "CZ",
       "latLng": [
         50.1096219,
@@ -13,10 +16,7 @@
       ],
       "sources": [
         "fancons.com"
-      ],
-      "url": "https://www.pragfur.cz/outing",
-      "venue": "Park Podviní - Vysočany",
-      "address": "Prague, Czech Republic"
+      ]
     }
   ]
 }

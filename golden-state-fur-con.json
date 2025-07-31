@@ -4,8 +4,11 @@
     {
       "id": "golden-state-fur-con-2025",
       "name": "Golden State Fur Con 2025",
+      "url": "https://gsfurcon.org",
       "startDate": "2025-03-28",
       "endDate": "2025-03-30",
+      "venue": "Hilton Los Angeles Airport",
+      "address": "Los Angeles, CA, USA",
       "country": "US",
       "latLng": [
         33.9462252,
@@ -13,10 +16,7 @@
       ],
       "sources": [
         "fancons.com"
-      ],
-      "url": "https://gsfurcon.org",
-      "venue": "Hilton Los Angeles Airport",
-      "address": "Los Angeles, CA, USA"
+      ]
     }
   ]
 }

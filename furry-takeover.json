@@ -4,8 +4,11 @@
     {
       "id": "furry-takeover-2025",
       "name": "Furry Takeover 2025",
+      "url": "https://furrytakeover.com",
       "startDate": "2025-09-26",
       "endDate": "2025-09-28",
+      "venue": "Fontana Village Resort & Marina",
+      "address": "Fontana Dam, NC, USA",
       "country": "US",
       "latLng": [
         35.4325502,
@@ -14,10 +17,7 @@
       "sources": [
         "fancons.com",
         "coyo.tl"
-      ],
-      "url": "https://furrytakeover.com",
-      "venue": "Fontana Village Resort & Marina",
-      "address": "Fontana Dam, NC, USA"
+      ]
     }
   ]
 }

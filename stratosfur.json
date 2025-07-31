@@ -4,8 +4,11 @@
     {
       "id": "stratosfur-2025",
       "name": "StratosFur 2025",
+      "url": "https://stratosfur.org",
       "startDate": "2025-06-06",
       "endDate": "2025-06-08",
+      "venue": "Houston Marriott Westchase",
+      "address": "Houston, TX, USA",
       "country": "US",
       "latLng": [
         29.734323,
@@ -13,10 +16,7 @@
       ],
       "sources": [
         "fancons.com"
-      ],
-      "url": "https://stratosfur.org",
-      "venue": "Houston Marriott Westchase",
-      "address": "Houston, TX, USA"
+      ]
     }
   ]
 }

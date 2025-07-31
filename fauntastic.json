@@ -4,8 +4,11 @@
     {
       "id": "fauntastic-2025",
       "name": "Fauntastic 2025",
+      "url": "https://fauntastic.eu",
       "startDate": "2025-04-18",
       "endDate": "2025-04-22",
+      "venue": "Novotel Lyon Bron Eurexpo",
+      "address": "Bron, France",
       "country": "FR",
       "latLng": [
         45.7247276,
@@ -13,10 +16,7 @@
       ],
       "sources": [
         "fancons.com"
-      ],
-      "url": "https://fauntastic.eu",
-      "venue": "Novotel Lyon Bron Eurexpo",
-      "address": "Bron, France"
+      ]
     }
   ]
 }

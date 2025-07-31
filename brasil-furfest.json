@@ -7,19 +7,22 @@
       "url": "https://brasilfurfest.com.br",
       "startDate": "2026-07-17",
       "endDate": "2026-07-19",
+      "venue": "Hotel Premium Campinas",
+      "address": "Rua Novotel - Jardim Nova Aparecida, Campinas - State of São Paulo, Brazil",
       "country": "BR",
       "latLng": [
         -22.861375600000002,
         -47.14807400000001
-      ],
-      "venue": "Hotel Premium Campinas",
-      "address": "Rua Novotel - Jardim Nova Aparecida, Campinas - State of São Paulo, Brazil"
+      ]
     },
     {
       "id": "brasil-furfest-2025",
       "name": "Brasil FurFest 2025",
+      "url": "https://brasilfurfest.com.br",
       "startDate": "2025-07-18",
       "endDate": "2025-07-20",
+      "venue": "Hotel Nacional Inn Jaraguá São Paulo",
+      "address": "São Paulo, SP, Brazil",
       "country": "BR",
       "latLng": [
         -23.5484133,
@@ -27,10 +30,7 @@
       ],
       "sources": [
         "fancons.com"
-      ],
-      "url": "https://brasilfurfest.com.br",
-      "venue": "Hotel Nacional Inn Jaraguá São Paulo",
-      "address": "São Paulo, SP, Brazil"
+      ]
     }
   ]
 }

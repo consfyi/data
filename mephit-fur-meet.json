@@ -4,8 +4,11 @@
     {
       "id": "mephit-fur-meet-2025",
       "name": "Mephit Fur Meet 2025",
+      "url": "https://www.mephitfurmeet.org",
       "startDate": "2025-08-29",
       "endDate": "2025-08-31",
+      "venue": "Memphis Vitality Hotel",
+      "address": "Memphis, TN, USA",
       "country": "US",
       "latLng": [
         35.0768111,
@@ -13,10 +16,7 @@
       ],
       "sources": [
         "fancons.com"
-      ],
-      "url": "https://www.mephitfurmeet.org",
-      "venue": "Memphis Vitality Hotel",
-      "address": "Memphis, TN, USA"
+      ]
     }
   ]
 }

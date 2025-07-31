@@ -7,19 +7,22 @@
       "url": "https://www.midwinterfrolic.org",
       "startDate": "2026-01-16",
       "endDate": "2026-01-18",
+      "venue": "Whitewater State Park",
+      "address": "Minnesota 74, Altura, MN, USA",
       "country": "US",
       "latLng": [
         44.06265500000001,
         -92.04454199999999
-      ],
-      "venue": "Whitewater State Park",
-      "address": "Minnesota 74, Altura, MN, USA"
+      ]
     },
     {
       "id": "midwinter-frolic-2025",
       "name": "MidWinter Frolic 2025",
+      "url": "https://www.midwinterfrolic.org",
       "startDate": "2025-01-17",
       "endDate": "2025-01-19",
+      "venue": "Whitewater State Park",
+      "address": "Altura, MN, USA",
       "country": "US",
       "latLng": [
         44.06265500000001,
@@ -27,10 +30,7 @@
       ],
       "sources": [
         "fancons.com"
-      ],
-      "url": "https://www.midwinterfrolic.org",
-      "venue": "Whitewater State Park",
-      "address": "Altura, MN, USA"
+      ]
     }
   ]
 }

@@ -4,8 +4,11 @@
     {
       "id": "furry-cruise-2025",
       "name": "Furry Cruise 2025",
+      "url": "https://furrycruise.com",
       "startDate": "2025-10-03",
       "endDate": "2025-10-10",
+      "venue": "Flynn Cruiseport Boston",
+      "address": "Black Falcon Avenue, Boston, MA, USA",
       "country": "US",
       "latLng": [
         42.3437951,
@@ -13,10 +16,7 @@
       ],
       "sources": [
         "fancons.com"
-      ],
-      "url": "https://furrycruise.com",
-      "venue": "Flynn Cruiseport Boston",
-      "address": "Black Falcon Avenue, Boston, MA, USA"
+      ]
     }
   ]
 }

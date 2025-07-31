@@ -4,8 +4,11 @@
     {
       "id": "western-pa-furry-weekend-2025",
       "name": "Western PA Furry Weekend 2025",
+      "url": "https://wpafw.org",
       "startDate": "2025-10-03",
       "endDate": "2025-10-05",
+      "venue": "North Park Lodge",
+      "address": "Allison Park, PA, USA",
       "country": "US",
       "latLng": [
         40.6170415,
@@ -13,10 +16,7 @@
       ],
       "sources": [
         "fancons.com"
-      ],
-      "url": "https://wpafw.org",
-      "venue": "North Park Lodge",
-      "address": "Allison Park, PA, USA"
+      ]
     }
   ]
 }

@@ -4,8 +4,11 @@
     {
       "id": "anthro-new-england-2026",
       "name": "Anthro New England 2026",
+      "url": "https://www.anthronewengland.com",
       "startDate": "2026-01-15",
       "endDate": "2026-01-18",
+      "venue": "The Westin Boston Seaport District",
+      "address": "Boston, MA, USA",
       "country": "US",
       "latLng": [
         42.3459634,
@@ -14,10 +17,7 @@
       "sources": [
         "fancons.com",
         "coyo.tl"
-      ],
-      "url": "https://www.anthronewengland.com",
-      "venue": "The Westin Boston Seaport District",
-      "address": "Boston, MA, USA"
+      ]
     }
   ]
 }

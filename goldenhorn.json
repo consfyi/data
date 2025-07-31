@@ -4,8 +4,11 @@
     {
       "id": "goldenhorn-2025",
       "name": "GoldenHorn 2025",
+      "url": "https://goldenhorn.si",
       "startDate": "2025-11-13",
       "endDate": "2025-11-16",
+      "venue": "Adria Ankaran Hotel & Resort",
+      "address": "Ankaran, Slovenia",
       "country": "SI",
       "latLng": [
         45.5782072,
@@ -14,10 +17,7 @@
       "sources": [
         "fancons.com",
         "coyo.tl"
-      ],
-      "url": "https://goldenhorn.si",
-      "venue": "Adria Ankaran Hotel & Resort",
-      "address": "Ankaran, Slovenia"
+      ]
     }
   ]
 }

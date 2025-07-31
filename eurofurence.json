@@ -4,8 +4,11 @@
     {
       "id": "eurofurence-2025",
       "name": "Eurofurence 29",
+      "url": "https://www.eurofurence.org",
       "startDate": "2025-09-03",
       "endDate": "2025-09-06",
+      "venue": "Congress Center Hamburg",
+      "address": "Hamburg, Germany",
       "country": "DE",
       "latLng": [
         53.561764,
@@ -14,10 +17,7 @@
       "sources": [
         "fancons.com",
         "coyo.tl"
-      ],
-      "url": "https://www.eurofurence.org",
-      "venue": "Congress Center Hamburg",
-      "address": "Hamburg, Germany"
+      ]
     }
   ]
 }

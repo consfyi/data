@@ -4,8 +4,11 @@
     {
       "id": "pawstral-2025",
       "name": "Pawstral 2025",
+      "url": "https://pawstral.cl",
       "startDate": "2025-08-29",
       "endDate": "2025-08-31",
+      "venue": "Icon Hotel Santiago",
+      "address": "Las Condes, Chile",
       "country": "CL",
       "latLng": [
         -33.4078048,
@@ -13,10 +16,7 @@
       ],
       "sources": [
         "fancons.com"
-      ],
-      "url": "https://pawstral.cl",
-      "venue": "Icon Hotel Santiago",
-      "address": "Las Condes, Chile"
+      ]
     }
   ]
 }

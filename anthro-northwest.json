@@ -4,8 +4,11 @@
     {
       "id": "anthro-northwest-2026",
       "name": "Anthro Northwest 8",
+      "url": "https://anthronw.com",
       "startDate": "2025-12-31",
       "endDate": "2026-01-04",
+      "venue": "Hyatt Regency Seattle",
+      "address": "Seattle, WA, USA",
       "country": "US",
       "latLng": [
         47.6145295,
@@ -13,16 +16,16 @@
       ],
       "sources": [
         "fancons.com"
-      ],
-      "url": "https://anthronw.com",
-      "venue": "Hyatt Regency Seattle",
-      "address": "Seattle, WA, USA"
+      ]
     },
     {
       "id": "anthro-northwest-2025",
       "name": "Anthro Northwest 7",
+      "url": "https://anthronw.com",
       "startDate": "2025-01-02",
       "endDate": "2025-01-05",
+      "venue": "Hyatt Regency Seattle",
+      "address": "Seattle, WA, USA",
       "country": "US",
       "latLng": [
         47.6145295,
@@ -31,10 +34,7 @@
       "sources": [
         "fancons.com",
         "coyo.tl"
-      ],
-      "url": "https://anthronw.com",
-      "venue": "Hyatt Regency Seattle",
-      "address": "Seattle, WA, USA"
+      ]
     }
   ]
 }

@@ -7,13 +7,13 @@
       "url": "https://www.revontuliry.com/tapahtumat/porrocon",
       "startDate": "2026-05-26",
       "endDate": "2026-05-26",
+      "venue": "Turun VPK:n talo",
+      "address": "Eskelinkatu, Turku, Finland",
       "country": "FI",
       "latLng": [
         60.4485624,
         22.2611305
-      ],
-      "venue": "Turun VPK:n talo",
-      "address": "Eskelinkatu, Turku, Finland"
+      ]
     }
   ]
 }

@@ -4,8 +4,11 @@
     {
       "id": "pawercon-2025",
       "name": "Pawercon 2025",
+      "url": "https://imfur.org",
       "startDate": "2025-05-16",
       "endDate": "2025-05-18",
+      "venue": "Hotel Sevilla Palace",
+      "address": "Ciudad de México, Mexico",
       "country": "MX",
       "latLng": [
         19.4326963,
@@ -13,10 +16,7 @@
       ],
       "sources": [
         "fancons.com"
-      ],
-      "url": "https://imfur.org",
-      "venue": "Hotel Sevilla Palace",
-      "address": "Ciudad de México, Mexico"
+      ]
     }
   ]
 }

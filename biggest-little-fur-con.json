@@ -4,8 +4,11 @@
     {
       "id": "biggest-little-fur-con-2025",
       "name": "Biggest Little Fur Con 2025",
+      "url": "https://goblfc.org",
       "startDate": "2025-10-13",
       "endDate": "2025-10-16",
+      "venue": "Grand Sierra Resort and Casino",
+      "address": "Reno, NV, USA",
       "country": "US",
       "latLng": [
         39.5233959,
@@ -14,10 +17,7 @@
       "sources": [
         "fancons.com",
         "coyo.tl"
-      ],
-      "url": "https://goblfc.org",
-      "venue": "Grand Sierra Resort and Casino",
-      "address": "Reno, NV, USA"
+      ]
     }
   ]
 }

@@ -4,8 +4,11 @@
     {
       "id": "anthrocon-2026",
       "name": "Anthrocon 2026",
+      "url": "https://www.anthrocon.org",
       "startDate": "2026-07-02",
       "endDate": "2026-07-05",
+      "venue": "David L. Lawrence Convention Center",
+      "address": "Fort Duquesne Boulevard, Pittsburgh, PA, USA",
       "country": "US",
       "latLng": [
         40.4455472,
@@ -14,24 +17,21 @@
       "sources": [
         "fancons.com",
         "coyo.tl"
-      ],
-      "url": "https://www.anthrocon.org",
-      "venue": "David L. Lawrence Convention Center",
-      "address": "Fort Duquesne Boulevard, Pittsburgh, PA, USA"
+      ]
     },
     {
       "id": "anthrocon-2025",
       "name": "Anthrocon 2025",
+      "url": "https://www.anthrocon.org",
       "startDate": "2025-07-03",
       "endDate": "2025-07-06",
+      "venue": "David L. Lawrence Convention Center",
+      "address": "Fort Duquesne Boulevard, Pittsburgh, PA, USA",
       "country": "US",
       "latLng": [
         40.4455472,
         -79.9962844
-      ],
-      "url": "https://www.anthrocon.org",
-      "venue": "David L. Lawrence Convention Center",
-      "address": "Fort Duquesne Boulevard, Pittsburgh, PA, USA"
+      ]
     }
   ]
 }

@@ -4,8 +4,11 @@
     {
       "id": "infurnity-2025",
       "name": "Infurnity 2025",
+      "url": "https://www.infurnity.com",
       "startDate": "2025-10-31",
       "endDate": "2025-11-02",
+      "venue": "Fullon Hotel Lihpao Land",
+      "address": "Taichung City, Taiwan",
       "country": "TW",
       "latLng": [
         24.3236953,
@@ -14,10 +17,7 @@
       "sources": [
         "fancons.com",
         "coyo.tl"
-      ],
-      "url": "https://www.infurnity.com",
-      "venue": "Fullon Hotel Lihpao Land",
-      "address": "Taichung City, Taiwan"
+      ]
     }
   ]
 }

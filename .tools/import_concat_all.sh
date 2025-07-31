@@ -6,3 +6,4 @@ $concat_importer anthrocon.json https://reg.anthrocon.org
 $concat_importer las-vegas-fur-con.json https://reg.lasvegasfurcon.org
 $concat_importer megaplex.json https://reg.megaplexcon.org
 $concat_importer further-confusion.json https://reg.furtherconfusion.org
+$concat_importer biggest-little-fur-con.json https://reg.goblfc.org

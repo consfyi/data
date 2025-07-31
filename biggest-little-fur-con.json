@@ -7,16 +7,68 @@
       "url": "https://goblfc.org",
       "startDate": "2025-10-13",
       "endDate": "2025-10-16",
-      "venue": "Grand Sierra Resort and Casino",
-      "address": "Reno, NV, USA",
+      "venue": "Grand Sierra Resort, Reno, NV",
+      "address": "East 2nd Street, Reno, NV, USA",
       "country": "US",
       "latLng": [
-        39.5233959,
-        -119.77935
-      ],
-      "sources": [
-        "fancons.com",
-        "coyo.tl"
+        39.5230411,
+        -119.7812235
+      ]
+    },
+    {
+      "id": "biggest-little-fur-con-2024",
+      "name": "Biggest Little Fur Con 2024",
+      "url": "https://goblfc.org",
+      "startDate": "2024-10-14",
+      "endDate": "2024-10-17",
+      "venue": "Grand Sierra Resort, Reno, NV",
+      "address": "East 2nd Street, Reno, NV, USA",
+      "country": "US",
+      "latLng": [
+        39.5230411,
+        -119.7812235
+      ]
+    },
+    {
+      "id": "biggest-little-fur-con-2023",
+      "name": "Biggest Little Fur Con 2023",
+      "url": "https://goblfc.org",
+      "startDate": "2023-10-30",
+      "endDate": "2023-11-02",
+      "venue": "Grand Sierra Resort, Reno, NV",
+      "address": "East 2nd Street, Reno, NV, USA",
+      "country": "US",
+      "latLng": [
+        39.5230411,
+        -119.7812235
+      ]
+    },
+    {
+      "id": "biggest-little-fur-con-2022",
+      "name": "Biggest Little Fur Con 2022",
+      "url": "https://goblfc.org",
+      "startDate": "2022-06-02",
+      "endDate": "2022-06-06",
+      "venue": "Grand Sierra Resort, Reno, NV",
+      "address": "East 2nd Street, Reno, NV, USA",
+      "country": "US",
+      "latLng": [
+        39.5230411,
+        -119.7812235
+      ]
+    },
+    {
+      "id": "biggest-little-fur-con-2021",
+      "name": "Biggest Little Fur Con 2021",
+      "url": "https://goblfc.org",
+      "startDate": "2021-10-21",
+      "endDate": "2021-10-24",
+      "venue": "Grand Sierra Resort, Reno, NV",
+      "address": "East 2nd Street, Reno, NV, USA",
+      "country": "US",
+      "latLng": [
+        39.5230411,
+        -119.7812235
       ]
     }
   ]

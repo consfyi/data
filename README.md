@@ -28,7 +28,8 @@ interface Series {
 
 /// Event is a specific instance of a convention.
 interface Event {
-  /// Unique ID across all events, including events in other series. It should include the convention name, e.g. `rainfurrest-2016`.
+  /// Unique ID across all events, including events in other series.
+  /// It should include the convention name, e.g. `rainfurrest-2016`.
   id: string;
 
   /// The human-readable name of the convention instance, e.g. "RainFurrest 2016".
@@ -37,22 +38,27 @@ interface Event {
   /// Link to the convention website.
   url: string;
 
-  /// The start date of the convention instance. Should be in yyyy-MM-dd format.
+  /// The start date of the convention instance.
+  /// Should be in ISO 8601 yyyy-MM-dd format.
   startDate: string;
 
-  /// The end date of the convention instance, inclusive. Should be in yyyy-MM-dd format.
+  /// The end date of the convention instance, inclusive.
+  /// Should be in ISO 8601 yyyy-MM-dd format.
   endDate: string;
 
   /// The human-readable name of the venue.
   venue: string;
 
-  /// The address of the venue, if it is a physical venue. The granularity of this is not specified, it does not need to be exact.
+  /// The address of the venue, if it is a physical venue.
+  /// The granularity of this is not specified, it does not need to be exact. It should include the name of the country.
   address?: string;
 
-  /// The country, if any, as an ISO 3166-1 alpha-2 code. This may be unset for e.g. virtual conventions.
+  /// The country as an ISO 3166-1 alpha-2 code.
+  /// This may be unset for e.g. virtual conventions.
   country?: string;
 
-  /// The GPS coordinates of the venue, if any. This may be unset for e.g. virtual conventions.
+  /// The GPS coordinates of the venue.
+  /// This may be unset for e.g. virtual conventions.
   latLng?: [number, number];
 
   /// The number of attendees for historical cons.
@@ -89,10 +95,10 @@ interface MaterializedEvent extends Event {
   /// The ID of the series this corresponds to.
   seriesId: string;
 
-  /// The IANA timezone ID, if `latLng` is present.
+  /// The IANA timezone ID.
   timezone?: string;
 
-  /// The attendance of the previous event in the series, if any.
+  /// The attendance of the previous event in the series.
   previousAttendance?: number;
 }
 ```

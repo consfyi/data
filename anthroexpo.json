@@ -7,16 +7,40 @@
       "url": "https://www.anthroexpo.net",
       "startDate": "2026-02-05",
       "endDate": "2026-02-08",
-      "venue": "Embassy Suites by Hilton Norman Hotel & Conference Center",
-      "address": "Norman, OK, USA",
+      "venue": "Embassy Suites Norman",
+      "address": "Conference Drive, Norman, OK, USA",
       "country": "US",
       "latLng": [
-        35.2436797,
-        -97.4789113
-      ],
-      "sources": [
-        "fancons.com",
-        "coyo.tl"
+        35.2434811,
+        -97.4786414
+      ]
+    },
+    {
+      "id": "anthroexpo-2025",
+      "name": "AnthroExpo 2025",
+      "url": "https://www.anthroexpo.net",
+      "startDate": "2025-01-30",
+      "endDate": "2025-02-02",
+      "venue": "Embassy Suites Norman",
+      "address": "Conference Drive, Norman, OK, USA",
+      "country": "US",
+      "latLng": [
+        35.2434811,
+        -97.4786414
+      ]
+    },
+    {
+      "id": "anthroexpo-2024",
+      "name": "AnthroExpo 2024",
+      "url": "https://www.anthroexpo.net",
+      "startDate": "2024-02-01",
+      "endDate": "2024-02-05",
+      "venue": "Embassy Suites Norman",
+      "address": "Conference Drive, Norman, OK, USA",
+      "country": "US",
+      "latLng": [
+        35.2434811,
+        -97.4786414
       ]
     }
   ]

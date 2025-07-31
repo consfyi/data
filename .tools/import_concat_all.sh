@@ -8,3 +8,4 @@ $concat_importer megaplex.json https://reg.megaplexcon.org
 $concat_importer further-confusion.json https://reg.furtherconfusion.org
 $concat_importer biggest-little-fur-con.json https://reg.goblfc.org
 $concat_importer pawcon.json https://reg.pacanthro.org
+$concat_importer anthroexpo.json https://reg.anthroexpo.net

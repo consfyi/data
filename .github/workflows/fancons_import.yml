@@ -14,12 +14,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          submodules: recursive
       - uses: astral-sh/setup-uv@v6
       - run: |
           git config --global user.name "cons.fyi GitHub bot"
           git config --global user.email "github@cons.fyi"
-      - run: ./.tools/fancons_importer.py
+      - run: ./.tools/data-importers/fancons_importer.py
         env:
           GOOGLE_MAPS_API_KEY: ${{ secrets.GOOGLE_MAPS_API_KEY }}
       - run: |

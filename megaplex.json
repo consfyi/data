@@ -7,16 +7,40 @@
       "url": "https://www.megaplexcon.org",
       "startDate": "2025-08-30",
       "endDate": "2025-09-01",
-      "venue": "Hyatt Regency Orlando",
-      "address": "Orlando, FL, USA",
+      "venue": "Hyatt Regency Orlando - International Drive",
+      "address": "International Drive, Orlando, FL, USA",
       "country": "US",
       "latLng": [
-        28.4271946,
-        -81.46749
-      ],
-      "sources": [
-        "fancons.com",
-        "coyo.tl"
+        28.42769,
+        -81.4687483
+      ]
+    },
+    {
+      "id": "megaplex-2024",
+      "name": "Megaplex 2024",
+      "url": "https://www.megaplexcon.org",
+      "startDate": "2024-08-30",
+      "endDate": "2024-09-01",
+      "venue": "Hyatt Regency Orlando - International Drive",
+      "address": "International Drive, Orlando, FL, USA",
+      "country": "US",
+      "latLng": [
+        28.42769,
+        -81.4687483
+      ]
+    },
+    {
+      "id": "megaplex-2023",
+      "name": "Megaplex 2023",
+      "url": "https://www.megaplexcon.org",
+      "startDate": "2023-09-15",
+      "endDate": "2023-09-18",
+      "venue": "Hyatt Regency Orlando - International Drive",
+      "address": "International Drive, Orlando, FL, USA",
+      "country": "US",
+      "latLng": [
+        28.42769,
+        -81.4687483
       ]
     }
   ]

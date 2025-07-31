@@ -58,16 +58,16 @@ with open(fn) as f:
             f"{venue}, {country}", session_token=session_token
         )
 
-        location = [
-            convention["venue"],
-        ]
+        venue = convention["venue"]
+        address = None
+
         if len(predictions) == 0:
             lat_lng = None
         else:
             prediction, *_ = predictions
             st = prediction["structured_formatting"]
             if "secondary_text" in st:
-                location.append(st["secondary_text"])
+                address = st["secondary_text"]
 
             place = gmaps.place(
                 prediction["place_id"],
@@ -80,14 +80,15 @@ with open(fn) as f:
         event = {
             "id": id,
             "name": f"{series['name']} {start_date.year}",
+            "url": series["events"][0]["url"],
             "startDate": start_date.format_common_iso(),
             "endDate": end_date.format_common_iso(),
-            "location": location,
+            "venue": venue,
+            "address": address,
             "country": country,
             "latLng": lat_lng,
-            "url": series["events"][0]["url"],
         }
-        series["events"].insert(i, event)
+        series["events"].insert(i, {k: v for k, v in event.items() if v is not None})
 
 with open(fn, "w") as f:
     json.dump(series, f, indent=2, ensure_ascii=False)

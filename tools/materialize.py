@@ -136,13 +136,13 @@ def main():
     now = whenever.Instant.now()
 
     def pred(event):
-        end_date = (
+        end_time = (
             whenever.Date.parse_common_iso(event["endDate"])
             .add(days=1)
             .at(whenever.Time(12, 0))
             .assume_tz(event.get("timezone", "UTC"))
         )
-        return now < end_date.add(days=7) and not event.get("canceled", False)
+        return now < end_time.add(days=7) and not event.get("canceled", False)
 
     current = [event for event in events.values() if pred(event)]
     current.sort(

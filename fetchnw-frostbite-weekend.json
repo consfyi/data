@@ -1,0 +1,19 @@
+{
+  "name": "FetchNW Frostbite Weekend",
+  "events": [
+    {
+      "id": "fetchnw-frostbite-weekend-2025",
+      "name": "FetchNW Frostbite Weekend 2025",
+      "url": "https://fetchnw.com/frostbite-weekend-2025",
+      "startDate": "2025-12-11",
+      "endDate": "2025-12-14",
+      "venue": "The Crocodile",
+      "address": "1st Avenue, Seattle, WA, USA",
+      "country": "US",
+      "latLng": [
+        47.614767699999994,
+        -122.34927809999999
+      ]
+    }
+  ]
+}

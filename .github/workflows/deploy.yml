@@ -33,6 +33,6 @@ jobs:
         with:
           path: "${{ runner.temp }}/out"
       - uses: actions/deploy-pages@v4
-      - run: curl --fail-with-body -u $TRIGGER_KEY -XPOST https://bsky-labeler.cons.fyi/trigger
+      - run: curl --fail-with-body -u $BSKY_LABELER_TRIGGER_KEY -XPOST https://bsky-labeler.cons.fyi/trigger
         env:
-          TRIGGER_KEY: ${{ secrets.TRIGGER_KEY }}
+          BSKY_LABELER_TRIGGER_KEY: ${{ secrets.BSKY_LABELER_TRIGGER_KEY }}

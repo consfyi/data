@@ -63,6 +63,9 @@
             "minItems": 2,
             "maxItems": 2
           },
+          "canceled": {
+            "type": "boolean"
+          },
           "attendance": {
             "type": "integer"
           },

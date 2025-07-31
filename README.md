@@ -61,6 +61,9 @@ interface Event {
   /// This may be unset for e.g. virtual conventions.
   latLng?: [number, number];
 
+  /// If the convention instance has been canceled.
+  canceled?: boolean,
+
   /// The number of attendees for historical cons.
   attendance?: number,
 

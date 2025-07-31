@@ -142,7 +142,7 @@ def main():
             .at(whenever.Time(12, 0))
             .assume_tz(event.get("timezone", "UTC"))
         )
-        return now < end_date.add(days=7) and not event.get("canceled", False)
+        return now < end_date.add(years=1) and not event.get("canceled", False)
 
     current = [event for event in events.values() if pred(event)]
     current.sort(

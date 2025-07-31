@@ -72,7 +72,7 @@ interface Event {
 ### Output
 
 The following files are materialized at `https://data.cons.fyi`:
-- [/current.json](/current.json): All current and upcoming events as a list, with 7 days of leading history.
+- [/current.json](/current.json): All current and upcoming events as a list, with 1 year of leading history.
 - [/last.json](/last.json): The most recent event of each convention as a list.
 - [/calendar.ics](/calendar.ics): All the active events as an ICS calendar.
 - [/events/](/events/): JSON files of every `Event` record, extracted from `Series` records.

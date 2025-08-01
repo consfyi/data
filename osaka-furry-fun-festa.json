@@ -1,0 +1,19 @@
+{
+  "name": "Osaka Furry Fun Festa",
+  "events": [
+    {
+      "id": "osaka-furry-fun-festa-2024",
+      "name": "Osaka Furry Fun Festa 2024",
+      "url": "https://osaka-fff.jp",
+      "startDate": "2024-05-18",
+      "endDate": "2024-05-19",
+      "venue": "ATC HALL",
+      "address": "2 Chome-1-10 Nankōkita, Suminoe Ward, Osaka, Japan",
+      "country": "JP",
+      "latLng": [
+        34.6361063,
+        135.41454679999998
+      ]
+    }
+  ]
+}

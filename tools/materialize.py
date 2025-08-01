@@ -173,7 +173,7 @@ def main():
             dtstamp = now.py_datetime().strftime("%Y%m%dT%H%M%SZ")
             location = event["venue"]
             if "address" in event:
-                location += f" ,{event['address']}"
+                location += f", {event['address']}"
             f.write("BEGIN:VEVENT\r\n")
             f.write(f"UID:{event['id']}\r\n")
             f.write(f"SUMMARY:{escape_ics(event['name'])}\r\n")

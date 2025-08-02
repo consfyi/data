@@ -1,5 +1,5 @@
 name: Edit convention
-description: Request an edit to convention information
+description: Request an edit to or delisting of a convention
 title: "Edit convention: "
 labels:
   - edit

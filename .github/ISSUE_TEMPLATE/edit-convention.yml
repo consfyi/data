@@ -29,7 +29,7 @@ body:
 
         There is no need to fill out the remainder of the form.
       options:
-        - label: Delist this convention
+        - label: I am requesting delisting of this convention.
 
   - id: url
     type: input

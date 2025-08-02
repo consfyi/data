@@ -2,6 +2,20 @@
   "name": "New Years Furry Ball",
   "events": [
     {
+      "id": "new-years-furry-ball-2026",
+      "name": "New Years Furry Ball 2026",
+      "url": "https://www.newyearsfurryball.com",
+      "startDate": "2025-12-30",
+      "endDate": "2026-01-01",
+      "venue": "DoubleTree by Hilton Hotel Wilmington",
+      "address": "Concord Pike, Wilmington, Delaware, USA",
+      "country": "US",
+      "latLng": [
+        39.819476,
+        -75.5465117
+      ]
+    },
+    {
       "id": "new-years-furry-ball-2025",
       "name": "New Years Furry Ball 2025",
       "url": "https://www.newyearsfurryball.com",

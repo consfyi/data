@@ -1,0 +1,19 @@
+name: Remove convention
+description: Request removal of a convention
+title: "Remove convention: "
+labels:
+  - remove
+body:
+  - type: markdown
+    attributes:
+      value: |
+        You must be an authorized representative of the convention.
+
+  - id: name
+    type: input
+    attributes:
+      label: Name
+      description: The name of the convention.
+      placeholder: e.g. My Cool Furry Con
+    validations:
+      required: true

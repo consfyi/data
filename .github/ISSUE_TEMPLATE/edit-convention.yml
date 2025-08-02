@@ -1,13 +1,15 @@
-name: Add convention
-description: Request listing of a convention
-title: "Add convention: "
+name: Edit convention
+description: Request an edit to convention information
+title: "Edit convention: "
 labels:
-  - add
+  - edit
 body:
   - type: markdown
     attributes:
       value: |
         All information must be verifiable from official sources for the convention.
+
+        For anything that doesn't need to be updated, you may leave the field blank.
 
   - id: name
     type: input

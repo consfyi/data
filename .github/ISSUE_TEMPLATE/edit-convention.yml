@@ -52,6 +52,14 @@ body:
       description: The end date of the convention, as yyyy-MM-dd.
       placeholder: e.g. 2000-02-09
 
+  - id: canceled
+    type: checkboxes
+    attributes:
+      label: Canceled
+      description: Has the convention been canceled?
+      options:
+        - label: This convention has been canceled.
+
   - id: venue
     type: input
     attributes:

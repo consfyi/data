@@ -1,0 +1,19 @@
+{
+  "name": "Furizon Riverside",
+  "events": [
+    {
+      "id": "furizon-riverside-2025",
+      "name": "Furizon Riverside 2025",
+      "url": "https://furizon.net",
+      "startDate": "2025-10-09",
+      "endDate": "2025-10-12",
+      "venue": "Hotel Corno Bianco",
+      "address": "Località Pietralba, Deutschnofen, Autonomous Province of Bolzano – South Tyrol, Italy",
+      "country": "IT",
+      "latLng": [
+        46.391087899999995,
+        11.4138608
+      ]
+    }
+  ]
+}

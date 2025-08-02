@@ -1,0 +1,40 @@
+name: Add convention
+description: Request listing of a convention
+title: "Add convention: "
+labels:
+  - add
+body:
+  - type: markdown
+    attributes:
+      value: |
+        All information must be verifiable from official sources for the convention.
+
+  - type: input
+    attributes:
+      label: Name
+      description: The name of the convention.
+      placeholder: e.g. My Cool Furry Con
+
+  - type: input
+    attributes:
+      label: Website
+      description: The convention's website.
+      placeholder: e.g. https://mycoolfurrycon.com
+
+  - type: input
+    attributes:
+      label: Start date
+      description: The start date of the convention, as yyyy-MM-dd.
+      placeholder: e.g. 2000-02-03
+
+  - type: input
+    attributes:
+      label: End date
+      description: The end date of the convention, as yyyy-MM-dd.
+      placeholder: e.g. 2000-02-09
+
+  - type: input
+    attributes:
+      label: Venue
+      description: The convention's venue.
+      placeholder: e.g. Fuzz E. Wuzzy Convention Center

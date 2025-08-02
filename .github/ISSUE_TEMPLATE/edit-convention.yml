@@ -20,6 +20,17 @@ body:
     validations:
       required: true
 
+  - id: delist
+    type: checkboxes
+    attributes:
+      label: Delist this convention
+      description: |
+        If you are an authorized representative of the convention, you may request delisting of this convention.
+
+        There is no need to fill out the remainder of the form.
+      options:
+        - label: Delist this convention
+
   - id: url
     type: input
     attributes:

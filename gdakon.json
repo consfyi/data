@@ -2,6 +2,20 @@
   "name": "Gdakon",
   "events": [
     {
+      "id": "gdakon-2026",
+      "name": "Gdakon 2026",
+      "url": "https://gdakon.pl",
+      "startDate": "2026-03-18",
+      "endDate": "2026-03-22",
+      "venue": "Radisson Blu",
+      "address": "Bitwy pod Płowcami, Sopot, Poland",
+      "country": "PL",
+      "latLng": [
+        54.4334073,
+        18.579679
+      ]
+    },
+    {
       "id": "gdakon-2025",
       "name": "Gdakon 2025",
       "url": "https://gdakon.pl",

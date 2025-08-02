@@ -2,23 +2,6 @@
   "name": "AnthroTales",
   "events": [
     {
-      "id": "anthrotales-2026",
-      "name": "AnthroTales 2",
-      "url": "https://www.anthrotales.eu",
-      "startDate": "2026-05-14",
-      "endDate": "2026-05-17",
-      "venue": "Van der Valk Hotel Mons Congrès & Spa",
-      "address": "Mons, Belgium",
-      "country": "BE",
-      "latLng": [
-        50.4563266,
-        3.9406037
-      ],
-      "sources": [
-        "fancons.com"
-      ]
-    },
-    {
       "id": "anthrotales-1",
       "name": "AnthroTales 1",
       "url": "https://www.anthrotales.eu",

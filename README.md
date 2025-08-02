@@ -2,7 +2,7 @@
 
 This is the data for [cons.fyi](https://cons.fyi). It was generated at <span id="timestamp"></span><script type="module">document.getElementById('timestamp').textContent = new Date(await (await fetch('/timestamp')).text()).toString();</script>.
 
-If there is an issue with data accuracy, you may [file an issue here](https://github.com/consfyi/data/issues/new?template=missing-or-incorrect-convention.md).
+If there is an issue with data accuracy, you would like a convention listed, or you would like to delist your convention, you may [file an issue here](https://github.com/consfyi/data/issues/new).
 
 ## Usage policy
 

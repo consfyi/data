@@ -27,7 +27,7 @@ body:
       description: |
         If you are an authorized representative of the convention, you may request delisting of this convention.
 
-        There is no need to fill out the remainder of the form.
+        **There is no need to fill out the remainder of the form.**
       options:
         - label: I am requesting delisting of this convention.
 

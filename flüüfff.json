@@ -1,0 +1,19 @@
+{
+  "name": "Flüüfff",
+  "events": [
+    {
+      "id": "flüüfff-2025",
+      "name": "Flüüfff 2025",
+      "url": "https://fluufff.org",
+      "startDate": "2025-11-05",
+      "endDate": "2025-11-09",
+      "venue": "Bedford Hotel & Congress Center",
+      "address": "Rue du Midi, Brussels, Belgium",
+      "country": "BE",
+      "latLng": [
+        50.8442326,
+        4.3474068
+      ]
+    }
+  ]
+}

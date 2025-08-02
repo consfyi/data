@@ -2,6 +2,8 @@
 name: Remove convention
 about: Request delisting of a convention
 title: 'Remove convention: '
+labels:
+ - remove
 ---
 
 You must be an authorized representative of the convention.

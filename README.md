@@ -8,7 +8,11 @@ If there is an issue with data accuracy, you may [file an issue here](https://gi
 
 Attribution is not required but appreciated. This helps us keep our data up to date, which in turn helps everyone else!
 
-Please note that some data is imported from [FanCons.com](https://fancons.com) and is annotated as such. Usage restrictions may apply.
+## Data sources
+
+- The majority of data is imported from [FanCons.com](https://fancons.com) and is annotated as such. Usage restrictions may apply.
+
+- Conventions that use [ConCat](https://concat.app) will have data imported directly from their ConCat instance.
 
 ## Data model
 

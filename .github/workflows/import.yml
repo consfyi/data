@@ -1,4 +1,4 @@
-name: fancons_import
+name: import
 on:
   schedule:
     - cron: "15 * * * *"
@@ -19,10 +19,12 @@ jobs:
       - run: |
           git config --global user.name "cons.fyi GitHub bot"
           git config --global user.email "github@cons.fyi"
-      - run: ./tools/data-importers/fancons_importer.py
+      - run: |
+          ./tools/data-importers/fancons_importer.py
+          ./tools/data-importers/import_concat_all.sh
         env:
           GOOGLE_MAPS_API_KEY: ${{ secrets.GOOGLE_MAPS_API_KEY }}
       - run: |
           git add .
-          git diff-index --quiet HEAD || git commit -m "via fancons_import"
+          git diff-index --quiet HEAD || git commit -m "via import"
           git push

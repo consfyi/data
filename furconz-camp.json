@@ -1,0 +1,19 @@
+{
+  "name": "FurcoNZ Camp",
+  "events": [
+    {
+      "id": "furconz-camp-2025",
+      "name": "FurcoNZ Camp 2025",
+      "url": "https://furconz.org.nz",
+      "startDate": "2025-05-08",
+      "endDate": "2025-05-11",
+      "venue": "Forest Lakes Camp",
+      "address": "Forest Lakes Road, Ōtaki, New Zealand",
+      "country": "NZ",
+      "latLng": [
+        -40.729612499999995,
+        175.1691233
+      ]
+    }
+  ]
+}

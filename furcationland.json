@@ -2,6 +2,20 @@
   "name": "Furcationland",
   "events": [
     {
+      "id": "furcationland-2026",
+      "name": "Furcationland 2026",
+      "url": "https://furcationland.org",
+      "startDate": "2026-04-09",
+      "endDate": "2026-04-12",
+      "venue": "Holiday Inn Portland-By The Bay",
+      "address": "Portland, ME, USA",
+      "country": "US",
+      "latLng": [
+        43.6534888,
+        -70.2608888
+      ]
+    },
+    {
       "id": "furcationland-2025",
       "name": "Furcationland 2025",
       "url": "https://furcationland.org",
@@ -13,9 +27,34 @@
       "latLng": [
         43.6534888,
         -70.2608888
-      ],
-      "sources": [
-        "fancons.com"
+      ]
+    },
+    {
+      "id": "furcationland-2024",
+      "name": "Furcationland 2024",
+      "url": "https://furcationland.org",
+      "startDate": "2024-04-12",
+      "endDate": "2024-04-14",
+      "venue": "Holiday Inn Portland-By The Bay",
+      "address": "Portland, ME, USA",
+      "country": "US",
+      "latLng": [
+        43.6534888,
+        -70.2608888
+      ]
+    },
+    {
+      "id": "furcationland-2023",
+      "name": "Furcationland 2023",
+      "url": "https://furcationland.org",
+      "startDate": "2023-04-14",
+      "endDate": "2023-04-16",
+      "venue": "Holiday Inn Portland-By The Bay",
+      "address": "Portland, ME, USA",
+      "country": "US",
+      "latLng": [
+        43.6534888,
+        -70.2608888
       ]
     }
   ]

@@ -10,7 +10,7 @@ import os
 
 def main():
     (_, src, path) = sys.argv
-    files = sorted(os.listdir(src))
+    files = sorted(os.listdir(src), key=lambda fn: os.path.splitext(fn))
 
     parts = path.split('/')
 

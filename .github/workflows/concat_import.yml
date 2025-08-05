@@ -1,7 +1,7 @@
-name: import
+name: concat_import
 on:
   schedule:
-    - cron: "15 * * * *"
+    - cron: "15 0 * * *"
 
   workflow_dispatch:
 
@@ -19,10 +19,7 @@ jobs:
       - run: |
           git config --global user.name "cons.fyi GitHub bot"
           git config --global user.email "github@cons.fyi"
-      - run: |
-          ./tools/data-importers/fancons_importer.py
-          ./tools/data-importers/rams_importer.py
-          ./tools/data-importers/import_concat_all.sh
+      - run: ./tools/data-importers/import_concat_all.sh
         env:
           GOOGLE_MAPS_API_KEY: ${{ secrets.GOOGLE_MAPS_API_KEY }}
       - run: |

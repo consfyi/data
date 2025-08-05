@@ -1,0 +1,28 @@
+name: rams_import
+on:
+  schedule:
+    - cron: "15 0 * * *"
+
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      - uses: astral-sh/setup-uv@v6
+      - run: |
+          git config --global user.name "cons.fyi GitHub bot"
+          git config --global user.email "github@cons.fyi"
+      - run: ./tools/data-importers/rams_importer.py
+        env:
+          GOOGLE_MAPS_API_KEY: ${{ secrets.GOOGLE_MAPS_API_KEY }}
+      - run: |
+          git add .
+          git diff-index --quiet HEAD || git commit -m "via import"
+          git push

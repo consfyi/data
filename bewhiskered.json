@@ -2,6 +2,20 @@
   "name": "Bewhiskered",
   "events": [
     {
+      "id": "bewhiskered-2026",
+      "name": "Bewhiskered 2026",
+      "url": "https://bewhiskeredcon.org",
+      "startDate": "2026-04-02",
+      "endDate": "2026-04-05",
+      "venue": "Durham Convention Center",
+      "address": "West Morgan Street, Durham, NC, USA",
+      "country": "US",
+      "latLng": [
+        35.9975142,
+        -78.90234679999999
+      ]
+    },
+    {
       "id": "bewhiskered-2025",
       "name": "Bewhiskered 2025",
       "url": "https://bewhiskeredcon.org",

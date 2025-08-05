@@ -1,4 +1,4 @@
-name: rams_import
+name: import_rams
 on:
   schedule:
     - cron: "15 0 * * *"

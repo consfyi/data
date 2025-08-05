@@ -1,4 +1,4 @@
-name: fancons_import
+name: import_fancons
 on:
   schedule:
     - cron: "15 * * * *"

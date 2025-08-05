@@ -6,9 +6,9 @@ on:
 
   workflow_run:
     workflows:
-      - fancons_import
-      - concat_import
-      - rams_import
+      - import_fancons
+      - import_concat
+      - import_rams
     types:
       - completed
 

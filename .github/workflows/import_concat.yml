@@ -1,4 +1,4 @@
-name: concat_import
+name: import_concat
 on:
   schedule:
     - cron: "15 */6 * * *"

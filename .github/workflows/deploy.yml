@@ -6,7 +6,7 @@ on:
 
   workflow_run:
     workflows:
-      - fancons_import
+      - import
     types:
       - completed
 

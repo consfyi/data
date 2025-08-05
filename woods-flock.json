@@ -42,20 +42,6 @@
         35.7069187,
         -85.3821486
       ]
-    },
-    {
-      "id": "woods-flock-2023",
-      "name": "Woods Flock 2023",
-      "url": "https://woodsflock.com",
-      "startDate": "2023-10-20",
-      "endDate": "2023-10-22",
-      "venue": "Fall Creek Falls State Park - Eli Field",
-      "address": "Village Camp Rd, Spencer, TN, USA",
-      "country": "US",
-      "latLng": [
-        35.7069187,
-        -85.3821486
-      ]
     }
   ]
 }

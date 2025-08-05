@@ -22,14 +22,11 @@
       "startDate": "2025-03-07",
       "endDate": "2025-03-09",
       "venue": "Sheraton Imperial Hotel Raleigh-Durham Airport at Research Triangle Park",
-      "address": "Durham, NC, USA",
+      "address": "at Exit, Page Road, Durham, NC, USA",
       "country": "US",
       "latLng": [
         35.8781597,
         -78.83849920000002
-      ],
-      "sources": [
-        "fancons.com"
       ]
     }
   ]

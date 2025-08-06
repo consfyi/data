@@ -8,15 +8,39 @@
       "startDate": "2025-11-21",
       "endDate": "2025-11-23",
       "venue": "Holiday Inn Auckland Airport",
-      "address": "Auckland, New Zealand",
+      "address": "Ascot Road, Māngere, Auckland, New Zealand",
       "country": "NZ",
       "latLng": [
-        -36.9731132,
-        174.7855693
-      ],
-      "sources": [
-        "fancons.com",
-        "coyo.tl"
+        -36.9731497,
+        174.78584290000003
+      ]
+    },
+    {
+      "id": "furconz-hotel-2025",
+      "name": "FurcoNZ Hotel 2025",
+      "url": "https://furconz.org.nz",
+      "startDate": "2025-11-20",
+      "endDate": "2025-11-23",
+      "venue": "Holiday Inn Auckland Airport",
+      "address": "Ascot Road, Māngere, Auckland, New Zealand",
+      "country": "NZ",
+      "latLng": [
+        -36.9731497,
+        174.78584290000003
+      ]
+    },
+    {
+      "id": "furconz-hotel-2024",
+      "name": "FurcoNZ Hotel 2024",
+      "url": "https://furconz.org.nz",
+      "startDate": "2024-11-21",
+      "endDate": "2024-11-24",
+      "venue": "Holiday Inn Auckland Airport",
+      "address": "Ascot Road, Māngere, Auckland, New Zealand",
+      "country": "NZ",
+      "latLng": [
+        -36.9731497,
+        174.78584290000003
       ]
     }
   ]

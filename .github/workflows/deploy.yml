@@ -6,6 +6,7 @@ on:
 
   workflow_run:
     workflows:
+      - import_furdu
       - import_fancons
       - import_concat
       - import_rams

@@ -10,9 +10,16 @@
 import html
 import mistune
 import sys
+import re
 from pygments import highlight
 from pygments.lexers import get_lexer_by_name
 from pygments.formatters import html as pygments_html
+
+
+def slugify(text):
+    text = text.lower()
+    text = re.sub(r"[^a-z0-9]+", "-", text).strip("-")
+    return text
 
 
 class MyRenderer(mistune.HTMLRenderer):
@@ -23,7 +30,7 @@ class MyRenderer(mistune.HTMLRenderer):
     def heading(self, text, level):
         if level == 1 and self.title is None:
             self.title = text
-        return super().heading(text, level)
+        return f'<h{level} id="{slugify(text)}">{text}</h{level}>'
 
     def block_code(self, code, info=None):
         if info is not None:

@@ -7,6 +7,8 @@ body:
   - type: markdown
     attributes:
       value: |
+        Please make sure to review the [listing policy](https://data.cons.fyi/#listing-policy) first.
+
         All information must be verifiable from official sources for the convention.
 
   - id: name

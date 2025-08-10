@@ -8,15 +8,11 @@
       "startDate": "2025-09-05",
       "endDate": "2025-09-07",
       "venue": "Hyatt Regency Minneapolis",
-      "address": "Minneapolis, MN, USA",
+      "address": "Nicollet Mall, Minneapolis, MN, USA",
       "country": "US",
       "latLng": [
-        44.9706891,
-        -93.2784744
-      ],
-      "sources": [
-        "fancons.com",
-        "coyo.tl"
+        44.9705423,
+        -93.2781067
       ]
     }
   ]

@@ -11,6 +11,7 @@ In order for a convention to be listed by data.cons.fyi, it must fulfill the fol
 - The target audience must be furries. Conventions that are primarily not targeted towards furries but contain some furry programming do not meet this requirement.
 - The convention must be at least 8 hours in length.
 - The convention must have an official website. Only having a Facebook page, Instagram post, etc. is not sufficient to meet this requirement.
+- An authorized representative of the convention may [request delisting](https://github.com/consfyi/data/issues/new?template=edit-convention.yml&delist=true) at any time.
 
 This policy is subject to change without notice.
 

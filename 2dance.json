@@ -1,0 +1,19 @@
+{
+  "name": "2Dance",
+  "events": [
+    {
+      "id": "2dance-2026",
+      "name": "2Dance 2026",
+      "url": "https://two-dance.de",
+      "startDate": "2026-04-10",
+      "endDate": "2026-04-12",
+      "venue": "Mehrzweckhalle / Gesellschaftsräume Im Giesendahl",
+      "address": "Gem. Uentroper Vereine, Im Giesendahl, Hamm, Germany",
+      "country": "DE",
+      "latLng": [
+        51.6925118,
+        7.929074900000001
+      ]
+    }
+  ]
+}

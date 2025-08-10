@@ -1,0 +1,19 @@
+{
+  "name": "SiamPaws",
+  "events": [
+    {
+      "id": "siampaws-2025",
+      "name": "SiamPaws 2025",
+      "url": "https://www.siampaws.com",
+      "startDate": "2025-06-07",
+      "endDate": "2025-06-08",
+      "venue": "The Emerald Hotel",
+      "address": "Ratchadaphisek Road, Din Daeng, Bangkok, Thailand",
+      "country": "TH",
+      "latLng": [
+        13.7754503,
+        100.5725367
+      ]
+    }
+  ]
+}

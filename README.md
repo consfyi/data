@@ -4,6 +4,16 @@ This is the data for [cons.fyi](https://cons.fyi). It was generated at <span id=
 
 If there is an issue with data accuracy, you would like a convention listed, or you would like to delist your convention, you may [file an issue here](https://github.com/consfyi/data/issues/new).
 
+## Listing policy
+
+In order for a convention to be listed by data.cons.fyi, it must fulfill the following requirements:
+
+- The target audience must be furries. Conventions that are primarily not targeted towards furries but contain some furry programming do not meet this requirement.
+- The convention must be at least 8 hours in length.
+- The convention must have an official website. Only having a Facebook page, Instagram post, etc. is not sufficient to meet this requirement.
+
+This policy is subject to change without notice.
+
 ## Usage policy
 
 Attribution is not required but appreciated. This helps us keep our data up to date, which in turn helps everyone else!

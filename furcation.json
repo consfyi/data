@@ -1,0 +1,19 @@
+{
+  "name": "Furcation",
+  "events": [
+    {
+      "id": "furcation-2025",
+      "name": "Furcation 2024",
+      "url": "https://furcation.org.uk",
+      "startDate": "2025-11-22",
+      "endDate": "2025-11-25",
+      "venue": "Parkdean Resorts Sandford Holiday Park, Dorset",
+      "address": "Willow Crescent, Holton Heath, Poole, UK",
+      "country": "GB",
+      "latLng": [
+        50.7204167,
+        -2.0856757999999997
+      ]
+    }
+  ]
+}

@@ -120,18 +120,10 @@ def main():
         sys.exit(1)
 
     with open(output_dir / "series.json", "w") as f:
-        json.dump(
-            sorted(list(all_series.keys())),
-            f,
-            ensure_ascii=False,
-        )
+        json.dump(sorted(list(all_series.keys())), f, ensure_ascii=False)
 
     with open(output_dir / "events.json", "w") as f:
-        json.dump(
-            list(events),
-            f,
-            ensure_ascii=False,
-        )
+        json.dump(list(events), f, ensure_ascii=False)
 
     now = whenever.Instant.now()
 
@@ -186,11 +178,12 @@ def main():
         f.write("END:VCALENDAR\r\n")
 
     with open(output_dir / "current.json", "w") as f:
-        json.dump(
-            current,
-            f,
-            ensure_ascii=False,
-        )
+        json.dump(current, f, ensure_ascii=False)
+
+    with open(output_dir / "current.jsonl", "w") as f:
+        for event in current:
+            json.dump(event, f, ensure_ascii=False)
+            f.write("\n")
 
     last = [
         event
@@ -208,11 +201,12 @@ def main():
     )
 
     with open(output_dir / "last.json", "w") as f:
-        json.dump(
-            last,
-            f,
-            ensure_ascii=False,
-        )
+        json.dump(last, f, ensure_ascii=False)
+
+    with open(output_dir / "last.jsonl", "w") as f:
+        for event in last:
+            json.dump(event, f, ensure_ascii=False)
+            f.write("\n")
 
 
 if __name__ == "__main__":

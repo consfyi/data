@@ -37,7 +37,7 @@ class MyRenderer(mistune.HTMLRenderer):
             lexer = get_lexer_by_name(info, stripall=True)
             formatter = pygments_html.HtmlFormatter(cssclass="codehilite")
             return highlight(code, lexer, formatter)
-        return "<pre><code>" + mistune.escape(code) + "</code></pre>"
+        return f"<pre><code>{mistune.escape(code)}</code></pre>"
 
 
 def main():

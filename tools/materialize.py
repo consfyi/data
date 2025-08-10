@@ -177,9 +177,6 @@ def main():
             f.write("END:VEVENT\r\n")
         f.write("END:VCALENDAR\r\n")
 
-    with open(output_dir / "current.json", "w") as f:
-        json.dump(current, f, ensure_ascii=False)
-
     with open(output_dir / "current.jsonl", "w") as f:
         for event in current:
             json.dump(event, f, ensure_ascii=False)
@@ -199,9 +196,6 @@ def main():
             event["id"],
         )
     )
-
-    with open(output_dir / "last.json", "w") as f:
-        json.dump(last, f, ensure_ascii=False)
 
     with open(output_dir / "last.jsonl", "w") as f:
         for event in last:

@@ -2,20 +2,17 @@
   "name": "Furvester",
   "events": [
     {
-      "id": "furvester-2024",
-      "name": "Furvester 2024",
+      "id": "furvester-6",
+      "name": "Furvester 6",
       "url": "https://furvester.org",
       "startDate": "2024-12-29",
       "endDate": "2025-01-02",
       "venue": "Hotel Fortuna Reutlingen/Tübingen",
-      "address": "Reutlingen, Germany",
+      "address": "Carl-Zeiss-Straße, Reutlingen-Betzingen, Germany",
       "country": "DE",
       "latLng": [
-        48.49944439999999,
+        48.499444399999994,
         9.1502778
-      ],
-      "sources": [
-        "fancons.com"
       ]
     }
   ]

@@ -8,15 +8,11 @@
       "startDate": "2026-02-14",
       "endDate": "2026-02-17",
       "venue": "Acampamento Terra do Saber",
-      "address": "Franco da Rocha, SP, Brazil",
+      "address": "Rua Alencar Martins - Aldeia Ivoturucaia, Franco da Rocha - State of São Paulo, Brazil",
       "country": "BR",
       "latLng": [
-        -23.3193571,
-        -46.7862628
-      ],
-      "sources": [
-        "fancons.com",
-        "coyo.tl"
+        -23.3194071,
+        -46.78616239999999
       ]
     }
   ]

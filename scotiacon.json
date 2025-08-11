@@ -7,16 +7,12 @@
       "url": "https://www.scotiacon.org.uk",
       "startDate": "2026-02-06",
       "endDate": "2026-02-09",
-      "venue": "Crowne Plaza Glasgow",
-      "address": "Glasgow, UK",
+      "venue": "Crowne Plaza Glasgow by IHG",
+      "address": "Congress Road, Glasgow, UK",
       "country": "GB",
       "latLng": [
-        55.8597859,
-        -4.2897379
-      ],
-      "sources": [
-        "fancons.com",
-        "coyo.tl"
+        55.85977889999999,
+        -4.289692
       ]
     }
   ]

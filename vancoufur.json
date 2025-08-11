@@ -8,15 +8,11 @@
       "startDate": "2026-03-05",
       "endDate": "2026-03-08",
       "venue": "Richmond Conference Centre",
-      "address": "Richmond, British Columbia, Canada",
+      "address": "Westminster Highway, Richmond, BC, Canada",
       "country": "CA",
       "latLng": [
-        49.1710571,
-        -123.1414519
-      ],
-      "sources": [
-        "fancons.com",
-        "coyo.tl"
+        49.1709306,
+        -123.1416696
       ]
     }
   ]

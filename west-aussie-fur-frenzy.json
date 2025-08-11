@@ -8,15 +8,11 @@
       "startDate": "2025-09-19",
       "endDate": "2025-09-21",
       "venue": "Esplanade Hotel Fremantle by Rydges",
-      "address": "Fremantle, Western Australia, Australia",
+      "address": "Marine Terrace, Fremantle WA, Australia",
       "country": "AU",
       "latLng": [
-        -32.056909,
-        115.7458664
-      ],
-      "sources": [
-        "fancons.com",
-        "coyo.tl"
+        -32.0573082,
+        115.7463379
       ]
     }
   ]

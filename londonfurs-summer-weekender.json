@@ -7,15 +7,12 @@
       "url": "https://londonfurs.org.uk/summer25/",
       "startDate": "2025-07-18",
       "endDate": "2025-07-19",
-      "venue": "Jewel of London / Tank & Paddle Minster Court",
-      "address": "London, UK",
+      "venue": "Tank & Paddle Minster Court",
+      "address": "Mincing Lane, Minster Court, London, UK",
       "country": "GB",
       "latLng": [
-        51.5106595,
-        -0.0806544
-      ],
-      "sources": [
-        "fancons.com"
+        51.5109443,
+        -0.0809249
       ]
     }
   ]

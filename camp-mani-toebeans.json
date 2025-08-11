@@ -8,15 +8,11 @@
       "startDate": "2025-08-29",
       "endDate": "2025-09-01",
       "venue": "Camp Wasaga",
-      "address": "Onanole, Manitoba, Canada",
+      "address": "Reid Rd, Onanole, MB, Canada",
       "country": "CA",
       "latLng": [
-        50.6643164,
-        -100.0189377
-      ],
-      "sources": [
-        "fancons.com",
-        "coyo.tl"
+        50.6643681,
+        -100.0189803
       ]
     }
   ]

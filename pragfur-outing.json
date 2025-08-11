@@ -7,15 +7,12 @@
       "url": "https://www.pragfur.cz/outing",
       "startDate": "2025-06-21",
       "endDate": "2025-06-21",
-      "venue": "Park Podviní - Vysočany",
-      "address": "Prague, Czech Republic",
+      "venue": "Podviní",
+      "address": "Rubeška, Prague 9-Vysočany, Czechia",
       "country": "CZ",
       "latLng": [
-        50.1096219,
-        14.4935521
-      ],
-      "sources": [
-        "fancons.com"
+        50.1108994,
+        14.4931136
       ]
     }
   ]

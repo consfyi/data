@@ -21,15 +21,12 @@
       "url": "https://furnalequinox.com",
       "startDate": "2025-03-21",
       "endDate": "2025-03-23",
-      "venue": "Westin Harbour Castle",
-      "address": "Toronto, Ontario, Canada",
+      "venue": "The Westin Harbour Castle",
+      "address": "Harbour Square, Toronto, ON, Canada",
       "country": "CA",
       "latLng": [
         43.64118029999999,
         -79.3762173
-      ],
-      "sources": [
-        "fancons.com"
       ]
     }
   ]

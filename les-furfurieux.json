@@ -8,14 +8,11 @@
       "startDate": "2025-05-08",
       "endDate": "2025-05-11",
       "venue": "Hotel Metz Technopole - Best Western Plus",
-      "address": "Metz, France",
+      "address": "Rue Félix Savart, Metz, France",
       "country": "FR",
       "latLng": [
         49.10049189999999,
         6.2254616
-      ],
-      "sources": [
-        "fancons.com"
       ]
     }
   ]

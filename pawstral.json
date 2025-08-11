@@ -7,15 +7,12 @@
       "url": "https://pawstral.cl",
       "startDate": "2025-08-29",
       "endDate": "2025-08-31",
-      "venue": "Icon Hotel Santiago",
-      "address": "Las Condes, Chile",
+      "venue": "ICON Hotel Santiago",
+      "address": "Alonso de Córdova, Las Condes, Chile",
       "country": "CL",
       "latLng": [
-        -33.4078048,
-        -70.5680306
-      ],
-      "sources": [
-        "fancons.com"
+        -33.4078744,
+        -70.5680069
       ]
     }
   ]

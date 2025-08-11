@@ -22,14 +22,11 @@
       "startDate": "2025-07-18",
       "endDate": "2025-07-20",
       "venue": "Hotel Nacional Inn Jaraguá São Paulo",
-      "address": "São Paulo, SP, Brazil",
+      "address": "Rua Martins Fontes - Consolação, São Paulo - State of São Paulo, Brazil",
       "country": "BR",
       "latLng": [
-        -23.5484133,
-        -46.6429929
-      ],
-      "sources": [
-        "fancons.com"
+        -23.5485319,
+        -46.6430777
       ]
     }
   ]

@@ -22,14 +22,11 @@
       "startDate": "2025-05-23",
       "endDate": "2025-05-25",
       "venue": "Sheraton Portland Airport Hotel",
-      "address": "Portland, OR, USA",
+      "address": "Northeast Airport Way, Portland, OR, USA",
       "country": "US",
       "latLng": [
         45.5830457,
         -122.5752112
-      ],
-      "sources": [
-        "fancons.com"
       ]
     }
   ]

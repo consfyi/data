@@ -8,14 +8,11 @@
       "startDate": "2025-06-05",
       "endDate": "2025-06-08",
       "venue": "Lake Michigan Recreation Area",
-      "address": "Free Soil, MI, USA",
+      "address": "West Forest Trail Road, Free Soil, MI, USA",
       "country": "US",
       "latLng": [
         44.11856470000001,
         -86.42447519999999
-      ],
-      "sources": [
-        "fancons.com"
       ]
     }
   ]

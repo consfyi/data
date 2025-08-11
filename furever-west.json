@@ -8,15 +8,11 @@
       "startDate": "2025-09-19",
       "endDate": "2025-09-21",
       "venue": "Hilton Garden Inn Laramie",
-      "address": "Laramie, WY, USA",
+      "address": "Grand Avenue, Laramie, WY, USA",
       "country": "US",
       "latLng": [
-        41.3101524,
-        -105.5638466
-      ],
-      "sources": [
-        "fancons.com",
-        "coyo.tl"
+        41.31002,
+        -105.5635849
       ]
     }
   ]

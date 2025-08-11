@@ -22,14 +22,11 @@
       "startDate": "2024-12-30",
       "endDate": "2025-01-01",
       "venue": "Embassy Suites by Hilton Newark Wilmington South",
-      "address": "Newark, DE, USA",
+      "address": "South College Avenue, Newark, DE, USA",
       "country": "US",
       "latLng": [
         39.6591405,
         -75.7533033
-      ],
-      "sources": [
-        "fancons.com"
       ]
     }
   ]

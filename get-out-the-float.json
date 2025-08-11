@@ -8,15 +8,11 @@
       "startDate": "2026-02-12",
       "endDate": "2026-02-15",
       "venue": "Seaside Civic & Convention Center",
-      "address": "Seaside, OR, USA",
+      "address": "1st Avenue, Seaside, OR, USA",
       "country": "US",
       "latLng": [
-        45.9941334,
-        -123.9253055
-      ],
-      "sources": [
-        "fancons.com",
-        "coyo.tl"
+        45.9940788,
+        -123.9254468
       ]
     }
   ]

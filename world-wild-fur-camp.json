@@ -8,15 +8,11 @@
       "startDate": "2025-10-17",
       "endDate": "2025-10-19",
       "venue": "YMCA Camp Willson",
-      "address": "Bellefontaine, OH, USA",
+      "address": "County Road 11, Bellefontaine, OH, USA",
       "country": "US",
       "latLng": [
-        40.3537857,
-        -83.8093439
-      ],
-      "sources": [
-        "fancons.com",
-        "coyo.tl"
+        40.3537526,
+        -83.80931009999999
       ]
     }
   ]

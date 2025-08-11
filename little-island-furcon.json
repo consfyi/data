@@ -7,15 +7,12 @@
       "url": "https://www.littleislandfur.com",
       "startDate": "2025-06-14",
       "endDate": "2025-06-15",
-      "venue": "One Farrer",
-      "address": "Singapore",
+      "venue": "One Farrer Hotel",
+      "address": "Farrer Park Station Road, Singapore",
       "country": "SG",
       "latLng": [
         1.3125457,
         103.8543732
-      ],
-      "sources": [
-        "fancons.com"
       ]
     }
   ]

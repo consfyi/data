@@ -8,14 +8,11 @@
       "startDate": "2025-08-29",
       "endDate": "2025-08-31",
       "venue": "Memphis Vitality Hotel",
-      "address": "Memphis, TN, USA",
+      "address": "Thousand Oaks Boulevard, Memphis, TN, USA",
       "country": "US",
       "latLng": [
-        35.0768111,
-        -89.903563
-      ],
-      "sources": [
-        "fancons.com"
+        35.0768033,
+        -89.9035351
       ]
     }
   ]

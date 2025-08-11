@@ -8,15 +8,11 @@
       "startDate": "2025-09-03",
       "endDate": "2025-09-06",
       "venue": "Congress Center Hamburg",
-      "address": "Hamburg, Germany",
+      "address": "Congressplatz, Hamburg, Deutschland",
       "country": "DE",
       "latLng": [
-        53.561764,
-        9.9857445
-      ],
-      "sources": [
-        "fancons.com",
-        "coyo.tl"
+        53.5615943,
+        9.9859745
       ]
     }
   ]

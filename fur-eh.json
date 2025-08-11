@@ -8,14 +8,11 @@
       "startDate": "2026-07-16",
       "endDate": "2026-07-19",
       "venue": "Wyndham Edmonton Hotel and Conference Centre",
-      "address": "Edmonton, Alberta, Canada",
+      "address": "Gateway Boulevard Northwest, Edmonton, AB, Canada",
       "country": "CA",
       "latLng": [
-        53.4825117,
-        -113.4937589
-      ],
-      "sources": [
-        "fancons.com"
+        53.482442,
+        -113.4929521
       ]
     },
     {
@@ -25,14 +22,11 @@
       "startDate": "2025-07-17",
       "endDate": "2025-07-20",
       "venue": "Wyndham Edmonton Hotel and Conference Centre",
-      "address": "Edmonton, Alberta, Canada",
+      "address": "Gateway Boulevard Northwest, Edmonton, AB, Canada",
       "country": "CA",
       "latLng": [
-        53.4825117,
-        -113.4937589
-      ],
-      "sources": [
-        "fancons.com"
+        53.482442,
+        -113.4929521
       ]
     }
   ]

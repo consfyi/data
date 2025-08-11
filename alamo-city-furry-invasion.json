@@ -8,15 +8,11 @@
       "startDate": "2025-10-09",
       "endDate": "2025-10-12",
       "venue": "Embassy Suites by Hilton San Marcos Hotel Conference Center",
-      "address": "San Marcos, TX, USA",
+      "address": "East McCarty Lane, San Marcos, TX, USA",
       "country": "US",
       "latLng": [
-        29.839588,
-        -97.9695576
-      ],
-      "sources": [
-        "fancons.com",
-        "coyo.tl"
+        29.8391454,
+        -97.9691577
       ]
     }
   ]

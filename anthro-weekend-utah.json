@@ -8,15 +8,11 @@
       "startDate": "2025-08-01",
       "endDate": "2025-08-03",
       "venue": "Davis Conference Center",
-      "address": "Layton, UT, USA",
+      "address": "North 700 West, Layton, UT, USA",
       "country": "US",
       "latLng": [
-        41.084361,
-        -111.980789
-      ],
-      "sources": [
-        "fancons.com",
-        "coyo.tl"
+        41.084896,
+        -111.9810485
       ]
     }
   ]

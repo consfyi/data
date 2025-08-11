@@ -8,15 +8,11 @@
       "startDate": "2026-01-02",
       "endDate": "2026-01-04",
       "venue": "Sheraton Phoenix Downtown",
-      "address": "Phoenix, AZ, USA",
+      "address": "N 3rd St, Phoenix, AZ, USA",
       "country": "US",
       "latLng": [
-        33.452514,
-        -112.0706161
-      ],
-      "sources": [
-        "fancons.com",
-        "coyo.tl"
+        33.4522663,
+        -112.0703487
       ]
     }
   ]

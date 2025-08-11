@@ -8,14 +8,11 @@
       "startDate": "2025-04-18",
       "endDate": "2025-04-22",
       "venue": "Novotel Lyon Bron Eurexpo",
-      "address": "Bron, France",
+      "address": "Avenue Jean Monnet, Bron, France",
       "country": "FR",
       "latLng": [
         45.7247276,
         4.9292541
-      ],
-      "sources": [
-        "fancons.com"
       ]
     }
   ]

@@ -8,15 +8,11 @@
       "startDate": "2026-05-22",
       "endDate": "2026-05-26",
       "venue": "Hilton Birmingham Metropole",
-      "address": "Birmingham, UK",
+      "address": "Pendigo Way, Marston Green, Birmingham, UK",
       "country": "GB",
       "latLng": [
-        52.4505297,
-        -1.7156676
-      ],
-      "sources": [
-        "fancons.com",
-        "coyo.tl"
+        52.4505825,
+        -1.715153
       ]
     }
   ]

@@ -7,15 +7,12 @@
       "url": "https://www.bayern-furs.de/events/bfd",
       "startDate": "2025-06-21",
       "endDate": "2025-06-21",
-      "venue": "Z-Bau",
-      "address": "Nürnberg, Germany",
+      "venue": "Z-Bau - House of Contemporary Culture",
+      "address": "Frankenstraße, Nuremberg, Deutschland",
       "country": "DE",
       "latLng": [
         49.43056139999999,
         11.09474
-      ],
-      "sources": [
-        "fancons.com"
       ]
     }
   ]

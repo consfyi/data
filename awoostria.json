@@ -7,16 +7,12 @@
       "url": "https://awoostria.at",
       "startDate": "2025-07-24",
       "endDate": "2025-07-27",
-      "venue": "Arcotel Wimberger Wien",
-      "address": "Vienna, Austria",
+      "venue": "ARCOTEL Wimberger Wien",
+      "address": "Neubaugürtel, Vienna, AT",
       "country": "AT",
       "latLng": [
-        48.2006444,
-        16.3384067
-      ],
-      "sources": [
-        "fancons.com",
-        "coyo.tl"
+        48.200702,
+        16.3383114
       ]
     }
   ]

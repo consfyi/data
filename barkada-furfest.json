@@ -8,15 +8,11 @@
       "startDate": "2025-09-06",
       "endDate": "2025-09-07",
       "venue": "Sequoia Hotel Manila Bay",
-      "address": "Paranaque City, Metro Manila, Philippines",
+      "address": "Parañaque, Metro Manila, Philippines",
       "country": "PH",
       "latLng": [
-        14.5264269,
-        120.991848
-      ],
-      "sources": [
-        "fancons.com",
-        "coyo.tl"
+        14.5264101,
+        120.9918523
       ]
     }
   ]

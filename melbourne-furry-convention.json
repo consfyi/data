@@ -8,14 +8,11 @@
       "startDate": "2026-02-20",
       "endDate": "2026-02-22",
       "venue": "Novotel Melbourne Preston",
-      "address": "Preston, Victoria, Australia",
+      "address": "Bell Street, Preston VIC, Australia",
       "country": "AU",
       "latLng": [
         -37.7461191,
         145.0083717
-      ],
-      "sources": [
-        "fancons.com"
       ]
     },
     {
@@ -25,14 +22,11 @@
       "startDate": "2025-02-21",
       "endDate": "2025-02-23",
       "venue": "Novotel Melbourne Preston",
-      "address": "Preston, Victoria, Australia",
+      "address": "Bell Street, Preston VIC, Australia",
       "country": "AU",
       "latLng": [
         -37.7461191,
         145.0083717
-      ],
-      "sources": [
-        "fancons.com"
       ]
     }
   ]

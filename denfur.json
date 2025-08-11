@@ -8,15 +8,11 @@
       "startDate": "2025-08-29",
       "endDate": "2025-08-31",
       "venue": "Sheraton Denver Downtown Hotel",
-      "address": "Denver, CO, USA",
+      "address": "Court Place, Denver, CO, USA",
       "country": "US",
       "latLng": [
-        39.7419647,
-        -104.9891354
-      ],
-      "sources": [
-        "fancons.com",
-        "coyo.tl"
+        39.7421248,
+        -104.989906
       ]
     }
   ]

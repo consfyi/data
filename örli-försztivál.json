@@ -7,15 +7,12 @@
       "url": "https://orli.hu",
       "startDate": "2025-06-19",
       "endDate": "2025-06-22",
-      "venue": "Villapark Várgesztes",
+      "venue": "Villapark",
       "address": "Várgesztes, Hungary",
       "country": "HU",
       "latLng": [
-        47.4855475,
-        18.3910279
-      ],
-      "sources": [
-        "fancons.com"
+        47.4867216,
+        18.389136
       ]
     }
   ]

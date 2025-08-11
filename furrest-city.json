@@ -8,14 +8,11 @@
       "startDate": "2025-09-13",
       "endDate": "2025-09-13",
       "venue": "Sears think[box]",
-      "address": "Cleveland, OH, USA",
+      "address": "Cedar Avenue, Cleveland, OH, USA",
       "country": "US",
       "latLng": [
-        41.5005593,
-        -81.6056834
-      ],
-      "sources": [
-        "fancons.com"
+        41.5005757,
+        -81.60568479999999
       ]
     }
   ]

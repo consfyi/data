@@ -8,14 +8,11 @@
       "startDate": "2025-08-14",
       "endDate": "2025-08-17",
       "venue": "Hyatt Regency Dallas",
-      "address": "Dallas, TX, USA",
+      "address": "Reunion Boulevard, Dallas, TX, USA",
       "country": "US",
       "latLng": [
-        32.7755992,
-        -96.809601
-      ],
-      "sources": [
-        "fancons.com"
+        32.7752763,
+        -96.8092154
       ]
     }
   ]

@@ -21,15 +21,12 @@
       "url": "https://canthrofur.org",
       "startDate": "2025-01-16",
       "endDate": "2025-01-20",
-      "venue": "VTF Le domaine des Puys",
-      "address": "Saint-Sauves-d'Auvergne, France",
+      "venue": "Village de vacances VTF Le domaine des Puys",
+      "address": "Guérinot, Saint-Sauves-d'Auvergne, France",
       "country": "FR",
       "latLng": [
         45.6231121,
         2.6952037
-      ],
-      "sources": [
-        "fancons.com"
       ]
     }
   ]

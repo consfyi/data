@@ -7,15 +7,12 @@
       "url": "https://furpile.pl",
       "startDate": "2025-05-09",
       "endDate": "2025-05-11",
-      "venue": "Boutique Hotel's III Łódź",
-      "address": "Łódź, Poland",
+      "venue": "Boutique Hotel's III Piłsudskiego",
+      "address": "al. marsz. Józefa Piłsudskiego, Łódź, Łódź Voivodeship, Poland",
       "country": "PL",
       "latLng": [
         51.7599923,
         19.4605208
-      ],
-      "sources": [
-        "fancons.com"
       ]
     }
   ]

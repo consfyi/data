@@ -8,15 +8,11 @@
       "startDate": "2025-10-10",
       "endDate": "2025-10-12",
       "venue": "Boutique Hotel's III Piłsudskiego",
-      "address": "Łódź, Poland",
+      "address": "al. marsz. Józefa Piłsudskiego, Łódź, Poland",
       "country": "PL",
       "latLng": [
-        51.7601428,
-        19.460568
-      ],
-      "sources": [
-        "fancons.com",
-        "coyo.tl"
+        51.7599923,
+        19.4605208
       ]
     }
   ]

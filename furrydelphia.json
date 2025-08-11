@@ -7,16 +7,12 @@
       "url": "https://www.furrydelphia.org",
       "startDate": "2025-08-22",
       "endDate": "2025-08-24",
-      "venue": "Sheraton Downtown Philadelphia",
-      "address": "Philadelphia, PA, USA",
+      "venue": "Sheraton Philadelphia Downtown",
+      "address": "North 17th Street, Philadelphia, PA, USA",
       "country": "US",
       "latLng": [
-        39.9572347,
-        -75.1670743
-      ],
-      "sources": [
-        "fancons.com",
-        "coyo.tl"
+        39.957391,
+        -75.16726830000002
       ]
     }
   ]

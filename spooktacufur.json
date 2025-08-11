@@ -8,14 +8,11 @@
       "startDate": "2025-10-25",
       "endDate": "2025-10-25",
       "venue": "Embassy Suites by Hilton Salt Lake West Valley City",
-      "address": "West Valley City, UT, USA",
+      "address": "Market Street, West Valley City, UT, USA",
       "country": "US",
       "latLng": [
-        40.6961989,
-        -111.9608941
-      ],
-      "sources": [
-        "fancons.com"
+        40.69611949999999,
+        -111.9608626
       ]
     }
   ]

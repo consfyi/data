@@ -7,16 +7,12 @@
       "url": "https://www.furdance.hu",
       "startDate": "2025-09-26",
       "endDate": "2025-09-28",
-      "venue": "Csokonai Kulturális Központ",
-      "address": "Budapest, Hungary",
+      "venue": "Csokonai Rendezvényház",
+      "address": "Budapest, Eötvös Street, Hungary",
       "country": "HU",
       "latLng": [
-        47.5564366,
-        19.1133933
-      ],
-      "sources": [
-        "fancons.com",
-        "coyo.tl"
+        47.5564845,
+        19.1134345
       ]
     }
   ]

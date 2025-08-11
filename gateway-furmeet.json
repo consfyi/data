@@ -8,15 +8,11 @@
       "startDate": "2025-10-03",
       "endDate": "2025-10-05",
       "venue": "Hilton St. Louis at the Ballpark",
-      "address": "St. Louis, MO, USA",
+      "address": "S Broadway, St. Louis, MO, USA",
       "country": "US",
       "latLng": [
-        38.6252565,
-        -90.1912512
-      ],
-      "sources": [
-        "fancons.com",
-        "coyo.tl"
+        38.6251397,
+        -90.19092769999999
       ]
     }
   ]

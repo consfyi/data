@@ -8,15 +8,11 @@
       "startDate": "2025-10-01",
       "endDate": "2025-10-05",
       "venue": "Petershof",
-      "address": "Erbach, Germany",
+      "address": "Sörup, Deutschland",
       "country": "DE",
       "latLng": [
-        49.6404757,
-        9.0459292
-      ],
-      "sources": [
-        "fancons.com",
-        "coyo.tl"
+        54.72306949999999,
+        9.6363992
       ]
     }
   ]

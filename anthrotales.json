@@ -8,15 +8,11 @@
       "startDate": "2026-05-14",
       "endDate": "2026-05-17",
       "venue": "Van der Valk Hotel Mons Congrès & Spa",
-      "address": "Mons, Belgium",
+      "address": "Avenue Mélina Mercouri, Mons, Belgium",
       "country": "BE",
       "latLng": [
-        50.4563266,
-        3.9406037
-      ],
-      "sources": [
-        "fancons.com",
-        "coyo.tl"
+        50.4564472,
+        3.9409015
       ]
     }
   ]

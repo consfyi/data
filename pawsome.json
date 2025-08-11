@@ -8,15 +8,11 @@
       "startDate": "2025-10-03",
       "endDate": "2025-10-06",
       "venue": "Mercure Gloucester Bowden Hall Hotel",
-      "address": "Gloucester, UK",
+      "address": "Bondend Lane, Upton Saint Leonards, Gloucester, UK",
       "country": "GB",
       "latLng": [
-        51.8340083,
-        -2.1883852
-      ],
-      "sources": [
-        "fancons.com",
-        "coyo.tl"
+        51.8339728,
+        -2.1883307
       ]
     }
   ]

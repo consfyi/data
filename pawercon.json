@@ -8,14 +8,11 @@
       "startDate": "2025-05-16",
       "endDate": "2025-05-18",
       "venue": "Hotel Sevilla Palace",
-      "address": "Ciudad de México, Mexico",
+      "address": "Avenida Paseo de la Reforma, Colonia Tabacalera, Mexico City, CDMX, Mexico",
       "country": "MX",
       "latLng": [
         19.4326963,
         -99.15624989999999
-      ],
-      "sources": [
-        "fancons.com"
       ]
     }
   ]

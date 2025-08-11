@@ -8,15 +8,11 @@
       "startDate": "2025-09-05",
       "endDate": "2025-09-08",
       "venue": "Valverde Eco Hotel",
-      "address": "Muldersdrif Lanseria, South Africa",
+      "address": "South Africa",
       "country": "ZA",
       "latLng": [
-        -25.9556957,
-        27.8763192
-      ],
-      "sources": [
-        "fancons.com",
-        "coyo.tl"
+        -25.9557126,
+        27.8764046
       ]
     }
   ]

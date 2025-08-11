@@ -8,15 +8,11 @@
       "startDate": "2025-09-05",
       "endDate": "2025-09-07",
       "venue": "Renaissance Tulsa Hotel & Convention Center",
-      "address": "Tulsa, OK, USA",
+      "address": "South 107th East Avenue, Tulsa, OK, USA",
       "country": "US",
       "latLng": [
-        36.0650505,
-        -95.8577575
-      ],
-      "sources": [
-        "fancons.com",
-        "coyo.tl"
+        36.0650536,
+        -95.8576868
       ]
     }
   ]

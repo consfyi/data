@@ -8,15 +8,11 @@
       "startDate": "2025-07-31",
       "endDate": "2025-08-04",
       "venue": "Deschutes National Forest",
-      "address": "Ogden Group Camp, La Pine, OR, USA",
+      "address": "Oregon, USA",
       "country": "US",
       "latLng": [
-        43.7291532,
-        -121.422049
-      ],
-      "sources": [
-        "fancons.com",
-        "coyo.tl"
+        44.0001153,
+        -121.5014231
       ]
     }
   ]

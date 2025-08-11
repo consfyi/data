@@ -8,15 +8,11 @@
       "startDate": "2025-08-06",
       "endDate": "2025-08-10",
       "venue": "Hotel Ameliówka",
-      "address": "Mąchocice Kapitulne, Poland",
+      "address": "ul. Bohdana Kosińskiego, Mąchocice Kapitulne, Poland",
       "country": "PL",
       "latLng": [
-        50.8977634,
-        20.7817025
-      ],
-      "sources": [
-        "fancons.com",
-        "coyo.tl"
+        50.8977905,
+        20.7818322
       ]
     }
   ]

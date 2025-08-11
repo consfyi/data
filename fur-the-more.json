@@ -7,16 +7,12 @@
       "url": "https://www.furthemore.org",
       "startDate": "2026-03-27",
       "endDate": "2026-03-29",
-      "venue": "Lord Baltimore Hotel / Kimpton Hotel Monaco Baltimore Inner Harbor",
-      "address": "Baltimore, MD, USA",
+      "venue": "Kimpton Hotel Monaco Baltimore Inner Harbor",
+      "address": "North Charles Street, Baltimore, MD, USA",
       "country": "US",
       "latLng": [
-        39.2897767,
-        -76.6158445
-      ],
-      "sources": [
-        "fancons.com",
-        "coyo.tl"
+        39.289747,
+        -76.615713
       ]
     }
   ]

@@ -7,15 +7,12 @@
       "url": "https://furrymosa.gjs.tw",
       "startDate": "2025-06-14",
       "endDate": "2025-06-14",
-      "venue": "New Taipei City Mie Complex",
-      "address": "New Taipei City, Taiwan",
+      "venue": "Sanchong Comprehensive Gymnasium",
+      "address": "Section 1, New Taipei Boulevard, Sanchong District, New Taipei City, Taiwan",
       "country": "TW",
       "latLng": [
-        25.0169826,
-        121.4627868
-      ],
-      "sources": [
-        "fancons.com"
+        25.0617771,
+        121.49149510000001
       ]
     }
   ]

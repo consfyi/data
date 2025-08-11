@@ -7,16 +7,12 @@
       "url": "https://www.jmof.jp",
       "startDate": "2026-01-09",
       "endDate": "2026-01-11",
-      "venue": "Loisir Hotel Toyohashi",
-      "address": "Toyohashi, Aichi, Japan",
+      "venue": "LOISIR HOTEL TOYOHASHI",
+      "address": "141 Fujisawachō, Toyohashi, Aichi, Japan",
       "country": "JP",
       "latLng": [
-        34.743506,
-        137.3703027
-      ],
-      "sources": [
-        "fancons.com",
-        "coyo.tl"
+        34.743463,
+        137.37096499999998
       ]
     }
   ]

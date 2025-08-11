@@ -8,14 +8,11 @@
       "startDate": "2025-06-06",
       "endDate": "2025-06-08",
       "venue": "Houston Marriott Westchase",
-      "address": "Houston, TX, USA",
+      "address": "Briarpark Drive, Houston, TX, USA",
       "country": "US",
       "latLng": [
         29.734323,
         -95.55009299999999
-      ],
-      "sources": [
-        "fancons.com"
       ]
     }
   ]

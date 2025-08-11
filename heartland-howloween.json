@@ -8,15 +8,11 @@
       "startDate": "2025-10-10",
       "endDate": "2025-10-12",
       "venue": "Comfort Inn & Suites Omaha Central",
-      "address": "Omaha, NE, USA",
+      "address": "Grover Street, Omaha, NE, USA",
       "country": "US",
       "latLng": [
-        41.226076,
-        -96.022218
-      ],
-      "sources": [
-        "fancons.com",
-        "coyo.tl"
+        41.22612,
+        -96.022202
       ]
     }
   ]

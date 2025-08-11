@@ -21,15 +21,12 @@
       "url": "https://gdakon.pl",
       "startDate": "2025-02-26",
       "endDate": "2025-03-02",
-      "venue": "Novotel Gdansk Marina",
-      "address": "Gdańsk, Poland",
+      "venue": "Novotel Gdańsk Marina",
+      "address": "Jelitkowska, Gdańsk, Poland",
       "country": "PL",
       "latLng": [
         54.4287746,
         18.5902129
-      ],
-      "sources": [
-        "fancons.com"
       ]
     }
   ]

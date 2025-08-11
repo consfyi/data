@@ -8,14 +8,11 @@
       "startDate": "2025-10-03",
       "endDate": "2025-10-05",
       "venue": "North Park Lodge",
-      "address": "Allison Park, PA, USA",
+      "address": "North Ridge Drive, Allison Park, PA, USA",
       "country": "US",
       "latLng": [
-        40.6170415,
-        -80.0170688
-      ],
-      "sources": [
-        "fancons.com"
+        40.6171276,
+        -80.0169784
       ]
     }
   ]

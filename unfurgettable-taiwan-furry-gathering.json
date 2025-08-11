@@ -8,14 +8,11 @@
       "startDate": "2025-07-19",
       "endDate": "2025-07-20",
       "venue": "Sheraton Hsinchu Hotel",
-      "address": "Zhubei City, Hsinchu County, Taiwan",
+      "address": "East Section 1, Guangming 6th Road, Zhubei City, Hsinchu County, Taiwan",
       "country": "TW",
       "latLng": [
-        24.8204603,
-        121.0280726
-      ],
-      "sources": [
-        "fancons.com"
+        24.820525,
+        121.0279874
       ]
     }
   ]

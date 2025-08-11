@@ -8,15 +8,11 @@
       "startDate": "2025-09-26",
       "endDate": "2025-09-29",
       "venue": "Lumley Castle",
-      "address": "Chester-le-Street, UK",
+      "address": "Ropery Lane, Chester-le-Street, UK",
       "country": "GB",
       "latLng": [
-        54.8533855,
-        -1.5532119
-      ],
-      "sources": [
-        "fancons.com",
-        "coyo.tl"
+        54.8533258,
+        -1.5532642
       ]
     }
   ]

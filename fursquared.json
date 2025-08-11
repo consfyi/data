@@ -8,15 +8,11 @@
       "startDate": "2026-02-05",
       "endDate": "2026-02-08",
       "venue": "Hilton Milwaukee City Center",
-      "address": "Milwaukee, WI, USA",
+      "address": "West Wisconsin Avenue, Milwaukee, WI, USA",
       "country": "US",
       "latLng": [
-        43.0384665,
-        -87.9182643
-      ],
-      "sources": [
-        "fancons.com",
-        "coyo.tl"
+        43.0384207,
+        -87.9180506
       ]
     }
   ]

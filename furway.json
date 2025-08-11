@@ -7,15 +7,12 @@
       "url": "https://www.furway.no",
       "startDate": "2025-07-17",
       "endDate": "2025-07-21",
-      "venue": "Åstjern hyttetun",
+      "venue": "Åstjern hyttetun A / S",
       "address": "Brandbu, Norway",
       "country": "NO",
       "latLng": [
-        60.4955572,
-        10.5827167
-      ],
-      "sources": [
-        "fancons.com"
+        60.49558779999999,
+        10.5827018
       ]
     }
   ]

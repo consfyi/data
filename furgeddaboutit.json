@@ -8,14 +8,11 @@
       "startDate": "2025-05-02",
       "endDate": "2025-05-04",
       "venue": "DoubleTree Suites by Hilton Hotel Mt. Laurel",
-      "address": "Mt Laurel Township, NJ, USA",
+      "address": "Fellowship Road, Mount Laurel Township, NJ, USA",
       "country": "US",
       "latLng": [
         39.9358914,
         -74.9580443
-      ],
-      "sources": [
-        "fancons.com"
       ]
     }
   ]

@@ -8,15 +8,11 @@
       "startDate": "2025-08-01",
       "endDate": "2025-08-03",
       "venue": "Hilton Strasbourg",
-      "address": "Strasbourg, France",
+      "address": "Avenue Herrenschmidt, Strasbourg, France",
       "country": "FR",
       "latLng": [
-        48.5969119,
-        7.7550027
-      ],
-      "sources": [
-        "fancons.com",
-        "coyo.tl"
+        48.5968009,
+        7.755260499999999
       ]
     }
   ]

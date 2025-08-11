@@ -8,14 +8,11 @@
       "startDate": "2025-07-18",
       "endDate": "2025-07-20",
       "venue": "Hi-Way Drive-In",
-      "address": "Carsonville, MI, USA",
+      "address": "Sanilac Road, Carsonville, MI, USA",
       "country": "US",
       "latLng": [
-        43.4241108,
-        -82.7204205
-      ],
-      "sources": [
-        "fancons.com"
+        43.4240303,
+        -82.72040559999999
       ]
     }
   ]

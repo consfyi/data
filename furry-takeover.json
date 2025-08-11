@@ -8,15 +8,11 @@
       "startDate": "2025-09-26",
       "endDate": "2025-09-28",
       "venue": "Fontana Village Resort & Marina",
-      "address": "Fontana Dam, NC, USA",
+      "address": "Woods Road, Fontana Dam, NC, USA",
       "country": "US",
       "latLng": [
-        35.4325502,
-        -83.821559
-      ],
-      "sources": [
-        "fancons.com",
-        "coyo.tl"
+        35.4325453,
+        -83.82139029999999
       ]
     }
   ]

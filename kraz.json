@@ -7,15 +7,12 @@
       "url": "https://www.kraz.eu",
       "startDate": "2025-04-30",
       "endDate": "2025-05-04",
-      "venue": "Westernové městečko Boskovice",
-      "address": "s.r.o., Boskovice, Czech Republic",
+      "venue": "Westernové městečko Boskovice, s.r.o.",
+      "address": "Svatopluka Čecha, Boskovice, Czechia",
       "country": "CZ",
       "latLng": [
         49.494778,
         16.6856997
-      ],
-      "sources": [
-        "fancons.com"
       ]
     }
   ]

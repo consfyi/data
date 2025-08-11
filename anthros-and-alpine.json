@@ -8,14 +8,11 @@
       "startDate": "2026-01-29",
       "endDate": "2026-02-01",
       "venue": "Sole Gjestegård",
-      "address": "Noresund, Norway",
+      "address": "Krøderfjordveien, Noresund, Norway",
       "country": "NO",
       "latLng": [
         60.1755457,
         9.6308097
-      ],
-      "sources": [
-        "fancons.com"
       ]
     }
   ]

@@ -7,16 +7,12 @@
       "url": "https://www.kemocon.com",
       "startDate": "2025-11-07",
       "endDate": "2025-11-09",
-      "venue": "Toki no Sumika",
-      "address": "Gotemba, Japan",
+      "venue": "Gotemba Kogen Tokinosumika",
+      "address": "719 Koyama, Gotemba, Shizuoka, Japan",
       "country": "JP",
       "latLng": [
-        35.236037,
-        138.9253249
-      ],
-      "sources": [
-        "fancons.com",
-        "coyo.tl"
+        35.2357896,
+        138.9250904
       ]
     }
   ]

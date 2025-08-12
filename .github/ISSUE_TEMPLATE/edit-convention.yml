@@ -1,6 +1,6 @@
 name: Edit convention
 description: Request an edit to or delisting of a convention
-title: "Edit convention: "
+title: "Edit convention: [INSERT NAME HERE]"
 labels:
   - edit
 body:

@@ -1,6 +1,6 @@
 name: Add convention
 description: Request listing of a convention
-title: "Add convention: "
+title: "Add convention: [INSERT NAME HERE]"
 labels:
   - add
 body:

@@ -2,6 +2,20 @@
   "name": "Golden State Fur Con",
   "events": [
     {
+      "id": "golden-state-fur-con-2026",
+      "name": "Golden State Fur Con 2026",
+      "url": "https://gsfurcon.org",
+      "startDate": "2026-03-13",
+      "endDate": "2026-03-15",
+      "venue": "Hilton Los Angeles Airport",
+      "address": "West Century Boulevard, Los Angeles, CA, USA",
+      "country": "US",
+      "latLng": [
+        33.9462252,
+        -118.3816294
+      ]
+    },
+    {
       "id": "golden-state-fur-con-2025",
       "name": "Golden State Fur Con 2025",
       "url": "https://gsfurcon.org",

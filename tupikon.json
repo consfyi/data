@@ -1,0 +1,19 @@
+{
+  "name": "TupiKon",
+  "events": [
+    {
+      "id": "tupikon-2025",
+      "name": "TupiKon 2025",
+      "url": "https://sillycon.ru",
+      "startDate": "2025-09-04",
+      "endDate": "2025-09-07",
+      "venue": "Baza Otdykha \"Izumrud\"",
+      "address": "Москва, Kaluga Oblast, Russia",
+      "country": "RU",
+      "latLng": [
+        54.9300901,
+        36.8729326
+      ]
+    }
+  ]
+}

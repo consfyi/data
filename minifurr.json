@@ -1,0 +1,19 @@
+{
+  "name": "Minifurr",
+  "events": [
+    {
+      "id": "minifurr-2025",
+      "name": "Minifurr 2025",
+      "url": "https://minifurr.rawu.eu",
+      "startDate": "2025-09-17",
+      "endDate": "2025-09-21",
+      "venue": "Chata Sauna Polnička",
+      "address": "Polnička-Žďár nad Sázavou 2, Czechia",
+      "country": "CZ",
+      "latLng": [
+        49.609167799999994,
+        15.9139976
+      ]
+    }
+  ]
+}

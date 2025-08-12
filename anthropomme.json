@@ -1,0 +1,19 @@
+{
+  "name": "Anthropomme",
+  "events": [
+    {
+      "id": "anthropomme-2025",
+      "name": "Anthropomme 2025",
+      "url": "https://anthropomme.fr",
+      "startDate": "2025-07-12",
+      "endDate": "2025-07-14",
+      "venue": "Gîte du Drugeon",
+      "address": "Le Drugeon, La Bouëxière, France",
+      "country": "FR",
+      "latLng": [
+        48.1821444,
+        -1.4921707
+      ]
+    }
+  ]
+}

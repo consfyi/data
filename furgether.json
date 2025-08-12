@@ -1,0 +1,19 @@
+{
+  "name": "Furgether",
+  "events": [
+    {
+      "id": "furgether-2025",
+      "name": "Furgether 2025",
+      "url": "https://www.furgether.at",
+      "startDate": "2025-09-11",
+      "endDate": "2025-09-15",
+      "venue": "KletterCAMP Ennstal",
+      "address": "Oberdambach, Laussa, Austria",
+      "country": "AT",
+      "latLng": [
+        47.961058699999995,
+        14.4388146
+      ]
+    }
+  ]
+}

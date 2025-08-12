@@ -2,6 +2,20 @@
   "name": "Eufuria",
   "events": [
     {
+      "id": "eufuria-2026",
+      "name": "Eufuria 2026",
+      "url": "https://eufuria.org",
+      "startDate": "2026-07-23",
+      "endDate": "2026-07-25",
+      "venue": "Albany Capital Center",
+      "address": "Eagle Street, Albany, NY, USA",
+      "country": "US",
+      "latLng": [
+        42.6498772,
+        -73.7560941
+      ]
+    },
+    {
       "id": "eufuria-2025",
       "name": "Eufuria 2025",
       "url": "https://eufuria.org",

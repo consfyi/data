@@ -1,0 +1,19 @@
+{
+  "name": "SeaFur",
+  "events": [
+    {
+      "id": "seafur-2025",
+      "name": "SeaFur 2025",
+      "url": "https://www.seafur.cn",
+      "startDate": "2025-08-15",
+      "endDate": "2025-08-17",
+      "venue": "Sheraton Shanghai Waigaoqiao Hotel",
+      "address": "Jilong Road, Pudong, Shanghai, China",
+      "country": "CN",
+      "latLng": [
+        31.35444075474879,
+        121.58014124392764
+      ]
+    }
+  ]
+}

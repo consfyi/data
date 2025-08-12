@@ -1,0 +1,19 @@
+{
+  "name": "Furtastic",
+  "events": [
+    {
+      "id": "furtastic-2025",
+      "name": "Furtastic 2025",
+      "url": "https://furtastic.dk",
+      "startDate": "2025-07-07",
+      "endDate": "2025-07-11",
+      "venue": "Fjeldholmlejren",
+      "address": "Langholmvej, Grenaa, Denmark",
+      "country": "DK",
+      "latLng": [
+        56.530752,
+        10.811703
+      ]
+    }
+  ]
+}

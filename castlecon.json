@@ -1,0 +1,19 @@
+{
+  "name": "CastleCon",
+  "events": [
+    {
+      "id": "castlecon-14",
+      "name": "CastleCon 14",
+      "url": "https://castlecon.de",
+      "startDate": "2025-06-13",
+      "endDate": "2025-06-15",
+      "venue": "Freizeitpark Camping Schüttehof",
+      "address": "Schütteberg, Horb am Neckar, Germany",
+      "country": "DE",
+      "latLng": [
+        48.4451629,
+        8.673777
+      ]
+    }
+  ]
+}

@@ -23,7 +23,12 @@ Attribution is not required but appreciated. This helps us keep our data up to d
 
 - The majority of data is imported from [FanCons.com](https://fancons.com) and is annotated as such. Usage restrictions may apply.
 
-- Conventions that use [ConCat](https://concat.app) will have data imported directly from their ConCat instance.
+- Your convention may be able to be automatically imported. Automatic import is supported (to varying degrees) for the following registration systems:
+  - [ConCat](https://concat.app)
+  - [FurDU](https://furdu.com.au) (including Aurawra, FurcoNZ)
+  - [RAMS](https://reg.furfest.org) (Midwest FurFest only)
+
+- If you would like data.cons.fyi to automatically import your convention, please [file an issue](https://github.com/consfyi/data/issues/new?template=add-convention.yml) for convention listing. Please provide details event dates and venue details can be imported from your registration system, or if you are already using one of the supported registration systems.
 
 ## Data model
 

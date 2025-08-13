@@ -1,11 +1,10 @@
 {
   "name": "Palmetto Fur The Season",
-  "url": "http://furrycons.com/event/26436/palmetto-fur-the-season-2025",
   "events": [
     {
-      "id": "palmetto-fur-the-season-2025",
-      "name": "Palmetto Fur The Season 2025",
-      "url": "http://furrycons.com/event/26436/palmetto-fur-the-season-2025",
+      "id": "palmetto-fur-the-season-1",
+      "name": "Palmetto Fur The Season 1",
+      "url": "https://www.palmettofurtheseason.org",
       "startDate": "2025-10-18",
       "endDate": "2025-10-18",
       "venue": "Pinky's Revenge",
@@ -14,9 +13,6 @@
       "latLng": [
         34.9194559,
         -82.2851261
-      ],
-      "sources": [
-        "fancons.com"
       ]
     }
   ]

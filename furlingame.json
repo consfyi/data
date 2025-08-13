@@ -1,0 +1,19 @@
+{
+  "name": "Furlingame",
+  "events": [
+    {
+      "id": "furlingame-2026",
+      "name": "Furlingame 2026",
+      "url": "https://furlingame.com",
+      "startDate": "2026-04-03",
+      "endDate": "2026-04-05",
+      "venue": "Hyatt Regency San Francisco Airport",
+      "address": "Old Bayshore Highway, Burlingame, CA, USA",
+      "country": "US",
+      "latLng": [
+        37.5938725,
+        -122.3651261
+      ]
+    }
+  ]
+}

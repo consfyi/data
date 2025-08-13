@@ -2,18 +2,21 @@
 # /// script
 # requires-python = ">=3.13"
 # dependencies = [
+#   "tabulate"
 # ]
 # ///
 
 import datetime
 import os
 import json
+import tabulate
 
 
 def main():
     now = datetime.date.today()
 
-    all_series = []
+    guessed = []
+    no_upcoming = []
 
     for fn in sorted(os.listdir(".")):
         series_id, ext = os.path.splitext(fn)
@@ -30,13 +33,31 @@ def main():
                 default=None,
             )
             if start is None or start < now:
-                all_series.append((start, series_id, series))
+                no_upcoming.append((start, series_id, series))
+            for event in series["events"]:
+                if "guessed" in event.get("sources", []):
+                    guessed.append(event)
 
-    all_series.sort()
-    for date, id, series in all_series:
-        print(date, id)
-        print(series["events"][0]["url"])
-        print()
+    no_upcoming.sort()
+
+    print(
+        tabulate.tabulate(
+            (
+                (date, id, series["events"][0]["url"])
+                for date, id, series in no_upcoming
+            ),
+            headers=["date", "id", "url"],
+        )
+    )
+    print("")
+
+    guessed.sort(key=lambda event: event["startDate"])
+    print(
+        tabulate.tabulate(
+            ((event["startDate"], event["id"], event["url"]) for event in guessed),
+            headers=["date", "id", "url"],
+        )
+    )
 
 
 if __name__ == "__main__":

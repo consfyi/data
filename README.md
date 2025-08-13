@@ -28,7 +28,7 @@ Attribution is not required but appreciated. This helps us keep our data up to d
   - [FurDU](https://furdu.com.au) (including Aurawra, FurcoNZ)
   - [RAMS](https://reg.furfest.org) (Midwest FurFest only)
 
-- If you would like data.cons.fyi to automatically import your convention, please [file an issue](https://github.com/consfyi/data/issues/new?template=add-convention.yml) for convention listing. Please provide details event dates and venue details can be imported from your registration system, or if you are already using one of the supported registration systems.
+- If you would like data.cons.fyi to automatically import your convention, please [file an issue](https://github.com/consfyi/data/issues/new?template=add-convention.yml) for convention listing. Please provide details on how event dates and venue information can be imported from your registration system, or if you are already using one of the supported registration systems.
 
 ## Data model
 

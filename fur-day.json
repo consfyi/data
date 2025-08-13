@@ -1,0 +1,19 @@
+{
+  "name": "Fur-Day",
+  "events": [
+    {
+      "id": "fur-day-2025",
+      "name": "Fur-Day 2025",
+      "url": "https://www.normandifurs.fr/le-fur-day/",
+      "startDate": "2025-08-16",
+      "endDate": "2025-08-18",
+      "venue": "Salle de la Mer",
+      "address": "Place du 6 Juin, Bernières-sur-Mer, France",
+      "country": "FR",
+      "latLng": [
+        49.3353203,
+        -0.4228589
+      ]
+    }
+  ]
+}

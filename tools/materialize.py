@@ -149,7 +149,7 @@ def main():
         f.write("BEGIN:VCALENDAR\r\n")
         f.write("VERSION:2.0\r\n")
         f.write("PRODID:-//cons.fyi//EN\r\n")
-        f.write("X-WR-CALNAME:series.fyi\r\n")
+        f.write("X-WR-CALNAME:cons.fyi\r\n")
         for event in current:
             start_date = (
                 whenever.Date.parse_common_iso(event["startDate"])

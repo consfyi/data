@@ -24,5 +24,5 @@ jobs:
           GOOGLE_MAPS_API_KEY: ${{ secrets.GOOGLE_MAPS_API_KEY }}
       - run: |
           git add .
-          git diff-index --quiet HEAD || git commit -m "via import"
+          git diff-index --quiet HEAD || git commit -m "via import_rams"
           git push

@@ -50,11 +50,11 @@ def foldline(line, limit=75, sep="\r\n "):
     buf = io.StringIO()
     n = 0
     for char in line:
-        char_byte_len = len(char.encode("utf-8"))
-        n += char_byte_len
+        m = len(char.encode("utf-8"))
+        n += m
         if n >= limit:
             buf.write(sep)
-            n = char_byte_len
+            n = m
         buf.write(char)
     return buf.getvalue()
 

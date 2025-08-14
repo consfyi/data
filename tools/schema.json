@@ -33,7 +33,7 @@
             "type": "string",
             "format": "date",
             "formatMinimum": {
-                "$data": "1/startDate"
+              "$data": "1/startDate"
             }
           },
           "venue": {

@@ -23,6 +23,8 @@ def slugify(text):
 
 
 class MyRenderer(mistune.HTMLRenderer):
+    title: str | None
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.title = None
@@ -47,20 +49,20 @@ def main():
 
     print(
         f"""<!doctype html>
-    <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@lowlighter/matcha@3.0.0/dist/matcha.lite.min.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pygments-css@1.0.0/pastie.css">
-        <title>{html.escape(renderer.title)}</title>
-    </head>
-    <body>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@lowlighter/matcha@3.0.0/dist/matcha.lite.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pygments-css@1.0.0/pastie.css">
+    <title>{html.escape(renderer.title) if renderer.title is not None else ''}</title>
+</head>
+<body>
     {body}
-    </body>
-    </html>
-    """
+</body>
+</html>
+"""
     )
 
 

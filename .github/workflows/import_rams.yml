@@ -19,7 +19,7 @@ jobs:
       - run: |
           git config --global user.name "cons.fyi GitHub bot"
           git config --global user.email "github@cons.fyi"
-      - run: ./tools/data-importers/rams_importer.py
+      - run: ./tools/data-importers/import_rams.py
         env:
           GOOGLE_MAPS_API_KEY: ${{ secrets.GOOGLE_MAPS_API_KEY }}
       - run: |

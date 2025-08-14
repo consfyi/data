@@ -12,24 +12,25 @@ import os
 
 
 def reorder(obj, schema):
-    if schema["type"] == "object":
-        props = schema.get("properties", {})
-        return {k: reorder(obj[k], props[k]) for k in props if k in obj} | {
-            k: v for k, v in obj.items() if k not in props
-        }
-    elif schema["type"] == "array":
-        return [
-            reorder(u, s)
-            for u, s in zip(
-                obj,
-                itertools.chain(
-                    schema.get("prefixItems", []),
-                    itertools.cycle([schema["items"]]) if "items" in schema else [],
-                ),
-            )
-        ]
-    else:
-        return obj
+    match schema["type"]:
+        case "object":
+            props = schema.get("properties", {})
+            return {k: reorder(obj[k], props[k]) for k in props if k in obj} | {
+                k: v for k, v in obj.items() if k not in props
+            }
+        case "array":
+            return [
+                reorder(u, s)
+                for u, s in zip(
+                    obj,
+                    itertools.chain(
+                        schema.get("prefixItems", []),
+                        itertools.cycle([schema["items"]]) if "items" in schema else [],
+                    ),
+                )
+            ]
+        case _:
+            return obj
 
 
 def main():

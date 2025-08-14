@@ -11,6 +11,7 @@
 
 import json
 import jsonschema.validators
+import io
 import itertools
 import logging
 import pathlib
@@ -43,6 +44,19 @@ def escape_ics(s):
             }
         )
     )
+
+
+def foldline(line, limit=75, sep="\r\n "):
+    buf = io.StringIO()
+    n = 0
+    for char in line:
+        char_byte_len = len(char.encode("utf-8"))
+        n += char_byte_len
+        if n >= limit:
+            buf.write(sep)
+            n = char_byte_len
+        buf.write(char)
+    return buf.getvalue()
 
 
 def main():
@@ -146,10 +160,15 @@ def main():
     )
 
     with open(output_dir / "calendar.ics", "w") as f:
-        f.write("BEGIN:VCALENDAR\r\n")
-        f.write("VERSION:2.0\r\n")
-        f.write("PRODID:-//cons.fyi//EN\r\n")
-        f.write("X-WR-CALNAME:cons.fyi\r\n")
+
+        def write_line(line):
+            f.write(foldline(line))
+            f.write("\r\n")
+
+        write_line("BEGIN:VCALENDAR")
+        write_line("VERSION:2.0")
+        write_line("PRODID:-//cons.fyi//EN")
+        write_line("X-WR-CALNAME:cons.fyi")
         for event in current:
             start_date = (
                 whenever.Date.parse_common_iso(event["startDate"])
@@ -166,16 +185,16 @@ def main():
             location = event["venue"]
             if "address" in event:
                 location += f", {event['address']}"
-            f.write("BEGIN:VEVENT\r\n")
-            f.write(f"UID:{event['id']}\r\n")
-            f.write(f"SUMMARY:{escape_ics(event['name'])}\r\n")
-            f.write(f"DTSTART;VALUE=DATE:{start_date}\r\n")
-            f.write(f"DTEND;VALUE=DATE:{end_date}\r\n")
-            f.write(f"DTSTAMP:{dtstamp}\r\n")
-            f.write(f"URL:{escape_ics(event['url'])}\r\n")
-            f.write(f"LOCATION:{escape_ics(location)}\r\n")
-            f.write("END:VEVENT\r\n")
-        f.write("END:VCALENDAR\r\n")
+            write_line("BEGIN:VEVENT")
+            write_line(f"UID:{event['id']}")
+            write_line(f"SUMMARY:{escape_ics(event['name'])}")
+            write_line(f"DTSTART;VALUE=DATE:{start_date}")
+            write_line(f"DTEND;VALUE=DATE:{end_date}")
+            write_line(f"DTSTAMP:{dtstamp}")
+            write_line(f"URL:{escape_ics(event['url'])}")
+            write_line(f"LOCATION:{escape_ics(location)}")
+            write_line("END:VEVENT")
+        write_line("END:VCALENDAR")
 
     with open(output_dir / "current.jsonl", "w") as f:
         for event in current:

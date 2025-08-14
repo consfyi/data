@@ -1,0 +1,19 @@
+{
+  "name": "Furry Picnic",
+  "events": [
+    {
+      "id": "furry-picnic-2025",
+      "name": "Furry Picnic 2025",
+      "url": "https://www.furrypicnic.com",
+      "startDate": "2025-06-14",
+      "endDate": "2025-06-14",
+      "venue": "Wickham Park",
+      "address": "Middle Turnpike West, Manchester, CT, USA",
+      "country": "US",
+      "latLng": [
+        41.7811727,
+        -72.5764044
+      ]
+    }
+  ]
+}

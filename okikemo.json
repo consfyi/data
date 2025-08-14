@@ -1,0 +1,19 @@
+{
+  "name": "OKIKEMO",
+  "events": [
+    {
+      "id": "okikemo-2025",
+      "name": "OKIKEMO 2025",
+      "url": "https://twipla.jp/users/OkikemoOkinawa",
+      "startDate": "2025-10-10",
+      "endDate": "2025-10-10",
+      "venue": "American Village",
+      "address": "Mihama, Chatan, Okinawa, Japan",
+      "country": "JP",
+      "latLng": [
+        26.3158799,
+        127.75400769999999
+      ]
+    }
+  ]
+}

@@ -5,17 +5,14 @@
       "id": "lone-star-fur-con-2026",
       "name": "Lone Star Fur Con 2026",
       "url": "https://lonestarfurcon.com",
-      "startDate": "2026-02-22",
-      "endDate": "2026-02-25",
-      "venue": "Austin",
-      "address": "TX, USA",
+      "startDate": "2026-02-19",
+      "endDate": "2026-02-22",
+      "venue": "Holiday Inn Austin Midtown by IHG",
+      "address": "Middle Fiskville Road, Austin, TX, USA",
       "country": "US",
       "latLng": [
         30.267152999999997,
         -97.7430608
-      ],
-      "sources": [
-        "guessed"
       ]
     },
     {

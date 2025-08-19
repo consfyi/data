@@ -2,6 +2,20 @@
   "name": "Expofur",
   "events": [
     {
+      "id": "expofur-2026",
+      "name": "Expofur 2026",
+      "url": "https://expofur.online",
+      "startDate": "2026-02-20",
+      "endDate": "2026-02-22",
+      "venue": "Four Points by Sheraton Galerias Monterrey",
+      "address": "Avenida Insurgentes, Vista Hermosa, Monterrey, Nuevo Leon, Mexico",
+      "country": "MX",
+      "latLng": [
+        25.6832438,
+        -100.3552529
+      ]
+    },
+    {
       "id": "expofur-2025",
       "name": "Expofur 2025",
       "url": "https://expofur.online",

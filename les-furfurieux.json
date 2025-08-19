@@ -2,6 +2,20 @@
   "name": "Les Furfurieux",
   "events": [
     {
+      "id": "les-furfurieux-2026",
+      "name": "Les Furfurieux 2026",
+      "url": "https://furfurieux.com",
+      "startDate": "2026-05-07",
+      "endDate": "2026-05-10",
+      "venue": "Hotel Metz Technopole - Best Western Plus",
+      "address": "Rue Félix Savart, Metz, France",
+      "country": "FR",
+      "latLng": [
+        49.100491899999994,
+        6.2254616
+      ]
+    },
+    {
       "id": "les-furfurieux-2025",
       "name": "Les Furfurieux 2025",
       "url": "https://furfurieux.com",

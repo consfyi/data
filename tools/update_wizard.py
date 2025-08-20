@@ -228,9 +228,7 @@ def main():
     i = 0
     while i < len(no_upcoming):
         previous_start_date, series_id, series = no_upcoming[i]
-
         previous_event = series["events"][0]
-        previous_end_date = datetime.date.fromisoformat(previous_event["endDate"])
 
         termcolor.cprint(f"{i+1:>{padding}}/{len(no_upcoming)} ", "cyan", end="")
         termcolor.cprint(f"{previous_start_date} ", "green", end="")
@@ -240,92 +238,7 @@ def main():
             termcolor.cprint("(a)dd/(n)ew/(w)ebsite/(m)ute/(S)kip? ", "magenta", end="")
             match input().strip().lower():
                 case "a":
-                    start_date = add_year_same_weekday(previous_start_date)
-                    event = {**previous_event}
-
-                    while True:
-                        try:
-                            start_date = datetime.date.fromisoformat(
-                                prompt_for_change("start date", start_date.isoformat())
-                            )
-                        except ValueError:
-                            continue
-                        break
-
-                    while True:
-                        try:
-                            end_date = datetime.date.fromisoformat(
-                                prompt_for_change(
-                                    "end date",
-                                    (
-                                        start_date
-                                        + (previous_end_date - previous_start_date)
-                                    ).isoformat(),
-                                )
-                            )
-                        except ValueError:
-                            continue
-                        break
-
-                    suffix = start_date.year
-                    _, previous_suffix = previous_event["name"].rsplit(" ", 1)
-                    try:
-                        previous_suffix = int(previous_suffix)
-                    except:
-                        pass
-                    else:
-                        suffix = previous_suffix + 1
-
-                    guessed_name = f"{series['name']} {suffix}"
-                    event["name"] = prompt_for_change("name", guessed_name)
-
-                    if event["name"] != guessed_name:
-                        event["id"] = slugify(
-                            event["name"],
-                            guess_language_for_region(event["country"])
-                            if "country" in event
-                            else icu.Locale.createFromName("en"),
-                        )
-                        event["id"] = prompt_for_change("event id", event["id"])
-                    else:
-                        event["id"] = f"{series_id}-{suffix}"
-
-                    event["venue"] = prompt_for_change("venue", event["venue"])
-                    if event["venue"] != previous_event["venue"]:
-                        venue, address, country, lat_lng = prompt_for_venue(
-                            gmaps, event["venue"]
-                        )
-                        event["venue"] = venue
-
-                        if address is not None:
-                            event["address"] = address
-                        else:
-                            del event["address"]
-
-                        if country is not None:
-                            event["country"] = country
-
-                        if lat_lng is not None:
-                            event["latLng"] = lat_lng
-                        else:
-                            del event["latLng"]
-
-                    fn = f"{series_id}.json"
-                    termcolor.cprint(f"  {fn}", attrs=["bold"])
-                    print(
-                        "\n".join(
-                            f"  {l}"
-                            for l in json.dumps(
-                                event, indent=2, ensure_ascii=False
-                            ).split("\n")
-                        )
-                    )
-
-                    series["events"].insert(0, event)
-                    with open(fn, "w") as f:
-                        json.dump(series, f, indent=2, ensure_ascii=False)
-                        f.write("\n")
-
+                    handle_add(gmaps, series_id, series)
                     i += 1
                     break
                 case "n":
@@ -350,6 +263,94 @@ def main():
                 case _:
                     continue
         print("")
+
+
+def handle_add(gmaps, series_id, series):
+    previous_event = series["events"][0]
+
+    previous_start_date = datetime.date.fromisoformat(previous_event["startDate"])
+    previous_end_date = datetime.date.fromisoformat(previous_event["endDate"])
+
+    event = {**previous_event}
+
+    start_date = add_year_same_weekday(previous_start_date)
+    while True:
+        try:
+            start_date = datetime.date.fromisoformat(
+                prompt_for_change("start date", start_date.isoformat())
+            )
+        except ValueError:
+            continue
+        break
+
+    while True:
+        try:
+            end_date = datetime.date.fromisoformat(
+                prompt_for_change(
+                    "end date",
+                    (
+                        start_date + (previous_end_date - previous_start_date)
+                    ).isoformat(),
+                )
+            )
+        except ValueError:
+            continue
+        break
+
+    suffix = start_date.year
+    _, previous_suffix = previous_event["name"].rsplit(" ", 1)
+    try:
+        previous_suffix = int(previous_suffix)
+    except:
+        pass
+    else:
+        suffix = previous_suffix + 1
+
+    guessed_name = f"{series['name']} {suffix}"
+    event["name"] = prompt_for_change("name", guessed_name)
+
+    if event["name"] != guessed_name:
+        event["id"] = slugify(
+            event["name"],
+            guess_language_for_region(event["country"])
+            if "country" in event
+            else icu.Locale.createFromName("en"),
+        )
+        event["id"] = prompt_for_change("event id", event["id"])
+    else:
+        event["id"] = f"{series_id}-{suffix}"
+
+    event["venue"] = prompt_for_change("venue", event["venue"])
+    if event["venue"] != previous_event["venue"]:
+        venue, address, country, lat_lng = prompt_for_venue(gmaps, event["venue"])
+        event["venue"] = venue
+
+        if address is not None:
+            event["address"] = address
+        else:
+            del event["address"]
+
+        if country is not None:
+            event["country"] = country
+
+        if lat_lng is not None:
+            event["latLng"] = lat_lng
+        else:
+            del event["latLng"]
+
+    fn = f"{series_id}.json"
+    termcolor.cprint(f"  {fn}", attrs=["bold"])
+    print(
+        "\n".join(
+            f"  {l}"
+            for l in json.dumps(event, indent=2, ensure_ascii=False).split("\n")
+        )
+    )
+
+    series["events"].insert(0, event)
+    with open(fn, "w") as f:
+        json.dump(series, f, indent=2, ensure_ascii=False)
+        f.write("\n")
 
 
 def handle_new(gmaps):

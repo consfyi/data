@@ -68,13 +68,13 @@ def add_year_same_weekday(date: datetime.date) -> datetime.date:
 MUTE_LIST = os.path.join(os.path.dirname(__file__), "update_wizard_mutes")
 
 
-def read_mute_list(today) -> typing.Dict[datetime.date, str]:
+def read_mute_list(today) -> typing.Dict[str, datetime.date]:
     try:
         f = open(MUTE_LIST)
     except FileNotFoundError:
         return {}
 
-    mutes: typing.Dict[datetime.date, str] = {}
+    mutes: typing.Dict[str, datetime.date] = {}
     with f:
         for line in f:
             line = line.rstrip("\n")

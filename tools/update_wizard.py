@@ -254,13 +254,18 @@ def main():
                     add_mute_list_entry(series_id, expiry)
                     i += 1
                     break
-                case x if x.isdigit():
-                    i = int(x) - 1
-                    break
                 case "s" | "":
                     i += 1
                     break
-                case _:
+                case x:
+                    try:
+                        x = int(x)
+                    except ValueError:
+                        continue
+                    x -= 1
+                    if 0 <= x < len(no_upcoming):
+                        i = x
+                        break
                     continue
         print("")
 

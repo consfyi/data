@@ -85,19 +85,17 @@ def read_mute_list(today) -> typing.Dict[datetime.date, str]:
             if expiry < today:
                 continue
             mutes[series_id] = max(mutes.setdefault(series_id, expiry), expiry)
-    save_mute_list(mutes)
+
+    with open(MUTE_LIST, "w") as f:
+        for series_id, expiry in mutes.items():
+            f.write(f"{expiry.isoformat()} {series_id}\n")
+
     return mutes
 
 
 def add_mute_list_entry(series_id: str, expiry: datetime.date):
     with open(MUTE_LIST, "a") as f:
         f.write(f"{expiry.isoformat()} {series_id}\n")
-
-
-def save_mute_list(mutes: typing.Dict[str, datetime.date]):
-    with open(MUTE_LIST, "w") as f:
-        for series_id, expiry in mutes.items():
-            f.write(f"{expiry.isoformat()} {series_id}\n")
 
 
 def prompt_for_change(label, v):

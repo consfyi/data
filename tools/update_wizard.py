@@ -111,7 +111,10 @@ def main():
         termcolor.cprint(series_id, attrs=["bold"])
     print("")
 
-    for i, (previous_start_date, series_id, series) in enumerate(no_upcoming):
+    i = 0
+    while i < len(no_upcoming):
+        previous_start_date, series_id, series = no_upcoming[i]
+
         previous_event = series["events"][0]
         previous_end_date = datetime.date.fromisoformat(previous_event["endDate"])
 
@@ -236,6 +239,7 @@ def main():
                         json.dump(series, f, indent=2, ensure_ascii=False)
                         f.write("\n")
 
+                    i += 1
                     break
                 case "w":
                     webbrowser.open(previous_event["url"])
@@ -243,6 +247,10 @@ def main():
                     # termcolor.cprint(
                     #     "  adding to skip list, won't ask until {expiry}", "yellow"
                     # )
+                    i += 1
+                    break
+                case x if x.isdigit():
+                    i = int(x) - 1
                     break
                 case _:
                     continue

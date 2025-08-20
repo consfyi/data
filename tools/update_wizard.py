@@ -218,6 +218,8 @@ def main():
                         session_token = str(uuid.uuid4())
                         predictions = gmaps.places_autocomplete(event["venue"])
                         while True:
+                            termcolor.cprint(f"    0) ", "magenta", end="")
+                            termcolor.cprint("(no address)")
                             for i, prediction in enumerate(predictions):
                                 termcolor.cprint(f"    {i + 1}) ", "magenta", end="")
                                 st = prediction["structured_formatting"]
@@ -233,9 +235,20 @@ def main():
                                 )
                             termcolor.cprint(f"    #? ", "magenta", end="")
                             try:
-                                selected = predictions[int(input("")) - 1]
-                            except (ValueError, IndexError):
+                                choice = int(input(""))
+                            except ValueError:
                                 continue
+
+                            if choice == 0:
+                                if "address" in event:
+                                    del event["address"]
+                                if "latLng" in event:
+                                    del event["latLng"]
+                                break
+
+                            if choice - 1 > len(predictions):
+                                continue
+                            selected = predictions[choice - 1]
 
                             st = selected["structured_formatting"]
                             event["venue"] = st["main_text"]

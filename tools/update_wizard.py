@@ -22,6 +22,7 @@ import regex
 import icu
 import unicodedata
 import webbrowser
+import typing
 
 
 GOOGLE_MAPS_API_KEY = os.environ["GOOGLE_MAPS_API_KEY"]
@@ -64,6 +65,41 @@ def add_year_same_weekday(date: datetime.date) -> datetime.date:
     )
 
 
+MUTE_LIST = os.path.join(os.path.dirname(__file__), "update_wizard_mutes")
+
+
+def read_mute_list(today) -> typing.Dict[datetime.date, str]:
+    try:
+        f = open(MUTE_LIST)
+    except FileNotFoundError:
+        return {}
+
+    mutes: typing.Dict[datetime.date, str] = {}
+    with f:
+        for line in f:
+            line = line.rstrip("\n")
+            if not line:
+                continue
+            expiry, series_id = line.split(" ", 1)
+            expiry = datetime.date.fromisoformat(expiry)
+            if expiry < today:
+                continue
+            mutes[series_id] = max(mutes.setdefault(series_id, expiry), expiry)
+    save_mute_list(mutes)
+    return mutes
+
+
+def add_mute_list_entry(series_id: str, expiry: datetime.date):
+    with open(MUTE_LIST, "a") as f:
+        f.write(f"{expiry.isoformat()} {series_id}\n")
+
+
+def save_mute_list(mutes: typing.Dict[str, datetime.date]):
+    with open(MUTE_LIST, "w") as f:
+        for series_id, expiry in mutes.items():
+            f.write(f"{expiry.isoformat()} {series_id}\n")
+
+
 def prompt_for_change(label, v):
     termcolor.cprint(f"  {label}: ", "magenta", end="")
     termcolor.cprint(v, end="")
@@ -75,7 +111,9 @@ def prompt_for_change(label, v):
 
 
 def main():
-    now = datetime.date.today()
+    today = datetime.date.today()
+    mutes = read_mute_list(today)
+
     gmaps = googlemaps.Client(key=GOOGLE_MAPS_API_KEY)
 
     guessed = []
@@ -95,8 +133,9 @@ def main():
                 ),
                 default=None,
             )
-            if start is None or start < now:
-                no_upcoming.append((start, series_id, series))
+            if start is not None and start >= today or series_id in mutes:
+                continue
+            no_upcoming.append((start, series_id, series))
             for event in series["events"]:
                 if "guessed" in event.get("sources", []):
                     guessed.append(event)
@@ -123,7 +162,7 @@ def main():
         termcolor.cprint(series_id, attrs=["bold"])
         termcolor.cprint(previous_event["url"], "blue")
         while True:
-            termcolor.cprint("(a)dd/(w)ebsite/(S)kip? ", "magenta", end="")
+            termcolor.cprint("(a)dd/(w)ebsite/(m)ute/(S)kip? ", "magenta", end="")
             match input().strip().lower():
                 case "a":
                     start_date = add_year_same_weekday(previous_start_date)
@@ -243,14 +282,19 @@ def main():
                     break
                 case "w":
                     webbrowser.open(previous_event["url"])
-                case "s" | "":
-                    # termcolor.cprint(
-                    #     "  adding to skip list, won't ask until {expiry}", "yellow"
-                    # )
+                case "m":
+                    expiry = today + datetime.timedelta(days=90)
+                    termcolor.cprint(
+                        f"  adding to mute list, won't ask until {expiry}", "yellow"
+                    )
+                    add_mute_list_entry(series_id, expiry)
                     i += 1
                     break
                 case x if x.isdigit():
                     i = int(x) - 1
+                    break
+                case "s" | "":
+                    i += 1
                     break
                 case _:
                     continue

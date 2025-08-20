@@ -236,8 +236,12 @@ def main():
         termcolor.cprint(previous_event["url"], "blue")
         while True:
             termcolor.cprint("(a)dd/(n)ew/(w)ebsite/(m)ute/(S)kip? ", "magenta", end="")
-            c, *rest = input().strip().lower()
-            rest = "".join(rest)
+            inp = input().strip().lower()
+            if inp:
+                c, *rest = inp
+                rest = "".join(rest)
+            else:
+                c, rest = "", ""
             match c:
                 case "a":
                     handle_add(gmaps, series_id, series)

@@ -104,13 +104,18 @@ def main():
     no_upcoming.sort()
 
     termcolor.cprint(f"found {len(no_upcoming)} series to review", "cyan")
+    padding = math.ceil(math.log10(len(no_upcoming)))
+    for i, (previous_start_date, series_id, _) in enumerate(no_upcoming):
+        termcolor.cprint(f"{i+1:>{padding}}/{len(no_upcoming)} ", "cyan", end="")
+        termcolor.cprint(f"{previous_start_date} ", "green", end="")
+        termcolor.cprint(series_id, attrs=["bold"])
     print("")
 
     for i, (previous_start_date, series_id, series) in enumerate(no_upcoming):
         previous_event = series["events"][0]
         previous_end_date = datetime.date.fromisoformat(previous_event["endDate"])
 
-        termcolor.cprint(f"{i+1}/{len(no_upcoming)} ", "cyan", end="")
+        termcolor.cprint(f"{i+1:>{padding}}/{len(no_upcoming)} ", "cyan", end="")
         termcolor.cprint(f"{previous_start_date} ", "green", end="")
         termcolor.cprint(series_id, attrs=["bold"])
         termcolor.cprint(previous_event["url"], "blue")

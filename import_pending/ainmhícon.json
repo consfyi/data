@@ -1,0 +1,22 @@
+{
+  "name": "Ainmhícon",
+  "events": [
+    {
+      "id": "ainmhícon-2026",
+      "name": "Ainmhícon 2026",
+      "url": "http://furrycons.com/event/26471/ainmhicon-2026",
+      "startDate": "2026-04-11",
+      "endDate": "2026-04-12",
+      "venue": "Clayton Hotel Liffey Valley",
+      "address": "Fonthill Road, Liffey Valley, Dublin, Ireland",
+      "country": "IE",
+      "latLng": [
+        53.3555438,
+        -6.4019528
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    }
+  ]
+}

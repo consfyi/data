@@ -34,6 +34,70 @@ def guess_language_for_region(region_code: str) -> icu.Locale:
     return icu.Locale.createFromName(f"und_{region_code}").addLikelySubtags()
 
 
+def prompt_for_venue(gmaps, venue):
+    session_token = str(uuid.uuid4())
+    predictions = gmaps.places_autocomplete(venue)
+
+    address = None
+    country = None
+    lat_lng = None
+
+    while True:
+        termcolor.cprint(f"    0) ", "magenta", end="")
+        termcolor.cprint("(no address)")
+        for i, prediction in enumerate(predictions):
+            termcolor.cprint(f"    {i + 1}) ", "magenta", end="")
+            st = prediction["structured_formatting"]
+            termcolor.cprint(
+                ", ".join(
+                    part
+                    for part in [
+                        st["main_text"],
+                        st.get("secondary_text"),
+                    ]
+                    if part is not None
+                )
+            )
+        termcolor.cprint(f"    #? ", "magenta", end="")
+        try:
+            choice = int(input(""))
+        except ValueError:
+            continue
+
+        if choice == 0:
+            break
+
+        if choice - 1 > len(predictions):
+            continue
+        selected = predictions[choice - 1]
+
+        st = selected["structured_formatting"]
+        venue = st["main_text"]
+        if "secondary_text" in st:
+            address = st["secondary_text"]
+
+        place = gmaps.place(
+            selected["place_id"],
+            session_token=session_token,
+            fields=["geometry/location", "address_component"],
+        )
+
+        l = place["result"]["geometry"]["location"]
+        lat_lng = (l["lat"], l["lng"])
+        country = next(
+            component["short_name"]
+            for component in place["result"]["address_components"]
+            if "country" in component["types"]
+        )
+        if country == "CN":
+            lat, lng = lat_lng
+            lat_lng = eviltransform.gcj2wgs(lat, lng)
+
+        break
+
+    return venue, address, country, lat_lng
+
+
 def slugify(s: str, langid: icu.Locale) -> str:
     return "-".join(
         regex.sub(
@@ -105,13 +169,19 @@ def add_mute_list_entry(series_id: str, expiry: datetime.date):
         f.write(f"{expiry.isoformat()} {series_id}\n")
 
 
-def prompt_for_change(label, v):
-    termcolor.cprint(f"  {label}: ", "magenta", end="")
-    termcolor.cprint(v, end="")
-    termcolor.cprint("? ", "magenta", end="")
-    inp = input().strip()
-    if inp:
-        v = inp
+def prompt_for_change(label, v=None):
+    while True:
+        if v is not None:
+            termcolor.cprint(f"  {label}: ", "magenta", end="")
+            termcolor.cprint(v, end="")
+            termcolor.cprint("? ", "magenta", end="")
+        else:
+            termcolor.cprint(f"  {label}? ", "magenta", end="")
+        inp = input().strip()
+        if inp:
+            v = inp
+        if v is not None:
+            break
     return v
 
 
@@ -167,7 +237,7 @@ def main():
         termcolor.cprint(series_id, attrs=["bold"])
         termcolor.cprint(previous_event["url"], "blue")
         while True:
-            termcolor.cprint("(a)dd/(w)ebsite/(m)ute/(S)kip? ", "magenta", end="")
+            termcolor.cprint("(a)dd/(n)ew/(w)ebsite/(m)ute/(S)kip? ", "magenta", end="")
             match input().strip().lower():
                 case "a":
                     start_date = add_year_same_weekday(previous_start_date)
@@ -216,72 +286,32 @@ def main():
                             if "country" in event
                             else icu.Locale.createFromName("en"),
                         )
-                        event["id"] = prompt_for_change("id", event["id"])
+                        event["id"] = prompt_for_change("event id", event["id"])
                     else:
                         event["id"] = f"{series_id}-{suffix}"
 
                     event["venue"] = prompt_for_change("venue", event["venue"])
                     if event["venue"] != previous_event["venue"]:
-                        session_token = str(uuid.uuid4())
-                        predictions = gmaps.places_autocomplete(event["venue"])
-                        while True:
-                            termcolor.cprint(f"    0) ", "magenta", end="")
-                            termcolor.cprint("(no address)")
-                            for i, prediction in enumerate(predictions):
-                                termcolor.cprint(f"    {i + 1}) ", "magenta", end="")
-                                st = prediction["structured_formatting"]
-                                termcolor.cprint(
-                                    ", ".join(
-                                        part
-                                        for part in [
-                                            st["main_text"],
-                                            st.get("secondary_text"),
-                                        ]
-                                        if part is not None
-                                    )
-                                )
-                            termcolor.cprint(f"    #? ", "magenta", end="")
-                            try:
-                                choice = int(input(""))
-                            except ValueError:
-                                continue
+                        venue, address, country, lat_lng = prompt_for_venue(
+                            gmaps, event["venue"]
+                        )
+                        event["venue"] = venue
 
-                            if choice == 0:
-                                if "address" in event:
-                                    del event["address"]
-                                if "latLng" in event:
-                                    del event["latLng"]
-                                break
+                        if address is not None:
+                            event["address"] = address
+                        else:
+                            del event["address"]
 
-                            if choice - 1 > len(predictions):
-                                continue
-                            selected = predictions[choice - 1]
+                        if country is not None:
+                            event["country"] = country
 
-                            st = selected["structured_formatting"]
-                            event["venue"] = st["main_text"]
-                            if "secondary_text" in st:
-                                event["address"] = st["secondary_text"]
-                            else:
-                                del event["address"]
+                        if lat_lng is not None:
+                            event["latLng"] = lat_lng
+                        else:
+                            del event["latLng"]
 
-                            place = gmaps.place(
-                                selected["place_id"],
-                                session_token=session_token,
-                                fields=["geometry/location", "address_component"],
-                            )
-
-                            l = place["result"]["geometry"]["location"]
-                            event["latLng"] = (l["lat"], l["lng"])
-                            event["country"] = next(
-                                component["short_name"]
-                                for component in place["result"]["address_components"]
-                                if "country" in component["types"]
-                            )
-                            if event["country"] == "CN":
-                                lat, lng = event["latLng"]
-                                event["latLng"] = eviltransform.gcj2wgs(lat, lng)
-                            break
-
+                    fn = f"{series_id}.json"
+                    termcolor.cprint(f"  {fn}", attrs=["bold"])
                     print(
                         "\n".join(
                             f"  {l}"
@@ -292,11 +322,14 @@ def main():
                     )
 
                     series["events"].insert(0, event)
-                    with open(f"{series_id}.json", "w") as f:
+                    with open(fn, "w") as f:
                         json.dump(series, f, indent=2, ensure_ascii=False)
                         f.write("\n")
 
                     i += 1
+                    break
+                case "n":
+                    handle_new(gmaps)
                     break
                 case "w":
                     webbrowser.open(previous_event["url"])
@@ -317,6 +350,69 @@ def main():
                 case _:
                     continue
         print("")
+
+
+def handle_new(gmaps):
+    series_name = prompt_for_change("series name")
+    url = prompt_for_change("website")
+    venue = prompt_for_change("venue")
+    venue, address, country, lat_lng = prompt_for_venue(gmaps, venue)
+
+    while True:
+        try:
+            start_date = datetime.date.fromisoformat(prompt_for_change("start date"))
+        except ValueError:
+            continue
+        break
+
+    while True:
+        try:
+            end_date = datetime.date.fromisoformat(prompt_for_change("end date"))
+        except ValueError:
+            continue
+        if end_date < start_date:
+            continue
+        break
+
+    series_id = slugify(
+        series_name,
+        guess_language_for_region(country)
+        if country is not None
+        else icu.Locale.createFromName("en"),
+    )
+
+    suffix = prompt_for_change("suffix", str(start_date.year))
+    event_id = prompt_for_change("event id", f"{series_id}-{suffix}")
+
+    series = {
+        "name": series_name,
+        "events": [
+            {
+                "id": event_id,
+                "name": f"{series_name} {suffix}",
+                "url": url,
+                "startDate": start_date.isoformat(),
+                "endDate": end_date.isoformat(),
+                "venue": venue,
+                **({"address": address} if address is not None else {}),
+                **({"country": country} if country is not None else {}),
+                **({"latLng": lat_lng} if lat_lng is not None else {}),
+            },
+        ],
+    }
+
+    fn = f"{series_id}.json"
+    termcolor.cprint(f"  {fn}", attrs=["bold"])
+    print(
+        "\n".join(
+            f"  {l}"
+            for l in json.dumps(series, indent=2, ensure_ascii=False).split("\n")
+        )
+    )
+
+    with open(fn, "w") as f:
+        json.dump(series, f, indent=2, ensure_ascii=False)
+        f.write("\n")
 
 
 if __name__ == "__main__":

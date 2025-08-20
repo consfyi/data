@@ -1,0 +1,19 @@
+{
+  "name": "Anthro Irish",
+  "events": [
+    {
+      "id": "anthro-irish-2026",
+      "name": "Anthro Irish 2026",
+      "url": "https://linktr.ee/anthroirish",
+      "startDate": "2026-08-01",
+      "endDate": "2026-08-02",
+      "venue": "The Metropole Hotel",
+      "address": "MacCurtain Street, Victorian Quarter, Cork, Ireland",
+      "country": "IE",
+      "latLng": [
+        51.9013551,
+        -8.4675944
+      ]
+    }
+  ]
+}

@@ -218,61 +218,81 @@ def main():
     no_upcoming.sort()
 
     termcolor.cprint(f"found {len(no_upcoming)} series to review", "cyan")
-    padding = math.ceil(math.log10(len(no_upcoming)))
-    for i, (previous_start_date, series_id, _) in enumerate(no_upcoming):
-        termcolor.cprint(f"{i+1:>{padding}}/{len(no_upcoming)} ", "cyan", end="")
-        termcolor.cprint(f"{previous_start_date} ", "green", end="")
-        termcolor.cprint(series_id, attrs=["bold"])
-    print("")
+    padding = 0
+    if no_upcoming:
+        padding = math.ceil(math.log10(len(no_upcoming)))
+        for i, (previous_start_date, series_id, _) in enumerate(no_upcoming):
+            termcolor.cprint(f"{i+1:>{padding}}/{len(no_upcoming)} ", "cyan", end="")
+            termcolor.cprint(f"{previous_start_date} ", "green", end="")
+            termcolor.cprint(series_id, attrs=["bold"])
+        print("")
 
     i = 0
-    while i < len(no_upcoming):
-        previous_start_date, series_id, series = no_upcoming[i]
-        previous_event = series["events"][0]
-
-        termcolor.cprint(f"{i+1:>{padding}}/{len(no_upcoming)} ", "cyan", end="")
-        termcolor.cprint(f"{previous_start_date} ", "green", end="")
-        termcolor.cprint(series_id, attrs=["bold"])
-        termcolor.cprint(previous_event["url"], "blue")
-        while True:
-            termcolor.cprint("(a)dd/(n)ew/(w)ebsite/(m)ute/(S)kip? ", "magenta", end="")
-            inp = input().strip().lower()
-            if inp:
-                c, *rest = inp
-                rest = "".join(rest)
-            else:
-                c, rest = "", ""
-            match c:
-                case "a":
-                    handle_add(gmaps, series_id, series)
-                    i += 1
-                    break
-                case "n":
-                    handle_new(gmaps)
-                    break
-                case "w":
-                    webbrowser.open(previous_event["url"])
-                case "m":
-                    expiry = today + datetime.timedelta(days=90)
-                    termcolor.cprint(
-                        f"  adding to mute list, won't ask until {expiry}", "yellow"
-                    )
-                    add_mute_list_entry(series_id, expiry)
-                    i += 1
-                    break
-                case "s" | "":
-                    i += 1
-                    break
-                case x:
-                    try:
-                        x = int(x)
-                    except ValueError:
-                        continue
-                    x -= 1
-                    if 0 <= x < len(no_upcoming):
-                        i = x
+    while True:
+        if i >= len(no_upcoming):
+            while True:
+                termcolor.cprint("(n)ew/(Q)uit? ", "magenta", end="")
+                match input().strip().lower():
+                    case "n":
+                        handle_new(gmaps)
                         break
-                    continue
+                    case "q" | "":
+                        return
+                    case x:
+                        try:
+                            x = int(x)
+                        except ValueError:
+                            continue
+                        x -= 1
+                        if 0 <= x < len(no_upcoming):
+                            i = x
+                            break
+                        continue
+        else:
+            previous_start_date, series_id, series = no_upcoming[i]
+            previous_event = series["events"][0]
+
+            termcolor.cprint(f"{i+1:>{padding}}/{len(no_upcoming)} ", "cyan", end="")
+            termcolor.cprint(f"{previous_start_date} ", "green", end="")
+            termcolor.cprint(series_id, attrs=["bold"])
+            termcolor.cprint(previous_event["url"], "blue")
+            while True:
+                termcolor.cprint(
+                    "(a)dd/(n)ew/(w)ebsite/(m)ute/(q)uit/(S)kip? ", "magenta", end=""
+                )
+                match input().strip().lower():
+                    case "a":
+                        handle_add(gmaps, series_id, series)
+                        i += 1
+                        break
+                    case "n":
+                        handle_new(gmaps)
+                        break
+                    case "w":
+                        webbrowser.open(previous_event["url"])
+                    case "m":
+                        expiry = today + datetime.timedelta(days=90)
+                        termcolor.cprint(
+                            f"  adding to mute list, won't ask until {expiry}", "yellow"
+                        )
+                        add_mute_list_entry(series_id, expiry)
+                        i += 1
+                        break
+                    case "s" | "":
+                        i += 1
+                        break
+                    case "q":
+                        return
+                    case x:
+                        try:
+                            x = int(x)
+                        except ValueError:
+                            continue
+                        x -= 1
+                        if 0 <= x < len(no_upcoming):
+                            i = x
+                            break
+                        continue
         print("")
 
 

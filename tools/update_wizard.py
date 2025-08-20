@@ -21,6 +21,7 @@ import uuid
 import regex
 import icu
 import unicodedata
+import webbrowser
 
 
 GOOGLE_MAPS_API_KEY = os.environ["GOOGLE_MAPS_API_KEY"]
@@ -114,7 +115,7 @@ def main():
         termcolor.cprint(series_id, attrs=["bold"])
         termcolor.cprint(previous_event["url"], "blue")
         while True:
-            termcolor.cprint("(a)dd/(S)kip? ", "magenta", end="")
+            termcolor.cprint("(a)dd/(w)ebsite/(S)kip? ", "magenta", end="")
             match input().strip().lower():
                 case "a":
                     start_date = add_year_same_weekday(previous_start_date)
@@ -231,6 +232,8 @@ def main():
                         f.write("\n")
 
                     break
+                case "w":
+                    webbrowser.open(previous_event["url"])
                 case "s" | "":
                     # termcolor.cprint(
                     #     "  adding to skip list, won't ask until {expiry}", "yellow"

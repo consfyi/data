@@ -7,6 +7,7 @@
 #   "googlemaps",
 #   "PyICU",
 #   "regex",
+#   "safer",
 # ]
 # ///
 
@@ -20,6 +21,7 @@ import json
 import uuid
 import regex
 import icu
+import safer
 import unicodedata
 import webbrowser
 import typing
@@ -80,13 +82,18 @@ def read_mute_list(today) -> typing.Dict[str, datetime.date]:
             line = line.rstrip("\n")
             if not line:
                 continue
-            expiry, series_id = line.split(" ", 1)
-            expiry = datetime.date.fromisoformat(expiry)
+            expiry, _, series_id = line.partition(" ")
+            if not series_id:
+                continue
+            try:
+                expiry = datetime.date.fromisoformat(expiry)
+            except ValueError:
+                continue
             if expiry < today:
                 continue
             mutes[series_id] = max(mutes.setdefault(series_id, expiry), expiry)
 
-    with open(MUTE_LIST, "w") as f:
+    with safer.open(MUTE_LIST, "w") as f:
         for series_id, expiry in mutes.items():
             f.write(f"{expiry.isoformat()} {series_id}\n")
 

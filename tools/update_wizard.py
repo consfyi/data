@@ -229,26 +229,7 @@ def main():
 
     i = 0
     while True:
-        if i >= len(no_upcoming):
-            while True:
-                termcolor.cprint("(n)ew/(Q)uit? ", "magenta", end="")
-                match input().strip().lower():
-                    case "n":
-                        handle_new(gmaps)
-                        break
-                    case "q" | "":
-                        return
-                    case x:
-                        try:
-                            x = int(x)
-                        except ValueError:
-                            continue
-                        x -= 1
-                        if 0 <= x < len(no_upcoming):
-                            i = x
-                            break
-                        continue
-        else:
+        if i < len(no_upcoming):
             previous_start_date, series_id, series = no_upcoming[i]
             previous_event = series["events"][0]
 
@@ -256,17 +237,21 @@ def main():
             termcolor.cprint(f"{previous_start_date} ", "green", end="")
             termcolor.cprint(series_id, attrs=["bold"])
             termcolor.cprint(previous_event["url"], "blue")
-            while True:
+
+        while True:
+            if i < len(no_upcoming):
                 termcolor.cprint(
                     "(a)dd/(n)ew/(w)ebsite/(m)ute/(q)uit/(S)kip? ", "magenta", end=""
                 )
-                match input().strip().lower():
+            else:
+                termcolor.cprint("(n)ew/(Q)uit? ", "magenta", end="")
+
+            inp = input().strip().lower()
+            if i < len(no_upcoming):
+                match inp:
                     case "a":
                         handle_add(gmaps, series_id, series)
                         i += 1
-                        break
-                    case "n":
-                        handle_new(gmaps)
                         break
                     case "w":
                         webbrowser.open(previous_event["url"])
@@ -278,21 +263,32 @@ def main():
                         add_mute_list_entry(series_id, expiry)
                         i += 1
                         break
-                    case "s" | "":
-                        i += 1
-                        break
-                    case "q":
+
+            match inp:
+                case "n":
+                    handle_new(gmaps)
+                    break
+                case "s":
+                    i += 1
+                    break
+                case "q":
+                    return
+                case "":
+                    if i >= len(no_upcoming):
                         return
-                    case x:
-                        try:
-                            x = int(x)
-                        except ValueError:
-                            continue
-                        x -= 1
-                        if 0 <= x < len(no_upcoming):
-                            i = x
-                            break
+                    i += 1
+                    break
+                case x:
+                    try:
+                        x = int(x)
+                    except ValueError:
                         continue
+                    x -= 1
+                    if 0 <= x < len(no_upcoming):
+                        i = x
+                        break
+                    continue
+
         print("")
 
 
@@ -370,7 +366,7 @@ def handle_add(gmaps, series_id, series):
             del event["latLng"]
 
     fn = f"{series_id}.json"
-    termcolor.cprint(f"  {fn}", attrs=["bold"])
+    termcolor.cprint(f"  {fn} / {event['id']}", attrs=["bold"])
     print(
         "\n".join(
             f"  {l}"

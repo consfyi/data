@@ -73,23 +73,26 @@ def prompt_for_venue(gmaps, venue, lang):
             continue
         selected = predictions[choice - 1]
 
-        st = selected["structured_formatting"]
-        if "secondary_text" in st:
-            address = st["secondary_text"]
-
         place = gmaps.place(
             selected["place_id"],
             session_token=session_token,
-            fields=["name", "geometry/location", "address_component"],
+            fields=[
+                "name",
+                "formatted_address",
+                "geometry/location",
+                "address_component",
+            ],
             language=lang,
-        )
-        venue = place["result"]["name"]
+        )["result"]
 
-        l = place["result"]["geometry"]["location"]
+        venue = place["name"]
+        address = place["formatted_address"]
+
+        l = place["geometry"]["location"]
         lat_lng = (l["lat"], l["lng"])
         country = next(
             component["short_name"]
-            for component in place["result"]["address_components"]
+            for component in place["address_components"]
             if "country" in component["types"]
         )
         if country == "CN":

@@ -8,17 +8,17 @@
       "startDate": "2026-01-09",
       "endDate": "2026-01-11",
       "venue": "ロワジールホテル豊橋",
-      "address": "日本、愛知県豊橋市藤沢町１４１",
+      "address": "日本、〒441-8061 愛知県豊橋市藤沢町１４１",
       "locale": "ja-JP",
       "translations": {
         "en": {
           "venue": "LOISIR HOTEL TOYOHASHI",
-          "address": "141 Fujisawachō, Toyohashi, Aichi, Japan"
+          "address": "141 Fujisawachō, Toyohashi, Aichi 441-8061, Japan"
         }
       },
       "latLng": [
         34.743463,
-        137.37096499999998
+        137.370965
       ]
     }
   ]

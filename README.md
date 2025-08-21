@@ -49,6 +49,7 @@ interface Series {
 /// Event is a specific instance of a convention.
 interface Event {
   /// Unique ID across all events, including events in other series.
+  ///
   /// It should include the convention name, e.g. `rainfurrest-2016`.
   id: string;
 

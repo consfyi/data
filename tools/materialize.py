@@ -193,6 +193,9 @@ def main():
             write_line(f"DTSTAMP:{dtstamp}")
             write_line(f"URL:{escape_ics(event['url'])}")
             write_line(f"LOCATION:{escape_ics(location)}")
+            if "latLng" in event:
+                lat, lng = event["latLng"]
+                write_line(f"GEO:{lat:.6f};{lng:.6f}")
             write_line("END:VEVENT")
         write_line("END:VCALENDAR")
 

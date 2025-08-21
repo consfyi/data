@@ -1,0 +1,19 @@
+{
+  "name": "MFH Furry Rally",
+  "events": [
+    {
+      "id": "mfh-furry-rally-2026",
+      "name": "MFH Furry Rally 2026",
+      "url": "https://www.moshouju.com",
+      "startDate": "2026-01-01",
+      "endDate": "2026-01-01",
+      "venue": "Chengdu",
+      "address": "Sichuan, China",
+      "country": "CN",
+      "latLng": [
+        30.574714401215445,
+        104.06400493556151
+      ]
+    }
+  ]
+}

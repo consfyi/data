@@ -102,12 +102,19 @@ def prompt_for_venue(gmaps, venue, lang):
 
 
 def slugify(s: str, langid: icu.Locale) -> str:
+    try:
+        trans = icu.Transliterator.createInstance(f"{langid.getLanguage()}-ASCII")
+    except:
+        trans = icu.Transliterator.createInstance("ASCII")
+
     return "-".join(
         regex.sub(
-            r"[^\p{L}\p{N}\s-]+",
+            r"[^a-z0-9\s-]+",
             "",
-            icu.CaseMap.toLower(
-                langid, unicodedata.normalize("NFKC", s.replace("&", "and"))
+            trans.transliterate(
+                icu.CaseMap.toLower(
+                    langid, unicodedata.normalize("NFKC", s.replace("&", "and"))
+                )
             ),
         ).split()
     )

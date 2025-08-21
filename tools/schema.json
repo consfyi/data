@@ -21,7 +21,7 @@
         "properties": {
           "id": {
             "type": "string",
-            "pattern": "^[\\p{Ll}\\p{N}][\\p{Ll}\\p{N}-]*$",
+            "pattern": "^[a-z0-9][a-z0-9-]*$",
             "minLength": 1
           },
           "name": {

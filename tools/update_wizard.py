@@ -34,9 +34,11 @@ def guess_language_for_region(region_code: str) -> icu.Locale:
     return icu.Locale.createFromName(f"und_{region_code}").addLikelySubtags()
 
 
-def prompt_for_venue(gmaps, venue):
+def prompt_for_venue(gmaps, venue, lang):
     session_token = str(uuid.uuid4())
-    predictions = gmaps.places_autocomplete(venue)
+    predictions = gmaps.places_autocomplete(
+        venue, session_token=session_token, language=lang
+    )
 
     address = None
     country = None
@@ -72,15 +74,16 @@ def prompt_for_venue(gmaps, venue):
         selected = predictions[choice - 1]
 
         st = selected["structured_formatting"]
-        venue = st["main_text"]
         if "secondary_text" in st:
             address = st["secondary_text"]
 
         place = gmaps.place(
             selected["place_id"],
             session_token=session_token,
-            fields=["geometry/location", "address_component"],
+            fields=["name", "geometry/location", "address_component"],
+            language=lang,
         )
+        venue = place["result"]["name"]
 
         l = place["result"]["geometry"]["location"]
         lat_lng = (l["lat"], l["lng"])
@@ -338,20 +341,20 @@ def handle_add(gmaps, series_id, series):
     guessed_name = f"{series['name']} {suffix}"
     event["name"] = prompt_for_change("name", guessed_name)
 
+    lang = (
+        guess_language_for_region(event["country"])
+        if "country" in event
+        else icu.Locale.createFromName("en")
+    )
     if event["name"] != guessed_name:
-        event["id"] = slugify(
-            event["name"],
-            guess_language_for_region(event["country"])
-            if "country" in event
-            else icu.Locale.createFromName("en"),
-        )
+        event["id"] = slugify(event["name"], lang)
         event["id"] = prompt_for_change("event id", event["id"])
     else:
         event["id"] = f"{series_id}-{suffix}"
 
     event["venue"] = prompt_for_change("venue", event["venue"])
     if event["venue"] != previous_event["venue"]:
-        venue, address, country, lat_lng = prompt_for_venue(gmaps, event["venue"])
+        venue, address, country, lat_lng = prompt_for_venue(gmaps, event["venue"], "en")
         event["venue"] = venue
 
         if address is not None:
@@ -386,7 +389,7 @@ def handle_new(gmaps):
     series_name = prompt_for_change("series name")
     url = prompt_for_change("website")
     venue = prompt_for_change("venue")
-    venue, address, country, lat_lng = prompt_for_venue(gmaps, venue)
+    venue, address, country, lat_lng = prompt_for_venue(gmaps, venue, "en")
 
     while True:
         try:

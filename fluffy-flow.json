@@ -10,6 +10,18 @@
       "venue": "Crowne Plaza Tianjin Jinnan",
       "address": "Lingyu Road, Jinnan District, Tianjin, China",
       "locale": "zh-CN",
+      "translations": {
+        "zh-Hans": {
+          "name": "绒兽汇",
+          "venue": "天津京基皇冠假日酒店",
+          "address": "中国天津市津南区聆雨路"
+        },
+        "zh-Hant": {
+          "name": "絨獸匯",
+          "venue": "天津京基皇冠假日酒店",
+          "address": "中國天津市津南區聆雨路"
+        }
+      },
       "latLng": [
         38.979556485248054,
         117.28972388224358

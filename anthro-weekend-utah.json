@@ -2,6 +2,20 @@
   "name": "Anthro Weekend Utah",
   "events": [
     {
+      "id": "anthro-weekend-utah-2026",
+      "name": "Anthro Weekend Utah 2026",
+      "url": "https://www.anthroweekendutah.org",
+      "startDate": "2026-07-31",
+      "endDate": "2026-08-02",
+      "venue": "Davis Conference Center",
+      "address": "North 700 West, Layton, UT, USA",
+      "country": "US",
+      "latLng": [
+        41.084896,
+        -111.9810485
+      ]
+    },
+    {
       "id": "anthro-weekend-utah-2025",
       "name": "Anthro Weekend Utah 2025",
       "url": "https://www.anthroweekendutah.org",

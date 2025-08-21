@@ -2,6 +2,20 @@
   "name": "Futerkon",
   "events": [
     {
+      "id": "futerkon-2026",
+      "name": "Futerkon 2026",
+      "url": "https://futerkon.pl",
+      "startDate": "2026-08-05",
+      "endDate": "2026-08-09",
+      "venue": "Hotel Ameliówka",
+      "address": "ul. Bohdana Kosińskiego, Mąchocice Kapitulne, Poland",
+      "country": "PL",
+      "latLng": [
+        50.8977905,
+        20.7818322
+      ]
+    },
+    {
       "id": "futerkon-2025",
       "name": "Futerkon 2025",
       "url": "https://futerkon.pl",

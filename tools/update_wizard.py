@@ -309,6 +309,7 @@ def handle_add(gmaps, series_id, series):
         except ValueError:
             continue
         break
+    event["startDate"] = start_date.isoformat()
 
     while True:
         try:
@@ -323,6 +324,7 @@ def handle_add(gmaps, series_id, series):
         except ValueError:
             continue
         break
+    event["endDate"] = end_date.isoformat()
 
     suffix = start_date.year
     _, previous_suffix = previous_event["name"].rsplit(" ", 1)

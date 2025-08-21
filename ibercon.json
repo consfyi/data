@@ -2,6 +2,20 @@
   "name": "Ibercon",
   "events": [
     {
+      "id": "ibercon-2026",
+      "name": "Ibercon 2026",
+      "url": "https://ibercon.org",
+      "startDate": "2026-04-30",
+      "endDate": "2026-05-03",
+      "venue": "Novotel Madrid Center",
+      "address": "Calle de O'Donnell, Madrid, Spain",
+      "country": "ES",
+      "latLng": [
+        40.4216398,
+        -3.6722838
+      ]
+    },
+    {
       "id": "ibercon-2025",
       "name": "Ibercon 2025",
       "url": "https://ibercon.org",

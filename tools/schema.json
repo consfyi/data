@@ -21,7 +21,7 @@
         "properties": {
           "id": {
             "type": "string",
-            "pattern": "^[\\p{Ll}\\p{N}\\p{Han}\\p{sc=Hiragana}\\p{sc=Katakana}\\p{sc=Hangul}][\\p{Ll}\\p{N}\\p{Han}\\p{sc=Hiragana}\\p{sc=Katakana}\\p{sc=Hangul}-]*$",
+            "pattern": "^[\\p{Ll}\\p{N}][\\p{Ll}\\p{N}-]*$",
             "minLength": 1
           },
           "name": {

@@ -1,0 +1,19 @@
+{
+  "name": "FurCity",
+  "events": [
+    {
+      "id": "furcity-2025",
+      "name": "FurCity 2025",
+      "url": "https://www.furcity.online",
+      "startDate": "2025-10-02",
+      "endDate": "2025-10-04",
+      "venue": "Intercontinental Guangzhou Exhibition Center",
+      "address": "Haizhu District, Guangzhou, China",
+      "country": "CN",
+      "latLng": [
+        23.10714261634886,
+        113.37670886662467
+      ]
+    }
+  ]
+}

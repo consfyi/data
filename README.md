@@ -53,9 +53,11 @@ interface Event {
   /// It should include the convention name, e.g. `rainfurrest-2016`.
   id: string;
 
-  /// The human-readable name of the convention instance, e.g. "RainFurrest 2016".
+  /// The human-readable name of the convention instance, e.g.
+  /// "RainFurrest 2016".
   ///
-  /// This should be in the locale of the event, but will also be displayed as the fallback.
+  /// This should be in the locale of the event, but will also be displayed as
+  /// the fallback.
   name: string;
 
   /// Link to the convention website.
@@ -78,7 +80,8 @@ interface Event {
 
   /// The human-readable address of the venue, if it is a physical venue.
   ///
-  /// The granularity of this is not specified, it does not need to be exact. It should include the name of the country.
+  /// The granularity of this is not specified, it does not need to be exact. It
+  /// should include the name of the country.
   ///
   /// This should be in the locale of the event.
   address?: string;
@@ -88,9 +91,12 @@ interface Event {
 
   /// Translations for human-readable fields in different locales.
   ///
-  /// The translation may contain an entry for the same locale as the event if a viewer who has that locale set should see a more locale-specific version of the text.
+  /// The translation may contain an entry for the same locale as the event if a
+  /// viewer who has that locale set should see a more locale-specific version
+  /// of the text.
   ///
-  /// For instance, "Kemono Square" is an acceptable Japanese locale name, but Japanese viewers may prefer to see "ケモノスクエア" instead.
+  /// For instance, "Kemono Square" is an acceptable Japanese locale name, but
+  /// Japanese viewers may prefer to see "ケモノスクエア" instead.
   translations?: {
     [locale: string]: {
       name?: string;

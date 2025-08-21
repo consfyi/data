@@ -51,7 +51,8 @@
             "type": "string"
           },
           "locale": {
-            "type": "string"
+            "type": "string",
+            "format": "[a-z]{2,3}-[A-Z]{2}"
           },
           "translations": {
             "type": "object",

@@ -105,8 +105,12 @@ interface Event {
     };
   };
 
-  /// The GPS coordinates of the venue.
+  /// The GPS coordinates of the venue in WGS-84.
+  ///
   /// This may be unset for e.g. virtual conventions.
+  ///
+  /// Note some services may return coordinates inside China in GCJ-02. Please
+  /// make sure to convert them first!
   latLng?: [number, number];
 
   /// If the convention instance has been canceled.

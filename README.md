@@ -45,6 +45,7 @@ interface Series {
   events: Event[];
 }
 
+
 /// Event is a specific instance of a convention.
 interface Event {
   /// Unique ID across all events, including events in other series.
@@ -68,22 +69,31 @@ interface Event {
   /// The human-readable name of the venue.
   venue: string;
 
-  /// The address of the venue, if it is a physical venue.
+  /// The human-readable address of the venue, if it is a physical venue.
   /// The granularity of this is not specified, it does not need to be exact. It should include the name of the country.
   address?: string;
 
   /// The locale of the convention as a Unicode locale identifier, e.g. "en-US".
   locale: string;
 
+  /// Translations for human-readable fields in different locales.
+  translations?: {
+    [locale: string]: {
+      name?: string;
+      venue?: string;
+      address?: string;
+    };
+  };
+
   /// The GPS coordinates of the venue.
   /// This may be unset for e.g. virtual conventions.
   latLng?: [number, number];
 
   /// If the convention instance has been canceled.
-  canceled?: boolean,
+  canceled?: boolean;
 
   /// The number of attendees for historical cons.
-  attendance?: number,
+  attendance?: number;
 
   /// Sources this data is from.
   sources?: string[];

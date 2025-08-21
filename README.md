@@ -72,7 +72,7 @@ interface Event {
   /// The granularity of this is not specified, it does not need to be exact. It should include the name of the country.
   address?: string;
 
-  /// The locale of the convention, comprising of the language and country.
+  /// The locale of the convention as a Unicode locale identifier, e.g. "en-US".
   locale: string;
 
   /// The GPS coordinates of the venue.

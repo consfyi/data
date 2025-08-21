@@ -1,0 +1,19 @@
+{
+  "name": "Fluffy Flow",
+  "events": [
+    {
+      "id": "fluffy-flow-2025",
+      "name": "Fluffy Flow 2025",
+      "url": "https://www.fluffyflow.cn",
+      "startDate": "2025-08-21",
+      "endDate": "2025-08-24",
+      "venue": "Crowne Plaza Tianjin Jinnan",
+      "address": "Lingyu Road, Jinnan District, Tianjin, China",
+      "country": "CN",
+      "latLng": [
+        38.979556485248054,
+        117.28972388224358
+      ]
+    }
+  ]
+}

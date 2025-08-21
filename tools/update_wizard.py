@@ -34,15 +34,16 @@ def guess_language_for_region(region_code: str) -> icu.Locale:
     return icu.Locale.createFromName(f"und_{region_code}").addLikelySubtags()
 
 
-def prompt_for_venue(gmaps, venue, lang):
+def prompt_for_venue(gmaps, venue):
     session_token = str(uuid.uuid4())
     predictions = gmaps.places_autocomplete(
-        venue, session_token=session_token, language=lang
+        venue, session_token=session_token, language="en"
     )
 
     address = None
     country = None
     lat_lng = None
+    translations = {}
 
     while True:
         termcolor.cprint(f"    0) ", "magenta", end="")
@@ -82,7 +83,7 @@ def prompt_for_venue(gmaps, venue, lang):
                 "geometry/location",
                 "address_component",
             ],
-            language=lang,
+            language="en",
         )["result"]
 
         venue = place["name"]
@@ -95,13 +96,33 @@ def prompt_for_venue(gmaps, venue, lang):
             for component in place["address_components"]
             if "country" in component["types"]
         )
-        if country == "CN":
+        locale = guess_language_for_region(country)
+
+        if locale.getCountry() == "CN":
             lat, lng = lat_lng
             lat_lng = eviltransform.gcj2wgs(lat, lng)
 
+        if locale.getLanguage() != "en":
+            localePlace = gmaps.place(
+                selected["place_id"],
+                session_token=session_token,
+                fields=[
+                    "name",
+                    "formatted_address",
+                ],
+                language=locale.getLanguage(),
+            )["result"]
+
+            translations["en"] = {
+                "venue": venue,
+                "address": address,
+            }
+            venue = localePlace["name"]
+            address = localePlace["formatted_address"]
+
         break
 
-    return venue, address, country, lat_lng
+    return venue, address, locale, translations, lat_lng
 
 
 def slugify(s: str, langid: icu.Locale) -> str:
@@ -352,17 +373,13 @@ def handle_add(gmaps, series_id, series):
     event["name"] = prompt_for_change("name", guessed_name)
 
     locale = icu.Locale.createFromName(event["locale"])
-
-    if event["name"] != guessed_name:
-        event["id"] = slugify(event["name"], locale)
-        event["id"] = prompt_for_change("event id", event["id"])
-    else:
-        event["id"] = f"{series_id}-{suffix}"
-
     event["venue"] = prompt_for_change("venue", event["venue"])
     if event["venue"] != previous_event["venue"]:
-        venue, address, _, lat_lng = prompt_for_venue(gmaps, event["venue"], "en")
+        venue, address, locale, translations, lat_lng = prompt_for_venue(
+            gmaps, event["venue"]
+        )
         event["venue"] = venue
+        event["locale"] = f"{locale.getLanguage()}-{locale.getCountry()}"
 
         if address is not None:
             event["address"] = address
@@ -373,6 +390,16 @@ def handle_add(gmaps, series_id, series):
             event["latLng"] = lat_lng
         else:
             del event["latLng"]
+
+        if translations:
+            for k, fields in translations.items():
+                event.setdefault("translations", {}).setdefault(k, {}).update(fields)
+
+    if event["name"] != guessed_name:
+        event["id"] = slugify(event["name"], locale)
+        event["id"] = prompt_for_change("event id", event["id"])
+    else:
+        event["id"] = f"{series_id}-{suffix}"
 
     fn = f"{series_id}.json"
     termcolor.cprint(f"  {fn} / {event['id']}", attrs=["bold"])
@@ -393,7 +420,7 @@ def handle_new(gmaps):
     series_name = prompt_for_change("series name")
     url = prompt_for_change("website")
     venue = prompt_for_change("venue")
-    venue, address, country, lat_lng = prompt_for_venue(gmaps, venue, "en")
+    venue, address, locale, translations, lat_lng = prompt_for_venue(gmaps, venue)
 
     while True:
         try:
@@ -411,11 +438,6 @@ def handle_new(gmaps):
             continue
         break
 
-    locale = (
-        guess_language_for_region(country)
-        if country is not None
-        else icu.Locale.createFromName("en_US")
-    )
     series_id = slugify(series_name, locale)
 
     suffix = prompt_for_change("suffix", str(start_date.year))
@@ -433,6 +455,7 @@ def handle_new(gmaps):
                 "venue": venue,
                 **({"address": address} if address is not None else {}),
                 "locale": f"{locale.getLanguage()}-{locale.getCountry()}",
+                **({"translations": translations} if translations else {}),
                 **({"latLng": lat_lng} if lat_lng is not None else {}),
             },
         ],

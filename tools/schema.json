@@ -53,6 +53,24 @@
           "locale": {
             "type": "string"
           },
+          "translations": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "venue": {
+                  "type": "string"
+                },
+                "address": {
+                  "type": "string"
+                }
+              }
+            }
+          },
           "latLng": {
             "type": "array",
             "prefixItems": [

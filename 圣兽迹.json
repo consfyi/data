@@ -1,0 +1,31 @@
+{
+  "name": "圣兽迹",
+  "events": [
+    {
+      "id": "圣兽迹-3",
+      "name": "圣兽迹3",
+      "url": "https://ssj.pawket.cn",
+      "startDate": "2025-10-01",
+      "endDate": "2025-10-04",
+      "venue": "重庆恒大酒店",
+      "address": "中国重庆市江津区恒大大道",
+      "locale": "zh-CN",
+      "translations": {
+        "en": {
+          "name": "Sheng Shou Ji 3",
+          "venue": "Chongqing Hengda Hotel",
+          "address": "Hengda Ave, Jiangjin District, Chongqing, China"
+        },
+        "zh-Hant": {
+          "name": "聖獸跡3",
+          "venue": "重慶恆大酒店",
+          "address": "中國重慶市江津區恆大大道"
+        }
+      },
+      "latLng": [
+        29.427163571685707,
+        106.25861003412511
+      ]
+    }
+  ]
+}

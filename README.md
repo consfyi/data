@@ -36,7 +36,7 @@ Attribution is not required but appreciated. This helps us keep our data up to d
 Each convention series is modeled by a `Series` record in [github.com/consfyi/data](https://github.com/consfyi/data), one record per `.json` file. The name of the file is the unique ID of the convention series.
 
 ```typescript
-/// Series is a collection of events describing a convention series.
+/// A collection of events describing a convention series.
 interface Series {
   /// The human-readable name for the convention series.
   name: string;
@@ -46,7 +46,7 @@ interface Series {
 }
 
 
-/// Event is a specific instance of a convention.
+/// A specific instance of a convention.
 interface Event {
   /// Unique ID across all events, including events in other series.
   ///
@@ -139,13 +139,13 @@ The following files are materialized at `https://data.cons.fyi`:
 They will be emitted as materialized records which will contain additional details:
 
 ```typescript
-/// MaterializedSeries is a materialized version of Series.
+/// A materialized version of Series.
 interface MaterializedSeries extends Series {
   /// All instances of the convention.
   events: MaterializedEvent[];
 }
 
-/// MaterializedEvent is a materialized version of Event.
+/// A materialized version of Event.
 interface MaterializedEvent extends Event {
   /// The ID of the series this corresponds to.
   seriesId: string;

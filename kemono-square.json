@@ -1,0 +1,19 @@
+{
+  "name": "Kemono Square",
+  "events": [
+    {
+      "id": "kemono-square-9",
+      "name": "Kemono Square 9",
+      "url": "https://kemono-square.jp",
+      "startDate": "2026-06-20",
+      "endDate": "2026-06-20",
+      "venue": "GRANSHIP",
+      "address": "2 Chome-3-1 Higashishizuoka, Suruga Ward, Shizuoka, Japan",
+      "locale": "ja-JP",
+      "latLng": [
+        34.9857192,
+        138.4172558
+      ]
+    }
+  ]
+}

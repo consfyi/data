@@ -1,0 +1,19 @@
+{
+  "name": "Sheng Shou Ji",
+  "events": [
+    {
+      "id": "sheng-shou-ji-3",
+      "name": "Sheng Shou Ji 3",
+      "url": "https://ssj.pawket.cn",
+      "startDate": "2025-10-01",
+      "endDate": "2025-10-04",
+      "venue": "Chongqing Hengda Hotel",
+      "address": "Hengda Ave, Jiangjin District, Chongqing, China",
+      "country": "CN",
+      "latLng": [
+        29.427163571685707,
+        106.25861003412511
+      ]
+    }
+  ]
+}

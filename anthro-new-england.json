@@ -9,7 +9,7 @@
       "endDate": "2026-01-18",
       "venue": "The Westin Boston Seaport District",
       "address": "Summer Street, Boston, MA, USA",
-      "country": "US",
+      "locale": "en_US",
       "latLng": [
         42.3459926,
         -71.0430104

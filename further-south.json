@@ -9,7 +9,7 @@
       "endDate": "2026-03-09",
       "venue": "Holiday Inn Portsmouth by IHG",
       "address": "Pembroke Road, Portsmouth, UK",
-      "country": "GB",
+      "locale": "en_GB",
       "latLng": [
         50.788948999999995,
         -1.098983

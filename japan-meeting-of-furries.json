@@ -9,7 +9,7 @@
       "endDate": "2026-01-11",
       "venue": "LOISIR HOTEL TOYOHASHI",
       "address": "141 Fujisawachō, Toyohashi, Aichi, Japan",
-      "country": "JP",
+      "locale": "ja_JP",
       "latLng": [
         34.743463,
         137.37096499999998

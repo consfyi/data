@@ -72,9 +72,8 @@ interface Event {
   /// The granularity of this is not specified, it does not need to be exact. It should include the name of the country.
   address?: string;
 
-  /// The country as an ISO 3166-1 alpha-2 code.
-  /// This may be unset for e.g. virtual conventions.
-  country?: string;
+  /// The locale of the convention, comprising of the language and country.
+  locale: string;
 
   /// The GPS coordinates of the venue.
   /// This may be unset for e.g. virtual conventions.

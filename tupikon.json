@@ -9,7 +9,7 @@
       "endDate": "2025-09-07",
       "venue": "Baza Otdykha \"Izumrud\"",
       "address": "Shchiglevo, Kaluga Oblast, Russia",
-      "country": "RU",
+      "locale": "ru_RU",
       "latLng": [
         54.9300901,
         36.8729326

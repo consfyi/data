@@ -9,7 +9,7 @@
       "endDate": "2025-09-21",
       "venue": "Ontario Convention Center",
       "address": "East Convention Center Way, Ontario, CA, USA",
-      "country": "US",
+      "locale": "en_US",
       "latLng": [
         34.0655006,
         -117.6064432

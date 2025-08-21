@@ -9,7 +9,7 @@
       "endDate": "2025-08-17",
       "venue": "Wyndham Indianapolis Airport",
       "address": "Executive Drive, Indianapolis, IN, USA",
-      "country": "US",
+      "locale": "en_US",
       "latLng": [
         39.7293745,
         -86.2584777
@@ -23,7 +23,7 @@
       "endDate": "2024-08-25",
       "venue": "Wyndham Indianapolis West",
       "address": "Eagle View Drive, Indianapolis, IN, USA",
-      "country": "US",
+      "locale": "en_US",
       "latLng": [
         39.82519920000001,
         -86.27811870000001
@@ -37,7 +37,7 @@
       "endDate": "2023-08-28",
       "venue": "Wyndham Indianapolis West",
       "address": "Eagle View Drive, Indianapolis, IN, USA",
-      "country": "US",
+      "locale": "en_US",
       "latLng": [
         39.82519920000001,
         -86.27811870000001

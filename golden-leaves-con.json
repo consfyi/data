@@ -9,7 +9,7 @@
       "endDate": "2025-11-02",
       "venue": "Hostel C’est la Vie",
       "address": "Engi, Hasliberg, Switzerland",
-      "country": "CH",
+      "locale": "de_CH",
       "latLng": [
         46.7334363,
         8.2071686

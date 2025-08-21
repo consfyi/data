@@ -9,7 +9,7 @@
       "endDate": "2026-01-19",
       "venue": "San Jose Convention Center",
       "address": "West San Carlos Street, San Jose, CA, USA",
-      "country": "US",
+      "locale": "en_US",
       "latLng": [
         37.3291639,
         -121.889011
@@ -23,7 +23,7 @@
       "endDate": "2025-01-20",
       "venue": "San Jose Convention Center",
       "address": "West San Carlos Street, San Jose, CA, USA",
-      "country": "US",
+      "locale": "en_US",
       "latLng": [
         37.3291639,
         -121.889011
@@ -37,7 +37,7 @@
       "endDate": "2024-01-15",
       "venue": "San Jose Convention Center",
       "address": "West San Carlos Street, San Jose, CA, USA",
-      "country": "US",
+      "locale": "en_US",
       "latLng": [
         37.3291639,
         -121.889011
@@ -51,7 +51,7 @@
       "endDate": "2023-01-16",
       "venue": "San Jose Convention Center",
       "address": "West San Carlos Street, San Jose, CA, USA",
-      "country": "US",
+      "locale": "en_US",
       "latLng": [
         37.3291639,
         -121.889011

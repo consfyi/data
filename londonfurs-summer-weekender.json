@@ -9,7 +9,7 @@
       "endDate": "2025-07-19",
       "venue": "Tank & Paddle Minster Court",
       "address": "Mincing Lane, Minster Court, London, UK",
-      "country": "GB",
+      "locale": "en_GB",
       "latLng": [
         51.5109443,
         -0.0809249

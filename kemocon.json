@@ -9,7 +9,7 @@
       "endDate": "2025-11-09",
       "venue": "Gotemba Kogen Tokinosumika",
       "address": "719 Koyama, Gotemba, Shizuoka, Japan",
-      "country": "JP",
+      "locale": "ja_JP",
       "latLng": [
         35.2357896,
         138.9250904

@@ -9,7 +9,7 @@
       "endDate": "2025-10-16",
       "venue": "Grand Sierra Resort, Reno, NV",
       "address": "East 2nd Street, Reno, NV, USA",
-      "country": "US",
+      "locale": "en_US",
       "latLng": [
         39.5230411,
         -119.7812235
@@ -23,7 +23,7 @@
       "endDate": "2024-10-17",
       "venue": "Grand Sierra Resort, Reno, NV",
       "address": "East 2nd Street, Reno, NV, USA",
-      "country": "US",
+      "locale": "en_US",
       "latLng": [
         39.5230411,
         -119.7812235
@@ -37,7 +37,7 @@
       "endDate": "2023-11-02",
       "venue": "Grand Sierra Resort, Reno, NV",
       "address": "East 2nd Street, Reno, NV, USA",
-      "country": "US",
+      "locale": "en_US",
       "latLng": [
         39.5230411,
         -119.7812235
@@ -51,7 +51,7 @@
       "endDate": "2022-06-06",
       "venue": "Grand Sierra Resort, Reno, NV",
       "address": "East 2nd Street, Reno, NV, USA",
-      "country": "US",
+      "locale": "en_US",
       "latLng": [
         39.5230411,
         -119.7812235
@@ -65,7 +65,7 @@
       "endDate": "2021-10-24",
       "venue": "Grand Sierra Resort, Reno, NV",
       "address": "East 2nd Street, Reno, NV, USA",
-      "country": "US",
+      "locale": "en_US",
       "latLng": [
         39.5230411,
         -119.7812235

@@ -9,7 +9,7 @@
       "endDate": "2025-10-05",
       "venue": "North Park Lodge",
       "address": "North Ridge Drive, Allison Park, PA, USA",
-      "country": "US",
+      "locale": "en_US",
       "latLng": [
         40.6171276,
         -80.0169784

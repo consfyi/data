@@ -9,7 +9,7 @@
       "endDate": "2026-05-03",
       "venue": "Kettle Moraine State Forest Southern Unit",
       "address": "Dousman, WI, USA",
-      "country": "US",
+      "locale": "en_US",
       "latLng": [
         42.9502252,
         -88.45727219999999
@@ -23,7 +23,7 @@
       "endDate": "2025-05-04",
       "venue": "Wildcat Mountain State Park",
       "address": "Wisconsin 33, Ontario, WI, USA",
-      "country": "US",
+      "locale": "en_US",
       "latLng": [
         43.697627,
         -90.5741755

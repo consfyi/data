@@ -9,7 +9,7 @@
       "endDate": "2026-02-01",
       "venue": "Sole Gjestegård",
       "address": "Krøderfjordveien, Noresund, Norway",
-      "country": "NO",
+      "locale": "nb_NO",
       "latLng": [
         60.1755457,
         9.6308097

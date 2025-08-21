@@ -9,7 +9,7 @@
       "endDate": "2025-09-06",
       "venue": "Congress Center Hamburg",
       "address": "Congressplatz, Hamburg, Deutschland",
-      "country": "DE",
+      "locale": "de_DE",
       "latLng": [
         53.5615943,
         9.9859745

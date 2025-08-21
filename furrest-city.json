@@ -9,7 +9,7 @@
       "endDate": "2025-09-13",
       "venue": "Sears think[box]",
       "address": "Cedar Avenue, Cleveland, OH, USA",
-      "country": "US",
+      "locale": "en_US",
       "latLng": [
         41.5005757,
         -81.60568479999999

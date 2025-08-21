@@ -9,7 +9,7 @@
       "endDate": "2025-10-04",
       "venue": "Chongqing Hengda Hotel",
       "address": "Hengda Ave, Jiangjin District, Chongqing, China",
-      "country": "CN",
+      "locale": "zh_CN",
       "latLng": [
         29.427163571685707,
         106.25861003412511

@@ -9,7 +9,7 @@
       "endDate": "2025-12-14",
       "venue": "The Crocodile",
       "address": "1st Avenue, Seattle, WA, USA",
-      "country": "US",
+      "locale": "en_US",
       "latLng": [
         47.614767699999994,
         -122.34927809999999

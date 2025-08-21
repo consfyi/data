@@ -9,7 +9,7 @@
       "endDate": "2025-04-28",
       "venue": "Groepsaccommodatie Kasteel De Berckt",
       "address": "De Berckt, Baarlo, Netherlands",
-      "country": "NL",
+      "locale": "nl_NL",
       "latLng": [
         51.342657,
         6.112067

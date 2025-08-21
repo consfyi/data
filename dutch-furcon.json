@@ -9,7 +9,7 @@
       "endDate": "2025-08-10",
       "venue": "Vakantiepark de Oude Molen",
       "address": "Wylerbaan, Groesbeek, Netherlands",
-      "country": "NL",
+      "locale": "nl_NL",
       "latLng": [
         51.7844444,
         5.935

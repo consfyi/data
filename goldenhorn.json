@@ -9,7 +9,7 @@
       "endDate": "2025-11-16",
       "venue": "Adria Ankaran Hotel & Resort",
       "address": "Jadranska cesta, Ankaran, Slovenia",
-      "country": "SI",
+      "locale": "sl_SI",
       "latLng": [
         45.5779904,
         13.7341822

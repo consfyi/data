@@ -9,7 +9,7 @@
       "endDate": "2025-06-08",
       "venue": "The Emerald Hotel",
       "address": "Ratchadaphisek Road, Din Daeng, Bangkok, Thailand",
-      "country": "TH",
+      "locale": "th_TH",
       "latLng": [
         13.7754503,
         100.5725367

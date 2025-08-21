@@ -9,7 +9,7 @@
       "endDate": "2025-03-23",
       "venue": "Grand Richmond Stylish Convention Hotel",
       "address": "Rattanathibet Road, Bang Krasaw, Mueang Nonthaburi District, Nonthaburi, Thailand",
-      "country": "TH",
+      "locale": "th_TH",
       "latLng": [
         13.8615278,
         100.5068041

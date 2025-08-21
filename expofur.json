@@ -9,7 +9,7 @@
       "endDate": "2026-02-22",
       "venue": "Four Points by Sheraton Galerias Monterrey",
       "address": "Avenida Insurgentes, Vista Hermosa, Monterrey, Nuevo Leon, Mexico",
-      "country": "MX",
+      "locale": "es_MX",
       "latLng": [
         25.6832438,
         -100.3552529
@@ -23,7 +23,7 @@
       "endDate": "2025-03-09",
       "venue": "Hotel Monterrey Macroplaza",
       "address": "Morelos Oriente, Centro, Monterrey, Nuevo Leon, Mexico",
-      "country": "MX",
+      "locale": "es_MX",
       "latLng": [
         25.666786,
         -100.3110265

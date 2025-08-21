@@ -9,7 +9,7 @@
       "endDate": "2024-12-22",
       "venue": "Crowne Plaza Shanghai Xiayang Lake",
       "address": "Qingpu District, China",
-      "country": "CN",
+      "locale": "zh_CN",
       "latLng": [
         31.15329194575372,
         121.13352781771808

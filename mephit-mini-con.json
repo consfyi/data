@@ -9,7 +9,7 @@
       "endDate": "2025-06-01",
       "venue": "DJH Jugendherberge Freusburg",
       "address": "Burgstraße, Kirchen-Freusburg, Deutschland",
-      "country": "DE",
+      "locale": "de_DE",
       "latLng": [
         50.8266967,
         7.8811276

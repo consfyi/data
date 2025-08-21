@@ -9,7 +9,7 @@
       "endDate": "2025-11-02",
       "venue": "Hotel Zuiderduin",
       "address": "Zeeweg, Egmond aan Zee, Netherlands",
-      "country": "NL",
+      "locale": "nl_NL",
       "latLng": [
         52.61639359999999,
         4.6251336

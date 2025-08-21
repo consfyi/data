@@ -9,7 +9,7 @@
       "endDate": "2025-08-04",
       "venue": "Deschutes National Forest",
       "address": "Oregon, USA",
-      "country": "US",
+      "locale": "en_US",
       "latLng": [
         44.0001153,
         -121.5014231

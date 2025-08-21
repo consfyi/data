@@ -9,7 +9,7 @@
       "endDate": "2025-09-08",
       "venue": "Valverde Eco Hotel",
       "address": "South Africa",
-      "country": "ZA",
+      "locale": "en_ZA",
       "latLng": [
         -25.9557126,
         27.8764046

@@ -9,7 +9,7 @@
       "endDate": "2025-08-03",
       "venue": "Delta Hotels by Marriott",
       "address": "Lyon Street North, Ottawa, ON, Canada",
-      "country": "CA",
+      "locale": "en_CA",
       "latLng": [
         45.41859909999999,
         -75.70437799999999

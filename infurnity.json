@@ -9,7 +9,7 @@
       "endDate": "2025-11-02",
       "venue": "Fullon Hotel Lihpao Land",
       "address": "Furong Road, Houli District, Taichung City, Taiwan",
-      "country": "TW",
+      "locale": "zh_TW",
       "latLng": [
         24.3235809,
         120.69659539999999

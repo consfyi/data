@@ -9,7 +9,7 @@
       "endDate": "2025-10-26",
       "venue": "Executive Hotel Vancouver Airport",
       "address": "Westminster Highway, Richmond, BC, Canada",
-      "country": "CA",
+      "locale": "en_CA",
       "latLng": [
         49.1704219,
         -123.1453037

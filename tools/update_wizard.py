@@ -341,29 +341,23 @@ def handle_add(gmaps, series_id, series):
     guessed_name = f"{series['name']} {suffix}"
     event["name"] = prompt_for_change("name", guessed_name)
 
-    lang = (
-        guess_language_for_region(event["country"])
-        if "country" in event
-        else icu.Locale.createFromName("en")
-    )
+    locale = icu.Locale.createFromName(event["locale"])
+
     if event["name"] != guessed_name:
-        event["id"] = slugify(event["name"], lang)
+        event["id"] = slugify(event["name"], locale)
         event["id"] = prompt_for_change("event id", event["id"])
     else:
         event["id"] = f"{series_id}-{suffix}"
 
     event["venue"] = prompt_for_change("venue", event["venue"])
     if event["venue"] != previous_event["venue"]:
-        venue, address, country, lat_lng = prompt_for_venue(gmaps, event["venue"], "en")
+        venue, address, _, lat_lng = prompt_for_venue(gmaps, event["venue"], "en")
         event["venue"] = venue
 
         if address is not None:
             event["address"] = address
         else:
             del event["address"]
-
-        if country is not None:
-            event["country"] = country
 
         if lat_lng is not None:
             event["latLng"] = lat_lng
@@ -407,12 +401,12 @@ def handle_new(gmaps):
             continue
         break
 
-    series_id = slugify(
-        series_name,
+    locale = (
         guess_language_for_region(country)
         if country is not None
-        else icu.Locale.createFromName("en"),
+        else icu.Locale.createFromName("en_US")
     )
+    series_id = slugify(series_name, locale)
 
     suffix = prompt_for_change("suffix", str(start_date.year))
     event_id = prompt_for_change("event id", f"{series_id}-{suffix}")
@@ -428,7 +422,7 @@ def handle_new(gmaps):
                 "endDate": end_date.isoformat(),
                 "venue": venue,
                 **({"address": address} if address is not None else {}),
-                **({"country": country} if country is not None else {}),
+                "locale": f"{locale.getLanguage()}_{locale.getCountry()}",
                 **({"latLng": lat_lng} if lat_lng is not None else {}),
             },
         ],

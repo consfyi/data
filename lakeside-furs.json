@@ -9,7 +9,7 @@
       "endDate": "2025-06-29",
       "venue": "Karlingerhof am Achensee - Gruppenhaus & Ferienwohnungen",
       "address": "Seewinklstraße, Achenkirch, Austria",
-      "country": "AT",
+      "locale": "de_AT",
       "latLng": [
         47.501787,
         11.706208400000001

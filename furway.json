@@ -9,7 +9,7 @@
       "endDate": "2025-07-21",
       "venue": "Åstjern hyttetun A / S",
       "address": "Brandbu, Norway",
-      "country": "NO",
+      "locale": "nb_NO",
       "latLng": [
         60.49558779999999,
         10.5827018

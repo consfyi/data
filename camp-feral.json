@@ -9,7 +9,7 @@
       "endDate": "2025-08-25",
       "venue": "Camp Arowhon",
       "address": "Algonquin Park, ON, Canada",
-      "country": "CA",
+      "locale": "en_CA",
       "latLng": [
         45.596578,
         -78.73186799999999

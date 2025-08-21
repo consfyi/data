@@ -9,7 +9,7 @@
       "endDate": "2025-05-04",
       "venue": "Westernové městečko Boskovice, s.r.o.",
       "address": "Svatopluka Čecha, Boskovice, Czechia",
-      "country": "CZ",
+      "locale": "cs_CZ",
       "latLng": [
         49.494778,
         16.6856997

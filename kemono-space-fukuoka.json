@@ -9,7 +9,7 @@
       "endDate": "2025-11-15",
       "venue": "Fukuoka Tower",
       "address": "2 Chome-3-26 Momochihama, Sawara Ward, Fukuoka, Japan",
-      "country": "JP",
+      "locale": "ja_JP",
       "latLng": [
         33.5932846,
         130.35151

@@ -9,7 +9,7 @@
       "endDate": "2025-06-14",
       "venue": "Wickham Park",
       "address": "Middle Turnpike West, Manchester, CT, USA",
-      "country": "US",
+      "locale": "en_US",
       "latLng": [
         41.7811727,
         -72.5764044

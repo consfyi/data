@@ -9,7 +9,7 @@
       "endDate": "2025-07-04",
       "venue": "Hotel Skalský dvůr",
       "address": "Lísek, Lísek u Bystřice nad Pernštejnem, ČR",
-      "country": "CZ",
+      "locale": "cs_CZ",
       "latLng": [
         49.564785799999996,
         16.1792244

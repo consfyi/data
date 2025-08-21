@@ -9,7 +9,7 @@
       "endDate": "2025-09-07",
       "venue": "Ocean Shores Convention Center",
       "address": "West Chance a La Mer Northwest, Ocean Shores, WA, USA",
-      "country": "US",
+      "locale": "en_US",
       "latLng": [
         47.008477,
         -124.163375
@@ -23,7 +23,7 @@
       "endDate": "2023-09-10",
       "venue": "Ocean Shores Convention Center",
       "address": "West Chance a La Mer Northwest, Ocean Shores, WA, USA",
-      "country": "US",
+      "locale": "en_US",
       "latLng": [
         47.008477,
         -124.163375

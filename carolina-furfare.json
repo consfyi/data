@@ -9,7 +9,7 @@
       "endDate": "2025-11-09",
       "venue": "Hickory Metro Convention Center",
       "address": "13th Avenue Drive Southeast, Hickory, NC, USA",
-      "country": "US",
+      "locale": "en_US",
       "latLng": [
         35.7091445,
         -81.3039439

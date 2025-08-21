@@ -9,7 +9,7 @@
       "endDate": "2026-04-19",
       "venue": "Crowne Plaza Surfers Paradise, an IHG Hotel",
       "address": "Gold Coast Highway, Surfers Paradise QLD, Australia",
-      "country": "AU",
+      "locale": "en_AU",
       "latLng": [
         -28.0176652,
         153.4299021
@@ -23,7 +23,7 @@
       "endDate": "2025-04-07",
       "venue": "Crowne Plaza Surfers Paradise, an IHG Hotel",
       "address": "Gold Coast Highway, Surfers Paradise QLD, Australia",
-      "country": "AU",
+      "locale": "en_AU",
       "latLng": [
         -28.0176652,
         153.4299021

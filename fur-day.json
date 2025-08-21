@@ -9,7 +9,7 @@
       "endDate": "2024-08-18",
       "venue": "Salle de la Mer",
       "address": "Place du 6 Juin, Bernières-sur-Mer, France",
-      "country": "FR",
+      "locale": "fr_FR",
       "latLng": [
         49.3353203,
         -0.4228589

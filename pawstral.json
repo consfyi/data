@@ -9,7 +9,7 @@
       "endDate": "2025-08-31",
       "venue": "ICON Hotel Santiago",
       "address": "Alonso de Córdova, Las Condes, Chile",
-      "country": "CL",
+      "locale": "es_CL",
       "latLng": [
         -33.4078744,
         -70.5680069

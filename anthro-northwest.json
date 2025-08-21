@@ -9,7 +9,7 @@
       "endDate": "2026-01-04",
       "venue": "Hyatt Regency Seattle",
       "address": "Howell Street, Seattle, WA, USA",
-      "country": "US",
+      "locale": "en_US",
       "latLng": [
         47.6143837,
         -122.3340172
@@ -23,7 +23,7 @@
       "endDate": "2025-01-05",
       "venue": "Hyatt Regency Seattle",
       "address": "Howell Street, Seattle, WA, USA",
-      "country": "US",
+      "locale": "en_US",
       "latLng": [
         47.6143837,
         -122.3340172

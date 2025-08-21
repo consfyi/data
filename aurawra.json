@@ -9,7 +9,7 @@
       "endDate": "2025-07-28",
       "venue": "PARKROYAL Parramatta",
       "address": "Phillip Street, Parramatta NSW, Australia",
-      "country": "AU",
+      "locale": "en_AU",
       "latLng": [
         -33.8122314,
         151.0049991

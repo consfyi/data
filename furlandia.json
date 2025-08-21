@@ -9,7 +9,7 @@
       "endDate": "2026-05-24",
       "venue": "Hyatt Regency Portland at the Oregon Convention Center",
       "address": "Northeast Holladay Street, Portland, OR, USA",
-      "country": "US",
+      "locale": "en_US",
       "latLng": [
         45.530407,
         -122.6628561
@@ -23,7 +23,7 @@
       "endDate": "2025-05-25",
       "venue": "Sheraton Portland Airport Hotel",
       "address": "Northeast Airport Way, Portland, OR, USA",
-      "country": "US",
+      "locale": "en_US",
       "latLng": [
         45.5830457,
         -122.5752112

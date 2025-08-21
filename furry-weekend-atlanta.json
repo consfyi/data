@@ -9,7 +9,7 @@
       "endDate": "2026-05-10",
       "venue": "Atlanta Marriott Marquis",
       "address": "Peachtree Center Avenue Northeast, Atlanta, GA, USA",
-      "country": "US",
+      "locale": "en_US",
       "latLng": [
         33.7615717,
         -84.3859463

@@ -9,7 +9,7 @@
       "endDate": "2026-04-12",
       "venue": "Clayton Hotel Liffey Valley",
       "address": "Fonthill Road, Liffey Valley, Dublin, Ireland",
-      "country": "IE",
+      "locale": "en_IE",
       "latLng": [
         53.3555438,
         -6.4019528

@@ -9,7 +9,7 @@
       "endDate": "2026-04-12",
       "venue": "Mehrzweckhalle / Gesellschaftsräume Im Giesendahl",
       "address": "Gem. Uentroper Vereine, Im Giesendahl, Hamm, Germany",
-      "country": "DE",
+      "locale": "de_DE",
       "latLng": [
         51.6925118,
         7.929074900000001

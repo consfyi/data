@@ -9,7 +9,7 @@
       "endDate": "2025-02-08",
       "venue": "Devil's Head Resort",
       "address": "Bluff Road, Merrimac, WI, USA",
-      "country": "US",
+      "locale": "en_US",
       "latLng": [
         43.4180036,
         -89.6268972
@@ -23,7 +23,7 @@
       "endDate": "2024-10-18",
       "venue": "Devil's Head Resort",
       "address": "Bluff Road, Merrimac, WI, USA",
-      "country": "US",
+      "locale": "en_US",
       "latLng": [
         43.4180036,
         -89.6268972

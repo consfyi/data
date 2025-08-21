@@ -9,7 +9,7 @@
       "endDate": "2026-03-15",
       "venue": "Hilton Los Angeles Airport",
       "address": "West Century Boulevard, Los Angeles, CA, USA",
-      "country": "US",
+      "locale": "en_US",
       "latLng": [
         33.9462252,
         -118.3816294
@@ -23,7 +23,7 @@
       "endDate": "2025-03-30",
       "venue": "Hilton Los Angeles Airport",
       "address": "West Century Boulevard, Los Angeles, CA, USA",
-      "country": "US",
+      "locale": "en_US",
       "latLng": [
         33.9462252,
         -118.3816294

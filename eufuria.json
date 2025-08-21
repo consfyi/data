@@ -9,7 +9,7 @@
       "endDate": "2026-07-25",
       "venue": "Albany Capital Center",
       "address": "Eagle Street, Albany, NY, USA",
-      "country": "US",
+      "locale": "en_US",
       "latLng": [
         42.6498772,
         -73.7560941
@@ -23,7 +23,7 @@
       "endDate": "2025-07-19",
       "venue": "Albany Capital Center",
       "address": "Eagle Street, Albany, NY, USA",
-      "country": "US",
+      "locale": "en_US",
       "latLng": [
         42.6498772,
         -73.7560941

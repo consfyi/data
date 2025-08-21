@@ -9,7 +9,7 @@
       "endDate": "2025-06-08",
       "venue": "Oáza Srdce",
       "address": "Horní Bradlo-Nasavrky, Czechia",
-      "country": "CZ",
+      "locale": "cs_CZ",
       "latLng": [
         49.8063666,
         15.7315885

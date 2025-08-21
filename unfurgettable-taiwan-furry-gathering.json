@@ -9,7 +9,7 @@
       "endDate": "2025-07-20",
       "venue": "Sheraton Hsinchu Hotel",
       "address": "East Section 1, Guangming 6th Road, Zhubei City, Hsinchu County, Taiwan",
-      "country": "TW",
+      "locale": "zh_TW",
       "latLng": [
         24.820525,
         121.0279874

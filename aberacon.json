@@ -9,7 +9,7 @@
       "endDate": "2025-08-24",
       "venue": "Best Western Aberavon Beach Hotel",
       "address": "Swansea, Port Talbot, UK",
-      "country": "GB",
+      "locale": "en_GB",
       "latLng": [
         51.593402,
         -3.8149049

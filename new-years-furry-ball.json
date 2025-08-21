@@ -9,7 +9,7 @@
       "endDate": "2026-01-01",
       "venue": "DoubleTree by Hilton Hotel Wilmington",
       "address": "Concord Pike, Wilmington, Delaware, USA",
-      "country": "US",
+      "locale": "en_US",
       "latLng": [
         39.819476,
         -75.5465117
@@ -23,7 +23,7 @@
       "endDate": "2025-01-01",
       "venue": "Embassy Suites by Hilton Newark Wilmington South",
       "address": "South College Avenue, Newark, DE, USA",
-      "country": "US",
+      "locale": "en_US",
       "latLng": [
         39.6591405,
         -75.7533033

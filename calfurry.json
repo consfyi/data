@@ -9,7 +9,7 @@
       "endDate": "2026-09-06",
       "venue": "The Glenmore Inn & Convention Centre",
       "address": "Glenmore Court Southeast, Calgary, AB, Canada",
-      "country": "CA",
+      "locale": "en_CA",
       "latLng": [
         50.9803874,
         -113.9969131

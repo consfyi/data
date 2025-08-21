@@ -9,7 +9,7 @@
       "endDate": "2025-09-15",
       "venue": "KletterCAMP Ennstal",
       "address": "Oberdambach, Laussa, Austria",
-      "country": "AT",
+      "locale": "de_AT",
       "latLng": [
         47.961058699999995,
         14.4388146

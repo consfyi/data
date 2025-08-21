@@ -9,7 +9,7 @@
       "endDate": "2026-02-15",
       "venue": "Seaside Civic & Convention Center",
       "address": "1st Avenue, Seaside, OR, USA",
-      "country": "US",
+      "locale": "en_US",
       "latLng": [
         45.9940788,
         -123.9254468

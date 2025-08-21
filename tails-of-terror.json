@@ -9,7 +9,7 @@
       "endDate": "2025-10-19",
       "venue": "Hotel Grand Chancellor",
       "address": "Leichhardt Street, Spring Hill Brisbane, QLD, Australia",
-      "country": "AU",
+      "locale": "en_AU",
       "latLng": [
         -27.46243,
         153.02183549999998

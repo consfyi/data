@@ -9,7 +9,7 @@
       "endDate": "2026-02-15",
       "venue": "Detroit Marriott at the Renaissance Center",
       "address": "Renaissance Drive West, Detroit, MI, USA",
-      "country": "US",
+      "locale": "en_US",
       "latLng": [
         42.328545,
         -83.040734
@@ -23,7 +23,7 @@
       "endDate": "2025-03-30",
       "venue": "Ann Arbor Marriott Ypsilanti at Eagle Crest",
       "address": "South Huron Street, Ypsilanti, MI, USA",
-      "country": "US",
+      "locale": "en_US",
       "latLng": [
         42.2245823,
         -83.61332709999999

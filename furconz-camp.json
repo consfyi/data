@@ -9,7 +9,7 @@
       "endDate": "2026-05-30",
       "venue": "Forest Lakes Camp",
       "address": "Forest Lakes Road, Ōtaki, New Zealand",
-      "country": "NZ",
+      "locale": "en_NZ",
       "latLng": [
         -40.729612499999995,
         175.1691233
@@ -26,7 +26,7 @@
       "endDate": "2025-05-11",
       "venue": "Forest Lakes Camp",
       "address": "Forest Lakes Road, Ōtaki, New Zealand",
-      "country": "NZ",
+      "locale": "en_NZ",
       "latLng": [
         -40.729612499999995,
         175.1691233
@@ -40,7 +40,7 @@
       "endDate": "2024-05-06",
       "venue": "Forest Lakes Camp",
       "address": "Forest Lakes Road, Ōtaki, New Zealand",
-      "country": "NZ",
+      "locale": "en_NZ",
       "latLng": [
         -40.729612499999995,
         175.1691233
@@ -54,7 +54,7 @@
       "endDate": "2022-05-06",
       "venue": "Forest Lakes Camp",
       "address": "Forest Lakes Road, Ōtaki, New Zealand",
-      "country": "NZ",
+      "locale": "en_NZ",
       "latLng": [
         -40.729612499999995,
         175.1691233

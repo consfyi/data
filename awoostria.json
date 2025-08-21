@@ -9,7 +9,7 @@
       "endDate": "2025-07-27",
       "venue": "ARCOTEL Wimberger Wien",
       "address": "Neubaugürtel, Vienna, AT",
-      "country": "AT",
+      "locale": "de_AT",
       "latLng": [
         48.200702,
         16.3383114

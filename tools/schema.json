@@ -42,9 +42,8 @@
           "address": {
             "type": "string"
           },
-          "country": {
-            "type": "string",
-            "pattern": "[A-Z]{2}"
+          "locale": {
+            "type": "string"
           },
           "latLng": {
             "type": "array",
@@ -76,7 +75,7 @@
             }
           }
         },
-        "required": ["id", "name", "url", "startDate", "endDate", "venue"]
+        "required": ["id", "name", "url", "startDate", "endDate", "venue", "locale"]
       }
     }
   },

@@ -9,7 +9,7 @@
       "endDate": "2025-06-07",
       "venue": "Devero Hotel",
       "address": "Largo John Fitzgerald Kennedy, Cavenago di Brianza, Province of Monza and Brianza, Italy",
-      "country": "IT",
+      "locale": "it_IT",
       "latLng": [
         45.58023679999999,
         9.4166241

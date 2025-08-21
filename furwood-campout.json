@@ -9,7 +9,7 @@
       "endDate": "2025-06-15",
       "venue": "Triangle Recreation Camp",
       "address": "Mountain Loop Highway, Granite Falls, WA, USA",
-      "country": "US",
+      "locale": "en_US",
       "latLng": [
         48.0739803,
         -121.5889639

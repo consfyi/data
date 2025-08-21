@@ -9,7 +9,7 @@
       "endDate": "2025-07-20",
       "venue": "Wyndham Puebla Angelopolis",
       "address": "Avenida Zeta del Cochero, Reserva Territorial Atlixcáyotl, Corredor Comercial Desarrollo Atlixcayotl, San Andrés Cholula, Puebla, Mexico",
-      "country": "MX",
+      "locale": "es_MX",
       "latLng": [
         19.0264836,
         -98.2305525

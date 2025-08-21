@@ -9,7 +9,7 @@
       "endDate": "2026-03-08",
       "venue": "Richmond Conference Centre",
       "address": "Westminster Highway, Richmond, BC, Canada",
-      "country": "CA",
+      "locale": "en_CA",
       "latLng": [
         49.1709306,
         -123.1416696

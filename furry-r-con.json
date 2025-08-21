@@ -9,7 +9,7 @@
       "endDate": "2025-09-14",
       "venue": "Chaty pod Gýmešom",
       "address": "Remitáž, Jelenec, Nitra Region, Slovakia",
-      "country": "SK",
+      "locale": "sk_SK",
       "latLng": [
         48.39918489999999,
         18.2088006

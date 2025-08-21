@@ -9,7 +9,7 @@
       "endDate": "2025-06-14",
       "venue": "Sanchong Comprehensive Gymnasium",
       "address": "Section 1, New Taipei Boulevard, Sanchong District, New Taipei City, Taiwan",
-      "country": "TW",
+      "locale": "zh_TW",
       "latLng": [
         25.0617771,
         121.49149510000001

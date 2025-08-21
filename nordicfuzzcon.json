@@ -9,7 +9,7 @@
       "endDate": "2026-02-22",
       "venue": "Clarion Hotel & Congress Malmö Live",
       "address": "Dag Hammarskjölds torg, Malmö, Sweden",
-      "country": "SE",
+      "locale": "sv_SE",
       "latLng": [
         55.607661,
         12.9941535

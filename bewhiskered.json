@@ -9,7 +9,7 @@
       "endDate": "2026-04-05",
       "venue": "Durham Convention Center",
       "address": "West Morgan Street, Durham, NC, USA",
-      "country": "US",
+      "locale": "en_US",
       "latLng": [
         35.9975142,
         -78.90234679999999
@@ -23,7 +23,7 @@
       "endDate": "2025-03-09",
       "venue": "Sheraton Imperial Hotel Raleigh-Durham Airport at Research Triangle Park",
       "address": "at Exit, Page Road, Durham, NC, USA",
-      "country": "US",
+      "locale": "en_US",
       "latLng": [
         35.8781597,
         -78.83849920000002

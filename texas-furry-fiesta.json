@@ -9,7 +9,7 @@
       "endDate": "2026-03-29",
       "venue": "Sheraton Dallas Hotel",
       "address": "Olive Street, Dallas, TX, USA",
-      "country": "US",
+      "locale": "en_US",
       "latLng": [
         32.7851169,
         -96.7949573

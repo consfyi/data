@@ -9,7 +9,7 @@
       "endDate": "2025-08-17",
       "venue": "Shanghai Jiading Sheraton Hotel",
       "address": "Jiatang Highway, Jiading District, Shanghai, China",
-      "country": "CN",
+      "locale": "zh_CN",
       "latLng": [
         31.396019632505332,
         121.24188543702257

@@ -9,7 +9,7 @@
       "endDate": "2025-09-29",
       "venue": "Lumley Castle",
       "address": "Ropery Lane, Chester-le-Street, UK",
-      "country": "GB",
+      "locale": "en_GB",
       "latLng": [
         54.8533258,
         -1.5532642

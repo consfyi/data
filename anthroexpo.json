@@ -9,7 +9,7 @@
       "endDate": "2026-02-08",
       "venue": "Embassy Suites Norman",
       "address": "Conference Drive, Norman, OK, USA",
-      "country": "US",
+      "locale": "en_US",
       "latLng": [
         35.2434811,
         -97.4786414
@@ -23,7 +23,7 @@
       "endDate": "2025-02-02",
       "venue": "Embassy Suites Norman",
       "address": "Conference Drive, Norman, OK, USA",
-      "country": "US",
+      "locale": "en_US",
       "latLng": [
         35.2434811,
         -97.4786414
@@ -37,7 +37,7 @@
       "endDate": "2024-02-05",
       "venue": "Embassy Suites Norman",
       "address": "Conference Drive, Norman, OK, USA",
-      "country": "US",
+      "locale": "en_US",
       "latLng": [
         35.2434811,
         -97.4786414

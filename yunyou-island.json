@@ -9,7 +9,7 @@
       "endDate": "2025-08-10",
       "venue": "Steigenberger Chongqing",
       "address": "Shapingba District, Chongqing, China",
-      "country": "CN",
+      "locale": "zh_CN",
       "latLng": [
         29.64347684834779,
         106.3657309402794

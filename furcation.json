@@ -9,7 +9,7 @@
       "endDate": "2024-11-25",
       "venue": "Parkdean Resorts Sandford Holiday Park, Dorset",
       "address": "Willow Crescent, Holton Heath, Poole, UK",
-      "country": "GB",
+      "locale": "en_GB",
       "latLng": [
         50.7204167,
         -2.0856757999999997

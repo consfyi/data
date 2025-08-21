@@ -9,7 +9,7 @@
       "endDate": "2025-08-17",
       "venue": "Hyatt Regency Dallas",
       "address": "Reunion Boulevard, Dallas, TX, USA",
-      "country": "US",
+      "locale": "en_US",
       "latLng": [
         32.7752763,
         -96.8092154

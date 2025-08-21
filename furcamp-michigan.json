@@ -9,7 +9,7 @@
       "endDate": "2025-06-08",
       "venue": "Lake Michigan Recreation Area",
       "address": "West Forest Trail Road, Free Soil, MI, USA",
-      "country": "US",
+      "locale": "en_US",
       "latLng": [
         44.11856470000001,
         -86.42447519999999

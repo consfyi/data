@@ -9,7 +9,7 @@
       "endDate": "2026-04-13",
       "venue": "Fall Creek Falls State Park",
       "address": "Village Camp Rd, Spencer, TN, USA",
-      "country": "US",
+      "locale": "en_US",
       "latLng": [
         35.7069187,
         -85.3821486
@@ -23,7 +23,7 @@
       "endDate": "2025-04-14",
       "venue": "Fall Creek Falls State Park",
       "address": "Village Camp Rd, Spencer, TN, USA",
-      "country": "US",
+      "locale": "en_US",
       "latLng": [
         35.7069187,
         -85.3821486
@@ -37,7 +37,7 @@
       "endDate": "2024-04-15",
       "venue": "Fall Creek Falls State Park",
       "address": "Village Camp Rd, Spencer, TN, USA",
-      "country": "US",
+      "locale": "en_US",
       "latLng": [
         35.7069187,
         -85.3821486

@@ -9,7 +9,7 @@
       "endDate": "2025-06-15",
       "venue": "Freizeitpark Camping Schüttehof",
       "address": "Schütteberg, Horb am Neckar, Germany",
-      "country": "DE",
+      "locale": "de_DE",
       "latLng": [
         48.4451629,
         8.673777

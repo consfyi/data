@@ -9,7 +9,7 @@
       "endDate": "2025-09-20",
       "venue": "Delta Hotels Toronto Airport & Conference Centre",
       "address": "Dixon Road, Etobicoke, ON, Canada",
-      "country": "CA",
+      "locale": "en_CA",
       "latLng": [
         43.6889932,
         -79.5779068

@@ -9,7 +9,7 @@
       "endDate": "2025-06-21",
       "venue": "Podviní",
       "address": "Rubeška, Prague 9-Vysočany, Czechia",
-      "country": "CZ",
+      "locale": "cs_CZ",
       "latLng": [
         50.1108994,
         14.4931136

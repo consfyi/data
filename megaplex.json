@@ -9,7 +9,7 @@
       "endDate": "2025-09-01",
       "venue": "Hyatt Regency Orlando - International Drive",
       "address": "International Drive, Orlando, FL, USA",
-      "country": "US",
+      "locale": "en_US",
       "latLng": [
         28.42769,
         -81.4687483
@@ -23,7 +23,7 @@
       "endDate": "2024-09-01",
       "venue": "Hyatt Regency Orlando - International Drive",
       "address": "International Drive, Orlando, FL, USA",
-      "country": "US",
+      "locale": "en_US",
       "latLng": [
         28.42769,
         -81.4687483
@@ -37,7 +37,7 @@
       "endDate": "2023-09-18",
       "venue": "Hyatt Regency Orlando - International Drive",
       "address": "International Drive, Orlando, FL, USA",
-      "country": "US",
+      "locale": "en_US",
       "latLng": [
         28.42769,
         -81.4687483

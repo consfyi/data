@@ -9,7 +9,7 @@
       "endDate": "2025-07-06",
       "venue": "Parvemajad",
       "address": "Kabala, Rapla County, Estonia",
-      "country": "EE",
+      "locale": "et_EE",
       "latLng": [
         58.939282199999994,
         24.654215

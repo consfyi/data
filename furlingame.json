@@ -9,7 +9,7 @@
       "endDate": "2026-04-05",
       "venue": "Hyatt Regency San Francisco Airport",
       "address": "Old Bayshore Highway, Burlingame, CA, USA",
-      "country": "US",
+      "locale": "en_US",
       "latLng": [
         37.5938725,
         -122.3651261

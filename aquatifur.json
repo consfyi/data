@@ -9,7 +9,7 @@
       "endDate": "2025-11-09",
       "venue": "Chula Vista Resort - Wisconsin Dells Waterpark Resort",
       "address": "Chula Vista Parkway, Wisconsin Dells, WI, USA",
-      "country": "US",
+      "locale": "en_US",
       "latLng": [
         43.6652353,
         -89.7847062

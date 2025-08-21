@@ -9,7 +9,7 @@
       "endDate": "2026-01-01",
       "venue": "Chengdu",
       "address": "Sichuan, China",
-      "locale": "zh_CN",
+      "locale": "zh-CN",
       "latLng": [
         30.574714401215445,
         104.06400493556151

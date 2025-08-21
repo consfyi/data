@@ -9,7 +9,7 @@
       "endDate": "2026-04-05",
       "venue": "Alexis Park Resort and Serene Boutique",
       "address": "East Harmon Avenue, Las Vegas, NV, USA",
-      "locale": "en_US",
+      "locale": "en-US",
       "latLng": [
         36.1075771,
         -115.1562516
@@ -23,7 +23,7 @@
       "endDate": "2025-04-20",
       "venue": "Alexis Park Resort and Serene Boutique",
       "address": "East Harmon Avenue, Las Vegas, NV, USA",
-      "locale": "en_US",
+      "locale": "en-US",
       "latLng": [
         36.1075771,
         -115.1562516
@@ -37,7 +37,7 @@
       "endDate": "2024-03-31",
       "venue": "Alexis Park All-Suite Resort",
       "address": "East Harmon Avenue, Las Vegas, NV, USA",
-      "locale": "en_US",
+      "locale": "en-US",
       "latLng": [
         36.1075771,
         -115.1562516
@@ -51,7 +51,7 @@
       "endDate": "2023-04-16",
       "venue": "Alexis Park All-Suite Resort",
       "address": "East Harmon Avenue, Las Vegas, NV, USA",
-      "locale": "en_US",
+      "locale": "en-US",
       "latLng": [
         36.1075771,
         -115.1562516

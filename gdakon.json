@@ -9,7 +9,7 @@
       "endDate": "2026-03-22",
       "venue": "Radisson Blu",
       "address": "Bitwy pod Płowcami, Sopot, Poland",
-      "locale": "pl_PL",
+      "locale": "pl-PL",
       "latLng": [
         54.4334073,
         18.579679
@@ -23,7 +23,7 @@
       "endDate": "2025-03-02",
       "venue": "Novotel Gdańsk Marina",
       "address": "Jelitkowska, Gdańsk, Poland",
-      "locale": "pl_PL",
+      "locale": "pl-PL",
       "latLng": [
         54.4287746,
         18.5902129

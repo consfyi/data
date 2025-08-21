@@ -9,7 +9,7 @@
       "endDate": "2026-07-05",
       "venue": "David L. Lawrence Convention Center",
       "address": "Fort Duquesne Boulevard, Pittsburgh, PA, USA",
-      "locale": "en_US",
+      "locale": "en-US",
       "latLng": [
         40.4455472,
         -79.9962844
@@ -23,7 +23,7 @@
       "endDate": "2025-07-06",
       "venue": "David L. Lawrence Convention Center",
       "address": "Fort Duquesne Boulevard, Pittsburgh, PA, USA",
-      "locale": "en_US",
+      "locale": "en-US",
       "latLng": [
         40.4455472,
         -79.9962844

@@ -422,7 +422,7 @@ def handle_new(gmaps):
                 "endDate": end_date.isoformat(),
                 "venue": venue,
                 **({"address": address} if address is not None else {}),
-                "locale": f"{locale.getLanguage()}_{locale.getCountry()}",
+                "locale": f"{locale.getLanguage()}-{locale.getCountry()}",
                 **({"latLng": lat_lng} if lat_lng is not None else {}),
             },
         ],

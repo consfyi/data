@@ -9,7 +9,7 @@
       "endDate": "2026-03-22",
       "venue": "The Westin Harbour Castle",
       "address": "Harbour Square, Toronto, ON, Canada",
-      "locale": "en_CA",
+      "locale": "en-CA",
       "latLng": [
         43.641180299999995,
         -79.3762173
@@ -23,7 +23,7 @@
       "endDate": "2025-03-23",
       "venue": "The Westin Harbour Castle",
       "address": "Harbour Square, Toronto, ON, Canada",
-      "locale": "en_CA",
+      "locale": "en-CA",
       "latLng": [
         43.64118029999999,
         -79.3762173

@@ -9,7 +9,7 @@
       "endDate": "2026-05-10",
       "venue": "Hotel Metz Technopole - Best Western Plus",
       "address": "Rue Félix Savart, Metz, France",
-      "locale": "fr_FR",
+      "locale": "fr-FR",
       "latLng": [
         49.100491899999994,
         6.2254616
@@ -23,7 +23,7 @@
       "endDate": "2025-05-11",
       "venue": "Hotel Metz Technopole - Best Western Plus",
       "address": "Rue Félix Savart, Metz, France",
-      "locale": "fr_FR",
+      "locale": "fr-FR",
       "latLng": [
         49.10049189999999,
         6.2254616

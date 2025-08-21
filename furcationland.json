@@ -9,7 +9,7 @@
       "endDate": "2026-04-12",
       "venue": "Holiday Inn Portland-By The Bay",
       "address": "Spring Street, Portland, ME, USA",
-      "locale": "en_US",
+      "locale": "en-US",
       "latLng": [
         43.6534888,
         -70.2608888
@@ -23,7 +23,7 @@
       "endDate": "2025-04-13",
       "venue": "Holiday Inn Portland-By The Bay",
       "address": "Spring Street, Portland, ME, USA",
-      "locale": "en_US",
+      "locale": "en-US",
       "latLng": [
         43.6534888,
         -70.2608888
@@ -37,7 +37,7 @@
       "endDate": "2024-04-14",
       "venue": "Holiday Inn Portland-By The Bay",
       "address": "Spring Street, Portland, ME, USA",
-      "locale": "en_US",
+      "locale": "en-US",
       "latLng": [
         43.6534888,
         -70.2608888
@@ -51,7 +51,7 @@
       "endDate": "2023-04-16",
       "venue": "Holiday Inn Portland-By The Bay",
       "address": "Spring Street, Portland, ME, USA",
-      "locale": "en_US",
+      "locale": "en-US",
       "latLng": [
         43.6534888,
         -70.2608888

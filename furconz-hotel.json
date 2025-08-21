@@ -9,7 +9,7 @@
       "endDate": "2025-11-23",
       "venue": "Holiday Inn Auckland Airport",
       "address": "Ascot Road, Māngere, Auckland, New Zealand",
-      "locale": "en_NZ",
+      "locale": "en-NZ",
       "latLng": [
         -36.9731497,
         174.78584290000003
@@ -23,7 +23,7 @@
       "endDate": "2024-11-24",
       "venue": "Holiday Inn Auckland Airport",
       "address": "Ascot Road, Māngere, Auckland, New Zealand",
-      "locale": "en_NZ",
+      "locale": "en-NZ",
       "latLng": [
         -36.9731497,
         174.78584290000003

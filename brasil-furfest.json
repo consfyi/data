@@ -9,7 +9,7 @@
       "endDate": "2026-07-19",
       "venue": "Hotel Premium Campinas",
       "address": "Rua Novotel - Jardim Nova Aparecida, Campinas - State of São Paulo, Brazil",
-      "locale": "pt_BR",
+      "locale": "pt-BR",
       "latLng": [
         -22.861375600000002,
         -47.14807400000001
@@ -23,7 +23,7 @@
       "endDate": "2025-07-20",
       "venue": "Hotel Nacional Inn Jaraguá São Paulo",
       "address": "Rua Martins Fontes - Consolação, São Paulo - State of São Paulo, Brazil",
-      "locale": "pt_BR",
+      "locale": "pt-BR",
       "latLng": [
         -23.5485319,
         -46.6430777

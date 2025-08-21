@@ -9,7 +9,7 @@
       "endDate": "2026-02-22",
       "venue": "Holiday Inn Austin Midtown by IHG",
       "address": "Middle Fiskville Road, Austin, TX, USA",
-      "locale": "en_US",
+      "locale": "en-US",
       "latLng": [
         30.267152999999997,
         -97.7430608
@@ -23,7 +23,7 @@
       "endDate": "2025-03-02",
       "venue": "Holiday Inn Austin Midtown by IHG",
       "address": "Middle Fiskville Road, Austin, TX, USA",
-      "locale": "en_US",
+      "locale": "en-US",
       "latLng": [
         30.3238733,
         -97.7108463

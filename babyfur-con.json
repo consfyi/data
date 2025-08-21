@@ -9,7 +9,7 @@
       "endDate": "2025-09-15",
       "venue": "San Jose",
       "address": "CA, USA",
-      "locale": "en_US",
+      "locale": "en-US",
       "latLng": [
         37.33874,
         -121.88525249999999

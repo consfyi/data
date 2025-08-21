@@ -9,7 +9,7 @@
       "endDate": "2026-01-18",
       "venue": "Whitewater State Park",
       "address": "Minnesota 74, Altura, MN, USA",
-      "locale": "en_US",
+      "locale": "en-US",
       "latLng": [
         44.06265500000001,
         -92.04454199999999
@@ -23,7 +23,7 @@
       "endDate": "2025-01-19",
       "venue": "Whitewater State Park",
       "address": "Minnesota 74, Altura, MN, USA",
-      "locale": "en_US",
+      "locale": "en-US",
       "latLng": [
         44.06265500000001,
         -92.04454199999999

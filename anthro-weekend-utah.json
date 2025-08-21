@@ -9,7 +9,7 @@
       "endDate": "2026-08-02",
       "venue": "Davis Conference Center",
       "address": "North 700 West, Layton, UT, USA",
-      "locale": "en_US",
+      "locale": "en-US",
       "latLng": [
         41.084896,
         -111.9810485
@@ -23,7 +23,7 @@
       "endDate": "2025-08-03",
       "venue": "Davis Conference Center",
       "address": "North 700 West, Layton, UT, USA",
-      "locale": "en_US",
+      "locale": "en-US",
       "latLng": [
         41.084896,
         -111.9810485

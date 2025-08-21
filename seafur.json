@@ -2,17 +2,17 @@
   "name": "SeaFur",
   "events": [
     {
-      "id": "seafur-2025",
-      "name": "SeaFur 2025",
+      "id": "seafur-5",
+      "name": "SeaFur 5",
       "url": "https://www.seafur.cn",
       "startDate": "2025-08-15",
       "endDate": "2025-08-17",
-      "venue": "Sheraton Shanghai Waigaoqiao Hotel",
-      "address": "Waigaoqiao, Pudong, Shanghai, China",
+      "venue": "Shanghai Jiading Sheraton Hotel",
+      "address": "Jiatang Highway, Jiading District, Shanghai, China",
       "country": "CN",
       "latLng": [
-        31.352899525137765,
-        121.58424469692406
+        31.396019632505332,
+        121.24188543702257
       ]
     }
   ]

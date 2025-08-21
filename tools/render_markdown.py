@@ -32,7 +32,11 @@ class MyRenderer(mistune.HTMLRenderer):
     def heading(self, text, level):
         if level == 1 and self.title is None:
             self.title = text
-        return f'<h{level} id="{slugify(text)}">{text}</h{level}>'
+        id = slugify(text)
+        maybe_anchor = ""
+        if level > 1:
+            maybe_anchor = f' <a href="#{id}">#</a>'
+        return f'<h{level} id="{id}">{text}{maybe_anchor}</h{level}>'
 
     def block_code(self, code, info=None):
         if info is not None:

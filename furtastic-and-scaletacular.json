@@ -1,0 +1,19 @@
+{
+  "name": "Furtastic And Scaletacular",
+  "events": [
+    {
+      "id": "furtastic-and-scaletacular-2025",
+      "name": "Furtastic And Scaletacular 2025",
+      "url": "https://hkfasx2.wixsite.com/hkfas",
+      "startDate": "2025-11-30",
+      "endDate": "2025-11-30",
+      "venue": "Soho House Hong Kong",
+      "address": "Des Voeux Road West, Sheung Wan, Hong Kong",
+      "country": "HK",
+      "latLng": [
+        22.2878391,
+        114.1467251
+      ]
+    }
+  ]
+}

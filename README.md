@@ -53,30 +53,43 @@ interface Event {
   id: string;
 
   /// The human-readable name of the convention instance, e.g. "RainFurrest 2016".
+  ///
+  /// This should be in the locale of the event, but will also be displayed as the fallback.
   name: string;
 
   /// Link to the convention website.
   url: string;
 
   /// The start date of the convention instance.
+  ///
   /// Should be in ISO 8601 yyyy-MM-dd format.
   startDate: string;
 
   /// The end date of the convention instance, inclusive.
+  ///
   /// Should be in ISO 8601 yyyy-MM-dd format.
   endDate: string;
 
   /// The human-readable name of the venue.
+  ///
+  /// This should be in the locale of the event.
   venue: string;
 
   /// The human-readable address of the venue, if it is a physical venue.
+  ///
   /// The granularity of this is not specified, it does not need to be exact. It should include the name of the country.
+  ///
+  /// This should be in the locale of the event.
   address?: string;
 
   /// The locale of the convention as a Unicode locale identifier, e.g. "en-US".
   locale: string;
 
   /// Translations for human-readable fields in different locales.
+  ///
+  /// The translation may contain an entry for the same locale as the event if a viewer who has that locale set should see a more locale-specific version of the text.
+  ///
+  /// For instance, "Kemono Square" is an acceptable Japanese locale name, but Japanese viewers may prefer to see "ケモノスクエア" instead.
   translations?: {
     [locale: string]: {
       name?: string;

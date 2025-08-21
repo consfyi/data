@@ -10,6 +10,13 @@
       "venue": "GRANSHIP",
       "address": "2 Chome-3-1 Higashishizuoka, Suruga Ward, Shizuoka, Japan",
       "locale": "ja-JP",
+      "translations": {
+        "ja": {
+          "name": "ケモノスクエア9",
+          "venue": "グランシップ",
+          "address": "日本、静岡県静岡市駿河区東静岡２丁目３−１"
+        }
+      },
       "latLng": [
         34.9857192,
         138.4172558

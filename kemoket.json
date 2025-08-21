@@ -3,13 +3,20 @@
   "events": [
     {
       "id": "kemoket-16",
-      "name": "Kemoket 16",
+      "name": "ケモケット16",
       "url": "https://skypalette.jp/kemoket/",
       "startDate": "2025-09-21",
       "endDate": "2025-09-21",
-      "venue": "TRC First Exhibition Hall",
-      "address": "6 Chome-1-1 Heiwajima, Ota City, Tokyo, Japan",
+      "venue": "東京流通センター第一展示場",
+      "address": "日本、東京都大田区平和島６丁目",
       "locale": "ja-JP",
+      "translations": {
+        "en": {
+          "name": "Kemoket 16",
+          "venue": "TRC First Exhibition Hall",
+          "address": "6 Chome-1-1 Heiwajima, Ota City, Tokyo, Japan"
+        }
+      },
       "latLng": [
         35.5808053,
         139.7484667

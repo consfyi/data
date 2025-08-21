@@ -35,7 +35,7 @@ class MyRenderer(mistune.HTMLRenderer):
         id = slugify(text)
         maybe_anchor = ""
         if level > 1:
-            maybe_anchor = f' <a href="#{id}">#</a>'
+            maybe_anchor = f' <small><a href="#{id}">#</a></small>'
         return f'<h{level} id="{id}">{text}{maybe_anchor}</h{level}>'
 
     def block_code(self, code, info=None):

@@ -46,16 +46,16 @@ def escape_ics(s):
     )
 
 
-def foldline(line, limit=75, sep="\r\n "):
+def foldline(line, limit=75):
     buf = io.StringIO()
     n = 0
-    for char in line:
-        m = len(char.encode("utf-8"))
+    for c in line:
+        m = len(c.encode("utf-8"))
+        if n + m > limit:
+            buf.write("\r\n ")
+            n = 1
+        buf.write(c)
         n += m
-        if n >= limit:
-            buf.write(sep)
-            n = m
-        buf.write(char)
     return buf.getvalue()
 
 

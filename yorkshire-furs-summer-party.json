@@ -1,0 +1,19 @@
+{
+  "name": "Yorkshire Furs Summer Party",
+  "events": [
+    {
+      "id": "yorkshire-furs-summer-party-2025",
+      "name": "Yorkshire Furs Summer Party 2025",
+      "url": "https://yorkshirefurs.org.uk",
+      "startDate": "2025-08-16",
+      "endDate": "2025-08-16",
+      "venue": "Bar One",
+      "address": "Students Union, Glossop Rd, Broomhall, Sheffield S10 2TG, UK",
+      "locale": "en-GB",
+      "latLng": [
+        53.3803761,
+        -1.4871033
+      ]
+    }
+  ]
+}

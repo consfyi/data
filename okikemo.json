@@ -1,9 +1,9 @@
 {
-  "name": "OKIKEMO",
+  "name": "おきけも",
   "events": [
     {
       "id": "okikemo-2025",
-      "name": "OKIKEMO 2025",
+      "name": "おきけも 2025",
       "url": "https://twipla.jp/users/OkikemoOkinawa",
       "startDate": "2025-10-10",
       "endDate": "2025-10-10",
@@ -12,6 +12,7 @@
       "locale": "ja-JP",
       "translations": {
         "en": {
+          "name": "OKIKEMO 2025",
           "venue": "American Village",
           "address": "Mihama, Chatan, Nakagami District, Okinawa 904-0115, Japan"
         }

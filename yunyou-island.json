@@ -1,9 +1,9 @@
 {
-  "name": "Yunyou Island",
+  "name": "云幽岛",
   "events": [
     {
       "id": "yunyou-island-2025",
-      "name": "Yunyou Island 2025",
+      "name": "云幽岛 2025",
       "url": "https://www.yunisland.cn",
       "startDate": "2025-08-08",
       "endDate": "2025-08-10",
@@ -12,6 +12,7 @@
       "locale": "zh-CN",
       "translations": {
         "en": {
+          "name": "Yunyou Island 2025",
           "venue": "Steinberger Chongqing",
           "address": "No.18-2 Wenguang Avenue, Shapingba District, Chongqing 401333, China"
         }

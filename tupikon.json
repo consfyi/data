@@ -1,9 +1,9 @@
 {
-  "name": "TupiKon",
+  "name": "ТупиКон",
   "events": [
     {
       "id": "tupikon-2025",
-      "name": "TupiKon 2025",
+      "name": "ТупиКон 2025",
       "url": "https://sillycon.ru",
       "startDate": "2025-09-04",
       "endDate": "2025-09-07",
@@ -12,6 +12,7 @@
       "locale": "ru-RU",
       "translations": {
         "en": {
+          "name": "SillyCon 2025",
           "venue": "Baza Otdykha \"Izumrud\"",
           "address": "Shchiglevo, Zhukovsky District, Kaluga Oblast, Russia, 249180"
         }

@@ -11,6 +11,9 @@
       "address": "421台灣台中市后里區福容路88號",
       "locale": "zh-TW",
       "translations": {
+        "zh-Hant": {
+          "name": "獸無限 2025"
+        },
         "en": {
           "venue": "Fullon Hotel Lihpao Land",
           "address": "No. 88, Furong Rd, Houli District, Taichung City 421, Taiwan"

@@ -11,6 +11,9 @@
       "address": "Floor 1 1323, 1 ถนน ศรีวรา แขวงพลับพลา เขตวังทองหลาง กรุงเทพมหานคร 10310 ไทย",
       "locale": "th-TH",
       "translations": {
+        "th": {
+          "name": "บางกอกบีสต์ 2025"
+        },
         "en": {
           "venue": "Mr.FOX Live House",
           "address": "Floor 1 1323, 1 Srivara Rd, Phlabphla, Wang Thonglang, Bangkok 10310, Thailand"

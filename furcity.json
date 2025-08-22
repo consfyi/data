@@ -8,13 +8,13 @@
       "startDate": "2025-10-02",
       "endDate": "2025-10-04",
       "venue": "广州保利洲际酒店",
-      "address": "中国广州市海珠区阅江中路828号 邮编：510308",
+      "address": "中国广东省广州市海珠区阅江中路828号 邮编：510308",
       "locale": "zh-CN",
       "translations": {
         "en": {
           "name": "FurCity 2025",
           "venue": "Intercontinental Guangzhou Exhibition Center",
-          "address": "No. 828, Yuejiang Middle Road, Haizhu District, Guangzhou, China 510308"
+          "address": "No. 828, Yuejiang Middle Road, Haizhu District, Guangzhou, Guangdong 510308, China"
         }
       },
       "latLng": [

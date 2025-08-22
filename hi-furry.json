@@ -8,13 +8,13 @@
       "startDate": "2025-10-01",
       "endDate": "2025-10-04",
       "venue": "南沙岭南东方酒店",
-      "address": "中国广州市南沙区安康路二街6号 邮编：511462",
+      "address": "中国广东省广州市南沙区安康路二街6号 邮编：511462",
       "locale": "zh-CN",
       "translations": {
         "en": {
           "name": "Hi Furry 2025",
           "venue": "Nansha Lingnan Dongfang Hotel",
-          "address": "No. 6 Ankang 2nd Road, Nansha District, Guangzhou, China 511462"
+          "address": "No. 6 Ankang 2nd Road, Nansha District, Guangzhou, Guangdong 511462, China"
         }
       },
       "latLng": [

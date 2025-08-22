@@ -8,12 +8,12 @@
       "startDate": "2025-07-18",
       "endDate": "2025-07-21",
       "venue": "广州香格里拉大酒店",
-      "address": "中国广州市海珠区会展东路1号 邮编：510308",
+      "address": "中国广东省广州市海珠区会展东路1号 邮编：510308",
       "locale": "zh-CN",
       "translations": {
         "en": {
           "venue": "Shangri-La Hotel",
-          "address": "No. 1 Huizhan East Road, Haizhu District, Guangzhou, China 510308"
+          "address": "No. 1 Huizhan East Road, Haizhu District, Guangzhou, Guangdong 510308, China"
         }
       },
       "latLng": [

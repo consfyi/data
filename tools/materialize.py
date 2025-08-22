@@ -128,7 +128,10 @@ def main():
         ):
             assert event is not None
 
-            if event["locale"][:3] == "zh-":
+            event_locale_is_zh = event["locale"][:3] == "zh-"
+            tls = event.get("translations", {})
+
+            if event_locale_is_zh or "zh-Hans" in tls or "zh-Hant" in tls:
                 input_locale = {
                     "zh-TW": "zh-Hant",
                     "zh-HK": "zh-Hant",
@@ -146,21 +149,27 @@ def main():
                     "zh-Hant": lc_hant,
                 }[output_locale]
 
-                input_tls = event.get("translations", {}).get(input_locale, {})
+                input_tls = tls.get(input_locale, {})
 
-                name = input_tls.get("name", event["name"])
-                venue = input_tls.get("venue", event["venue"])
-                address = input_tls.get("address", event["address"])
+                name = input_tls.get(
+                    "name", event["name"] if event_locale_is_zh else None
+                )
+                venue = input_tls.get(
+                    "venue", event["venue"] if event_locale_is_zh else None
+                )
+                address = input_tls.get(
+                    "address", event["address"] if event_locale_is_zh else None
+                )
 
                 output_tls = {
                     **(
                         {"name": lc.convert(name)}
-                        if regex.match(r"\p{sc=Han}", name)
+                        if name is not None and regex.match(r"\p{sc=Han}", name)
                         else {}
                     ),
                     **(
                         {"venue": lc.convert(venue)}
-                        if regex.match(r"\p{sc=Han}", venue)
+                        if name is not None and regex.match(r"\p{sc=Han}", venue)
                         else {}
                     ),
                     **(

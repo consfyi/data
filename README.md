@@ -146,6 +146,10 @@ interface MaterializedSeries extends Series {
 }
 
 /// A materialized version of Event.
+///
+/// If the event's locale is zh-{CN,TW,HK,MO}, or contains zh-{Hans,Hant}
+/// translations, a conversion for the counterpart writing system will
+/// automatically be generated.
 interface MaterializedEvent extends Event {
   /// The ID of the series this corresponds to.
   seriesId: string;

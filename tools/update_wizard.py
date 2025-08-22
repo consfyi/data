@@ -332,8 +332,6 @@ def handle_add(gmaps, series_id, series):
     previous_start_date = datetime.date.fromisoformat(previous_event["startDate"])
     previous_end_date = datetime.date.fromisoformat(previous_event["endDate"])
 
-    event = {**previous_event}
-
     start_date = add_year_same_weekday(previous_start_date)
     while True:
         try:
@@ -343,7 +341,6 @@ def handle_add(gmaps, series_id, series):
         except ValueError:
             continue
         break
-    event["startDate"] = start_date.isoformat()
 
     while True:
         try:
@@ -358,7 +355,6 @@ def handle_add(gmaps, series_id, series):
         except ValueError:
             continue
         break
-    event["endDate"] = end_date.isoformat()
 
     suffix = start_date.year
     _, previous_suffix = previous_event["name"].rsplit(" ", 1)
@@ -370,36 +366,35 @@ def handle_add(gmaps, series_id, series):
         suffix = previous_suffix + 1
 
     guessed_name = f"{series['name']} {suffix}"
-    event["name"] = prompt_for_change("name", guessed_name)
+    name = prompt_for_change("name", guessed_name)
 
-    locale = icu.Locale.createFromName(event["locale"])
-    event["venue"] = prompt_for_change("venue", event["venue"])
-    if event["venue"] != previous_event["venue"]:
-        venue, address, locale, translations, lat_lng = prompt_for_venue(
-            gmaps, event["venue"]
-        )
-        event["venue"] = venue
-        event["locale"] = f"{locale.getLanguage()}-{locale.getCountry()}"
-
-        if address is not None:
-            event["address"] = address
-        else:
-            del event["address"]
-
-        if lat_lng is not None:
-            event["latLng"] = lat_lng
-        else:
-            del event["latLng"]
-
-        if translations:
-            for k, fields in translations.items():
-                event.setdefault("translations", {}).setdefault(k, {}).update(fields)
-
-    if event["name"] != guessed_name:
-        event["id"] = slugify(event["name"], locale)
-        event["id"] = prompt_for_change("event id", event["id"])
+    locale = icu.Locale.createFromName(previous_event["locale"])
+    venue = prompt_for_change("venue", previous_event["venue"])
+    if venue != previous_event["venue"]:
+        venue, address, locale, translations, lat_lng = prompt_for_venue(gmaps, venue)
     else:
-        event["id"] = f"{series_id}-{suffix}"
+        address = previous_event["address"]
+        translations = previous_event["translations"]
+        lat_lng = previous_event["latLng"]
+
+    if name != guessed_name:
+        id = slugify(name, locale)
+        id = prompt_for_change("event id", id)
+    else:
+        id = f"{series_id}-{suffix}"
+
+    event = {
+        "id": id,
+        "name": name,
+        "url": previous_event["url"],
+        "startDate": start_date.isoformat(),
+        "endDate": end_date.isoformat(),
+        "venue": venue,
+        **({"address": address} if address is not None else {}),
+        "locale": f"{locale.getLanguage()}-{locale.getCountry()}",
+        **({"translations": translations} if translations else {}),
+        **({"latLng": lat_lng} if lat_lng is not None else {}),
+    }
 
     fn = f"{series_id}.json"
     termcolor.cprint(f"  {fn} / {event['id']}", attrs=["bold"])

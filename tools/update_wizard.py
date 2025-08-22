@@ -357,7 +357,9 @@ def handle_add(gmaps, series_id, series):
         break
 
     suffix = start_date.year
-    _, previous_suffix = previous_event["name"].rsplit(" ", 1)
+    _, maybe_space, previous_suffix = regex.match(
+        r"^(.*?)( ?)(\d+)$", previous_event["name"]
+    ).groups()
     try:
         previous_suffix = int(previous_suffix)
     except:
@@ -365,7 +367,7 @@ def handle_add(gmaps, series_id, series):
     else:
         suffix = previous_suffix + 1
 
-    guessed_name = f"{series['name']} {suffix}"
+    guessed_name = f"{series['name']}{maybe_space}{suffix}"
     name = prompt_for_change("name", guessed_name)
 
     locale = icu.Locale.createFromName(previous_event["locale"])

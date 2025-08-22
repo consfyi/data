@@ -8,18 +8,13 @@
       "startDate": "2025-10-01",
       "endDate": "2025-10-04",
       "venue": "重庆恒大酒店",
-      "address": "中国重庆市江津区恒大大道",
+      "address": "中国重庆市江津区恒大大道1号",
       "locale": "zh-CN",
       "translations": {
         "en": {
           "name": "Sheng Shou Ji 3",
           "venue": "Chongqing Hengda Hotel",
-          "address": "Hengda Ave, Jiangjin District, Chongqing, China"
-        },
-        "zh-Hant": {
-          "name": "聖獸跡3",
-          "venue": "重慶恆大酒店",
-          "address": "中國重慶市江津區恆大大道"
+          "address": "1 Heng Da Da Dao, Jiangjin District, Chongqing, China, 402247"
         }
       },
       "latLng": [

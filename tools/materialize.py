@@ -6,6 +6,8 @@
 #   "regex-as-re-globally",
 #   "tzfpy[tzdata]",
 #   "whenever",
+#   "langconv",
+#   "regex"
 # ]
 # ///
 
@@ -15,10 +17,30 @@ import io
 import itertools
 import logging
 import pathlib
+import regex
 import sys
 import os
 import tzfpy
 import whenever
+from langconv.converter import LanguageConverter
+from langconv.language import Language, get_data_file_path
+
+
+lc_hant = LanguageConverter.from_language(
+    Language.from_json_files(
+        "zh-hant",
+        [get_data_file_path("zh/hant.json")],
+        ["zh-hant", "zh-TW"],
+    )
+)
+
+lc_hans = LanguageConverter.from_language(
+    Language.from_json_files(
+        "zh-hans",
+        [get_data_file_path("zh/hans.json")],
+        ["zh-hans"],
+    )
+)
 
 
 logging.basicConfig(level=logging.INFO)
@@ -105,6 +127,51 @@ def main():
             series["events"], series["events"][1:], fillvalue=None
         ):
             assert event is not None
+
+            if event["locale"][:3] == "zh-":
+                input_locale = {
+                    "zh-TW": "zh-Hant",
+                    "zh-HK": "zh-Hant",
+                    "zh-MO": "zh-Hant",
+                    "zh-CN": "zh-Hans",
+                }[event["locale"]]
+
+                output_locale = {
+                    "zh-Hans": "zh-Hant",
+                    "zh-Hant": "zh-Hans",
+                }[input_locale]
+
+                lc = {
+                    "zh-Hans": lc_hans,
+                    "zh-Hant": lc_hant,
+                }[output_locale]
+
+                input_tls = event.get("translations", {}).get(input_locale, {})
+
+                name = input_tls.get("name", event["name"])
+                venue = input_tls.get("venue", event["venue"])
+                address = input_tls.get("address", event["address"])
+
+                output_tls = {
+                    **(
+                        {"name": lc.convert(name)}
+                        if regex.match(r"\p{sc=Han}", name)
+                        else {}
+                    ),
+                    **(
+                        {"venue": lc.convert(venue)}
+                        if regex.match(r"\p{sc=Han}", venue)
+                        else {}
+                    ),
+                    **(
+                        {"address": lc.convert(address)}
+                        if address is not None and regex.match(r"\p{sc=Han}", address)
+                        else {}
+                    ),
+                }
+
+                if output_tls:
+                    event.setdefault("translations", {})[output_locale] = output_tls
 
             event_id = event["id"]
             if "latLng" in event:

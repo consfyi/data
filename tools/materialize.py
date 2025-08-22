@@ -151,9 +151,6 @@ def main():
 
                 input_tls = tls.get(input_locale, {})
 
-                name = input_tls.get(
-                    "name", event["name"] if event_locale_is_zh else None
-                )
                 venue = input_tls.get(
                     "venue", event["venue"] if event_locale_is_zh else None
                 )
@@ -163,13 +160,8 @@ def main():
 
                 output_tls = {
                     **(
-                        {"name": lc.convert(name)}
-                        if name is not None and regex.search(r"\p{sc=Han}", name)
-                        else {}
-                    ),
-                    **(
                         {"venue": lc.convert(venue)}
-                        if name is not None and regex.search(r"\p{sc=Han}", venue)
+                        if venue is not None and regex.search(r"\p{sc=Han}", venue)
                         else {}
                     ),
                     **(

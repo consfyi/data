@@ -1,9 +1,9 @@
 {
-  "name": "SeaFur",
+  "name": "海兽聚",
   "events": [
     {
       "id": "seafur-5",
-      "name": "SeaFur 5",
+      "name": "海兽聚 5",
       "url": "https://www.seafur.cn",
       "startDate": "2025-08-15",
       "endDate": "2025-08-17",
@@ -12,6 +12,7 @@
       "locale": "zh-CN",
       "translations": {
         "en": {
+          "name": "SeaFur 5",
           "venue": "Shanghai Jiading Sheraton Hotel",
           "address": "No. 66 Jiatang Road, Jiading District, Shanghai 201800, China"
         }

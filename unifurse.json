@@ -1,9 +1,9 @@
 {
-  "name": "Unifurse",
+  "name": "獸界",
   "events": [
     {
       "id": "unifurse-2025",
-      "name": "Unifurse 2025",
+      "name": "獸界 2025",
       "url": "https://unifurse.cn",
       "startDate": "2025-07-18",
       "endDate": "2025-07-21",
@@ -12,6 +12,7 @@
       "locale": "zh-CN",
       "translations": {
         "en": {
+          "name": "Unifurse 2025",
           "venue": "Shangri-La Hotel",
           "address": "No. 1 Huizhan East Road, Haizhu District, Guangzhou, Guangdong 510308, China"
         }

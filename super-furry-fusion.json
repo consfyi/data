@@ -1,9 +1,9 @@
 {
-  "name": "Super Furry Fusion",
+  "name": "极兽聚",
   "events": [
     {
       "id": "super-furry-fusion-2025",
-      "name": "Super Furry Fusion 2025",
+      "name": "极兽聚 2025",
       "url": "https://www.furrychina.com",
       "startDate": "2025-08-03",
       "endDate": "2025-08-03",
@@ -12,6 +12,7 @@
       "locale": "zh-CN",
       "translations": {
         "en": {
+          "name": "Super Furry Fusion 2025",
           "venue": "Shanghai World Trade Exhibition Hall",
           "address": "No. 99, Xingyi Road, Changning District, Shanghai 200051, China"
         }

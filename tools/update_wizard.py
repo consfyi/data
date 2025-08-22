@@ -102,7 +102,7 @@ def prompt_for_venue(gmaps, venue):
             lat, lng = lat_lng
             lat_lng = eviltransform.gcj2wgs(lat, lng)
 
-        if locale.getLanguage() != "en":
+        if locale.getScript() != "Latn":
             localePlace = gmaps.place(
                 selected["place_id"],
                 session_token=session_token,

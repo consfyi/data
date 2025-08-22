@@ -11,6 +11,9 @@
       "address": "806台灣高雄市前鎮區新光路61號",
       "locale": "zh-TW",
       "translations": {
+        "zh-Hant": {
+          "name": "以茶會毛 2026"
+        },
         "en": {
           "venue": "Kaohsiung Main Public Library",
           "address": "No. 61, Singuang Rd, Cianjhen District, Kaohsiung City, Taiwan 806"

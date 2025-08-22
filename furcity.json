@@ -1,9 +1,9 @@
 {
-  "name": "FurCity",
+  "name": "毛茸城",
   "events": [
     {
       "id": "furcity-2025",
-      "name": "FurCity 2025",
+      "name": "毛茸城 2025",
       "url": "https://www.furcity.online",
       "startDate": "2025-10-02",
       "endDate": "2025-10-04",
@@ -12,6 +12,7 @@
       "locale": "zh-CN",
       "translations": {
         "en": {
+          "name": "FurCity 2025",
           "venue": "Intercontinental Guangzhou Exhibition Center",
           "address": "No. 828, Yuejiang Middle Road, Haizhu District, Guangzhou, China 510308"
         }

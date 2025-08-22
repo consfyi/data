@@ -11,6 +11,9 @@
       "address": "香港上環德輔道西33號",
       "locale": "zh-HK",
       "translations": {
+        "zh-Hant": {
+          "name": "毛與鱗比 2025"
+        },
         "en": {
           "venue": "Soho House Hong Kong",
           "address": "33 Des Voeux Rd W, Sheung Wan, Hong Kong"

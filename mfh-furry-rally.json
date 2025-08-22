@@ -1,9 +1,9 @@
 {
-  "name": "MFH Furry Rally",
+  "name": "墨兽居",
   "events": [
     {
       "id": "mfh-furry-rally-2026",
-      "name": "MFH Furry Rally 2026",
+      "name": "墨兽居 2026",
       "url": "https://www.moshouju.com",
       "startDate": "2026-01-01",
       "endDate": "2026-01-01",
@@ -12,6 +12,7 @@
       "locale": "zh-CN",
       "translations": {
         "en": {
+          "name": "MFH Furry Rally 2026",
           "venue": "Chengdu",
           "address": "Chengdu, Sichuan, China"
         }

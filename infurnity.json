@@ -7,9 +7,15 @@
       "url": "https://www.infurnity.com",
       "startDate": "2025-10-31",
       "endDate": "2025-11-02",
-      "venue": "Fullon Hotel Lihpao Land",
-      "address": "Furong Road, Houli District, Taichung City, Taiwan",
+      "venue": "麗寶福容大飯店",
+      "address": "421台灣台中市后里區福容路88號",
       "locale": "zh-TW",
+      "translations": {
+        "en": {
+          "venue": "Fullon Hotel Lihpao Land",
+          "address": "88 Furong Rd, Houli District, Taichung City, Taiwan 421"
+        }
+      },
       "latLng": [
         24.3235809,
         120.69659539999999

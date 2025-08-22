@@ -1,0 +1,19 @@
+{
+  "name": "Core Element",
+  "events": [
+    {
+      "id": "core-element-2025",
+      "name": "Core Element 2025",
+      "url": "https://www.coreelement.co.uk",
+      "startDate": "2025-08-16",
+      "endDate": "2025-08-18",
+      "venue": "Horseheath Racecourse",
+      "address": "Unnamed Road, Cambridge CB21 4QP, UK",
+      "locale": "en-GB",
+      "latLng": [
+        52.0959195,
+        0.3299767
+      ]
+    }
+  ]
+}

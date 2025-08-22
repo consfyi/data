@@ -56,8 +56,15 @@ interface Event {
   /// The human-readable name of the convention instance, e.g.
   /// "RainFurrest 2016".
   ///
-  /// This should be in the locale of the event, but will also be displayed as
-  /// the fallback.
+  /// This should be the well known name of the event, even if the locale the
+  /// event is in has a different localized name. For example "Infurnity" should
+  /// be preferred over "獸無限". However, "你好兽聚" is preferred over
+  /// "Hi Furry" as the Chinese name is more well known.
+  ///
+  /// In general:
+  /// - zh-CN, ru: Prefer the local name, add an en translation.
+  /// - zh-TW, zh-HK: Prefer the English name, add a zh-Hant translation.
+  /// - ja: Can go either way, refer to the event's marketing material.
   name: string;
 
   /// Link to the convention website.
@@ -95,7 +102,7 @@ interface Event {
   /// viewer who has that locale set should see a more locale-specific version
   /// of the text.
   ///
-  /// For instance, "Kemono Square" is an acceptable Japanese locale name, but
+  /// For instance, "Kemono Square" is the well known name for the event, but
   /// Japanese viewers may prefer to see "ケモノスクエア" instead.
   translations?: {
     [locale: string]: {

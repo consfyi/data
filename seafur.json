@@ -7,9 +7,15 @@
       "url": "https://www.seafur.cn",
       "startDate": "2025-08-15",
       "endDate": "2025-08-17",
-      "venue": "Shanghai Jiading Sheraton Hotel",
-      "address": "Jiatang Highway, Jiading District, Shanghai, China",
+      "venue": "上海嘉定喜来登酒店",
+      "address": "中国上海市嘉定区嘉唐公路66号 邮编：201800",
       "locale": "zh-CN",
+      "translations": {
+        "en": {
+          "venue": "Shanghai Jiading Sheraton Hotel",
+          "address": "No. 66 Jiatang Road, Jiading District, Shanghi, China 201800"
+        }
+      },
       "latLng": [
         31.396019632505332,
         121.24188543702257

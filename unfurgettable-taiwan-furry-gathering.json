@@ -7,9 +7,15 @@
       "url": "https://www.utfg.tw",
       "startDate": "2025-07-19",
       "endDate": "2025-07-20",
-      "venue": "Sheraton Hsinchu Hotel",
-      "address": "East Section 1, Guangming 6th Road, Zhubei City, Hsinchu County, Taiwan",
+      "venue": "新竹豐邑喜來登大飯店",
+      "address": "302台灣新竹縣竹北市光明六路東一段265號",
       "locale": "zh-TW",
+      "translations": {
+        "en": {
+          "venue": "Sheraton Hsinchu Hotel",
+          "address": "No. 265, E Section 1, Guangming 6th Rd, Zhubei City, Hsinchu County, Taiwan 302"
+        }
+      },
       "latLng": [
         24.820525,
         121.0279874

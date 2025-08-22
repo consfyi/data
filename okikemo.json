@@ -7,9 +7,15 @@
       "url": "https://twipla.jp/users/OkikemoOkinawa",
       "startDate": "2025-10-10",
       "endDate": "2025-10-10",
-      "venue": "American Village",
-      "address": "Mihama, Chatan, Okinawa, Japan",
+      "venue": "美浜タウンリゾート・アメリカンビレッジ",
+      "address": "日本、〒904-0115 沖縄県中頭郡北谷町美浜",
       "locale": "ja-JP",
+      "translations": {
+        "en": {
+          "venue": "American Village",
+          "address": "Mihama, Chatan, Nakagami District, Okinawa 904-0115, Japan"
+        }
+      },
       "latLng": [
         26.3158799,
         127.75400769999999

@@ -7,9 +7,15 @@
       "url": "https://www.yunisland.cn",
       "startDate": "2025-08-08",
       "endDate": "2025-08-10",
-      "venue": "Steigenberger Chongqing",
-      "address": "Shapingba District, Chongqing, China",
+      "venue": "Steinberger Chongqing",
+      "address": "中国重庆市沙坪坝区文广大道18-2号 邮编：401333",
       "locale": "zh-CN",
+      "translations": {
+        "en": {
+          "venue": "Steinberger Chongqing",
+          "address": "No.18-2 Wenguang Avenue, Shapingba District, Chongqing, China 401333"
+        }
+      },
       "latLng": [
         29.64347684834779,
         106.3657309402794

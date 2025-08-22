@@ -7,9 +7,15 @@
       "url": "https://www.moshouju.com",
       "startDate": "2026-01-01",
       "endDate": "2026-01-01",
-      "venue": "Chengdu",
-      "address": "Sichuan, China",
+      "venue": "成都市",
+      "address": "中国四川省成都市",
       "locale": "zh-CN",
+      "translations": {
+        "en": {
+          "venue": "Chengdu",
+          "address": "Chengdu, Sichuan, China"
+        }
+      },
       "latLng": [
         30.574714401215445,
         104.06400493556151

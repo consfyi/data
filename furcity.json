@@ -7,9 +7,15 @@
       "url": "https://www.furcity.online",
       "startDate": "2025-10-02",
       "endDate": "2025-10-04",
-      "venue": "Intercontinental Guangzhou Exhibition Center",
-      "address": "Haizhu District, Guangzhou, China",
+      "venue": "广州保利洲际酒店",
+      "address": "中国广州市海珠区阅江中路828号 邮编：510308",
       "locale": "zh-CN",
+      "translations": {
+        "en": {
+          "venue": "Intercontinental Guangzhou Exhibition Center",
+          "address": "No. 828, Yuejiang Middle Road, Haizhu District, Guangzhou, China 510308"
+        }
+      },
       "latLng": [
         23.10714261634886,
         113.37670886662467

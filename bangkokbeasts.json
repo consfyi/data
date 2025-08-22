@@ -8,8 +8,14 @@
       "startDate": "2025-11-15",
       "endDate": "2025-11-15",
       "venue": "Mr.FOX Live House",
-      "address": "Srivara Road, Phlabphla, Wang Thonglang, Bangkok, Thailand",
+      "address": "Floor 1 1323, 1 ถนน ศรีวรา แขวงพลับพลา เขตวังทองหลาง กรุงเทพมหานคร 10310 ไทย",
       "locale": "th-TH",
+      "translations": {
+        "en": {
+          "venue": "Mr.FOX Live House",
+          "address": "Floor 1 1323, 1 Srivara Rd, Phlabphla, Wang Thonglang, Bangkok 10310, Thailand"
+        }
+      },
       "latLng": [
         13.7737117,
         100.61038309999999

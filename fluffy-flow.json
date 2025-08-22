@@ -8,13 +8,13 @@
       "startDate": "2025-08-21",
       "endDate": "2025-08-24",
       "venue": "天津京基皇冠假日酒店",
-      "address": "中国天津市津南区聆雨路",
+      "address": "中国天津市津南区八里台镇岭域路 邮编：300350",
       "locale": "zh-CN",
       "translations": {
         "en": {
           "name": "Fluffy Flow 2025",
           "venue": "Crowne Plaza Tianjin Jinnan",
-          "address": "Lingyu Road, Jinnan District, Tianjin, China"
+          "address": "Lingyu Road Balitai Area, Jinnan District, Tianjin, Tianjin, China 300350"
         }
       },
       "latLng": [

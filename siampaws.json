@@ -7,9 +7,15 @@
       "url": "https://www.siampaws.com",
       "startDate": "2025-06-07",
       "endDate": "2025-06-08",
-      "venue": "The Emerald Hotel",
-      "address": "Ratchadaphisek Road, Din Daeng, Bangkok, Thailand",
+      "venue": "โรงแรม ดิ เอมเมอรัลด์",
+      "address": "99/1 ถ. รัชดาภิเษก แขวงดินแดง เขตดินแดง กรุงเทพมหานคร 10400 ไทย",
       "locale": "th-TH",
+      "translations": {
+        "en": {
+          "venue": "The Emerald Hotel",
+          "address": "99/1 Thanon Ratchadaphisek, Khwaeng Din Daeng, Khet Din Daeng, Krung Thep Maha Nakhon 10400, Thailand"
+        }
+      },
       "latLng": [
         13.7754503,
         100.5725367

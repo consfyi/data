@@ -7,9 +7,15 @@
       "url": "https://www.kemocon.com",
       "startDate": "2025-11-07",
       "endDate": "2025-11-09",
-      "venue": "Gotemba Kogen Tokinosumika",
-      "address": "719 Koyama, Gotemba, Shizuoka, Japan",
+      "venue": "御殿場高原時之栖",
+      "address": "日本、〒412-0033 静岡県御殿場市神山７１９",
       "locale": "ja-JP",
+      "translations": {
+        "en": {
+          "venue": "Gotemba Kogen Tokinosumika",
+          "address": "719 Kōyama, Gotemba, Shizuoka, 412-0033, Japan"
+        }
+      },
       "latLng": [
         35.2357896,
         138.9250904

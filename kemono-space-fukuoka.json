@@ -7,9 +7,15 @@
       "url": "https://www.kemonospacefukuoka.com",
       "startDate": "2025-11-15",
       "endDate": "2025-11-15",
-      "venue": "Fukuoka Tower",
-      "address": "2 Chome-3-26 Momochihama, Sawara Ward, Fukuoka, Japan",
+      "venue": "福岡タワー",
+      "address": "日本、〒814-0001 福岡県福岡市早良区百道浜２丁目３−２６",
       "locale": "ja-JP",
+      "translations": {
+        "en": {
+          "venue": "Fukuoka Tower",
+          "address": "2-chōme-3-26 Momochihama, Sawara Ward, Fukuoka, 814-0001, Japan"
+        }
+      },
       "latLng": [
         33.5932846,
         130.35151

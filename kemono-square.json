@@ -8,7 +8,7 @@
       "startDate": "2026-06-20",
       "endDate": "2026-06-20",
       "venue": "グランシップ",
-      "address": "日本、静岡県静岡市駿河区東静岡２丁目３−１",
+      "address": "日本、〒422-8019 静岡県静岡市駿河区東静岡２丁目３−１",
       "locale": "ja-JP",
       "translations": {
         "ja": {
@@ -16,7 +16,7 @@
         },
         "en": {
           "venue": "GRANSHIP",
-          "address": "2 Chome-3-1 Higashishizuoka, Suruga Ward, Shizuoka, Japan"
+          "address": "2-chōme-3-1 Higashishizuoka, Suruga Ward, Shizuoka, 422-8019, Japan"
         }
       },
       "latLng": [

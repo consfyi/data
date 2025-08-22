@@ -8,13 +8,13 @@
       "startDate": "2025-09-21",
       "endDate": "2025-09-21",
       "venue": "東京流通センター第一展示場",
-      "address": "日本、東京都大田区平和島６丁目",
+      "address": "日本、〒143-0006 東京都大田区平和島６丁目",
       "locale": "ja-JP",
       "translations": {
         "en": {
           "name": "Kemoket 16",
           "venue": "TRC First Exhibition Hall",
-          "address": "6 Chome-1-1 Heiwajima, Ota City, Tokyo, Japan"
+          "address": "6-chōme-1-1 Heiwajima, Ota City, Tokyo, 143-0006, Japan"
         }
       },
       "latLng": [

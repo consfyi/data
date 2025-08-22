@@ -8,8 +8,14 @@
       "startDate": "2025-11-30",
       "endDate": "2025-11-30",
       "venue": "Soho House Hong Kong",
-      "address": "Des Voeux Road West, Sheung Wan, Hong Kong",
+      "address": "香港上環德輔道西33號",
       "locale": "zh-HK",
+      "translations": {
+        "en": {
+          "venue": "Soho House Hong Kong",
+          "address": "33 Des Voeux Rd W, Sheung Wan, Hong Kong"
+        }
+      },
       "latLng": [
         22.2878391,
         114.1467251

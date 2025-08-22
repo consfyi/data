@@ -7,9 +7,15 @@
       "url": "https://www.furryteaparty.com",
       "startDate": "2026-02-27",
       "endDate": "2026-03-01",
-      "venue": "Kaohsiung Main Public Library",
-      "address": "Singuang Road, Cianjhen District, Kaohsiung City, Taiwan",
+      "venue": "高雄市立圖書館總館",
+      "address": "806台灣高雄市前鎮區新光路61號",
       "locale": "zh-TW",
+      "translations": {
+        "en": {
+          "venue": "Kaohsiung Main Public Library",
+          "address": "No. 61, Singuang Rd, Cianjhen District, Kaohsiung City, Taiwan 806"
+        }
+      },
       "latLng": [
         22.6104438,
         120.3017989

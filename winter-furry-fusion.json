@@ -8,13 +8,13 @@
       "startDate": "2024-12-20",
       "endDate": "2024-12-22",
       "venue": "上海夏阳湖皇冠假日酒店",
-      "address": "中国上海市青浦区青舟路303号",
+      "address": "中国上海市青浦区青舟路303号 邮编：201700",
       "locale": "zh-CN",
       "translations": {
         "en": {
           "name": "Winter Furry Fusion 2024",
           "venue": "Crowne Plaza Shanghai Xiayang Lake",
-          "address": "303 Qingzhou Road, Qingpu District, Shanghai, China"
+          "address": "No. 303 Qingzhou Road, Qingpu District, Shanghai, China 201700"
         }
       },
       "latLng": [

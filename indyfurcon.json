@@ -8,7 +8,7 @@
       "startDate": "2025-08-15",
       "endDate": "2025-08-17",
       "venue": "Wyndham Indianapolis Airport",
-      "address": "Executive Drive, Indianapolis, IN, USA",
+      "address": "2544 Executive Dr, Indianapolis, IN 46241, United States",
       "locale": "en-US",
       "latLng": [
         39.7293745,
@@ -21,8 +21,8 @@
       "url": "https://indyfurcon.com",
       "startDate": "2024-08-23",
       "endDate": "2024-08-25",
-      "venue": "Wyndham Indianapolis West",
-      "address": "Eagle View Drive, Indianapolis, IN, USA",
+      "venue": "Baymont by Wyndham Indianapolis West",
+      "address": "3850 Eagle View Dr, Indianapolis, IN 46254, United States",
       "locale": "en-US",
       "latLng": [
         39.82519920000001,
@@ -35,8 +35,8 @@
       "url": "https://indyfurcon.com",
       "startDate": "2023-08-24",
       "endDate": "2023-08-28",
-      "venue": "Wyndham Indianapolis West",
-      "address": "Eagle View Drive, Indianapolis, IN, USA",
+      "venue": "Baymont by Wyndham Indianapolis West",
+      "address": "3850 Eagle View Dr, Indianapolis, IN 46254, United States",
       "locale": "en-US",
       "latLng": [
         39.82519920000001,

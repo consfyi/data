@@ -7,9 +7,15 @@
       "url": "https://osaka-fff.jp",
       "startDate": "2024-05-18",
       "endDate": "2024-05-19",
-      "venue": "ATC HALL",
-      "address": "2 Chome-1-10 Nankōkita, Suminoe Ward, Osaka, Japan",
+      "venue": "ATCホール",
+      "address": "日本、〒559-0034 大阪府大阪市住之江区南港北２丁目１−１０",
       "locale": "ja-JP",
+      "translations": {
+        "en": {
+          "venue": "ATC HALL",
+          "address": "2-chōme−1−10 Nankōkita, Suminoe, Osaka, 559-0034, Japan"
+        }
+      },
       "latLng": [
         34.6361063,
         135.41454679999998

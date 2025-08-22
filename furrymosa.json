@@ -7,9 +7,15 @@
       "url": "https://furrymosa.gjs.tw",
       "startDate": "2025-06-14",
       "endDate": "2025-06-14",
-      "venue": "Sanchong Comprehensive Gymnasium",
-      "address": "Section 1, New Taipei Boulevard, Sanchong District, New Taipei City, Taiwan",
+      "venue": "三重綜合體育館",
+      "address": "241台灣新北市三重區新北大道一段2號",
       "locale": "zh-TW",
+      "translations": {
+        "en": {
+          "venue": "Sanchong Comprehensive Gymnasium",
+          "address": "No. 2, Section 1, New Taipei Blvd, Sanchong District, New Taipei City, Taiwan 241"
+        }
+      },
       "latLng": [
         25.0617771,
         121.49149510000001

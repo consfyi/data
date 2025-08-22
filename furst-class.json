@@ -1,0 +1,25 @@
+{
+  "name": "Furst Class",
+  "events": [
+    {
+      "id": "furst-class-3",
+      "name": "Furst Class 3",
+      "url": "https://witchform.com/w/festa/home/TheFurstclass",
+      "startDate": "2025-11-15",
+      "endDate": "2025-11-16",
+      "venue": "호텔 농심",
+      "address": "대한민국 부산광역시 동래구 금강공원로20번길 23",
+      "locale": "ko-KR",
+      "translations": {
+        "en": {
+          "venue": "Nongsim Hotel",
+          "address": "23 Geumganggongwon-ro 20beon-gil, Dongnae-gu, Busan, South Korea"
+        }
+      },
+      "latLng": [
+        35.2202216,
+        129.0823133
+      ]
+    }
+  ]
+}

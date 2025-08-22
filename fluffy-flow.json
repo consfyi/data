@@ -1,9 +1,9 @@
 {
-  "name": "Fluffy Flow",
+  "name": "绒兽汇",
   "events": [
     {
       "id": "fluffy-flow-2025",
-      "name": "Fluffy Flow 2025",
+      "name": "绒兽汇2025",
       "url": "https://www.fluffyflow.cn",
       "startDate": "2025-08-21",
       "endDate": "2025-08-24",
@@ -11,10 +11,8 @@
       "address": "中国天津市津南区聆雨路",
       "locale": "zh-CN",
       "translations": {
-        "zh-Hans": {
-          "name": "绒兽汇2025"
-        },
         "en": {
+          "name": "Fluffy Flow 2025",
           "venue": "Crowne Plaza Tianjin Jinnan",
           "address": "Lingyu Road, Jinnan District, Tianjin, China"
         }

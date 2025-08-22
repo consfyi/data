@@ -7,9 +7,15 @@
       "url": "https://furryjoa.com",
       "startDate": "2025-02-22",
       "endDate": "2025-02-23",
-      "venue": "YMCA Goyang Youth Hostel",
-      "address": "Aenigol-gil, Goyang, Gyeonggi-do, South Korea",
+      "venue": "서울YMCA고양국제청소년문화센터 유스센터",
+      "address": "대한민국 경기도 고양시 애니골길 97 KR",
       "locale": "ko-KR",
+      "translations": {
+        "en": {
+          "venue": "YMCA Goyang Youth Hostel",
+          "address": "South Korea, Gyeonggi-do, Goyang-si, Aenigol-gil, 97 KR"
+        }
+      },
       "latLng": [
         37.6773607,
         126.7914804

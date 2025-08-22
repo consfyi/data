@@ -164,17 +164,17 @@ def main():
                 output_tls = {
                     **(
                         {"name": lc.convert(name)}
-                        if name is not None and regex.match(r"\p{sc=Han}", name)
+                        if name is not None and regex.search(r"\p{sc=Han}", name)
                         else {}
                     ),
                     **(
                         {"venue": lc.convert(venue)}
-                        if name is not None and regex.match(r"\p{sc=Han}", venue)
+                        if name is not None and regex.search(r"\p{sc=Han}", venue)
                         else {}
                     ),
                     **(
                         {"address": lc.convert(address)}
-                        if address is not None and regex.match(r"\p{sc=Han}", address)
+                        if address is not None and regex.search(r"\p{sc=Han}", address)
                         else {}
                     ),
                 }

@@ -11,8 +11,10 @@
       "address": "中国四川省成都市武侯区人民南路四段48号 邮编：610041",
       "locale": "zh-CN",
       "translations": {
+        "zh-Latn-pinyin": {
+          "name": "Sānjiāng Shòuhuì 2025"
+        },
         "en": {
-          "name": "Sanjiang Shouhui 2025",
           "venue": "Renaissance Chengdu Hotel",
           "address": "No 48. Section 4, South Renmin Road, Wuhou District, Chengdu, Sichuan 610041, China"
         }

@@ -11,10 +11,8 @@
       "address": "中国重庆市江津区恒大大道1号 邮编：402247",
       "locale": "zh-CN",
       "translations": {
-        "zh-Latn-pinyin": {
-          "name": "Shèng Shòu Jì 3"
-        },
         "en": {
+          "name": "Sheng Shou Ji 3",
           "venue": "Chongqing Hengda Hotel",
           "address": "No. 1, Hengda Avenue, Jiangjin District, Chongqing 402247, China"
         }

@@ -2,6 +2,33 @@
   "name": "COG Weekend",
   "events": [
     {
+      "id": "cog-weekend-classic-b-2026",
+      "name": "COG Weekend Classic B 2026",
+      "url": "https://www.cogweekend.com",
+      "startDate": "2026-02-05",
+      "endDate": "2026-02-08",
+      "venue": "CCBC Resort Hotel",
+      "address": "68-300 Gay Resort Dr, Cathedral City, CA 92234, United States",
+      "locale": "en-US",
+      "latLng": [
+        33.7797364,
+        -116.46929410000001
+      ]
+    },{
+      "id": "cog-weekend-classic-a-2026",
+      "name": "COG Weekend Classic A 2026",
+      "url": "https://www.cogweekend.com",
+      "startDate": "2026-01-29",
+      "endDate": "2026-02-01",
+      "venue": "CCBC Resort Hotel",
+      "address": "68-300 Gay Resort Dr, Cathedral City, CA 92234, United States",
+      "locale": "en-US",
+      "latLng": [
+        33.7797364,
+        -116.46929410000001
+      ]
+    },
+    {
       "id": "cog-weekend-fall-2025",
       "name": "COG Weekend Fall 2025",
       "url": "https://www.cogweekend.com",

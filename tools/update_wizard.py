@@ -280,7 +280,12 @@ def main():
             else:
                 termcolor.cprint("(n)ew/(Q)uit? ", "magenta", end="")
 
-            inp = input().strip().lower()
+            try:
+                inp = input().strip().lower()
+            except KeyboardInterrupt:
+                print("")
+                break
+
             if i < len(no_upcoming):
                 match inp:
                     case "a":

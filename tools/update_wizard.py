@@ -285,8 +285,6 @@ def main():
             except KeyboardInterrupt:
                 print("")
                 break
-            except EOFError:
-                return
 
             if i < len(no_upcoming):
                 match inp:

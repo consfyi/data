@@ -284,8 +284,13 @@ def main():
             if i < len(no_upcoming):
                 match inp:
                     case "a":
-                        handle_add(gmaps, series_id, series)
-                        i += 1
+                        try:
+                            handle_add(gmaps, series_id, series)
+                        except KeyboardInterrupt:
+                            print("")
+                            break
+                        else:
+                            i += 1
                         break
                     case "w":
                         webbrowser.open(previous_event["url"])
@@ -300,7 +305,11 @@ def main():
 
             match inp:
                 case "n":
-                    handle_new(gmaps)
+                    try:
+                        handle_new(gmaps)
+                    except KeyboardInterrupt:
+                        print("")
+                        break
                     break
                 case "s":
                     i += 1

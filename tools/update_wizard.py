@@ -376,7 +376,7 @@ def handle_add(gmaps, series_id, series):
         venue, address, locale, translations, lat_lng = prompt_for_venue(gmaps, venue)
     else:
         address = previous_event["address"]
-        translations = previous_event["translations"]
+        translations = previous_event.get("translations")
         lat_lng = previous_event["latLng"]
 
     if name != guessed_name:

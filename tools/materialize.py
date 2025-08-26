@@ -226,13 +226,13 @@ def main():
         )
         return now < end_time.add(days=7) and not event.get("canceled", False)
 
-    current = [event for event in events.values() if pred(event)]
-    current.sort(
+    current = sorted(
+        (event for event in events.values() if pred(event)),
         key=lambda event: (
             whenever.Date.parse_common_iso(event["startDate"]),
             whenever.Date.parse_common_iso(event["endDate"]),
             event["id"],
-        )
+        ),
     )
 
     with open(output_dir / "calendar.ics", "w") as f:
@@ -280,19 +280,19 @@ def main():
             json.dump(event, f, ensure_ascii=False)
             f.write("\n")
 
-    last = [
-        event
-        for event in (
-            next(iter(series["events"]), None) for _, series in all_series.items()
-        )
-        if event is not None
-    ]
-    last.sort(
+    last = sorted(
+        (
+            event
+            for event in (
+                next(iter(series["events"]), None) for _, series in all_series.items()
+            )
+            if event is not None
+        ),
         key=lambda event: (
             whenever.Date.parse_common_iso(event["startDate"]),
             whenever.Date.parse_common_iso(event["endDate"]),
             event["id"],
-        )
+        ),
     )
 
     with open(output_dir / "last.jsonl", "w") as f:

@@ -2,6 +2,20 @@
   "name": "Camp Mani-Toebeans",
   "events": [
     {
+      "id": "camp-mani-toebeans-2026",
+      "name": "Camp Mani-Toebeans 2026",
+      "url": "https://manitobafurries.org/camp",
+      "startDate": "2026-08-28",
+      "endDate": "2026-08-31",
+      "venue": "Camp Wasaga",
+      "address": "Reid Rd, Onanole, MB R0J 1N0, Canada",
+      "locale": "en-CA",
+      "latLng": [
+        50.6643681,
+        -100.0189803
+      ]
+    },
+    {
       "id": "camp-mani-toebeans-2025",
       "name": "Camp Mani-Toebeans 2025",
       "url": "https://manitobafurries.org/camp",

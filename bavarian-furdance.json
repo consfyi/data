@@ -2,6 +2,20 @@
   "name": "Bavarian Furdance",
   "events": [
     {
+      "id": "bavarian-furdance-17",
+      "name": "Bavarian Furdance 17",
+      "url": "https://www.bayern-furs.de/events/bfd",
+      "startDate": "2025-11-15",
+      "endDate": "2025-11-15",
+      "venue": "Z-Bau - Haus für Gegenwartskultur",
+      "address": "Frankenstraße 200, 90461 Nürnberg, Deutschland",
+      "locale": "de-DE",
+      "latLng": [
+        49.43056139999999,
+        11.09474
+      ]
+    },
+    {
       "id": "bavarian-furdance-16",
       "name": "Bavarian Furdance 16",
       "url": "https://www.bayern-furs.de/events/bfd",

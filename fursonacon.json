@@ -2,6 +2,20 @@
   "name": "FursonaCon",
   "events": [
     {
+      "id": "fursonacon-2026",
+      "name": "FursonaCon 2026",
+      "url": "https://fursonacon.com",
+      "startDate": "2026-09-03",
+      "endDate": "2026-09-06",
+      "venue": "Newport News Marriott at City Center",
+      "address": "740 Town Center Dr, Newport News, VA 23606, United States",
+      "locale": "en-US",
+      "latLng": [
+        37.0871125,
+        -76.4715315
+      ]
+    },
+    {
       "id": "fursonacon-2025",
       "name": "FursonaCon 2025",
       "url": "https://fursonacon.com",

@@ -43,14 +43,13 @@ def main():
             out = orjson.dumps(
                 reorder(orjson.loads(f.read()), schema),
                 sys.stdout,
-                orjson.OPT_INDENT_2,
+                orjson.OPT_INDENT_2 | orjson.OPT_APPEND_NEWLINE,
             )
 
             f.seek(0)
             f.truncate(0)
 
             f.write(out)
-            f.write(b"\n")
 
 
 if __name__ == "__main__":

@@ -42,8 +42,7 @@ def main():
         with open(fn, "r+b") as f:
             out = orjson.dumps(
                 reorder(orjson.loads(f.read()), schema),
-                sys.stdout,
-                orjson.OPT_INDENT_2 | orjson.OPT_APPEND_NEWLINE,
+                option=orjson.OPT_INDENT_2 | orjson.OPT_APPEND_NEWLINE,
             )
 
             f.seek(0)

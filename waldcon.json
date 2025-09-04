@@ -1,0 +1,19 @@
+{
+  "name": "WaldCon",
+  "events": [
+    {
+      "id": "waldcon-2025",
+      "name": "WaldCon 2025",
+      "url": "https://waldcon.de",
+      "startDate": "2025-08-20",
+      "endDate": "2025-08-24",
+      "venue": "BDKJ Jugendgruppenzeltplatz Heidebrinkschule",
+      "address": "Heidebrinkstraße 1, 46539 Dinslaken, Deutschland",
+      "locale": "de-DE",
+      "latLng": [
+        51.5833689,
+        6.809851699999999
+      ]
+    }
+  ]
+}

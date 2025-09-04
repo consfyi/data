@@ -2,11 +2,12 @@
 # /// script
 # requires-python = ">=3.13"
 # dependencies = [
+#   "orjson"
 # ]
 # ///
 
 import itertools
-import json
+import orjson
 import sys
 import os
 
@@ -34,13 +35,22 @@ def reorder(obj, schema):
 
 
 def main():
-    with open(os.path.join(os.path.dirname(__file__), "schema.json")) as f:
-        schema = json.load(f)
+    with open(os.path.join(os.path.dirname(__file__), "schema.json"), "rb") as f:
+        schema = orjson.loads(f.read())
 
-    json.dump(
-        reorder(json.load(sys.stdin), schema), sys.stdout, indent=2, ensure_ascii=False
-    )
-    sys.stdout.write("\n")
+    for fn in sys.argv[1:]:
+        with open(fn, "r+b") as f:
+            out = orjson.dumps(
+                reorder(orjson.loads(f.read()), schema),
+                sys.stdout,
+                orjson.OPT_INDENT_2,
+            )
+
+            f.seek(0)
+            f.truncate(0)
+
+            f.write(out)
+            f.write(b"\n")
 
 
 if __name__ == "__main__":

@@ -1,0 +1,22 @@
+{
+  "name": "Mischief District",
+  "events": [
+    {
+      "id": "mischief-district-2025",
+      "name": "Mischief District 2025",
+      "url": "http://furrycons.com/event/26533/mischief-district-2025",
+      "startDate": "2025-10-26",
+      "endDate": "2025-10-26",
+      "venue": "Ivywild School",
+      "address": "1604 S Cascade Ave, Colorado Springs, CO 80905, USA",
+      "locale": "en-US",
+      "latLng": [
+        38.8111199,
+        -104.8274457
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    }
+  ]
+}

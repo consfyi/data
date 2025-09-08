@@ -2,6 +2,20 @@
   "name": "DenFur",
   "events": [
     {
+      "id": "denfur-2026",
+      "name": "DenFur 2026",
+      "url": "https://denfur.org",
+      "startDate": "2026-08-28",
+      "endDate": "2026-08-30",
+      "venue": "Sheraton Denver Downtown Hotel",
+      "address": "1550 Court Pl, Denver, CO 80202, United States",
+      "locale": "en-US",
+      "latLng": [
+        39.7421248,
+        -104.989906
+      ]
+    },
+    {
       "id": "denfur-2025",
       "name": "DenFur 2025",
       "url": "https://denfur.org",

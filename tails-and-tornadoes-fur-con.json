@@ -2,6 +2,20 @@
   "name": "Tails and Tornadoes Fur Con",
   "events": [
     {
+      "id": "tails-and-tornadoes-fur-con-2026",
+      "name": "Tails and Tornadoes Fur Con 2026",
+      "url": "https://tailsandtornadoes.org",
+      "startDate": "2026-09-04",
+      "endDate": "2026-09-06",
+      "venue": "Renaissance Tulsa Hotel & Convention Center",
+      "address": "6808 S 107th E Ave, Tulsa, OK 74133, United States",
+      "locale": "en-US",
+      "latLng": [
+        36.0650536,
+        -95.8576868
+      ]
+    },
+    {
       "id": "tails-and-tornadoes-fur-con-2025",
       "name": "Tails and Tornadoes Fur Con 2025",
       "url": "https://tailsandtornadoes.org",

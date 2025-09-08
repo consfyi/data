@@ -2,6 +2,20 @@
   "name": "Megaplex",
   "events": [
     {
+      "id": "megaplex-2026",
+      "name": "Megaplex 2026",
+      "url": "https://www.megaplexcon.org",
+      "startDate": "2026-08-21",
+      "endDate": "2026-08-23",
+      "venue": "Hyatt Regency Orlando",
+      "address": "9801 International Dr, Orlando, FL 32819, United States",
+      "locale": "en-US",
+      "latLng": [
+        28.42769,
+        -81.4687483
+      ]
+    },
+    {
       "id": "megaplex-2025",
       "name": "Megaplex 2025",
       "url": "https://www.megaplexcon.org",

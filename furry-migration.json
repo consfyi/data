@@ -2,6 +2,20 @@
   "name": "Furry Migration",
   "events": [
     {
+      "id": "furry-migration-2026",
+      "name": "Furry Migration 2026",
+      "url": "https://www.furrymigration.org",
+      "startDate": "2026-09-11",
+      "endDate": "2026-09-13",
+      "venue": "Hyatt Regency Minneapolis",
+      "address": "1300 Nicollet Mall, Minneapolis, MN 55403, United States",
+      "locale": "en-US",
+      "latLng": [
+        44.9705423,
+        -93.2781067
+      ]
+    },
+    {
       "id": "furry-migration-2025",
       "name": "Furry Migration 2025",
       "url": "https://www.furrymigration.org",

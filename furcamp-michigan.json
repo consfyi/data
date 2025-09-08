@@ -2,6 +2,20 @@
   "name": "FurCamp Michigan",
   "events": [
     {
+      "id": "furcamp-michigan-2026",
+      "name": "FurCamp Michigan 2026",
+      "url": "https://furcampmi.wixsite.com/camping",
+      "startDate": "2026-06-04",
+      "endDate": "2026-06-07",
+      "venue": "Lake Michigan Recreation Area",
+      "address": "6000 W Forest Trail Rd, Free Soil, MI 49411, United States",
+      "locale": "en-US",
+      "latLng": [
+        44.11856470000001,
+        -86.42447519999999
+      ]
+    },
+    {
       "id": "furcamp-michigan-2025",
       "name": "FurCamp Michigan 2025",
       "url": "https://furcampmi.wixsite.com/camping",

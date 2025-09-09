@@ -2,6 +2,23 @@
   "name": "Fauntastic",
   "events": [
     {
+      "id": "fauntastic-2026",
+      "name": "Fauntastic 2026",
+      "url": "https://fauntastic.eu",
+      "startDate": "2026-04-03",
+      "endDate": "2026-04-07",
+      "venue": "Novotel Lyon Bron Meeting & Events",
+      "address": "260 Av. Jean Monnet, 69500 Bron, France",
+      "locale": "fr-FR",
+      "latLng": [
+        45.7247276,
+        4.9292541
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    },
+    {
       "id": "fauntastic-2025",
       "name": "Fauntastic 2025",
       "url": "https://fauntastic.eu",

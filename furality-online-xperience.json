@@ -2,6 +2,15 @@
   "name": "Furality Online Xperience",
   "events": [
     {
+      "id": "furality-online-xperience-2026",
+      "name": "Furality Online Xperience 2026",
+      "url": "https://furality.org",
+      "startDate": "2026-06-04",
+      "endDate": "2026-06-07",
+      "venue": "VRChat",
+      "locale": "en-US"
+    },
+    {
       "id": "furality-online-xperience-2025",
       "name": "Furality Online Xperience 2025",
       "url": "https://furality.org",

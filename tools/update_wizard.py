@@ -389,9 +389,9 @@ def handle_add(gmaps, series_id, series):
     if venue != previous_event["venue"]:
         venue, address, locale, translations, lat_lng = prompt_for_venue(gmaps, venue)
     else:
-        address = previous_event["address"]
+        address = previous_event.get("address")
         translations = previous_event.get("translations")
-        lat_lng = previous_event["latLng"]
+        lat_lng = previous_event.get("latLng")
 
     if name != guessed_name:
         id = slugify(name, locale)

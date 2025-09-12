@@ -2,6 +2,20 @@
   "name": "Furrydelphia",
   "events": [
     {
+      "id": "furrydelphia-2026",
+      "name": "Furrydelphia 2026",
+      "url": "https://www.furrydelphia.org",
+      "startDate": "2026-08-06",
+      "endDate": "2026-08-09",
+      "venue": "Sheraton Philadelphia Downtown",
+      "address": "201 N 17th St, Philadelphia, PA 19103, United States",
+      "locale": "en-US",
+      "latLng": [
+        39.957391,
+        -75.16726830000002
+      ]
+    },
+    {
       "id": "furrydelphia-2025",
       "name": "Furrydelphia 2025",
       "url": "https://www.furrydelphia.org",

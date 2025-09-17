@@ -2,6 +2,20 @@
   "name": "Furski",
   "events": [
     {
+      "id": "furski-2026",
+      "name": "Furski 2026",
+      "url": "https://fur.ski",
+      "startDate": "2026-01-11",
+      "endDate": "2026-01-12",
+      "venue": "Devil's Head Resort",
+      "address": "S6330 Bluff Rd, Merrimac, WI 53561, United States",
+      "locale": "en-US",
+      "latLng": [
+        43.4180036,
+        -89.6268972
+      ]
+    },
+    {
       "id": "furski-2025",
       "name": "Furski 2025",
       "url": "https://fur.ski",

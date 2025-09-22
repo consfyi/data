@@ -2,6 +2,20 @@
   "name": "Lakeside Furs",
   "events": [
     {
+      "id": "lakeside-furs-2026",
+      "name": "Lakeside Furs 2026",
+      "url": "https://www.lakesidefurs.at",
+      "startDate": "2026-06-28",
+      "endDate": "2026-07-05",
+      "venue": "Karlingerhof am Achensee - Gruppenhaus & Ferienwohnungen",
+      "address": "Seewinklstraße 28, 6215 Achenkirch, Österreich",
+      "locale": "de-AT",
+      "latLng": [
+        47.501787,
+        11.706208400000001
+      ]
+    },
+    {
       "id": "lakeside-furs-2025",
       "name": "Lakeside Furs 2025",
       "url": "https://www.lakesidefurs.at",

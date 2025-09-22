@@ -2,6 +2,20 @@
   "name": "Aurawra",
   "events": [
     {
+      "id": "aurawra-2026",
+      "name": "Aurawra 2026",
+      "url": "https://www.aurawra.org",
+      "startDate": "2026-07-24",
+      "endDate": "2026-07-26",
+      "venue": "PARKROYAL Parramatta",
+      "address": "30 Phillip St, Parramatta NSW 2150, Australia",
+      "locale": "en-AU",
+      "latLng": [
+        -33.8122314,
+        151.0049991
+      ]
+    },
+    {
       "id": "aurawra-2025",
       "name": "Aurawra 2025",
       "url": "https://www.aurawra.org",

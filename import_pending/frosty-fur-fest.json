@@ -1,0 +1,22 @@
+{
+  "name": "Frosty Fur Fest",
+  "events": [
+    {
+      "id": "frosty-fur-fest-2026",
+      "name": "Frosty Fur Fest 2026",
+      "url": "http://furrycons.com/event/26634/frosty-fur-fest-2026",
+      "startDate": "2026-02-14",
+      "endDate": "2026-02-15",
+      "venue": "Crowne Plaza Executive Center Baton Rouge, an IHG Hotel",
+      "address": "4728 Constitution Ave, Baton Rouge, LA 70808, USA",
+      "locale": "en-US",
+      "latLng": [
+        30.421278,
+        -91.136135
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    }
+  ]
+}

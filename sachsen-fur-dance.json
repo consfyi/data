@@ -1,0 +1,19 @@
+{
+  "name": "Sachsen Fur Dance",
+  "events": [
+    {
+      "id": "sachsen-fur-dance-27",
+      "name": "Sachsen Fur Dance 27",
+      "url": "https://www.sachsenfurs.de/en/sfd/",
+      "startDate": "2025-07-05",
+      "endDate": "2025-07-05",
+      "venue": "Club Puschkin",
+      "address": "Leipziger Str. 12, 01097 Dresden, Germany",
+      "locale": "de-DE",
+      "latLng": [
+        51.0700848,
+        13.7316824
+      ]
+    }
+  ]
+}

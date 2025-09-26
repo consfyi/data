@@ -1,0 +1,19 @@
+{
+  "name": "SOCOM",
+  "events": [
+    {
+      "id": "socom-15",
+      "name": "SOCOM 15",
+      "url": "https://socom.sachsenfurs.de",
+      "startDate": "2025-06-12",
+      "endDate": "2025-06-15",
+      "venue": "Camping & Ferienpark Bei Jena",
+      "address": "Rabeninsel 3, 07778 Neuengönna, Germany",
+      "locale": "de-DE",
+      "latLng": [
+        50.9741799,
+        11.6499948
+      ]
+    }
+  ]
+}

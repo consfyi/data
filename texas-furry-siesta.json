@@ -2,6 +2,20 @@
   "name": "Texas Furry Siesta",
   "events": [
     {
+      "id": "texas-furry-siesta-2026",
+      "name": "Texas Furry Siesta 2026",
+      "url": "https://www.furrysiesta.org",
+      "startDate": "2026-06-19",
+      "endDate": "2026-06-21",
+      "venue": "Hyatt Regency Dallas",
+      "address": "300 Reunion Blvd, Dallas, TX 75207, United States",
+      "locale": "en-US",
+      "latLng": [
+        32.7752763,
+        -96.8092154
+      ]
+    },
+    {
       "id": "texas-furry-siesta-2025",
       "name": "Texas Furry Siesta 2025",
       "url": "https://www.furrysiesta.org",

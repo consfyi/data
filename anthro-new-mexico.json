@@ -1,0 +1,19 @@
+{
+  "name": "Anthro New Mexico",
+  "events": [
+    {
+      "id": "anthro-new-mexico-2026",
+      "name": "Anthro New Mexico 2026",
+      "url": "https://anthronewmexico.com",
+      "startDate": "2026-09-06",
+      "endDate": "2026-09-09",
+      "venue": "Albuquerque",
+      "address": "Albuquerque, NM, USA",
+      "locale": "en-US",
+      "latLng": [
+        35.0843859,
+        -106.650422
+      ]
+    }
+  ]
+}

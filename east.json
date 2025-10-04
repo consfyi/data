@@ -2,6 +2,20 @@
   "name": "East",
   "events": [
     {
+      "id": "east-14",
+      "name": "East 14",
+      "url": "https://www.sachsenfurs.de/de/east",
+      "startDate": "2026-06-05",
+      "endDate": "2026-06-09",
+      "venue": "Ringberg Hotel Suhl",
+      "address": "Ringberg, 98527 Suhl, Deutschland",
+      "locale": "de-DE",
+      "latLng": [
+        50.61684409999999,
+        10.7230377
+      ]
+    },
+    {
       "id": "east-13",
       "name": "East 13",
       "url": "https://www.sachsenfurs.de/de/east",

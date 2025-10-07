@@ -50,6 +50,8 @@ interface Series {
 interface Event {
   /// Unique ID across all events, including events in other series.
   ///
+  /// This ID should also remain stable.
+  ///
   /// It should include the convention name, e.g. `rainfurrest-2016`.
   id: string;
 
@@ -159,6 +161,9 @@ interface MaterializedSeries extends Series {
 /// automatically be generated.
 interface MaterializedEvent extends Event {
   /// The ID of the series this corresponds to.
+  ///
+  /// This ID may not necessarily remain stable and consumers should not store
+  /// it permanently, and should only use it to cross-reference a Series record.
   seriesId: string;
 
   /// The IANA timezone ID.

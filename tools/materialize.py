@@ -3,7 +3,6 @@
 # requires-python = ">=3.13"
 # dependencies = [
 #   "jsonschema",
-#   "regex-as-re-globally",
 #   "tzfpy[tzdata]",
 #   "whenever",
 #   "langconv",

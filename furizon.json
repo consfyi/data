@@ -2,6 +2,20 @@
   "name": "Furizon",
   "events": [
     {
+      "id": "furizon-riverside-2025",
+      "name": "Furizon Riverside 2025",
+      "url": "https://furizon.net",
+      "startDate": "2025-10-09",
+      "endDate": "2025-10-12",
+      "venue": "Hotel Corno Bianco",
+      "address": "Località Pietralba, 8, 39050 Nova Ponente BZ, Italia",
+      "locale": "it-IT",
+      "latLng": [
+        46.391087899999995,
+        11.4138608
+      ]
+    },
+    {
       "id": "furizon-2025",
       "name": "Furizon 2025",
       "url": "https://furizon.net",

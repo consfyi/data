@@ -2,6 +2,20 @@
   "name": "Pawsome",
   "events": [
     {
+      "id": "pawsome-2026",
+      "name": "Pawsome 2026",
+      "url": "https://www.pawsome.org.uk",
+      "startDate": "2026-10-02",
+      "endDate": "2026-10-05",
+      "venue": "Mercure Gloucester Bowden Hall Hotel",
+      "address": "Bondend Ln, Upton St Leonards, Gloucester GL4 8ED, United Kingdom",
+      "locale": "en-GB",
+      "latLng": [
+        51.8339728,
+        -2.1883307
+      ]
+    },
+    {
       "id": "pawsome-2025",
       "name": "Pawsome 2025",
       "url": "https://www.pawsome.org.uk",

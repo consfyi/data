@@ -2,6 +2,20 @@
   "name": "ČeSFuR",
   "events": [
     {
+      "id": "cesfur-2026",
+      "name": "ČeSFuR 2026",
+      "url": "https://www.cesfur.org",
+      "startDate": "2026-06-28",
+      "endDate": "2026-07-03",
+      "venue": "Hotel Skalský dvůr",
+      "address": "Lísek 52, 593 01 Lísek u Bystřice nad Pernštejnem, Česko",
+      "locale": "cs-CZ",
+      "latLng": [
+        49.564785799999996,
+        16.1792244
+      ]
+    },
+    {
       "id": "cesfur-2025",
       "name": "ČeSFuR 2025",
       "url": "https://www.cesfur.org",

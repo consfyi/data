@@ -2,6 +2,20 @@
   "name": "Awoostria",
   "events": [
     {
+      "id": "awoostria-2026",
+      "name": "Awoostria 2026",
+      "url": "https://awoostria.at",
+      "startDate": "2026-07-22",
+      "endDate": "2026-07-25",
+      "venue": "Andaz Vienna Am Belvedere, by Hyatt",
+      "address": "Arsenalstraße 10, 1100 Wien, Österreich",
+      "locale": "de-AT",
+      "latLng": [
+        48.18527049999999,
+        16.3833476
+      ]
+    },
+    {
       "id": "awoostria-2025",
       "name": "Awoostria 2025",
       "url": "https://awoostria.at",

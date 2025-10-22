@@ -2,6 +2,27 @@
   "name": "Kemoket",
   "events": [
     {
+      "id": "new-year-kemoket-12",
+      "name": "新春けもケット12",
+      "url": "https://skypalette.jp/kemoket/",
+      "startDate": "2026-01-18",
+      "endDate": "2026-01-18",
+      "venue": "東京流通センター第一展示場",
+      "address": "日本、〒143-0006 東京都大田区平和島６丁目",
+      "locale": "ja-JP",
+      "translations": {
+        "en": {
+          "name": "New Year Kemoket 12",
+          "venue": "TRC First Exhibition Hall",
+          "address": "6-chōme-1-1 Heiwajima, Ota City, Tokyo, 143-0006, Japan"
+        }
+      },
+      "latLng": [
+        35.5808053,
+        139.7484667
+      ]
+    },
+    {
       "id": "kemoket-16",
       "name": "けもケット16",
       "url": "https://skypalette.jp/kemoket/",

@@ -2,6 +2,20 @@
   "name": "Alamo City Furry Invasion",
   "events": [
     {
+      "id": "alamo-city-furry-invasion-2026",
+      "name": "Alamo City Furry Invasion 2026",
+      "url": "https://www.furryinvasion.org",
+      "startDate": "2026-10-01",
+      "endDate": "2026-10-04",
+      "venue": "Embassy Suites by Hilton San Marcos Hotel Conference Center",
+      "address": "1001 E McCarty Ln, San Marcos, TX 78666, United States",
+      "locale": "en-US",
+      "latLng": [
+        29.8391454,
+        -97.9691577
+      ]
+    },
+    {
       "id": "alamo-city-furry-invasion-2025",
       "name": "Alamo City Furry Invasion 2025",
       "url": "https://www.furryinvasion.org",

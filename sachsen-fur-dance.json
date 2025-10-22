@@ -2,6 +2,20 @@
   "name": "Sachsen Fur Dance",
   "events": [
     {
+      "id": "sachsen-fur-dance-28",
+      "name": "Sachsen Fur Dance 28",
+      "url": "https://www.sachsenfurs.de/en/sfd/",
+      "startDate": "2026-06-20",
+      "endDate": "2026-06-20",
+      "venue": "Club Puschkin",
+      "address": "Leipziger Str. 12, 01097 Dresden, Germany",
+      "locale": "de-DE",
+      "latLng": [
+        51.0700848,
+        13.7316824
+      ]
+    },
+    {
       "id": "sachsen-fur-dance-27",
       "name": "Sachsen Fur Dance 27",
       "url": "https://www.sachsenfurs.de/en/sfd/",

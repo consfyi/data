@@ -2,6 +2,20 @@
   "name": "CanFURence",
   "events": [
     {
+      "id": "canfurence-2026",
+      "name": "CanFURence 2026",
+      "url": "https://www.canfurence.ca",
+      "startDate": "2026-07-31",
+      "endDate": "2026-08-02",
+      "venue": "Delta Hotels Ottawa City Centre",
+      "address": "101 Lyon St. N, Ottawa, ON K1R 5T9, Canada",
+      "locale": "en-CA",
+      "latLng": [
+        45.41859909999999,
+        -75.70437799999999
+      ]
+    },
+    {
       "id": "canfurence-2025",
       "name": "CanFURence 2025",
       "url": "https://www.canfurence.ca",

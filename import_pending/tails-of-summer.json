@@ -1,0 +1,22 @@
+{
+  "name": "Tails of Summer",
+  "events": [
+    {
+      "id": "tails-of-summer-2026",
+      "name": "Tails of Summer 2026",
+      "url": "http://furrycons.com/event/26784/tails-of-summer-2026",
+      "startDate": "2026-08-08",
+      "endDate": "2026-08-09",
+      "venue": "Executive Hotel Vancouver Airport",
+      "address": "7311 Westminster Hwy, Richmond, BC V6X 3K3, Canada",
+      "locale": "en-CA",
+      "latLng": [
+        49.1704219,
+        -123.1453037
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    }
+  ]
+}

@@ -2,6 +2,8 @@
 # /// script
 # requires-python = ">=3.13"
 # dependencies = [
+#   "anthropic",
+#   "playwright",
 #   "termcolor",
 #   "eviltransform",
 #   "googlemaps",
@@ -25,9 +27,14 @@ import safer
 import unicodedata
 import webbrowser
 import typing
+from playwright.sync_api import sync_playwright
+import anthropic
 
 
 GOOGLE_MAPS_API_KEY = os.environ["GOOGLE_MAPS_API_KEY"]
+
+
+claude = anthropic.Anthropic(api_key=os.environ.get("ANTHROPIC_API_KEY"))
 
 
 def guess_language_for_region(region_code: str) -> icu.Locale:
@@ -222,6 +229,8 @@ def prompt_for_change(label, v=None):
 def main():
     today = datetime.date.today()
     mutes = read_mute_list(today)
+    playwright = sync_playwright().start()
+    browser = playwright.chromium.launch()
 
     gmaps = googlemaps.Client(key=GOOGLE_MAPS_API_KEY)
 
@@ -275,7 +284,9 @@ def main():
         while True:
             if i < len(no_upcoming):
                 termcolor.cprint(
-                    "(a)dd/(n)ew/(w)ebsite/(m)ute/(q)uit/(S)kip? ", "magenta", end=""
+                    "(a)dd/(n)ew/(w)ebsite/(i)nfer/(m)ute/(q)uit/(S)kip? ",
+                    "magenta",
+                    end="",
                 )
             else:
                 termcolor.cprint("(n)ew/(Q)uit? ", "magenta", end="")
@@ -299,6 +310,31 @@ def main():
                         break
                     case "w":
                         webbrowser.open(previous_event["url"])
+                    case "i":
+                        page = browser.new_page()
+                        page.goto(previous_event["url"])
+                        src = page.content()
+                        page.close()
+
+                        msg = claude.messages.create(
+                            max_tokens=1024,
+                            messages=[
+                                {
+                                    "role": "user",
+                                    "content": f"""Extract the following information from this web page, if present:
+
+- startDate: Convention start date (ISO YYYY-mm-dd format)
+- endDate: Convention end date (ISO YYYY-mm-dd format)
+- venue: Convention venue
+
+Output it as JSON with those field names, or null if not possible.
+---
+{src}""",
+                                }
+                            ],
+                            model="claude-haiku-4-5",
+                        )
+                        print(msg.content[0].text)
                     case "m":
                         expiry = today + datetime.timedelta(days=90)
                         termcolor.cprint(

@@ -2,6 +2,20 @@
   "name": "Furry Weekend Atlanta",
   "events": [
     {
+      "id": "furry-weekend-atlanta-2027",
+      "name": "Furry Weekend Atlanta 2027",
+      "url": "https://www.furryweekend.com",
+      "startDate": "2027-05-06",
+      "endDate": "2027-05-09",
+      "venue": "Atlanta Marriott Marquis",
+      "address": "265 Peachtree Center Ave NE, Atlanta, GA 30303, United States",
+      "locale": "en-US",
+      "latLng": [
+        33.7615717,
+        -84.3859463
+      ]
+    },
+    {
       "id": "furry-weekend-atlanta-2026",
       "name": "Furry Weekend Atlanta 2026",
       "url": "https://www.furryweekend.com",

@@ -2,6 +2,20 @@
   "name": "AquatiFur",
   "events": [
     {
+      "id": "aquatifur-2026",
+      "name": "AquatiFur 2026",
+      "url": "https://aquatifur.com",
+      "startDate": "2026-10-09",
+      "endDate": "2026-10-11",
+      "venue": "Chula Vista Resort, Trademark Collection by Wyndham",
+      "address": "1000 Chula Vista Pkwy, Wisconsin Dells, WI 53965, United States",
+      "locale": "en-US",
+      "latLng": [
+        43.6652353,
+        -89.7847062
+      ]
+    },
+    {
       "id": "aquatifur-2025",
       "name": "AquatiFur 2025",
       "url": "https://aquatifur.com",

@@ -1,0 +1,19 @@
+{
+  "name": "Anthropolis",
+  "events": [
+    {
+      "id": "anthropolis-2026",
+      "name": "Anthropolis 2026",
+      "url": "https://furagora.com/anthropolis",
+      "startDate": "2026-03-19",
+      "endDate": "2026-03-22",
+      "venue": "Azureva Bussang",
+      "address": "2 Rue de Larcenaire, 88540 Bussang, France",
+      "locale": "fr-FR",
+      "latLng": [
+        47.9010829,
+        6.863366
+      ]
+    }
+  ]
+}

@@ -2,6 +2,20 @@
   "name": "IndyFurCon",
   "events": [
     {
+      "id": "indyfurcon-2026",
+      "name": "IndyFurCon 2026",
+      "url": "https://indyfurcon.org",
+      "startDate": "2026-09-03",
+      "endDate": "2026-09-06",
+      "venue": "Hyatt Regency Indianapolis",
+      "address": "1 S Capitol Ave, Indianapolis, IN 46204, USA",
+      "locale": "en-US",
+      "latLng": [
+        39.7665208,
+        -86.1610453
+      ]
+    },
+    {
       "id": "indyfurcon-2025",
       "name": "IndyFurCon 2025",
       "url": "https://indyfurcon.org",

@@ -2,6 +2,20 @@
   "name": "Furizon",
   "events": [
     {
+      "id": "furizon-2026",
+      "name": "Furizon 2026",
+      "url": "https://furizon.net",
+      "startDate": "2026-06-02",
+      "endDate": "2026-06-05",
+      "venue": "Devero Hotel",
+      "address": "Largo J. F. Kennedy, 1, 20873 Cavenago di Brianza MB, Italy",
+      "locale": "it-IT",
+      "latLng": [
+        45.58023679999999,
+        9.4166241
+      ]
+    },
+    {
       "id": "furizon-riverside-2025",
       "name": "Furizon Riverside 2025",
       "url": "https://furizon.net",

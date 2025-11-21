@@ -2,6 +2,20 @@
   "name": "Core Element",
   "events": [
     {
+      "id": "core-element-2026",
+      "name": "Core Element 2026",
+      "url": "https://www.coreelement.co.uk",
+      "startDate": "2026-08-14",
+      "endDate": "2026-08-17",
+      "venue": "Elvaston Castle",
+      "address": "Borrowash Road, Elvaston Castle, Derby DE72 3EP, UK",
+      "locale": "en-GB",
+      "latLng": [
+        52.8929675,
+        -1.3949577
+      ]
+    },
+    {
       "id": "core-element-2025",
       "name": "Core Element 2025",
       "url": "https://www.coreelement.co.uk",

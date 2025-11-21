@@ -2,18 +2,39 @@
   "name": "云幽岛",
   "events": [
     {
+      "id": "yunyou-dragon-boast-festival-2026",
+      "name": "云幽端月节 2026",
+      "url": "https://www.yunisland.cn",
+      "startDate": "2026-01-30",
+      "endDate": "2026-02-01",
+      "venue": "雅居乐豪生大酒店",
+      "address": "中国四川省成都市天府新区麓山大道二段19号 邮编：610000",
+      "locale": "zh-CN",
+      "translations": {
+        "en": {
+          "name": "Yunyou Dragon Boat Festival 2026",
+          "venue": "Howard Johnson Agile Plaza Chengdu",
+          "address": "19 Lushan Avenue, Tianfu New District, Chengdu, Sichuan 610000, China"
+        }
+      },
+      "latLng": [
+        30.48454156244414,
+        104.13280400053179
+      ]
+    },
+    {
       "id": "yunyou-island-2025",
       "name": "云幽岛 2025",
       "url": "https://www.yunisland.cn",
       "startDate": "2025-08-08",
       "endDate": "2025-08-10",
-      "venue": "Steinberger Chongqing",
+      "venue": "重庆施柏阁酒店",
       "address": "中国重庆市沙坪坝区文广大道18-2号 邮编：401333",
       "locale": "zh-CN",
       "translations": {
         "en": {
           "name": "Yunyou Island 2025",
-          "venue": "Steinberger Chongqing",
+          "venue": "Steigenberger Chongqing",
           "address": "No.18-2 Wenguang Avenue, Shapingba District, Chongqing 401333, China"
         }
       },

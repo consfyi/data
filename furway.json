@@ -2,6 +2,20 @@
   "name": "Furway",
   "events": [
     {
+      "id": "furway-2026",
+      "name": "Furway 2026",
+      "url": "https://www.furway.no",
+      "startDate": "2026-07-09",
+      "endDate": "2026-07-13",
+      "venue": "Åstjern Natur & Mat",
+      "address": "Åstjernplassen, 2760 Brandbu, Norge",
+      "locale": "no-NO",
+      "latLng": [
+        60.49558779999999,
+        10.5827018
+      ]
+    },
+    {
       "id": "furway-2025",
       "name": "Furway 2025",
       "url": "https://www.furway.no",

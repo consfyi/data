@@ -2,6 +2,20 @@
   "name": "Little Island Furcon",
   "events": [
     {
+      "id": "little-island-furcon-2026",
+      "name": "Little Island Furcon 2026",
+      "url": "https://www.littleislandfur.com",
+      "startDate": "2026-06-13",
+      "endDate": "2026-06-14",
+      "venue": "One Farrer Hotel",
+      "address": "1 Farrer Park Station Rd, Singapore 217562",
+      "locale": "en-SG",
+      "latLng": [
+        1.3125457,
+        103.8543732
+      ]
+    },
+    {
       "id": "little-island-furcon-2025",
       "name": "Little Island Furcon 2025",
       "url": "https://www.littleislandfur.com",

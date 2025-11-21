@@ -2,6 +2,20 @@
   "name": "Argentina FurFiesta",
   "events": [
     {
+      "id": "argentina-furfiesta-2026",
+      "name": "Argentina FurFiesta 2026",
+      "url": "https://magnamart.biz",
+      "startDate": "2026-06-19",
+      "endDate": "2026-06-21",
+      "venue": "Sheraton Buenos Aires Hotel & Convention Center",
+      "address": "San Martín 1225 1275, C1104 Cdad. Autónoma de Buenos Aires, Argentina",
+      "locale": "es-AR",
+      "latLng": [
+        -34.5930606,
+        -58.3724309
+      ]
+    },
+    {
       "id": "argentina-furfiesta-2025",
       "name": "Argentina FurFiesta 2025",
       "url": "https://magnamart.biz",

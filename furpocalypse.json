@@ -2,6 +2,20 @@
   "name": "Furpocalypse",
   "events": [
     {
+      "id": "furpocalypse-2026",
+      "name": "Furpocalypse 2026",
+      "url": "https://furpocalypse.org",
+      "startDate": "2026-10-29",
+      "endDate": "2026-11-01",
+      "venue": "DoubleTree by Hilton Stamford",
+      "address": "1 First Stamford Pl, Stamford, CT 06902, United States",
+      "locale": "en-US",
+      "latLng": [
+        41.0433162,
+        -73.5504412
+      ]
+    },
+    {
       "id": "furpocalypse-2025",
       "name": "Furpocalypse 2025",
       "url": "https://furpocalypse.org",

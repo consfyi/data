@@ -2,6 +2,20 @@
   "name": "H-Con",
   "events": [
     {
+      "id": "h-con-2026",
+      "name": "H-Con 2026",
+      "url": "https://h-con.org",
+      "startDate": "2026-09-30",
+      "endDate": "2026-10-04",
+      "venue": "Petershof",
+      "address": "Petershof, 24966 Sörup, Deutschland",
+      "locale": "de-DE",
+      "latLng": [
+        54.72306949999999,
+        9.6363992
+      ]
+    },
+    {
       "id": "h-con-2025",
       "name": "H-Con 2025",
       "url": "https://h-con.org",

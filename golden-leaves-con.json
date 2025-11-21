@@ -2,6 +2,20 @@
   "name": "Golden Leaves Con",
   "events": [
     {
+      "id": "golden-leaves-con-16",
+      "name": "Golden Leaves Con 16",
+      "url": "https://glc.furry.ch",
+      "startDate": "2026-10-28",
+      "endDate": "2026-11-01",
+      "venue": "Hostel C’est la Vie",
+      "address": "Engi, 6086 Hasliberg, Schweiz",
+      "locale": "de-CH",
+      "latLng": [
+        46.7334363,
+        8.2071686
+      ]
+    },
+    {
       "id": "golden-leaves-con-15",
       "name": "Golden Leaves Con 15",
       "url": "https://glc.furry.ch",

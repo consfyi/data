@@ -1,0 +1,19 @@
+{
+  "name": "Purple Clouds Festival",
+  "events": [
+    {
+      "id": "purple-clouds-festival-2026",
+      "name": "Purple Clouds Festival 2026",
+      "url": "https://www.purple-clouds.de",
+      "startDate": "2026-07-17",
+      "endDate": "2026-07-20",
+      "venue": "HS Lifestyle Club",
+      "address": "Bremer Str. 24, 27798 Hude, Deutschland",
+      "locale": "de-DE",
+      "latLng": [
+        53.07385499999999,
+        8.4158131
+      ]
+    }
+  ]
+}

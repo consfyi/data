@@ -1,0 +1,19 @@
+{
+  "name": "Furciety",
+  "events": [
+    {
+      "id": "furciety-2026",
+      "name": "Furciety 2026",
+      "url": "https://www.furciety.de",
+      "startDate": "2026-04-29",
+      "endDate": "2026-05-03",
+      "venue": "Salvador-Allende-Haus",
+      "address": "Haardgrenzweg 77, 45739 Oer-Erkenschwick, Deutschland",
+      "locale": "de-DE",
+      "latLng": [
+        51.6577068,
+        7.241838899999999
+      ]
+    }
+  ]
+}

@@ -2,6 +2,23 @@
   "name": "Confuror",
   "events": [
     {
+      "id": "confuror-2026",
+      "name": "Confuror 2026",
+      "url": "https://confuror.org",
+      "startDate": "2026-10-29",
+      "endDate": "2026-11-01",
+      "venue": "Expo Guadalajara",
+      "address": "Av. Mariano Otero 1499, Verde Valle, 44550 Guadalajara, Jal., México",
+      "locale": "es-MX",
+      "latLng": [
+        20.6529143,
+        -103.3917641
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    },
+    {
       "id": "confuror-2025",
       "name": "Confuror 2025",
       "url": "https://confuror.org",

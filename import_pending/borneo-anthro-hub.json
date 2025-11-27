@@ -1,0 +1,22 @@
+{
+  "name": "Borneo Anthro Hub",
+  "events": [
+    {
+      "id": "borneo-anthro-hub-2026",
+      "name": "Borneo Anthro Hub 2026",
+      "url": "http://furrycons.com/event/27019/borneo-anthro-hub-2026",
+      "startDate": "2026-06-20",
+      "endDate": "2026-06-21",
+      "venue": "Horizon Hotel",
+      "address": "Jalan Pantai, Pusat Bandar Kota Kinabalu, 88999 Kota Kinabalu, Sabah, Malaysia",
+      "locale": "ms-MY",
+      "latLng": [
+        5.9823581,
+        116.0752492
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    }
+  ]
+}

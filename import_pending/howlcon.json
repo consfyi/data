@@ -1,0 +1,22 @@
+{
+  "name": "HowlCon",
+  "events": [
+    {
+      "id": "howlcon-2026",
+      "name": "HowlCon 2026",
+      "url": "http://furrycons.com/event/27018/howlcon-2026",
+      "startDate": "2026-05-15",
+      "endDate": "2026-05-17",
+      "venue": "Hotel Corregidor",
+      "address": "C. 6 1026, B1904 La Plata, Provincia de Buenos Aires, Argentina",
+      "locale": "es-AR",
+      "latLng": [
+        -34.9155328,
+        -57.94635239999999
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    }
+  ]
+}

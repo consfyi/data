@@ -1,0 +1,22 @@
+{
+  "name": "Furvaria",
+  "events": [
+    {
+      "id": "furvaria-2026",
+      "name": "Furvaria 2026",
+      "url": "http://furrycons.com/event/27035/furvaria-2026",
+      "startDate": "2026-06-11",
+      "endDate": "2026-06-14",
+      "venue": "Land-Steakhaus Bürger GmbH",
+      "address": "Bayernstraße 16, 86688 Marxheim, Deutschland",
+      "locale": "de-DE",
+      "latLng": [
+        48.7416363,
+        10.9472134
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    }
+  ]
+}

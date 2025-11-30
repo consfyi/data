@@ -1,4 +1,4 @@
-name: import_furdu
+name: import_eventdrake
 on:
   schedule:
     - cron: "15 */6 * * *"
@@ -24,5 +24,5 @@ jobs:
           GOOGLE_MAPS_API_KEY: ${{ secrets.GOOGLE_MAPS_API_KEY }}
       - run: |
           git add .
-          git diff-index --quiet HEAD || git commit -m "via import_furdu"
+          git diff-index --quiet HEAD || git commit -m "via import_eventdrake"
           git push

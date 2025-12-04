@@ -1,0 +1,22 @@
+{
+  "name": "Capital Fur Con",
+  "events": [
+    {
+      "id": "capital-fur-con-2027",
+      "name": "Capital Fur Con 2027",
+      "url": "http://furrycons.com/event/27079/capital-fur-con-2027",
+      "startDate": "2027-02-25",
+      "endDate": "2027-02-28",
+      "venue": "Gaylord National Resort & Convention Center",
+      "address": "201 Waterfront St, Oxon Hill, MD 20745, USA",
+      "locale": "en-US",
+      "latLng": [
+        38.7807742,
+        -77.01586019999999
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    }
+  ]
+}

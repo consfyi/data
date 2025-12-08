@@ -1,0 +1,22 @@
+{
+  "name": "SpringFurCon",
+  "events": [
+    {
+      "id": "springfurcon-2026",
+      "name": "SpringFurCon 2026",
+      "url": "http://furrycons.com/event/27101/springfurcon-2026",
+      "startDate": "2026-04-08",
+      "endDate": "2026-04-12",
+      "venue": "Mercure Hotel Schweinfurt Maininsel",
+      "address": "Maininsel 10 - 12, 97424 Schweinfurt, Deutschland",
+      "locale": "de-DE",
+      "latLng": [
+        50.0413031,
+        10.2366197
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    }
+  ]
+}

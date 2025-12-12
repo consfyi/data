@@ -1,0 +1,22 @@
+{
+  "name": "Furry Legends of Paradise",
+  "events": [
+    {
+      "id": "furry-legends-of-paradise-2026",
+      "name": "Furry Legends of Paradise 2026",
+      "url": "http://furrycons.com/event/27160/furry-legends-of-paradise-2026",
+      "startDate": "2026-02-06",
+      "endDate": "2026-02-08",
+      "venue": "The Retreat on Charleston Peak",
+      "address": "2755 Kyle Canyon Rd, Mt Charleston, NV 89124, USA",
+      "locale": "en-US",
+      "latLng": [
+        36.2691188,
+        -115.593236
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    }
+  ]
+}

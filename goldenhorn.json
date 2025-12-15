@@ -2,6 +2,23 @@
   "name": "GoldenHorn",
   "events": [
     {
+      "id": "goldenhorn-2026",
+      "name": "GoldenHorn 2026",
+      "url": "https://goldenhorn.si",
+      "startDate": "2026-11-05",
+      "endDate": "2026-11-08",
+      "venue": "Hotel Slovenija",
+      "address": "Obala 33, 6320 Portorož, Slovenija",
+      "locale": "sl-SI",
+      "latLng": [
+        45.5143153,
+        13.5892762
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    },
+    {
       "id": "goldenhorn-2025",
       "name": "GoldenHorn 2025",
       "url": "https://goldenhorn.si",

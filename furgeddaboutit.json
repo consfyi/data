@@ -2,6 +2,23 @@
   "name": "Furgeddaboutit",
   "events": [
     {
+      "id": "furgeddaboutit-2026",
+      "name": "Furgeddaboutit 2026",
+      "url": "https://furgeddaboutit.org",
+      "startDate": "2026-04-23",
+      "endDate": "2026-04-26",
+      "venue": "DoubleTree by Hilton Fairfield Hotel & Suites",
+      "address": "690 US-46, Fairfield, NJ 07004, USA",
+      "locale": "en-US",
+      "latLng": [
+        40.8902215,
+        -74.26812149999999
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    },
+    {
       "id": "furgeddaboutit-2025",
       "name": "Furgeddaboutit 2025",
       "url": "https://furgeddaboutit.org",

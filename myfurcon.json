@@ -1,0 +1,19 @@
+{
+  "name": "MYFurCon",
+  "events": [
+    {
+      "id": "myfurcon-2026",
+      "name": "MYFurCon 2026",
+      "url": "https://myfur.org",
+      "startDate": "2026-05-02",
+      "endDate": "2026-05-02",
+      "venue": "Dorsett Grand Subang",
+      "address": "Jalan SS 12/1, Ss 12, 47500 Subang Jaya, Selangor, Malaysia",
+      "locale": "ms-MY",
+      "latLng": [
+        3.0797944,
+        101.5965371
+      ]
+    }
+  ]
+}

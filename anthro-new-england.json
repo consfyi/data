@@ -2,6 +2,20 @@
   "name": "Anthro New England",
   "events": [
     {
+      "id": "anthro-new-england-2027",
+      "name": "Anthro New England 2027",
+      "url": "https://www.anthronewengland.com",
+      "startDate": "2027-01-14",
+      "endDate": "2027-01-17",
+      "venue": "The Westin Boston Seaport District",
+      "address": "425 Summer St, Boston, MA 02210, United States",
+      "locale": "en-US",
+      "latLng": [
+        42.3459926,
+        -71.0430104
+      ]
+    },
+    {
       "id": "anthro-new-england-2026",
       "name": "Anthro New England 2026",
       "url": "https://www.anthronewengland.com",

@@ -2,6 +2,20 @@
   "name": "Gateway FurMeet",
   "events": [
     {
+      "id": "gateway-furmeet-2026",
+      "name": "Gateway FurMeet 2026",
+      "url": "https://www.gatewayfurmeet.org",
+      "startDate": "2026-10-16",
+      "endDate": "2026-10-18",
+      "venue": "Hilton St. Louis at the Ballpark",
+      "address": "1 S Broadway, St. Louis, MO 63102, United States",
+      "locale": "en-US",
+      "latLng": [
+        38.6251397,
+        -90.19092769999999
+      ]
+    },
+    {
       "id": "gateway-furmeet-2025",
       "name": "Gateway FurMeet 2025",
       "url": "https://www.gatewayfurmeet.org",

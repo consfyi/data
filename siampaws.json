@@ -2,6 +2,29 @@
   "name": "SiamPaws",
   "events": [
     {
+      "id": "siampaws-2026",
+      "name": "SiamPaws 2026",
+      "url": "https://www.siampaws.com",
+      "startDate": "2026-06-06",
+      "endDate": "2026-06-07",
+      "venue": "โรงแรม ดิ เอมเมอรัลด์",
+      "address": "99/1 ถ. รัชดาภิเษก แขวงดินแดง เขตดินแดง กรุงเทพมหานคร 10400 ประเทศไทย",
+      "locale": "th-TH",
+      "translations": {
+        "en": {
+          "venue": "The Emerald Hotel",
+          "address": "99/1 Thanon Ratchadaphisek, Khwaeng Din Daeng, Khet Din Daeng, Krung Thep Maha Nakhon 10400, Thailand"
+        }
+      },
+      "latLng": [
+        13.7753758,
+        100.572525
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    },
+    {
       "id": "siampaws-2025",
       "name": "SiamPaws 2025",
       "url": "https://www.siampaws.com",

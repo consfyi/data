@@ -1,0 +1,22 @@
+{
+  "name": "Campfuzz",
+  "events": [
+    {
+      "id": "campfuzz-2026",
+      "name": "Campfuzz 2026",
+      "url": "https://furrycons.com/event/27608/campfuzz-2026",
+      "startDate": "2026-04-30",
+      "endDate": "2026-05-04",
+      "venue": "French Beach Provincial Park",
+      "address": "Juan De Fuca Hwy, Sooke, BC V9Z 1G8, Canada",
+      "locale": "en-CA",
+      "latLng": [
+        48.3939945,
+        -123.9427774
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    }
+  ]
+}

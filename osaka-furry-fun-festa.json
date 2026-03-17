@@ -2,6 +2,29 @@
   "name": "Osaka Furry Fun Festa",
   "events": [
     {
+      "id": "osaka-furry-fun-festa-2026",
+      "name": "Osaka Furry Fun Festa 2026",
+      "url": "https://osaka-fff.jp",
+      "startDate": "2026-08-01",
+      "endDate": "2026-08-02",
+      "venue": "インテックス大阪",
+      "address": "日本、〒559-0034 大阪府大阪市住之江区南港北１丁目５−１０２",
+      "locale": "ja-JP",
+      "translations": {
+        "en": {
+          "venue": "INTEX Osaka",
+          "address": "1-chōme-5-102 Nankōkita, Suminoe Ward, Osaka, 559-0034, Japan"
+        }
+      },
+      "latLng": [
+        34.637883,
+        135.4196543
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    },
+    {
       "id": "osaka-furry-fun-festa-2024",
       "name": "Osaka Furry Fun Festa 2024",
       "url": "https://osaka-fff.jp",

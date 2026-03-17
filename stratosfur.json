@@ -2,6 +2,23 @@
   "name": "StratosFur",
   "events": [
     {
+      "id": "stratosfur-2026",
+      "name": "StratosFur 2026",
+      "url": "https://stratosfur.org",
+      "startDate": "2026-08-27",
+      "endDate": "2026-08-30",
+      "venue": "Houston Marriott Westchase",
+      "address": "2900 Briarpark Dr, Houston, TX 77042, USA",
+      "locale": "en-US",
+      "latLng": [
+        29.734323,
+        -95.55009299999999
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    },
+    {
       "id": "stratosfur-2025",
       "name": "StratosFur 2025",
       "url": "https://stratosfur.org",

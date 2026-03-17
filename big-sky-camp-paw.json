@@ -2,6 +2,23 @@
   "name": "Big Sky Camp Paw",
   "events": [
     {
+      "id": "big-sky-camp-paw-2026",
+      "name": "Big Sky Camp Paw 2026",
+      "url": "https://www.camppaw.org",
+      "startDate": "2026-07-16",
+      "endDate": "2026-07-20",
+      "venue": "Hellgate Campground",
+      "address": "Helena, MT 59602, USA",
+      "locale": "en-US",
+      "latLng": [
+        46.6118805,
+        -111.6533091
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    },
+    {
       "id": "big-sky-camp-paw-2025",
       "name": "Big Sky Camp Paw 2025",
       "url": "https://www.camppaw.org",

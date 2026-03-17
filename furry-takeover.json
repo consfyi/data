@@ -2,6 +2,23 @@
   "name": "Furry Takeover",
   "events": [
     {
+      "id": "furry-takeover-2026",
+      "name": "Furry Takeover 2026",
+      "url": "https://furrytakeover.com",
+      "startDate": "2026-09-25",
+      "endDate": "2026-09-27",
+      "venue": "Fontana Village Resort & Marina",
+      "address": "180 Welch Rd, Fontana Dam, NC 28733, USA",
+      "locale": "en-US",
+      "latLng": [
+        35.4349671,
+        -83.8255097
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    },
+    {
       "id": "furry-takeover-2025",
       "name": "Furry Takeover 2025",
       "url": "https://furrytakeover.com",

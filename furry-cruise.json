@@ -2,6 +2,19 @@
   "name": "Furry Cruise",
   "events": [
     {
+      "id": "furry-cruise-2026",
+      "name": "Furry Cruise 2026",
+      "url": "https://furrycruise.com",
+      "startDate": "2026-10-18",
+      "endDate": "2026-10-25",
+      "venue": "Norwegian Prima",
+      "address": "Departing from Port Canaveral, FL",
+      "locale": "en-US",
+      "sources": [
+        "fancons.com"
+      ]
+    },
+    {
       "id": "furry-cruise-2025",
       "name": "Furry Cruise 2025",
       "url": "https://furrycruise.com",

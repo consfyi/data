@@ -2,6 +2,29 @@
   "name": "你好兽聚",
   "events": [
     {
+      "id": "hi-furry-2026",
+      "name": "Hi Furry 2026",
+      "url": "https://hi-furry.cn",
+      "startDate": "2026-05-01",
+      "endDate": "2026-05-04",
+      "venue": "佛山希尔顿酒店",
+      "address": "中国广东省佛山市禅城区岭南大道北127号 邮政编码: 528000",
+      "locale": "zh-CN",
+      "translations": {
+        "en": {
+          "venue": "Hilton Foshan",
+          "address": "127 Ling Nan Da Dao Bei, Chan Cheng Qu, Fo Shan Shi, Guang Dong Sheng, China, 528000"
+        }
+      },
+      "latLng": [
+        22.988742841083575,
+        113.11827645877202
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    },
+    {
       "id": "hi-furry-2025",
       "name": "你好兽聚 2025",
       "url": "https://hi-furry.cn",

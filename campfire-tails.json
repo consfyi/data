@@ -2,6 +2,23 @@
   "name": "Campfire Tails",
   "events": [
     {
+      "id": "campfire-tails-2026",
+      "name": "Campfire Tails 2026",
+      "url": "https://campfiretails.org",
+      "startDate": "2026-06-11",
+      "endDate": "2026-06-15",
+      "venue": "Ogden Group Camp",
+      "address": "Oregon 97739, USA",
+      "locale": "en-US",
+      "latLng": [
+        43.7289952,
+        -121.4212847
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    },
+    {
       "id": "campfire-tails-2025",
       "name": "Campfire Tails 2025",
       "url": "https://campfiretails.org",

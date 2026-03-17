@@ -1,0 +1,22 @@
+{
+  "name": "Moonfest",
+  "events": [
+    {
+      "id": "moonfest-2026",
+      "name": "Moonfest 2026",
+      "url": "https://furrycons.com/event/27458/moonfest-2026",
+      "startDate": "2026-07-10",
+      "endDate": "2026-07-13",
+      "venue": "ESTELAR Paipa Hotel & Centro de Convenciones",
+      "address": "Orilla Lago Sochagota s/n, Paipa, Boyacá, Colombia",
+      "locale": "es-CO",
+      "latLng": [
+        5.7587807,
+        -73.12499729999999
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    }
+  ]
+}

@@ -2,6 +2,23 @@
   "name": "Furry BlackLight",
   "events": [
     {
+      "id": "furry-blacklight-2026",
+      "name": "Furry Blacklight 2026",
+      "url": "https://fblacklight.org",
+      "startDate": "2026-10-28",
+      "endDate": "2026-11-01",
+      "venue": "H4 Wyndham Paris Pleyel",
+      "address": "149 Bd Anatole France, 93200 Saint-Denis, France",
+      "locale": "fr-FR",
+      "latLng": [
+        48.9200415,
+        2.3451841
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    },
+    {
       "id": "furry-blacklight-2025",
       "name": "Furry BlackLight 2025",
       "url": "https://fblacklight.org",

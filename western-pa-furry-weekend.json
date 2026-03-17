@@ -2,6 +2,23 @@
   "name": "Western PA Furry Weekend",
   "events": [
     {
+      "id": "western-pa-furry-weekend-2026",
+      "name": "Western PA Furry Weekend 2026",
+      "url": "https://wpafw.org",
+      "startDate": "2026-10-02",
+      "endDate": "2026-10-04",
+      "venue": "North Park Lodge",
+      "address": "N Ridge Dr, Allison Park, PA 15101, USA",
+      "locale": "en-US",
+      "latLng": [
+        40.6171276,
+        -80.0169784
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    },
+    {
       "id": "western-pa-furry-weekend-2025",
       "name": "Western PA Furry Weekend 2025",
       "url": "https://wpafw.org",

@@ -1,0 +1,28 @@
+{
+  "name": "Mo Furry House",
+  "events": [
+    {
+      "id": "mo-furry-house-2026",
+      "name": "Mo Furry House 2026",
+      "url": "https://furrycons.com/event/27404/mo-furry-house-2026",
+      "startDate": "2026-06-19",
+      "endDate": "2026-06-21",
+      "venue": "Mangrove Tree Resort World Qingdao",
+      "address": "3588th, Binhai Ave., 黄岛区青岛市 Shandong Province, 中国266400",
+      "locale": "zh-CN",
+      "translations": {
+        "en": {
+          "venue": "Mangrove Tree Resort World Qingdao",
+          "address": "3588th, Binhai Ave., 黄岛区青岛市 Shandong Province, China, 266400"
+        }
+      },
+      "latLng": [
+        35.88196399800456,
+        120.05013542920896
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    }
+  ]
+}

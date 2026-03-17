@@ -2,6 +2,23 @@
   "name": "FurEast",
   "events": [
     {
+      "id": "fureast-2026",
+      "name": "FurEast 2026",
+      "url": "https://fureast.fr",
+      "startDate": "2026-07-23",
+      "endDate": "2026-07-26",
+      "venue": "Hilton Strasbourg",
+      "address": "1 Av. Herrenschmidt, 67000 Strasbourg, France",
+      "locale": "fr-FR",
+      "latLng": [
+        48.5968009,
+        7.755260499999999
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    },
+    {
       "id": "fureast-2025",
       "name": "FurEast 2025",
       "url": "https://fureast.fr",

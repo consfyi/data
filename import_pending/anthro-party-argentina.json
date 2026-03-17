@@ -1,0 +1,22 @@
+{
+  "name": "Anthro Party Argentina!",
+  "events": [
+    {
+      "id": "anthro-party-argentina-2026",
+      "name": "Anthro Party Argentina! 2026",
+      "url": "https://furrycons.com/event/27587/anthro-party-argentina-2026",
+      "startDate": "2026-10-09",
+      "endDate": "2026-10-11",
+      "venue": "Hotel Quinto Centenario",
+      "address": "Duarte Quirós 1300, X5000ALZ Córdoba, Argentina",
+      "locale": "es-AR",
+      "latLng": [
+        -31.4131888,
+        -64.2028138
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    }
+  ]
+}

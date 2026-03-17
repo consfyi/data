@@ -2,6 +2,23 @@
   "name": "ZodiaCon",
   "events": [
     {
+      "id": "zodiacon-2026",
+      "name": "ZodiaCon 2026",
+      "url": "https://www.zodiacon.org",
+      "startDate": "2026-06-03",
+      "endDate": "2026-06-07",
+      "venue": "O&aacute;za Srdce",
+      "address": "Horn&iacute; Bradlo, Czech Republic",
+      "locale": "cs-CZ",
+      "latLng": [
+        49.8062868,
+        15.7315355
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    },
+    {
       "id": "zodiacon-2025",
       "name": "ZodiaCon 2025",
       "url": "https://www.zodiacon.org",

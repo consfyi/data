@@ -1,0 +1,22 @@
+{
+  "name": "Volley Weekend",
+  "events": [
+    {
+      "id": "volley-weekend-2026",
+      "name": "Volley Weekend 2026",
+      "url": "https://furrycons.com/event/27607/volley-weekend-2026",
+      "startDate": "2026-04-30",
+      "endDate": "2026-05-03",
+      "venue": "Center Fontauna",
+      "address": "Via Alpsu 51, 7180 Disentis/Mustér, Schweiz",
+      "locale": "de-CH",
+      "latLng": [
+        46.69980229999999,
+        8.8450946
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    }
+  ]
+}

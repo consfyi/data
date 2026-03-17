@@ -2,6 +2,23 @@
   "name": "Furever West",
   "events": [
     {
+      "id": "furever-west-2026",
+      "name": "Furever West 2026",
+      "url": "https://www.wyofurcon.com",
+      "startDate": "2026-09-18",
+      "endDate": "2026-09-20",
+      "venue": "Hilton Garden Inn Laramie",
+      "address": "2229 Grand Ave, Laramie, WY 82070, USA",
+      "locale": "en-US",
+      "latLng": [
+        41.31002,
+        -105.5635849
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    },
+    {
       "id": "furever-west-2025",
       "name": "Furever West 2025",
       "url": "https://www.wyofurcon.com",

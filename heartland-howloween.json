@@ -2,6 +2,23 @@
   "name": "Heartland Howloween",
   "events": [
     {
+      "id": "heartland-howloween-2026",
+      "name": "Heartland Howloween 2026",
+      "url": "https://heartlandhowloween.com",
+      "startDate": "2026-10-09",
+      "endDate": "2026-10-11",
+      "venue": "DoubleTree by Hilton Hotel Omaha Downtown",
+      "address": "1616 Dodge St, Omaha, NE 68102, USA",
+      "locale": "en-US",
+      "latLng": [
+        41.2603898,
+        -95.9379628
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    },
+    {
       "id": "heartland-howloween-2025",
       "name": "Heartland Howloween 2025",
       "url": "https://heartlandhowloween.com",

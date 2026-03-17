@@ -1,0 +1,28 @@
+{
+  "name": "FurryTeaParty",
+  "events": [
+    {
+      "id": "furryteaparty-2026",
+      "name": "FurryTeaParty 2026",
+      "url": "https://furrycons.com/event/27580/furryteaparty-2026",
+      "startDate": "2026-02-27",
+      "endDate": "2026-03-01",
+      "venue": "承億酒店",
+      "address": "806台灣高雄市前鎮區林森四路189號",
+      "locale": "zh-TW",
+      "translations": {
+        "en": {
+          "venue": "TAI Urban Resort",
+          "address": "No. 189號, Linsen 4th Rd, Cianjhen District, Kaohsiung City, Taiwan 806"
+        }
+      },
+      "latLng": [
+        22.6093366,
+        120.3023581
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    }
+  ]
+}

@@ -2,6 +2,23 @@
   "name": "KRAZ",
   "events": [
     {
+      "id": "kraz-2026",
+      "name": "KRAZ 2026",
+      "url": "https://www.kraz.eu",
+      "startDate": "2026-04-29",
+      "endDate": "2026-05-03",
+      "venue": "Westernové městečko Boskovice",
+      "address": "Svatopluka Čecha 2402, 680 01 Boskovice, Česko",
+      "locale": "cs-CZ",
+      "latLng": [
+        49.494778,
+        16.6856997
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    },
+    {
       "id": "kraz-2025",
       "name": "KRAZ 2025",
       "url": "https://www.kraz.eu",

@@ -2,6 +2,23 @@
   "name": "Furry Weekend Holland",
   "events": [
     {
+      "id": "furry-weekend-holland-2026",
+      "name": "Furry Weekend Holland 2026",
+      "url": "https://www.furryweekend.nl",
+      "startDate": "2026-04-24",
+      "endDate": "2026-04-27",
+      "venue": "Groepsaccommodatie Kasteel De Berckt",
+      "address": "De Berckt 1, 5991 PD Baarlo, Nederland",
+      "locale": "nl-NL",
+      "latLng": [
+        51.342657,
+        6.112067
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    },
+    {
       "id": "furry-weekend-holland-2025",
       "name": "Furry Weekend Holland 2025",
       "url": "https://www.furryweekend.nl",

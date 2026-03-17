@@ -2,6 +2,29 @@
   "name": "Thaitails",
   "events": [
     {
+      "id": "thaitails-2026",
+      "name": "Thaitails 2026",
+      "url": "https://thaitails.net",
+      "startDate": "2026-03-21",
+      "endDate": "2026-03-22",
+      "venue": "โรงแรมเซ็นทารา ไลฟ์ ศูนย์ราชการและคอนเวนชันเซ็นเตอร์ แจ้งวัฒนะ",
+      "address": "The Government Complex 120 ถนน แจ้งวัฒนะ แขวงทุ่งสองห้อง เขตหลักสี่ กรุงเทพมหานคร 10210 ประเทศไทย",
+      "locale": "th-TH",
+      "translations": {
+        "en": {
+          "venue": "Centara Life Government Complex Hotel & Convention Centre Chaeng Watthana",
+          "address": "The Government Complex 120 ถนน แจ้งวัฒนะ Khwaeng Thung Song Hong, Khet Lak Si, Krung Thep Maha Nakhon 10210, Thailand"
+        }
+      },
+      "latLng": [
+        13.8837591,
+        100.5648433
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    },
+    {
       "id": "thaitails-2025",
       "name": "Thaitails 2025",
       "url": "https://thaitails.net",

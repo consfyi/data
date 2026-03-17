@@ -2,6 +2,23 @@
   "name": "Painted Desert Fur Con",
   "events": [
     {
+      "id": "painted-desert-fur-con-2027",
+      "name": "Painted Desert Fur Con 2027",
+      "url": "https://painteddesertfc.com",
+      "startDate": "2027-01-01",
+      "endDate": "2027-01-03",
+      "venue": "Sheraton Phoenix Downtown",
+      "address": "340 N 3rd St, Phoenix, AZ 85004, USA",
+      "locale": "en-US",
+      "latLng": [
+        33.4522663,
+        -112.0703487
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    },
+    {
       "id": "painted-desert-fur-con-2026",
       "name": "Painted Desert Fur Con 2026",
       "url": "https://painteddesertfc.com",

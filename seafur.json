@@ -2,6 +2,29 @@
   "name": "海兽聚",
   "events": [
     {
+      "id": "seafur-6",
+      "name": "海兽聚 6",
+      "url": "https://www.seafur.cn",
+      "startDate": "2026-02-06",
+      "endDate": "2026-02-08",
+      "venue": "Shanghai Marriott Hotel Kangqiao",
+      "address": "No 4499 Kang Xin Highway, Pudong, 浦东新区中国201318",
+      "locale": "zh-CN",
+      "translations": {
+        "en": {
+          "venue": "Shanghai Marriott Hotel Kangqiao",
+          "address": "No 4499 Kang Xin Highway, Pudong, 浦东新区 China, 201318"
+        }
+      },
+      "latLng": [
+        31.121584074970208,
+        121.61505117082825
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    },
+    {
       "id": "seafur-5",
       "name": "海兽聚 5",
       "url": "https://www.seafur.cn",

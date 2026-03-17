@@ -2,6 +2,23 @@
   "name": "Noctfurnal",
   "events": [
     {
+      "id": "noctfurnal-2026",
+      "name": "Noctfurnal 2026",
+      "url": "https://www.noctfurnal.com",
+      "startDate": "2026-07-17",
+      "endDate": "2026-07-19",
+      "venue": "Hi-Way Drive-In",
+      "address": "2778 Sanilac Rd, Carsonville, MI 48419, USA",
+      "locale": "en-US",
+      "latLng": [
+        43.4240303,
+        -82.72040559999999
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    },
+    {
       "id": "noctfurnal-2025",
       "name": "Noctfurnal 2025",
       "url": "https://www.noctfurnal.com",

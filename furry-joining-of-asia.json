@@ -2,6 +2,29 @@
   "name": "Furry Joining of Asia",
   "events": [
     {
+      "id": "furry-joining-of-asia-2026",
+      "name": "Furry Joining of Asia 2026",
+      "url": "https://furryjoa.com",
+      "startDate": "2026-02-21",
+      "endDate": "2026-02-22",
+      "venue": "일산동구",
+      "address": "대한민국 경기도 고양시 일산동구",
+      "locale": "ko-KR",
+      "translations": {
+        "en": {
+          "venue": "Ilsandong-gu",
+          "address": "Ilsandong-gu, Goyang-si, Gyeonggi-do, South Korea"
+        }
+      },
+      "latLng": [
+        37.677411,
+        126.7988794
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    },
+    {
       "id": "furry-joining-of-asia-2025",
       "name": "Furry Joining of Asia 2025",
       "url": "https://furryjoa.com",

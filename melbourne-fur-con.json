@@ -1,0 +1,33 @@
+{
+  "name": "Melbourne Fur Con",
+  "events": [
+    {
+      "id": "melbourne-fur-con-2026",
+      "name": "Melbourne Fur Con 2026",
+      "url": "https://melbfurcon.com",
+      "startDate": "2026-02-20",
+      "endDate": "2026-02-22",
+      "venue": "Novotel Melbourne Preston",
+      "address": "215 Bell St, Preston VIC 3072, Australia",
+      "locale": "en-AU",
+      "latLng": [
+        -37.7461191,
+        145.0083717
+      ]
+    },
+    {
+      "id": "melbourne-fur-con-2025",
+      "name": "Melbourne Fur Con 2025",
+      "url": "https://melbfurcon.com",
+      "startDate": "2025-02-21",
+      "endDate": "2025-02-23",
+      "venue": "Novotel Melbourne Preston",
+      "address": "215 Bell St, Preston VIC 3072, Australia",
+      "locale": "en-AU",
+      "latLng": [
+        -37.7461191,
+        145.0083717
+      ]
+    }
+  ]
+}

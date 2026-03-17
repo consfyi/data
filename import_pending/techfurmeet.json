@@ -7,9 +7,13 @@
       "url": "https://furrycons.com/event/27571/techfurmeet-2026",
       "startDate": "2026-02-12",
       "endDate": "2026-02-16",
-      "venue": "O&aacute;za Srdce",
-      "address": "Horn&iacute; Bradlo-Nasavrky, Czech Republic",
+      "venue": "Oáza Srdce",
+      "address": "538 25 Horní Bradlo-Nasavrky, Česko",
       "locale": "cs-CZ",
+      "latLng": [
+        49.8063666,
+        15.7315885
+      ],
       "sources": [
         "fancons.com"
       ]

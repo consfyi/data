@@ -2,6 +2,20 @@
   "name": "Woods Flock",
   "events": [
     {
+      "id": "woods-flock-2027",
+      "name": "Woods Flock 2027",
+      "url": "https://woodsflock.com",
+      "startDate": "2027-04-23",
+      "endDate": "2027-04-25",
+      "venue": "Fall Creek Falls State Park",
+      "address": "2009 Village Camp Rd, Spencer, TN 38585, USA",
+      "locale": "en-US",
+      "latLng": [
+        35.7069187,
+        -85.3821486
+      ]
+    },
+    {
       "id": "woods-flock-2026",
       "name": "Woods Flock 2026",
       "url": "https://woodsflock.com",

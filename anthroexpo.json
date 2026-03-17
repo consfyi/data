@@ -2,6 +2,20 @@
   "name": "AnthroExpo",
   "events": [
     {
+      "id": "anthroexpo-2027",
+      "name": "AnthroExpo 2027",
+      "url": "https://www.anthroexpo.net",
+      "startDate": "2027-02-04",
+      "endDate": "2027-02-07",
+      "venue": "Embassy Suites Norman",
+      "address": "2501 Conference Dr, Norman, OK 73069, USA",
+      "locale": "en-US",
+      "latLng": [
+        35.2434811,
+        -97.4786414
+      ]
+    },
+    {
       "id": "anthroexpo-2026",
       "name": "AnthroExpo 2026",
       "url": "https://www.anthroexpo.net",

@@ -2,6 +2,23 @@
   "name": "Flüüfff",
   "events": [
     {
+      "id": "fluufff-2026",
+      "name": "Flüüfff 2026",
+      "url": "https://fluufff.org",
+      "startDate": "2026-11-11",
+      "endDate": "2026-11-15",
+      "venue": "Mercure Antwerp City South",
+      "address": "Desguinlei 94, 2018 Antwerpen, Belgique",
+      "locale": "nl-BE",
+      "latLng": [
+        51.19458119999999,
+        4.4064173
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    },
+    {
       "id": "fluufff-2025",
       "name": "Flüüfff 2025",
       "url": "https://fluufff.org",

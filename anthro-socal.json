@@ -2,6 +2,20 @@
   "name": "Anthro SoCal",
   "events": [
     {
+      "id": "anthro-socal-2026",
+      "name": "Anthro SoCal 2026",
+      "url": "https://anthrosocal.org",
+      "startDate": "2025-09-18",
+      "endDate": "2025-09-20",
+      "venue": "Ontario Convention Center",
+      "address": "2000 E Convention Center Way, Ontario, CA 91764, United States",
+      "locale": "en-US",
+      "latLng": [
+        34.0655006,
+        -117.6064432
+      ]
+    },
+    {
       "id": "another-furry-con-2025",
       "name": "Another Furry Con 2025",
       "url": "https://anotherfurrycon.com",

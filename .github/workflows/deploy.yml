@@ -32,9 +32,6 @@ jobs:
           ./tools/render_markdown.py < README.md > "$RUNNER_TEMP/out/index.html" &&
           ./tools/render_index.py "$RUNNER_TEMP/out/series" data.cons.fyi/series > "$RUNNER_TEMP/out/series/index.html" &&
           ./tools/render_index.py "$RUNNER_TEMP/out/events" data.cons.fyi/events > "$RUNNER_TEMP/out/events/index.html"
-        env:
-          FANCONS_CALENDAR_URL: ${{ secrets.FANCONS_CALENDAR_URL }}
-          FANCONS_MAP_URL: ${{ secrets.FANCONS_MAP_URL }}
       - uses: actions/upload-pages-artifact@v3
         with:
           path: "${{ runner.temp }}/out"

@@ -22,6 +22,8 @@ jobs:
       - run: ./tools/data-importers/import_fancons.py
         env:
           GOOGLE_MAPS_API_KEY: ${{ secrets.GOOGLE_MAPS_API_KEY }}
+          FANCONS_CALENDAR_URL: ${{ secrets.FANCONS_CALENDAR_URL }}
+          FANCONS_MAP_URL: ${{ secrets.FANCONS_MAP_URL }}
       - run: |
           git add .
           git diff-index --quiet HEAD || git commit -m "via import_fancons"

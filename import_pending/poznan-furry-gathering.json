@@ -1,0 +1,22 @@
+{
+  "name": "Poznan Furry Gathering",
+  "events": [
+    {
+      "id": "poznan-furry-gathering-2026",
+      "name": "Poznan Furry Gathering 2026",
+      "url": "https://furrycons.com/event/27783/poznan-furry-gathering-2026",
+      "startDate": "2026-04-16",
+      "endDate": "2026-04-19",
+      "venue": "Hotel Camping Malta",
+      "address": "Krańcowa 98, 61-036 Poznań, Polska",
+      "locale": "pl-PL",
+      "latLng": [
+        52.4032717,
+        16.9839774
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    }
+  ]
+}

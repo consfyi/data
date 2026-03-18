@@ -2,6 +2,23 @@
   "name": "Sachsen Furs Jahreswechsel",
   "events": [
     {
+      "id": "sachsen-furs-jahreswechsel-2027",
+      "name": "Sachsen Furs Jahreswechsel 2027",
+      "url": "https://sfj.sachsenfurs.de",
+      "startDate": "2026-12-29",
+      "endDate": "2027-01-01",
+      "venue": "DJH Jugendherberge Dessau-Roßlau",
+      "address": "Ebertallee 151, 06846 Dessau-Roßlau, Deutschland",
+      "locale": "de-DE",
+      "latLng": [
+        51.844411,
+        12.208584
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    },
+    {
       "id": "sachsen-furs-jahreswechsel-2026",
       "name": "Sachsen Furs Jahreswechsel 2026",
       "url": "https://sfj.sachsenfurs.de",

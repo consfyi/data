@@ -1,0 +1,28 @@
+{
+  "name": "Kemono Station",
+  "events": [
+    {
+      "id": "kemono-station-2026",
+      "name": "Kemono Station 2026",
+      "url": "https://furrycons.com/event/27789/kemono-station-2026",
+      "startDate": "2026-05-03",
+      "endDate": "2026-05-04",
+      "venue": "KIITO｜デザイン・クリエイティブセンター神戸（旧神戸生糸検査所）",
+      "address": "日本、〒651-0082 兵庫県神戸市中央区小野浜町１−４ デザイン・クリエイティブセンター神戸",
+      "locale": "ja-JP",
+      "translations": {
+        "en": {
+          "venue": "KIITO | Design and Creative Center Kobe",
+          "address": "Japan, 〒651-0082 Hyogo, Kobe, Chuo Ward, Onohamachō, 1−４ デザイン・クリエイティブセンター神戸"
+        }
+      },
+      "latLng": [
+        34.6849872,
+        135.1991246
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    }
+  ]
+}

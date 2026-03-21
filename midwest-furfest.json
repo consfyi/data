@@ -2,6 +2,20 @@
   "name": "Midwest FurFest",
   "events": [
     {
+      "id": "midwest-furfest-2026",
+      "name": "Midwest FurFest 2026",
+      "url": "https://www.furfest.org",
+      "startDate": "2026-12-03",
+      "endDate": "2026-12-06",
+      "venue": "Donald E. Stephens Convention Center",
+      "address": "5555 N River Rd, Rosemont, IL 60018, United States",
+      "locale": "en-US",
+      "latLng": [
+        41.9792232,
+        -87.861987
+      ]
+    },
+    {
       "id": "midwest-furfest-2025",
       "name": "Midwest FurFest 2025",
       "url": "https://www.furfest.org",

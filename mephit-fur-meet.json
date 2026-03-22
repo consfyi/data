@@ -2,6 +2,23 @@
   "name": "Mephit Fur Meet",
   "events": [
     {
+      "id": "mephit-fur-meet-2026",
+      "name": "Mephit Fur Meet 2026",
+      "url": "https://www.mephitfurmeet.org",
+      "startDate": "2026-09-04",
+      "endDate": "2026-09-06",
+      "venue": "Memphis Vitality Hotel",
+      "address": "2625 Thousand Oaks Blvd, Memphis, TN 38118, USA",
+      "locale": "en-US",
+      "latLng": [
+        35.0768033,
+        -89.9035351
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    },
+    {
       "id": "mephit-fur-meet-2025",
       "name": "Mephit Fur Meet 2025",
       "url": "https://www.mephitfurmeet.org",

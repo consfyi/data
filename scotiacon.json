@@ -2,6 +2,23 @@
   "name": "Scotiacon",
   "events": [
     {
+      "id": "scotiacon-2027",
+      "name": "Scotiacon 2027",
+      "url": "https://www.scotiacon.org.uk",
+      "startDate": "2027-02-05",
+      "endDate": "2027-02-08",
+      "venue": "Hilton Garden Inn Glasgow City Centre",
+      "address": "Finnieston Quay, Glasgow G3 8HN, UK",
+      "locale": "en-GB",
+      "latLng": [
+        55.8580062,
+        -4.2827943
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    },
+    {
       "id": "scotiacon-2026",
       "name": "Scotiacon 2026",
       "url": "https://www.scotiacon.org.uk",

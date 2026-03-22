@@ -2,6 +2,23 @@
   "name": "FurSquared",
   "events": [
     {
+      "id": "fursquared-2027",
+      "name": "FurSquared 2027",
+      "url": "https://fursquared.com",
+      "startDate": "2027-02-04",
+      "endDate": "2027-02-07",
+      "venue": "Hilton Milwaukee",
+      "address": "509 W Wisconsin Ave, Milwaukee, WI 53203, USA",
+      "locale": "en-US",
+      "latLng": [
+        43.0384207,
+        -87.9180506
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    },
+    {
       "id": "fursquared-2026",
       "name": "FurSquared 2026",
       "url": "https://fursquared.com",

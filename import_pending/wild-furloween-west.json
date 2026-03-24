@@ -1,0 +1,22 @@
+{
+  "name": "Wild Furloween West",
+  "events": [
+    {
+      "id": "wild-furloween-west-2026",
+      "name": "Wild Furloween West 2026",
+      "url": "https://furrycons.com/event/27843/wild-furloween-west-2026",
+      "startDate": "2026-10-30",
+      "endDate": "2026-11-01",
+      "venue": "DoubleTree by Hilton Fort Worth South Hotel & Conference Center",
+      "address": "100 Altamesa Blvd, Fort Worth, TX 76134, USA",
+      "locale": "en-US",
+      "latLng": [
+        32.6529434,
+        -97.3193604
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    }
+  ]
+}

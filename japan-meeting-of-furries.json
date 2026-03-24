@@ -2,6 +2,29 @@
   "name": "Japan Meeting of Furries",
   "events": [
     {
+      "id": "japan-meeting-of-furries-2027",
+      "name": "Japan Meeting of Furries 2027",
+      "url": "https://www.jmof.jp",
+      "startDate": "2027-01-08",
+      "endDate": "2027-01-10",
+      "venue": "Aichi Sky Expo (愛知県国際展示場)",
+      "address": "日本、〒479-0881 愛知県常滑市セントレア５丁目１０番１号",
+      "locale": "ja-JP",
+      "translations": {
+        "en": {
+          "venue": "Aichi Sky Expo",
+          "address": "5-chōme-１０番１号 Centrair, Tokoname, Aichi 479-0881, Japan"
+        }
+      },
+      "latLng": [
+        34.8565154,
+        136.8198019
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    },
+    {
       "id": "japan-meeting-of-furries-2026",
       "name": "Japan Meeting of Furries 2026",
       "url": "https://www.jmof.jp",

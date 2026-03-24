@@ -1,0 +1,22 @@
+{
+  "name": "LethFURidge Mini-Con",
+  "events": [
+    {
+      "id": "lethfuridge-mini-con-2026",
+      "name": "LethFURidge Mini-Con 2026",
+      "url": "https://furrycons.com/event/27847/lethfuridge-mini-con-2026",
+      "startDate": "2026-06-06",
+      "endDate": "2026-06-07",
+      "venue": "McNally Community Center",
+      "address": "210075 Township Rd 82, Lethbridge, AB T1K 8H3, Canada",
+      "locale": "en-CA",
+      "latLng": [
+        49.63884179999999,
+        -112.7331174
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    }
+  ]
+}

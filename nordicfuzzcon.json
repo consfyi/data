@@ -2,6 +2,23 @@
   "name": "NordicFuzzCon",
   "events": [
     {
+      "id": "nordicfuzzcon-2027",
+      "name": "NordicFuzzCon 2027",
+      "url": "https://nordicfuzzcon.org",
+      "startDate": "2027-02-24",
+      "endDate": "2027-02-28",
+      "venue": "Clarion Hotel Malmö Live",
+      "address": "Dag Hammarskjölds torg 2, 211 18 Malmö, Sweden",
+      "locale": "sv-SE",
+      "latLng": [
+        55.607661,
+        12.9941535
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    },
+    {
       "id": "nordicfuzzcon-2026",
       "name": "NordicFuzzCon 2026",
       "url": "https://nordicfuzzcon.org",

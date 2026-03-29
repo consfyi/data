@@ -2,6 +2,23 @@
   "name": "Dutch Furcon",
   "events": [
     {
+      "id": "dutch-furcon-11",
+      "name": "Dutch Furcon 11",
+      "url": "https://dutchfurcon.com",
+      "startDate": "2026-08-14",
+      "endDate": "2026-08-17",
+      "venue": "Vakantiepark de Oude Molen",
+      "address": "Wylerbaan 2a, 6561 KR Groesbeek, Nederland",
+      "locale": "nl-NL",
+      "latLng": [
+        51.7844444,
+        5.935
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    },
+    {
       "id": "dutch-furcon-10",
       "name": "Dutch Furcon 10",
       "url": "https://dutchfurcon.com",

@@ -2,6 +2,23 @@
   "name": "FurCalvaDance",
   "events": [
     {
+      "id": "furcalvadance-2026",
+      "name": "FurCalvaDance 2026",
+      "url": "https://www.normandifurs.fr/la-convention/",
+      "startDate": "2026-09-25",
+      "endDate": "2026-09-29",
+      "venue": "Village de vacances VTF Le Sénéquet",
+      "address": "Rue de la Vieille Digue, 50560 Blainville-sur-Mer, France",
+      "locale": "fr-FR",
+      "latLng": [
+        49.0811878,
+        -1.6008366
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    },
+    {
       "id": "furcalvadance-2025",
       "name": "FurCalvaDance 2025",
       "url": "https://www.normandifurs.fr/la-convention/",

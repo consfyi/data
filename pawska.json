@@ -2,6 +2,23 @@
   "name": "Pawska",
   "events": [
     {
+      "id": "pawska-2026",
+      "name": "Pawska 2026",
+      "url": "https://www.volskarfurevents.eu/pl/Pawska",
+      "startDate": "2026-11-26",
+      "endDate": "2026-11-29",
+      "venue": "Amber Hotel Gdańsk",
+      "address": "Powstańców Warszawskich 45, 80-152 Gdańsk, Polska",
+      "locale": "pl-PL",
+      "latLng": [
+        54.3580441,
+        18.6214472
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    },
+    {
       "id": "pawska-2025",
       "name": "Pawska 2025",
       "url": "https://www.volskarfurevents.eu/pl/Pawska",

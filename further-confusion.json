@@ -16,6 +16,23 @@
       ]
     },
     {
+      "id": "further-confusion-2026",
+      "name": "Further Confusion 2026",
+      "url": "https://furtherconfusion.org",
+      "startDate": "2026-01-15",
+      "endDate": "2026-01-19",
+      "venue": "San Jose McEnery Convention Center",
+      "address": "150 W San Carlos St, San Jose, CA 95113, USA",
+      "locale": "en-US",
+      "latLng": [
+        37.3291639,
+        -121.889011
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    },
+    {
       "id": "further-confusion-2025",
       "name": "Further Confusion 2025",
       "url": "https://furtherconfusion.org",

@@ -2,6 +2,20 @@
   "name": "Furlingame",
   "events": [
     {
+      "id": "furlingame-2027",
+      "name": "Furlingame 2027",
+      "url": "https://furlingame.com",
+      "startDate": "2027-03-26",
+      "endDate": "2027-03-28",
+      "venue": "Hyatt Regency San Francisco Airport",
+      "address": "1333 Old Bayshore Hwy, Burlingame, CA 94010, United States",
+      "locale": "en-US",
+      "latLng": [
+        37.5938725,
+        -122.3651261
+      ]
+    },
+    {
       "id": "furlingame-2026",
       "name": "Furlingame 2026",
       "url": "https://furlingame.com",

@@ -2,6 +2,20 @@
   "name": "Las Vegas Fur Con",
   "events": [
     {
+      "id": "las-vegas-fur-con-2027",
+      "name": "Las Vegas Fur Con 2027",
+      "url": "https://lasvegasfurcon.org",
+      "startDate": "2027-03-25",
+      "endDate": "2027-03-28",
+      "venue": "Alexis Park Resort and Serene Boutique",
+      "address": "375 E Harmon Ave, Las Vegas, NV 89169, United States",
+      "locale": "en-US",
+      "latLng": [
+        36.1075771,
+        -115.1562516
+      ]
+    },
+    {
       "id": "las-vegas-fur-con-2026",
       "name": "Las Vegas Fur Con 2026",
       "url": "https://lasvegasfurcon.org",

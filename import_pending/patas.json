@@ -1,0 +1,22 @@
+{
+  "name": "Patas",
+  "events": [
+    {
+      "id": "patas-2026",
+      "name": "Patas 2026",
+      "url": "https://furrycons.com/event/27995/patas-2026",
+      "startDate": "2026-12-11",
+      "endDate": "2026-12-13",
+      "venue": "Sorocaba Park Hotel by Atlantica",
+      "address": "Av. Prof. Joaquim Silva, 205 - Alto da Boa Vista, Sorocaba - SP, 18085-000, Brasil",
+      "locale": "pt-BR",
+      "latLng": [
+        -23.4773111,
+        -47.4363665
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    }
+  ]
+}

@@ -2,6 +2,23 @@
   "name": "Furdance Budapest",
   "events": [
     {
+      "id": "furdance-budapest-2026",
+      "name": "Furdance Budapest 2026",
+      "url": "https://www.furdance.hu",
+      "startDate": "2026-09-11",
+      "endDate": "2026-09-13",
+      "venue": "Csokonai Rendezvényház",
+      "address": "Budapest, Eötvös u. 64-66, 1153 Magyarország",
+      "locale": "hu-HU",
+      "latLng": [
+        47.5564845,
+        19.1134345
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    },
+    {
       "id": "furdance-budapest-2025",
       "name": "Furdance Budapest 2025",
       "url": "https://www.furdance.hu",

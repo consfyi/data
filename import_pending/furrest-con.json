@@ -1,0 +1,28 @@
+{
+  "name": "Furrest Con",
+  "events": [
+    {
+      "id": "furrest-con-2026",
+      "name": "Furrest Con 2026",
+      "url": "https://furrycons.com/event/27998/furrest-con-2026",
+      "startDate": "2026-07-24",
+      "endDate": "2026-07-26",
+      "venue": "Готель \"Борисфен\"",
+      "address": "Парк Муромець (парк Дружби Народів), 5, Київ, Україна, 02225",
+      "locale": "uk-UA",
+      "translations": {
+        "en": {
+          "venue": "Borisfen Hotel",
+          "address": "Парк Муромець (парк Дружби Народів), 5, Kyiv, Ukraine, 02225"
+        }
+      },
+      "latLng": [
+        50.4964332,
+        30.53708979999999
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    }
+  ]
+}

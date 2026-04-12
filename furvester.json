@@ -2,6 +2,23 @@
   "name": "Furvester",
   "events": [
     {
+      "id": "furvester-7",
+      "name": "Furvester 7",
+      "url": "https://furvester.org",
+      "startDate": "2026-12-29",
+      "endDate": "2027-01-02",
+      "venue": "Stadthalle Karlsruhe",
+      "address": "Festpl., 76137 Karlsruhe, Deutschland",
+      "locale": "de-DE",
+      "latLng": [
+        49.0031319,
+        8.4011971
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    },
+    {
       "id": "furvester-6",
       "name": "Furvester 6",
       "url": "https://furvester.org",

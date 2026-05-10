@@ -1,0 +1,22 @@
+{
+  "name": "Michigan Anthro Weekend",
+  "events": [
+    {
+      "id": "michigan-anthro-weekend-2026",
+      "name": "Michigan Anthro Weekend 2026",
+      "url": "https://furrycons.com/event/28109/michigan-anthro-weekend-2026",
+      "startDate": "2026-10-01",
+      "endDate": "2026-10-04",
+      "venue": "Sheraton Grand Rapids Airport Hotel",
+      "address": "5700 28th St SE, Grand Rapids, MI 49546, USA",
+      "locale": "en-US",
+      "latLng": [
+        42.9119737,
+        -85.5256753
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    }
+  ]
+}

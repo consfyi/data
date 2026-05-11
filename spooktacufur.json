@@ -2,6 +2,23 @@
   "name": "Spooktacufur",
   "events": [
     {
+      "id": "spooktacufur-2026",
+      "name": "Spooktacufur 2026",
+      "url": "https://spooktacufur.com",
+      "startDate": "2026-10-24",
+      "endDate": "2026-10-24",
+      "venue": "Hilton Salt Lake City Center",
+      "address": "255 S W Temple St, Salt Lake City, UT 84101, USA",
+      "locale": "en-US",
+      "latLng": [
+        40.763925,
+        -111.893283
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    },
+    {
       "id": "spooktacufur-2025",
       "name": "Spooktacufur 2025",
       "url": "https://spooktacufur.com",

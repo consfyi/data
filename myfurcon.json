@@ -2,6 +2,23 @@
   "name": "MYFurCon",
   "events": [
     {
+      "id": "myfurcon-2027",
+      "name": "MYFurCon 2027",
+      "url": "https://myfur.org",
+      "startDate": "2027-04-24",
+      "endDate": "2027-04-25",
+      "venue": "Hotel Armada Petaling Jaya",
+      "address": "Lot 6, Lorong Utara C, Section 52, 46200 Petaling Jaya, Selangor, Malaysia",
+      "locale": "ms-MY",
+      "latLng": [
+        3.1041203,
+        101.6408005
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    },
+    {
       "id": "myfurcon-2026",
       "name": "MYFurCon 2026",
       "url": "https://myfur.org",

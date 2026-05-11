@@ -2,6 +2,29 @@
   "name": "Infurnity",
   "events": [
     {
+      "id": "infurnity-2026",
+      "name": "Infurnity 2026",
+      "url": "https://www.infurnity.com",
+      "startDate": "2026-10-30",
+      "endDate": "2026-11-01",
+      "venue": "麗寶福容大飯店",
+      "address": "421台灣臺中市后里區福容路88號",
+      "locale": "zh-TW",
+      "translations": {
+        "en": {
+          "venue": "Fullon Hotel Lihpao Land",
+          "address": "No. 88號, Furong Rd, Houli District, Taichung City, Taiwan 421"
+        }
+      },
+      "latLng": [
+        24.3235809,
+        120.6965954
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    },
+    {
       "id": "infurnity-2025",
       "name": "Infurnity 2025",
       "url": "https://www.infurnity.com",

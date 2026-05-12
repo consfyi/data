@@ -1,0 +1,22 @@
+{
+  "name": "FUVE",
+  "events": [
+    {
+      "id": "fuve-2026",
+      "name": "FUVE 2026",
+      "url": "https://furrycons.com/event/28141/fuve-2026",
+      "startDate": "2026-08-15",
+      "endDate": "2026-08-15",
+      "venue": "Eastin Grand Hotel Saigon",
+      "address": "253 Đ. Nguyễn Văn Trỗi, Phú Nhuận, Hồ Chí Minh 70000, Việt Nam",
+      "locale": "vi-VN",
+      "latLng": [
+        10.7968252,
+        106.6731823
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "name": "Bratislava FurFest",
+  "events": [
+    {
+      "id": "bratislava-furfest-2026",
+      "name": "Bratislava FurFest 2026",
+      "url": "https://furrycons.com/event/28187/bratislava-furfest-2026",
+      "startDate": "2026-08-03",
+      "endDate": "2026-08-03",
+      "venue": "Youth Hub (Bratislavská Platforma Mladých)",
+      "address": "Štefánikova 892/39, 811 04 Bratislava, Slovensko",
+      "locale": "sk-SK",
+      "latLng": [
+        48.15342,
+        17.1060147
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    }
+  ]
+}

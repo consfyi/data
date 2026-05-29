@@ -1,0 +1,19 @@
+{
+  "name": "Adelaide Anthros",
+  "events": [
+    {
+      "id": "adelaide-anthros-2026",
+      "name": "Adelaide Anthros 2026",
+      "url": "https://www.adelaideanthros.com",
+      "startDate": "2026-11-07",
+      "endDate": "2026-11-08",
+      "venue": "Oaks Glenelg Plaza Pier Suites",
+      "address": "16 Holdfast Promenade, Glenelg SA 5045, Australia",
+      "locale": "en-AU",
+      "latLng": [
+        -34.9776336,
+        138.5108833
+      ]
+    }
+  ]
+}

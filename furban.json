@@ -8,8 +8,14 @@
       "startDate": "2027-08-07",
       "endDate": "2027-08-08",
       "venue": "Eaton HK",
-      "address": "380 Nathan Road, Yau Ma Tei, Kowloon, Hong Kong",
+      "address": "香港油麻地彌敦道380號",
       "locale": "zh-HK",
+      "translations": {
+        "en": {
+          "venue": "Eaton HK",
+          "address": "380 Nathan Road, Yau Ma Tei, Kowloon, Hong Kong"
+        }
+      },
       "latLng": [
         22.3080618,
         114.1718264

@@ -15,7 +15,7 @@ jobs:
       - uses: actions/checkout@v5
         with:
           submodules: recursive
-      - uses: astral-sh/setup-uv@v8
+      - uses: astral-sh/setup-uv@v7
       - run: |
           git config --global user.name "cons.fyi GitHub bot"
           git config --global user.email "github@cons.fyi"

@@ -1,0 +1,19 @@
+{
+  "name": "Furban",
+  "events": [
+    {
+      "id": "furban-2027",
+      "name": "Furban 2027",
+      "url": "https://furban.net",
+      "startDate": "2027-08-07",
+      "endDate": "2027-08-08",
+      "venue": "Eaton HK",
+      "address": "380 Nathan Road, Yau Ma Tei, Kowloon, Hong Kong",
+      "locale": "zh-HK",
+      "latLng": [
+        22.3080618,
+        114.1718264
+      ]
+    }
+  ]
+}

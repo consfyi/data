@@ -2,6 +2,20 @@
   "name": "Furs Upon Malaysia",
   "events": [
     {
+      "id": "furs-upon-malaysia-2026",
+      "name": "Furs Upon Malaysia 2026",
+      "url": "https://www.furum.org",
+      "startDate": "2026-12-11",
+      "endDate": "2026-12-13",
+      "venue": "M World Hotel Petaling Jaya",
+      "address": "1 Persiaran Bandar Utama, Bandar Utama, 47800 Petaling Jaya, Selangor, Malaysia",
+      "locale": "ms-MY",
+      "latLng": [
+        3.1449643,
+        101.6179402
+      ]
+    },
+    {
       "id": "furs-upon-malaysia-2025",
       "name": "Furs Upon Malaysia 2025",
       "url": "https://www.furum.org",

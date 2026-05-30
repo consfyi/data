@@ -218,7 +218,7 @@ def main():
 
     def pred(event):
         end_time = (
-            whenever.Date.parse_common_iso(event["endDate"])
+            whenever.Date.parse_iso(event["endDate"])
             .add(days=1)
             .at(whenever.Time(12, 0))
             .assume_tz(event.get("timezone", "UTC"))
@@ -228,8 +228,8 @@ def main():
     current = sorted(
         (event for event in events.values() if pred(event)),
         key=lambda event: (
-            whenever.Date.parse_common_iso(event["startDate"]),
-            whenever.Date.parse_common_iso(event["endDate"]),
+            whenever.Date.parse_iso(event["startDate"]),
+            whenever.Date.parse_iso(event["endDate"]),
             event["id"],
         ),
     )
@@ -246,12 +246,12 @@ def main():
         write_line("X-WR-CALNAME:cons.fyi")
         for event in current:
             start_date = (
-                whenever.Date.parse_common_iso(event["startDate"])
+                whenever.Date.parse_iso(event["startDate"])
                 .py_date()
                 .strftime("%Y%m%d")
             )
             end_date = (
-                whenever.Date.parse_common_iso(event["endDate"])
+                whenever.Date.parse_iso(event["endDate"])
                 .add(days=1)
                 .py_date()
                 .strftime("%Y%m%d")
@@ -288,8 +288,8 @@ def main():
             if event is not None
         ),
         key=lambda event: (
-            whenever.Date.parse_common_iso(event["startDate"]),
-            whenever.Date.parse_common_iso(event["endDate"]),
+            whenever.Date.parse_iso(event["startDate"]),
+            whenever.Date.parse_iso(event["endDate"]),
             event["id"],
         ),
     )

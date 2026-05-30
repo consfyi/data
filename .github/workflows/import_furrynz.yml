@@ -1,4 +1,4 @@
-name: import_eventdrake
+name: import_furrynz
 on:
   schedule:
     - cron: "15 */6 * * *"
@@ -19,10 +19,8 @@ jobs:
       - run: |
           git config --global user.name "cons.fyi GitHub bot"
           git config --global user.email "github@cons.fyi"
-      - run: ./tools/data-importers/import_eventdrake_all.sh
-        env:
-          GOOGLE_MAPS_API_KEY: ${{ secrets.GOOGLE_MAPS_API_KEY }}
+      - run: ./tools/data-importers/import_furrynz_all.sh
       - run: |
           git add .
-          git diff-index --quiet HEAD || git commit -m "via import_eventdrake"
+          git diff-index --quiet HEAD || git commit -m "via import_furrynz"
           git push

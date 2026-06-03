@@ -1,0 +1,19 @@
+{
+  "name": "PAWAI",
+  "events": [
+    {
+      "id": "pawai-2026",
+      "name": "PAWAI 2026",
+      "url": "https://pawai.id",
+      "startDate": "2026-10-03",
+      "endDate": "2026-10-04",
+      "venue": "Grand Istana Rama Hotel",
+      "address": "Jalan Pantai Kuta, Kuta, Badung, Bali, Indonesia",
+      "locale": "id-ID",
+      "latLng": [
+        -8.7152656,
+        115.1690945
+      ]
+    }
+  ]
+}

@@ -2,6 +2,20 @@
   "name": "Camp Feral!",
   "events": [
     {
+      "id": "camp-feral-2026",
+      "name": "Camp Feral! 2026",
+      "url": "https://campferal.org",
+      "startDate": "2026-08-20",
+      "endDate": "2026-08-24",
+      "venue": "Camp Arowhon",
+      "address": "1 Arowhon Road, Algonquin Park, ON P0A 1H0, Canada",
+      "locale": "en-CA",
+      "latLng": [
+        45.596578,
+        -78.73186799999999
+      ]
+    },
+    {
       "id": "camp-feral-2025",
       "name": "Camp Feral! 2025",
       "url": "https://campferal.org",

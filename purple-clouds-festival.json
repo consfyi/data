@@ -1,5 +1,9 @@
 {
   "name": "Purple Clouds Festival",
+  "bluesky": {
+    "did": "did:plc:xj4h7gjqq6xrxryybx22dvkx",
+    "handle": "purple-clouds.de"
+  },
   "events": [
     {
       "id": "purple-clouds-festival-2026",

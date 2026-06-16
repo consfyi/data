@@ -1,5 +1,9 @@
 {
   "name": "Carolina Furfare",
+  "bluesky": {
+    "did": "did:plc:eamjvw2tcnvapbkjhbwyuiy7",
+    "handle": "carolinafurfare.bsky.social"
+  },
   "events": [
     {
       "id": "carolina-furfare-2026",

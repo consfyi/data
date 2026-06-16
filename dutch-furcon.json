@@ -1,5 +1,9 @@
 {
   "name": "Dutch Furcon",
+  "bluesky": {
+    "did": "did:plc:fwbafkszmspqcsx37xpcodzy",
+    "handle": "dutchfurcon.com"
+  },
   "events": [
     {
       "id": "dutch-furcon-11",

@@ -1,5 +1,9 @@
 {
   "name": "Nashum FurCon",
+  "bluesky": {
+    "did": "did:plc:vjnfnhefq62e74ps2yfcfcly",
+    "handle": "nashumfurcon.org"
+  },
   "events": [
     {
       "id": "nashum-furcon-2026",

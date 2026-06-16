@@ -1,5 +1,9 @@
 {
   "name": "Brasil FurFest",
+  "bluesky": {
+    "did": "did:plc:hpoo54twc5v7volse2a2jbpy",
+    "handle": "brasilfurfest.bsky.social"
+  },
   "events": [
     {
       "id": "brasil-furfest-2026",

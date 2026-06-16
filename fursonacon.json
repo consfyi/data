@@ -1,5 +1,9 @@
 {
   "name": "FursonaCon",
+  "bluesky": {
+    "did": "did:plc:wjfjlofatfjrk34zrldmpwua",
+    "handle": "fursonacon.bsky.social"
+  },
   "events": [
     {
       "id": "fursonacon-2026",

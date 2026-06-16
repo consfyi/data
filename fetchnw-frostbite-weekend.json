@@ -1,5 +1,9 @@
 {
   "name": "FetchNW Frostbite Weekend",
+  "bluesky": {
+    "did": "did:plc:n64xnsl5jwwffy2swsrn62ka",
+    "handle": "fetchnw.com"
+  },
   "events": [
     {
       "id": "fetchnw-frostbite-weekend-2025",

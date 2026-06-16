@@ -1,5 +1,9 @@
 {
   "name": "New Years Furry Ball",
+  "bluesky": {
+    "did": "did:plc:ha7l7zxbpoqmo7iifjyizdg4",
+    "handle": "newyearsfurryball.bsky.social"
+  },
   "events": [
     {
       "id": "new-years-furry-ball-2026",

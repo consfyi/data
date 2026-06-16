@@ -1,5 +1,9 @@
 {
   "name": "Melbourne Furry Convention",
+  "bluesky": {
+    "did": "did:plc:ucoapegqexcd7a73cfpz7nhg",
+    "handle": "melbfurcon.com"
+  },
   "events": [
     {
       "id": "melbourne-furry-convention-2026",

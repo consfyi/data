@@ -1,5 +1,9 @@
 {
   "name": "Furban",
+  "bluesky": {
+    "did": "did:plc:tdhu2asm72omizpmxsn2ulf3",
+    "handle": "furbanjungle.bsky.social"
+  },
   "events": [
     {
       "id": "furban-2027",

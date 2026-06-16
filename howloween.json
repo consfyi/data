@@ -1,5 +1,9 @@
 {
   "name": "Howloween",
+  "bluesky": {
+    "did": "did:plc:dnpromglesu6p3ok3czfygkp",
+    "handle": "howloween.ca"
+  },
   "events": [
     {
       "id": "howloween-2025",

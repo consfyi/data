@@ -1,5 +1,9 @@
 {
   "name": "Tails of Terror",
+  "bluesky": {
+    "did": "did:plc:cit3srdvvirtppe6a3ouaom5",
+    "handle": "furdu.com.au"
+  },
   "events": [
     {
       "id": "tails-of-terror-2026",

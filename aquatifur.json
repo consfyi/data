@@ -1,5 +1,9 @@
 {
   "name": "AquatiFur",
+  "bluesky": {
+    "did": "did:plc:efgqcoutfj3rxzkeihyaz26q",
+    "handle": "aquatifur.com"
+  },
   "events": [
     {
       "id": "aquatifur-2026",

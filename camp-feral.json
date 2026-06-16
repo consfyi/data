@@ -1,5 +1,9 @@
 {
   "name": "Camp Feral!",
+  "bluesky": {
+    "did": "did:plc:dlkl3ar4r5ee2spc4zywtw2r",
+    "handle": "campferal.bsky.social"
+  },
   "events": [
     {
       "id": "camp-feral-2026",

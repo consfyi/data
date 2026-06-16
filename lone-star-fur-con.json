@@ -1,5 +1,9 @@
 {
   "name": "Lone Star Fur Con",
+  "bluesky": {
+    "did": "did:plc:tir2n7nxfddqnf7vlp7qekp2",
+    "handle": "lonestarfurcon.bsky.social"
+  },
   "events": [
     {
       "id": "lone-star-fur-con-2026",

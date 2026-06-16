@@ -1,5 +1,9 @@
 {
   "name": "Furality Online Xperience",
+  "bluesky": {
+    "did": "did:plc:o7d3ydmb5h5qve7db5ret76k",
+    "handle": "furality.org"
+  },
   "events": [
     {
       "id": "furality-online-xperience-2026",

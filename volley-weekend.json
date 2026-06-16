@@ -1,5 +1,9 @@
 {
   "name": "Volley Weekend",
+  "bluesky": {
+    "did": "did:plc:kjhbzkn22ss6o5o5tv6bmeon",
+    "handle": "volleyfurs.ch"
+  },
   "events": [
     {
       "id": "volley-weekend-3",

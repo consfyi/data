@@ -1,5 +1,9 @@
 {
   "name": "Heartland Howloween",
+  "bluesky": {
+    "did": "did:plc:mtchwur7zw7mnusl7vuyi76f",
+    "handle": "heartlandhowloween.bsky.social"
+  },
   "events": [
     {
       "id": "heartland-howloween-2026",

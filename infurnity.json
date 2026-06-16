@@ -1,5 +1,9 @@
 {
   "name": "Infurnity",
+  "bluesky": {
+    "did": "did:plc:uiqsmywrawljvwhmia6odqcs",
+    "handle": "infurnity.bsky.social"
+  },
   "events": [
     {
       "id": "infurnity-2026",

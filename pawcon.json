@@ -1,5 +1,9 @@
 {
   "name": "PAWCon",
+  "bluesky": {
+    "did": "did:plc:jg56dnxiqwj6m64n3numfbv3",
+    "handle": "pawcon.bsky.social"
+  },
   "events": [
     {
       "id": "pawcon-2026",

@@ -1,5 +1,9 @@
 {
   "name": "Pawstral",
+  "bluesky": {
+    "did": "did:plc:fmowwvretbveqlmejk4sxfl5",
+    "handle": "pawstral.bsky.social"
+  },
   "events": [
     {
       "id": "pawstral-2025",

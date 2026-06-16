@@ -1,5 +1,9 @@
 {
   "name": "PragFUR Outing",
+  "bluesky": {
+    "did": "did:plc:cw7azrpuoijtu6fgzd43io3e",
+    "handle": "pragfur.cz"
+  },
   "events": [
     {
       "id": "pragfur-outing-2025",

@@ -1,5 +1,9 @@
 {
   "name": "Furever West",
+  "bluesky": {
+    "did": "did:plc:bng4keu7y2wp3qjunienycee",
+    "handle": "fureverwest.bsky.social"
+  },
   "events": [
     {
       "id": "furever-west-2026",

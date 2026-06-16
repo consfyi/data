@@ -1,5 +1,9 @@
 {
   "name": "Calfurry",
+  "bluesky": {
+    "did": "did:plc:jimdwyslsqmqwqsa7oxujv75",
+    "handle": "calfurry.ca"
+  },
   "events": [
     {
       "id": "calfurry-2026",

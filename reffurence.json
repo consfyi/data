@@ -1,5 +1,9 @@
 {
   "name": "Reffurence",
+  "bluesky": {
+    "did": "did:plc:c3jyfxezu3uvjtx2rxlxa6cg",
+    "handle": "reffurence.bsky.social"
+  },
   "events": [
     {
       "id": "reffurence-2025",

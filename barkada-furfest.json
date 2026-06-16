@@ -1,5 +1,9 @@
 {
   "name": "Barkada Furfest",
+  "bluesky": {
+    "did": "did:plc:zi25qxibb6en44uipzomtzkq",
+    "handle": "barkadafurfest.bsky.social"
+  },
   "events": [
     {
       "id": "barkada-furfest-2026",

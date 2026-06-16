@@ -1,5 +1,9 @@
 {
   "name": "Genderverse FurCon",
+  "bluesky": {
+    "did": "did:plc:ft5iujk7bkezl6ypfqack3oj",
+    "handle": "genderversefurcon.com"
+  },
   "events": [
     {
       "id": "genderverse-furcon-2025",

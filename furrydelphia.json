@@ -1,5 +1,9 @@
 {
   "name": "Furrydelphia",
+  "bluesky": {
+    "did": "did:plc:te6ft4boi7vrmg6g7r5z4nx6",
+    "handle": "furrydelphia.org"
+  },
   "events": [
     {
       "id": "furrydelphia-2026",

@@ -1,5 +1,9 @@
 {
   "name": "Wild North",
+  "bluesky": {
+    "did": "did:plc:ybayv2jmpdcpcl3ggid2jj55",
+    "handle": "wildnorth.bsky.social"
+  },
   "events": [
     {
       "id": "wild-north-2026",

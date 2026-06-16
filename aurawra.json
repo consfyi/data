@@ -1,5 +1,9 @@
 {
   "name": "Aurawra",
+  "bluesky": {
+    "did": "did:plc:6yotpovggygkohgkpiqhqr7g",
+    "handle": "aurawra.org"
+  },
   "events": [
     {
       "id": "aurawra-2026",

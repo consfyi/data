@@ -1,5 +1,9 @@
 {
   "name": "HowlCon",
+  "bluesky": {
+    "did": "did:plc:mkozxx3fopzclh5rcp7x7wj5",
+    "handle": "howlcore.bsky.social"
+  },
   "events": [
     {
       "id": "howlcon-2026",

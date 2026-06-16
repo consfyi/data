@@ -1,5 +1,9 @@
 {
   "name": "Melbourne Fur Con",
+  "bluesky": {
+    "did": "did:plc:ucoapegqexcd7a73cfpz7nhg",
+    "handle": "melbfurcon.com"
+  },
   "events": [
     {
       "id": "melbourne-fur-con-2026",

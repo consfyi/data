@@ -1,5 +1,9 @@
 {
   "name": "Furry Ski Weekend",
+  "bluesky": {
+    "did": "did:plc:yjg2qdan6xds2knrjkv645dm",
+    "handle": "furryskiweekend.com"
+  },
   "events": [
     {
       "id": "furry-ski-weekend-2026",

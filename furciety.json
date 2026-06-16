@@ -1,5 +1,9 @@
 {
   "name": "Furciety",
+  "bluesky": {
+    "did": "did:plc:675rbmaa6k2eehkjgcpkz6vg",
+    "handle": "furciety.de"
+  },
   "events": [
     {
       "id": "furciety-2026",

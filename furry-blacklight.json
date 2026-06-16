@@ -1,5 +1,9 @@
 {
   "name": "Furry BlackLight",
+  "bluesky": {
+    "did": "did:plc:s42vpi52gnwxbwvsafcnmcf5",
+    "handle": "fblacklight.bsky.social"
+  },
   "events": [
     {
       "id": "furry-blacklight-2026",

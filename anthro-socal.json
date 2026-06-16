@@ -1,5 +1,9 @@
 {
   "name": "Anthro SoCal",
+  "bluesky": {
+    "did": "did:plc:qihcil4vll52xqadxriiqrxm",
+    "handle": "anthrosocal.org"
+  },
   "events": [
     {
       "id": "anthro-socal-2026",

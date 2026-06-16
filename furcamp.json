@@ -1,5 +1,9 @@
 {
   "name": "Furcamp",
+  "bluesky": {
+    "did": "did:plc:ruw3kwkjtrttdbvgzdlxsrcy",
+    "handle": "furcamp.com"
+  },
   "events": [
     {
       "id": "furcamp-2026",

@@ -1,5 +1,9 @@
 {
   "name": "Babyfur Con",
+  "bluesky": {
+    "did": "did:plc:t6rv55gfndnu5w3b5zlnhefg",
+    "handle": "babyfurcon.com"
+  },
   "events": [
     {
       "id": "babyfur-con-2025",

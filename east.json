@@ -1,5 +1,9 @@
 {
   "name": "East",
+  "bluesky": {
+    "did": "did:plc:g24kqlngojrjbo35hdcxvkym",
+    "handle": "sachsenfurs.de"
+  },
   "events": [
     {
       "id": "east-14",

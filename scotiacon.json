@@ -1,5 +1,9 @@
 {
   "name": "Scotiacon",
+  "bluesky": {
+    "did": "did:plc:ykiko7fa24cbv2bmffeylfys",
+    "handle": "scotiacon.bsky.social"
+  },
   "events": [
     {
       "id": "scotiacon-2027",

@@ -1,5 +1,9 @@
 {
   "name": "GoldenHorn",
+  "bluesky": {
+    "did": "did:plc:fegcyzgp3utqoyqsqrwuyg3c",
+    "handle": "goldenhorn.si"
+  },
   "events": [
     {
       "id": "goldenhorn-2026",

@@ -1,5 +1,9 @@
 {
   "name": "Bewhiskered",
+  "bluesky": {
+    "did": "did:plc:ofijpde6vmpgf5ckztc3iiro",
+    "handle": "bewhiskeredcon.org"
+  },
   "events": [
     {
       "id": "bewhiskered-2026",

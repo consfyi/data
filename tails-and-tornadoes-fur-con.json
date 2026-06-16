@@ -1,5 +1,9 @@
 {
   "name": "Tails and Tornadoes Fur Con",
+  "bluesky": {
+    "did": "did:plc:dum5xzdrx7qkj3jtlrc3yaje",
+    "handle": "tailsandtornadoes.org"
+  },
   "events": [
     {
       "id": "tails-and-tornadoes-fur-con-2026",

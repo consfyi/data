@@ -1,5 +1,9 @@
 {
   "name": "Noctfurnal",
+  "bluesky": {
+    "did": "did:plc:3qnwehdxbsnpfuvx6huu2l5t",
+    "handle": "noctfurnalevents.bsky.social"
+  },
   "events": [
     {
       "id": "noctfurnal-2026",

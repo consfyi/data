@@ -1,5 +1,9 @@
 {
   "name": "Anthro New Mexico",
+  "bluesky": {
+    "did": "did:plc:qazt7llgx2jecskuv7iuip7p",
+    "handle": "anthronewmexico.bsky.social"
+  },
   "events": [
     {
       "id": "anthro-new-mexico-2026",

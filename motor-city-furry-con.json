@@ -1,5 +1,9 @@
 {
   "name": "Motor City Furry Con",
+  "bluesky": {
+    "did": "did:plc:j3au6jfmpgjzu76dps4sdwqa",
+    "handle": "motorcityfurrycon.org"
+  },
   "events": [
     {
       "id": "motor-city-furry-con-2026",

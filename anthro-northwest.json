@@ -1,5 +1,9 @@
 {
   "name": "Anthro Northwest",
+  "bluesky": {
+    "did": "did:plc:ngj2ak6kaqa2yzmbnlzlqlbq",
+    "handle": "anthronorthwest.bsky.social"
+  },
   "events": [
     {
       "id": "anthro-northwest-8",

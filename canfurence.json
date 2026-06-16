@@ -1,5 +1,9 @@
 {
   "name": "CanFURence",
+  "bluesky": {
+    "did": "did:plc:msevw3cpwqtlrhfrffrragcn",
+    "handle": "canfurence.bsky.social"
+  },
   "events": [
     {
       "id": "canfurence-2026",

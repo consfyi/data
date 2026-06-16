@@ -1,5 +1,9 @@
 {
   "name": "FurCamp Michigan",
+  "bluesky": {
+    "did": "did:plc:h34yzo4tktldpnwha2wyq7zi",
+    "handle": "furcampmi.bsky.social"
+  },
   "events": [
     {
       "id": "furcamp-michigan-2026",

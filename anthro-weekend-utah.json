@@ -1,5 +1,9 @@
 {
   "name": "Anthro Weekend Utah",
+  "bluesky": {
+    "did": "did:plc:gbnuncvqp6sjt5pmlqd4no5s",
+    "handle": "anthroweekendutah.org"
+  },
   "events": [
     {
       "id": "anthro-weekend-utah-2026",

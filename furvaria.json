@@ -1,5 +1,9 @@
 {
   "name": "Furvaria",
+  "bluesky": {
+    "did": "did:plc:cy7rinhd32hdtthwwqa2lasq",
+    "handle": "furvaria.de"
+  },
   "events": [
     {
       "id": "furvaria-2026",

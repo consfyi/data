@@ -1,5 +1,9 @@
 {
   "name": "Indonesia Weekend Anthro Gathering",
+  "bluesky": {
+    "did": "did:plc:xufabiyszlj5ygfxwbpkfsah",
+    "handle": "iwag.furries.id"
+  },
   "events": [
     {
       "id": "indonesia-weekend-anthro-gathering-2026",

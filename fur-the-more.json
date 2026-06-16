@@ -1,5 +1,9 @@
 {
   "name": "Fur the 'More",
+  "bluesky": {
+    "did": "did:plc:ex4dpm3lgpjwjuhvfpbw3duq",
+    "handle": "furthemore.org"
+  },
   "events": [
     {
       "id": "fur-the-more-2026",

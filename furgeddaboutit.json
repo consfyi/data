@@ -1,5 +1,9 @@
 {
   "name": "Furgeddaboutit",
+  "bluesky": {
+    "did": "did:plc:jjrjjs24paafnoncv2gg3dvv",
+    "handle": "furgeddaboutit.org"
+  },
   "events": [
     {
       "id": "furgeddaboutit-2026",

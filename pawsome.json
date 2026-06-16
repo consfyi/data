@@ -1,5 +1,9 @@
 {
   "name": "Pawsome",
+  "bluesky": {
+    "did": "did:plc:6qeufewqi72im3pho5u3lud2",
+    "handle": "pawsome.bsky.social"
+  },
   "events": [
     {
       "id": "pawsome-2026",

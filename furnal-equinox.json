@@ -1,5 +1,9 @@
 {
   "name": "Furnal Equinox",
+  "bluesky": {
+    "did": "did:plc:g7b4ncbjtguyen43rp2434w5",
+    "handle": "furnalequinox.com"
+  },
   "events": [
     {
       "id": "furnal-equinox-2026",

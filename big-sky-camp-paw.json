@@ -1,5 +1,9 @@
 {
   "name": "Big Sky Camp Paw",
+  "bluesky": {
+    "did": "did:plc:ptlvs5qz3bfg374ocsbtsemp",
+    "handle": "camppaw.org"
+  },
   "events": [
     {
       "id": "big-sky-camp-paw-2026",

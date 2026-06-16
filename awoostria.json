@@ -1,5 +1,9 @@
 {
   "name": "Awoostria",
+  "bluesky": {
+    "did": "did:plc:iszkvg44gkgt5pf2cxxfqu2x",
+    "handle": "awoostria.at"
+  },
   "events": [
     {
       "id": "awoostria-2026",

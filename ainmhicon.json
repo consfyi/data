@@ -1,5 +1,9 @@
 {
   "name": "Ainmhícon",
+  "bluesky": {
+    "did": "did:plc:cmx6qbpzi24s4ulllxjmqkfm",
+    "handle": "ainmhicon.ie"
+  },
   "events": [
     {
       "id": "ainmhicon-2026",

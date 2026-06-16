@@ -1,5 +1,9 @@
 {
   "name": "Mischief District",
+  "bluesky": {
+    "did": "did:plc:n2heu2u77jmbu6b3q7xa46xg",
+    "handle": "magpieevents.org"
+  },
   "events": [
     {
       "id": "mischief-district-2025",

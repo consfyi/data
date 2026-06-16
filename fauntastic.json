@@ -1,5 +1,9 @@
 {
   "name": "Fauntastic",
+  "bluesky": {
+    "did": "did:plc:65vovribkeitvpyznzygh3yl",
+    "handle": "fauntastic.eu"
+  },
   "events": [
     {
       "id": "fauntastic-2026",

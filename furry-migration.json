@@ -1,5 +1,9 @@
 {
   "name": "Furry Migration",
+  "bluesky": {
+    "did": "did:plc:ittzfj5vrjmgupumwkws36dv",
+    "handle": "furrymigration.org"
+  },
   "events": [
     {
       "id": "furry-migration-2026",

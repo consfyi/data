@@ -1,5 +1,9 @@
 {
   "name": "Les Furfurieux",
+  "bluesky": {
+    "did": "did:plc:36psugzwy3rwjdyiddfxnmdg",
+    "handle": "furfurieux.bsky.social"
+  },
   "events": [
     {
       "id": "les-furfurieux-2026",

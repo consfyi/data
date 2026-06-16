@@ -1,5 +1,9 @@
 {
   "name": "Furpocalypse",
+  "bluesky": {
+    "did": "did:plc:azcrwj7meawnegprye7h3j2e",
+    "handle": "furpocalypse.org"
+  },
   "events": [
     {
       "id": "furpocalypse-2026",

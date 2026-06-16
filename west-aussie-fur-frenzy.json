@@ -1,5 +1,9 @@
 {
   "name": "West Aussie Fur Frenzy",
+  "bluesky": {
+    "did": "did:plc:67czct2gvdwtihvbtzzaqsfh",
+    "handle": "waff.net.au"
+  },
   "events": [
     {
       "id": "west-aussie-fur-frenzy-2025",

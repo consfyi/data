@@ -1,5 +1,9 @@
 {
   "name": "Western PA Furry Weekend",
+  "bluesky": {
+    "did": "did:plc:syftgxeqo6hbgi34cyigzkq3",
+    "handle": "wpafw.bsky.social"
+  },
   "events": [
     {
       "id": "western-pa-furry-weekend-2026",

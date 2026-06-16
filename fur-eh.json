@@ -1,5 +1,9 @@
 {
   "name": "Fur-Eh!",
+  "bluesky": {
+    "did": "did:plc:xekssaocuarinic2wxunlmnm",
+    "handle": "fur-eh.bsky.social"
+  },
   "events": [
     {
       "id": "fur-eh-2026",

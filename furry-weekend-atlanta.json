@@ -1,5 +1,9 @@
 {
   "name": "Furry Weekend Atlanta",
+  "bluesky": {
+    "did": "did:plc:7ekpvrg7ne2oltxiiag4zcvo",
+    "handle": "furryweekend.com"
+  },
   "events": [
     {
       "id": "furry-weekend-atlanta-2027",

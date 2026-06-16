@@ -1,5 +1,9 @@
 {
   "name": "Get Out The Float",
+  "bluesky": {
+    "did": "did:plc:dudgclqiibaulmlueqbehe2r",
+    "handle": "getoutthefloat.com"
+  },
   "events": [
     {
       "id": "get-out-the-float-2026",

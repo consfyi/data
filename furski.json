@@ -1,5 +1,9 @@
 {
   "name": "Furski",
+  "bluesky": {
+    "did": "did:plc:v35sycvmrnj7uu6wnhi3z3vj",
+    "handle": "techno.fur.ski"
+  },
   "events": [
     {
       "id": "furski-2026",

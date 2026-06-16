@@ -1,5 +1,9 @@
 {
   "name": "Spooktacufur",
+  "bluesky": {
+    "did": "did:plc:s3mvtnizy6nqfhutpeqaguao",
+    "handle": "spooktacufur.com"
+  },
   "events": [
     {
       "id": "spooktacufur-2026",

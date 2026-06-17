@@ -2,6 +2,23 @@
   "name": "Pawstral",
   "events": [
     {
+      "id": "pawstral-2026",
+      "name": "Pawstral 2026",
+      "url": "https://pawstral.cl",
+      "startDate": "2026-08-21",
+      "endDate": "2026-08-23",
+      "venue": "Le Méridien Santiago",
+      "address": "Av. Alameda Libertador Bernardo O'Higgins 136, 6513491 Santiago de Chle, Santiago, Libertador General Bernardo O'Higgins, Chile",
+      "locale": "es-CL",
+      "latLng": [
+        -33.4381398,
+        -70.6371599
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    },
+    {
       "id": "pawstral-2025",
       "name": "Pawstral 2025",
       "url": "https://pawstral.cl",

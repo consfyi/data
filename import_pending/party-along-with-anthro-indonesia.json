@@ -1,0 +1,22 @@
+{
+  "name": "Party Along With Anthro Indonesia",
+  "events": [
+    {
+      "id": "party-along-with-anthro-indonesia-2026",
+      "name": "Party Along With Anthro Indonesia 2026",
+      "url": "https://furrycons.com/event/28295/party-along-with-anthro-indonesia-2026",
+      "startDate": "2026-10-03",
+      "endDate": "2026-10-04",
+      "venue": "Grand Istana Rama Hotel Bali",
+      "address": "Jl. Pantai Kuta, Kuta, Kec. Kuta, Kabupaten Badung, Bali 80361, Indonesia",
+      "locale": "id-ID",
+      "latLng": [
+        -8.715713899999999,
+        115.1686732
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    }
+  ]
+}

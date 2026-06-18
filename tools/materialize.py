@@ -186,6 +186,8 @@ def main():
                 (lat, lng) = event["latLng"]
                 event["timezone"] = tzfpy.get_tz(lng, lat)
             event["seriesId"] = series_id
+            if "bluesky" in series:
+                event["bluesky"] = series["bluesky"]
 
             if previous_event is not None and "attendance" in previous_event:
                 event["previousAttendance"] = previous_event["attendance"]

@@ -1,5 +1,9 @@
 {
   "name": "Argentina FurFiesta",
+  "bluesky": {
+    "did": "did:plc:j4rggbvlmmp32xkish3tazdc",
+    "handle": "furfiesta.bsky.social"
+  },
   "events": [
     {
       "id": "argentina-furfiesta-2026",

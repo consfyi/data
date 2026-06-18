@@ -1,5 +1,9 @@
 {
   "name": "Palmetto Fur The Season",
+  "bluesky": {
+    "did": "did:plc:gtltrd7u36kzsa7cutk2iatq",
+    "handle": "palmettofurtheseason.org"
+  },
   "events": [
     {
       "id": "palmetto-fur-the-season-1",

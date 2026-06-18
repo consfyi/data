@@ -1,5 +1,9 @@
 {
   "name": "Gdakon",
+  "bluesky": {
+    "did": "did:plc:rcszz3ima2ijf4vepnxjzdev",
+    "handle": "gdakon.bsky.social"
+  },
   "events": [
     {
       "id": "gdakon-2026",

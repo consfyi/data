@@ -1,5 +1,9 @@
 {
   "name": "CanthroFur",
+  "bluesky": {
+    "did": "did:plc:xdrmsbjlyxqcup36stm4oxbz",
+    "handle": "canthrofur.org"
+  },
   "events": [
     {
       "id": "canthrofur-2026",

@@ -1,5 +1,9 @@
 {
   "name": "Furgether",
+  "bluesky": {
+    "did": "did:plc:jdnmvui6m3sovuxvwy746ngn",
+    "handle": "furgether.at"
+  },
   "events": [
     {
       "id": "furgether-2025",

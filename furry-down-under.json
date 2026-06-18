@@ -1,5 +1,9 @@
 {
   "name": "Furry Down Under",
+  "bluesky": {
+    "did": "did:plc:cit3srdvvirtppe6a3ouaom5",
+    "handle": "furdu.com.au"
+  },
   "events": [
     {
       "id": "furry-down-under-2026",

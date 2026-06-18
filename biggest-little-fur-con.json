@@ -1,5 +1,9 @@
 {
   "name": "Biggest Little Fur Con",
+  "bluesky": {
+    "did": "did:plc:zkvyhzkfhmrlb5xgthda35fm",
+    "handle": "goblfc.org"
+  },
   "events": [
     {
       "id": "biggest-little-fur-con-2026",

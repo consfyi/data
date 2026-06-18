@@ -1,5 +1,9 @@
 {
   "name": "AnthrOhio",
+  "bluesky": {
+    "did": "did:plc:ahefwarth4puxhaykgkxxfms",
+    "handle": "anthrohio.org"
+  },
   "events": [
     {
       "id": "anthrohio-2026",

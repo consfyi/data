@@ -1,5 +1,9 @@
 {
   "name": "SpringFurCon",
+  "bluesky": {
+    "did": "did:plc:trp43rflbbae5vmuh7g4j4kc",
+    "handle": "springfurcon.bsky.social"
+  },
   "events": [
     {
       "id": "springfurcon-2026",

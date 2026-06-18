@@ -1,5 +1,9 @@
 {
   "name": "DenFur",
+  "bluesky": {
+    "did": "did:plc:5qadfstdsv7yd2nvezahdlxq",
+    "handle": "denfur.org"
+  },
   "events": [
     {
       "id": "denfur-2026",

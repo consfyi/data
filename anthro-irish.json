@@ -1,5 +1,9 @@
 {
   "name": "Anthro Irish",
+  "bluesky": {
+    "did": "did:plc:lftq3seuhfjgojkpauk2ob5o",
+    "handle": "anthro.irish"
+  },
   "events": [
     {
       "id": "anthro-irish-2026",

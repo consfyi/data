@@ -1,5 +1,9 @@
 {
   "name": "AnthroTales",
+  "bluesky": {
+    "did": "did:plc:exarj7ai7pz3s7t7o2tdbmh3",
+    "handle": "anthrotales.eu"
+  },
   "events": [
     {
       "id": "anthrotales-1",

@@ -1,5 +1,9 @@
 {
   "name": "Furry Retreat",
+  "bluesky": {
+    "did": "did:plc:vo6lbuicgrpbcvpanpm2b7ep",
+    "handle": "wkndfurryretreat.bsky.social"
+  },
   "events": [
     {
       "id": "furry-retreat-2026",

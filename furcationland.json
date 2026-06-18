@@ -1,5 +1,9 @@
 {
   "name": "Furcationland",
+  "bluesky": {
+    "did": "did:plc:clgiak22ikoxswjcxn6prgw7",
+    "handle": "furcationland.org"
+  },
   "events": [
     {
       "id": "furcationland-2026",

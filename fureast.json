@@ -1,5 +1,9 @@
 {
   "name": "FurEast",
+  "bluesky": {
+    "did": "did:plc:5dtasfyeqhg7xj257ss3focq",
+    "handle": "fureast.fr"
+  },
   "events": [
     {
       "id": "fureast-2026",

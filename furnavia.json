@@ -1,5 +1,9 @@
 {
   "name": "Furnavia",
+  "bluesky": {
+    "did": "did:plc:a7yrdfbzvv4h3h4jdpviljkh",
+    "handle": "furnavia.bsky.social"
+  },
   "events": [
     {
       "id": "furnavia-2026",

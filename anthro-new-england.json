@@ -1,5 +1,9 @@
 {
   "name": "Anthro New England",
+  "bluesky": {
+    "did": "did:plc:srxungr7qhhxzllfsdfltzau",
+    "handle": "ane.boston"
+  },
   "events": [
     {
       "id": "anthro-new-england-2027",

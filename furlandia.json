@@ -1,5 +1,9 @@
 {
   "name": "Furlandia",
+  "bluesky": {
+    "did": "did:plc:bb4y6p2pei7clwmarkwoyddt",
+    "handle": "furlandia.bsky.social"
+  },
   "events": [
     {
       "id": "furlandia-2026",

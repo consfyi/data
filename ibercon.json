@@ -1,5 +1,9 @@
 {
   "name": "Ibercon",
+  "bluesky": {
+    "did": "did:plc:nfmk4uewhcudqpslperqowci",
+    "handle": "ibercon.org"
+  },
   "events": [
     {
       "id": "ibercon-2026",

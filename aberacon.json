@@ -1,5 +1,9 @@
 {
   "name": "Aberacon",
+  "bluesky": {
+    "did": "did:plc:fxqamrjizs6dhp7vwgskble5",
+    "handle": "skydreampegasus.bsky.social"
+  },
   "events": [
     {
       "id": "aberacon-2026",

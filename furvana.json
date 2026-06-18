@@ -1,5 +1,9 @@
 {
   "name": "Furvana",
+  "bluesky": {
+    "did": "did:plc:sdbhssde3hgqdezn4duufvhc",
+    "handle": "furvana.bsky.social"
+  },
   "events": [
     {
       "id": "furvana-2025",

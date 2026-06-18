@@ -1,5 +1,9 @@
 {
   "name": "ConFuzzled",
+  "bluesky": {
+    "did": "did:plc:vkij4nukia5yta6xjaep6esl",
+    "handle": "confuzzled.org.uk"
+  },
   "events": [
     {
       "id": "confuzzled-2026",

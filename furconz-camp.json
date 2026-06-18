@@ -1,5 +1,9 @@
 {
   "name": "FurcoNZ Camp",
+  "bluesky": {
+    "did": "did:plc:vyqtxhbuv4b3cskbfoygeyt7",
+    "handle": "furconz.bsky.social"
+  },
   "events": [
     {
       "id": "furconz-camp-2025",

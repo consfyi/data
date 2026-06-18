@@ -1,5 +1,9 @@
 {
   "name": "Tails of Summer",
+  "bluesky": {
+    "did": "did:plc:dn7cq63ck4j5fgdhdn36qamz",
+    "handle": "tailsofsummer.com"
+  },
   "events": [
     {
       "id": "tails-of-summer-2026",

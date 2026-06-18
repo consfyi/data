@@ -1,5 +1,9 @@
 {
   "name": "Texas Furry Fiesta",
+  "bluesky": {
+    "did": "did:plc:oujlp4sqhvjgurciippmzqjd",
+    "handle": "djkrillik.bsky.social"
+  },
   "events": [
     {
       "id": "texas-furry-fiesta-2026",

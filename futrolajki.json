@@ -1,5 +1,9 @@
 {
   "name": "Futrołajki",
+  "bluesky": {
+    "did": "did:plc:oy67eitzxchghmwagnebvp56",
+    "handle": "futrolajki.pl"
+  },
   "events": [
     {
       "id": "futrolajki-2026",

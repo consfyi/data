@@ -1,5 +1,9 @@
 {
   "name": "Camp Mani-Toebeans",
+  "bluesky": {
+    "did": "did:plc:et4hnrcwodrqe5nu42qxg5ua",
+    "handle": "campmani-toebeans.bsky.social"
+  },
   "events": [
     {
       "id": "camp-mani-toebeans-2026",

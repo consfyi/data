@@ -1,5 +1,9 @@
 {
   "name": "Furvester",
+  "bluesky": {
+    "did": "did:plc:c7h3662ycf6ysztaz6hnyqc4",
+    "handle": "furvester.org"
+  },
   "events": [
     {
       "id": "furvester-7",

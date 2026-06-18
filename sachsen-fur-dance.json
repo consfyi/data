@@ -1,5 +1,9 @@
 {
   "name": "Sachsen Fur Dance",
+  "bluesky": {
+    "did": "did:plc:g24kqlngojrjbo35hdcxvkym",
+    "handle": "sachsenfurs.de"
+  },
   "events": [
     {
       "id": "sachsen-fur-dance-28",

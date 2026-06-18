@@ -6,6 +6,21 @@
       "type": "string",
       "minLength": 1
     },
+    "bluesky": {
+      "type": "object",
+      "properties": {
+        "did": {
+          "type": "string",
+          "pattern": "^did:"
+        },
+        "handle": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": ["did"],
+      "additionalProperties": false
+    },
     "events": {
       "type": "array",
       "items": {

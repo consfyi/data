@@ -1,5 +1,9 @@
 {
   "name": "Lakeside Furs",
+  "bluesky": {
+    "did": "did:plc:moekp22hjcanfcgi234w2rem",
+    "handle": "lakesidefurs.at"
+  },
   "events": [
     {
       "id": "lakeside-furs-2026",

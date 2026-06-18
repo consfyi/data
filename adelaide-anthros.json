@@ -1,5 +1,9 @@
 {
   "name": "Adelaide Anthros",
+  "bluesky": {
+    "did": "did:plc:k7b7jvmdtr5jycic6v3baehk",
+    "handle": "adlanthros.bsky.social"
+  },
   "events": [
     {
       "id": "adelaide-anthros-2026",

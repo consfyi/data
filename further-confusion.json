@@ -1,5 +1,9 @@
 {
   "name": "Further Confusion",
+  "bluesky": {
+    "did": "did:plc:fj45oznjbvlgoyzjqi6tlt3n",
+    "handle": "furcon.bsky.social"
+  },
   "events": [
     {
       "id": "further-confusion-2027",

@@ -1,5 +1,9 @@
 {
   "name": "PAWAI",
+  "bluesky": {
+    "did": "did:plc:6ucns3rhpfo2nzlarn2tlnjx",
+    "handle": "pawaiid.bsky.social"
+  },
   "events": [
     {
       "id": "pawai-2026",

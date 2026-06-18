@@ -1,5 +1,9 @@
 {
   "name": "IndyFurCon",
+  "bluesky": {
+    "did": "did:plc:n27hl3siwx4um3j3tbf5aegw",
+    "handle": "indyfurcon.org"
+  },
   "events": [
     {
       "id": "indyfurcon-2026",

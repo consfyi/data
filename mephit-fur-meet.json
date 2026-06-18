@@ -1,5 +1,9 @@
 {
   "name": "Mephit Fur Meet",
+  "bluesky": {
+    "did": "did:plc:7kjnfrrppp6omzjl7n7vlwpj",
+    "handle": "mephitfurmeet.org"
+  },
   "events": [
     {
       "id": "mephit-fur-meet-2026",

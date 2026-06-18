@@ -1,5 +1,9 @@
 {
   "name": "Golden Leaves Con",
+  "bluesky": {
+    "did": "did:plc:v6ixvbshj7esjom2ds32ojk2",
+    "handle": "furry.ch"
+  },
   "events": [
     {
       "id": "golden-leaves-con-16",

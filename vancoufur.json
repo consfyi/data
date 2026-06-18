@@ -1,5 +1,9 @@
 {
   "name": "VancouFur",
+  "bluesky": {
+    "did": "did:plc:5tccqxugf2h7pocamiydvsth",
+    "handle": "vancoufur.bsky.social"
+  },
   "events": [
     {
       "id": "vancoufur-2026",

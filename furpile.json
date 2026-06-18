@@ -1,5 +1,9 @@
 {
   "name": "Furpile",
+  "bluesky": {
+    "did": "did:plc:komzyrz73m3jtc5duweds46j",
+    "handle": "furpile.pl"
+  },
   "events": [
     {
       "id": "furpile-2025",

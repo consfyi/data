@@ -1,5 +1,9 @@
 {
   "name": "Anthrocon",
+  "bluesky": {
+    "did": "did:plc:ulwyvthzao6goq6pqth2j5z3",
+    "handle": "anthrocon.org"
+  },
   "events": [
     {
       "id": "anthrocon-2026",

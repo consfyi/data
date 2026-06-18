@@ -1,5 +1,9 @@
 {
   "name": "Anthros & Alpine",
+  "bluesky": {
+    "did": "did:plc:fugd4ne5q2sqqpjtvlw3pa7h",
+    "handle": "anthroalpine.bsky.social"
+  },
   "events": [
     {
       "id": "anthros-and-alpine-2026",

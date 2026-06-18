@@ -1,5 +1,9 @@
 {
   "name": "Woods Flock",
+  "bluesky": {
+    "did": "did:plc:2kubjovntsb3srk76t2dexjm",
+    "handle": "woodsflock.bsky.social"
+  },
   "events": [
     {
       "id": "woods-flock-2027",

@@ -1,5 +1,9 @@
 {
   "name": "Furrest City",
+  "bluesky": {
+    "did": "did:plc:gs3oxjmihf65m2efx2xu75rr",
+    "handle": "furrestcity.org"
+  },
   "events": [
     {
       "id": "furrest-city-2026",

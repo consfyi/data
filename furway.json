@@ -1,5 +1,9 @@
 {
   "name": "Furway",
+  "bluesky": {
+    "did": "did:plc:z5hagjlrpfa7czgbkrmbjm5g",
+    "handle": "furway.no"
+  },
   "events": [
     {
       "id": "furway-2026",

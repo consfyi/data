@@ -1,5 +1,9 @@
 {
   "name": "Galactic Camp",
+  "bluesky": {
+    "did": "did:plc:jikwl2zbi5ch4kkt4kquff6e",
+    "handle": "galacticcamp.bsky.social"
+  },
   "events": [
     {
       "id": "galactic-camp-2026",

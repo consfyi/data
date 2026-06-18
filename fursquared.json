@@ -1,5 +1,9 @@
 {
   "name": "FurSquared",
+  "bluesky": {
+    "did": "did:plc:2s3t7hs6j3uqosgcgbueegac",
+    "handle": "fursquared.com"
+  },
   "events": [
     {
       "id": "fursquared-2027",

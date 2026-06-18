@@ -1,5 +1,9 @@
 {
   "name": "Confuror",
+  "bluesky": {
+    "did": "did:plc:sj3gp6suyjokm32gk7swrfcd",
+    "handle": "confuror.bsky.social"
+  },
   "events": [
     {
       "id": "confuror-2026",

@@ -1,5 +1,9 @@
 {
   "name": "Texas Furry Siesta",
+  "bluesky": {
+    "did": "did:plc:kq37zqwjxnkpfpvt2r7upygu",
+    "handle": "furrysiesta.org"
+  },
   "events": [
     {
       "id": "texas-furry-siesta-2026",

@@ -1,5 +1,9 @@
 {
   "name": "SloFluffCon",
+  "bluesky": {
+    "did": "did:plc:l2fj5sphxk3qhlu62dzehzqs",
+    "handle": "slofluffcon.bsky.social"
+  },
   "events": [
     {
       "id": "slofluffcon-2026",

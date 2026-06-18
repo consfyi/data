@@ -1,5 +1,9 @@
 {
   "name": "Eufuria",
+  "bluesky": {
+    "did": "did:plc:hnrit3a6bvynnpaqq37pc7qq",
+    "handle": "eufuria.org"
+  },
   "events": [
     {
       "id": "eufuria-2026",

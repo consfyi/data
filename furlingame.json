@@ -1,5 +1,9 @@
 {
   "name": "Furlingame",
+  "bluesky": {
+    "did": "did:plc:bwf4zux2gax2kkmplggshyxd",
+    "handle": "furlingame.com"
+  },
   "events": [
     {
       "id": "furlingame-2027",

@@ -1,5 +1,9 @@
 {
   "name": "Las Vegas Fur Con",
+  "bluesky": {
+    "did": "did:plc:flpymgjkbta3zvshvn4253zu",
+    "handle": "lasvegasfurcon.org"
+  },
   "events": [
     {
       "id": "las-vegas-fur-con-2027",

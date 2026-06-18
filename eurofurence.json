@@ -1,5 +1,9 @@
 {
   "name": "Eurofurence",
+  "bluesky": {
+    "did": "did:plc:uneztaz2bvfqtzyyopyzi3em",
+    "handle": "eurofurence.org"
+  },
   "events": [
     {
       "id": "eurofurence-30",

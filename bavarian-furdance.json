@@ -1,5 +1,9 @@
 {
   "name": "Bavarian Furdance",
+  "bluesky": {
+    "did": "did:plc:okl4a5gmga3eqi2mtecvmydj",
+    "handle": "bayern-furs.de"
+  },
   "events": [
     {
       "id": "bavarian-furdance-17",

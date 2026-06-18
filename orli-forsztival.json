@@ -1,5 +1,9 @@
 {
   "name": "Örli Försztivál",
+  "bluesky": {
+    "did": "did:plc:yljqiafx2ljh2d46byhevwp2",
+    "handle": "orliforsztival.bsky.social"
+  },
   "events": [
     {
       "id": "orli-forsztival-2025",

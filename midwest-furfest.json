@@ -1,5 +1,9 @@
 {
   "name": "Midwest FurFest",
+  "bluesky": {
+    "did": "did:plc:uwoi7anxjcden4hkzck6h6c7",
+    "handle": "furfest.org"
+  },
   "events": [
     {
       "id": "midwest-furfest-2026",

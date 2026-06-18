@@ -1,5 +1,9 @@
 {
   "name": "Little Island Furcon",
+  "bluesky": {
+    "did": "did:plc:j6l7vrkdhydbbkfnz3fhhknj",
+    "handle": "littleislandfur.com"
+  },
   "events": [
     {
       "id": "little-island-furcon-2026",

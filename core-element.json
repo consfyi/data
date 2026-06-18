@@ -1,5 +1,9 @@
 {
   "name": "Core Element",
+  "bluesky": {
+    "did": "did:plc:3m6rr24rkxrf4gl54chz6wjw",
+    "handle": "coreelement.bsky.social"
+  },
   "events": [
     {
       "id": "core-element-2026",

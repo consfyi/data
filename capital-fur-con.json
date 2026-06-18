@@ -1,5 +1,9 @@
 {
   "name": "Capital Fur Con",
+  "bluesky": {
+    "did": "did:plc:tcogiehhws3chyw7jvqnozda",
+    "handle": "capitalfurcon.org"
+  },
   "events": [
     {
       "id": "capital-fur-con-2027",

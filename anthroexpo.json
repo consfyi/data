@@ -1,5 +1,9 @@
 {
   "name": "AnthroExpo",
+  "bluesky": {
+    "did": "did:plc:2yyx6fpki4ibgkmljp6yjtnw",
+    "handle": "anthroexpo.com"
+  },
   "events": [
     {
       "id": "anthroexpo-2027",

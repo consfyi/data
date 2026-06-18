@@ -1,5 +1,9 @@
 {
   "name": "Yorkshire Furs Summer Party",
+  "bluesky": {
+    "did": "did:plc:pyv5xtpycnzuckhynqguxzx4",
+    "handle": "yorkshirefurs.org.uk"
+  },
   "events": [
     {
       "id": "yorkshire-furs-summer-party-2025",

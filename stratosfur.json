@@ -1,5 +1,9 @@
 {
   "name": "StratosFur",
+  "bluesky": {
+    "did": "did:plc:a2gt2pfvvoovijq4uc2ivije",
+    "handle": "stratosfur.org"
+  },
   "events": [
     {
       "id": "stratosfur-2026",

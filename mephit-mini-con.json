@@ -1,5 +1,9 @@
 {
   "name": "Mephit Mini Con",
+  "bluesky": {
+    "did": "did:plc:fvfl3n7t757jbbmbpmzwclhs",
+    "handle": "mephitminicon.bsky.social"
+  },
   "events": [
     {
       "id": "mephit-mini-con-26",

@@ -1,5 +1,9 @@
 {
   "name": "Alamo City Furry Invasion",
+  "bluesky": {
+    "did": "did:plc:i54z3b7sl4jladt3k56ttsoa",
+    "handle": "furryinvasion.bsky.social"
+  },
   "events": [
     {
       "id": "alamo-city-furry-invasion-2026",

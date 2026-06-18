@@ -1,5 +1,9 @@
 {
   "name": "Gateway FurMeet",
+  "bluesky": {
+    "did": "did:plc:fvapco74poz7okj4apntezkj",
+    "handle": "gatewayfurmeet.org"
+  },
   "events": [
     {
       "id": "gateway-furmeet-2026",

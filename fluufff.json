@@ -1,5 +1,9 @@
 {
   "name": "Flüüfff",
+  "bluesky": {
+    "did": "did:plc:fei6suxorko4znzdnjl3wrik",
+    "handle": "fluufffcon.bsky.social"
+  },
   "events": [
     {
       "id": "fluufff-2026",

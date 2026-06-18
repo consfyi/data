@@ -1,0 +1,44 @@
+name: Add Bluesky account
+description: Tell us a convention's official Bluesky account
+title: "Add Bluesky account: [INSERT NAME HERE]"
+labels:
+  - bluesky
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Know the official Bluesky account for a convention we're missing it for? Let us know here.
+
+        The account must be the convention's own official account, verifiable from its website or other official sources.
+
+  - id: name
+    type: input
+    attributes:
+      label: Name
+      description: The name of the convention.
+      placeholder: e.g. My Cool Furry Con
+    validations:
+      required: true
+
+  - id: handle
+    type: input
+    attributes:
+      label: Bluesky account
+      description: The convention's Bluesky handle or profile link.
+      placeholder: e.g. @mycoolfurrycon.bsky.social or https://bsky.app/profile/mycoolfurrycon.bsky.social
+    validations:
+      required: true
+
+  - id: source
+    type: input
+    attributes:
+      label: Where is this linked?
+      description: A page that confirms this is the convention's official account (e.g. their website footer or links page).
+      placeholder: e.g. https://mycoolfurrycon.com
+
+  - id: comments
+    type: textarea
+    attributes:
+      label: Anything else?
+      description: |
+        Anything else you'd like to add about your request.

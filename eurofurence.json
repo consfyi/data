@@ -17,7 +17,33 @@
       "latLng": [
         53.5615943,
         9.9859745
-      ]
+      ],
+      "keyDates": {
+        "registration": {
+          "closes": {
+            "date": "2026-05-18",
+            "source": "https://bsky.app/profile/eurofurence.org/post/3mlvpa3nrok2u",
+            "asOf": "2026-05-15T15:59:26.599Z",
+            "confidence": 0.8
+          }
+        },
+        "dealers": {
+          "closes": {
+            "date": "2026-03-22",
+            "source": "https://bsky.app/profile/eurofurence.org/post/3mgfowhrd522c",
+            "asOf": "2026-03-06T16:05:29.809Z",
+            "confidence": 0.95
+          }
+        },
+        "panels": {
+          "closes": {
+            "date": "2026-05-31",
+            "source": "https://bsky.app/profile/eurofurence.org/post/3mjrvabp77k2x",
+            "asOf": "2026-04-18T16:45:53.219Z",
+            "confidence": 0.85
+          }
+        }
+      }
     },
     {
       "id": "eurofurence-29",

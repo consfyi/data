@@ -6,6 +6,23 @@
   },
   "events": [
     {
+      "id": "confuzzled-2027",
+      "name": "ConFuzzled 2027",
+      "url": "https://confuzzled.org.uk",
+      "startDate": "2027-05-28",
+      "endDate": "2027-06-01",
+      "venue": "Hilton Birmingham Metropole",
+      "address": "Pendigo Way, Marston Green, Birmingham B40 1PP, UK",
+      "locale": "en-GB",
+      "latLng": [
+        52.4505825,
+        -1.715153
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    },
+    {
       "id": "confuzzled-2026",
       "name": "ConFuzzled 2026",
       "url": "https://confuzzled.org.uk",

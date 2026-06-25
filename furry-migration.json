@@ -17,7 +17,47 @@
       "latLng": [
         44.9705423,
         -93.2781067
-      ]
+      ],
+      "keyDates": {
+        "registration": {
+          "opens": {
+            "date": "2026-02-25",
+            "source": "https://bsky.app/profile/furrymigration.org/post/3mfoyrn7hgb2o",
+            "asOf": "2026-02-25T15:30:31.201Z",
+            "confidence": 0.9
+          }
+        },
+        "hotel": {
+          "opens": {
+            "date": "2026-04-24",
+            "source": "https://bsky.app/profile/furrymigration.org/post/3mkaywc22cp2j",
+            "asOf": "2026-04-24T17:01:48.172Z",
+            "confidence": 0.9
+          }
+        },
+        "dealers": {
+          "opens": {
+            "date": "2026-04-11",
+            "source": "https://bsky.app/profile/furrymigration.org/post/3mjaru3gtw42o",
+            "asOf": "2026-04-11T21:30:06.414Z",
+            "confidence": 0.85
+          },
+          "closes": {
+            "date": "2026-05-31",
+            "source": "https://bsky.app/profile/furrymigration.org/post/3mn37vyxtrk2v",
+            "asOf": "2026-05-30T14:06:31.365Z",
+            "confidence": 0.85
+          }
+        },
+        "panels": {
+          "closes": {
+            "date": "2026-07-11",
+            "source": "https://bsky.app/profile/furrymigration.org/post/3mo47s6dk6c2w",
+            "asOf": "2026-06-12T17:02:14.978Z",
+            "confidence": 0.85
+          }
+        }
+      }
     },
     {
       "id": "furry-migration-2025",

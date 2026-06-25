@@ -17,7 +17,47 @@
       "latLng": [
         34.0655006,
         -117.6064432
-      ]
+      ],
+      "keyDates": {
+        "registration": {
+          "opens": {
+            "date": "2026-04-01",
+            "source": "https://bsky.app/profile/anthrosocal.org/post/3mig4zbtjgi2a",
+            "asOf": "2026-04-01T07:07:58.000Z",
+            "confidence": 0.95
+          }
+        },
+        "hotel": {
+          "opens": {
+            "date": "2026-05-30",
+            "source": "https://bsky.app/profile/anthrosocal.org/post/3mmkc3dev4j2x",
+            "asOf": "2026-05-23T20:30:01.000Z",
+            "confidence": 0.9
+          }
+        },
+        "dealers": {
+          "opens": {
+            "date": "2026-04-13",
+            "source": "https://bsky.app/profile/anthrosocal.org/post/3mjfh2xmulb2c",
+            "asOf": "2026-04-13T18:00:24.000Z",
+            "confidence": 0.9
+          },
+          "closes": {
+            "date": "2026-05-04",
+            "source": "https://bsky.app/profile/anthrosocal.org/post/3mjfh2xmulb2c",
+            "asOf": "2026-04-13T18:00:24.000Z",
+            "confidence": 0.85
+          }
+        },
+        "panels": {
+          "closes": {
+            "date": "2026-06-22",
+            "source": "https://bsky.app/profile/anthrosocal.org/post/3movedespfg2g",
+            "asOf": "2026-06-22T17:00:00.000Z",
+            "confidence": 0.92
+          }
+        }
+      }
     },
     {
       "id": "another-furry-con-2025",

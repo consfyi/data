@@ -20,7 +20,25 @@
       ],
       "sources": [
         "fancons.com"
-      ]
+      ],
+      "keyDates": {
+        "registration": {
+          "opens": {
+            "date": "2026-05-24",
+            "source": "https://bsky.app/profile/futrolajki.pl/post/3mm2qrek6b22b",
+            "asOf": "2026-05-17T16:10:18.829Z",
+            "confidence": 0.92
+          }
+        },
+        "hotel": {
+          "opens": {
+            "date": "2026-06-21",
+            "source": "https://bsky.app/profile/futrolajki.pl/post/3mnv5mngvos2l",
+            "asOf": "2026-06-09T21:34:43.856Z",
+            "confidence": 0.9
+          }
+        }
+      }
     },
     {
       "id": "futrolajki-2025",

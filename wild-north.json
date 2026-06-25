@@ -17,7 +17,23 @@
       "latLng": [
         54.8533258,
         -1.5532642
-      ]
+      ],
+      "keyDates": {
+        "registration": {
+          "opens": {
+            "date": "2026-03-13",
+            "source": "https://bsky.app/profile/wildnorth.bsky.social/post/3mgxm3gih7k2y",
+            "asOf": "2026-03-13T19:02:30.320Z",
+            "confidence": 0.88
+          },
+          "closes": {
+            "date": "2026-06-09",
+            "source": "https://bsky.app/profile/wildnorth.bsky.social/post/3mnd6pque522o",
+            "asOf": "2026-06-02T18:06:26.555Z",
+            "confidence": 0.85
+          }
+        }
+      }
     },
     {
       "id": "wild-north-2025",

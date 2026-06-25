@@ -20,7 +20,25 @@
       ],
       "sources": [
         "fancons.com"
-      ]
+      ],
+      "keyDates": {
+        "registration": {
+          "opens": {
+            "date": "2026-04-04",
+            "source": "https://bsky.app/profile/pawstral.bsky.social/post/3min4ym5c4c2o",
+            "asOf": "2026-04-04T01:56:15.355Z",
+            "confidence": 0.85
+          }
+        },
+        "panels": {
+          "opens": {
+            "date": "2026-05-18",
+            "source": "https://bsky.app/profile/pawstral.bsky.social/post/3mm3t3tgpwk2x",
+            "asOf": "2026-05-18T02:24:37.203Z",
+            "confidence": 0.82
+          }
+        }
+      }
     },
     {
       "id": "pawstral-2025",

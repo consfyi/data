@@ -17,7 +17,17 @@
       "latLng": [
         36.1075771,
         -115.1562516
-      ]
+      ],
+      "keyDates": {
+        "registration": {
+          "opens": {
+            "date": "2026-05-29",
+            "source": "https://bsky.app/profile/lasvegasfurcon.org/post/3mmzlqatazd2p",
+            "asOf": "2026-05-29T22:32:44.540725+00:00",
+            "confidence": 0.85
+          }
+        }
+      }
     },
     {
       "id": "las-vegas-fur-con-2026",

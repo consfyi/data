@@ -20,7 +20,25 @@
       ],
       "sources": [
         "fancons.com"
-      ]
+      ],
+      "keyDates": {
+        "registration": {
+          "opens": {
+            "date": "2026-03-23",
+            "source": "https://bsky.app/profile/capitalfurcon.org/post/3mhqxg6ybnk23",
+            "asOf": "2026-03-23T21:01:56.196Z",
+            "confidence": 0.92
+          }
+        },
+        "dealers": {
+          "opens": {
+            "date": "2026-04-06",
+            "source": "https://bsky.app/profile/capitalfurcon.org/post/3mitn7s24oc22",
+            "asOf": "2026-04-06T16:02:34.722Z",
+            "confidence": 0.9
+          }
+        }
+      }
     }
   ]
 }

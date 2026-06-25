@@ -20,7 +20,31 @@
       ],
       "sources": [
         "fancons.com"
-      ]
+      ],
+      "keyDates": {
+        "registration": {
+          "opens": {
+            "date": "2026-06-20",
+            "source": "https://bsky.app/profile/goldenhorn.si/post/3mim3qjgquppc",
+            "asOf": "2026-04-03T16:01:10.606Z",
+            "confidence": 0.95
+          }
+        },
+        "dealers": {
+          "opens": {
+            "date": "2026-04-23",
+            "source": "https://bsky.app/profile/goldenhorn.si/post/3mk6bpejmbj2i",
+            "asOf": "2026-04-23T15:01:01.248Z",
+            "confidence": 0.9
+          },
+          "closes": {
+            "date": "2026-06-05",
+            "source": "https://bsky.app/profile/goldenhorn.si/post/3mmtrjqnxslql",
+            "asOf": "2026-05-27T15:00:30.301Z",
+            "confidence": 0.92
+          }
+        }
+      }
     },
     {
       "id": "goldenhorn-2025",

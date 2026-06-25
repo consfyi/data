@@ -17,7 +17,39 @@
       "latLng": [
         48.18527049999999,
         16.3833476
-      ]
+      ],
+      "keyDates": {
+        "registration": {
+          "opens": {
+            "date": "2025-11-15",
+            "source": "https://bsky.app/profile/awoostria.at/post/3m47e6goekk2o",
+            "asOf": "2025-10-27T21:25:11.274Z",
+            "confidence": 0.85
+          },
+          "closes": {
+            "date": "2026-01-31",
+            "source": "https://bsky.app/profile/awoostria.at/post/3mdlircoblc2a",
+            "asOf": "2026-01-29T19:15:37.832Z",
+            "confidence": 0.85
+          }
+        },
+        "dealers": {
+          "closes": {
+            "date": "2025-11-29",
+            "source": "https://bsky.app/profile/awoostria.at/post/3m6rbabnz5c24",
+            "asOf": "2025-11-29T11:10:50.447Z",
+            "confidence": 0.9
+          }
+        },
+        "panels": {
+          "opens": {
+            "date": "2026-03-07",
+            "source": "https://bsky.app/profile/awoostria.at/post/3mgikvdorz22u",
+            "asOf": "2026-03-07T19:31:16.261Z",
+            "confidence": 0.88
+          }
+        }
+      }
     },
     {
       "id": "awoostria-2025",

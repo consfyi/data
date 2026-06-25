@@ -20,7 +20,39 @@
       ],
       "sources": [
         "fancons.com"
-      ]
+      ],
+      "keyDates": {
+        "registration": {
+          "opens": {
+            "date": "2026-04-19",
+            "source": "https://bsky.app/profile/fluufffcon.bsky.social/post/3mietshbexx23",
+            "asOf": "2026-03-31T18:50:27.315Z",
+            "confidence": 0.9
+          }
+        },
+        "dealers": {
+          "opens": {
+            "date": "2026-04-26",
+            "source": "https://bsky.app/profile/fluufffcon.bsky.social/post/3mjx4hj3axt2o",
+            "asOf": "2026-04-20T18:38:30.711Z",
+            "confidence": 0.85
+          },
+          "closes": {
+            "date": "2026-05-24",
+            "source": "https://bsky.app/profile/fluufffcon.bsky.social/post/3mm752mirfd2j",
+            "asOf": "2026-05-19T10:00:52.951Z",
+            "confidence": 0.85
+          }
+        },
+        "panels": {
+          "closes": {
+            "date": "2026-08-01",
+            "source": "https://bsky.app/profile/fluufffcon.bsky.social/post/3mn2vit6rim2e",
+            "asOf": "2026-05-30T11:00:12.493Z",
+            "confidence": 0.85
+          }
+        }
+      }
     },
     {
       "id": "fluufff-2025",

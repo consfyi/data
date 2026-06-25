@@ -17,7 +17,25 @@
       "latLng": [
         37.3291639,
         -121.889011
-      ]
+      ],
+      "keyDates": {
+        "dealers": {
+          "closes": {
+            "date": "2026-06-28",
+            "source": "https://bsky.app/profile/furcon.bsky.social/post/3motbbwmbbm24",
+            "asOf": "2026-06-21T21:00:11.467Z",
+            "confidence": 0.9
+          }
+        },
+        "panels": {
+          "closes": {
+            "date": "2026-06-24",
+            "source": "https://bsky.app/profile/furcon.bsky.social/post/3mmf7nq6q5m2f",
+            "asOf": "2026-05-21T20:03:20.286Z",
+            "confidence": 0.9
+          }
+        }
+      }
     },
     {
       "id": "further-confusion-2026",

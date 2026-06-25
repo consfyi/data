@@ -17,7 +17,53 @@
       "latLng": [
         29.8391454,
         -97.9691577
-      ]
+      ],
+      "keyDates": {
+        "registration": {
+          "opens": {
+            "date": "2025-10-12",
+            "source": "https://bsky.app/profile/furryinvasion.bsky.social/post/3m2zskkp7uc2t",
+            "asOf": "2025-10-12T23:01:20.467Z",
+            "confidence": 0.85
+          }
+        },
+        "hotel": {
+          "opens": {
+            "date": "2026-04-01",
+            "source": "https://bsky.app/profile/furryinvasion.bsky.social/post/3mih66nmsg22x",
+            "asOf": "2026-04-01T17:01:33.539Z",
+            "confidence": 0.95
+          }
+        },
+        "dealers": {
+          "opens": {
+            "date": "2026-02-01",
+            "source": "https://bsky.app/profile/furryinvasion.bsky.social/post/3mdsvyszkfc2o",
+            "asOf": "2026-02-01T18:01:06.660Z",
+            "confidence": 0.95
+          },
+          "closes": {
+            "date": "2026-02-18",
+            "source": "https://bsky.app/profile/furryinvasion.bsky.social/post/3mdsvyszkfc2o",
+            "asOf": "2026-02-01T18:01:06.660Z",
+            "confidence": 0.95
+          }
+        },
+        "panels": {
+          "opens": {
+            "date": "2026-04-06",
+            "source": "https://bsky.app/profile/furryinvasion.bsky.social/post/3mitqjwomtc2y",
+            "asOf": "2026-04-06T17:01:56.353Z",
+            "confidence": 0.88
+          },
+          "closes": {
+            "date": "2026-07-01",
+            "source": "https://bsky.app/profile/furryinvasion.bsky.social/post/3mn3jnkakk224",
+            "asOf": "2026-05-30T17:00:45.745Z",
+            "confidence": 0.9
+          }
+        }
+      }
     },
     {
       "id": "alamo-city-furry-invasion-2025",

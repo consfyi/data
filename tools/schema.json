@@ -107,6 +107,152 @@
             "items": {
               "type": "string"
             }
+          },
+          "keyDates": {
+            "type": "object",
+            "properties": {
+              "registration": {
+                "type": "object",
+                "properties": {
+                  "opens": {
+                    "type": "object",
+                    "properties": {
+                      "date": { "type": "string", "format": "date" },
+                      "source": { "type": "string", "format": "uri" },
+                      "asOf": { "type": "string", "format": "date-time" },
+                      "confidence": { "type": "number", "minimum": 0, "maximum": 1 }
+                    },
+                    "required": ["date"],
+                    "additionalProperties": false
+                  },
+                  "closes": {
+                    "type": "object",
+                    "properties": {
+                      "date": { "type": "string", "format": "date" },
+                      "source": { "type": "string", "format": "uri" },
+                      "asOf": { "type": "string", "format": "date-time" },
+                      "confidence": { "type": "number", "minimum": 0, "maximum": 1 }
+                    },
+                    "required": ["date"],
+                    "additionalProperties": false
+                  }
+                },
+                "additionalProperties": false
+              },
+              "hotel": {
+                "type": "object",
+                "properties": {
+                  "opens": {
+                    "type": "object",
+                    "properties": {
+                      "date": { "type": "string", "format": "date" },
+                      "source": { "type": "string", "format": "uri" },
+                      "asOf": { "type": "string", "format": "date-time" },
+                      "confidence": { "type": "number", "minimum": 0, "maximum": 1 }
+                    },
+                    "required": ["date"],
+                    "additionalProperties": false
+                  },
+                  "closes": {
+                    "type": "object",
+                    "properties": {
+                      "date": { "type": "string", "format": "date" },
+                      "source": { "type": "string", "format": "uri" },
+                      "asOf": { "type": "string", "format": "date-time" },
+                      "confidence": { "type": "number", "minimum": 0, "maximum": 1 }
+                    },
+                    "required": ["date"],
+                    "additionalProperties": false
+                  }
+                },
+                "additionalProperties": false
+              },
+              "dealers": {
+                "type": "object",
+                "properties": {
+                  "opens": {
+                    "type": "object",
+                    "properties": {
+                      "date": { "type": "string", "format": "date" },
+                      "source": { "type": "string", "format": "uri" },
+                      "asOf": { "type": "string", "format": "date-time" },
+                      "confidence": { "type": "number", "minimum": 0, "maximum": 1 }
+                    },
+                    "required": ["date"],
+                    "additionalProperties": false
+                  },
+                  "closes": {
+                    "type": "object",
+                    "properties": {
+                      "date": { "type": "string", "format": "date" },
+                      "source": { "type": "string", "format": "uri" },
+                      "asOf": { "type": "string", "format": "date-time" },
+                      "confidence": { "type": "number", "minimum": 0, "maximum": 1 }
+                    },
+                    "required": ["date"],
+                    "additionalProperties": false
+                  }
+                },
+                "additionalProperties": false
+              },
+              "panels": {
+                "type": "object",
+                "properties": {
+                  "opens": {
+                    "type": "object",
+                    "properties": {
+                      "date": { "type": "string", "format": "date" },
+                      "source": { "type": "string", "format": "uri" },
+                      "asOf": { "type": "string", "format": "date-time" },
+                      "confidence": { "type": "number", "minimum": 0, "maximum": 1 }
+                    },
+                    "required": ["date"],
+                    "additionalProperties": false
+                  },
+                  "closes": {
+                    "type": "object",
+                    "properties": {
+                      "date": { "type": "string", "format": "date" },
+                      "source": { "type": "string", "format": "uri" },
+                      "asOf": { "type": "string", "format": "date-time" },
+                      "confidence": { "type": "number", "minimum": 0, "maximum": 1 }
+                    },
+                    "required": ["date"],
+                    "additionalProperties": false
+                  }
+                },
+                "additionalProperties": false
+              },
+              "volunteers": {
+                "type": "object",
+                "properties": {
+                  "opens": {
+                    "type": "object",
+                    "properties": {
+                      "date": { "type": "string", "format": "date" },
+                      "source": { "type": "string", "format": "uri" },
+                      "asOf": { "type": "string", "format": "date-time" },
+                      "confidence": { "type": "number", "minimum": 0, "maximum": 1 }
+                    },
+                    "required": ["date"],
+                    "additionalProperties": false
+                  },
+                  "closes": {
+                    "type": "object",
+                    "properties": {
+                      "date": { "type": "string", "format": "date" },
+                      "source": { "type": "string", "format": "uri" },
+                      "asOf": { "type": "string", "format": "date-time" },
+                      "confidence": { "type": "number", "minimum": 0, "maximum": 1 }
+                    },
+                    "required": ["date"],
+                    "additionalProperties": false
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "additionalProperties": false
           }
         },
         "required": ["id", "name", "url", "startDate", "endDate", "venue", "locale"]

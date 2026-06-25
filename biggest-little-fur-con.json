@@ -17,7 +17,33 @@
       "latLng": [
         39.5230411,
         -119.7812235
-      ]
+      ],
+      "keyDates": {
+        "registration": {
+          "opens": {
+            "date": "2026-05-11",
+            "source": "https://bsky.app/profile/goblfc.org/post/3mlm6a53a6p2n",
+            "asOf": "2026-05-11T21:01:16.836Z",
+            "confidence": 0.9
+          }
+        },
+        "hotel": {
+          "opens": {
+            "date": "2026-07-08",
+            "source": "https://bsky.app/profile/goblfc.org/post/3mnfsgvfbny2a",
+            "asOf": "2026-06-03T19:04:43.615Z",
+            "confidence": 0.95
+          }
+        },
+        "dealers": {
+          "closes": {
+            "date": "2026-05-29",
+            "source": "https://bsky.app/profile/goblfc.org/post/3mmza4jbnvq2n",
+            "asOf": "2026-05-29T19:04:50.582Z",
+            "confidence": 0.95
+          }
+        }
+      }
     },
     {
       "id": "biggest-little-fur-con-2025",

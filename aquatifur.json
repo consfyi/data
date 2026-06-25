@@ -17,7 +17,17 @@
       "latLng": [
         43.6652353,
         -89.7847062
-      ]
+      ],
+      "keyDates": {
+        "registration": {
+          "opens": {
+            "date": "2025-11-28",
+            "source": "https://bsky.app/profile/aquatifur.com/post/3m6pixmjspm27",
+            "asOf": "2025-11-28T10:23:50-08:00",
+            "confidence": 0.88
+          }
+        }
+      }
     },
     {
       "id": "aquatifur-2025",

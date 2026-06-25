@@ -17,7 +17,39 @@
       "latLng": [
         -33.8122314,
         151.0049991
-      ]
+      ],
+      "keyDates": {
+        "hotel": {
+          "opens": {
+            "date": "2026-05-04",
+            "source": "https://bsky.app/profile/aurawra.org/post/3mkzcqak22m2l",
+            "asOf": "2026-05-04T09:01:14.810Z",
+            "confidence": 0.92
+          }
+        },
+        "dealers": {
+          "opens": {
+            "date": "2025-12-14",
+            "source": "https://bsky.app/profile/aurawra.org/post/3m7w6i4jflq2n",
+            "asOf": "2025-12-14T03:30:01.954Z",
+            "confidence": 0.9
+          },
+          "closes": {
+            "date": "2026-01-16",
+            "source": "https://bsky.app/profile/aurawra.org/post/3mcjonuryy422",
+            "asOf": "2026-01-16T08:30:30.576Z",
+            "confidence": 0.9
+          }
+        },
+        "volunteers": {
+          "opens": {
+            "date": "2026-03-23",
+            "source": "https://bsky.app/profile/aurawra.org/post/3mhpk3khagr2w",
+            "asOf": "2026-03-23T07:30:39.798Z",
+            "confidence": 0.9
+          }
+        }
+      }
     },
     {
       "id": "aurawra-2025",

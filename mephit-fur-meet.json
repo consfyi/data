@@ -20,7 +20,25 @@
       ],
       "sources": [
         "fancons.com"
-      ]
+      ],
+      "keyDates": {
+        "hotel": {
+          "opens": {
+            "date": "2026-02-19",
+            "source": "https://bsky.app/profile/mephitfurmeet.org/post/3mfaao6ronk2h",
+            "asOf": "2026-02-19T18:41:49.287Z",
+            "confidence": 0.82
+          }
+        },
+        "panels": {
+          "opens": {
+            "date": "2026-04-16",
+            "source": "https://bsky.app/profile/mephitfurmeet.org/post/3mjlbed636c2f",
+            "asOf": "2026-04-16T01:34:15.718Z",
+            "confidence": 0.9
+          }
+        }
+      }
     },
     {
       "id": "mephit-fur-meet-2025",

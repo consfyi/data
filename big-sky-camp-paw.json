@@ -20,7 +20,37 @@
       ],
       "sources": [
         "fancons.com"
-      ]
+      ],
+      "keyDates": {
+        "registration": {
+          "opens": {
+            "date": "2026-03-09",
+            "source": "https://bsky.app/profile/camppaw.org/post/3mgngrf4f6c2l",
+            "asOf": "2026-03-09T18:00:47.268Z",
+            "confidence": 0.92
+          },
+          "closes": {
+            "date": "2026-07-14",
+            "source": "https://bsky.app/profile/camppaw.org/post/3mgngrf4f6c2l",
+            "asOf": "2026-03-09T18:00:47.268Z",
+            "confidence": 0.9
+          }
+        },
+        "panels": {
+          "opens": {
+            "date": "2026-04-25",
+            "source": "https://bsky.app/profile/camppaw.org/post/3mkdomxepkk2a",
+            "asOf": "2026-04-25T18:35:37.705Z",
+            "confidence": 0.9
+          },
+          "closes": {
+            "date": "2026-06-25",
+            "source": "https://bsky.app/profile/camppaw.org/post/3mkdomxepkk2a",
+            "asOf": "2026-04-25T18:35:37.705Z",
+            "confidence": 0.9
+          }
+        }
+      }
     },
     {
       "id": "big-sky-camp-paw-2025",

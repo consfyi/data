@@ -23,4 +23,6 @@ jobs:
           uv run tools/format.py *.json
           git diff --exit-code
       - name: Schema validation (materialize)
-        run: uv run tools/materialize.py "$RUNNER_TEMP/out"
+        run: |
+          mkdir "$RUNNER_TEMP/out"
+          uv run tools/materialize.py "$RUNNER_TEMP/out"

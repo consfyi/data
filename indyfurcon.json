@@ -17,7 +17,53 @@
       "latLng": [
         39.7665208,
         -86.1610453
-      ]
+      ],
+      "keyDates": {
+        "registration": {
+          "opens": {
+            "date": "2026-01-19",
+            "source": "https://bsky.app/profile/indyfurcon.org/post/3mcsbaye3zs2k",
+            "asOf": "2026-01-19T18:24:40.490Z",
+            "confidence": 0.88
+          },
+          "closes": {
+            "date": "2026-06-28",
+            "source": "https://bsky.app/profile/indyfurcon.org/post/3mnxflnw4p32j",
+            "asOf": "2026-06-10T19:02:39.956128075Z",
+            "confidence": 0.85
+          }
+        },
+        "hotel": {
+          "opens": {
+            "date": "2026-05-20",
+            "source": "https://bsky.app/profile/indyfurcon.org/post/3mmc6j7hldu2e",
+            "asOf": "2026-05-20T15:04:55.363480197Z",
+            "confidence": 0.92
+          }
+        },
+        "dealers": {
+          "opens": {
+            "date": "2026-03-16",
+            "source": "https://bsky.app/profile/indyfurcon.org/post/3mh6mqha6wf26",
+            "asOf": "2026-03-16T14:02:53.622359Z",
+            "confidence": 0.92
+          },
+          "closes": {
+            "date": "2026-07-10",
+            "source": "https://bsky.app/profile/indyfurcon.org/post/3mplvipgci72m",
+            "asOf": "2026-07-01T16:05:47.057145683Z",
+            "confidence": 0.95
+          }
+        },
+        "panels": {
+          "closes": {
+            "date": "2026-05-10",
+            "source": "https://bsky.app/profile/indyfurcon.org/post/3ml6xwyhnjg2z",
+            "asOf": "2026-05-06T15:04:10.758112Z",
+            "confidence": 0.9
+          }
+        }
+      }
     },
     {
       "id": "indyfurcon-2025",

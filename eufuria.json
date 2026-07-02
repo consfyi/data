@@ -17,7 +17,39 @@
       "latLng": [
         42.6498772,
         -73.7560941
-      ]
+      ],
+      "keyDates": {
+        "registration": {
+          "closes": {
+            "date": "2026-06-19",
+            "source": "https://bsky.app/profile/eufuria.org/post/3mobrelcj6k2c",
+            "asOf": "2026-06-14T22:00:04.860Z",
+            "confidence": 0.85
+          }
+        },
+        "hotel": {
+          "closes": {
+            "date": "2026-07-03",
+            "source": "https://bsky.app/profile/eufuria.org/post/3mpbmnnba4m2e",
+            "asOf": "2026-06-27T14:00:51.816Z",
+            "confidence": 0.95
+          }
+        },
+        "panels": {
+          "opens": {
+            "date": "2026-05-13",
+            "source": "https://bsky.app/profile/eufuria.org/post/3mlqedml5ap2b",
+            "asOf": "2026-05-13T13:01:15.158Z",
+            "confidence": 0.85
+          },
+          "closes": {
+            "date": "2026-07-08",
+            "source": "https://bsky.app/profile/eufuria.org/post/3mnrswazsqg2y",
+            "asOf": "2026-06-08T13:45:15.998Z",
+            "confidence": 0.9
+          }
+        }
+      }
     },
     {
       "id": "eufuria-2025",

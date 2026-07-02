@@ -20,7 +20,25 @@
       ],
       "sources": [
         "fancons.com"
-      ]
+      ],
+      "keyDates": {
+        "registration": {
+          "opens": {
+            "date": "2026-06-05",
+            "source": "https://bsky.app/profile/furrestcity.org/post/3mnldtyppck2g",
+            "asOf": "2026-06-05T23:59:35.606Z",
+            "confidence": 0.9
+          }
+        },
+        "panels": {
+          "closes": {
+            "date": "2026-07-20",
+            "source": "https://bsky.app/profile/furrestcity.org/post/3mnnnjc2wbs2f",
+            "asOf": "2026-06-06T21:57:53.201Z",
+            "confidence": 0.9
+          }
+        }
+      }
     },
     {
       "id": "furrest-city-2025",

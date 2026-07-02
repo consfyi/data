@@ -17,7 +17,17 @@
       "latLng": [
         33.7615717,
         -84.3859463
-      ]
+      ],
+      "keyDates": {
+        "registration": {
+          "opens": {
+            "date": "2026-07-01",
+            "source": "https://bsky.app/profile/furryweekend.com/post/3mpm7vel5tc2h",
+            "asOf": "2026-07-01T19:11:49.641Z",
+            "confidence": 0.95
+          }
+        }
+      }
     },
     {
       "id": "furry-weekend-atlanta-2026",

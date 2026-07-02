@@ -17,7 +17,41 @@
       "latLng": [
         38.6251397,
         -90.19092769999999
-      ]
+      ],
+      "keyDates": {
+        "registration": {
+          "opens": {
+            "date": "2026-01-02",
+            "source": "https://bsky.app/profile/gatewayfurmeet.org/post/3mbhi2llkh22p",
+            "asOf": "2026-01-02T18:01:53.221Z",
+            "confidence": 0.95
+          }
+        },
+        "hotel": {
+          "opens": {
+            "date": "2026-04-27",
+            "source": "https://bsky.app/profile/gatewayfurmeet.org/post/3mkikatstzl23",
+            "asOf": "2026-04-27T17:00:35.020189+00:00",
+            "confidence": 0.9
+          }
+        },
+        "dealers": {
+          "closes": {
+            "date": "2026-03-01",
+            "source": "https://bsky.app/profile/gatewayfurmeet.org/post/3mfwp7dh75224",
+            "asOf": "2026-02-28T17:00:31.214832+00:00",
+            "confidence": 0.92
+          }
+        },
+        "panels": {
+          "closes": {
+            "date": "2026-07-18",
+            "source": "https://bsky.app/profile/gatewayfurmeet.org/post/3mko24hbmpa2s",
+            "asOf": "2026-04-29T21:27:46.213660+00:00",
+            "confidence": 0.92
+          }
+        }
+      }
     },
     {
       "id": "gateway-furmeet-2025",

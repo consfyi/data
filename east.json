@@ -17,7 +17,17 @@
       "latLng": [
         50.61684409999999,
         10.7230377
-      ]
+      ],
+      "keyDates": {
+        "registration": {
+          "opens": {
+            "date": "2026-03-15",
+            "source": "https://bsky.app/profile/sachsenfurs.de/post/3mgdjuvxrtc2r",
+            "asOf": "2026-03-05T19:29:49.437Z",
+            "confidence": 0.9
+          }
+        }
+      }
     },
     {
       "id": "east-13",

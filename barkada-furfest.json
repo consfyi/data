@@ -20,7 +20,39 @@
       ],
       "sources": [
         "fancons.com"
-      ]
+      ],
+      "keyDates": {
+        "registration": {
+          "opens": {
+            "date": "2026-04-03",
+            "source": "https://bsky.app/profile/barkadafurfest.bsky.social/post/3mie7rmmhdc2p",
+            "asOf": "2026-03-31T12:52:04.553Z",
+            "confidence": 0.9
+          },
+          "closes": {
+            "date": "2026-07-20",
+            "source": "https://bsky.app/profile/barkadafurfest.bsky.social/post/3modcauxwik2e",
+            "asOf": "2026-06-15T12:34:54.146Z",
+            "confidence": 0.93
+          }
+        },
+        "dealers": {
+          "opens": {
+            "date": "2026-03-30",
+            "source": "https://bsky.app/profile/barkadafurfest.bsky.social/post/3mibstosk3k2p",
+            "asOf": "2026-03-30T13:55:15.832Z",
+            "confidence": 0.9
+          }
+        },
+        "volunteers": {
+          "opens": {
+            "date": "2026-04-10",
+            "source": "https://bsky.app/profile/barkadafurfest.bsky.social/post/3mj5fttiyws2r",
+            "asOf": "2026-04-10T13:17:14.794Z",
+            "confidence": 0.9
+          }
+        }
+      }
     },
     {
       "id": "barkada-furfest-2025",

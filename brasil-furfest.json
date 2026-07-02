@@ -17,7 +17,17 @@
       "latLng": [
         -22.861375600000002,
         -47.14807400000001
-      ]
+      ],
+      "keyDates": {
+        "volunteers": {
+          "opens": {
+            "date": "2026-03-07",
+            "source": "https://bsky.app/profile/brasilfurfest.bsky.social/post/3mghfoc5nbc24",
+            "asOf": "2026-03-07T08:25:11.328Z",
+            "confidence": 0.88
+          }
+        }
+      }
     },
     {
       "id": "brasil-furfest-2025",

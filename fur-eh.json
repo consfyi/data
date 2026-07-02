@@ -17,7 +17,39 @@
       "latLng": [
         53.482442,
         -113.4929521
-      ]
+      ],
+      "keyDates": {
+        "registration": {
+          "closes": {
+            "date": "2026-06-11",
+            "source": "https://bsky.app/profile/fur-eh.bsky.social/post/3mnhrzm6hyr2n",
+            "asOf": "2026-06-04T14:02:36.412398460Z",
+            "confidence": 0.85
+          }
+        },
+        "dealers": {
+          "opens": {
+            "date": "2026-05-22",
+            "source": "https://bsky.app/profile/fur-eh.bsky.social/post/3mmazeqovyy2h",
+            "asOf": "2026-05-20T04:00:16.954773206Z",
+            "confidence": 0.85
+          },
+          "closes": {
+            "date": "2026-06-12",
+            "source": "https://bsky.app/profile/fur-eh.bsky.social/post/3mnt3ypudqh2a",
+            "asOf": "2026-06-09T02:00:21.439458030Z",
+            "confidence": 0.85
+          }
+        },
+        "panels": {
+          "closes": {
+            "date": "2026-06-30",
+            "source": "https://bsky.app/profile/fur-eh.bsky.social/post/3mpjs5wgjwj2d",
+            "asOf": "2026-06-30T20:00:44.397035309Z",
+            "confidence": 0.95
+          }
+        }
+      }
     },
     {
       "id": "fur-eh-2025",

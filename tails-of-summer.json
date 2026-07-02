@@ -20,7 +20,41 @@
       ],
       "sources": [
         "fancons.com"
-      ]
+      ],
+      "keyDates": {
+        "registration": {
+          "closes": {
+            "date": "2026-07-27",
+            "source": "https://bsky.app/profile/tailsofsummer.com/post/3mo72d6ubuv2m",
+            "asOf": "2026-06-13T20:02:22.571Z",
+            "confidence": 0.95
+          }
+        },
+        "hotel": {
+          "opens": {
+            "date": "2026-06-05",
+            "source": "https://bsky.app/profile/tailsofsummer.com/post/3mnk72fggdd2d",
+            "asOf": "2026-06-05T13:01:01.631Z",
+            "confidence": 0.85
+          }
+        },
+        "dealers": {
+          "closes": {
+            "date": "2026-06-30",
+            "source": "https://bsky.app/profile/tailsofsummer.com/post/3mmrxdz3k7k2l",
+            "asOf": "2026-05-26T21:39:20.782Z",
+            "confidence": 0.88
+          }
+        },
+        "panels": {
+          "closes": {
+            "date": "2026-06-10",
+            "source": "https://bsky.app/profile/tailsofsummer.com/post/3mnl2cyyt2s2v",
+            "asOf": "2026-06-05T21:09:01.788Z",
+            "confidence": 0.9
+          }
+        }
+      }
     }
   ]
 }

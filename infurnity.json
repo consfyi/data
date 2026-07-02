@@ -26,7 +26,47 @@
       ],
       "sources": [
         "fancons.com"
-      ]
+      ],
+      "keyDates": {
+        "hotel": {
+          "opens": {
+            "date": "2026-06-01",
+            "source": "https://bsky.app/profile/infurnity.bsky.social/post/3mn4qopukq225",
+            "asOf": "2026-05-31T04:39:21.144Z",
+            "confidence": 0.85
+          },
+          "closes": {
+            "date": "2026-05-25",
+            "source": "https://bsky.app/profile/infurnity.bsky.social/post/3mmbn366lys2w",
+            "asOf": "2026-05-20T09:52:50.903Z",
+            "confidence": 0.85
+          }
+        },
+        "dealers": {
+          "closes": {
+            "date": "2026-07-31",
+            "source": "https://bsky.app/profile/infurnity.bsky.social/post/3mopfk2mkyc2h",
+            "asOf": "2026-06-20T08:05:40.141Z",
+            "confidence": 0.92
+          }
+        },
+        "panels": {
+          "closes": {
+            "date": "2026-08-15",
+            "source": "https://bsky.app/profile/infurnity.bsky.social/post/3mpixnbjg2c23",
+            "asOf": "2026-06-30T12:06:08.853Z",
+            "confidence": 0.9
+          }
+        },
+        "volunteers": {
+          "closes": {
+            "date": "2026-07-31",
+            "source": "https://bsky.app/profile/infurnity.bsky.social/post/3mcms3y6ip22c",
+            "asOf": "2026-01-17T14:10:07.716Z",
+            "confidence": 0.85
+          }
+        }
+      }
     },
     {
       "id": "infurnity-2025",

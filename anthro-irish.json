@@ -17,7 +17,31 @@
       "latLng": [
         51.9013551,
         -8.4675944
-      ]
+      ],
+      "keyDates": {
+        "registration": {
+          "opens": {
+            "date": "2025-10-08",
+            "source": "https://bsky.app/profile/anthro.irish/post/3m2pd7bxpd22d",
+            "asOf": "2025-10-08T18:59:58.670Z",
+            "confidence": 0.95
+          }
+        },
+        "panels": {
+          "opens": {
+            "date": "2026-05-07",
+            "source": "https://bsky.app/profile/anthro.irish/post/3mlbsmruy6k24",
+            "asOf": "2026-05-07T18:06:59.029Z",
+            "confidence": 0.85
+          },
+          "closes": {
+            "date": "2026-06-04",
+            "source": "https://bsky.app/profile/anthro.irish/post/3mlbsmruy6k24",
+            "asOf": "2026-05-07T18:06:59.029Z",
+            "confidence": 0.85
+          }
+        }
+      }
     }
   ]
 }

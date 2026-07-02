@@ -17,7 +17,53 @@
       "latLng": [
         39.957391,
         -75.16726830000002
-      ]
+      ],
+      "keyDates": {
+        "registration": {
+          "opens": {
+            "date": "2025-11-20",
+            "source": "https://bsky.app/profile/furrydelphia.org/post/3m635nrkeis24",
+            "asOf": "2025-11-20T16:08:14.103Z",
+            "confidence": 0.9
+          },
+          "closes": {
+            "date": "2026-07-19",
+            "source": "https://bsky.app/profile/furrydelphia.org/post/3mpjso4l7up2j",
+            "asOf": "2026-06-30T20:09:47.275Z",
+            "confidence": 0.9
+          }
+        },
+        "hotel": {
+          "opens": {
+            "date": "2026-05-15",
+            "source": "https://bsky.app/profile/furrydelphia.org/post/3mlw4qz4j652b",
+            "asOf": "2026-05-15T20:01:31.968Z",
+            "confidence": 0.9
+          }
+        },
+        "dealers": {
+          "opens": {
+            "date": "2026-02-02",
+            "source": "https://bsky.app/profile/furrydelphia.org/post/3mdvx775dom2p",
+            "asOf": "2026-02-02T23:00:32.548Z",
+            "confidence": 0.9
+          },
+          "closes": {
+            "date": "2026-03-02",
+            "source": "https://bsky.app/profile/furrydelphia.org/post/3mdvx775dom2p",
+            "asOf": "2026-02-02T23:00:32.548Z",
+            "confidence": 0.9
+          }
+        },
+        "panels": {
+          "opens": {
+            "date": "2026-03-11",
+            "source": "https://bsky.app/profile/furrydelphia.org/post/3mgsv44q3x72b",
+            "asOf": "2026-03-11T22:00:37.409Z",
+            "confidence": 0.85
+          }
+        }
+      }
     },
     {
       "id": "furrydelphia-2025",

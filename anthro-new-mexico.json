@@ -17,7 +17,33 @@
       "latLng": [
         35.0843859,
         -106.650422
-      ]
+      ],
+      "keyDates": {
+        "registration": {
+          "opens": {
+            "date": "2025-11-06",
+            "source": "https://bsky.app/profile/anthronewmexico.bsky.social/post/3m4yg3emohc2f",
+            "asOf": "2025-11-06T20:35:49.400Z",
+            "confidence": 0.9
+          }
+        },
+        "hotel": {
+          "opens": {
+            "date": "2026-06-16",
+            "source": "https://bsky.app/profile/anthronewmexico.bsky.social/post/3mofz7budwk2n",
+            "asOf": "2026-06-16T14:30:56.086Z",
+            "confidence": 0.9
+          }
+        },
+        "dealers": {
+          "opens": {
+            "date": "2026-01-25",
+            "source": "https://bsky.app/profile/anthronewmexico.bsky.social/post/3mdavwis3es2i",
+            "asOf": "2026-01-25T14:11:53.542Z",
+            "confidence": 0.88
+          }
+        }
+      }
     }
   ]
 }

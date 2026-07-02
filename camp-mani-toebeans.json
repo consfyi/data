@@ -17,7 +17,17 @@
       "latLng": [
         50.6643681,
         -100.0189803
-      ]
+      ],
+      "keyDates": {
+        "registration": {
+          "closes": {
+            "date": "2026-08-14",
+            "source": "https://bsky.app/profile/campmani-toebeans.bsky.social/post/3moemvejnyc23",
+            "asOf": "2026-06-16T01:17:58.645Z",
+            "confidence": 0.9
+          }
+        }
+      }
     },
     {
       "id": "camp-mani-toebeans-2025",

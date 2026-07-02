@@ -17,7 +17,41 @@
       "latLng": [
         36.0650536,
         -95.8576868
-      ]
+      ],
+      "keyDates": {
+        "registration": {
+          "opens": {
+            "date": "2026-01-09",
+            "source": "https://bsky.app/profile/tailsandtornadoes.org/post/3mbz3ap4afi2t",
+            "asOf": "2026-01-09T18:00:34.831Z",
+            "confidence": 0.85
+          }
+        },
+        "hotel": {
+          "opens": {
+            "date": "2026-03-06",
+            "source": "https://bsky.app/profile/tailsandtornadoes.org/post/3mgfvg3an3w2m",
+            "asOf": "2026-03-06T18:01:34.870Z",
+            "confidence": 0.9
+          }
+        },
+        "dealers": {
+          "opens": {
+            "date": "2026-03-15",
+            "source": "https://bsky.app/profile/tailsandtornadoes.org/post/3mglvktp5ss2e",
+            "asOf": "2026-03-09T03:20:14.307Z",
+            "confidence": 0.9
+          }
+        },
+        "panels": {
+          "closes": {
+            "date": "2026-07-15",
+            "source": "https://bsky.app/profile/tailsandtornadoes.org/post/3mkkxe4uhkh2c",
+            "asOf": "2026-04-28T16:00:23.299Z",
+            "confidence": 0.88
+          }
+        }
+      }
     },
     {
       "id": "tails-and-tornadoes-fur-con-2025",

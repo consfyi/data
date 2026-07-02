@@ -34,6 +34,14 @@
             "asOf": "2026-02-20T02:23:21.466Z",
             "confidence": 0.9
           }
+        },
+        "panels": {
+          "closes": {
+            "date": "2026-06-23",
+            "source": "https://bsky.app/profile/anthrocon.org/post/3molfwwp2ak2d",
+            "asOf": "2026-06-18T18:02:13.282Z",
+            "confidence": 0.9
+          }
         }
       }
     },

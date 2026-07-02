@@ -50,6 +50,12 @@
             "source": "https://bsky.app/profile/fblacklight.bsky.social/post/3mnmst7eeok2w",
             "asOf": "2026-06-06T14:00:14.907Z",
             "confidence": 0.9
+          },
+          "closes": {
+            "date": "2026-07-15",
+            "source": "https://bsky.app/profile/fblacklight.bsky.social/post/3mpgqwfnlav23",
+            "asOf": "2026-06-29T15:00:39.489Z",
+            "confidence": 0.95
           }
         }
       }

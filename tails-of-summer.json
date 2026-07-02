@@ -25,9 +25,17 @@
         "registration": {
           "closes": {
             "date": "2026-07-27",
-            "source": "https://bsky.app/profile/tailsofsummer.com/post/3mo6zhdxfxt2x",
-            "asOf": "2026-06-13T19:46:48.396Z",
-            "confidence": 0.92
+            "source": "https://bsky.app/profile/tailsofsummer.com/post/3mo72d6ubuv2m",
+            "asOf": "2026-06-13T20:02:22.571Z",
+            "confidence": 0.95
+          }
+        },
+        "hotel": {
+          "opens": {
+            "date": "2026-06-05",
+            "source": "https://bsky.app/profile/tailsofsummer.com/post/3mnk72fggdd2d",
+            "asOf": "2026-06-05T13:01:01.631Z",
+            "confidence": 0.85
           }
         },
         "dealers": {

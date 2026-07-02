@@ -40,10 +40,10 @@
         },
         "dealers": {
           "opens": {
-            "date": "2026-02-07",
-            "source": "https://bsky.app/profile/stratosfur.org/post/3me7idshe5t2l",
-            "asOf": "2026-02-06T18:01:19.175139Z",
-            "confidence": 0.88
+            "date": "2026-02-08",
+            "source": "https://bsky.app/profile/stratosfur.org/post/3meejidnyko2l",
+            "asOf": "2026-02-08T18:05:03.874130Z",
+            "confidence": 0.8
           },
           "closes": {
             "date": "2026-04-07",

@@ -32,6 +32,14 @@
             "asOf": "2026-06-02T18:06:26.555Z",
             "confidence": 0.85
           }
+        },
+        "panels": {
+          "closes": {
+            "date": "2026-05-31",
+            "source": "https://bsky.app/profile/wildnorth.bsky.social/post/3mknsg26xcc2a",
+            "asOf": "2026-04-29T19:09:58.132Z",
+            "confidence": 0.9
+          }
         }
       }
     },

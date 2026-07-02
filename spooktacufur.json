@@ -20,7 +20,33 @@
       ],
       "sources": [
         "fancons.com"
-      ]
+      ],
+      "keyDates": {
+        "dealers": {
+          "opens": {
+            "date": "2026-04-21",
+            "source": "https://bsky.app/profile/spooktacufur.com/post/3mjzhpvbt3c2l",
+            "asOf": "2026-04-21T17:05:22.548Z",
+            "confidence": 0.85
+          }
+        },
+        "panels": {
+          "opens": {
+            "date": "2026-06-19",
+            "source": "https://bsky.app/profile/spooktacufur.com/post/3mooct7c6zk2m",
+            "asOf": "2026-06-19T21:44:26.032Z",
+            "confidence": 0.95
+          }
+        },
+        "volunteers": {
+          "opens": {
+            "date": "2026-05-14",
+            "source": "https://bsky.app/profile/spooktacufur.com/post/3mlt6lv6zzc2w",
+            "asOf": "2026-05-14T15:56:29.415Z",
+            "confidence": 0.95
+          }
+        }
+      }
     },
     {
       "id": "spooktacufur-2025",

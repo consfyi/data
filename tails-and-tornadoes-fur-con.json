@@ -35,6 +35,14 @@
             "confidence": 0.9
           }
         },
+        "dealers": {
+          "opens": {
+            "date": "2026-03-15",
+            "source": "https://bsky.app/profile/tailsandtornadoes.org/post/3mglvktp5ss2e",
+            "asOf": "2026-03-09T03:20:14.307Z",
+            "confidence": 0.9
+          }
+        },
         "panels": {
           "closes": {
             "date": "2026-07-15",

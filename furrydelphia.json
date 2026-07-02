@@ -25,6 +25,12 @@
             "source": "https://bsky.app/profile/furrydelphia.org/post/3m635nrkeis24",
             "asOf": "2025-11-20T16:08:14.103Z",
             "confidence": 0.9
+          },
+          "closes": {
+            "date": "2026-07-19",
+            "source": "https://bsky.app/profile/furrydelphia.org/post/3mpjso4l7up2j",
+            "asOf": "2026-06-30T20:09:47.275Z",
+            "confidence": 0.9
           }
         },
         "hotel": {

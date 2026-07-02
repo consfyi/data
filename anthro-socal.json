@@ -50,6 +50,12 @@
           }
         },
         "panels": {
+          "opens": {
+            "date": "2026-04-30",
+            "source": "https://bsky.app/profile/anthrosocal.org/post/3mkqdyzt2db2j",
+            "asOf": "2026-04-30T19:30:07.000Z",
+            "confidence": 0.9
+          },
           "closes": {
             "date": "2026-06-22",
             "source": "https://bsky.app/profile/anthrosocal.org/post/3movedespfg2g",

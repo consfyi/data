@@ -36,10 +36,24 @@
           }
         },
         "dealers": {
+          "opens": {
+            "date": "2026-04-16",
+            "source": "https://bsky.app/profile/goblfc.org/post/3mjnfxkjmta2c",
+            "asOf": "2026-04-16T22:01:53.648Z",
+            "confidence": 0.85
+          },
           "closes": {
             "date": "2026-05-29",
             "source": "https://bsky.app/profile/goblfc.org/post/3mmza4jbnvq2n",
             "asOf": "2026-05-29T19:04:50.582Z",
+            "confidence": 0.95
+          }
+        },
+        "panels": {
+          "closes": {
+            "date": "2026-07-14",
+            "source": "https://bsky.app/profile/goblfc.org/post/3mpjse6tbyh26",
+            "asOf": "2026-06-30T20:04:14.356Z",
             "confidence": 0.95
           }
         }

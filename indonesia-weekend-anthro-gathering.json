@@ -44,6 +44,14 @@
             "confidence": 0.9
           }
         },
+        "dealers": {
+          "opens": {
+            "date": "2026-01-31",
+            "source": "https://bsky.app/profile/iwag.furries.id/post/3mdpvgo6gfs2g",
+            "asOf": "2026-01-31T13:12:58.367Z",
+            "confidence": 0.95
+          }
+        },
         "panels": {
           "opens": {
             "date": "2026-02-02",

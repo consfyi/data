@@ -50,6 +50,14 @@
             "confidence": 0.92
           }
         },
+        "panels": {
+          "closes": {
+            "date": "2026-08-15",
+            "source": "https://bsky.app/profile/infurnity.bsky.social/post/3mpixnbjg2c23",
+            "asOf": "2026-06-30T12:06:08.853Z",
+            "confidence": 0.9
+          }
+        },
         "volunteers": {
           "closes": {
             "date": "2026-07-31",

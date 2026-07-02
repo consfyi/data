@@ -51,10 +51,10 @@
         },
         "panels": {
           "opens": {
-            "date": "2026-04-06",
-            "source": "https://bsky.app/profile/furryinvasion.bsky.social/post/3mitqjwomtc2y",
-            "asOf": "2026-04-06T17:01:56.353Z",
-            "confidence": 0.88
+            "date": "2026-05-04",
+            "source": "https://bsky.app/profile/furryinvasion.bsky.social/post/3ml25n3bibk2j",
+            "asOf": "2026-05-04T17:02:42.153Z",
+            "confidence": 0.9
           },
           "closes": {
             "date": "2026-07-01",

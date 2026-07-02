@@ -32,25 +32,17 @@
         },
         "hotel": {
           "opens": {
-            "date": "2026-06-05",
-            "source": "https://bsky.app/profile/tailsofsummer.com/post/3mnk72fggdd2d",
-            "asOf": "2026-06-05T13:01:01.631Z",
-            "confidence": 0.85
-          }
-        },
-        "dealers": {
-          "closes": {
-            "date": "2026-06-30",
-            "source": "https://bsky.app/profile/tailsofsummer.com/post/3mmrxdz3k7k2l",
-            "asOf": "2026-05-26T21:39:20.782Z",
-            "confidence": 0.88
+            "date": "2026-06-10",
+            "source": "https://bsky.app/profile/tailsofsummer.com/post/3mnxfpiz7hd2d",
+            "asOf": "2026-06-10T19:04:49.086Z",
+            "confidence": 0.95
           }
         },
         "panels": {
           "closes": {
-            "date": "2026-06-10",
-            "source": "https://bsky.app/profile/tailsofsummer.com/post/3mnl2cyyt2s2v",
-            "asOf": "2026-06-05T21:09:01.788Z",
+            "date": "2026-06-09",
+            "source": "https://bsky.app/profile/tailsofsummer.com/post/3mnuk46bljh2j",
+            "asOf": "2026-06-09T15:45:29.948Z",
             "confidence": 0.9
           }
         }

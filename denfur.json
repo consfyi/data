@@ -21,18 +21,18 @@
       "keyDates": {
         "registration": {
           "opens": {
-            "date": "2025-10-03",
-            "source": "https://bsky.app/profile/denfur.org/post/3m2cya6ts5o2d",
-            "asOf": "2025-10-03T14:11:40-07:00",
-            "confidence": 0.85
+            "date": "2026-03-24",
+            "source": "https://bsky.app/profile/denfur.org/post/3mhtqqezdew27",
+            "asOf": "2026-03-24T16:40:21-07:00",
+            "confidence": 0.95
           }
         },
         "hotel": {
           "opens": {
-            "date": "2026-01-22",
-            "source": "https://bsky.app/profile/denfur.org/post/3mczoqbrjps2y",
-            "asOf": "2026-01-22T09:14:30-08:00",
-            "confidence": 0.85
+            "date": "2026-06-28",
+            "source": "https://bsky.app/profile/denfur.org/post/3mpekvy6u4f26",
+            "asOf": "2026-06-28T18:07:43.380Z",
+            "confidence": 0.8
           }
         },
         "dealers": {

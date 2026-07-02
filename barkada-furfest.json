@@ -51,6 +51,14 @@
             "asOf": "2026-04-10T13:17:14.794Z",
             "confidence": 0.9
           }
+        },
+        "panels": {
+          "opens": {
+            "date": "2026-06-28",
+            "source": "https://bsky.app/profile/barkadafurfest.bsky.social/post/3mpd7g4aejc2r",
+            "asOf": "2026-06-28T05:09:19.933Z",
+            "confidence": 0.95
+          }
         }
       }
     },

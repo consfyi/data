@@ -26,6 +26,22 @@
             "asOf": "2025-11-28T10:23:50-08:00",
             "confidence": 0.88
           }
+        },
+        "dealers": {
+          "opens": {
+            "date": "2026-07-01",
+            "source": "https://bsky.app/profile/aquatifur.com/post/3mplyvivyxk26",
+            "asOf": "2026-07-01T17:06:37.996Z",
+            "confidence": 0.9
+          }
+        },
+        "panels": {
+          "opens": {
+            "date": "2026-07-01",
+            "source": "https://bsky.app/profile/aquatifur.com/post/3mplyvivyxk26",
+            "asOf": "2026-07-01T17:06:37.996Z",
+            "confidence": 0.9
+          }
         }
       }
     },

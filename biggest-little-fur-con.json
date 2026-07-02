@@ -56,6 +56,14 @@
             "asOf": "2026-06-30T20:04:14.356Z",
             "confidence": 0.95
           }
+        },
+        "volunteers": {
+          "opens": {
+            "date": "2026-04-17",
+            "source": "https://bsky.app/profile/goblfc.org/post/3mjpfqwvwnp2o",
+            "asOf": "2026-04-17T17:03:32.128Z",
+            "confidence": 1
+          }
         }
       }
     },

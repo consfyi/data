@@ -26,6 +26,14 @@
             "asOf": "2026-03-07T08:25:11.328Z",
             "confidence": 0.88
           }
+        },
+        "panels": {
+          "opens": {
+            "date": "2026-05-01",
+            "source": "https://bsky.app/profile/brasilfurfest.bsky.social/post/3mk55cx7myk24",
+            "asOf": "2026-04-23T04:09:49.954Z",
+            "confidence": 0.85
+          }
         }
       }
     },

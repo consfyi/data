@@ -19,14 +19,6 @@
         -113.4929521
       ],
       "keyDates": {
-        "registration": {
-          "closes": {
-            "date": "2026-06-11",
-            "source": "https://bsky.app/profile/fur-eh.bsky.social/post/3mnhrzm6hyr2n",
-            "asOf": "2026-06-04T14:02:36.412398460Z",
-            "confidence": 0.85
-          }
-        },
         "dealers": {
           "opens": {
             "date": "2026-05-22",
@@ -47,6 +39,14 @@
             "source": "https://bsky.app/profile/fur-eh.bsky.social/post/3mpjs5wgjwj2d",
             "asOf": "2026-06-30T20:00:44.397035309Z",
             "confidence": 0.95
+          }
+        },
+        "volunteers": {
+          "opens": {
+            "date": "2026-07-02",
+            "source": "https://bsky.app/profile/fur-eh.bsky.social/post/3mpo726tt5f2c",
+            "asOf": "2026-07-02T14:01:56.406380344Z",
+            "confidence": 0.8
           }
         }
       }

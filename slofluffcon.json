@@ -6,6 +6,23 @@
   },
   "events": [
     {
+      "id": "slofluffcon-2027",
+      "name": "SloFluffCon 2027",
+      "url": "https://slofluffcon.org",
+      "startDate": "2027-01-21",
+      "endDate": "2027-01-24",
+      "venue": "Grand Hotel Union",
+      "address": "Miklošičeva cesta 1, 1000 Ljubljana, Slovenija",
+      "locale": "sl-SI",
+      "latLng": [
+        46.0527237,
+        14.506327
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    },
+    {
       "id": "slofluffcon-2026",
       "name": "SloFluffCon 2026",
       "url": "https://slofluffcon.org",

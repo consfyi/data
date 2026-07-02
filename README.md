@@ -41,6 +41,18 @@ interface Series {
   /// The human-readable name for the convention series.
   name: string;
 
+  /// The convention's official Bluesky account.
+  ///
+  /// The `did` is the canonical, stable identifier for the account. The
+  /// `handle` is a human-readable cache of the account's current handle and may
+  /// change over time.
+  ///
+  /// When materialized, this is copied onto each published Event record.
+  bluesky?: {
+    did: string;
+    handle?: string;
+  };
+
   /// All instances of the convention series.
   events: Event[];
 }
@@ -130,6 +142,43 @@ interface Event {
 
   /// Sources this data is from.
   sources?: string[];
+
+  /// Lead-up deadlines for the convention instance, e.g. when registration,
+  /// hotel booking, dealer applications, panel submissions, and volunteer
+  /// signups open and close.
+  ///
+  /// These are automatically extracted from the convention's Bluesky posts,
+  /// each with a `source` citation linking to the announcement post. As such,
+  /// they may be incomplete or inaccurate, and consumers should treat the
+  /// official convention website as authoritative.
+  ///
+  /// Each deadline records the `date` (ISO 8601 yyyy-MM-dd), the `source` URI of
+  /// the announcement post it was extracted from, the `asOf` timestamp (ISO 8601
+  /// date-time) of when the source was observed, and a `confidence` between 0
+  /// and 1.
+  keyDates?: {
+    registration?: KeyDate;
+    hotel?: KeyDate;
+    dealers?: KeyDate;
+    panels?: KeyDate;
+    volunteers?: KeyDate;
+  };
+}
+
+/// An opening and/or closing deadline extracted from a convention announcement.
+interface KeyDate {
+  opens?: {
+    date: string;
+    source?: string;
+    asOf?: string;
+    confidence?: number;
+  };
+  closes?: {
+    date: string;
+    source?: string;
+    asOf?: string;
+    confidence?: number;
+  };
 }
 ```
 

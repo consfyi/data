@@ -20,7 +20,45 @@
       ],
       "sources": [
         "fancons.com"
-      ]
+      ],
+      "keyDates": {
+        "registration": {
+          "opens": {
+            "date": "2026-06-01",
+            "source": "https://bsky.app/profile/furnavia.bsky.social/post/3mnajdiupos2e",
+            "asOf": "2026-06-01T16:38:27.470Z",
+            "confidence": 0.9
+          }
+        },
+        "dealers": {
+          "opens": {
+            "date": "2026-06-01",
+            "source": "https://bsky.app/profile/furnavia.bsky.social/post/3mnalnlvmck2b",
+            "asOf": "2026-06-01T17:19:53.671Z",
+            "confidence": 0.9
+          },
+          "closes": {
+            "date": "2026-06-30",
+            "source": "https://bsky.app/profile/furnavia.bsky.social/post/3moyabjmda22z",
+            "asOf": "2026-06-23T20:25:22.808Z",
+            "confidence": 0.9
+          }
+        },
+        "panels": {
+          "opens": {
+            "date": "2026-06-08",
+            "source": "https://bsky.app/profile/furnavia.bsky.social/post/3mnnaah7fks2b",
+            "asOf": "2026-06-06T18:00:17.983Z",
+            "confidence": 0.9
+          },
+          "closes": {
+            "date": "2026-09-15",
+            "source": "https://bsky.app/profile/furnavia.bsky.social/post/3mnnaah7fks2b",
+            "asOf": "2026-06-06T18:00:17.983Z",
+            "confidence": 0.9
+          }
+        }
+      }
     },
     {
       "id": "furnavia-2025",

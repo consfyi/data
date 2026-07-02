@@ -17,7 +17,67 @@
       "latLng": [
         41.084896,
         -111.9810485
-      ]
+      ],
+      "keyDates": {
+        "registration": {
+          "opens": {
+            "date": "2026-01-30",
+            "source": "https://bsky.app/profile/anthroweekendutah.org/post/3mdm3z3v76k2s",
+            "asOf": "2026-01-31T01:00:34.207Z",
+            "confidence": 0.85
+          },
+          "closes": {
+            "date": "2026-05-22",
+            "source": "https://bsky.app/profile/anthroweekendutah.org/post/3mlod5g2zj22o",
+            "asOf": "2026-05-12T17:34:33.836Z",
+            "confidence": 0.85
+          }
+        },
+        "hotel": {
+          "opens": {
+            "date": "2026-05-04",
+            "source": "https://bsky.app/profile/anthroweekendutah.org/post/3ml2aomprm22o",
+            "asOf": "2026-05-04T17:57:15.240Z",
+            "confidence": 0.88
+          }
+        },
+        "dealers": {
+          "opens": {
+            "date": "2026-01-30",
+            "source": "https://bsky.app/profile/anthroweekendutah.org/post/3mdm3z3v76k2s",
+            "asOf": "2026-01-31T01:00:34.207Z",
+            "confidence": 0.85
+          },
+          "closes": {
+            "date": "2026-02-13",
+            "source": "https://bsky.app/profile/anthroweekendutah.org/post/3me7lmr475k2a",
+            "asOf": "2026-02-06T19:00:01.188Z",
+            "confidence": 0.9
+          }
+        },
+        "panels": {
+          "opens": {
+            "date": "2026-03-17",
+            "source": "https://bsky.app/profile/anthroweekendutah.org/post/3mh7v4yruss2t",
+            "asOf": "2026-03-17T02:05:44.665Z",
+            "confidence": 0.95
+          },
+          "closes": {
+            "date": "2026-04-17",
+            "source": "https://bsky.app/profile/anthroweekendutah.org/post/3mh7v4yruss2t",
+            "asOf": "2026-03-17T02:05:44.665Z",
+            "confidence": 0.95
+          }
+        },
+        "volunteers": {
+          "opens": {
+            "date": "2026-01-30",
+            "source": "https://bsky.app/profile/anthroweekendutah.org/post/3mdm3z3v76k2s",
+            "asOf": "2026-01-31T01:00:34.207Z",
+            "confidence": 0.85
+          }
+        }
+      }
     },
     {
       "id": "anthro-weekend-utah-2025",

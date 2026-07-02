@@ -17,7 +17,17 @@
       "latLng": [
         47.501787,
         11.706208400000001
-      ]
+      ],
+      "keyDates": {
+        "registration": {
+          "opens": {
+            "date": "2026-01-03",
+            "source": "https://bsky.app/profile/lakesidefurs.at/post/3mbhnj53ux22s",
+            "asOf": "2026-01-02T19:39:30.050Z",
+            "confidence": 0.9
+          }
+        }
+      }
     },
     {
       "id": "lakeside-furs-2025",

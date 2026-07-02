@@ -17,7 +17,25 @@
       "latLng": [
         -27.46243,
         153.02183549999998
-      ]
+      ],
+      "keyDates": {
+        "dealers": {
+          "closes": {
+            "date": "2026-08-01",
+            "source": "https://bsky.app/profile/furdu.com.au/post/3mkmftyvl4c26",
+            "asOf": "2026-04-29T05:52:28.154Z",
+            "confidence": 0.88
+          }
+        },
+        "panels": {
+          "closes": {
+            "date": "2026-06-15",
+            "source": "https://bsky.app/profile/furdu.com.au/post/3mlpyskuxk224",
+            "asOf": "2026-05-13T09:34:51.837Z",
+            "confidence": 0.85
+          }
+        }
+      }
     },
     {
       "id": "tails-of-terror-2025",

@@ -17,7 +17,39 @@
       "latLng": [
         50.9803874,
         -113.9969131
-      ]
+      ],
+      "keyDates": {
+        "hotel": {
+          "opens": {
+            "date": "2026-02-07",
+            "source": "https://bsky.app/profile/calfurry.ca/post/3mebvgr2crk2g",
+            "asOf": "2026-02-07T17:00:56.274Z",
+            "confidence": 0.93
+          }
+        },
+        "dealers": {
+          "opens": {
+            "date": "2026-01-17",
+            "source": "https://bsky.app/profile/calfurry.ca/post/3mcmybmtjul2c",
+            "asOf": "2026-01-17T16:00:38.335Z",
+            "confidence": 0.92
+          },
+          "closes": {
+            "date": "2026-01-31",
+            "source": "https://bsky.app/profile/calfurry.ca/post/3mcmybmtjul2c",
+            "asOf": "2026-01-17T16:00:38.335Z",
+            "confidence": 0.92
+          }
+        },
+        "panels": {
+          "closes": {
+            "date": "2026-07-24",
+            "source": "https://bsky.app/profile/calfurry.ca/post/3moxntbl4nc2w",
+            "asOf": "2026-06-23T14:55:17.265Z",
+            "confidence": 0.93
+          }
+        }
+      }
     }
   ]
 }

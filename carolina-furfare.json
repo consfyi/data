@@ -17,7 +17,39 @@
       "latLng": [
         35.7091445,
         -81.3039439
-      ]
+      ],
+      "keyDates": {
+        "registration": {
+          "closes": {
+            "date": "2026-02-09",
+            "source": "https://bsky.app/profile/carolinafurfare.bsky.social/post/3mehk4dho722m",
+            "asOf": "2026-02-09T22:54:14.172Z",
+            "confidence": 0.9
+          }
+        },
+        "dealers": {
+          "opens": {
+            "date": "2026-05-12",
+            "source": "https://bsky.app/profile/carolinafurfare.bsky.social/post/3mlolrkmfms22",
+            "asOf": "2026-05-12T20:08:59.621Z",
+            "confidence": 0.85
+          },
+          "closes": {
+            "date": "2026-05-25",
+            "source": "https://bsky.app/profile/carolinafurfare.bsky.social/post/3mmmg65ytts2h",
+            "asOf": "2026-05-24T16:48:32.305Z",
+            "confidence": 0.85
+          }
+        },
+        "panels": {
+          "closes": {
+            "date": "2026-07-12",
+            "source": "https://bsky.app/profile/carolinafurfare.bsky.social/post/3movbsv4qa22i",
+            "asOf": "2026-06-22T16:14:59.831Z",
+            "confidence": 0.9
+          }
+        }
+      }
     },
     {
       "id": "carolina-furfare-2025",

@@ -20,7 +20,25 @@
       ],
       "sources": [
         "fancons.com"
-      ]
+      ],
+      "keyDates": {
+        "registration": {
+          "opens": {
+            "date": "2026-07-20",
+            "source": "https://bsky.app/profile/scotiacon.bsky.social/post/3mph45tk7ls2e",
+            "asOf": "2026-06-29T18:21:40.116Z",
+            "confidence": 0.95
+          }
+        },
+        "dealers": {
+          "opens": {
+            "date": "2026-07-06",
+            "source": "https://bsky.app/profile/scotiacon.bsky.social/post/3moxwtpk2xu2b",
+            "asOf": "2026-06-23T17:36:35.556Z",
+            "confidence": 0.9
+          }
+        }
+      }
     },
     {
       "id": "scotiacon-2026",

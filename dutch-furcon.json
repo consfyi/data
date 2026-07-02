@@ -20,7 +20,17 @@
       ],
       "sources": [
         "fancons.com"
-      ]
+      ],
+      "keyDates": {
+        "registration": {
+          "opens": {
+            "date": "2026-03-07",
+            "source": "https://bsky.app/profile/dutchfurcon.com/post/3mgfikgkj322j",
+            "asOf": "2026-03-06T14:11:23.462Z",
+            "confidence": 0.9
+          }
+        }
+      }
     },
     {
       "id": "dutch-furcon-10",

@@ -17,7 +17,33 @@
       "latLng": [
         39.7421248,
         -104.989906
-      ]
+      ],
+      "keyDates": {
+        "registration": {
+          "opens": {
+            "date": "2025-10-03",
+            "source": "https://bsky.app/profile/denfur.org/post/3m2cya6ts5o2d",
+            "asOf": "2025-10-03T14:11:40-07:00",
+            "confidence": 0.85
+          }
+        },
+        "hotel": {
+          "opens": {
+            "date": "2026-01-22",
+            "source": "https://bsky.app/profile/denfur.org/post/3mczoqbrjps2y",
+            "asOf": "2026-01-22T09:14:30-08:00",
+            "confidence": 0.85
+          }
+        },
+        "dealers": {
+          "opens": {
+            "date": "2026-01-27",
+            "source": "https://bsky.app/profile/denfur.org/post/3mdgh3uujje2h",
+            "asOf": "2026-01-27T11:02:26-08:00",
+            "confidence": 0.85
+          }
+        }
+      }
     },
     {
       "id": "denfur-2025",

@@ -20,7 +20,33 @@
       ],
       "sources": [
         "fancons.com"
-      ]
+      ],
+      "keyDates": {
+        "registration": {
+          "closes": {
+            "date": "2026-05-01",
+            "source": "https://bsky.app/profile/noctfurnalevents.bsky.social/post/3mkijpprxxk2a",
+            "asOf": "2026-04-27T16:51:00.397Z",
+            "confidence": 0.95
+          }
+        },
+        "dealers": {
+          "opens": {
+            "date": "2026-04-06",
+            "source": "https://bsky.app/profile/noctfurnalevents.bsky.social/post/3miu75rtay22u",
+            "asOf": "2026-04-06T21:23:34.742Z",
+            "confidence": 0.85
+          }
+        },
+        "panels": {
+          "opens": {
+            "date": "2025-10-01",
+            "source": "https://bsky.app/profile/noctfurnalevents.bsky.social/post/3m25etofg222x",
+            "asOf": "2025-10-01T15:41:21.280Z",
+            "confidence": 0.85
+          }
+        }
+      }
     },
     {
       "id": "noctfurnal-2025",

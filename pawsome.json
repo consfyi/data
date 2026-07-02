@@ -17,7 +17,53 @@
       "latLng": [
         51.8339728,
         -2.1883307
-      ]
+      ],
+      "keyDates": {
+        "registration": {
+          "opens": {
+            "date": "2026-03-30",
+            "source": "https://bsky.app/profile/pawsome.bsky.social/post/3mice2b53z22a",
+            "asOf": "2026-03-30T19:03:09.995Z",
+            "confidence": 0.9
+          }
+        },
+        "hotel": {
+          "closes": {
+            "date": "2026-04-25",
+            "source": "https://bsky.app/profile/pawsome.bsky.social/post/3mjrby6t6n524",
+            "asOf": "2026-04-18T11:01:20.669Z",
+            "confidence": 0.85
+          }
+        },
+        "dealers": {
+          "opens": {
+            "date": "2026-03-07",
+            "source": "https://bsky.app/profile/pawsome.bsky.social/post/3mghosckztk22",
+            "asOf": "2026-03-07T11:08:29.662Z",
+            "confidence": 0.9
+          },
+          "closes": {
+            "date": "2026-05-31",
+            "source": "https://bsky.app/profile/pawsome.bsky.social/post/3mghosckztk22",
+            "asOf": "2026-03-07T11:08:29.662Z",
+            "confidence": 0.9
+          }
+        },
+        "panels": {
+          "opens": {
+            "date": "2026-04-30",
+            "source": "https://bsky.app/profile/pawsome.bsky.social/post/3mkpz4rifqr2m",
+            "asOf": "2026-04-30T16:15:22.656Z",
+            "confidence": 0.85
+          },
+          "closes": {
+            "date": "2026-06-03",
+            "source": "https://bsky.app/profile/pawsome.bsky.social/post/3mmz3nxyhgb2f",
+            "asOf": "2026-05-29T17:45:08.297Z",
+            "confidence": 0.88
+          }
+        }
+      }
     },
     {
       "id": "pawsome-2025",

@@ -17,7 +17,23 @@
       "latLng": [
         52.8929675,
         -1.3949577
-      ]
+      ],
+      "keyDates": {
+        "registration": {
+          "opens": {
+            "date": "2026-03-08",
+            "source": "https://bsky.app/profile/coreelement.bsky.social/post/3mgkwbaouos23",
+            "asOf": "2026-03-08T18:00:06.403Z",
+            "confidence": 0.85
+          },
+          "closes": {
+            "date": "2026-07-10",
+            "source": "https://bsky.app/profile/coreelement.bsky.social/post/3movit3mivc2l",
+            "asOf": "2026-06-22T18:20:22.815Z",
+            "confidence": 0.85
+          }
+        }
+      }
     },
     {
       "id": "core-element-2025",

@@ -20,7 +20,17 @@
       ],
       "sources": [
         "fancons.com"
-      ]
+      ],
+      "keyDates": {
+        "dealers": {
+          "opens": {
+            "date": "2026-07-04",
+            "source": "https://bsky.app/profile/furvester.org/post/3movlydbobu2u",
+            "asOf": "2026-06-22T19:16:59.605Z",
+            "confidence": 0.95
+          }
+        }
+      }
     },
     {
       "id": "furvester-6",

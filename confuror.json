@@ -20,7 +20,31 @@
       ],
       "sources": [
         "fancons.com"
-      ]
+      ],
+      "keyDates": {
+        "registration": {
+          "opens": {
+            "date": "2026-04-02",
+            "source": "https://bsky.app/profile/confuror.bsky.social/post/3mii4bqyycs22",
+            "asOf": "2026-04-02T02:00:10.006Z",
+            "confidence": 0.85
+          }
+        },
+        "dealers": {
+          "opens": {
+            "date": "2026-04-20",
+            "source": "https://bsky.app/profile/confuror.bsky.social/post/3mjq53hsdnk26",
+            "asOf": "2026-04-18T00:01:02.310Z",
+            "confidence": 0.85
+          },
+          "closes": {
+            "date": "2026-05-11",
+            "source": "https://bsky.app/profile/confuror.bsky.social/post/3mlmd7e5rgc26",
+            "asOf": "2026-05-11T22:30:19.452Z",
+            "confidence": 0.9
+          }
+        }
+      }
     },
     {
       "id": "confuror-2025",

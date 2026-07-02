@@ -20,7 +20,41 @@
       ],
       "sources": [
         "fancons.com"
-      ]
+      ],
+      "keyDates": {
+        "registration": {
+          "opens": {
+            "date": "2026-05-24",
+            "source": "https://bsky.app/profile/futrolajki.pl/post/3mmmlbbives2a",
+            "asOf": "2026-05-24T18:19:45.334Z",
+            "confidence": 0.95
+          }
+        },
+        "hotel": {
+          "opens": {
+            "date": "2026-06-21",
+            "source": "https://bsky.app/profile/futrolajki.pl/post/3mot2lgfzbc2m",
+            "asOf": "2026-06-21T19:00:13.857Z",
+            "confidence": 0.95
+          }
+        },
+        "dealers": {
+          "opens": {
+            "date": "2026-07-01",
+            "source": "https://bsky.app/profile/futrolajki.pl/post/3mpm42sbjck2k",
+            "asOf": "2026-07-01T18:03:16.809Z",
+            "confidence": 0.95
+          }
+        },
+        "volunteers": {
+          "opens": {
+            "date": "2026-06-16",
+            "source": "https://bsky.app/profile/futrolajki.pl/post/3mogibcpksk2i",
+            "asOf": "2026-06-16T19:00:30.218Z",
+            "confidence": 0.85
+          }
+        }
+      }
     },
     {
       "id": "futrolajki-2025",

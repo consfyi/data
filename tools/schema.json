@@ -223,6 +223,62 @@
                 },
                 "additionalProperties": false
               },
+              "performances": {
+                "type": "object",
+                "properties": {
+                  "opens": {
+                    "type": "object",
+                    "properties": {
+                      "date": { "type": "string", "format": "date" },
+                      "source": { "type": "string", "format": "uri" },
+                      "asOf": { "type": "string", "format": "date-time" },
+                      "confidence": { "type": "number", "minimum": 0, "maximum": 1 }
+                    },
+                    "required": ["date"],
+                    "additionalProperties": false
+                  },
+                  "closes": {
+                    "type": "object",
+                    "properties": {
+                      "date": { "type": "string", "format": "date" },
+                      "source": { "type": "string", "format": "uri" },
+                      "asOf": { "type": "string", "format": "date-time" },
+                      "confidence": { "type": "number", "minimum": 0, "maximum": 1 }
+                    },
+                    "required": ["date"],
+                    "additionalProperties": false
+                  }
+                },
+                "additionalProperties": false
+              },
+              "djs": {
+                "type": "object",
+                "properties": {
+                  "opens": {
+                    "type": "object",
+                    "properties": {
+                      "date": { "type": "string", "format": "date" },
+                      "source": { "type": "string", "format": "uri" },
+                      "asOf": { "type": "string", "format": "date-time" },
+                      "confidence": { "type": "number", "minimum": 0, "maximum": 1 }
+                    },
+                    "required": ["date"],
+                    "additionalProperties": false
+                  },
+                  "closes": {
+                    "type": "object",
+                    "properties": {
+                      "date": { "type": "string", "format": "date" },
+                      "source": { "type": "string", "format": "uri" },
+                      "asOf": { "type": "string", "format": "date-time" },
+                      "confidence": { "type": "number", "minimum": 0, "maximum": 1 }
+                    },
+                    "required": ["date"],
+                    "additionalProperties": false
+                  }
+                },
+                "additionalProperties": false
+              },
               "volunteers": {
                 "type": "object",
                 "properties": {

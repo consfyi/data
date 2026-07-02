@@ -17,7 +17,7 @@ import sys
 
 GRAMMAR = re.compile(
     r"^/reject\s+([a-z0-9-]+)\s+"
-    r"(registration|hotel|dealers|panels|volunteers)\.(opens|closes)\s+"
+    r"(registration|hotel|dealers|panels|performances|djs|volunteers)\.(opens|closes)\s+"
     r"(\d{4}-\d{2}-\d{2})\s*(?:[—–-]+\s*)?(.*)$",
     re.S,
 )

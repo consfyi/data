@@ -1,0 +1,26 @@
+# Schema-validate data changes on every PR. materialize.py exits nonzero on
+# any file that fails tools/schema.json (previously this only ran post-merge
+# in deploy.yml). PRs opened with a PAT (e.g. the keydates worker's bot PRs)
+# do trigger this, unlike PRs created with the workflow GITHUB_TOKEN.
+name: validate
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          submodules: recursive
+      - uses: astral-sh/setup-uv@v7
+      - name: Formatting is canonical
+        run: |
+          uv run tools/format.py *.json
+          git diff --exit-code
+      - name: Schema validation (materialize)
+        run: uv run tools/materialize.py "$RUNNER_TEMP/out"

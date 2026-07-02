@@ -25,6 +25,12 @@
             "source": "https://bsky.app/profile/aurawra.org/post/3mmy77gp5gc23",
             "asOf": "2026-05-29T09:15:54.891Z",
             "confidence": 0.95
+          },
+          "closes": {
+            "date": "2026-05-29",
+            "source": "https://bsky.app/profile/aurawra.org/post/3mmy7dl6fmi2p",
+            "asOf": "2026-05-29T09:18:13.856Z",
+            "confidence": 0.9
           }
         },
         "hotel": {

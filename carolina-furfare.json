@@ -42,11 +42,19 @@
           }
         },
         "panels": {
-          "closes": {
-            "date": "2026-07-12",
-            "source": "https://bsky.app/profile/carolinafurfare.bsky.social/post/3movbsv4qa22i",
-            "asOf": "2026-06-22T16:14:59.831Z",
+          "opens": {
+            "date": "2026-05-03",
+            "source": "https://bsky.app/profile/carolinafurfare.bsky.social/post/3mkyc4v5o6s2n",
+            "asOf": "2026-05-03T23:17:48.111Z",
             "confidence": 0.9
+          }
+        },
+        "volunteers": {
+          "opens": {
+            "date": "2026-06-10",
+            "source": "https://bsky.app/profile/carolinafurfare.bsky.social/post/3mnxitabpds2n",
+            "asOf": "2026-06-10T20:00:35.569Z",
+            "confidence": 0.8
           }
         }
       }

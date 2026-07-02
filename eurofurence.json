@@ -28,6 +28,12 @@
           }
         },
         "dealers": {
+          "opens": {
+            "date": "2026-03-06",
+            "source": "https://bsky.app/profile/eurofurence.org/post/3mgfowhrd522c",
+            "asOf": "2026-03-06T16:05:29.809Z",
+            "confidence": 1
+          },
           "closes": {
             "date": "2026-03-22",
             "source": "https://bsky.app/profile/eurofurence.org/post/3mhiv5bqhfs2q",
@@ -36,6 +42,12 @@
           }
         },
         "panels": {
+          "opens": {
+            "date": "2026-04-03",
+            "source": "https://bsky.app/profile/eurofurence.org/post/3milydmx2322y",
+            "asOf": "2026-04-03T15:00:16.803Z",
+            "confidence": 1
+          },
           "closes": {
             "date": "2026-05-31",
             "source": "https://bsky.app/profile/eurofurence.org/post/3mjrvabp77k2x",

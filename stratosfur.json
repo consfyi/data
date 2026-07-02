@@ -22,14 +22,6 @@
         "fancons.com"
       ],
       "keyDates": {
-        "registration": {
-          "opens": {
-            "date": "2026-02-10",
-            "source": "https://bsky.app/profile/stratosfur.org/post/3meht4mvwec2k",
-            "asOf": "2026-02-10T01:35:27.540709Z",
-            "confidence": 0.9
-          }
-        },
         "hotel": {
           "opens": {
             "date": "2026-03-06",
@@ -58,12 +50,6 @@
             "source": "https://bsky.app/profile/stratosfur.org/post/3mgy5avem7v2v",
             "asOf": "2026-03-14T00:09:47.136058Z",
             "confidence": 0.85
-          },
-          "closes": {
-            "date": "2026-04-30",
-            "source": "https://bsky.app/profile/stratosfur.org/post/3mijqcz5v6d2k",
-            "asOf": "2026-04-02T17:31:26.497297Z",
-            "confidence": 0.88
           }
         }
       }

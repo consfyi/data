@@ -20,6 +20,12 @@
       ],
       "keyDates": {
         "dealers": {
+          "opens": {
+            "date": "2026-06-09",
+            "source": "https://bsky.app/profile/furcon.bsky.social/post/3mntme2y4rt26",
+            "asOf": "2026-06-09T06:53:02.693Z",
+            "confidence": 0.95
+          },
           "closes": {
             "date": "2026-06-28",
             "source": "https://bsky.app/profile/furcon.bsky.social/post/3mp7ryc6p7y2r",

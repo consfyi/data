@@ -45,10 +45,10 @@
         },
         "panels": {
           "closes": {
-            "date": "2026-07-15",
-            "source": "https://bsky.app/profile/tailsandtornadoes.org/post/3mkkxe4uhkh2c",
-            "asOf": "2026-04-28T16:00:23.299Z",
-            "confidence": 0.88
+            "date": "2026-07-01",
+            "source": "https://bsky.app/profile/tailsandtornadoes.org/post/3mpkhpol2ak25",
+            "asOf": "2026-07-01T02:26:29.236Z",
+            "confidence": 1
           }
         }
       }

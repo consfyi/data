@@ -35,10 +35,18 @@
         },
         "panels": {
           "closes": {
-            "date": "2026-05-15",
-            "source": "https://bsky.app/profile/canfurence.bsky.social/post/3mjkf7sw5bs2o",
-            "asOf": "2026-04-15T17:10:39.691Z",
-            "confidence": 0.85
+            "date": "2026-05-16",
+            "source": "https://bsky.app/profile/canfurence.bsky.social/post/3mlwraxur6c2r",
+            "asOf": "2026-05-16T02:08:23.462Z",
+            "confidence": 1
+          }
+        },
+        "hotel": {
+          "opens": {
+            "date": "2026-04-28",
+            "source": "https://bsky.app/profile/canfurence.bsky.social/post/3mklp6ifgw22f",
+            "asOf": "2026-04-28T23:06:43.888Z",
+            "confidence": 0.9
           }
         }
       }

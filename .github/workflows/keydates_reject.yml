@@ -1,0 +1,71 @@
+# Handle `/reject` comments on the keydates bot PR.
+#
+# Hardened per the 2026-07-01 security review: issue_comment fires for ANY
+# commenter on a public repo and runs with whatever write scopes this file
+# declares, so (1) the job gates on an explicit login allowlist (NOT
+# author_association, which is spoofable-adjacent), (2) it only acts on the
+# bot PR (head ref checked via the API), and (3) the comment body reaches the
+# parser exclusively through env — it is never interpolated into shell text.
+name: keydates_reject
+on:
+  issue_comment:
+    types: [created]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: keydates-reject
+  cancel-in-progress: false
+
+jobs:
+  reject:
+    # allowlist: add tolf's login when he wants reject rights
+    if: >-
+      github.event.issue.pull_request &&
+      startsWith(github.event.comment.body, '/reject') &&
+      contains(fromJSON('["sparkyfen"]'), github.event.comment.user.login)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Only act on the bot PR
+        id: head
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_URL: ${{ github.event.issue.pull_request.url }}
+        run: |
+          ref=$(gh api "$PR_URL" --jq .head.ref)
+          echo "ref=$ref" >> "$GITHUB_OUTPUT"
+      - uses: actions/checkout@v5
+        if: steps.head.outputs.ref == 'bot/bsky-keydates'
+        with:
+          ref: main
+      - name: Record rejection
+        if: steps.head.outputs.ref == 'bot/bsky-keydates'
+        id: record
+        env:
+          COMMENT_BODY: ${{ github.event.comment.body }}
+          COMMENT_USER: ${{ github.event.comment.user.login }}
+          COMMENT_CREATED_AT: ${{ github.event.comment.created_at }}
+        run: |
+          result=$(python3 .github/scripts/keydates_reject.py)
+          echo "result=$result" >> "$GITHUB_OUTPUT"
+      - name: React
+        if: steps.head.outputs.ref == 'bot/bsky-keydates'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          COMMENT_ID: ${{ github.event.comment.id }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          RESULT: ${{ steps.record.outputs.result }}
+        run: |
+          if [ "$RESULT" = "ok" ] || [ "$RESULT" = "duplicate" ]; then
+            content="+1"
+          else
+            content="-1"
+            gh api --method POST \
+              "repos/${GITHUB_REPOSITORY}/issues/${ISSUE_NUMBER}/comments" \
+              -f body="Could not parse that. Syntax: \`/reject <event_id> <category>.<kind> <YYYY-MM-DD> — <reason>\`" || true
+          fi
+          gh api --method POST \
+            "repos/${GITHUB_REPOSITORY}/issues/comments/${COMMENT_ID}/reactions" \
+            -f content="$content"

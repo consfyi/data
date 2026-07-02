@@ -3,7 +3,7 @@
 
 Reads the comment ONLY from env (never shell-interpolated — comment bodies on
 a public repo are attacker-controlled), parses it against a strict grammar,
-and appends the rejection to keydates_rejections.json. The keydates worker
+and appends the rejection to .github/keydates_rejections.json. The keydates worker
 reads that file each run and never re-proposes a matching date.
 
 Syntax:  /reject <event_id> <category>.<kind> <date> — <reason...>
@@ -35,7 +35,7 @@ def main() -> int:
     event_id, category, kind, date, reason = m.groups()
     reason = " ".join(reason.split())[:300]  # collapse whitespace, cap length
 
-    with open("keydates_rejections.json") as f:
+    with open(".github/keydates_rejections.json") as f:
         rejections = json.load(f)
 
     entry = {
@@ -55,13 +55,13 @@ def main() -> int:
         return 0
 
     rejections.append(entry)
-    with open("keydates_rejections.json", "w") as f:
+    with open(".github/keydates_rejections.json", "w") as f:
         json.dump(rejections, f, indent=2, ensure_ascii=False)
         f.write("\n")
 
     subprocess.run(["git", "config", "user.name", "cons.fyi GitHub bot"], check=True)
     subprocess.run(["git", "config", "user.email", "github@cons.fyi"], check=True)
-    subprocess.run(["git", "add", "keydates_rejections.json"], check=True)
+    subprocess.run(["git", "add", ".github/keydates_rejections.json"], check=True)
     subprocess.run(
         ["git", "commit", "-m", f"Reject key date {event_id} {category}.{kind} {date}"],
         check=True,

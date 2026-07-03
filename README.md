@@ -144,7 +144,8 @@ interface Event {
   sources?: string[];
 
   /// Lead-up deadlines for the convention instance, e.g. when registration,
-  /// hotel booking, dealer applications, panel submissions, and volunteer
+  /// hotel booking, dealer applications, panel submissions, performance and DJ
+  /// applications, and volunteer
   /// signups open and close.
   ///
   /// These are automatically extracted from the convention's Bluesky posts,
@@ -161,6 +162,8 @@ interface Event {
     hotel?: KeyDate;
     dealers?: KeyDate;
     panels?: KeyDate;
+    performances?: KeyDate;
+    djs?: KeyDate;
     volunteers?: KeyDate;
   };
 }

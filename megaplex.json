@@ -1,5 +1,9 @@
 {
   "name": "Megaplex",
+  "bluesky": {
+    "did": "did:plc:cu4sk7befczsdrewnseop2tw",
+    "handle": "megaplexcon.org"
+  },
   "events": [
     {
       "id": "megaplex-2026",

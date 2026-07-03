@@ -41,7 +41,9 @@
             "source": "https://bsky.app/profile/eufuria.org/post/3mlqedml5ap2b",
             "asOf": "2026-05-13T13:01:15.158Z",
             "confidence": 0.85
-          },
+          }
+        },
+        "performances": {
           "closes": {
             "date": "2026-07-08",
             "source": "https://bsky.app/profile/eufuria.org/post/3mnrswazsqg2y",

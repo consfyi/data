@@ -17,7 +17,73 @@
       "latLng": [
         28.42769,
         -81.4687483
-      ]
+      ],
+      "keyDates": {
+        "hotel": {
+          "opens": {
+            "date": "2026-03-11",
+            "source": "https://bsky.app/profile/megaplexcon.org/post/3mgnshullop2u",
+            "asOf": "2026-03-09T21:30:12.834Z",
+            "confidence": 0.95
+          }
+        },
+        "dealers": {
+          "opens": {
+            "date": "2026-03-25",
+            "source": "https://bsky.app/profile/megaplexcon.org/post/3mhviyuzsg22w",
+            "asOf": "2026-03-25T16:27:15.843Z",
+            "confidence": 0.85
+          },
+          "closes": {
+            "date": "2026-04-10",
+            "source": "https://bsky.app/profile/megaplexcon.org/post/3miwpyhwvjd2p",
+            "asOf": "2026-04-07T21:30:08.213Z",
+            "confidence": 0.95
+          }
+        },
+        "panels": {
+          "opens": {
+            "date": "2026-03-25",
+            "source": "https://bsky.app/profile/megaplexcon.org/post/3mhviyuzsg22w",
+            "asOf": "2026-03-25T16:27:15.843Z",
+            "confidence": 0.85
+          },
+          "closes": {
+            "date": "2026-05-15",
+            "source": "https://bsky.app/profile/megaplexcon.org/post/3mltpnjlxej24",
+            "asOf": "2026-05-14T21:01:37.958Z",
+            "confidence": 0.9
+          }
+        },
+        "djs": {
+          "opens": {
+            "date": "2026-03-25",
+            "source": "https://bsky.app/profile/megaplexcon.org/post/3mhviyuzsg22w",
+            "asOf": "2026-03-25T16:27:15.843Z",
+            "confidence": 0.85
+          },
+          "closes": {
+            "date": "2026-05-15",
+            "source": "https://bsky.app/profile/megaplexcon.org/post/3mlqosihf2r2q",
+            "asOf": "2026-05-13T16:08:31.582Z",
+            "confidence": 0.95
+          }
+        },
+        "performances": {
+          "opens": {
+            "date": "2026-04-11",
+            "source": "https://bsky.app/profile/megaplexcon.org/post/3mja7l72apw2w",
+            "asOf": "2026-04-11T16:03:01.657Z",
+            "confidence": 0.85
+          },
+          "closes": {
+            "date": "2026-06-15",
+            "source": "https://bsky.app/profile/megaplexcon.org/post/3mn6hj7iocf26",
+            "asOf": "2026-05-31T21:00:31.991Z",
+            "confidence": 0.9
+          }
+        }
+      }
     },
     {
       "id": "megaplex-2025",

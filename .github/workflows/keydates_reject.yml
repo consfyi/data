@@ -21,11 +21,10 @@ concurrency:
 
 jobs:
   reject:
-    # allowlist: add tolf's login when he wants reject rights
     if: >-
       github.event.issue.pull_request &&
       startsWith(github.event.comment.body, '/reject') &&
-      contains(fromJSON('["sparkyfen"]'), github.event.comment.user.login)
+      contains(fromJSON('["sparkyfen", "tolfdog"]'), github.event.comment.user.login)
     runs-on: ubuntu-latest
     steps:
       - name: Only act on the bot PR

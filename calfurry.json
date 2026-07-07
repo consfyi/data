@@ -43,16 +43,24 @@
         },
         "panels": {
           "opens": {
-            "date": "2026-02-28",
-            "source": "https://bsky.app/profile/calfurry.ca/post/3mfmjudnsx22i",
-            "asOf": "2026-02-24T15:58:15.915Z",
-            "confidence": 1
+            "date": "2026-03-01",
+            "source": "https://bsky.app/profile/calfurry.ca/post/3mfze674wk42i",
+            "asOf": "2026-03-01T18:21:00.951Z",
+            "confidence": 0.9
           },
           "closes": {
             "date": "2026-07-24",
             "source": "https://bsky.app/profile/calfurry.ca/post/3moxntbl4nc2w",
             "asOf": "2026-06-23T14:55:17.265Z",
             "confidence": 0.93
+          }
+        },
+        "performances": {
+          "opens": {
+            "date": "2026-02-28",
+            "source": "https://bsky.app/profile/calfurry.ca/post/3mfmjudnsx22i",
+            "asOf": "2026-02-24T15:58:15.915Z",
+            "confidence": 0.9
           }
         },
         "volunteers": {

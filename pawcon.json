@@ -56,6 +56,14 @@
             "asOf": "2026-05-08T17:27:56.847Z",
             "confidence": 0.88
           }
+        },
+        "performances": {
+          "opens": {
+            "date": "2026-05-08",
+            "source": "https://bsky.app/profile/pawcon.bsky.social/post/3mleavvmtxk26",
+            "asOf": "2026-05-08T17:27:56.847Z",
+            "confidence": 0.9
+          }
         }
       }
     },

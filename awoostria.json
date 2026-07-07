@@ -48,6 +48,30 @@
             "asOf": "2026-03-07T19:31:16.261Z",
             "confidence": 0.88
           }
+        },
+        "performances": {
+          "opens": {
+            "date": "2026-03-16",
+            "source": "https://bsky.app/profile/awoostria.at/post/3mh72r2xa5s2o",
+            "asOf": "2026-03-16T18:13:46.986Z",
+            "confidence": 0.9
+          }
+        },
+        "djs": {
+          "opens": {
+            "date": "2026-03-16",
+            "source": "https://bsky.app/profile/awoostria.at/post/3mh72r2xa5s2o",
+            "asOf": "2026-03-16T18:13:46.986Z",
+            "confidence": 0.9
+          }
+        },
+        "volunteers": {
+          "opens": {
+            "date": "2026-04-16",
+            "source": "https://bsky.app/profile/awoostria.at/post/3mjmqdyjmvs2z",
+            "asOf": "2026-04-16T15:35:10.427Z",
+            "confidence": 0.9
+          }
         }
       }
     },

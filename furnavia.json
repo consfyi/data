@@ -43,6 +43,28 @@
             "asOf": "2026-06-23T20:25:22.808Z",
             "confidence": 0.9
           }
+        },
+        "djs": {
+          "opens": {
+            "date": "2026-06-08",
+            "source": "https://bsky.app/profile/furnavia.bsky.social/post/3mnrn6kwfts2g",
+            "asOf": "2026-06-08T12:02:32.371Z",
+            "confidence": 0.9
+          },
+          "closes": {
+            "date": "2026-09-15",
+            "source": "https://bsky.app/profile/furnavia.bsky.social/post/3mnnaah7fks2b",
+            "asOf": "2026-06-06T18:00:17.983Z",
+            "confidence": 0.9
+          }
+        },
+        "volunteers": {
+          "opens": {
+            "date": "2026-06-26",
+            "source": "https://bsky.app/profile/furnavia.bsky.social/post/3mp7d6ynhxc2n",
+            "asOf": "2026-06-26T16:06:17.302Z",
+            "confidence": 0.8
+          }
         }
       }
     },

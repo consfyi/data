@@ -62,6 +62,22 @@
             "asOf": "2026-05-30T17:00:45.745Z",
             "confidence": 0.9
           }
+        },
+        "performances": {
+          "opens": {
+            "date": "2026-05-18",
+            "source": "https://bsky.app/profile/furryinvasion.bsky.social/post/3mm5dymqs5k2q",
+            "asOf": "2026-05-18T16:59:42.873Z",
+            "confidence": 0.8
+          }
+        },
+        "djs": {
+          "closes": {
+            "date": "2026-07-01",
+            "source": "https://bsky.app/profile/furryinvasion.bsky.social/post/3mn3jnkakk224",
+            "asOf": "2026-05-30T17:00:45.745Z",
+            "confidence": 0.95
+          }
         }
       }
     },

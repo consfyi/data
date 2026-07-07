@@ -62,6 +62,20 @@
             "asOf": "2026-05-29T17:45:08.297Z",
             "confidence": 0.88
           }
+        },
+        "djs": {
+          "opens": {
+            "date": "2026-04-17",
+            "source": "https://bsky.app/profile/pawsome.bsky.social/post/3mjphay5zcv2g",
+            "asOf": "2026-04-17T17:30:23.503Z",
+            "confidence": 0.9
+          },
+          "closes": {
+            "date": "2026-06-07",
+            "source": "https://bsky.app/profile/pawsome.bsky.social/post/3mnao655kv32o",
+            "asOf": "2026-06-01T18:04:56.100Z",
+            "confidence": 0.9
+          }
         }
       }
     },

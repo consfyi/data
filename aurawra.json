@@ -63,6 +63,14 @@
             "confidence": 0.95
           }
         },
+        "performances": {
+          "closes": {
+            "date": "2026-07-10",
+            "source": "https://bsky.app/profile/aurawra.org/post/3mngwiqqedt2a",
+            "asOf": "2026-06-04T05:49:59.850Z",
+            "confidence": 0.8
+          }
+        },
         "volunteers": {
           "opens": {
             "date": "2026-03-23",

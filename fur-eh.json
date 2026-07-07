@@ -41,6 +41,14 @@
             "confidence": 0.95
           }
         },
+        "performances": {
+          "closes": {
+            "date": "2026-06-30",
+            "source": "https://bsky.app/profile/fur-eh.bsky.social/post/3mpjs5wgjwj2d",
+            "asOf": "2026-06-30T20:00:44.397035309Z",
+            "confidence": 0.9
+          }
+        },
         "volunteers": {
           "opens": {
             "date": "2026-07-02",

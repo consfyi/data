@@ -56,6 +56,14 @@
             "asOf": "2026-06-12T17:02:14.978Z",
             "confidence": 0.85
           }
+        },
+        "djs": {
+          "closes": {
+            "date": "2026-07-11",
+            "source": "https://bsky.app/profile/furrymigration.org/post/3mo47s6dk6c2w",
+            "asOf": "2026-06-12T17:02:14.978Z",
+            "confidence": 0.9
+          }
         }
       }
     },

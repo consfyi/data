@@ -46,6 +46,14 @@
             "confidence": 0.9
           }
         },
+        "djs": {
+          "opens": {
+            "date": "2026-06-30",
+            "source": "https://bsky.app/profile/futrolajki.pl/post/3mpjluz2uv224",
+            "asOf": "2026-06-30T18:08:23.260Z",
+            "confidence": 0.95
+          }
+        },
         "volunteers": {
           "opens": {
             "date": "2026-06-16",

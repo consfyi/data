@@ -69,6 +69,28 @@
             "confidence": 0.95
           }
         },
+        "performances": {
+          "opens": {
+            "date": "2026-05-14",
+            "source": "https://bsky.app/profile/anthroweekendutah.org/post/3mltj4wdejs25",
+            "asOf": "2026-05-14T19:04:58.458Z",
+            "confidence": 0.85
+          }
+        },
+        "djs": {
+          "opens": {
+            "date": "2026-03-16",
+            "source": "https://bsky.app/profile/anthroweekendutah.org/post/3mh7v4yruss2t",
+            "asOf": "2026-03-17T02:05:44.665Z",
+            "confidence": 0.9
+          },
+          "closes": {
+            "date": "2026-04-17",
+            "source": "https://bsky.app/profile/anthroweekendutah.org/post/3mjmyhfzgfk2i",
+            "asOf": "2026-04-16T18:00:15.163Z",
+            "confidence": 0.9
+          }
+        },
         "volunteers": {
           "opens": {
             "date": "2026-01-30",

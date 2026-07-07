@@ -57,6 +57,14 @@
             "confidence": 0.95
           }
         },
+        "djs": {
+          "closes": {
+            "date": "2026-05-17",
+            "source": "https://bsky.app/profile/goblfc.org/post/3mloldwqaxs2y",
+            "asOf": "2026-05-12T20:01:21.750Z",
+            "confidence": 0.95
+          }
+        },
         "volunteers": {
           "opens": {
             "date": "2026-04-17",

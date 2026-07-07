@@ -19,12 +19,28 @@
         -47.14807400000001
       ],
       "keyDates": {
+        "registration": {
+          "opens": {
+            "date": "2025-09-20",
+            "source": "https://bsky.app/profile/brasilfurfest.bsky.social/post/3lza7jana7k2n",
+            "asOf": "2025-09-20T01:18:50.188Z",
+            "confidence": 0.9
+          }
+        },
         "panels": {
           "opens": {
             "date": "2026-05-01",
             "source": "https://bsky.app/profile/brasilfurfest.bsky.social/post/3mk55cx7myk24",
             "asOf": "2026-04-23T04:09:49.954Z",
             "confidence": 0.85
+          }
+        },
+        "djs": {
+          "opens": {
+            "date": "2026-05-12",
+            "source": "https://bsky.app/profile/brasilfurfest.bsky.social/post/3mln6ameot22b",
+            "asOf": "2026-05-12T06:34:12.660Z",
+            "confidence": 0.8
           }
         },
         "volunteers": {

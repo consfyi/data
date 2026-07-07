@@ -1,5 +1,9 @@
 {
   "name": "Japan Meeting of Furries",
+  "bluesky": {
+    "did": "did:plc:umwjtg42a4hn6ywn36rg72po",
+    "handle": "jmof-pr.bsky.social"
+  },
   "events": [
     {
       "id": "japan-meeting-of-furries-2027",

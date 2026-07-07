@@ -36,6 +36,12 @@
           }
         },
         "dealers": {
+          "opens": {
+            "date": "2026-01-02",
+            "source": "https://bsky.app/profile/gatewayfurmeet.org/post/3mbhi2llkh22p",
+            "asOf": "2026-01-02T18:01:53.221Z",
+            "confidence": 0.8
+          },
           "closes": {
             "date": "2026-03-01",
             "source": "https://bsky.app/profile/gatewayfurmeet.org/post/3mfwp7dh75224",
@@ -49,6 +55,22 @@
             "source": "https://bsky.app/profile/gatewayfurmeet.org/post/3mko24hbmpa2s",
             "asOf": "2026-04-29T21:27:46.213660+00:00",
             "confidence": 0.92
+          }
+        },
+        "performances": {
+          "opens": {
+            "date": "2026-05-14",
+            "source": "https://bsky.app/profile/gatewayfurmeet.org/post/3mlrj6phvch2h",
+            "asOf": "2026-05-14T00:00:38.875376+00:00",
+            "confidence": 0.85
+          }
+        },
+        "djs": {
+          "opens": {
+            "date": "2026-01-28",
+            "source": "https://bsky.app/profile/gatewayfurmeet.org/post/3mdixmon4hk24",
+            "asOf": "2026-01-28T19:03:29.516Z",
+            "confidence": 0.85
           }
         }
       }

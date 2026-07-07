@@ -44,11 +44,25 @@
           }
         },
         "panels": {
+          "opens": {
+            "date": "2026-04-28",
+            "source": "https://bsky.app/profile/tailsandtornadoes.org/post/3mkknfyqtee24",
+            "asOf": "2026-04-28T13:02:28.674Z",
+            "confidence": 0.9
+          },
           "closes": {
             "date": "2026-07-01",
             "source": "https://bsky.app/profile/tailsandtornadoes.org/post/3mpkhpol2ak25",
             "asOf": "2026-07-01T02:26:29.236Z",
             "confidence": 1
+          }
+        },
+        "performances": {
+          "opens": {
+            "date": "2026-05-09",
+            "source": "https://bsky.app/profile/tailsandtornadoes.org/post/3mlh4t5lnh223",
+            "asOf": "2026-05-09T20:52:47.536Z",
+            "confidence": 0.9
           }
         }
       }

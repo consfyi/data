@@ -42,6 +42,12 @@
           }
         },
         "panels": {
+          "opens": {
+            "date": "2026-01-15",
+            "source": "https://bsky.app/profile/canfurence.bsky.social/post/3mcilmghkyk2w",
+            "asOf": "2026-01-15T22:03:24.418Z",
+            "confidence": 0.95
+          },
           "closes": {
             "date": "2026-05-16",
             "source": "https://bsky.app/profile/canfurence.bsky.social/post/3mlwraxur6c2r",

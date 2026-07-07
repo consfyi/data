@@ -46,6 +46,20 @@
             "asOf": "2026-04-29T05:52:28.154Z",
             "confidence": 0.9
           }
+        },
+        "performances": {
+          "opens": {
+            "date": "2026-05-13",
+            "source": "https://bsky.app/profile/furdu.com.au/post/3mlpyskuxk224",
+            "asOf": "2026-05-13T09:34:51.837Z",
+            "confidence": 0.9
+          },
+          "closes": {
+            "date": "2026-06-15",
+            "source": "https://bsky.app/profile/furdu.com.au/post/3mlpyskuxk224",
+            "asOf": "2026-05-13T09:34:51.837Z",
+            "confidence": 0.9
+          }
         }
       }
     },

@@ -68,6 +68,20 @@
             "asOf": "2026-05-08T11:00:42.729Z",
             "confidence": 0.85
           }
+        },
+        "performances": {
+          "opens": {
+            "date": "2026-05-08",
+            "source": "https://bsky.app/profile/pawaiid.bsky.social/post/3mldlbhtwjs2e",
+            "asOf": "2026-05-08T11:00:42.729Z",
+            "confidence": 0.8
+          },
+          "closes": {
+            "date": "2026-07-31",
+            "source": "https://bsky.app/profile/pawaiid.bsky.social/post/3mldlbhtwjs2e",
+            "asOf": "2026-05-08T11:00:42.729Z",
+            "confidence": 0.8
+          }
         }
       }
     }

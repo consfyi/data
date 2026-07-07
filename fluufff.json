@@ -51,6 +51,22 @@
             "asOf": "2026-05-30T11:00:12.493Z",
             "confidence": 0.85
           }
+        },
+        "djs": {
+          "opens": {
+            "date": "2026-06-07",
+            "source": "https://bsky.app/profile/fluufffcon.bsky.social/post/3mnp3tcqcr323",
+            "asOf": "2026-06-07T11:46:41.582Z",
+            "confidence": 0.95
+          }
+        },
+        "volunteers": {
+          "opens": {
+            "date": "2026-06-21",
+            "source": "https://bsky.app/profile/fluufffcon.bsky.social/post/3moscjy2ck42i",
+            "asOf": "2026-06-21T11:49:55.422Z",
+            "confidence": 0.9
+          }
         }
       }
     },

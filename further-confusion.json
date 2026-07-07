@@ -40,6 +40,20 @@
             "asOf": "2026-05-21T20:03:20.286Z",
             "confidence": 0.9
           }
+        },
+        "djs": {
+          "opens": {
+            "date": "2026-05-21",
+            "source": "https://bsky.app/profile/furcon.bsky.social/post/3mmentnmj7c2k",
+            "asOf": "2026-05-21T14:44:31.609Z",
+            "confidence": 0.95
+          },
+          "closes": {
+            "date": "2026-06-24",
+            "source": "https://bsky.app/profile/furcon.bsky.social/post/3mmf7nq6q5m2f",
+            "asOf": "2026-05-21T20:03:20.286Z",
+            "confidence": 0.95
+          }
         }
       }
     },
@@ -55,7 +69,17 @@
       "latLng": [
         37.3291639,
         -121.889011
-      ]
+      ],
+      "keyDates": {
+        "volunteers": {
+          "opens": {
+            "date": "2026-01-17",
+            "source": "https://bsky.app/profile/furcon.bsky.social/post/3mcmzxtpqym24",
+            "asOf": "2026-01-17T16:30:58.515Z",
+            "confidence": 0.9
+          }
+        }
+      }
     },
     {
       "id": "further-confusion-2025",

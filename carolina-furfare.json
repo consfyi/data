@@ -49,6 +49,14 @@
             "confidence": 0.9
           }
         },
+        "djs": {
+          "closes": {
+            "date": "2026-07-12",
+            "source": "https://bsky.app/profile/carolinafurfare.bsky.social/post/3mpybpej7ts2u",
+            "asOf": "2026-07-06T14:16:12.594Z",
+            "confidence": 0.9
+          }
+        },
         "volunteers": {
           "opens": {
             "date": "2026-06-10",

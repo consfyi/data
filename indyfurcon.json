@@ -57,6 +57,22 @@
             "confidence": 0.9
           }
         },
+        "performances": {
+          "opens": {
+            "date": "2026-05-15",
+            "source": "https://bsky.app/profile/indyfurcon.org/post/3mlvm4osnqc2x",
+            "asOf": "2026-05-15T15:03:51.046596Z",
+            "confidence": 0.9
+          }
+        },
+        "djs": {
+          "closes": {
+            "date": "2026-04-01",
+            "source": "https://bsky.app/profile/indyfurcon.org/post/3miedunyalm2y",
+            "asOf": "2026-03-31T14:05:21.368827Z",
+            "confidence": 0.9
+          }
+        },
         "volunteers": {
           "opens": {
             "date": "2026-01-26",

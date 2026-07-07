@@ -34,7 +34,17 @@
       "latLng": [
         55.607661,
         12.9941535
-      ]
+      ],
+      "keyDates": {
+        "volunteers": {
+          "opens": {
+            "date": "2026-01-12",
+            "source": "https://bsky.app/profile/nordicfuzzcon.org/post/3mcau5qmihk27",
+            "asOf": "2026-01-12T20:14:57.514Z",
+            "confidence": 0.85
+          }
+        }
+      }
     }
   ]
 }

@@ -43,6 +43,14 @@
             "asOf": "2026-05-27T15:00:30.301Z",
             "confidence": 0.92
           }
+        },
+        "djs": {
+          "opens": {
+            "date": "2026-05-19",
+            "source": "https://bsky.app/profile/goldenhorn.si/post/3mm7ntzbgy22h",
+            "asOf": "2026-05-19T15:01:25.104Z",
+            "confidence": 0.9
+          }
         }
       }
     },

@@ -52,6 +52,14 @@
             "confidence": 0.95
           }
         },
+        "performances": {
+          "opens": {
+            "date": "2026-06-30",
+            "source": "https://bsky.app/profile/barkadafurfest.bsky.social/post/3mpiva53zvc2a",
+            "asOf": "2026-06-30T11:23:00.526Z",
+            "confidence": 0.9
+          }
+        },
         "volunteers": {
           "opens": {
             "date": "2026-04-10",

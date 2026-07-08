@@ -30,9 +30,9 @@
         "hotel": {
           "opens": {
             "date": "2026-05-30",
-            "source": "https://bsky.app/profile/anthrosocal.org/post/3mmkc3dev4j2x",
-            "asOf": "2026-05-23T20:30:01.000Z",
-            "confidence": 0.9
+            "source": "https://bsky.app/profile/anthrosocal.org/post/3mn3vki5lf22w",
+            "asOf": "2026-05-30T20:33:47.804Z",
+            "confidence": 0.8
           }
         },
         "dealers": {
@@ -83,6 +83,12 @@
             "source": "https://bsky.app/profile/anthrosocal.org/post/3mj5vo6drq22p",
             "asOf": "2026-04-10T18:00:23.000Z",
             "confidence": 0.95
+          },
+          "closes": {
+            "date": "2026-06-04",
+            "source": "https://bsky.app/profile/anthrosocal.org/post/3mj5vo6drq22p",
+            "asOf": "2026-04-10T18:00:23.000Z",
+            "confidence": 0.85
           }
         }
       }

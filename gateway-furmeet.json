@@ -50,6 +50,12 @@
           }
         },
         "panels": {
+          "opens": {
+            "date": "2026-01-02",
+            "source": "https://bsky.app/profile/gatewayfurmeet.org/post/3mbhi2llkh22p",
+            "asOf": "2026-01-02T18:01:53.221Z",
+            "confidence": 0.9
+          },
           "closes": {
             "date": "2026-07-18",
             "source": "https://bsky.app/profile/gatewayfurmeet.org/post/3mko24hbmpa2s",

@@ -48,6 +48,12 @@
           }
         },
         "performances": {
+          "opens": {
+            "date": "2026-05-07",
+            "source": "https://bsky.app/profile/anthro.irish/post/3mlbsmruy6k24",
+            "asOf": "2026-05-07T18:06:59.029Z",
+            "confidence": 0.8
+          },
           "closes": {
             "date": "2026-06-04",
             "source": "https://bsky.app/profile/anthro.irish/post/3mlbsmruy6k24",

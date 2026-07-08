@@ -50,6 +50,12 @@
           }
         },
         "djs": {
+          "opens": {
+            "date": "2026-05-14",
+            "source": "https://bsky.app/profile/carolinafurfare.bsky.social/post/3mltwp7h6wc2k",
+            "asOf": "2026-05-14T23:07:50.659Z",
+            "confidence": 0.85
+          },
           "closes": {
             "date": "2026-07-12",
             "source": "https://bsky.app/profile/carolinafurfare.bsky.social/post/3mpybpej7ts2u",

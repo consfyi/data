@@ -49,6 +49,20 @@
             "asOf": "2026-04-25T18:35:37.705Z",
             "confidence": 0.9
           }
+        },
+        "djs": {
+          "opens": {
+            "date": "2026-04-25",
+            "source": "https://bsky.app/profile/camppaw.org/post/3mkdomxepkk2a",
+            "asOf": "2026-04-25T18:35:37.705Z",
+            "confidence": 0.8
+          },
+          "closes": {
+            "date": "2026-06-25",
+            "source": "https://bsky.app/profile/camppaw.org/post/3mkdomxepkk2a",
+            "asOf": "2026-04-25T18:35:37.705Z",
+            "confidence": 0.85
+          }
         }
       }
     },

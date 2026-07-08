@@ -40,9 +40,9 @@
         },
         "dealers": {
           "opens": {
-            "date": "2026-02-08",
-            "source": "https://bsky.app/profile/stratosfur.org/post/3meejidnyko2l",
-            "asOf": "2026-02-08T18:05:03.874130Z",
+            "date": "2026-03-11",
+            "source": "https://bsky.app/profile/stratosfur.org/post/3mgnxkoshxo2l",
+            "asOf": "2026-03-09T23:01:15.946391Z",
             "confidence": 0.8
           },
           "closes": {
@@ -82,10 +82,10 @@
             "confidence": 0.9
           },
           "closes": {
-            "date": "2026-04-30",
-            "source": "https://bsky.app/profile/stratosfur.org/post/3mijqcz5v6d2k",
-            "asOf": "2026-04-02T17:31:26.497297Z",
-            "confidence": 0.9
+            "date": "2026-05-16",
+            "source": "https://bsky.app/profile/stratosfur.org/post/3mleb2y3xbu26",
+            "asOf": "2026-05-08T17:30:46.995654Z",
+            "confidence": 0.85
           }
         },
         "volunteers": {

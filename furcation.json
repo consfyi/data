@@ -6,6 +6,23 @@
   },
   "events": [
     {
+      "id": "furcation-2026",
+      "name": "Furcation 2026",
+      "url": "https://furcation.org.uk",
+      "startDate": "2026-11-20",
+      "endDate": "2026-11-22",
+      "venue": "Sandy Glade Holiday Park",
+      "address": "Coast Rd, Berrow, Burnham-on-Sea TA8 2QX, UK",
+      "locale": "en-GB",
+      "latLng": [
+        51.2767754,
+        -3.0119008
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    },
+    {
       "id": "furcation-2024",
       "name": "Furcation 2024",
       "url": "https://furcation.org.uk",

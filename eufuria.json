@@ -30,8 +30,8 @@
         "hotel": {
           "closes": {
             "date": "2026-07-08",
-            "source": "https://bsky.app/profile/eufuria.org/post/3mpnye2d6v423",
-            "asOf": "2026-07-02T12:02:11.723Z",
+            "source": "https://bsky.app/profile/eufuria.org/post/3mpz73acq742e",
+            "asOf": "2026-07-06T23:01:49.335Z",
             "confidence": 0.9
           }
         },
@@ -45,10 +45,10 @@
         },
         "performances": {
           "closes": {
-            "date": "2026-07-08",
-            "source": "https://bsky.app/profile/eufuria.org/post/3mnrswazsqg2y",
-            "asOf": "2026-06-08T13:45:15.998Z",
-            "confidence": 1
+            "date": "2026-07-15",
+            "source": "https://bsky.app/profile/eufuria.org/post/3mq3l2nrg3s2v",
+            "asOf": "2026-07-07T21:41:34.292Z",
+            "confidence": 0.85
           }
         },
         "volunteers": {

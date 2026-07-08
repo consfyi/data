@@ -30,9 +30,9 @@
         "dealers": {
           "opens": {
             "date": "2026-07-01",
-            "source": "https://bsky.app/profile/ane.boston/post/3mpk2jbri3e2x",
-            "asOf": "2026-06-30T22:30:15.848Z",
-            "confidence": 0.95
+            "source": "https://bsky.app/profile/ane.boston/post/3mplv7ed4u32g",
+            "asOf": "2026-07-01T16:00:33.727Z",
+            "confidence": 0.85
           },
           "closes": {
             "date": "2026-07-31",

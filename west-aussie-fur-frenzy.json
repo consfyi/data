@@ -6,6 +6,20 @@
   },
   "events": [
     {
+      "id": "west-aussie-fur-frenzy-2026",
+      "name": "West Aussie Fur Frenzy 2026",
+      "url": "https://www.waff.net.au",
+      "startDate": "2026-08-28",
+      "endDate": "2026-08-30",
+      "venue": "Esplanade Hotel Fremantle by Rydges",
+      "address": "46-54 Marine Terrace, Fremantle WA 6160, Australia",
+      "locale": "en-AU",
+      "latLng": [
+        -32.0573082,
+        115.7463379
+      ]
+    },
+    {
       "id": "west-aussie-fur-frenzy-2025",
       "name": "West Aussie Fur Frenzy 2025",
       "url": "https://www.waff.net.au",

@@ -2,6 +2,23 @@
   "name": "The Bigger One",
   "events": [
     {
+      "id": "the-bigger-one-2027",
+      "name": "The Bigger One 2027",
+      "url": "https://furrycons.com/event/27421/the-bigger-one-2026",
+      "startDate": "2027-06-12",
+      "endDate": "2027-06-13",
+      "venue": "Delta Hotels Somerset",
+      "address": "110 Davidson Ave, Somerset, NJ 08873, USA",
+      "locale": "en-US",
+      "latLng": [
+        40.54063379999999,
+        -74.5184927
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    },
+    {
       "id": "the-bigger-one-2026",
       "name": "The Bigger One 2026",
       "url": "https://furrycons.com/event/27421/the-bigger-one-2026",

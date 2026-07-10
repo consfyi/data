@@ -1,0 +1,22 @@
+{
+  "name": "Paws & Prairies",
+  "events": [
+    {
+      "id": "paws-and-prairies-2027",
+      "name": "Paws & Prairies 2027",
+      "url": "https://furrycons.com/event/28453/paws-and-prairies-2027",
+      "startDate": "2027-04-30",
+      "endDate": "2027-05-02",
+      "venue": "Marriott Kansas City Overland Park",
+      "address": "10800 Metcalf Ave, Overland Park, KS 66210, USA",
+      "locale": "en-US",
+      "latLng": [
+        38.9305165,
+        -94.66940939999999
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    }
+  ]
+}

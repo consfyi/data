@@ -42,6 +42,12 @@
             "source": "https://bsky.app/profile/barkadafurfest.bsky.social/post/3mibstosk3k2p",
             "asOf": "2026-03-30T13:55:15.832Z",
             "confidence": 0.9
+          },
+          "closes": {
+            "date": "2026-07-01",
+            "source": "https://bsky.app/profile/barkadafurfest.bsky.social/post/3mp75k65oss2h",
+            "asOf": "2026-06-26T14:25:09.724Z",
+            "confidence": 0.9
           }
         },
         "panels": {

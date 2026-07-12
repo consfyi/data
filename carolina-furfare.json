@@ -29,10 +29,10 @@
         },
         "dealers": {
           "opens": {
-            "date": "2026-05-12",
-            "source": "https://bsky.app/profile/carolinafurfare.bsky.social/post/3mlolrkmfms22",
-            "asOf": "2026-05-12T20:08:59.621Z",
-            "confidence": 0.85
+            "date": "2026-05-17",
+            "source": "https://bsky.app/profile/carolinafurfare.bsky.social/post/3mm2uze4d5c2n",
+            "asOf": "2026-05-17T17:26:21.776Z",
+            "confidence": 0.9
           },
           "closes": {
             "date": "2026-05-25",

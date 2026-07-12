@@ -37,10 +37,10 @@
         },
         "dealers": {
           "opens": {
-            "date": "2026-04-16",
-            "source": "https://bsky.app/profile/goblfc.org/post/3mjnfxkjmta2c",
-            "asOf": "2026-04-16T22:01:53.648Z",
-            "confidence": 0.85
+            "date": "2026-05-26",
+            "source": "https://bsky.app/profile/goblfc.org/post/3mmrvar2r6p2y",
+            "asOf": "2026-05-26T21:01:43.548Z",
+            "confidence": 0.9
           },
           "closes": {
             "date": "2026-05-29",
@@ -67,10 +67,10 @@
         },
         "volunteers": {
           "opens": {
-            "date": "2026-04-17",
-            "source": "https://bsky.app/profile/goblfc.org/post/3mjpfqwvwnp2o",
-            "asOf": "2026-04-17T17:03:32.128Z",
-            "confidence": 1
+            "date": "2026-07-07",
+            "source": "https://bsky.app/profile/goblfc.org/post/3mq36w57c242m",
+            "asOf": "2026-07-07T18:04:17.289Z",
+            "confidence": 0.9
           }
         }
       }

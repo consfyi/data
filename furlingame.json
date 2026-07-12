@@ -19,20 +19,20 @@
         -122.3651261
       ],
       "keyDates": {
-        "hotel": {
-          "opens": {
-            "date": "2026-07-10",
-            "source": "https://bsky.app/profile/furlingame.com/post/3mqcjpxdqtc2w",
-            "asOf": "2026-07-10T16:06:19.656Z",
-            "confidence": 0.9
-          }
-        },
         "registration": {
           "opens": {
             "date": "2026-07-10",
             "source": "https://bsky.app/profile/furlingame.com/post/3mqcjmlgxl22w",
             "asOf": "2026-07-10T16:04:26.512Z",
             "confidence": 0.95
+          }
+        },
+        "hotel": {
+          "opens": {
+            "date": "2026-07-10",
+            "source": "https://bsky.app/profile/furlingame.com/post/3mqcjpxdqtc2w",
+            "asOf": "2026-07-10T16:06:19.656Z",
+            "confidence": 0.9
           }
         }
       }

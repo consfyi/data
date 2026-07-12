@@ -37,6 +37,14 @@
             "asOf": "2026-05-18T02:24:37.203Z",
             "confidence": 0.82
           }
+        },
+        "hotel": {
+          "opens": {
+            "date": "2026-05-03",
+            "source": "https://bsky.app/profile/pawstral.bsky.social/post/3mkxvmsthxs2k",
+            "asOf": "2026-05-03T19:34:03.888Z",
+            "confidence": 0.8
+          }
         }
       }
     },

@@ -67,6 +67,14 @@
             "asOf": "2026-06-03T22:00:12.304Z",
             "confidence": 0.9
           }
+        },
+        "volunteers": {
+          "opens": {
+            "date": "2026-06-30",
+            "source": "https://bsky.app/profile/tailsofsummer.com/post/3mpk2g3cqwl2i",
+            "asOf": "2026-06-30T22:28:28.256Z",
+            "confidence": 0.8
+          }
         }
       }
     }

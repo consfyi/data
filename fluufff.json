@@ -82,7 +82,41 @@
       "latLng": [
         50.8442326,
         4.3474068
-      ]
+      ],
+      "keyDates": {
+        "panels": {
+          "opens": {
+            "date": "2025-06-24",
+            "source": "https://bsky.app/profile/fluufffcon.bsky.social/post/3lsdx2gcrzk2d",
+            "asOf": "2025-06-24T11:01:40.424Z",
+            "confidence": 0.9
+          }
+        },
+        "registration": {
+          "opens": {
+            "date": "2025-06-01",
+            "source": "https://bsky.app/profile/fluufffcon.bsky.social/post/3lqk7ppta5l2m",
+            "asOf": "2025-06-01T12:02:20.137Z",
+            "confidence": 1
+          }
+        },
+        "dealers": {
+          "opens": {
+            "date": "2025-06-01",
+            "source": "https://bsky.app/profile/fluufffcon.bsky.social/post/3lqdmcewfzl2l",
+            "asOf": "2025-05-29T20:58:52.991Z",
+            "confidence": 0.9
+          }
+        },
+        "hotel": {
+          "closes": {
+            "date": "2025-07-31",
+            "source": "https://bsky.app/profile/fluufffcon.bsky.social/post/3ltwz4jozna2g",
+            "asOf": "2025-07-14T18:24:23.984Z",
+            "confidence": 0.9
+          }
+        }
+      }
     }
   ]
 }

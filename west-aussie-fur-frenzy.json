@@ -17,7 +17,25 @@
       "latLng": [
         -32.0573082,
         115.7463379
-      ]
+      ],
+      "keyDates": {
+        "dealers": {
+          "closes": {
+            "date": "2026-04-12",
+            "source": "https://bsky.app/profile/waff.net.au/post/3mixkebaobk2b",
+            "asOf": "2026-04-08T05:22:02.613Z",
+            "confidence": 0.9
+          }
+        },
+        "registration": {
+          "opens": {
+            "date": "2026-05-28",
+            "source": "https://bsky.app/profile/waff.net.au/post/3mmvnuq2ims2b",
+            "asOf": "2026-05-28T09:00:23.269Z",
+            "confidence": 0.95
+          }
+        }
+      }
     },
     {
       "id": "west-aussie-fur-frenzy-2025",

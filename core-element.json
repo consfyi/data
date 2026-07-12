@@ -32,6 +32,14 @@
             "asOf": "2026-06-22T18:20:22.815Z",
             "confidence": 0.85
           }
+        },
+        "volunteers": {
+          "opens": {
+            "date": "2026-04-03",
+            "source": "https://bsky.app/profile/coreelement.bsky.social/post/3miltyd7ifc2m",
+            "asOf": "2026-04-03T13:42:22.577Z",
+            "confidence": 0.8
+          }
         }
       }
     },

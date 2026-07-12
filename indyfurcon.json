@@ -63,6 +63,12 @@
             "source": "https://bsky.app/profile/indyfurcon.org/post/3mlvm4osnqc2x",
             "asOf": "2026-05-15T15:03:51.046596Z",
             "confidence": 0.9
+          },
+          "closes": {
+            "date": "2026-08-01",
+            "source": "https://bsky.app/profile/indyfurcon.org/post/3mq5krcpqyf2i",
+            "asOf": "2026-07-08T16:41:39.953084239Z",
+            "confidence": 1
           }
         },
         "djs": {

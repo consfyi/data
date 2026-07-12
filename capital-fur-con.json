@@ -36,6 +36,12 @@
             "source": "https://bsky.app/profile/capitalfurcon.org/post/3mpzehwz2wc2c",
             "asOf": "2026-07-07T00:38:24.515Z",
             "confidence": 0.85
+          },
+          "closes": {
+            "date": "2026-08-31",
+            "source": "https://bsky.app/profile/capitalfurcon.org/post/3mpzehwz2wc2c",
+            "asOf": "2026-07-07T00:38:24.515Z",
+            "confidence": 0.9
           }
         }
       }

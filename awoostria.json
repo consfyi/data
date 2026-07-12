@@ -72,6 +72,14 @@
             "asOf": "2026-04-16T15:35:10.427Z",
             "confidence": 0.9
           }
+        },
+        "hotel": {
+          "opens": {
+            "date": "2025-11-15",
+            "source": "https://bsky.app/profile/awoostria.at/post/3m5mgr5ikrs2u",
+            "asOf": "2025-11-14T19:41:14.891Z",
+            "confidence": 0.8
+          }
         }
       }
     },

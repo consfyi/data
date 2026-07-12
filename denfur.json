@@ -42,6 +42,14 @@
             "asOf": "2026-01-27T11:02:26-08:00",
             "confidence": 0.85
           }
+        },
+        "panels": {
+          "closes": {
+            "date": "2026-07-10",
+            "source": "https://bsky.app/profile/denfur.org/post/3mq7xlci6ss2b",
+            "asOf": "2026-07-09T15:36:16.732Z",
+            "confidence": 0.9
+          }
         }
       }
     },

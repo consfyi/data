@@ -61,6 +61,12 @@
             "source": "https://bsky.app/profile/aurawra.org/post/3mngwiqqedt2a",
             "asOf": "2026-06-04T05:49:59.850Z",
             "confidence": 0.95
+          },
+          "opens": {
+            "date": "2026-02-24",
+            "source": "https://bsky.app/profile/aurawra.org/post/3mflbqzs5sv2u",
+            "asOf": "2026-02-24T04:00:34.786Z",
+            "confidence": 0.9
           }
         },
         "performances": {
@@ -69,6 +75,12 @@
             "source": "https://bsky.app/profile/aurawra.org/post/3mngwiqqedt2a",
             "asOf": "2026-06-04T05:49:59.850Z",
             "confidence": 0.8
+          },
+          "opens": {
+            "date": "2026-06-04",
+            "source": "https://bsky.app/profile/aurawra.org/post/3mngwiqqedt2a",
+            "asOf": "2026-06-04T05:49:59.850Z",
+            "confidence": 0.9
           }
         },
         "volunteers": {

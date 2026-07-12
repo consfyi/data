@@ -37,6 +37,14 @@
             "asOf": "2026-06-16T19:18:26.179Z",
             "confidence": 0.9
           }
+        },
+        "panels": {
+          "opens": {
+            "date": "2026-07-09",
+            "source": "https://bsky.app/profile/wpafw.bsky.social/post/3mq7rc2zwms26",
+            "asOf": "2026-07-09T13:43:44.467Z",
+            "confidence": 0.95
+          }
         }
       }
     },

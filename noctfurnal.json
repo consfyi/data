@@ -23,17 +23,17 @@
       ],
       "keyDates": {
         "registration": {
-          "closes": {
-            "date": "2026-05-01",
-            "source": "https://bsky.app/profile/noctfurnalevents.bsky.social/post/3mkijpprxxk2a",
-            "asOf": "2026-04-27T16:51:00.397Z",
-            "confidence": 0.95
-          },
           "opens": {
             "date": "2026-07-11",
             "source": "https://bsky.app/profile/noctfurnalevents.bsky.social/post/3mqdm35nm222e",
             "asOf": "2026-07-11T02:21:02.564Z",
             "confidence": 0.9
+          },
+          "closes": {
+            "date": "2026-05-01",
+            "source": "https://bsky.app/profile/noctfurnalevents.bsky.social/post/3mkijpprxxk2a",
+            "asOf": "2026-04-27T16:51:00.397Z",
+            "confidence": 0.95
           }
         },
         "dealers": {

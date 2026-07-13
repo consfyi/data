@@ -1,1 +1,11 @@
-[]
+[
+  {
+    "event_id": "megaplex-2026",
+    "category": "dealers",
+    "kind": "opens",
+    "date": "2026-04-05",
+    "reason": "reg is already open and the wording implies it just opened but is a reminder that its opened.",
+    "by": "sparkyfen",
+    "at": "2026-07-13T23:05:46Z"
+  }
+]

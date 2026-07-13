@@ -50,6 +50,12 @@
           }
         },
         "performances": {
+          "opens": {
+            "date": "2026-07-10",
+            "source": "https://bsky.app/profile/fur-eh.bsky.social/post/3mqbb5nnmct2n",
+            "asOf": "2026-07-10T04:00:15.389618096Z",
+            "confidence": 0.9
+          },
           "closes": {
             "date": "2026-06-30",
             "source": "https://bsky.app/profile/fur-eh.bsky.social/post/3mpjs5wgjwj2d",
@@ -59,10 +65,10 @@
         },
         "volunteers": {
           "opens": {
-            "date": "2026-07-02",
-            "source": "https://bsky.app/profile/fur-eh.bsky.social/post/3mpo726tt5f2c",
-            "asOf": "2026-07-02T14:01:56.406380344Z",
-            "confidence": 0.8
+            "date": "2026-07-08",
+            "source": "https://bsky.app/profile/fur-eh.bsky.social/post/3mq5btbcot52j",
+            "asOf": "2026-07-08T14:01:41.510999225Z",
+            "confidence": 0.9
           }
         }
       }

@@ -59,19 +59,21 @@ def main() -> int:
         json.dump(rejections, f, indent=2, ensure_ascii=False)
         f.write("\n")
 
-    subprocess.run(["git", "config", "user.name", "cons.fyi GitHub bot"], check=True)
-    subprocess.run(["git", "config", "user.email", "github@cons.fyi"], check=True)
-    subprocess.run(["git", "add", ".github/keydates_rejections.json"], check=True)
-    subprocess.run(
-        ["git", "commit", "-m", f"Reject key date {event_id} {category}.{kind} {date}"],
-        check=True,
-    )
+    # our stdout is captured into $GITHUB_OUTPUT — only the sentinel word may
+    # reach it, so route every git subprocess's stdout to stderr
+    def git(*args, check=True):
+        return subprocess.run(["git", *args], check=check, stdout=sys.stderr)
+
+    git("config", "user.name", "cons.fyi GitHub bot")
+    git("config", "user.email", "github@cons.fyi")
+    git("add", ".github/keydates_rejections.json")
+    git("commit", "-m", f"Reject key date {event_id} {category}.{kind} {date}")
     # two racing /reject comments: rebase and retry the push
     for _ in range(3):
-        if subprocess.run(["git", "push"], check=False).returncode == 0:
+        if git("push", check=False).returncode == 0:
             print("ok", end="")
             return 0
-        subprocess.run(["git", "pull", "--rebase"], check=True)
+        git("pull", "--rebase")
     print("push-failure", end="")
     return 1
 

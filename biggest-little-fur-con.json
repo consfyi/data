@@ -50,6 +50,12 @@
           }
         },
         "panels": {
+          "opens": {
+            "date": "2026-05-04",
+            "source": "https://bsky.app/profile/goblfc.org/post/3ml2ofz7vu526",
+            "asOf": "2026-05-04T22:02:58.080Z",
+            "confidence": 0.9
+          },
           "closes": {
             "date": "2026-07-14",
             "source": "https://bsky.app/profile/goblfc.org/post/3mpjse6tbyh26",
@@ -58,6 +64,12 @@
           }
         },
         "djs": {
+          "opens": {
+            "date": "2026-04-30",
+            "source": "https://bsky.app/profile/goblfc.org/post/3mkqcedkh7r2y",
+            "asOf": "2026-04-30T19:00:39.372Z",
+            "confidence": 0.95
+          },
           "closes": {
             "date": "2026-05-17",
             "source": "https://bsky.app/profile/goblfc.org/post/3mloldwqaxs2y",

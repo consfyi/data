@@ -42,6 +42,14 @@
             "asOf": "2026-07-01T17:06:37.996Z",
             "confidence": 0.9
           }
+        },
+        "volunteers": {
+          "opens": {
+            "date": "2026-07-14",
+            "source": "https://bsky.app/profile/did:plc:efgqcoutfj3rxzkeihyaz26q/post/3mqmy6iw3ad2e",
+            "asOf": "2026-07-14T19:51:37.533Z",
+            "confidence": 0.9
+          }
         }
       }
     },

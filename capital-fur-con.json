@@ -43,6 +43,20 @@
             "asOf": "2026-07-07T00:38:24.515Z",
             "confidence": 0.9
           }
+        },
+        "djs": {
+          "opens": {
+            "date": "2026-07-14",
+            "source": "https://bsky.app/profile/capitalfurcon.org/post/3mqmnl4ke2s2l",
+            "asOf": "2026-07-14T16:41:49.694Z",
+            "confidence": 0.9
+          },
+          "closes": {
+            "date": "2026-12-01",
+            "source": "https://bsky.app/profile/capitalfurcon.org/post/3mqmnl4ke2s2l",
+            "asOf": "2026-07-14T16:41:49.694Z",
+            "confidence": 0.9
+          }
         }
       }
     }

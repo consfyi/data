@@ -64,6 +64,14 @@
             "asOf": "2026-05-09T20:52:47.536Z",
             "confidence": 0.9
           }
+        },
+        "djs": {
+          "closes": {
+            "date": "2026-07-15",
+            "source": "https://bsky.app/profile/tailsandtornadoes.org/post/3mqk2wbz6eg2r",
+            "asOf": "2026-07-13T16:02:43.930Z",
+            "confidence": 0.9
+          }
         }
       }
     },

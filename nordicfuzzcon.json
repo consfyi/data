@@ -20,7 +20,17 @@
       ],
       "sources": [
         "fancons.com"
-      ]
+      ],
+      "keyDates": {
+        "volunteers": {
+          "opens": {
+            "date": "2026-07-14",
+            "source": "https://bsky.app/profile/did:plc:i7jct5sy4z2tb2q7gritvhjc/post/3mqmlajy6i52o",
+            "asOf": "2026-07-14T16:00:05.962Z",
+            "confidence": 0.9
+          }
+        }
+      }
     },
     {
       "id": "nordicfuzzcon-2026",

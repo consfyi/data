@@ -44,6 +44,12 @@
             "source": "https://bsky.app/profile/futrolajki.pl/post/3mpm43gum4s2k",
             "asOf": "2026-07-01T18:03:38.407Z",
             "confidence": 0.9
+          },
+          "closes": {
+            "date": "2026-07-14",
+            "source": "https://bsky.app/profile/did:plc:oy67eitzxchghmwagnebvp56/post/3mqmvsultic2l",
+            "asOf": "2026-07-14T19:09:19.718Z",
+            "confidence": 0.9
           }
         },
         "djs": {

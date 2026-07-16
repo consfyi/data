@@ -7,5 +7,14 @@
     "reason": "reg is already open and the wording implies it just opened but is a reminder that its opened.",
     "by": "sparkyfen",
     "at": "2026-07-13T23:05:46Z"
+  },
+  {
+    "event_id": "biggest-little-fur-con-2026",
+    "category": "djs",
+    "kind": "opens",
+    "date": "2026-05-12",
+    "reason": "this date is already in place and the new post just mentions that its already open.",
+    "by": "sparkyfen",
+    "at": "2026-07-16T22:17:31Z"
   }
 ]

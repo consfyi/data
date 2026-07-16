@@ -26,3 +26,5 @@ jobs:
         run: |
           mkdir "$RUNNER_TEMP/out"
           uv run tools/materialize.py "$RUNNER_TEMP/out"
+      - name: Reject-parser unit tests
+        run: python3 .github/scripts/test_keydates_reject.py

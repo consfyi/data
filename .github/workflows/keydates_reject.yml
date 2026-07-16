@@ -61,9 +61,14 @@ jobs:
             content="+1"
           else
             content="-1"
+            if [ "$RESULT" = "invalid-date" ]; then
+              msg="That date isn't a real calendar date. Syntax: \`/reject <event_id> <category>.<kind> <YYYY-MM-DD> — <reason>\`"
+            else
+              msg="Could not parse that. Syntax: \`/reject <event_id> <category>.<kind> <YYYY-MM-DD> — <reason>\`"
+            fi
             gh api --method POST \
               "repos/${GITHUB_REPOSITORY}/issues/${ISSUE_NUMBER}/comments" \
-              -f body="Could not parse that. Syntax: \`/reject <event_id> <category>.<kind> <YYYY-MM-DD> — <reason>\`" || true
+              -f body="$msg" || true
           fi
           gh api --method POST \
             "repos/${GITHUB_REPOSITORY}/issues/comments/${COMMENT_ID}/reactions" \

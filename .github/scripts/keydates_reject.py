@@ -9,30 +9,45 @@ reads that file each run and never re-proposes a matching date.
 Syntax:  /reject <event_id> <category>.<kind> <date> — <reason...>
 Example: /reject anthrocon-2026 registration.closes 2026-06-26 — that's the pre-reg deadline
 """
+import datetime
 import json
 import os
 import re
 import subprocess
 import sys
 
+# (?!\S) forces the date to end at whitespace/end-of-comment: without it,
+# a typo like 2026-07-125 matched as date 2026-07-12 with the stray "5"
+# swallowed into the reason.
 GRAMMAR = re.compile(
     r"^/reject\s+([a-z0-9-]+)\s+"
     r"(registration|hotel|dealers|panels|performances|djs|volunteers)\.(opens|closes)\s+"
-    r"(\d{4}-\d{2}-\d{2})\s*(?:[—–-]+\s*)?(.*)$",
+    r"(\d{4}-\d{2}-\d{2})(?!\S)\s*(?:[—–-]+\s*)?(.*)$",
     re.S,
 )
+
+def parse(body):
+    """Parse a /reject comment. Returns (fields, None) or (None, error)."""
+    m = GRAMMAR.match(body.strip())
+    if not m:
+        return None, "parse-failure"
+    try:
+        datetime.date.fromisoformat(m.group(4))
+    except ValueError:
+        return None, "invalid-date"
+    return m.groups(), None
 
 def main() -> int:
     body = os.environ.get("COMMENT_BODY", "")
     user = os.environ.get("COMMENT_USER", "")
     created = os.environ.get("COMMENT_CREATED_AT", "")
 
-    m = GRAMMAR.match(body.strip())
-    if not m:
-        print("parse-failure", end="")
+    fields, err = parse(body)
+    if err:
+        print(err, end="")
         return 0  # workflow reacts with 👎 based on the output
 
-    event_id, category, kind, date, reason = m.groups()
+    event_id, category, kind, date, reason = fields
     reason = " ".join(reason.split())[:300]  # collapse whitespace, cap length
 
     with open(".github/keydates_rejections.json") as f:

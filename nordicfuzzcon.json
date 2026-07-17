@@ -22,6 +22,14 @@
         "fancons.com"
       ],
       "keyDates": {
+        "registration": {
+          "opens": {
+            "date": "2026-10-03",
+            "source": "https://bsky.app/profile/did:plc:i7jct5sy4z2tb2q7gritvhjc/post/3mqplsuxkor22",
+            "asOf": "2026-07-15T20:48:20.135Z",
+            "confidence": 0.95
+          }
+        },
         "volunteers": {
           "opens": {
             "date": "2026-07-14",

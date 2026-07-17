@@ -34,5 +34,32 @@
     "reason": "this date is already in place and the new post just mentions that its already open.",
     "by": "sparkyfen",
     "at": "2026-07-16T22:20:17Z"
+  },
+  {
+    "event_id": "eurofurence-30",
+    "category": "performances",
+    "kind": "closes",
+    "date": "2026-06-01",
+    "reason": "bot PR #54 cross-attributed post 3mmwby32qdc22 (Furdance/Nightclub applications before June 1) to dance-competition registrations; the real close is 2026-06-14 from post 3mm55d3a3rs2o.",
+    "by": "sparkyfen",
+    "at": "2026-07-17T06:10:20Z"
+  },
+  {
+    "event_id": "futrolajki-2026",
+    "category": "dealers",
+    "kind": "closes",
+    "date": "2026-07-15",
+    "reason": "bot PR #54 read the Polish half of a bilingual 'Dealer's Den closes tonight at midnight' announcement (posted 2026-07-14) as a 07-15 close; last day open is 2026-07-14.",
+    "by": "sparkyfen",
+    "at": "2026-07-17T06:10:20Z"
+  },
+  {
+    "event_id": "fur-eh-2026",
+    "category": "registration",
+    "kind": "opens",
+    "date": "2026-07-16",
+    "reason": "bot PR #54 added a registration.opens on the con's own start day (at-door/day-of), three days after registration.closes 2026-07-13; removed as spurious.",
+    "by": "sparkyfen",
+    "at": "2026-07-17T06:10:20Z"
   }
 ]

@@ -20,12 +20,6 @@
       ],
       "keyDates": {
         "registration": {
-          "opens": {
-            "date": "2026-07-16",
-            "source": "https://bsky.app/profile/fur-eh.bsky.social/post/3mqrkixua7c24",
-            "asOf": "2026-07-16T15:30:15.082470786Z",
-            "confidence": 0.9
-          },
           "closes": {
             "date": "2026-07-13",
             "source": "https://bsky.app/profile/fur-eh.bsky.social/post/3mqhkdtc7qv2e",

@@ -61,5 +61,14 @@
     "reason": "bot PR #54 added a registration.opens on the con's own start day (at-door/day-of), three days after registration.closes 2026-07-13; removed as spurious.",
     "by": "sparkyfen",
     "at": "2026-07-17T06:10:20Z"
+  },
+  {
+    "event_id": "gateway-furmeet-2026",
+    "category": "panels",
+    "kind": "opens",
+    "date": "2026-01-21",
+    "reason": "doesn't replace the old date.",
+    "by": "sparkyfen",
+    "at": "2026-07-18T21:06:22Z"
   }
 ]

@@ -70,5 +70,14 @@
     "reason": "doesn't replace the old date.",
     "by": "sparkyfen",
     "at": "2026-07-18T21:06:22Z"
+  },
+  {
+    "event_id": "brasil-furfest-2026",
+    "category": "registration",
+    "kind": "opens",
+    "date": "2026-05-04",
+    "reason": "first date was the first registration for 2026",
+    "by": "sparkyfen",
+    "at": "2026-07-18T21:08:23Z"
   }
 ]

@@ -19,6 +19,14 @@
         153.02183549999998
       ],
       "keyDates": {
+        "hotel": {
+          "opens": {
+            "date": "2026-01-30",
+            "source": "https://bsky.app/profile/furdu.com.au/post/3mdmwwknkhk2f",
+            "asOf": "2026-01-30T09:01:46.092Z",
+            "confidence": 0.9
+          }
+        },
         "dealers": {
           "opens": {
             "date": "2026-04-29",

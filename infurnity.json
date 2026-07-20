@@ -43,6 +43,12 @@
           }
         },
         "dealers": {
+          "opens": {
+            "date": "2026-06-20",
+            "source": "https://bsky.app/profile/did:plc:uiqsmywrawljvwhmia6odqcs/post/3mopfk2mkyc2h",
+            "asOf": "2026-06-20T08:05:40.141Z",
+            "confidence": 0.9
+          },
           "closes": {
             "date": "2026-07-31",
             "source": "https://bsky.app/profile/infurnity.bsky.social/post/3mopfk2mkyc2h",
@@ -51,6 +57,12 @@
           }
         },
         "panels": {
+          "opens": {
+            "date": "2026-06-30",
+            "source": "https://bsky.app/profile/did:plc:uiqsmywrawljvwhmia6odqcs/post/3mpixnbjg2c23",
+            "asOf": "2026-06-30T12:06:08.853Z",
+            "confidence": 0.9
+          },
           "closes": {
             "date": "2026-08-15",
             "source": "https://bsky.app/profile/infurnity.bsky.social/post/3mpixnbjg2c23",
@@ -59,6 +71,12 @@
           }
         },
         "performances": {
+          "opens": {
+            "date": "2026-07-05",
+            "source": "https://bsky.app/profile/did:plc:uiqsmywrawljvwhmia6odqcs/post/3mpvks42k4k2a",
+            "asOf": "2026-07-05T12:20:48.850Z",
+            "confidence": 0.8
+          },
           "closes": {
             "date": "2026-09-01",
             "source": "https://bsky.app/profile/infurnity.bsky.social/post/3mpvks42k4k2a",
@@ -67,6 +85,12 @@
           }
         },
         "djs": {
+          "opens": {
+            "date": "2026-07-04",
+            "source": "https://bsky.app/profile/did:plc:uiqsmywrawljvwhmia6odqcs/post/3mpsokj5goc2k",
+            "asOf": "2026-07-04T08:50:09.893Z",
+            "confidence": 0.8
+          },
           "closes": {
             "date": "2026-08-01",
             "source": "https://bsky.app/profile/infurnity.bsky.social/post/3mpsokj5goc2k",

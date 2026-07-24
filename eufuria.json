@@ -20,6 +20,12 @@
       ],
       "keyDates": {
         "registration": {
+          "opens": {
+            "date": "2026-07-23",
+            "source": "https://bsky.app/profile/did:plc:hnrit3a6bvynnpaqq37pc7qq/post/3mrcviupxr72m",
+            "asOf": "2026-07-23T13:02:18.529Z",
+            "confidence": 0.95
+          },
           "closes": {
             "date": "2026-06-19",
             "source": "https://bsky.app/profile/eufuria.org/post/3mobrelcj6k2c",

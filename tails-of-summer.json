@@ -24,10 +24,10 @@
       "keyDates": {
         "registration": {
           "closes": {
-            "date": "2026-07-27",
-            "source": "https://bsky.app/profile/tailsofsummer.com/post/3mo72d6ubuv2m",
-            "asOf": "2026-06-13T20:02:22.571Z",
-            "confidence": 0.95
+            "date": "2026-07-24",
+            "source": "https://bsky.app/profile/did:plc:dn7cq63ck4j5fgdhdn36qamz/post/3mr6hprn5li2x",
+            "asOf": "2026-07-21T18:44:58.822Z",
+            "confidence": 0.8
           }
         },
         "hotel": {

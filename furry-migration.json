@@ -50,11 +50,25 @@
           }
         },
         "panels": {
+          "opens": {
+            "date": "2026-05-07",
+            "source": "https://bsky.app/profile/did:plc:ittzfj5vrjmgupumwkws36dv/post/3mlbz2wepql2j",
+            "asOf": "2026-05-07T20:02:15.955Z",
+            "confidence": 0.9
+          },
           "closes": {
             "date": "2026-07-11",
             "source": "https://bsky.app/profile/furrymigration.org/post/3mo47s6dk6c2w",
             "asOf": "2026-06-12T17:02:14.978Z",
             "confidence": 0.85
+          }
+        },
+        "performances": {
+          "opens": {
+            "date": "2026-07-21",
+            "source": "https://bsky.app/profile/did:plc:ittzfj5vrjmgupumwkws36dv/post/3mr6bxj3jra2c",
+            "asOf": "2026-07-21T17:01:55.813Z",
+            "confidence": 0.9
           }
         },
         "djs": {

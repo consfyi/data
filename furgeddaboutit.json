@@ -6,6 +6,23 @@
   },
   "events": [
     {
+      "id": "furgeddaboutit-2027",
+      "name": "Furgeddaboutit 2027",
+      "url": "https://furgeddaboutit.org",
+      "startDate": "2027-03-11",
+      "endDate": "2027-03-14",
+      "venue": "Dolce by Wyndham Parsippany",
+      "address": "199 Smith Rd, Parsippany, NJ 07054, USA",
+      "locale": "en-US",
+      "latLng": [
+        40.8616911,
+        -74.4122885
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    },
+    {
       "id": "furgeddaboutit-2026",
       "name": "Furgeddaboutit 2026",
       "url": "https://furgeddaboutit.org",

@@ -106,5 +106,14 @@
     "reason": "misattributed: same Tails of Summer post as the djs.closes; TOS already records this panels.closes date",
     "by": "sparkyfen",
     "at": "2026-07-27T05:30:40Z"
+  },
+  {
+    "event_id": "carolina-furfare-2026",
+    "category": "panels",
+    "kind": "opens",
+    "date": "2026-06-08",
+    "reason": "recency-wins moved an opens later; panels opened 2026-05-03 ('now open'), this 06-08 post is a re-announcement. Restoring 2026-05-03",
+    "by": "sparkyfen",
+    "at": "2026-07-27T05:30:41Z"
   }
 ]

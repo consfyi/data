@@ -88,5 +88,14 @@
     "reason": "misattributed: source post is a Tails of Summer post (links tailsofsummer.com/djapps, #TailsOfSummer) and the at-uri doesn't exist under VancouFur's DID",
     "by": "sparkyfen",
     "at": "2026-07-27T05:30:39Z"
+  },
+  {
+    "event_id": "calfurry-2026",
+    "category": "performances",
+    "kind": "opens",
+    "date": "2026-07-26",
+    "reason": "recency-wins moved opens later; performance submissions opened 2026-02-28, this 07-26 Dance Competition post is a re-announcement. Restoring 2026-02-28",
+    "by": "sparkyfen",
+    "at": "2026-07-27T05:30:47Z"
   }
 ]

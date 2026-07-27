@@ -79,5 +79,14 @@
     "reason": "first date was the first registration for 2026",
     "by": "sparkyfen",
     "at": "2026-07-18T21:08:23Z"
+  },
+  {
+    "event_id": "vancoufur-2027",
+    "category": "djs",
+    "kind": "closes",
+    "date": "2026-06-09",
+    "reason": "misattributed: source post is a Tails of Summer post (links tailsofsummer.com/djapps, #TailsOfSummer) and the at-uri doesn't exist under VancouFur's DID",
+    "by": "sparkyfen",
+    "at": "2026-07-27T05:30:39Z"
   }
 ]

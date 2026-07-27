@@ -133,5 +133,14 @@
     "reason": "con-end recap ('registration officially closed', posted on the final day), not a pre-reg deadline. Leaving closes unset (prior 06-19 was sponsor-tier only)",
     "by": "sparkyfen",
     "at": "2026-07-27T05:30:43Z"
+  },
+  {
+    "event_id": "eufuria-2026",
+    "category": "registration",
+    "kind": "opens",
+    "date": "2026-07-23",
+    "reason": "event-day door/on-site check-in (con start date), not when registration opened. Miscategorized",
+    "by": "sparkyfen",
+    "at": "2026-07-27T05:30:44Z"
   }
 ]

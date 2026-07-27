@@ -151,5 +151,14 @@
     "reason": "timezone artifact: post at 02:19Z = 22:19 EDT on the 19th ('closes midnight tonight') = end of 2026-07-19 local. Restoring 2026-07-19",
     "by": "sparkyfen",
     "at": "2026-07-27T05:30:45Z"
+  },
+  {
+    "event_id": "anthro-irish-2026",
+    "category": "registration",
+    "kind": "opens",
+    "date": "2026-07-20",
+    "reason": "recency-wins moved opens later; general reg opened 2025-10-08 ('General Registration Now Open'), this 07-20 post is the separate residential-lottery phase. Restoring 2025-10-08",
+    "by": "sparkyfen",
+    "at": "2026-07-27T05:30:45Z"
   }
 ]

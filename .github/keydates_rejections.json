@@ -97,5 +97,14 @@
     "reason": "recency-wins moved opens later; performance submissions opened 2026-02-28, this 07-26 Dance Competition post is a re-announcement. Restoring 2026-02-28",
     "by": "sparkyfen",
     "at": "2026-07-27T05:30:47Z"
+  },
+  {
+    "event_id": "vancoufur-2027",
+    "category": "panels",
+    "kind": "closes",
+    "date": "2026-06-09",
+    "reason": "misattributed: same Tails of Summer post as the djs.closes; TOS already records this panels.closes date",
+    "by": "sparkyfen",
+    "at": "2026-07-27T05:30:40Z"
   }
 ]

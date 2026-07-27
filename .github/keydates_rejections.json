@@ -142,5 +142,14 @@
     "reason": "event-day door/on-site check-in (con start date), not when registration opened. Miscategorized",
     "by": "sparkyfen",
     "at": "2026-07-27T05:30:44Z"
+  },
+  {
+    "event_id": "furrydelphia-2026",
+    "category": "registration",
+    "kind": "closes",
+    "date": "2026-07-20",
+    "reason": "timezone artifact: post at 02:19Z = 22:19 EDT on the 19th ('closes midnight tonight') = end of 2026-07-19 local. Restoring 2026-07-19",
+    "by": "sparkyfen",
+    "at": "2026-07-27T05:30:45Z"
   }
 ]

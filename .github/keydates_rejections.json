@@ -115,5 +115,14 @@
     "reason": "recency-wins moved an opens later; panels opened 2026-05-03 ('now open'), this 06-08 post is a re-announcement. Restoring 2026-05-03",
     "by": "sparkyfen",
     "at": "2026-07-27T05:30:41Z"
+  },
+  {
+    "event_id": "tails-of-summer-2026",
+    "category": "hotel",
+    "kind": "opens",
+    "date": "2026-06-14",
+    "reason": "this post opens the Overflow hotel; the main block opened 2026-06-10. hotel.opens should be the main opening. Restoring 2026-06-10",
+    "by": "sparkyfen",
+    "at": "2026-07-27T05:30:42Z"
   }
 ]

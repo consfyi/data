@@ -176,7 +176,9 @@ class TestRecord(unittest.TestCase):
         # exits 0 so the React step still posts a 👎 (the whole point of the fix).
         rc, sentinel, final, fake = self._run(remote=[], push_rc=[0], corrupt=True)
         self.assertEqual((rc, sentinel), (0, "push-failure"))
-        self.assertNotIn("push", fake.subs())   # never got far enough to push
+        self.assertNotIn("push", fake.subs())        # never got far enough to push
+        self.assertIsNone(final)                     # file stayed corrupt, never repaired
+        self.assertEqual(fake.subs().count("fetch"), 25)  # retried every attempt
 
     def test_transient_git_error_recovers_on_later_attempt(self):
         # the first `fetch` blows up with a CalledProcessError; the loop must

@@ -100,10 +100,12 @@ def main() -> int:
             if git("push", check=False).returncode == 0:
                 print("ok", end="")
                 return 0
-        except (subprocess.CalledProcessError, OSError, json.JSONDecodeError):
-            pass  # any git / IO / parse error this attempt — back off, retry
-            # (a corrupt or missing rejections file loops to push-failure so
-            # the commenter still gets a 👎, rather than crashing silently)
+        except (subprocess.CalledProcessError, OSError, json.JSONDecodeError) as e:
+            # stdout is the sentinel channel, so log the swallowed error to
+            # stderr — an exhausted loop is then diagnosable (which step, why).
+            # A corrupt/missing rejections file loops to push-failure so the
+            # commenter still gets a 👎 rather than a silent crash.
+            print(f"reject attempt {attempt} failed: {e!r}", file=sys.stderr)
         # jitter so near-simultaneous losers don't retry in lockstep
         # (skip after the final attempt — no point sleeping before we give up)
         if attempt < 24:

@@ -124,5 +124,14 @@
     "reason": "this post opens the Overflow hotel; the main block opened 2026-06-10. hotel.opens should be the main opening. Restoring 2026-06-10",
     "by": "sparkyfen",
     "at": "2026-07-27T05:30:42Z"
+  },
+  {
+    "event_id": "eufuria-2026",
+    "category": "registration",
+    "kind": "closes",
+    "date": "2026-07-25",
+    "reason": "con-end recap ('registration officially closed', posted on the final day), not a pre-reg deadline. Leaving closes unset (prior 06-19 was sponsor-tier only)",
+    "by": "sparkyfen",
+    "at": "2026-07-27T05:30:43Z"
   }
 ]

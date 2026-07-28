@@ -160,5 +160,14 @@
     "reason": "recency-wins moved opens later; general reg opened 2025-10-08 ('General Registration Now Open'), this 07-20 post is the separate residential-lottery phase. Restoring 2025-10-08",
     "by": "sparkyfen",
     "at": "2026-07-27T05:30:45Z"
+  },
+  {
+    "event_id": "biggest-little-fur-con-2026",
+    "category": "dealers",
+    "kind": "opens",
+    "date": "2026-07-16",
+    "reason": "Bazaar/Shops-At-Sea app opening (dealers-den selections already made); dealers-den opened 2026-05-26, keeping that",
+    "by": "sparkyfen",
+    "at": "2026-07-28T08:08:18Z"
   }
 ]

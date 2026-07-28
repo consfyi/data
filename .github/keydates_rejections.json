@@ -178,5 +178,14 @@
     "reason": "reminder ('Registration is also open'), not the opening; registration opened 2026-02-11, keeping that",
     "by": "sparkyfen",
     "at": "2026-07-28T08:08:20Z"
+  },
+  {
+    "event_id": "indyfurcon-2026",
+    "category": "hotel",
+    "kind": "opens",
+    "date": "2026-07-29",
+    "reason": "opens the overflow hotel; the main room block opened 2026-05-20, keeping that",
+    "by": "sparkyfen",
+    "at": "2026-07-28T08:08:19Z"
   }
 ]

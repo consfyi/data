@@ -187,5 +187,14 @@
     "reason": "opens the overflow hotel; the main room block opened 2026-05-20, keeping that",
     "by": "sparkyfen",
     "at": "2026-07-28T08:08:19Z"
+  },
+  {
+    "event_id": "carolina-furfare-2026",
+    "category": "hotel",
+    "kind": "opens",
+    "date": "2026-07-12",
+    "reason": "\"reserve your room today\" booking reminder; hotel opened 2026-06-16, keeping that",
+    "by": "sparkyfen",
+    "at": "2026-07-29T23:11:28Z"
   }
 ]

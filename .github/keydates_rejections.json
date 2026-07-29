@@ -205,5 +205,14 @@
     "reason": "\"sign up to Volunteer today!\" reminder; volunteers opened 2026-07-07, keeping that",
     "by": "sparkyfen",
     "at": "2026-07-29T23:11:30Z"
+  },
+  {
+    "event_id": "calfurry-2026",
+    "category": "djs",
+    "kind": "opens",
+    "date": "2026-07-14",
+    "reason": "reminder that DJ apps are open (they close Aug 2); apps opened 2026-07-05, keeping that",
+    "by": "sparkyfen",
+    "at": "2026-07-29T23:11:29Z"
   }
 ]

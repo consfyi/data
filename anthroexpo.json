@@ -17,7 +17,17 @@
       "latLng": [
         35.2434811,
         -97.4786414
-      ]
+      ],
+      "keyDates": {
+        "volunteers": {
+          "opens": {
+            "date": "2026-06-03",
+            "source": "https://bsky.app/profile/did:plc:2yyx6fpki4ibgkmljp6yjtnw/post/3mnfqisoqqo2s",
+            "asOf": "2026-06-03T18:30:00.000Z",
+            "confidence": 0.8
+          }
+        }
+      }
     },
     {
       "id": "anthroexpo-2026",

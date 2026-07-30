@@ -41,6 +41,12 @@
             "source": "https://bsky.app/profile/denfur.org/post/3mdgh3uujje2h",
             "asOf": "2026-01-27T11:02:26-08:00",
             "confidence": 0.85
+          },
+          "closes": {
+            "date": "2026-08-02",
+            "source": "https://bsky.app/profile/did:plc:5qadfstdsv7yd2nvezahdlxq/post/3mrlewmwqgv2x",
+            "asOf": "2026-07-26T21:59:44.087Z",
+            "confidence": 0.9
           }
         },
         "panels": {
@@ -48,6 +54,14 @@
             "date": "2026-07-10",
             "source": "https://bsky.app/profile/denfur.org/post/3mq7xlci6ss2b",
             "asOf": "2026-07-09T15:36:16.732Z",
+            "confidence": 0.9
+          }
+        },
+        "performances": {
+          "closes": {
+            "date": "2026-08-13",
+            "source": "https://bsky.app/profile/did:plc:5qadfstdsv7yd2nvezahdlxq/post/3mri436xigs2h",
+            "asOf": "2026-07-25T14:43:14.416Z",
             "confidence": 0.9
           }
         }

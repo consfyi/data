@@ -55,6 +55,12 @@
             "source": "https://bsky.app/profile/carolinafurfare.bsky.social/post/3mkyc4v5o6s2n",
             "asOf": "2026-05-03T23:17:48.111Z",
             "confidence": 0.9
+          },
+          "closes": {
+            "date": "2026-08-02",
+            "source": "https://bsky.app/profile/did:plc:eamjvw2tcnvapbkjhbwyuiy7/post/3mrlablcj322k",
+            "asOf": "2026-07-26T20:36:22.867Z",
+            "confidence": 0.9
           }
         },
         "djs": {

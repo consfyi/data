@@ -6,6 +6,20 @@
   },
   "events": [
     {
+      "id": "melbourne-furry-convention-2027",
+      "name": "Melbourne Furry Convention 2027",
+      "url": "https://melbfurcon.com",
+      "startDate": "2027-02-19",
+      "endDate": "2027-02-21",
+      "venue": "Novotel Melbourne Preston",
+      "address": "215 Bell St, Preston VIC 3072, Australia",
+      "locale": "en-AU",
+      "latLng": [
+        -37.7461191,
+        145.0083717
+      ]
+    },
+    {
       "id": "melbourne-furry-convention-2026",
       "name": "Melbourne Furry Convention 2026",
       "url": "https://melbfurcon.com",

@@ -6,6 +6,23 @@
   },
   "events": [
     {
+      "id": "fur-the-more-2027",
+      "name": "Fur the 'More 2027",
+      "url": "https://www.furthemore.org",
+      "startDate": "2027-04-02",
+      "endDate": "2027-04-04",
+      "venue": "Lord Baltimore Hotel",
+      "address": "20 W Baltimore St, Baltimore, MD 21201, USA",
+      "locale": "en-US",
+      "latLng": [
+        39.28964510000001,
+        -76.61626249999999
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    },
+    {
       "id": "fur-the-more-2026",
       "name": "Fur the 'More 2026",
       "url": "https://www.furthemore.org",

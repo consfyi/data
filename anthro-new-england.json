@@ -27,6 +27,14 @@
             "confidence": 0.95
           }
         },
+        "hotel": {
+          "opens": {
+            "date": "2026-08-22",
+            "source": "https://bsky.app/profile/did:plc:srxungr7qhhxzllfsdfltzau/post/3mrgr7ousy22z",
+            "asOf": "2026-07-25T01:56:14.424Z",
+            "confidence": 0.9
+          }
+        },
         "dealers": {
           "opens": {
             "date": "2026-07-01",

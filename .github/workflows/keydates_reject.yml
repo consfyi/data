@@ -15,8 +15,13 @@ permissions:
   contents: write
   pull-requests: write
 
+# One group PER COMMENT, not a shared group: GitHub keeps only a single
+# pending run per group and cancels the rest, so a shared group silently drops
+# all but the first + last of a batch of /reject comments. Per-comment groups
+# let every reject run; keydates_reject.py serializes the actual push by
+# recomputing its append against fresh origin/main on each retry.
 concurrency:
-  group: keydates-reject
+  group: keydates-reject-${{ github.event.comment.id }}
   cancel-in-progress: false
 
 jobs:
@@ -63,6 +68,8 @@ jobs:
             content="-1"
             if [ "$RESULT" = "invalid-date" ]; then
               msg="That date isn't a real calendar date. Syntax: \`/reject <event_id> <category>.<kind> <YYYY-MM-DD> — <reason>\`"
+            elif [ "$RESULT" = "push-failure" ]; then
+              msg="Couldn't record that reject right now (write contention on the rejections file). Please re-comment \`/reject …\` to retry."
             else
               msg="Could not parse that. Syntax: \`/reject <event_id> <category>.<kind> <YYYY-MM-DD> — <reason>\`"
             fi

@@ -79,5 +79,140 @@
     "reason": "first date was the first registration for 2026",
     "by": "sparkyfen",
     "at": "2026-07-18T21:08:23Z"
+  },
+  {
+    "event_id": "vancoufur-2027",
+    "category": "djs",
+    "kind": "closes",
+    "date": "2026-06-09",
+    "reason": "misattributed: source post is a Tails of Summer post (links tailsofsummer.com/djapps, #TailsOfSummer) and the at-uri doesn't exist under VancouFur's DID",
+    "by": "sparkyfen",
+    "at": "2026-07-27T05:30:39Z"
+  },
+  {
+    "event_id": "calfurry-2026",
+    "category": "performances",
+    "kind": "opens",
+    "date": "2026-07-26",
+    "reason": "recency-wins moved opens later; performance submissions opened 2026-02-28, this 07-26 Dance Competition post is a re-announcement. Restoring 2026-02-28",
+    "by": "sparkyfen",
+    "at": "2026-07-27T05:30:47Z"
+  },
+  {
+    "event_id": "vancoufur-2027",
+    "category": "panels",
+    "kind": "closes",
+    "date": "2026-06-09",
+    "reason": "misattributed: same Tails of Summer post as the djs.closes; TOS already records this panels.closes date",
+    "by": "sparkyfen",
+    "at": "2026-07-27T05:30:40Z"
+  },
+  {
+    "event_id": "carolina-furfare-2026",
+    "category": "panels",
+    "kind": "opens",
+    "date": "2026-06-08",
+    "reason": "recency-wins moved an opens later; panels opened 2026-05-03 ('now open'), this 06-08 post is a re-announcement. Restoring 2026-05-03",
+    "by": "sparkyfen",
+    "at": "2026-07-27T05:30:41Z"
+  },
+  {
+    "event_id": "tails-of-summer-2026",
+    "category": "hotel",
+    "kind": "opens",
+    "date": "2026-06-14",
+    "reason": "this post opens the Overflow hotel; the main block opened 2026-06-10. hotel.opens should be the main opening. Restoring 2026-06-10",
+    "by": "sparkyfen",
+    "at": "2026-07-27T05:30:42Z"
+  },
+  {
+    "event_id": "eufuria-2026",
+    "category": "registration",
+    "kind": "closes",
+    "date": "2026-07-25",
+    "reason": "con-end recap ('registration officially closed', posted on the final day), not a pre-reg deadline. Leaving closes unset (prior 06-19 was sponsor-tier only)",
+    "by": "sparkyfen",
+    "at": "2026-07-27T05:30:43Z"
+  },
+  {
+    "event_id": "eufuria-2026",
+    "category": "registration",
+    "kind": "opens",
+    "date": "2026-07-23",
+    "reason": "event-day door/on-site check-in (con start date), not when registration opened. Miscategorized",
+    "by": "sparkyfen",
+    "at": "2026-07-27T05:30:44Z"
+  },
+  {
+    "event_id": "furrydelphia-2026",
+    "category": "registration",
+    "kind": "closes",
+    "date": "2026-07-20",
+    "reason": "timezone artifact: post at 02:19Z = 22:19 EDT on the 19th ('closes midnight tonight') = end of 2026-07-19 local. Restoring 2026-07-19",
+    "by": "sparkyfen",
+    "at": "2026-07-27T05:30:45Z"
+  },
+  {
+    "event_id": "anthro-irish-2026",
+    "category": "registration",
+    "kind": "opens",
+    "date": "2026-07-20",
+    "reason": "recency-wins moved opens later; general reg opened 2025-10-08 ('General Registration Now Open'), this 07-20 post is the separate residential-lottery phase. Restoring 2025-10-08",
+    "by": "sparkyfen",
+    "at": "2026-07-27T05:30:45Z"
+  },
+  {
+    "event_id": "biggest-little-fur-con-2026",
+    "category": "dealers",
+    "kind": "opens",
+    "date": "2026-07-16",
+    "reason": "Bazaar/Shops-At-Sea app opening (dealers-den selections already made); dealers-den opened 2026-05-26, keeping that",
+    "by": "sparkyfen",
+    "at": "2026-07-28T08:08:18Z"
+  },
+  {
+    "event_id": "stratosfur-2026",
+    "category": "registration",
+    "kind": "opens",
+    "date": "2026-02-19",
+    "reason": "reminder ('Registration is also open'), not the opening; registration opened 2026-02-11, keeping that",
+    "by": "sparkyfen",
+    "at": "2026-07-28T08:08:20Z"
+  },
+  {
+    "event_id": "indyfurcon-2026",
+    "category": "hotel",
+    "kind": "opens",
+    "date": "2026-07-29",
+    "reason": "opens the overflow hotel; the main room block opened 2026-05-20, keeping that",
+    "by": "sparkyfen",
+    "at": "2026-07-28T08:08:19Z"
+  },
+  {
+    "event_id": "carolina-furfare-2026",
+    "category": "hotel",
+    "kind": "opens",
+    "date": "2026-07-12",
+    "reason": "\"reserve your room today\" booking reminder; hotel opened 2026-06-16, keeping that",
+    "by": "sparkyfen",
+    "at": "2026-07-29T23:11:28Z"
+  },
+  {
+    "event_id": "biggest-little-fur-con-2026",
+    "category": "volunteers",
+    "kind": "opens",
+    "date": "2026-07-23",
+    "reason": "\"sign up to Volunteer today!\" reminder; volunteers opened 2026-07-07, keeping that",
+    "by": "sparkyfen",
+    "at": "2026-07-29T23:11:30Z"
+  },
+  {
+    "event_id": "calfurry-2026",
+    "category": "djs",
+    "kind": "opens",
+    "date": "2026-07-14",
+    "reason": "reminder that DJ apps are open (they close Aug 2); apps opened 2026-07-05, keeping that",
+    "by": "sparkyfen",
+    "at": "2026-07-29T23:11:29Z"
   }
 ]

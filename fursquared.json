@@ -22,7 +22,21 @@
         "fancons.com"
       ],
       "keyDates": {
+        "registration": {
+          "opens": {
+            "date": "2026-07-31",
+            "source": "https://bsky.app/profile/did:plc:2s3t7hs6j3uqosgcgbueegac/post/3mrslzxilic2f",
+            "asOf": "2026-07-29T18:55:30.285Z",
+            "confidence": 0.9
+          }
+        },
         "djs": {
+          "opens": {
+            "date": "2026-07-20",
+            "source": "https://bsky.app/profile/did:plc:2s3t7hs6j3uqosgcgbueegac/post/3mr3s2ymxn22f",
+            "asOf": "2026-07-20T17:12:13.496Z",
+            "confidence": 0.9
+          },
           "closes": {
             "date": "2026-10-20",
             "source": "https://bsky.app/profile/did:plc:2s3t7hs6j3uqosgcgbueegac/post/3mr3s2ymxn22f",

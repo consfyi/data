@@ -1,0 +1,22 @@
+{
+  "name": "Palmetto Anthro Weekend",
+  "events": [
+    {
+      "id": "palmetto-anthro-weekend-2027",
+      "name": "Palmetto Anthro Weekend 2027",
+      "url": "https://furrycons.com/event/28617/palmetto-anthro-weekend-2027",
+      "startDate": "2027-02-04",
+      "endDate": "2027-02-08",
+      "venue": "Crowne Plaza Greenville by IHG",
+      "address": "851 Congaree Rd, Greenville, SC 29607, USA",
+      "locale": "en-US",
+      "latLng": [
+        34.8394392,
+        -82.3158072
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    }
+  ]
+}

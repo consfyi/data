@@ -1,0 +1,22 @@
+{
+  "name": "Wisconsin Wilderness Campout",
+  "events": [
+    {
+      "id": "wisconsin-wilderness-campout-2026",
+      "name": "Wisconsin Wilderness Campout 2026",
+      "url": "https://furrycons.com/event/28648/wisconsin-wilderness-campout-2026",
+      "startDate": "2026-08-07",
+      "endDate": "2026-08-09",
+      "venue": "George K. Pinney County Park",
+      "address": "4879 Bay Shore Dr, Sturgeon Bay, WI 54235, USA",
+      "locale": "en-US",
+      "latLng": [
+        44.9037564,
+        -87.4045628
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    }
+  ]
+}

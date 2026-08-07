@@ -2,6 +2,23 @@
   "name": "South Afrifur",
   "events": [
     {
+      "id": "south-afrifur-2026",
+      "name": "South Afrifur 2026",
+      "url": "https://south-afrifur.co.za",
+      "startDate": "2026-07-07",
+      "endDate": "2026-07-10",
+      "venue": "Shumba Valley Hotel and Conference Centre",
+      "address": "53 Boeing Street, Lanseria, Lanseria, Johannesburg North, 1748, South Africa",
+      "locale": "en-ZA",
+      "latLng": [
+        -25.9591247,
+        27.920655
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    },
+    {
       "id": "south-afrifur-2025",
       "name": "South Afrifur 2025",
       "url": "https://south-afrifur.co.za",

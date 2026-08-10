@@ -26,6 +26,39 @@ jobs:
           CONCAT_PROXY: ${{ secrets.CONCAT_PROXY }}
           CONCAT_PROXY_SECRET: ${{ secrets.CONCAT_PROXY_SECRET }}
           CONCAT_PROXY_HOSTS: ${{ secrets.CONCAT_PROXY_HOSTS }}
+
+      # This job pushes straight to main, and validate.yml only triggers on
+      # pull_request, so nothing checks what the bot writes. A bad import
+      # therefore lands on main and breaks CI for every open PR -- which is
+      # how duplicate bewhiskered-2026 ids got in (consfyi/data@da137e0).
+      # Validate here and fail the run instead of committing.
+      - name: Canonical formatting
+        id: format
+        run: uv run tools/format.py *.json
+      # Kept out of the step below so its failure annotation stays truthful:
+      # an mkdir that fails is infrastructure, not a data bug.
+      - name: Prepare the materialize output directory
+        run: mkdir -p "$RUNNER_TEMP/out"
+      - name: Schema validation (materialize)
+        id: validate
+        run: uv run tools/materialize.py "$RUNNER_TEMP/out"
+
+      # A red run here is not an infrastructure blip, and it is not cheap to
+      # ignore: import_concat_all.sh exits 0 so one dead upstream can't block
+      # the other sources, but the commit is all-or-nothing, so a single bad
+      # series holds back every good one until someone looks. A failing format
+      # step skips validate, so each gets its own message -- naming the wrong
+      # one sends whoever reads it to the wrong file.
+      - name: Explain a formatting failure
+        if: failure() && steps.format.outcome == 'failure'
+        run: |
+          echo "::error::tools/format.py failed on the imported data, so nothing was committed and main is unaffected. Schema validation never ran. Every source is held back until this is resolved, so treat it as actionable."
+
+      - name: Explain a validation failure
+        if: failure() && steps.validate.outcome == 'failure'
+        run: |
+          echo "::error::Imported data failed tools/materialize.py, which both schema-validates and materializes, so nothing was committed and main is unaffected. This is a data bug, not a flake -- read the errors above to see which of the two failed. Every source is held back until it is resolved, so treat it as actionable."
+
       - run: |
           git add .
           git diff-index --quiet HEAD || git commit -m "via import_concat"

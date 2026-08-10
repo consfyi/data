@@ -1,0 +1,22 @@
+{
+  "name": "Pawtucky",
+  "events": [
+    {
+      "id": "pawtucky-2026",
+      "name": "Pawtucky 2026",
+      "url": "https://furrycons.com/event/28671/pawtucky-2026",
+      "startDate": "2026-09-26",
+      "endDate": "2026-09-28",
+      "venue": "Hilton Garden Inn Lexington Georgetown",
+      "address": "110 Grandstand Dr, Georgetown, KY 40324, USA",
+      "locale": "en-US",
+      "latLng": [
+        38.2257323,
+        -84.5402452
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    }
+  ]
+}

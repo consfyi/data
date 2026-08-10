@@ -1,0 +1,23 @@
+{
+  "name": "Michigan Anthro Weekend",
+  "bluesky": {
+    "did": "did:plc:fwt566qqg3uhf36kswpmuqx2",
+    "handle": "mianthroweekend.bsky.social"
+  },
+  "events": [
+    {
+      "id": "michigan-anthro-weekend-2026",
+      "name": "Michigan Anthro Weekend 2026",
+      "url": "https://michigananthroweekend.com",
+      "startDate": "2026-10-01",
+      "endDate": "2026-10-04",
+      "venue": "Sheraton Grand Rapids Airport Hotel",
+      "address": "5700 28th Street SE, Grand Rapids, MI 49546, United States",
+      "locale": "en-US",
+      "latLng": [
+        42.9120128,
+        -85.5255885
+      ]
+    }
+  ]
+}

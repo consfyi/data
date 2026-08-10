@@ -2,6 +2,23 @@
   "name": "Further South",
   "events": [
     {
+      "id": "further-south-2027",
+      "name": "Further South 2027",
+      "url": "https://furthersouth.uk",
+      "startDate": "2027-03-05",
+      "endDate": "2027-03-08",
+      "venue": "Holiday Inn Portsmouth by IHG",
+      "address": "Pembroke Rd, Portsmouth PO1 2TA, UK",
+      "locale": "en-GB",
+      "latLng": [
+        50.788949,
+        -1.098983
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    },
+    {
       "id": "further-south-2026",
       "name": "Further South 2026",
       "url": "https://furthersouth.uk",

@@ -1,0 +1,22 @@
+{
+  "name": "New Anthrodam",
+  "events": [
+    {
+      "id": "new-anthrodam-2026",
+      "name": "New Anthrodam 2026",
+      "url": "https://furrycons.com/event/28601/new-anthrodam-2026",
+      "startDate": "2026-11-19",
+      "endDate": "2026-11-22",
+      "venue": "New York Marriott at the Brooklyn Bridge",
+      "address": "333 Adams St, Brooklyn, NY 11201, USA",
+      "locale": "en-US",
+      "latLng": [
+        40.693705,
+        -73.9885647
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    }
+  ]
+}

@@ -20,34 +20,6 @@
       ]
     },
     {
-      "id": "bewhiskered-2027",
-      "name": "Bewhiskered 2027",
-      "url": "https://bewhiskeredcon.org",
-      "startDate": "2026-04-02",
-      "endDate": "2026-04-05",
-      "venue": "Coming Soon",
-      "address": "53 Canal St, New York, NY 10002, USA",
-      "locale": "en-US",
-      "latLng": [
-        40.7149913,
-        -73.9917124
-      ]
-    },
-    {
-      "id": "bewhiskered-2026",
-      "name": "Bewhiskered 2026",
-      "url": "https://bewhiskeredcon.org",
-      "startDate": "2026-04-02",
-      "endDate": "2026-04-05",
-      "venue": "Durham Convention Center",
-      "address": "301 W Morgan St, Durham, NC 27701, United States",
-      "locale": "en-US",
-      "latLng": [
-        35.9975142,
-        -78.90234679999999
-      ]
-    },
-    {
       "id": "bewhiskered-2025",
       "name": "Bewhiskered 2025",
       "url": "https://bewhiskeredcon.org",

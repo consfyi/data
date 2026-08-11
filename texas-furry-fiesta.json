@@ -5,11 +5,11 @@
     "handle": "furryfiesta.org"
   },
   "events": [
-     {
+    {
       "id": "texas-furry-fiesta-2027",
       "name": "Texas Furry Fiesta 2027",
       "url": "https://www.furryfiesta.org",
-      "startDate": "2027-03-19",
+      "startDate": "2027-03-18",
       "endDate": "2027-03-21",
       "venue": "Sheraton Dallas Hotel",
       "address": "400 Olive St, Dallas, TX 75201, United States",

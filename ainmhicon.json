@@ -6,6 +6,23 @@
   },
   "events": [
     {
+      "id": "ainmhicon-2027",
+      "name": "Ainmhícon 2027",
+      "url": "https://ainmhicon.ie",
+      "startDate": "2027-04-02",
+      "endDate": "2026-04-04",
+      "venue": "Clayton Hotel Liffey Valley",
+      "address": "Fonthill Rd, Liffey Valley, Dublin, D22 X4W6, Ireland",
+      "locale": "en-IE",
+      "latLng": [
+        53.3555438,
+        -6.4019528
+      ],
+      "sources": [
+        "https://bsky.app/profile/ainmhicon.ie/post/3mrnjxu4nq22l"
+      ]
+    },
+    {
       "id": "ainmhicon-2026",
       "name": "Ainmhícon 2026",
       "url": "https://ainmhicon.ie",

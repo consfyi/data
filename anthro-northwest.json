@@ -6,6 +6,23 @@
   },
   "events": [
     {
+      "id": "anthro-northwest-9",
+      "name": "Anthro Northwest 9",
+      "url": "https://anthronw.com/anw9/",
+      "startDate": "2027-01-07",
+      "endDate": "2027-01-10",
+      "venue": "Hyatt Regency Seattle",
+      "address": "808 Howell St, Seattle, WA 98101, United States",
+      "locale": "en-US",
+      "latLng": [
+        47.6143837,
+        -122.3340172
+      ],
+      "sources": [
+        "https://bsky.app/profile/anthronorthwest.bsky.social/post/3msoebnwbks24"
+      ]
+    },
+    {
       "id": "anthro-northwest-8",
       "name": "Anthro Northwest 8",
       "url": "https://anthronw.com/anw8/",

@@ -128,12 +128,10 @@ def main():
         ):
             assert event is not None
 
-            # schema.json expresses this as formatMinimum with a $data
-            # pointer, an ajv extension that python-jsonschema silently
-            # ignores, so it has to be enforced here. Comparing the raw
-            # strings is only safe because schema-invalid files are skipped
-            # above: the format checker guarantees canonical YYYY-MM-DD,
-            # which sorts the same lexically as chronologically.
+            # schema.json expresses this as formatMinimum/$data, an ajv
+            # extension python-jsonschema ignores, so enforce it here. Raw
+            # string comparison is safe: schema-invalid files were skipped
+            # above, so the format checker guarantees canonical YYYY-MM-DD.
             if event["endDate"] < event["startDate"]:
                 el.log(
                     f"{series_id}/{event['id']}",

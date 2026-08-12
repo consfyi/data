@@ -6,6 +6,23 @@
   },
   "events": [
     {
+      "id": "anthrohio-2027",
+      "name": "AnthrOhio 2027",
+      "url": "https://anthrohio.org",
+      "startDate": "2027-05-21",
+      "endDate": "2027-05-23",
+      "venue": "Hilton Columbus Downtown",
+      "address": "402 N High St, Columbus, OH 43215, United States",
+      "locale": "en-US",
+      "latLng": [
+        39.9705378,
+        -83.00141529999999
+      ],
+      "sources": [
+        "https://bsky.app/profile/anthrohio.org/post/3mmplhnkx6s23"
+      ]
+    },
+    {
       "id": "anthrohio-2026",
       "name": "AnthrOhio 2026",
       "url": "https://anthrohio.org",

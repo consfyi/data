@@ -32,10 +32,12 @@ def make_series(start_date, end_date):
 
 
 def run_materialize(series):
-    with tempfile.TemporaryDirectory() as data_dir, tempfile.TemporaryDirectory() as out_root:
+    # materialize only globs *.json in its cwd, so out/ can live alongside
+    # the fixture without being picked up as a series file
+    with tempfile.TemporaryDirectory() as data_dir:
         with open(os.path.join(data_dir, "testcon.json"), "w") as f:
             json.dump(series, f)
-        out_dir = os.path.join(out_root, "out")
+        out_dir = os.path.join(data_dir, "out")
         os.mkdir(out_dir)
         return subprocess.run(
             ["uv", "run", str(MATERIALIZE), out_dir],
@@ -65,12 +67,15 @@ class TestDateOrder(unittest.TestCase):
 
     def test_schema_invalid_file_still_fails(self):
         # regression for the has_errors fix: a file that fails schema
-        # validation must exit nonzero, not crash in the event loop
+        # validation must be skipped and reported, not fall through into the
+        # event loop. Without the fix it also exits 1, but via an uncaught
+        # KeyError, so the traceback assertion is what discriminates.
         series = make_series("2027-04-02", "2027-04-04")
         del series["events"][0]["locale"]
         result = run_materialize(series)
         self.assertEqual(result.returncode, 1, result.stderr)
-        self.assertIn("locale", result.stderr)
+        self.assertIn("'locale' is a required property", result.stderr)
+        self.assertNotIn("Traceback", result.stderr)
 
 
 if __name__ == "__main__":

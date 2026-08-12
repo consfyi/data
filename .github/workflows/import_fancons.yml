@@ -24,6 +24,17 @@ jobs:
           GOOGLE_MAPS_API_KEY: ${{ secrets.GOOGLE_MAPS_API_KEY }}
           FANCONS_CALENDAR_URL: ${{ secrets.FANCONS_CALENDAR_URL }}
           FANCONS_MAP_URL: ${{ secrets.FANCONS_MAP_URL }}
+
+      # This job pushes straight to main and validate.yml only triggers on
+      # pull_request, so nothing checks what the bot writes. Validate here and
+      # fail the run instead of committing (same as import_concat.yml).
+      - name: Canonical formatting
+        run: uv run tools/format.py *.json
+      - name: Prepare the materialize output directory
+        run: mkdir -p "$RUNNER_TEMP/out"
+      - name: Schema validation (materialize)
+        run: uv run tools/materialize.py "$RUNNER_TEMP/out"
+
       - run: |
           git add .
           git diff-index --quiet HEAD || git commit -m "via import_fancons"

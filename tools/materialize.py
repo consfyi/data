@@ -130,8 +130,10 @@ def main():
 
             # schema.json expresses this as formatMinimum with a $data
             # pointer, an ajv extension that python-jsonschema silently
-            # ignores, so it has to be enforced here. ISO dates compare
-            # correctly as strings.
+            # ignores, so it has to be enforced here. Comparing the raw
+            # strings is only safe because schema-invalid files are skipped
+            # above: the format checker guarantees canonical YYYY-MM-DD,
+            # which sorts the same lexically as chronologically.
             if event["endDate"] < event["startDate"]:
                 el.log(
                     f"{series_id}/{event['id']}",

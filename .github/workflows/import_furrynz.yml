@@ -20,6 +20,17 @@ jobs:
           git config --global user.name "cons.fyi GitHub bot"
           git config --global user.email "github@cons.fyi"
       - run: ./tools/data-importers/import_furrynz_all.sh
+
+      # This job pushes straight to main and validate.yml only triggers on
+      # pull_request, so nothing checks what the bot writes. Validate here and
+      # fail the run instead of committing (same as import_concat.yml).
+      - name: Canonical formatting
+        run: uv run tools/format.py *.json
+      - name: Prepare the materialize output directory
+        run: mkdir -p "$RUNNER_TEMP/out"
+      - name: Schema validation (materialize)
+        run: uv run tools/materialize.py "$RUNNER_TEMP/out"
+
       - run: |
           git add .
           git diff-index --quiet HEAD || git commit -m "via import_furrynz"

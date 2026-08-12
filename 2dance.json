@@ -1,5 +1,9 @@
 {
   "name": "2Dance",
+  "bluesky": {
+    "did": "did:plc:al6iswkqtbnl5qbw4jpb2ihk",
+    "handle": "two-dance.de"
+  },
   "events": [
     {
       "id": "2dance-2026",

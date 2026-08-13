@@ -6,6 +6,7 @@ python3 .github/scripts/test_materialize_dates.py"""
 import json
 import os
 import pathlib
+import shutil
 import subprocess
 import tempfile
 import unittest
@@ -53,6 +54,9 @@ def run_materialize(series):
         )
 
 
+@unittest.skipUnless(
+    shutil.which("uv"), "these tests run materialize.py via uv, which is not on PATH"
+)
 class TestDateOrder(unittest.TestCase):
     def test_end_after_start_passes(self):
         result = run_materialize(make_series("2027-04-02", "2027-04-04"))

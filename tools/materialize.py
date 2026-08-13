@@ -129,10 +129,13 @@ def main():
             assert event is not None
 
             # schema.json expresses this as formatMinimum/$data, an ajv
-            # extension python-jsonschema ignores, so enforce it here. Raw
-            # string comparison is safe: schema-invalid files were skipped
-            # above, so the format checker guarantees canonical YYYY-MM-DD.
-            if event["endDate"] < event["startDate"]:
+            # extension python-jsonschema ignores, so enforce it here.
+            # Comparing parsed values rather than strings keeps this
+            # independent of which ISO date spellings the format checker
+            # happens to admit.
+            if whenever.Date.parse_iso(event["endDate"]) < whenever.Date.parse_iso(
+                event["startDate"]
+            ):
                 el.log(
                     f"{series_id}/{event['id']}",
                     "$.endDate",

@@ -16,7 +16,10 @@ MATERIALIZE = REPO_ROOT / "tools" / "materialize.py"
 
 
 def make_series_events(events):
-    """events: list of (id, startDate, endDate), newest first as in the repo."""
+    """Build a schema-valid series dict from (id, startDate, endDate) tuples.
+
+    Events are listed newest first, matching the layout of the repo's series
+    files."""
     return {
         "name": "Testcon",
         "events": [
@@ -35,12 +38,16 @@ def make_series_events(events):
 
 
 def make_series(start_date, end_date):
+    """Build a one-event series with the given start and end dates."""
     return make_series_events([("testcon-2027", start_date, end_date)])
 
 
 def run_materialize(series):
-    # materialize only globs *.json in its cwd, so out/ can live alongside
-    # the fixture without being picked up as a series file
+    """Write ``series`` as a fixture and run materialize.py against it via uv.
+
+    Returns the CompletedProcess. materialize only globs *.json in its cwd, so
+    out/ can live alongside the fixture without being picked up as a series
+    file."""
     with tempfile.TemporaryDirectory() as data_dir:
         with open(os.path.join(data_dir, "testcon.json"), "w") as f:
             json.dump(series, f)
@@ -58,27 +65,34 @@ def run_materialize(series):
     shutil.which("uv"), "these tests run materialize.py via uv, which is not on PATH"
 )
 class TestDateOrder(unittest.TestCase):
+    """End-to-end checks of the endDate >= startDate rule in materialize.py."""
+
     def test_end_after_start_passes(self):
+        """A multi-day event with endDate after startDate validates."""
         result = run_materialize(make_series("2027-04-02", "2027-04-04"))
         self.assertEqual(result.returncode, 0, result.stderr)
 
     def test_single_day_event_passes(self):
+        """A single-day event (endDate == startDate) validates."""
         result = run_materialize(make_series("2027-04-02", "2027-04-02"))
         self.assertEqual(result.returncode, 0, result.stderr)
 
     def test_end_before_start_fails(self):
-        # regression: ainmhicon-2027 was submitted with endDate 2026-04-04
-        # against startDate 2027-04-02 and passed validation, because the
-        # schema's formatMinimum/$data keyword is an ajv extension that
-        # python-jsonschema ignores
+        """An event whose endDate precedes startDate fails with a clear message.
+
+        Regression: ainmhicon-2027 was submitted with endDate 2026-04-04
+        against startDate 2027-04-02 and passed validation, because the
+        schema's formatMinimum/$data keyword is an ajv extension that
+        python-jsonschema ignores."""
         result = run_materialize(make_series("2027-04-02", "2026-04-04"))
         self.assertEqual(result.returncode, 1, result.stderr)
         self.assertIn("endDate 2026-04-04 is before startDate 2027-04-02", result.stderr)
 
     def test_later_event_in_series_fails(self):
-        # the check has to run for every event, not just the first: series
-        # files list events newest first, so an older event is the likely
-        # place for a bad date to hide
+        """The check runs for every event in a series, not just the first.
+
+        Series files list events newest first, so an older event is the
+        likely place for a bad date to hide."""
         result = run_materialize(
             make_series_events(
                 [
@@ -94,10 +108,11 @@ class TestDateOrder(unittest.TestCase):
         )
 
     def test_schema_invalid_file_still_fails(self):
-        # regression for the has_errors fix: a file that fails schema
-        # validation must be skipped and reported, not fall through into the
-        # event loop. Without the fix it also exits 1, but via an uncaught
-        # KeyError, so the traceback assertion is what discriminates.
+        """A schema-invalid file is reported and skipped, not crashed on.
+
+        Regression for the has_errors fix: without it the file falls through
+        into the event loop and exits 1 via an uncaught KeyError, so the
+        traceback assertion is what discriminates."""
         series = make_series("2027-04-02", "2027-04-04")
         del series["events"][0]["locale"]
         result = run_materialize(series)

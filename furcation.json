@@ -20,7 +20,31 @@
       ],
       "sources": [
         "fancons.com"
-      ]
+      ],
+      "keyDates": {
+        "registration": {
+          "opens": {
+            "date": "2026-07-11",
+            "source": "https://bsky.app/profile/did:plc:2rw4e5md25htk64onqqaqpsk/post/3movedp7qf223",
+            "asOf": "2026-06-22T17:00:11.546Z",
+            "confidence": 0.95
+          },
+          "closes": {
+            "date": "2026-08-09",
+            "source": "https://bsky.app/profile/did:plc:2rw4e5md25htk64onqqaqpsk/post/3msl75k75yk2a",
+            "asOf": "2026-08-08T13:41:25.374Z",
+            "confidence": 0.95
+          }
+        },
+        "dealers": {
+          "closes": {
+            "date": "2026-08-28",
+            "source": "https://bsky.app/profile/did:plc:2rw4e5md25htk64onqqaqpsk/post/3mt5jvi52js2s",
+            "asOf": "2026-08-15T20:41:41.227Z",
+            "confidence": 1
+          }
+        }
+      }
     },
     {
       "id": "furcation-2024",

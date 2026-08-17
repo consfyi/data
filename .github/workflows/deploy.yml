@@ -15,6 +15,15 @@ on:
 
   workflow_dispatch:
 
+# One deployment at a time: Pages rejects a deployment while another is in
+# progress, so back-to-back merges raced and failed. Runs queued between the
+# in-progress one and the newest are skipped (each run deploys full HEAD
+# anyway); in-progress deployments are never cancelled. Same pattern as
+# github.com/actions/starter-workflows/blob/main/pages/static.yml.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
 permissions:
   contents: read
   pages: write

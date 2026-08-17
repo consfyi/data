@@ -20,6 +20,29 @@ jobs:
           git config --global user.name "cons.fyi GitHub bot"
           git config --global user.email "github@cons.fyi"
       - run: ./tools/data-importers/import_furrynz_all.sh
+
+      # Validate before committing so a bad import fails the run instead of landing on main; see import_concat.yml.
+      - name: Canonical formatting
+        id: format
+        run: uv run tools/format.py *.json
+      - name: Prepare the materialize output directory
+        run: mkdir -p "$RUNNER_TEMP/out"
+      - name: Schema validation (materialize)
+        id: validate
+        run: uv run tools/materialize.py "$RUNNER_TEMP/out"
+
+      # Separate messages because a failing format step skips validate, so
+      # naming the wrong one sends whoever reads it to the wrong file.
+      - name: Explain a formatting failure
+        if: failure() && steps.format.outcome == 'failure'
+        run: |
+          echo "::error::tools/format.py failed on the imported data, so nothing was committed and main is unaffected. Schema validation never ran. The import is held back until this is resolved, so treat it as actionable."
+
+      - name: Explain a validation failure
+        if: failure() && steps.validate.outcome == 'failure'
+        run: |
+          echo "::error::Imported data failed tools/materialize.py, which both schema-validates and materializes, so nothing was committed and main is unaffected. This is a data bug, not a flake -- read the errors above to see which of the two failed. The import is held back until it is resolved, so treat it as actionable."
+
       - run: |
           git add .
           git diff-index --quiet HEAD || git commit -m "via import_furrynz"

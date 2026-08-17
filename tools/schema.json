@@ -47,6 +47,7 @@
           "endDate": {
             "type": "string",
             "format": "date",
+            "$comment": "formatMinimum/$data is an ajv extension that python-jsonschema ignores, so it is not enforced by this schema alone; tools/materialize.py enforces endDate >= startDate.",
             "formatMinimum": {
               "$data": "1/startDate"
             }

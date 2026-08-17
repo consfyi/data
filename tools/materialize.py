@@ -119,6 +119,7 @@ def main():
         has_errors = False
         for error in validator.iter_errors(series):
             el.log(series_id, error.json_path, error.message)
+            has_errors = True
         if has_errors:
             continue
 
@@ -126,6 +127,20 @@ def main():
             series["events"], series["events"][1:], fillvalue=None
         ):
             assert event is not None
+
+            # schema.json expresses this as formatMinimum/$data, an ajv
+            # extension python-jsonschema ignores, so enforce it here.
+            # Comparing parsed values rather than strings keeps this
+            # independent of which ISO date spellings the format checker
+            # happens to admit.
+            if whenever.Date.parse_iso(event["endDate"]) < whenever.Date.parse_iso(
+                event["startDate"]
+            ):
+                el.log(
+                    f"{series_id}/{event['id']}",
+                    "$.endDate",
+                    f"endDate {event['endDate']} is before startDate {event['startDate']}",
+                )
 
             event_locale_is_zh = event["locale"][:3] == "zh-"
             tls = event.get("translations", {})

@@ -21,7 +21,17 @@
       "sources": [
         "https://howlfest.vegas",
         "https://t.me/LVHowlfest"
-      ]
+      ],
+      "keyDates": {
+        "registration": {
+          "opens": {
+            "date": "2026-08-17",
+            "source": "https://bsky.app/profile/did:plc:yo37kvl6sz4azmbx2bnmvjed/post/3mtcphwxoc224",
+            "asOf": "2026-08-17T22:04:48.160Z",
+            "confidence": 0.9
+          }
+        }
+      }
     }
   ]
 }

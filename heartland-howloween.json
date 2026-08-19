@@ -29,6 +29,14 @@
             "asOf": "2026-07-01T15:29:54.249Z",
             "confidence": 0.95
           }
+        },
+        "panels": {
+          "closes": {
+            "date": "2026-08-21",
+            "source": "https://bsky.app/profile/did:plc:mtchwur7zw7mnusl7vuyi76f/post/3msissimgdk2u",
+            "asOf": "2026-08-07T14:55:10.237Z",
+            "confidence": 0.9
+          }
         }
       }
     },

@@ -214,5 +214,14 @@
     "reason": "reminder that DJ apps are open (they close Aug 2); apps opened 2026-07-05, keeping that",
     "by": "sparkyfen",
     "at": "2026-07-29T23:11:29Z"
+  },
+  {
+    "event_id": "carolina-furfare-2026",
+    "category": "panels",
+    "kind": "closes",
+    "date": "2026-08-03",
+    "reason": "post is 2026-08-03T01:33Z, which is the evening of Aug 2 in NC; \"today\" means Aug 2, matching the earlier \"one week remains\" post. UTC vs venue-local resolution.",
+    "by": "sparkyfen",
+    "at": "2026-08-19T20:22:42Z"
   }
 ]

@@ -72,6 +72,12 @@
             "source": "https://bsky.app/profile/stratosfur.org/post/3mletld5ecc25",
             "asOf": "2026-05-08T23:02:02.799166Z",
             "confidence": 0.9
+          },
+          "closes": {
+            "date": "2026-08-21",
+            "source": "https://bsky.app/profile/did:plc:a2gt2pfvvoovijq4uc2ivije/post/3msqmvcepbp2u",
+            "asOf": "2026-08-10T17:30:39.628231Z",
+            "confidence": 0.9
           }
         },
         "djs": {

@@ -155,8 +155,8 @@ interface Event {
   ///
   /// Each deadline records the `date` (ISO 8601 yyyy-MM-dd), the `source` URI of
   /// the announcement post it was extracted from, the `asOf` timestamp (ISO 8601
-  /// date-time) of when the source was observed, and a `confidence` between 0
-  /// and 1.
+  /// date-time) of the source post itself (its `createdAt`, not when it was
+  /// indexed or observed), and a `confidence` between 0 and 1.
   keyDates?: {
     registration?: KeyDate;
     hotel?: KeyDate;

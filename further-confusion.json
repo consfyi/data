@@ -19,6 +19,14 @@
         -121.889011
       ],
       "keyDates": {
+        "registration": {
+          "opens": {
+            "date": "2026-08-18",
+            "source": "https://bsky.app/profile/did:plc:fj45oznjbvlgoyzjqi6tlt3n/post/3mtf7xuft5d24",
+            "asOf": "2026-08-18T22:05:21.675Z",
+            "confidence": 1
+          }
+        },
         "dealers": {
           "opens": {
             "date": "2026-06-09",

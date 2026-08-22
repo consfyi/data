@@ -30,6 +30,14 @@
             "confidence": 0.9
           }
         },
+        "dealers": {
+          "closes": {
+            "date": "2026-10-14",
+            "source": "https://bsky.app/profile/did:plc:2s3t7hs6j3uqosgcgbueegac/post/3mtjpuafye22k",
+            "asOf": "2026-08-20T17:00:18.871Z",
+            "confidence": 0.9
+          }
+        },
         "djs": {
           "opens": {
             "date": "2026-07-20",

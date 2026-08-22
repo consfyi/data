@@ -48,6 +48,14 @@
             "asOf": "2026-07-01T16:00:33.727Z",
             "confidence": 0.95
           }
+        },
+        "panels": {
+          "opens": {
+            "date": "2026-08-02",
+            "source": "https://bsky.app/profile/did:plc:srxungr7qhhxzllfsdfltzau/post/3ms5am35y6i2e",
+            "asOf": "2026-08-03T00:30:10.323Z",
+            "confidence": 0.9
+          }
         }
       }
     },

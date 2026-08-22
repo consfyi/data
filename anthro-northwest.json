@@ -20,7 +20,25 @@
       ],
       "sources": [
         "https://bsky.app/profile/anthronorthwest.bsky.social/post/3msoebnwbks24"
-      ]
+      ],
+      "keyDates": {
+        "registration": {
+          "opens": {
+            "date": "2026-08-09",
+            "source": "https://bsky.app/profile/did:plc:ngj2ak6kaqa2yzmbnlzlqlbq/post/3msoebnwbks24",
+            "asOf": "2026-08-09T19:51:11.402Z",
+            "confidence": 1
+          }
+        },
+        "hotel": {
+          "opens": {
+            "date": "2026-08-09",
+            "source": "https://bsky.app/profile/did:plc:ngj2ak6kaqa2yzmbnlzlqlbq/post/3msoebnwbks24",
+            "asOf": "2026-08-09T19:51:11.402Z",
+            "confidence": 1
+          }
+        }
+      }
     },
     {
       "id": "anthro-northwest-8",

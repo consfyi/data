@@ -22,6 +22,14 @@
         "fancons.com"
       ],
       "keyDates": {
+        "registration": {
+          "closes": {
+            "date": "2026-08-21",
+            "source": "https://bsky.app/profile/did:plc:mtchwur7zw7mnusl7vuyi76f/post/3mtlwbuzsd22f",
+            "asOf": "2026-08-21T14:00:38.613Z",
+            "confidence": 0.9
+          }
+        },
         "dealers": {
           "closes": {
             "date": "2026-07-03",

@@ -1,10 +1,14 @@
 {
   "name": "New Anthrodam",
+  "bluesky": {
+    "did": "did:plc:7creot4gvsnj3vdiyudqvo6p",
+    "handle": "newanthrodam.com"
+  },
   "events": [
     {
       "id": "new-anthrodam-2026",
       "name": "New Anthrodam 2026",
-      "url": "https://furrycons.com/event/28601/new-anthrodam-2026",
+      "url": "https://newanthrodam.com",
       "startDate": "2026-11-19",
       "endDate": "2026-11-22",
       "venue": "New York Marriott at the Brooklyn Bridge",
@@ -16,7 +20,17 @@
       ],
       "sources": [
         "fancons.com"
-      ]
+      ],
+      "keyDates": {
+        "registration": {
+          "closes": {
+            "date": "2026-11-04",
+            "source": "https://newanthrodam.com/registration/",
+            "asOf": "2026-08-22T18:02:38Z",
+            "confidence": 1
+          }
+        }
+      }
     }
   ]
 }

@@ -1,0 +1,40 @@
+{
+  "name": "LouisiAnthro",
+  "bluesky": {
+    "did": "did:plc:sjsffed6nabvs2jhtstw4ny6",
+    "handle": "louisianthro.bsky.social"
+  },
+  "events": [
+    {
+      "id": "louisianthro-2027",
+      "name": "LouisiAnthro 2027",
+      "url": "https://www.louisianthro.com",
+      "startDate": "2027-01-29",
+      "endDate": "2027-01-31",
+      "venue": "Baton Rouge Marriott",
+      "address": "5500 Hilton Ave, Baton Rouge, LA 70808, USA",
+      "locale": "en-US",
+      "latLng": [
+        30.4231205,
+        -91.134029
+      ]
+    },
+    {
+      "id": "frosty-fur-fest-2026",
+      "name": "Frosty Fur Fest 2026",
+      "url": "https://www.frostyfurfest.com",
+      "startDate": "2026-02-14",
+      "endDate": "2026-02-15",
+      "venue": "Crowne Plaza Executive Center Baton Rouge, an IHG Hotel",
+      "address": "4728 Constitution Ave, Baton Rouge, LA 70808, USA",
+      "locale": "en-US",
+      "latLng": [
+        30.421278,
+        -91.136135
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    }
+  ]
+}

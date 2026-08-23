@@ -19,6 +19,14 @@
         -81.4687483
       ],
       "keyDates": {
+        "registration": {
+          "closes": {
+            "date": "2026-08-23",
+            "source": "https://bsky.app/profile/did:plc:cu4sk7befczsdrewnseop2tw/post/3mtqxcjfq5u2x",
+            "asOf": "2026-08-23T14:02:12.416Z",
+            "confidence": 0.95
+          }
+        },
         "hotel": {
           "opens": {
             "date": "2026-03-11",

@@ -1,12 +1,16 @@
 {
   "name": "Pawtucky",
+  "bluesky": {
+    "did": "did:plc:vtsdk32ol2dq66re3hptifuo",
+    "handle": "pawtucky.bsky.social"
+  },
   "events": [
     {
       "id": "pawtucky-2026",
       "name": "Pawtucky 2026",
-      "url": "https://furrycons.com/event/28671/pawtucky-2026",
+      "url": "https://pawtucky.org",
       "startDate": "2026-09-26",
-      "endDate": "2026-09-28",
+      "endDate": "2026-09-27",
       "venue": "Hilton Garden Inn Lexington Georgetown",
       "address": "110 Grandstand Dr, Georgetown, KY 40324, USA",
       "locale": "en-US",

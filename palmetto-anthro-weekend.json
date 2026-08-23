@@ -1,0 +1,42 @@
+{
+  "name": "Palmetto Anthro Weekend",
+  "bluesky": {
+    "did": "did:plc:eosb3ex6tem3bbr2j6stj3sx",
+    "handle": "palmanthroweekend.bsky.social"
+  },
+  "events": [
+    {
+      "id": "palmetto-anthro-weekend-2027",
+      "name": "Palmetto Anthro Weekend 2027",
+      "url": "https://www.palmettoanthroweekend.org",
+      "startDate": "2027-02-04",
+      "endDate": "2027-02-08",
+      "venue": "Crowne Plaza Greenville by IHG",
+      "address": "851 Congaree Rd, Greenville, SC 29607, USA",
+      "locale": "en-US",
+      "latLng": [
+        34.8394392,
+        -82.3158072
+      ],
+      "sources": [
+        "fancons.com"
+      ],
+      "keyDates": {
+        "panels": {
+          "opens": {
+            "date": "2026-08-15",
+            "source": "https://www.palmettoanthroweekend.org/events/panels",
+            "asOf": "2026-08-23T07:15:11Z",
+            "confidence": 1
+          },
+          "closes": {
+            "date": "2027-01-01",
+            "source": "https://www.palmettoanthroweekend.org/events/panels",
+            "asOf": "2026-08-23T07:15:11Z",
+            "confidence": 1
+          }
+        }
+      }
+    }
+  ]
+}

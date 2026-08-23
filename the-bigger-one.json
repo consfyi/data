@@ -1,10 +1,14 @@
 {
   "name": "The Bigger One",
+  "bluesky": {
+    "did": "did:plc:nq4imdntzq2w3nyyyt54icad",
+    "handle": "psfurmeets.bsky.social"
+  },
   "events": [
     {
       "id": "the-bigger-one-2027",
-      "name": "The Bigger One 2027",
-      "url": "https://furrycons.com/event/27421/the-bigger-one-2026",
+      "name": "The Biggest One 2027",
+      "url": "https://the-biggest-one-ps-furmeets.carrd.co",
       "startDate": "2027-06-12",
       "endDate": "2027-06-13",
       "venue": "Delta Hotels Somerset",

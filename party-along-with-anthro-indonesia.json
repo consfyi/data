@@ -1,10 +1,14 @@
 {
   "name": "Party Along With Anthro Indonesia",
+  "bluesky": {
+    "did": "did:plc:6ucns3rhpfo2nzlarn2tlnjx",
+    "handle": "pawaiid.bsky.social"
+  },
   "events": [
     {
       "id": "party-along-with-anthro-indonesia-2026",
       "name": "Party Along With Anthro Indonesia 2026",
-      "url": "https://furrycons.com/event/28295/party-along-with-anthro-indonesia-2026",
+      "url": "https://pawai.id",
       "startDate": "2026-10-03",
       "endDate": "2026-10-04",
       "venue": "Grand Istana Rama Hotel Bali",

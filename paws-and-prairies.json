@@ -1,10 +1,14 @@
 {
   "name": "Paws & Prairies",
+  "bluesky": {
+    "did": "did:plc:bbtrnum4fw5s4rdfhxqo2bh2",
+    "handle": "pawsnprairies.bsky.social"
+  },
   "events": [
     {
       "id": "paws-and-prairies-2027",
       "name": "Paws & Prairies 2027",
-      "url": "https://furrycons.com/event/28453/paws-and-prairies-2027",
+      "url": "https://www.pawsandprairies.com",
       "startDate": "2027-04-30",
       "endDate": "2027-05-02",
       "venue": "Marriott Kansas City Overland Park",
@@ -16,7 +20,17 @@
       ],
       "sources": [
         "fancons.com"
-      ]
+      ],
+      "keyDates": {
+        "registration": {
+          "closes": {
+            "date": "2026-12-31",
+            "source": "https://www.pawsandprairies.com/registration",
+            "asOf": "2026-08-23T07:15:11Z",
+            "confidence": 1
+          }
+        }
+      }
     }
   ]
 }

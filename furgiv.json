@@ -1,0 +1,38 @@
+{
+  "name": "FurGIV",
+  "events": [
+    {
+      "id": "furgiv-2026",
+      "name": "FurGIV 2026",
+      "url": "https://furgiv.org",
+      "startDate": "2026-09-19",
+      "endDate": "2026-09-19",
+      "venue": "Grand Vista Hotel",
+      "address": "146 P. Giảng Võ, Khu tập thể Giảng Võ, Giảng Võ, Hà Nội, Vietnam",
+      "locale": "vi-VN",
+      "latLng": [
+        21.0254474,
+        105.8216403
+      ],
+      "sources": [
+        "fancons.com"
+      ],
+      "keyDates": {
+        "panels": {
+          "opens": {
+            "date": "2026-04-09",
+            "source": "https://furgiv.org/panels",
+            "asOf": "2026-08-23T07:15:11Z",
+            "confidence": 1
+          },
+          "closes": {
+            "date": "2026-07-30",
+            "source": "https://furgiv.org/panels",
+            "asOf": "2026-08-23T07:15:11Z",
+            "confidence": 1
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "name": "LethFURidge Mini-Con",
+  "bluesky": {
+    "did": "did:plc:423hvqsv6iwumdct6vbnydgj",
+    "handle": "lethfuridge.ca"
+  },
+  "events": [
+    {
+      "id": "lethfuridge-mini-con-2027",
+      "name": "LethFURidge Mini-Con 2027",
+      "url": "https://lethfuridge.ca/mini-con/",
+      "startDate": "2027-06-05",
+      "endDate": "2027-06-06",
+      "venue": "McNally Community Center",
+      "address": "210075 Township Rd 82, Lethbridge, AB T1K 8H3, Canada",
+      "locale": "en-CA",
+      "latLng": [
+        49.63884179999999,
+        -112.7331174
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    },
+    {
+      "id": "lethfuridge-mini-con-2026",
+      "name": "LethFURidge Mini-Con 2026",
+      "url": "https://lethfuridge.ca/mini-con/",
+      "startDate": "2026-06-06",
+      "endDate": "2026-06-07",
+      "venue": "McNally Community Center",
+      "address": "210075 Township Rd 82, Lethbridge, AB T1K 8H3, Canada",
+      "locale": "en-CA",
+      "latLng": [
+        49.63884179999999,
+        -112.7331174
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    }
+  ]
+}

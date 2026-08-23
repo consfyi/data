@@ -6,6 +6,72 @@
   },
   "events": [
     {
+      "id": "new-years-furry-ball-2027",
+      "name": "New Years Furry Ball 2027",
+      "url": "https://www.newyearsfurryball.com",
+      "startDate": "2026-12-30",
+      "endDate": "2027-01-01",
+      "venue": "DoubleTree by Hilton Hotel Wilmington",
+      "address": "4727 Concord Pike, Wilmington, DE 19803, United States",
+      "locale": "en-US",
+      "latLng": [
+        39.819476,
+        -75.5465117
+      ],
+      "keyDates": {
+        "registration": {
+          "closes": {
+            "date": "2026-12-13",
+            "source": "https://www.newyearsfurryball.com/",
+            "asOf": "2026-08-22T18:02:38Z",
+            "confidence": 1
+          }
+        },
+        "dealers": {
+          "opens": {
+            "date": "2026-06-07",
+            "source": "https://www.newyearsfurryball.com/dealers-den",
+            "asOf": "2026-08-22T18:02:38Z",
+            "confidence": 1
+          },
+          "closes": {
+            "date": "2026-09-05",
+            "source": "https://www.newyearsfurryball.com/dealers-den",
+            "asOf": "2026-08-22T18:02:38Z",
+            "confidence": 1
+          }
+        },
+        "panels": {
+          "opens": {
+            "date": "2026-08-17",
+            "source": "https://www.newyearsfurryball.com/panels",
+            "asOf": "2026-08-22T18:02:38Z",
+            "confidence": 1
+          },
+          "closes": {
+            "date": "2026-11-01",
+            "source": "https://www.newyearsfurryball.com/panels",
+            "asOf": "2026-08-22T18:02:38Z",
+            "confidence": 1
+          }
+        },
+        "djs": {
+          "opens": {
+            "date": "2026-06-07",
+            "source": "https://www.newyearsfurryball.com/dj-app",
+            "asOf": "2026-08-22T18:02:38Z",
+            "confidence": 1
+          },
+          "closes": {
+            "date": "2026-11-01",
+            "source": "https://www.newyearsfurryball.com/dj-app",
+            "asOf": "2026-08-22T18:02:38Z",
+            "confidence": 1
+          }
+        }
+      }
+    },
+    {
       "id": "new-years-furry-ball-2026",
       "name": "New Years Furry Ball 2026",
       "url": "https://www.newyearsfurryball.com",

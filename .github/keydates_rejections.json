@@ -223,5 +223,14 @@
     "reason": "post is 2026-08-03T01:33Z, which is the evening of Aug 2 in NC; \"today\" means Aug 2, matching the earlier \"one week remains\" post. UTC vs venue-local resolution.",
     "by": "sparkyfen",
     "at": "2026-08-19T20:22:42Z"
+  },
+  {
+    "event_id": "scotiacon-2027",
+    "category": "djs",
+    "kind": "opens",
+    "date": "2027-09-01",
+    "reason": "year mis-anchored to the 2027 edition; the post (2026-08-24) means 2026-09-01",
+    "by": "sparkyfen",
+    "at": "2026-08-24T20:01:01Z"
   }
 ]

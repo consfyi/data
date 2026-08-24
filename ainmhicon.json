@@ -20,7 +20,25 @@
       ],
       "sources": [
         "https://bsky.app/profile/ainmhicon.ie/post/3mrnjxu4nq22l"
-      ]
+      ],
+      "keyDates": {
+        "registration": {
+          "opens": {
+            "date": "2026-08-30",
+            "source": "https://bsky.app/profile/did:plc:cmx6qbpzi24s4ulllxjmqkfm/post/3msizscme3l2h",
+            "asOf": "2026-08-07T17:00:19.973Z",
+            "confidence": 1.0
+          }
+        },
+        "dealers": {
+          "opens": {
+            "date": "2026-08-03",
+            "source": "https://bsky.app/profile/did:plc:cmx6qbpzi24s4ulllxjmqkfm/post/3ms6xxqrqay23",
+            "asOf": "2026-08-03T17:00:57.609Z",
+            "confidence": 0.95
+          }
+        }
+      }
     },
     {
       "id": "ainmhicon-2026",

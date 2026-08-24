@@ -40,6 +40,20 @@
             "asOf": "2026-08-17T21:48:57.172Z",
             "confidence": 1
           }
+        },
+        "djs": {
+          "opens": {
+            "date": "2026-08-24",
+            "source": "https://bsky.app/profile/did:plc:uwoi7anxjcden4hkzck6h6c7/post/3mttusrqp722z",
+            "asOf": "2026-08-24T17:55:35.654513873Z",
+            "confidence": 1.0
+          },
+          "closes": {
+            "date": "2026-10-09",
+            "source": "https://bsky.app/profile/did:plc:uwoi7anxjcden4hkzck6h6c7/post/3mttusrqp722z",
+            "asOf": "2026-08-24T17:55:35.654513873Z",
+            "confidence": 1.0
+          }
         }
       }
     },

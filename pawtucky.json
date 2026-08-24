@@ -20,7 +20,17 @@
       ],
       "sources": [
         "fancons.com"
-      ]
+      ],
+      "keyDates": {
+        "hotel": {
+          "closes": {
+            "date": "2026-09-04",
+            "source": "https://bsky.app/profile/did:plc:vtsdk32ol2dq66re3hptifuo/post/3mtu7qgen752v",
+            "asOf": "2026-08-24T21:11:08.133635+00:00",
+            "confidence": 0.95
+          }
+        }
+      }
     }
   ]
 }

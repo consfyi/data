@@ -232,5 +232,14 @@
     "reason": "year mis-anchored to the 2027 edition; the post (2026-08-24) means 2026-09-01",
     "by": "sparkyfen",
     "at": "2026-08-24T20:01:01Z"
+  },
+  {
+    "event_id": "aquatifur-2026",
+    "category": "registration",
+    "kind": "closes",
+    "date": "2026-08-28",
+    "reason": "Patron tier close only; the register page shows general pre-reg closes 2026-09-25 (Sponsor 09-12)",
+    "by": "sparkyfen",
+    "at": "2026-08-27T18:25:29Z"
   }
 ]

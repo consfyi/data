@@ -6,6 +6,23 @@
   },
   "events": [
     {
+      "id": "lone-star-fur-con-2027",
+      "name": "Lone Star Fur Con 2027",
+      "url": "https://lonestarfurcon.com",
+      "startDate": "2027-02-25",
+      "endDate": "2027-02-28",
+      "venue": "Hilton Austin Airport",
+      "address": "9515 Hotel Dr, Austin, TX 78719, USA",
+      "locale": "en-US",
+      "latLng": [
+        30.21144749999999,
+        -97.6638128
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    },
+    {
       "id": "lone-star-fur-con-2026",
       "name": "Lone Star Fur Con 2026",
       "url": "https://lonestarfurcon.com",

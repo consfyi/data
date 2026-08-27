@@ -6,6 +6,23 @@
   },
   "events": [
     {
+      "id": "furnal-equinox-2027",
+      "name": "Furnal Equinox 2027",
+      "url": "https://furnalequinox.com",
+      "startDate": "2027-02-13",
+      "endDate": "2027-02-15",
+      "venue": "Sheraton Centre Toronto Hotel",
+      "address": "123 Queen St W, Toronto, ON M5H 2M9, Canada",
+      "locale": "en-CA",
+      "latLng": [
+        43.6511953,
+        -79.38425660000001
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    },
+    {
       "id": "furnal-equinox-2026",
       "name": "Furnal Equinox 2026",
       "url": "https://furnalequinox.com",

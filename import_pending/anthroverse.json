@@ -1,0 +1,22 @@
+{
+  "name": "Anthroverse",
+  "events": [
+    {
+      "id": "anthroverse-2027",
+      "name": "Anthroverse 2027",
+      "url": "https://furrycons.com/event/28733/anthroverse-2027",
+      "startDate": "2027-02-18",
+      "endDate": "2027-02-21",
+      "venue": "Best Western Plus Miamisburg-Dayton Suites, Banquets & Hotel",
+      "address": "300 Prestige Pl, Miamisburg, OH 45342, USA",
+      "locale": "en-US",
+      "latLng": [
+        39.6326512,
+        -84.2277395
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    }
+  ]
+}

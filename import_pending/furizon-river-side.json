@@ -1,0 +1,22 @@
+{
+  "name": "Furizon River Side",
+  "events": [
+    {
+      "id": "furizon-river-side-2026",
+      "name": "Furizon River Side 2026",
+      "url": "https://furrycons.com/event/28737/furizon-river-side-2026",
+      "startDate": "2026-10-15",
+      "endDate": "2026-10-18",
+      "venue": "Hotel Weißhorn - Corno Bianco",
+      "address": "Località Pietralba, 8, 39050 Nova Ponente BZ, Italia",
+      "locale": "it-IT",
+      "latLng": [
+        46.3910879,
+        11.4138608
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    }
+  ]
+}

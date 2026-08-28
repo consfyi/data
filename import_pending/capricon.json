@@ -1,0 +1,22 @@
+{
+  "name": "CapriCon",
+  "events": [
+    {
+      "id": "capricon-2026",
+      "name": "CapriCon 2026",
+      "url": "https://furrycons.com/event/28756/capricon-2026",
+      "startDate": "2026-08-29",
+      "endDate": "2026-08-29",
+      "venue": "Rockhampton Showgrounds",
+      "address": "New Exhibition Rd, Wandal QLD 4700, Australia",
+      "locale": "en-AU",
+      "latLng": [
+        -23.3684903,
+        150.4989688
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    }
+  ]
+}

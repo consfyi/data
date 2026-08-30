@@ -6,6 +6,20 @@
   },
   "events": [
     {
+      "id": "furconz-camp-2027",
+      "name": "FurcoNZ Camp 2027",
+      "url": "https://furconz.org.nz",
+      "startDate": "2027-05-14",
+      "endDate": "2027-05-17",
+      "venue": "Forest Lakes Camping and Conference Centre",
+      "address": "3/156 Forest Lakes Road, Ōtaki 5583, New Zealand",
+      "locale": "en-NZ",
+      "latLng": [
+        -40.729612499999995,
+        175.1691233
+      ]
+    },
+    {
       "id": "furconz-camp-2025",
       "name": "FurcoNZ Camp 2025",
       "url": "https://furconz.org.nz",

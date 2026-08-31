@@ -26,7 +26,17 @@
       ],
       "sources": [
         "fancons.com"
-      ]
+      ],
+      "keyDates": {
+        "panels": {
+          "opens": {
+            "date": "2026-08-08",
+            "source": "https://bsky.app/profile/did:plc:umwjtg42a4hn6ywn36rg72po/post/3msk3tpkdaj2n",
+            "asOf": "2026-08-08T03:09:32.417Z",
+            "confidence": 1.0
+          }
+        }
+      }
     },
     {
       "id": "japan-meeting-of-furries-2026",

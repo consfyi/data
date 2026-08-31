@@ -25,6 +25,12 @@
             "source": "https://bsky.app/profile/denfur.org/post/3mhtqqezdew27",
             "asOf": "2026-03-24T16:40:21-07:00",
             "confidence": 0.95
+          },
+          "closes": {
+            "date": "2026-08-13",
+            "source": "https://bsky.app/profile/did:plc:5qadfstdsv7yd2nvezahdlxq/post/3mstlfhzpzs2t",
+            "asOf": "2026-08-11T21:41:54.346Z",
+            "confidence": 1.0
           }
         },
         "hotel": {
@@ -33,6 +39,12 @@
             "source": "https://bsky.app/profile/denfur.org/post/3mpekvy6u4f26",
             "asOf": "2026-06-28T18:07:43.380Z",
             "confidence": 0.8
+          },
+          "closes": {
+            "date": "2026-08-10",
+            "source": "https://bsky.app/profile/did:plc:5qadfstdsv7yd2nvezahdlxq/post/3mrxnrkkbqs2v",
+            "asOf": "2026-07-31T19:09:54.348Z",
+            "confidence": 0.9
           }
         },
         "dealers": {

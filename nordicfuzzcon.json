@@ -30,6 +30,28 @@
             "confidence": 0.95
           }
         },
+        "dealers": {
+          "opens": {
+            "date": "2026-08-08",
+            "source": "https://bsky.app/profile/did:plc:i7jct5sy4z2tb2q7gritvhjc/post/3mslpl5glvr2x",
+            "asOf": "2026-08-08T18:35:20.711Z",
+            "confidence": 1
+          },
+          "closes": {
+            "date": "2026-08-23",
+            "source": "https://bsky.app/profile/did:plc:i7jct5sy4z2tb2q7gritvhjc/post/3mtqjpofclo2o",
+            "asOf": "2026-08-23T09:59:00.714Z",
+            "confidence": 1
+          }
+        },
+        "performances": {
+          "closes": {
+            "date": "2026-08-31",
+            "source": "https://bsky.app/profile/did:plc:i7jct5sy4z2tb2q7gritvhjc/post/3mu5q7xkowo2n",
+            "asOf": "2026-08-28T16:00:06.421Z",
+            "confidence": 1
+          }
+        },
         "volunteers": {
           "opens": {
             "date": "2026-07-14",

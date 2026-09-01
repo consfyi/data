@@ -44,6 +44,20 @@
             "confidence": 0.95
           }
         },
+        "djs": {
+          "opens": {
+            "date": "2026-09-01",
+            "source": "https://bsky.app/profile/did:plc:ykiko7fa24cbv2bmffeylfys/post/3mttwaqonoc2t",
+            "asOf": "2026-08-24T18:21:18.436Z",
+            "confidence": 0.95
+          },
+          "closes": {
+            "date": "2026-09-30",
+            "source": "https://bsky.app/profile/did:plc:ykiko7fa24cbv2bmffeylfys/post/3muhytlpgqc2h",
+            "asOf": "2026-09-01T18:00:53.005Z",
+            "confidence": 0.95
+          }
+        },
         "volunteers": {
           "closes": {
             "date": "2026-08-18",

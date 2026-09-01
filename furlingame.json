@@ -34,6 +34,20 @@
             "asOf": "2026-07-10T16:06:19.656Z",
             "confidence": 0.9
           }
+        },
+        "dealers": {
+          "opens": {
+            "date": "2026-09-01",
+            "source": "https://bsky.app/profile/did:plc:bwf4zux2gax2kkmplggshyxd/post/3muhfwnjpds2r",
+            "asOf": "2026-09-01T12:22:34.467Z",
+            "confidence": 0.9
+          },
+          "closes": {
+            "date": "2026-10-31",
+            "source": "https://bsky.app/profile/did:plc:bwf4zux2gax2kkmplggshyxd/post/3muhfwnjpds2r",
+            "asOf": "2026-09-01T12:22:34.467Z",
+            "confidence": 0.9
+          }
         }
       }
     },

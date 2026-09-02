@@ -66,6 +66,14 @@
             "confidence": 0.95
           }
         },
+        "djs": {
+          "closes": {
+            "date": "2026-10-04",
+            "source": "https://bsky.app/profile/did:plc:7creot4gvsnj3vdiyudqvo6p/post/3muiuqhcqys2z",
+            "asOf": "2026-09-02T02:20:12.501Z",
+            "confidence": 1.0
+          }
+        },
         "volunteers": {
           "opens": {
             "date": "2026-06-24",

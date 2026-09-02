@@ -20,7 +20,17 @@
       ],
       "sources": [
         "fancons.com"
-      ]
+      ],
+      "keyDates": {
+        "registration": {
+          "opens": {
+            "date": "2026-09-07",
+            "source": "https://bsky.app/profile/did:plc:vkij4nukia5yta6xjaep6esl/post/3mui5douel22d",
+            "asOf": "2026-09-01T19:21:28.134Z",
+            "confidence": 1
+          }
+        }
+      }
     },
     {
       "id": "confuzzled-2026",

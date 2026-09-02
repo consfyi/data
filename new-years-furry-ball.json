@@ -33,6 +33,14 @@
             "confidence": 1
           }
         },
+        "hotel": {
+          "opens": {
+            "date": "2026-08-02",
+            "source": "https://bsky.app/profile/did:plc:ha7l7zxbpoqmo7iifjyizdg4/post/3ms4jr7nmuc2u",
+            "asOf": "2026-08-02T17:41:26.750Z",
+            "confidence": 0.95
+          }
+        },
         "dealers": {
           "opens": {
             "date": "2026-06-07",
@@ -73,6 +81,14 @@
             "source": "https://www.newyearsfurryball.com/dj-app",
             "asOf": "2026-08-22T18:02:38Z",
             "confidence": 1
+          }
+        },
+        "volunteers": {
+          "opens": {
+            "date": "2026-09-01",
+            "source": "https://bsky.app/profile/did:plc:ha7l7zxbpoqmo7iifjyizdg4/post/3muhpwh5unk2i",
+            "asOf": "2026-09-01T15:21:25.222Z",
+            "confidence": 0.9
           }
         }
       }

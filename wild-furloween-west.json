@@ -43,6 +43,14 @@
             "asOf": "2026-08-23T07:15:11Z",
             "confidence": 1
           }
+        },
+        "djs": {
+          "opens": {
+            "date": "2026-08-08",
+            "source": "https://bsky.app/profile/did:plc:tsd3ak2uo35gzgd3fxad22jx/post/3msldum37nc2s",
+            "asOf": "2026-08-08T15:05:54.063Z",
+            "confidence": 1.0
+          }
         }
       }
     }

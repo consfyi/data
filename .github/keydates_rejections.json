@@ -241,5 +241,14 @@
     "reason": "Patron tier close only; the register page shows general pre-reg closes 2026-09-25 (Sponsor 09-12)",
     "by": "sparkyfen",
     "at": "2026-08-27T18:25:29Z"
+  },
+  {
+    "event_id": "tails-and-tornadoes-fur-con-2026",
+    "category": "panels",
+    "kind": "closes",
+    "date": "2026-07-06",
+    "reason": "the Jul 6 post only announces submissions are closed, with no date; the previous post states the actual deadline (\"Panel submissions close tomorrow, July 1!\"). Restore 2026-07-01.",
+    "by": "sparkyfen",
+    "at": "2026-09-03T21:20:02Z"
   }
 ]

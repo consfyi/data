@@ -69,6 +69,12 @@
             "source": "https://bsky.app/profile/calfurry.ca/post/3mfmjudnsx22i",
             "asOf": "2026-02-24T15:58:15.915Z",
             "confidence": 0.9
+          },
+          "closes": {
+            "date": "2026-09-03",
+            "source": "https://bsky.app/profile/did:plc:jimdwyslsqmqwqsa7oxujv75/post/3mulbkqkvjr25",
+            "asOf": "2026-09-03T01:14:58.611Z",
+            "confidence": 0.95
           }
         },
         "djs": {

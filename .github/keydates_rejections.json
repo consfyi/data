@@ -250,5 +250,14 @@
     "reason": "the Jul 6 post only announces submissions are closed, with no date; the previous post states the actual deadline (\"Panel submissions close tomorrow, July 1!\"). Restore 2026-07-01.",
     "by": "sparkyfen",
     "at": "2026-09-03T21:20:02Z"
+  },
+  {
+    "event_id": "alamo-city-furry-invasion-2026",
+    "category": "performances",
+    "kind": "opens",
+    "date": "2026-05-08",
+    "reason": "Dance-Off post reusing the same signup page; signups were already open per the May 6 Dance Competition post, so 2026-05-06 is the real opens date (hand-applied separately).",
+    "by": "sparkyfen",
+    "at": "2026-09-03T22:26:52Z"
   }
 ]

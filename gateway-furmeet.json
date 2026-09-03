@@ -33,6 +33,12 @@
             "source": "https://bsky.app/profile/gatewayfurmeet.org/post/3mkikatstzl23",
             "asOf": "2026-04-27T17:00:35.020189+00:00",
             "confidence": 0.9
+          },
+          "closes": {
+            "date": "2026-09-24",
+            "source": "https://bsky.app/profile/did:plc:fvapco74poz7okj4apntezkj/post/3munakkazez2g",
+            "asOf": "2026-09-03T20:02:18.099652+00:00",
+            "confidence": 0.95
           }
         },
         "dealers": {
@@ -77,6 +83,12 @@
             "source": "https://bsky.app/profile/gatewayfurmeet.org/post/3mdixmon4hk24",
             "asOf": "2026-01-28T19:03:29.516Z",
             "confidence": 0.85
+          },
+          "closes": {
+            "date": "2026-08-14",
+            "source": "https://bsky.app/profile/did:plc:fvapco74poz7okj4apntezkj/post/3mt2wczombv2f",
+            "asOf": "2026-08-14T19:46:01.503702+00:00",
+            "confidence": 0.95
           }
         }
       }

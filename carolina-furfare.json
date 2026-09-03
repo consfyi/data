@@ -21,10 +21,10 @@
       "keyDates": {
         "registration": {
           "closes": {
-            "date": "2026-02-09",
-            "source": "https://bsky.app/profile/carolinafurfare.bsky.social/post/3mehk4dho722m",
-            "asOf": "2026-02-09T22:54:14.172Z",
-            "confidence": 0.9
+            "date": "2026-09-02",
+            "source": "https://bsky.app/profile/did:plc:eamjvw2tcnvapbkjhbwyuiy7/post/3mul5lwpqfk2j",
+            "asOf": "2026-09-03T00:04:04.035Z",
+            "confidence": 1
           }
         },
         "hotel": {

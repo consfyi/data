@@ -17,7 +17,31 @@
       "latLng": [
         32.7851169,
         -96.7949573
-      ]
+      ],
+      "keyDates": {
+        "dealers": {
+          "opens": {
+            "date": "2026-09-12",
+            "source": "https://bsky.app/profile/did:plc:sdn5xnsoom3pq2qvdudbgz3r/post/3muhvkqfj6l2u",
+            "asOf": "2026-09-01T17:02:14.584Z",
+            "confidence": 1.0
+          }
+        },
+        "djs": {
+          "opens": {
+            "date": "2026-09-03",
+            "source": "https://bsky.app/profile/did:plc:sdn5xnsoom3pq2qvdudbgz3r/post/3mun3frnirz2u",
+            "asOf": "2026-09-03T18:30:09.292Z",
+            "confidence": 1.0
+          },
+          "closes": {
+            "date": "2026-11-07",
+            "source": "https://bsky.app/profile/did:plc:sdn5xnsoom3pq2qvdudbgz3r/post/3mun3frnirz2u",
+            "asOf": "2026-09-03T18:30:09.292Z",
+            "confidence": 1.0
+          }
+        }
+      }
     },
     {
       "id": "texas-furry-fiesta-2026",

@@ -20,7 +20,23 @@
       ],
       "sources": [
         "fancons.com"
-      ]
+      ],
+      "keyDates": {
+        "registration": {
+          "opens": {
+            "date": "2027-02-25",
+            "source": "https://bsky.app/profile/did:plc:tir2n7nxfddqnf7vlp7qekp2/post/3mtmr33ysci2d",
+            "asOf": "2026-08-21T22:00:00.000Z",
+            "confidence": 0.9
+          },
+          "closes": {
+            "date": "2027-02-28",
+            "source": "https://bsky.app/profile/did:plc:tir2n7nxfddqnf7vlp7qekp2/post/3mtmr33ysci2d",
+            "asOf": "2026-08-21T22:00:00.000Z",
+            "confidence": 0.9
+          }
+        }
+      }
     },
     {
       "id": "lone-star-fur-con-2026",

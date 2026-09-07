@@ -268,5 +268,14 @@
     "reason": "on-site reg desk opening on day 1 of the con (runs 09-04 to 09-06), not pre-reg; lands after the existing closes 2026-09-01",
     "by": "sparkyfen",
     "at": "2026-09-07T20:00:07Z"
+  },
+  {
+    "event_id": "tails-and-tornadoes-fur-con-2026",
+    "category": "registration",
+    "kind": "closes",
+    "date": "2026-09-04",
+    "reason": "at-con reg desk closing on day 1 (\"closing today @ 9PM, pick up your badge\"); the pre-reg deadline stays 2026-07-31",
+    "by": "sparkyfen",
+    "at": "2026-09-07T20:00:13Z"
   }
 ]

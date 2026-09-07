@@ -75,6 +75,12 @@
             "source": "https://bsky.app/profile/gatewayfurmeet.org/post/3mlrj6phvch2h",
             "asOf": "2026-05-14T00:00:38.875376+00:00",
             "confidence": 0.85
+          },
+          "closes": {
+            "date": "2026-10-09",
+            "source": "https://bsky.app/profile/did:plc:fvapco74poz7okj4apntezkj/post/3mux6xjbpvc2c",
+            "asOf": "2026-09-07T19:00:23.184533+00:00",
+            "confidence": 1.0
           }
         },
         "djs": {

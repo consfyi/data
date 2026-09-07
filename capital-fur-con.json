@@ -32,10 +32,10 @@
         },
         "hotel": {
           "opens": {
-            "date": "2026-08-26",
-            "source": "https://bsky.app/profile/did:plc:tcogiehhws3chyw7jvqnozda/post/3mraypilxr22j",
-            "asOf": "2026-07-22T18:54:22.473Z",
-            "confidence": 0.95
+            "date": "2026-08-12",
+            "source": "https://bsky.app/profile/did:plc:tcogiehhws3chyw7jvqnozda/post/3msvpersvvs2s",
+            "asOf": "2026-08-12T17:58:25.496Z",
+            "confidence": 0.9
           }
         },
         "dealers": {
@@ -50,6 +50,14 @@
             "source": "https://bsky.app/profile/capitalfurcon.org/post/3mpzehwz2wc2c",
             "asOf": "2026-07-07T00:38:24.515Z",
             "confidence": 0.9
+          }
+        },
+        "performances": {
+          "closes": {
+            "date": "2027-01-31",
+            "source": "https://bsky.app/profile/did:plc:tcogiehhws3chyw7jvqnozda/post/3msbe457vvk24",
+            "asOf": "2026-08-04T15:43:29.541Z",
+            "confidence": 0.95
           }
         },
         "djs": {

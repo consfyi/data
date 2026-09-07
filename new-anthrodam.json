@@ -45,6 +45,12 @@
           }
         },
         "dealers": {
+          "opens": {
+            "date": "2026-06-19",
+            "source": "https://bsky.app/profile/did:plc:7creot4gvsnj3vdiyudqvo6p/post/3mooovcpmak2c",
+            "asOf": "2026-06-20T01:20:21.665Z",
+            "confidence": 1
+          },
           "closes": {
             "date": "2026-07-15",
             "source": "https://bsky.app/profile/did:plc:7creot4gvsnj3vdiyudqvo6p/post/3mooovcpmak2c",

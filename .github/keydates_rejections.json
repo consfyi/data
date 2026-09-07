@@ -277,5 +277,14 @@
     "reason": "at-con reg desk closing on day 1 (\"closing today @ 9PM, pick up your badge\"); the pre-reg deadline stays 2026-07-31",
     "by": "sparkyfen",
     "at": "2026-09-07T20:00:13Z"
+  },
+  {
+    "event_id": "lone-star-fur-con-2027",
+    "category": "registration",
+    "kind": "closes",
+    "date": "2027-02-28",
+    "reason": "these are the con's run dates (Feb 25-28), not registration dates",
+    "by": "sparkyfen",
+    "at": "2026-09-07T20:00:15Z"
   }
 ]

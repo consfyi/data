@@ -1,0 +1,22 @@
+{
+  "name": "Destination Pawadise",
+  "events": [
+    {
+      "id": "destination-pawadise-2026",
+      "name": "Destination Pawadise 2026",
+      "url": "https://furrycons.com/event/28827/destination-pawadise-2026",
+      "startDate": "2026-10-30",
+      "endDate": "2026-10-30",
+      "venue": "Church Of Perpetual Life",
+      "address": "950 S Cypress Rd, Pompano Beach, FL 33060, USA",
+      "locale": "en-US",
+      "latLng": [
+        26.2168974,
+        -80.1227664
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    }
+  ]
+}

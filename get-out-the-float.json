@@ -6,6 +6,23 @@
   },
   "events": [
     {
+      "id": "get-out-the-float-2027",
+      "name": "Get Out The Float 2027",
+      "url": "https://getoutthefloat.com",
+      "startDate": "2027-02-04",
+      "endDate": "2027-02-07",
+      "venue": "Seaside Civic & Convention Center",
+      "address": "415 1st Ave, Seaside, OR 97138, USA",
+      "locale": "en-US",
+      "latLng": [
+        45.9940788,
+        -123.9254468
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    },
+    {
       "id": "get-out-the-float-2026",
       "name": "Get Out The Float 2026",
       "url": "https://getoutthefloat.com",

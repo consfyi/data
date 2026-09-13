@@ -52,6 +52,14 @@
             "confidence": 0.9
           }
         },
+        "panels": {
+          "opens": {
+            "date": "2026-08-02",
+            "source": "https://bsky.app/profile/did:plc:tcogiehhws3chyw7jvqnozda/post/3ms4iiabdgs2u",
+            "asOf": "2026-08-02T17:18:31.660Z",
+            "confidence": 0.9
+          }
+        },
         "performances": {
           "closes": {
             "date": "2027-01-31",

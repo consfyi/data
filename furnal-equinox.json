@@ -20,7 +20,25 @@
       ],
       "sources": [
         "fancons.com"
-      ]
+      ],
+      "keyDates": {
+        "dealers": {
+          "closes": {
+            "date": "2026-07-15",
+            "source": "https://bsky.app/profile/did:plc:g7b4ncbjtguyen43rp2434w5/post/3mqpo5jj6ev2n",
+            "asOf": "2026-07-15T21:30:05.270Z",
+            "confidence": 0.9
+          }
+        },
+        "panels": {
+          "closes": {
+            "date": "2026-10-24",
+            "source": "https://bsky.app/profile/did:plc:g7b4ncbjtguyen43rp2434w5/post/3muhsdqivzf2a",
+            "asOf": "2026-09-01T16:04:38.638Z",
+            "confidence": 0.9
+          }
+        }
+      }
     },
     {
       "id": "furnal-equinox-2026",

@@ -35,6 +35,28 @@
             "asOf": "2026-08-08T03:09:32.417Z",
             "confidence": 1.0
           }
+        },
+        "performances": {
+          "opens": {
+            "date": "2026-09-12",
+            "source": "https://bsky.app/profile/did:plc:umwjtg42a4hn6ywn36rg72po/post/3mvd27ifabi2g",
+            "asOf": "2026-09-12T12:07:16.691Z",
+            "confidence": 0.95
+          },
+          "closes": {
+            "date": "2026-10-04",
+            "source": "https://bsky.app/profile/did:plc:umwjtg42a4hn6ywn36rg72po/post/3mvd27ifabi2g",
+            "asOf": "2026-09-12T12:07:16.691Z",
+            "confidence": 0.95
+          }
+        },
+        "volunteers": {
+          "opens": {
+            "date": "2026-09-12",
+            "source": "https://bsky.app/profile/did:plc:umwjtg42a4hn6ywn36rg72po/post/3mvcwhumibb2i",
+            "asOf": "2026-09-12T11:00:24.952Z",
+            "confidence": 0.95
+          }
         }
       }
     },

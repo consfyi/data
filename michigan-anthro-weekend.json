@@ -17,7 +17,33 @@
       "latLng": [
         42.9120128,
         -85.5255885
-      ]
+      ],
+      "keyDates": {
+        "hotel": {
+          "opens": {
+            "date": "2026-07-01",
+            "source": "https://bsky.app/profile/did:plc:fwt566qqg3uhf36kswpmuqx2/post/3mp25bwxoqs2y",
+            "asOf": "2026-06-24T14:37:15.062Z",
+            "confidence": 1.0
+          }
+        },
+        "dealers": {
+          "closes": {
+            "date": "2026-06-01",
+            "source": "https://bsky.app/profile/did:plc:fwt566qqg3uhf36kswpmuqx2/post/3mmrmmer7tk2a",
+            "asOf": "2026-05-26T18:27:10.300Z",
+            "confidence": 1.0
+          }
+        },
+        "djs": {
+          "closes": {
+            "date": "2026-06-30",
+            "source": "https://bsky.app/profile/did:plc:fwt566qqg3uhf36kswpmuqx2/post/3moxrrvhgjk2r",
+            "asOf": "2026-06-23T16:06:05.974Z",
+            "confidence": 1.0
+          }
+        }
+      }
     }
   ]
 }

@@ -25,6 +25,12 @@
             "source": "https://bsky.app/profile/furrymigration.org/post/3mfoyrn7hgb2o",
             "asOf": "2026-02-25T15:30:31.201Z",
             "confidence": 0.9
+          },
+          "closes": {
+            "date": "2026-08-10",
+            "source": "https://bsky.app/profile/did:plc:ittzfj5vrjmgupumwkws36dv/post/3mso2ue6a6t2y",
+            "asOf": "2026-08-09T17:02:41.296Z",
+            "confidence": 1
           }
         },
         "hotel": {
@@ -33,6 +39,12 @@
             "source": "https://bsky.app/profile/furrymigration.org/post/3mkaywc22cp2j",
             "asOf": "2026-04-24T17:01:48.172Z",
             "confidence": 0.9
+          },
+          "closes": {
+            "date": "2026-08-20",
+            "source": "https://bsky.app/profile/did:plc:ittzfj5vrjmgupumwkws36dv/post/3msgmp3biy62r",
+            "asOf": "2026-08-06T18:00:33.632Z",
+            "confidence": 1
           }
         },
         "dealers": {
@@ -69,6 +81,12 @@
             "source": "https://bsky.app/profile/did:plc:ittzfj5vrjmgupumwkws36dv/post/3mr6bxj3jra2c",
             "asOf": "2026-07-21T17:01:55.813Z",
             "confidence": 0.9
+          },
+          "closes": {
+            "date": "2026-08-28",
+            "source": "https://bsky.app/profile/did:plc:ittzfj5vrjmgupumwkws36dv/post/3mu5n7cieqa2z",
+            "asOf": "2026-08-28T15:06:03.684Z",
+            "confidence": 1
           }
         },
         "djs": {

@@ -17,7 +17,17 @@
       "latLng": [
         30.4231205,
         -91.134029
-      ]
+      ],
+      "keyDates": {
+        "djs": {
+          "closes": {
+            "date": "2026-09-12",
+            "source": "https://bsky.app/profile/did:plc:sjsffed6nabvs2jhtstw4ny6/post/3mvbdtjaqvk2c",
+            "asOf": "2026-09-11T19:54:15.044Z",
+            "confidence": 0.9
+          }
+        }
+      }
     },
     {
       "id": "frosty-fur-fest-2026",

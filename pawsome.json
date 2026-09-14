@@ -25,6 +25,12 @@
             "source": "https://bsky.app/profile/pawsome.bsky.social/post/3mice2b53z22a",
             "asOf": "2026-03-30T19:03:09.995Z",
             "confidence": 0.9
+          },
+          "closes": {
+            "date": "2026-08-22",
+            "source": "https://bsky.app/profile/did:plc:6qeufewqi72im3pho5u3lud2/post/3msl446j7ut2w",
+            "asOf": "2026-08-08T12:46:58.330Z",
+            "confidence": 1
           }
         },
         "hotel": {
@@ -75,6 +81,14 @@
             "source": "https://bsky.app/profile/pawsome.bsky.social/post/3mnao655kv32o",
             "asOf": "2026-06-01T18:04:56.100Z",
             "confidence": 0.9
+          }
+        },
+        "volunteers": {
+          "closes": {
+            "date": "2026-08-07",
+            "source": "https://bsky.app/profile/did:plc:6qeufewqi72im3pho5u3lud2/post/3msih3rokjc2g",
+            "asOf": "2026-08-07T11:25:36.832Z",
+            "confidence": 1
           }
         }
       }

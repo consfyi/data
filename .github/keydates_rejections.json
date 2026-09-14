@@ -295,5 +295,14 @@
     "reason": "these are the con's run dates (Feb 25-28), not registration dates",
     "by": "sparkyfen",
     "at": "2026-09-07T20:00:14Z"
+  },
+  {
+    "event_id": "furry-migration-2026",
+    "category": "dealers",
+    "kind": "closes",
+    "date": "2026-09-13",
+    "reason": "on-site Dealer's Den hours on the last con day, not the application deadline",
+    "by": "sparkyfen",
+    "at": "2026-09-14T04:28:34Z"
   }
 ]

@@ -313,5 +313,14 @@
     "reason": "Oct 29 is a room night the block added, not the date the block opens. The con runs Oct 30 to Nov 1.",
     "by": "sparkyfen",
     "at": "2026-09-15T23:05:33Z"
+  },
+  {
+    "event_id": "biggest-little-fur-con-2026",
+    "category": "performances",
+    "kind": "closes",
+    "date": "2026-09-30",
+    "reason": "Fashion Show deadline. Different program from the Dance Comp date we kept.",
+    "by": "sparkyfen",
+    "at": "2026-09-15T23:05:39Z"
   }
 ]

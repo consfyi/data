@@ -304,5 +304,14 @@
     "reason": "on-site Dealer's Den hours on the last con day, not the application deadline",
     "by": "sparkyfen",
     "at": "2026-09-14T04:28:34Z"
+  },
+  {
+    "event_id": "wild-furloween-west-2026",
+    "category": "hotel",
+    "kind": "opens",
+    "date": "2026-10-29",
+    "reason": "Oct 29 is a room night the block added, not the date the block opens. The con runs Oct 30 to Nov 1.",
+    "by": "sparkyfen",
+    "at": "2026-09-15T23:05:33Z"
   }
 ]

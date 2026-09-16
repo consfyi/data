@@ -1,0 +1,19 @@
+# Review every commit on this repo's pull requests.
+#
+# The keydates worker resets bot/bsky-keydates from main and force-pushes on
+# every run, so its PR gains a new head commit several times an hour even when
+# the data has not changed. At CodeRabbit's default threshold of 5 reviewed
+# commits, that churn auto-pauses reviews, and the passing CodeRabbit status
+# then reflects a review of an older commit rather than the current head.
+#
+# inheritance is required, not optional. Without it CodeRabbit uses only the
+# highest-priority source, so this file would replace the organization UI
+# settings outright and every key left out here would fall back to schema
+# defaults. With it, the organization UI values merge in and the one override
+# below still wins.
+inheritance: true
+
+reviews:
+  auto_review:
+    # 0 disables the pause and reviews every commit.
+    auto_pause_after_reviewed_commits: 0

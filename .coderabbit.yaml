@@ -1,0 +1,12 @@
+# Review every commit on this repo's pull requests.
+#
+# The keydates worker resets bot/bsky-keydates from main and force-pushes on
+# every run, so its PR gains a new head commit several times an hour even when
+# the data has not changed. At CodeRabbit's default threshold of 5 reviewed
+# commits, that churn auto-pauses reviews, and the passing CodeRabbit status
+# then reflects a review of an older commit rather than the current head.
+#
+# 0 disables the pause. Every other setting comes from the organization UI.
+reviews:
+  auto_review:
+    auto_pause_after_reviewed_commits: 0

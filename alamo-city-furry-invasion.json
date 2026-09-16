@@ -33,6 +33,12 @@
             "source": "https://bsky.app/profile/furryinvasion.bsky.social/post/3mih66nmsg22x",
             "asOf": "2026-04-01T17:01:33.539Z",
             "confidence": 0.95
+          },
+          "closes": {
+            "date": "2026-09-17",
+            "source": "https://bsky.app/profile/did:plc:i54z3b7sl4jladt3k56ttsoa/post/3mvja3evxfc25",
+            "asOf": "2026-09-14T23:08:21.872Z",
+            "confidence": 1
           }
         },
         "dealers": {

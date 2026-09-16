@@ -22,6 +22,14 @@
         "fancons.com"
       ],
       "keyDates": {
+        "dealers": {
+          "opens": {
+            "date": "2026-08-05",
+            "source": "https://bsky.app/profile/did:plc:eosb3ex6tem3bbr2j6stj3sx/post/3msf5gr3mnk2g",
+            "asOf": "2026-08-06T03:54:48.678Z",
+            "confidence": 0.95
+          }
+        },
         "panels": {
           "opens": {
             "date": "2026-08-15",
@@ -34,6 +42,14 @@
             "source": "https://www.palmettoanthroweekend.org/events/panels",
             "asOf": "2026-08-23T07:15:11Z",
             "confidence": 1
+          }
+        },
+        "performances": {
+          "opens": {
+            "date": "2026-09-14",
+            "source": "https://bsky.app/profile/did:plc:eosb3ex6tem3bbr2j6stj3sx/post/3mvj5jp27rs2a",
+            "asOf": "2026-09-14T22:22:41.034Z",
+            "confidence": 0.95
           }
         }
       }

@@ -6,7 +6,14 @@
 # commits, that churn auto-pauses reviews, and the passing CodeRabbit status
 # then reflects a review of an older commit rather than the current head.
 #
-# 0 disables the pause. Every other setting comes from the organization UI.
+# inheritance is required, not optional. Without it CodeRabbit uses only the
+# highest-priority source, so this file would replace the organization UI
+# settings outright and every key left out here would fall back to schema
+# defaults. With it, the organization UI values merge in and the one override
+# below still wins.
+inheritance: true
+
 reviews:
   auto_review:
+    # 0 disables the pause and reviews every commit.
     auto_pause_after_reviewed_commits: 0

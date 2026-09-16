@@ -23,6 +23,12 @@
       ],
       "keyDates": {
         "registration": {
+          "opens": {
+            "date": "2026-07-01",
+            "source": "https://bsky.app/profile/did:plc:bbtrnum4fw5s4rdfhxqo2bh2/post/3mn3dc7jkns2j",
+            "asOf": "2026-05-30T15:07:02.965Z",
+            "confidence": 0.9
+          },
           "closes": {
             "date": "2026-12-31",
             "source": "https://www.pawsandprairies.com/registration",

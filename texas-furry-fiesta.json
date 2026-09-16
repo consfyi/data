@@ -27,6 +27,34 @@
             "confidence": 1.0
           }
         },
+        "panels": {
+          "opens": {
+            "date": "2026-09-15",
+            "source": "https://bsky.app/profile/did:plc:sdn5xnsoom3pq2qvdudbgz3r/post/3mvl7igh4dj2o",
+            "asOf": "2026-09-15T18:03:05.363Z",
+            "confidence": 1
+          },
+          "closes": {
+            "date": "2027-01-09",
+            "source": "https://bsky.app/profile/did:plc:sdn5xnsoom3pq2qvdudbgz3r/post/3mvl7igh4dj2o",
+            "asOf": "2026-09-15T18:03:05.363Z",
+            "confidence": 1
+          }
+        },
+        "performances": {
+          "opens": {
+            "date": "2026-09-15",
+            "source": "https://bsky.app/profile/did:plc:sdn5xnsoom3pq2qvdudbgz3r/post/3mvkynudhvg2v",
+            "asOf": "2026-09-15T16:00:51.549Z",
+            "confidence": 1
+          },
+          "closes": {
+            "date": "2026-10-01",
+            "source": "https://bsky.app/profile/did:plc:sdn5xnsoom3pq2qvdudbgz3r/post/3mvkynudhvg2v",
+            "asOf": "2026-09-15T16:00:51.549Z",
+            "confidence": 1
+          }
+        },
         "djs": {
           "opens": {
             "date": "2026-09-03",

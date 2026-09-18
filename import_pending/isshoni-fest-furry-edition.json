@@ -1,0 +1,22 @@
+{
+  "name": "Isshoni Fest Furry Edition",
+  "events": [
+    {
+      "id": "isshoni-fest-furry-edition-2026",
+      "name": "Isshoni Fest Furry Edition 2026",
+      "url": "https://furrycons.com/event/28863/isshoni-fest-furry-edition-2026",
+      "startDate": "2026-10-18",
+      "endDate": "2026-10-18",
+      "venue": "Edificio Omni",
+      "address": "Av. 1, San José, El Carmen, 10101, Costa Rica",
+      "locale": "es-CR",
+      "latLng": [
+        9.9344474,
+        -84.0769543
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    }
+  ]
+}

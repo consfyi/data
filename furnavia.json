@@ -28,6 +28,20 @@
             "source": "https://bsky.app/profile/furnavia.bsky.social/post/3mnajdiupos2e",
             "asOf": "2026-06-01T16:38:27.470Z",
             "confidence": 0.9
+          },
+          "closes": {
+            "date": "2026-08-31",
+            "source": "https://bsky.app/profile/did:plc:a7yrdfbzvv4h3h4jdpviljkh/post/3mrzbakqgg22q",
+            "asOf": "2026-08-01T10:30:58.801Z",
+            "confidence": 1
+          }
+        },
+        "hotel": {
+          "closes": {
+            "date": "2026-09-30",
+            "source": "https://bsky.app/profile/did:plc:a7yrdfbzvv4h3h4jdpviljkh/post/3mrzbakqgg22q",
+            "asOf": "2026-08-01T10:30:58.801Z",
+            "confidence": 1
           }
         },
         "dealers": {

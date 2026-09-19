@@ -17,7 +17,25 @@
       "latLng": [
         49.1709306,
         -123.1416696
-      ]
+      ],
+      "keyDates": {
+        "hotel": {
+          "opens": {
+            "date": "2026-06-05",
+            "source": "https://bsky.app/profile/did:plc:5tccqxugf2h7pocamiydvsth/post/3mnk72fggdd2d",
+            "asOf": "2026-06-05T13:01:01.631Z",
+            "confidence": 0.8
+          }
+        },
+        "dealers": {
+          "opens": {
+            "date": "2026-09-19",
+            "source": "https://bsky.app/profile/did:plc:5tccqxugf2h7pocamiydvsth/post/3mvqz6qaolh2l",
+            "asOf": "2026-09-18T01:26:16.105Z",
+            "confidence": 0.9
+          }
+        }
+      }
     },
     {
       "id": "vancoufur-2026",

@@ -17,7 +17,17 @@
       "latLng": [
         49.1709306,
         -123.1416696
-      ]
+      ],
+      "keyDates": {
+        "dealers": {
+          "opens": {
+            "date": "2026-09-19",
+            "source": "https://bsky.app/profile/did:plc:5tccqxugf2h7pocamiydvsth/post/3mvqz6qaolh2l",
+            "asOf": "2026-09-18T01:26:16.105Z",
+            "confidence": 0.9
+          }
+        }
+      }
     },
     {
       "id": "vancoufur-2026",

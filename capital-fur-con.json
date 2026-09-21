@@ -58,6 +58,12 @@
             "source": "https://bsky.app/profile/did:plc:tcogiehhws3chyw7jvqnozda/post/3ms4iiabdgs2u",
             "asOf": "2026-08-02T17:18:31.660Z",
             "confidence": 0.9
+          },
+          "closes": {
+            "date": "2026-09-15",
+            "source": "https://bsky.app/profile/did:plc:tcogiehhws3chyw7jvqnozda/post/3mvbw5cbtbx24",
+            "asOf": "2026-09-12T01:21:50.593823+00:00",
+            "confidence": 1
           }
         },
         "performances": {

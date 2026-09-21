@@ -17,3 +17,16 @@ reviews:
   auto_review:
     # 0 disables the pause and reviews every commit.
     auto_pause_after_reviewed_commits: 0
+
+  # Stop the repeat false positive on keyDates asOf. A bsky.app page publishes
+  # the AppView's indexedAt as its article:published_time and datePublished, so
+  # a reviewer that opens the source URL sees a timestamp that differs from the
+  # record's createdAt and reports the asOf value as wrong. Saved learnings did
+  # not stop it, because a learning applies to similar code segments rather than
+  # as a general rule.
+  path_instructions:
+    - path: "*.json"
+      instructions: |
+        `keyDates.*.asOf` is the source Bluesky post's `record.createdAt`, copied verbatim by the keydates worker.
+        Do not check `asOf` against a bsky.app page, a web search result, or MCP tool output. The bsky.app HTML (`article:published_time`, `datePublished`) exposes the AppView's `indexedAt`, not `createdAt`. `indexedAt` can be later or earlier than `createdAt`.
+        Only `record.createdAt` from `app.bsky.feed.getPosts` on public.api.bsky.app is authoritative. If you have not read that field, do not comment on `asOf`. A difference between `asOf` and any other timestamp is not a finding.

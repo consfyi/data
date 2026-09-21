@@ -349,5 +349,14 @@
     "reason": "day number only in image; text says Tuesday, which is 09-15",
     "by": "sparkyfen",
     "at": "2026-09-21T08:41:09Z"
+  },
+  {
+    "event_id": "western-pa-furry-weekend-2026",
+    "category": "registration",
+    "kind": "closes",
+    "date": "2026-07-19",
+    "reason": "sold-out post, no closing date in text",
+    "by": "sparkyfen",
+    "at": "2026-09-21T08:41:08Z"
   }
 ]

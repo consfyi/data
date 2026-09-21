@@ -358,5 +358,14 @@
     "reason": "sold-out post, no closing date in text",
     "by": "sparkyfen",
     "at": "2026-09-21T08:41:08Z"
+  },
+  {
+    "event_id": "pawtucky-2026",
+    "category": "registration",
+    "kind": "closes",
+    "date": "2026-08-21",
+    "reason": "sold-out post, no closing date in text",
+    "by": "sparkyfen",
+    "at": "2026-09-21T08:41:07Z"
   }
 ]

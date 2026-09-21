@@ -29,6 +29,14 @@
             "asOf": "2026-09-01T19:21:28.134Z",
             "confidence": 1
           }
+        },
+        "dealers": {
+          "opens": {
+            "date": "2026-09-07",
+            "source": "https://bsky.app/profile/did:plc:vkij4nukia5yta6xjaep6esl/post/3mux6xgge6c2z",
+            "asOf": "2026-09-07T19:00:20.201Z",
+            "confidence": 0.95
+          }
         }
       }
     },

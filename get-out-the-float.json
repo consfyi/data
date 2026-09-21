@@ -22,6 +22,14 @@
         "fancons.com"
       ],
       "keyDates": {
+        "hotel": {
+          "closes": {
+            "date": "2026-12-31",
+            "source": "https://bsky.app/profile/did:plc:dudgclqiibaulmlueqbehe2r/post/3mtcbsvq7hc2d",
+            "asOf": "2026-08-17T18:00:23.000Z",
+            "confidence": 1.0
+          }
+        },
         "dealers": {
           "opens": {
             "date": "2026-09-05",

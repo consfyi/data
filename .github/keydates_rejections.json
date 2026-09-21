@@ -340,5 +340,14 @@
     "reason": "post is about Tails of Summer 2026 hotel, not VF2027",
     "by": "sparkyfen",
     "at": "2026-09-21T08:41:06Z"
+  },
+  {
+    "event_id": "capital-fur-con-2027",
+    "category": "panels",
+    "kind": "closes",
+    "date": "2026-09-12",
+    "reason": "day number only in image; text says Tuesday, which is 09-15",
+    "by": "sparkyfen",
+    "at": "2026-09-21T08:41:09Z"
   }
 ]

@@ -27,6 +27,6 @@ reviews:
   path_instructions:
     - path: "*.json"
       instructions: |
-        `keyDates.*.asOf` is the source Bluesky post's `record.createdAt`, copied verbatim by the keydates worker.
+        Every `asOf` field nested under `keyDates` (for example `keyDates.registration.opens.asOf`) is the source Bluesky post's `record.createdAt`, copied verbatim by the keydates worker.
         Do not check `asOf` against a bsky.app page, a web search result, or MCP tool output. The bsky.app HTML (`article:published_time`, `datePublished`) exposes the AppView's `indexedAt`, not `createdAt`. `indexedAt` can be later or earlier than `createdAt`.
         Only `record.createdAt` from `app.bsky.feed.getPosts` on public.api.bsky.app is authoritative. If you have not read that field, do not comment on `asOf`. A difference between `asOf` and any other timestamp is not a finding.

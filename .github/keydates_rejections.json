@@ -376,5 +376,14 @@
     "reason": "\"now closed\" post with no date, same-day retrospective close; reg reopens early October",
     "by": "sparkyfen",
     "at": "2026-09-23T04:29:09Z"
+  },
+  {
+    "event_id": "anthro-new-england-2027",
+    "category": "dealers",
+    "kind": "closes",
+    "date": "2026-11-09",
+    "reason": "Artist Alley deadline, a separate sign-up from the vendor hall (07-31)",
+    "by": "sparkyfen",
+    "at": "2026-09-23T04:29:10Z"
   }
 ]

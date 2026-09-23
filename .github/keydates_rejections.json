@@ -367,5 +367,14 @@
     "reason": "sold-out post, no closing date in text",
     "by": "sparkyfen",
     "at": "2026-09-21T08:41:07Z"
+  },
+  {
+    "event_id": "confuzzled-2027",
+    "category": "registration",
+    "kind": "closes",
+    "date": "2026-09-21",
+    "reason": "\"now closed\" post with no date, same-day retrospective close; reg reopens early October",
+    "by": "sparkyfen",
+    "at": "2026-09-23T04:29:09Z"
   }
 ]

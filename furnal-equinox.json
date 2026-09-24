@@ -44,6 +44,14 @@
             "confidence": 0.95
           }
         },
+        "performances": {
+          "closes": {
+            "date": "2026-11-20",
+            "source": "https://bsky.app/profile/did:plc:g7b4ncbjtguyen43rp2434w5/post/3mvt2tcxyzj26",
+            "asOf": "2026-09-18T21:01:00.006Z",
+            "confidence": 1
+          }
+        },
         "djs": {
           "opens": {
             "date": "2026-09-01",

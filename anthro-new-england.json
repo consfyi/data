@@ -56,6 +56,28 @@
             "asOf": "2026-08-03T00:30:10.323Z",
             "confidence": 0.9
           }
+        },
+        "performances": {
+          "closes": {
+            "date": "2026-11-27",
+            "source": "https://bsky.app/profile/did:plc:srxungr7qhhxzllfsdfltzau/post/3mtws43m5ac2y",
+            "asOf": "2026-08-25T21:45:06.303Z",
+            "confidence": 0.9
+          }
+        },
+        "djs": {
+          "opens": {
+            "date": "2026-08-25",
+            "source": "https://bsky.app/profile/did:plc:srxungr7qhhxzllfsdfltzau/post/3mtwlfkr3qk2z",
+            "asOf": "2026-08-25T19:45:08.020Z",
+            "confidence": 0.9
+          },
+          "closes": {
+            "date": "2026-11-27",
+            "source": "https://bsky.app/profile/did:plc:srxungr7qhhxzllfsdfltzau/post/3mtwlfkr3qk2z",
+            "asOf": "2026-08-25T19:45:08.020Z",
+            "confidence": 0.9
+          }
         }
       }
     },

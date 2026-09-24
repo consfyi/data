@@ -1,0 +1,22 @@
+{
+  "name": "Fur Prom",
+  "events": [
+    {
+      "id": "fur-prom-2027",
+      "name": "Fur Prom 2027",
+      "url": "https://furrycons.com/event/28898/fur-prom-2027",
+      "startDate": "2027-07-17",
+      "endDate": "2027-07-17",
+      "venue": "Tsakopoulos Library Galleria",
+      "address": "828 I St, Sacramento, CA 95814, USA",
+      "locale": "en-US",
+      "latLng": [
+        38.581706,
+        -121.4947886
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    }
+  ]
+}

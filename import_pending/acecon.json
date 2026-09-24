@@ -1,0 +1,22 @@
+{
+  "name": "ACEcon",
+  "events": [
+    {
+      "id": "acecon-2027",
+      "name": "ACEcon 2027",
+      "url": "https://furrycons.com/event/28888/acecon-2027",
+      "startDate": "2027-03-06",
+      "endDate": "2027-03-07",
+      "venue": "Palm Harbor Library",
+      "address": "2330 Nebraska Ave, Palm Harbor, FL 34683, USA",
+      "locale": "en-US",
+      "latLng": [
+        28.0778327,
+        -82.7428094
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    }
+  ]
+}

@@ -6,6 +6,23 @@
   },
   "events": [
     {
+      "id": "fur-eh-2027",
+      "name": "Fur-Eh! 2027",
+      "url": "https://www.fureh.ca",
+      "startDate": "2027-07-15",
+      "endDate": "2027-07-18",
+      "venue": "Wyndham Edmonton Hotel and Conference Centre",
+      "address": "4440 Gateway Blvd, Edmonton, AB T6H 5C2, Canada",
+      "locale": "en-CA",
+      "latLng": [
+        53.482442,
+        -113.4929521
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    },
+    {
       "id": "fur-eh-2026",
       "name": "Fur-Eh! 2026",
       "url": "https://www.fureh.ca",

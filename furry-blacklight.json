@@ -28,6 +28,12 @@
             "source": "https://bsky.app/profile/fblacklight.bsky.social/post/3mlgtanjrzc2p",
             "asOf": "2026-05-09T18:01:24.249Z",
             "confidence": 0.95
+          },
+          "closes": {
+            "date": "2026-10-11",
+            "source": "https://bsky.app/profile/did:plc:s42vpi52gnwxbwvsafcnmcf5/post/3mwgkfgc4pm2a",
+            "asOf": "2026-09-26T15:00:08.683Z",
+            "confidence": 1
           }
         },
         "dealers": {

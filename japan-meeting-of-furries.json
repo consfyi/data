@@ -28,6 +28,20 @@
         "fancons.com"
       ],
       "keyDates": {
+        "hotel": {
+          "opens": {
+            "date": "2026-09-27",
+            "source": "https://bsky.app/profile/did:plc:umwjtg42a4hn6ywn36rg72po/post/3mwgh2wraxe2v",
+            "asOf": "2026-09-26T14:00:34.730Z",
+            "confidence": 0.95
+          },
+          "closes": {
+            "date": "2026-09-29",
+            "source": "https://bsky.app/profile/did:plc:umwjtg42a4hn6ywn36rg72po/post/3mwgh2wraxe2v",
+            "asOf": "2026-09-26T14:00:34.730Z",
+            "confidence": 0.95
+          }
+        },
         "panels": {
           "opens": {
             "date": "2026-08-08",

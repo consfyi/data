@@ -394,5 +394,14 @@
     "reason": "post says 2027 but the event is Feb 2027; likely typo for 2026-10-21",
     "by": "sparkyfen",
     "at": "2026-09-29T20:14:10Z"
+  },
+  {
+    "event_id": "fluufff-2026",
+    "category": "dealers",
+    "kind": "closes",
+    "date": "2026-10-15",
+    "reason": "Second Hand Market sign-up, not the dealers' den; keep 2026-05-24",
+    "by": "sparkyfen",
+    "at": "2026-09-29T20:14:11Z"
   }
 ]

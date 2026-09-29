@@ -385,5 +385,14 @@
     "reason": "Artist Alley deadline, a separate sign-up from the vendor hall (07-31)",
     "by": "sparkyfen",
     "at": "2026-09-23T04:29:10Z"
+  },
+  {
+    "event_id": "melbourne-furry-convention-2027",
+    "category": "panels",
+    "kind": "closes",
+    "date": "2027-10-21",
+    "reason": "post says 2027 but the event is Feb 2027; likely typo for 2026-10-21",
+    "by": "sparkyfen",
+    "at": "2026-09-29T20:14:10Z"
   }
 ]

@@ -2,6 +2,19 @@
   "name": "Furst Class",
   "events": [
     {
+      "id": "furst-class-4",
+      "name": "Furst Class 4",
+      "url": "https://witchform.com/w/festa/home/TheFurstclass",
+      "startDate": "2026-11-28",
+      "endDate": "2026-11-29",
+      "venue": "Enford Hotel Cheongju",
+      "address": "Cheongju-si\\, Chungcheongbuk-do, Korea\\, Republic of",
+      "locale": "ko-KR",
+      "sources": [
+        "fancons.com"
+      ]
+    },
+    {
       "id": "furst-class-3",
       "name": "Furst Class 3",
       "url": "https://witchform.com/w/festa/home/TheFurstclass",

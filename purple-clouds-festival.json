@@ -36,6 +36,7 @@
         53.07385499999999,
         8.4158131
       ],
+      "attendance": 376,
       "keyDates": {
         "registration": {
           "opens": {
@@ -43,6 +44,47 @@
             "source": "https://bsky.app/profile/purple-clouds.de/post/3mbmiv5zr3s2f",
             "asOf": "2026-01-04T18:00:03.655Z",
             "confidence": 0.92
+          },
+          "closes": {
+            "date": "2026-07-09",
+            "source": "https://www.purple-clouds.de/assets/json/events.json",
+            "asOf": "2026-10-01T20:24:14Z",
+            "confidence": 1
+          }
+        }
+      }
+    },
+    {
+      "id": "purple-clouds-festival-2025",
+      "name": "Purple Clouds Festival 2025",
+      "url": "https://www.purple-clouds.de",
+      "startDate": "2025-08-08",
+      "endDate": "2025-08-11",
+      "venue": "HS Lifestyle Club",
+      "address": "Bremer Str. 24, 27798 Hude, Deutschland",
+      "locale": "de-DE",
+      "latLng": [
+        53.07385499999999,
+        8.4158131
+      ],
+      "attendance": 170,
+      "sources": [
+        "https://www.purple-clouds.de/assets/json/events.json",
+        "https://barq.app/e/jbawzUb"
+      ],
+      "keyDates": {
+        "registration": {
+          "opens": {
+            "date": "2025-05-25",
+            "source": "https://www.purple-clouds.de/assets/json/events.json",
+            "asOf": "2026-10-01T20:24:14Z",
+            "confidence": 1
+          },
+          "closes": {
+            "date": "2025-08-01",
+            "source": "https://www.purple-clouds.de/assets/json/events.json",
+            "asOf": "2026-10-01T20:24:14Z",
+            "confidence": 1
           }
         }
       }

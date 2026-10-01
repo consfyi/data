@@ -39,12 +39,6 @@
           }
         },
         "dealers": {
-          "opens": {
-            "date": "2026-01-30",
-            "source": "https://bsky.app/profile/furrytakeover.bsky.social/post/3mdocivyshg2u",
-            "asOf": "2026-01-30T22:01:30.695453Z",
-            "confidence": 0.7
-          },
           "closes": {
             "date": "2026-03-31",
             "source": "https://bsky.app/profile/furrytakeover.bsky.social/post/3mbf2vwuuks22",

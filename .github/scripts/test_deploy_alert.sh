@@ -5,10 +5,10 @@
 # the YAML, never duplicated) under GitHub's shell with a stubbed curl, and
 # checks that it pages when it can and always exits 0, so alerting problems
 # never change the deploy's red/green.
+#
+# Needs PyYAML: uv run -q --no-project --with pyyaml -- bash .github/scripts/test_deploy_alert.sh
 
 set -euo pipefail
-
-python3 -c "import yaml" 2>/dev/null || pip3 install --quiet pyyaml
 
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 WORKFLOW="$REPO_ROOT/.github/workflows/deploy.yml"

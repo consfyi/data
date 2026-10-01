@@ -31,4 +31,4 @@ jobs:
       - name: Date-order validation tests
         run: python3 .github/scripts/test_materialize_dates.py
       - name: Deploy trigger-alert tests
-        run: bash .github/scripts/test_deploy_alert.sh
+        run: uv run -q --no-project --with pyyaml -- bash .github/scripts/test_deploy_alert.sh

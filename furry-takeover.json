@@ -1,5 +1,9 @@
 {
   "name": "Furry Takeover",
+  "bluesky": {
+    "did": "did:plc:uoe6qkqtar53vfkh6brkcfzx",
+    "handle": "furrytakeover.bsky.social"
+  },
   "events": [
     {
       "id": "furry-takeover-2026",
@@ -16,7 +20,77 @@
       ],
       "sources": [
         "fancons.com"
-      ]
+      ],
+      "keyDates": {
+        "registration": {
+          "opens": {
+            "date": "2025-10-24",
+            "source": "https://bsky.app/profile/furrytakeover.bsky.social/post/3m3newvfwnk2h",
+            "asOf": "2025-10-20T17:50:56.742Z",
+            "confidence": 0.95
+          }
+        },
+        "hotel": {
+          "opens": {
+            "date": "2025-10-24",
+            "source": "https://bsky.app/profile/furrytakeover.bsky.social/post/3m3newvfwnk2h",
+            "asOf": "2025-10-20T17:50:56.742Z",
+            "confidence": 0.8
+          }
+        },
+        "dealers": {
+          "opens": {
+            "date": "2026-01-30",
+            "source": "https://bsky.app/profile/furrytakeover.bsky.social/post/3mdocivyshg2u",
+            "asOf": "2026-01-30T22:01:30.695453Z",
+            "confidence": 0.7
+          },
+          "closes": {
+            "date": "2026-03-31",
+            "source": "https://bsky.app/profile/furrytakeover.bsky.social/post/3mbf2vwuuks22",
+            "asOf": "2026-01-01T19:01:19.167Z",
+            "confidence": 0.95
+          }
+        },
+        "panels": {
+          "opens": {
+            "date": "2026-01-30",
+            "source": "https://bsky.app/profile/furrytakeover.bsky.social/post/3mdocivyshg2u",
+            "asOf": "2026-01-30T22:01:30.695453Z",
+            "confidence": 0.9
+          },
+          "closes": {
+            "date": "2026-06-30",
+            "source": "https://bsky.app/profile/furrytakeover.bsky.social/post/3mpjt5o6qpl2w",
+            "asOf": "2026-06-30T20:18:24.853892Z",
+            "confidence": 0.8
+          }
+        },
+        "performances": {
+          "opens": {
+            "date": "2026-01-30",
+            "source": "https://bsky.app/profile/furrytakeover.bsky.social/post/3mdocivyshg2u",
+            "asOf": "2026-01-30T22:01:30.695453Z",
+            "confidence": 0.85
+          }
+        },
+        "djs": {
+          "opens": {
+            "date": "2026-03-28",
+            "source": "https://bsky.app/profile/furrytakeover.bsky.social/post/3mi3djheskk2f",
+            "asOf": "2026-03-28T00:05:07.946Z",
+            "confidence": 0.7
+          }
+        },
+        "volunteers": {
+          "opens": {
+            "date": "2026-01-27",
+            "source": "https://bsky.app/profile/furrytakeover.bsky.social/post/3mdgag3f6jn2u",
+            "asOf": "2026-01-27T17:02:46.862846Z",
+            "confidence": 0.8
+          }
+        }
+      }
     },
     {
       "id": "furry-takeover-2025",

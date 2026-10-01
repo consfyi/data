@@ -45,6 +45,35 @@ jobs:
         with:
           path: "${{ runner.temp }}/out"
       - uses: actions/deploy-pages@v4
-      - run: curl --fail-with-body -u $BSKY_LABELER_TRIGGER_KEY -XPOST https://bsky-labeler.cons.fyi/trigger
+      - id: trigger
+        run: curl --fail-with-body -u $BSKY_LABELER_TRIGGER_KEY -XPOST https://bsky-labeler.cons.fyi/trigger
         env:
           BSKY_LABELER_TRIGGER_KEY: ${{ secrets.BSKY_LABELER_TRIGGER_KEY }}
+      # A failed /trigger means the labeler didn't pick up this deploy's data,
+      # while the Pages publish above still succeeded, so nothing else surfaces
+      # it. Page the ops channel, same pattern as bsky-labeler's monitor.yml:
+      # missing secrets or a Telegram outage degrade to log-only and never
+      # change the run's red/green.
+      - name: Alert ops channel (trigger failed)
+        if: ${{ failure() && steps.trigger.outcome == 'failure' }}
+        env:
+          OPS_TOKEN: ${{ secrets.OPS_TELEGRAM_BOT_TOKEN }}
+          OPS_CHAT: ${{ secrets.OPS_TELEGRAM_CHAT_ID }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          if [ -z "$OPS_TOKEN" ] || [ -z "$OPS_CHAT" ]; then
+            echo "::warning::labeler /trigger FAILED but ops Telegram secrets are not set; no alert sent"
+            exit 0
+          fi
+          code=$(curl -sS -o /tmp/tg_resp -w "%{http_code}" --max-time 20 \
+            "https://api.telegram.org/bot${OPS_TOKEN}/sendMessage" \
+            --data-urlencode "chat_id=${OPS_CHAT}" \
+            --data-urlencode "text=data deploy: labeler /trigger FAILED at $(date -u +%Y-%m-%dT%H:%MZ). The site published, but labels and key-date announcements did not sync.
+          ${RUN_URL}" \
+            --data-urlencode "disable_web_page_preview=true") || code=000
+          if [ "$code" != "200" ]; then
+            echo "::warning::trigger failure alert could not be delivered (Telegram HTTP $code)"
+          else
+            echo "trigger failure alert delivered"
+          fi
+          exit 0

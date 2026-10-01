@@ -6,6 +6,23 @@
   },
   "events": [
     {
+      "id": "furry-takeover-2027",
+      "name": "Furry Takeover 2027",
+      "url": "https://furrytakeover.com",
+      "startDate": "2027-09-24",
+      "endDate": "2027-09-26",
+      "venue": "Fontana Village Resort & Marina",
+      "address": "180 Welch Rd, Fontana Dam, NC 28733, USA",
+      "locale": "en-US",
+      "latLng": [
+        35.4349671,
+        -83.8255097
+      ],
+      "sources": [
+        "https://github.com/consfyi/data/pull/121#issuecomment-5939766863"
+      ]
+    },
+    {
       "id": "furry-takeover-2026",
       "name": "Furry Takeover 2026",
       "url": "https://furrytakeover.com",
@@ -54,10 +71,10 @@
             "confidence": 0.9
           },
           "closes": {
-            "date": "2026-06-30",
-            "source": "https://bsky.app/profile/furrytakeover.bsky.social/post/3mpjt5o6qpl2w",
-            "asOf": "2026-06-30T20:18:24.853892Z",
-            "confidence": 0.8
+            "date": "2026-07-01",
+            "source": "https://github.com/consfyi/data/pull/121#issuecomment-5939766863",
+            "asOf": "2026-10-01T20:18:03Z",
+            "confidence": 0.95
           }
         },
         "performances": {

@@ -45,6 +45,22 @@
             "asOf": "2026-09-20T17:09:30.265Z",
             "confidence": 0.9
           }
+        },
+        "djs": {
+          "opens": {
+            "date": "2026-09-28",
+            "source": "https://bsky.app/profile/did:plc:ngj2ak6kaqa2yzmbnlzlqlbq/post/3mwmr7mfmpk2d",
+            "asOf": "2026-09-29T02:18:08.395Z",
+            "confidence": 1
+          }
+        },
+        "volunteers": {
+          "opens": {
+            "date": "2026-09-30",
+            "source": "https://bsky.app/profile/did:plc:ngj2ak6kaqa2yzmbnlzlqlbq/post/3mwr74cqobk2b",
+            "asOf": "2026-09-30T20:37:28.946Z",
+            "confidence": 1
+          }
         }
       }
     },

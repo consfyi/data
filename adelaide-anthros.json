@@ -83,6 +83,12 @@
             "source": "https://bsky.app/profile/adlanthros.bsky.social/post/3mpqfecro2g2a",
             "asOf": "2026-07-03T11:00:18.529Z",
             "confidence": 0.9
+          },
+          "closes": {
+            "date": "2026-10-02",
+            "source": "https://bsky.app/profile/did:plc:k7b7jvmdtr5jycic6v3baehk/post/3mwkbg4omvf2f",
+            "asOf": "2026-09-28T02:30:07.264Z",
+            "confidence": 0.9
           }
         }
       }

@@ -19,15 +19,35 @@
         -85.5255885
       ],
       "keyDates": {
+        "registration": {
+          "closes": {
+            "date": "2026-09-17",
+            "source": "https://bsky.app/profile/did:plc:fwt566qqg3uhf36kswpmuqx2/post/3mviaml67fm2c",
+            "asOf": "2026-09-14T13:45:18.828Z",
+            "confidence": 0.95
+          }
+        },
         "hotel": {
           "opens": {
             "date": "2026-07-01",
             "source": "https://bsky.app/profile/did:plc:fwt566qqg3uhf36kswpmuqx2/post/3mp25bwxoqs2y",
             "asOf": "2026-06-24T14:37:15.062Z",
             "confidence": 1.0
+          },
+          "closes": {
+            "date": "2026-09-11",
+            "source": "https://bsky.app/profile/did:plc:fwt566qqg3uhf36kswpmuqx2/post/3msr44e4gas2c",
+            "asOf": "2026-08-10T22:03:02.647Z",
+            "confidence": 0.99
           }
         },
         "dealers": {
+          "opens": {
+            "date": "2026-05-01",
+            "source": "https://bsky.app/profile/did:plc:fwt566qqg3uhf36kswpmuqx2/post/3mksiv6tbcs2p",
+            "asOf": "2026-05-01T16:02:47.582Z",
+            "confidence": 1
+          },
           "closes": {
             "date": "2026-06-01",
             "source": "https://bsky.app/profile/did:plc:fwt566qqg3uhf36kswpmuqx2/post/3mmrmmer7tk2a",
@@ -35,12 +55,34 @@
             "confidence": 1.0
           }
         },
+        "panels": {
+          "opens": {
+            "date": "2026-04-23",
+            "source": "https://bsky.app/profile/did:plc:fwt566qqg3uhf36kswpmuqx2/post/3mk77nktkzs23",
+            "asOf": "2026-04-23T23:56:53.033Z",
+            "confidence": 1
+          }
+        },
         "djs": {
+          "opens": {
+            "date": "2026-05-12",
+            "source": "https://bsky.app/profile/did:plc:fwt566qqg3uhf36kswpmuqx2/post/3mlohwl3tvk2t",
+            "asOf": "2026-05-12T19:00:12.934Z",
+            "confidence": 1
+          },
           "closes": {
             "date": "2026-06-30",
             "source": "https://bsky.app/profile/did:plc:fwt566qqg3uhf36kswpmuqx2/post/3moxrrvhgjk2r",
             "asOf": "2026-06-23T16:06:05.974Z",
             "confidence": 1.0
+          }
+        },
+        "volunteers": {
+          "opens": {
+            "date": "2026-01-20",
+            "source": "https://bsky.app/profile/did:plc:fwt566qqg3uhf36kswpmuqx2/post/3mcterccrk22m",
+            "asOf": "2026-01-20T05:00:08.769Z",
+            "confidence": 1
           }
         }
       }

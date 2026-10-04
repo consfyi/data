@@ -19,6 +19,14 @@
         -96.7949573
       ],
       "keyDates": {
+        "hotel": {
+          "opens": {
+            "date": "2026-10-06",
+            "source": "https://bsky.app/profile/did:plc:sdn5xnsoom3pq2qvdudbgz3r/post/3mwvttjkcd22i",
+            "asOf": "2026-10-02T16:59:01.602Z",
+            "confidence": 1
+          }
+        },
         "dealers": {
           "opens": {
             "date": "2026-09-12",

@@ -20,7 +20,25 @@
       ],
       "sources": [
         "fancons.com"
-      ]
+      ],
+      "keyDates": {
+        "registration": {
+          "opens": {
+            "date": "2026-10-02",
+            "source": "https://bsky.app/profile/did:plc:xekssaocuarinic2wxunlmnm/post/3mwvxbvpmub2z",
+            "asOf": "2026-10-02T18:00:44.683798669Z",
+            "confidence": 0.9
+          }
+        },
+        "dealers": {
+          "closes": {
+            "date": "2026-10-04",
+            "source": "https://bsky.app/profile/did:plc:xekssaocuarinic2wxunlmnm/post/3mukpz2op752i",
+            "asOf": "2026-09-02T20:00:51.287545114Z",
+            "confidence": 0.9
+          }
+        }
+      }
     },
     {
       "id": "fur-eh-2026",

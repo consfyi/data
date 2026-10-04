@@ -41,6 +41,14 @@
             "confidence": 1.0
           }
         },
+        "panels": {
+          "opens": {
+            "date": "2026-09-21",
+            "source": "https://bsky.app/profile/did:plc:ucoapegqexcd7a73cfpz7nhg/post/3mvylk22rxc23",
+            "asOf": "2026-09-21T01:43:21.043Z",
+            "confidence": 1
+          }
+        },
         "djs": {
           "closes": {
             "date": "2026-09-11",

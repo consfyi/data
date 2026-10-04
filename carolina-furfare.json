@@ -21,10 +21,10 @@
       "keyDates": {
         "registration": {
           "closes": {
-            "date": "2026-09-02",
-            "source": "https://bsky.app/profile/did:plc:eamjvw2tcnvapbkjhbwyuiy7/post/3mul5lwpqfk2j",
-            "asOf": "2026-09-03T00:04:04.035Z",
-            "confidence": 1
+            "date": "2026-10-02",
+            "source": "https://bsky.app/profile/did:plc:eamjvw2tcnvapbkjhbwyuiy7/post/3mwwi32ll7w22",
+            "asOf": "2026-10-02T23:01:09.193Z",
+            "confidence": 0.9
           }
         },
         "hotel": {

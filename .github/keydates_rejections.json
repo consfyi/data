@@ -448,5 +448,14 @@
     "reason": "at-con desk closing on the final day; keep pre-reg close 2026-09-02",
     "by": "sparkyfen",
     "at": "2026-10-05T04:53:13Z"
+  },
+  {
+    "event_id": "michigan-anthro-weekend-2026",
+    "category": "hotel",
+    "kind": "closes",
+    "date": "2026-09-11",
+    "reason": "accessibility accommodation request form, not hotel booking",
+    "by": "sparkyfen",
+    "at": "2026-10-05T04:53:15Z"
   }
 ]

@@ -412,5 +412,14 @@
     "reason": "post says registration opens one week later; keep 2026-10-03",
     "by": "sparkyfen",
     "at": "2026-10-05T04:53:14Z"
+  },
+  {
+    "event_id": "fur-eh-2027",
+    "category": "dealers",
+    "kind": "closes",
+    "date": "2026-10-04",
+    "reason": "dealer apps for the Fur-Eh! Xmas Party, a separate event",
+    "by": "sparkyfen",
+    "at": "2026-10-05T04:53:16Z"
   }
 ]

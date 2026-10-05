@@ -421,5 +421,14 @@
     "reason": "dealer apps for the Fur-Eh! Xmas Party, a separate event",
     "by": "sparkyfen",
     "at": "2026-10-05T04:53:16Z"
+  },
+  {
+    "event_id": "confuror-2026",
+    "category": "performances",
+    "kind": "closes",
+    "date": "2026-08-22",
+    "reason": "open mic proposals go through panels; panels.closes already has 08-22",
+    "by": "sparkyfen",
+    "at": "2026-10-05T04:53:18Z"
   }
 ]

@@ -403,5 +403,14 @@
     "reason": "Second Hand Market sign-up, not the dealers' den; keep 2026-05-24",
     "by": "sparkyfen",
     "at": "2026-09-29T20:14:11Z"
+  },
+  {
+    "event_id": "nordicfuzzcon-2027",
+    "category": "registration",
+    "kind": "opens",
+    "date": "2026-09-26",
+    "reason": "post says registration opens one week later; keep 2026-10-03",
+    "by": "sparkyfen",
+    "at": "2026-10-05T04:53:14Z"
   }
 ]

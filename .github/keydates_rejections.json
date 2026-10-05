@@ -439,5 +439,14 @@
     "reason": "\"pre-reg is closed\" post with no date; date is the post date",
     "by": "sparkyfen",
     "at": "2026-10-05T04:53:19Z"
+  },
+  {
+    "event_id": "carolina-furfare-2026",
+    "category": "registration",
+    "kind": "closes",
+    "date": "2026-10-04",
+    "reason": "at-con desk closing on the final day; keep pre-reg close 2026-09-02",
+    "by": "sparkyfen",
+    "at": "2026-10-05T04:53:13Z"
   }
 ]

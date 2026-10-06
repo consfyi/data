@@ -58,6 +58,12 @@
             "source": "https://bsky.app/profile/futrolajki.pl/post/3mpjluz2uv224",
             "asOf": "2026-06-30T18:08:23.260Z",
             "confidence": 0.95
+          },
+          "closes": {
+            "date": "2026-09-27",
+            "source": "https://bsky.app/profile/did:plc:oy67eitzxchghmwagnebvp56/post/3mvfxytri6k2v",
+            "asOf": "2026-09-13T16:05:47.628Z",
+            "confidence": 1
           }
         },
         "volunteers": {

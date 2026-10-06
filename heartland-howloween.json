@@ -32,10 +32,10 @@
         },
         "hotel": {
           "closes": {
-            "date": "2026-09-30",
-            "source": "https://bsky.app/profile/did:plc:mtchwur7zw7mnusl7vuyi76f/post/3mvnfqhlss22x",
-            "asOf": "2026-09-16T15:00:16.991Z",
-            "confidence": 1.0
+            "date": "2026-10-05",
+            "source": "https://bsky.app/profile/did:plc:mtchwur7zw7mnusl7vuyi76f/post/3mx53afj4is2g",
+            "asOf": "2026-10-05T14:00:07.954Z",
+            "confidence": 0.9
           }
         },
         "dealers": {
@@ -51,6 +51,14 @@
             "date": "2026-08-21",
             "source": "https://bsky.app/profile/did:plc:mtchwur7zw7mnusl7vuyi76f/post/3msissimgdk2u",
             "asOf": "2026-08-07T14:55:10.237Z",
+            "confidence": 0.9
+          }
+        },
+        "performances": {
+          "closes": {
+            "date": "2026-10-08",
+            "source": "https://bsky.app/profile/did:plc:mtchwur7zw7mnusl7vuyi76f/post/3mwnyh4f4ps2g",
+            "asOf": "2026-09-29T14:00:15.963Z",
             "confidence": 0.9
           }
         }

@@ -20,7 +20,17 @@
       ],
       "sources": [
         "fancons.com"
-      ]
+      ],
+      "keyDates": {
+        "dealers": {
+          "closes": {
+            "date": "2026-09-30",
+            "source": "https://bsky.app/profile/did:plc:tir2n7nxfddqnf7vlp7qekp2/post/3mwmhkth4dj2k",
+            "asOf": "2026-09-28T23:25:25.000Z",
+            "confidence": 0.95
+          }
+        }
+      }
     },
     {
       "id": "lone-star-fur-con-2026",

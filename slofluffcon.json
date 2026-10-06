@@ -20,7 +20,17 @@
       ],
       "sources": [
         "fancons.com"
-      ]
+      ],
+      "keyDates": {
+        "dealers": {
+          "closes": {
+            "date": "2026-11-29",
+            "source": "https://bsky.app/profile/did:plc:l2fj5sphxk3qhlu62dzehzqs/post/3mx53mtlw422n",
+            "asOf": "2026-10-05T14:07:05.383Z",
+            "confidence": 1.0
+          }
+        }
+      }
     },
     {
       "id": "slofluffcon-2026",

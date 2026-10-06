@@ -20,7 +20,17 @@
       ],
       "sources": [
         "fancons.com"
-      ]
+      ],
+      "keyDates": {
+        "registration": {
+          "opens": {
+            "date": "2026-10-02",
+            "source": "https://bsky.app/profile/did:plc:xekssaocuarinic2wxunlmnm/post/3mwvxbvpmub2z",
+            "asOf": "2026-10-02T18:00:44.683798669Z",
+            "confidence": 0.95
+          }
+        }
+      }
     },
     {
       "id": "fur-eh-2026",

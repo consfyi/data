@@ -22,6 +22,14 @@
         "fancons.com"
       ],
       "keyDates": {
+        "registration": {
+          "opens": {
+            "date": "2026-10-01",
+            "source": "https://bsky.app/profile/did:plc:g7b4ncbjtguyen43rp2434w5/post/3mwsw2jdc5o2l",
+            "asOf": "2026-10-01T13:00:44.529Z",
+            "confidence": 1.0
+          }
+        },
         "dealers": {
           "closes": {
             "date": "2026-07-15",
@@ -45,6 +53,12 @@
           }
         },
         "performances": {
+          "opens": {
+            "date": "2026-09-18",
+            "source": "https://bsky.app/profile/did:plc:g7b4ncbjtguyen43rp2434w5/post/3mvt2tcxyzj26",
+            "asOf": "2026-09-18T21:01:00.006Z",
+            "confidence": 0.9
+          },
           "closes": {
             "date": "2026-11-20",
             "source": "https://bsky.app/profile/did:plc:g7b4ncbjtguyen43rp2434w5/post/3mvt2tcxyzj26",

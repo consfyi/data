@@ -6,6 +6,23 @@
   },
   "events": [
     {
+      "id": "howloween-2026",
+      "name": "Howloween 2026",
+      "url": "https://www.howloween.ca",
+      "startDate": "2026-10-22",
+      "endDate": "2026-10-25",
+      "venue": "Executive Hotel Vancouver Airport",
+      "address": "7311 Westminster Hwy, Richmond, BC V6X 1A1, Canada",
+      "locale": "en-CA",
+      "latLng": [
+        49.1704219,
+        -123.1453037
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    },
+    {
       "id": "howloween-2025",
       "name": "Howloween 2025",
       "url": "https://www.howloween.ca",

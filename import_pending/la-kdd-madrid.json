@@ -1,0 +1,22 @@
+{
+  "name": "La KDD Madrid",
+  "events": [
+    {
+      "id": "la-kdd-madrid-2026",
+      "name": "La KDD Madrid 2026",
+      "url": "https://furrycons.com/event/28978/la-kdd-madrid-2026",
+      "startDate": "2026-10-31",
+      "endDate": "2026-11-01",
+      "venue": "Hotel ILUNION Pío XII",
+      "address": "Av. de Pío XII, 77, Chamartín, 28016 Madrid, España",
+      "locale": "es-ES",
+      "latLng": [
+        40.4689299,
+        -3.6740122
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    }
+  ]
+}

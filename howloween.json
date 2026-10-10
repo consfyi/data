@@ -20,7 +20,25 @@
       ],
       "sources": [
         "fancons.com"
-      ]
+      ],
+      "keyDates": {
+        "dealers": {
+          "opens": {
+            "date": "2026-08-28",
+            "source": "https://bsky.app/profile/did:plc:dnpromglesu6p3ok3czfygkp/post/3mu6ogcyw632b",
+            "asOf": "2026-08-29T01:00:33.446Z",
+            "confidence": 1
+          }
+        },
+        "performances": {
+          "closes": {
+            "date": "2026-10-10",
+            "source": "https://bsky.app/profile/did:plc:dnpromglesu6p3ok3czfygkp/post/3mxcf2dfxyk2i",
+            "asOf": "2026-10-07T16:39:01.283Z",
+            "confidence": 1
+          }
+        }
+      }
     },
     {
       "id": "howloween-2025",

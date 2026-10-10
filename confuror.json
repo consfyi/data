@@ -44,10 +44,10 @@
             "confidence": 0.85
           },
           "closes": {
-            "date": "2026-05-11",
-            "source": "https://bsky.app/profile/confuror.bsky.social/post/3mlmd7e5rgc26",
-            "asOf": "2026-05-11T22:30:19.452Z",
-            "confidence": 0.9
+            "date": "2026-10-07",
+            "source": "https://bsky.app/profile/did:plc:sj3gp6suyjokm32gk7swrfcd/post/3mxd2rql2ws2c",
+            "asOf": "2026-10-07T23:07:54.672Z",
+            "confidence": 0.95
           }
         },
         "panels": {
@@ -55,6 +55,14 @@
             "date": "2026-08-22",
             "source": "https://bsky.app/profile/did:plc:sj3gp6suyjokm32gk7swrfcd/post/3mrgkq352ls2i",
             "asOf": "2026-07-25T00:00:07.956Z",
+            "confidence": 0.9
+          }
+        },
+        "performances": {
+          "closes": {
+            "date": "2026-10-16",
+            "source": "https://bsky.app/profile/did:plc:sj3gp6suyjokm32gk7swrfcd/post/3mvqupa7m6222",
+            "asOf": "2026-09-18T00:06:01.040Z",
             "confidence": 0.9
           }
         },

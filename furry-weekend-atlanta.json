@@ -26,6 +26,14 @@
             "asOf": "2026-07-01T19:11:49.641Z",
             "confidence": 0.95
           }
+        },
+        "djs": {
+          "closes": {
+            "date": "2026-10-31",
+            "source": "https://bsky.app/profile/did:plc:7ekpvrg7ne2oltxiiag4zcvo/post/3mwtsj44rlt2c",
+            "asOf": "2026-10-01T21:29:57.915Z",
+            "confidence": 0.9
+          }
         }
       }
     },

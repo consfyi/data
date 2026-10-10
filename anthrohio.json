@@ -20,7 +20,17 @@
       ],
       "sources": [
         "https://bsky.app/profile/anthrohio.org/post/3mmplhnkx6s23"
-      ]
+      ],
+      "keyDates": {
+        "dealers": {
+          "opens": {
+            "date": "2026-10-12",
+            "source": "https://bsky.app/profile/did:plc:ahefwarth4puxhaykgkxxfms/post/3mxeodon5os2y",
+            "asOf": "2026-10-08T14:30:37.455Z",
+            "confidence": 1.0
+          }
+        }
+      }
     },
     {
       "id": "anthrohio-2026",

@@ -493,5 +493,14 @@
     "reason": "The post is about DJ slots for NYFF, a separate two-day event.",
     "by": "sparkyfen",
     "at": "2026-10-11T04:04:03Z"
+  },
+  {
+    "event_id": "howloween-2026",
+    "category": "dealers",
+    "kind": "opens",
+    "date": "2026-08-28",
+    "reason": "The post opens Artist Alley applications, which are separate from dealer applications.",
+    "by": "sparkyfen",
+    "at": "2026-10-11T07:41:11Z"
   }
 ]

@@ -466,5 +466,14 @@
     "reason": "Shownight sign-up; keep Dance battles deadline 2026-11-01",
     "by": "sparkyfen",
     "at": "2026-10-05T04:53:17Z"
+  },
+  {
+    "event_id": "confuror-2026",
+    "category": "dealers",
+    "kind": "closes",
+    "date": "2026-10-07",
+    "reason": "The post is about a form for choosing table locations. The dealer application deadline is still 2026-05-11.",
+    "by": "sparkyfen",
+    "at": "2026-10-11T04:03:55Z"
   }
 ]

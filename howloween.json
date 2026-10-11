@@ -20,7 +20,23 @@
       ],
       "sources": [
         "fancons.com"
-      ]
+      ],
+      "keyDates": {
+        "dealers": {
+          "opens": {
+            "date": "2026-07-12",
+            "source": "https://howloween.ca/vendors",
+            "asOf": "2026-10-11T07:43:19Z",
+            "confidence": 1
+          },
+          "closes": {
+            "date": "2026-08-12",
+            "source": "https://howloween.ca/vendors",
+            "asOf": "2026-10-11T07:43:19Z",
+            "confidence": 1
+          }
+        }
+      }
     },
     {
       "id": "howloween-2025",

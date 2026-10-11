@@ -502,5 +502,14 @@
     "reason": "The post opens Artist Alley applications, which are separate from dealer applications.",
     "by": "sparkyfen",
     "at": "2026-10-11T07:41:11Z"
+  },
+  {
+    "event_id": "louisianthro-2027",
+    "category": "hotel",
+    "kind": "opens",
+    "date": "2026-09-10",
+    "reason": "The post announces a reopened room block after the first one sold out, so this is a reopen date, not the first opening.",
+    "by": "sparkyfen",
+    "at": "2026-10-11T16:40:12Z"
   }
 ]

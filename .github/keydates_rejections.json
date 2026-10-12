@@ -511,5 +511,14 @@
     "reason": "The post announces a reopened room block after the first one sold out, so this is a reopen date, not the first opening.",
     "by": "sparkyfen",
     "at": "2026-10-11T16:40:12Z"
+  },
+  {
+    "event_id": "furnal-equinox-2027",
+    "category": "dealers",
+    "kind": "opens",
+    "date": "2026-10-01",
+    "reason": "The post is a registration tip for people who already applied to the Dealers Den. It doesn't say when applications opened.",
+    "by": "sparkyfen",
+    "at": "2026-10-12T17:16:15Z"
   }
 ]

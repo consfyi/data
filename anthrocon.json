@@ -20,7 +20,17 @@
       ],
       "sources": [
         "fancons.com"
-      ]
+      ],
+      "keyDates": {
+        "dealers": {
+          "opens": {
+            "date": "2026-10-20",
+            "source": "https://bsky.app/profile/did:plc:ulwyvthzao6goq6pqth2j5z3/post/3mxm5dxkfok22",
+            "asOf": "2026-10-11T13:47:51.095Z",
+            "confidence": 1.0
+          }
+        }
+      }
     },
     {
       "id": "anthrocon-2026",

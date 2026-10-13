@@ -35,6 +35,14 @@
             "asOf": "2026-08-04T16:42:06.161Z",
             "confidence": 1
           }
+        },
+        "performances": {
+          "closes": {
+            "date": "2026-10-10",
+            "source": "https://bsky.app/profile/did:plc:dnpromglesu6p3ok3czfygkp/post/3mxcf2dfxyk2i",
+            "asOf": "2026-10-07T16:39:01.283Z",
+            "confidence": 1
+          }
         }
       }
     },

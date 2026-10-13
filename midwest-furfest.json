@@ -27,6 +27,20 @@
             "confidence": 1
           }
         },
+        "hotel": {
+          "opens": {
+            "date": "2026-08-26",
+            "source": "https://bsky.app/profile/did:plc:uwoi7anxjcden4hkzck6h6c7/post/3mtzk55i56o27",
+            "asOf": "2026-08-27T00:00:30.586150417Z",
+            "confidence": 0.9
+          },
+          "closes": {
+            "date": "2026-09-03",
+            "source": "https://bsky.app/profile/did:plc:uwoi7anxjcden4hkzck6h6c7/post/3mumxrt2ovs2l",
+            "asOf": "2026-09-03T17:25:18.553Z",
+            "confidence": 0.9
+          }
+        },
         "dealers": {
           "opens": {
             "date": "2026-08-20",

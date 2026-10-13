@@ -36,6 +36,12 @@
             "source": "https://bsky.app/profile/futrolajki.pl/post/3mot2lgfzbc2m",
             "asOf": "2026-06-21T19:00:13.857Z",
             "confidence": 0.95
+          },
+          "closes": {
+            "date": "2026-09-13",
+            "source": "https://bsky.app/profile/did:plc:oy67eitzxchghmwagnebvp56/post/3mvg7zbhrxs2m",
+            "asOf": "2026-09-13T18:29:11.940Z",
+            "confidence": 1.0
           }
         },
         "dealers": {

@@ -58,6 +58,14 @@
             "confidence": 1.0
           }
         },
+        "performances": {
+          "opens": {
+            "date": "2026-10-01",
+            "source": "https://bsky.app/profile/did:plc:bbtrnum4fw5s4rdfhxqo2bh2/post/3mwtneu62i22i",
+            "asOf": "2026-10-01T19:58:07.510Z",
+            "confidence": 1
+          }
+        },
         "volunteers": {
           "opens": {
             "date": "2026-07-28",

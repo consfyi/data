@@ -40,6 +40,20 @@
             "asOf": "2026-09-23T23:00:50.104Z",
             "confidence": 0.9
           }
+        },
+        "djs": {
+          "opens": {
+            "date": "2026-10-12",
+            "source": "https://bsky.app/profile/did:plc:5tccqxugf2h7pocamiydvsth/post/3mxp4jizmbs2j",
+            "asOf": "2026-10-12T18:11:02.645Z",
+            "confidence": 0.95
+          },
+          "closes": {
+            "date": "2026-11-14",
+            "source": "https://bsky.app/profile/did:plc:5tccqxugf2h7pocamiydvsth/post/3mxp4jizmbs2j",
+            "asOf": "2026-10-12T18:11:02.645Z",
+            "confidence": 0.95
+          }
         }
       }
     },

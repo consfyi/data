@@ -50,6 +50,12 @@
           }
         },
         "panels": {
+          "opens": {
+            "date": "2026-09-25",
+            "source": "https://bsky.app/profile/did:plc:fj45oznjbvlgoyzjqi6tlt3n/post/3mweancc4fb25",
+            "asOf": "2026-09-25T17:00:15.991Z",
+            "confidence": 0.95
+          },
           "closes": {
             "date": "2026-11-06",
             "source": "https://bsky.app/profile/did:plc:fj45oznjbvlgoyzjqi6tlt3n/post/3mweancc4fb25",

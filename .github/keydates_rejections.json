@@ -520,5 +520,14 @@
     "reason": "The post is a registration tip for people who already applied to the Dealers Den. It doesn't say when applications opened.",
     "by": "sparkyfen",
     "at": "2026-10-12T17:16:15Z"
+  },
+  {
+    "event_id": "fur-eh-2027",
+    "category": "panels",
+    "kind": "opens",
+    "date": "2026-09-21",
+    "reason": "post is about the Fur-Eh! Christmas Party in Calgary, not Fur-Eh! 2027",
+    "by": "sparkyfen",
+    "at": "2026-10-14T19:31:07Z"
   }
 ]

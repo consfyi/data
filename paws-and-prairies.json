@@ -58,6 +58,20 @@
             "confidence": 1.0
           }
         },
+        "panels": {
+          "opens": {
+            "date": "2026-10-14",
+            "source": "https://bsky.app/profile/did:plc:bbtrnum4fw5s4rdfhxqo2bh2/post/3mxu5k4qres2u",
+            "asOf": "2026-10-14T18:12:35.782Z",
+            "confidence": 0.9
+          },
+          "closes": {
+            "date": "2027-03-01",
+            "source": "https://bsky.app/profile/did:plc:bbtrnum4fw5s4rdfhxqo2bh2/post/3mxu5k4qres2u",
+            "asOf": "2026-10-14T18:12:35.782Z",
+            "confidence": 0.9
+          }
+        },
         "performances": {
           "opens": {
             "date": "2026-10-01",

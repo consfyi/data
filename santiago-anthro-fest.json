@@ -2,6 +2,23 @@
   "name": "Santiago Anthro Fest",
   "events": [
     {
+      "id": "santiago-anthro-fest-2027",
+      "name": "Santiago Anthro Fest 2027",
+      "url": "https://www.furcrew.cl",
+      "startDate": "2027-02-24",
+      "endDate": "2027-02-28",
+      "venue": "Almacruz Hotel y Centro de Convenciones",
+      "address": "San Antonio 65, 8320263 Santiago, Región Metropolitana, Chile",
+      "locale": "es-CL",
+      "latLng": [
+        -33.442136,
+        -70.6474291
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    },
+    {
       "id": "santiago-anthro-fest-2026",
       "name": "Santiago Anthro Fest 2026",
       "url": "https://www.furcrew.cl",

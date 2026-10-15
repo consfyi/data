@@ -529,5 +529,14 @@
     "reason": "post is about the Fur-Eh! Christmas Party in Calgary, not Fur-Eh! 2027",
     "by": "sparkyfen",
     "at": "2026-10-14T19:31:07Z"
+  },
+  {
+    "event_id": "howloween-2026",
+    "category": "performances",
+    "kind": "closes",
+    "date": "2026-10-22",
+    "reason": "FloorWars is a separate dance battle, not a correction of the Dance Comp and Talent Show deadline",
+    "by": "sparkyfen",
+    "at": "2026-10-15T04:26:44Z"
   }
 ]

@@ -52,10 +52,10 @@
         },
         "performances": {
           "closes": {
-            "date": "2026-08-31",
-            "source": "https://bsky.app/profile/did:plc:i7jct5sy4z2tb2q7gritvhjc/post/3mu5q7xkowo2n",
-            "asOf": "2026-08-28T16:00:06.421Z",
-            "confidence": 1
+            "date": "2026-11-01",
+            "source": "https://bsky.app/profile/did:plc:i7jct5sy4z2tb2q7gritvhjc/post/3mxhdslje332r",
+            "asOf": "2026-10-09T16:00:04.033Z",
+            "confidence": 0.9
           }
         },
         "volunteers": {

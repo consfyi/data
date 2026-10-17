@@ -55,12 +55,26 @@
             "confidence": 1
           }
         },
+        "panels": {
+          "opens": {
+            "date": "2026-10-16",
+            "source": "https://bsky.app/profile/did:plc:uwoi7anxjcden4hkzck6h6c7/post/3mxyqh63mjb22",
+            "asOf": "2026-10-16T14:01:36.307496229Z",
+            "confidence": 1
+          }
+        },
         "performances": {
+          "opens": {
+            "date": "2026-10-16",
+            "source": "https://bsky.app/profile/did:plc:uwoi7anxjcden4hkzck6h6c7/post/3mxwuelr6v52j",
+            "asOf": "2026-10-15T20:06:25.224621494Z",
+            "confidence": 0.95
+          },
           "closes": {
-            "date": "2026-11-23",
-            "source": "https://bsky.app/profile/did:plc:uwoi7anxjcden4hkzck6h6c7/post/3mw7lk3aafi2h",
-            "asOf": "2026-09-23T20:31:59.554534134Z",
-            "confidence": 1.0
+            "date": "2026-10-09",
+            "source": "https://bsky.app/profile/did:plc:uwoi7anxjcden4hkzck6h6c7/post/3mxak7cydj22q",
+            "asOf": "2026-10-06T23:05:57.089Z",
+            "confidence": 0.95
           }
         },
         "djs": {

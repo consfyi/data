@@ -30,10 +30,10 @@
             "confidence": 0.95
           },
           "closes": {
-            "date": "2026-10-11",
-            "source": "https://bsky.app/profile/did:plc:s42vpi52gnwxbwvsafcnmcf5/post/3mwgkfgc4pm2a",
-            "asOf": "2026-09-26T15:00:08.683Z",
-            "confidence": 0.95
+            "date": "2026-10-21",
+            "source": "https://bsky.app/profile/did:plc:s42vpi52gnwxbwvsafcnmcf5/post/3mxorvqd7w72w",
+            "asOf": "2026-10-12T15:01:01.789Z",
+            "confidence": 1.0
           }
         },
         "dealers": {

@@ -2,6 +2,23 @@
   "name": "Furry Cruise",
   "events": [
     {
+      "id": "furry-cruise-2027",
+      "name": "Furry Cruise 2027",
+      "url": "https://furrycruise.com",
+      "startDate": "2027-09-19",
+      "endDate": "2027-09-26",
+      "venue": "Norwegian Encore",
+      "address": "Departing from Seattle, WA",
+      "locale": "en-US",
+      "latLng": [
+        47.6111634,
+        -122.3504047
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    },
+    {
       "id": "furry-cruise-2026",
       "name": "Furry Cruise 2026",
       "url": "https://furrycruise.com",

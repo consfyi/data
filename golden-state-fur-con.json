@@ -2,6 +2,23 @@
   "name": "Golden State Fur Con",
   "events": [
     {
+      "id": "golden-state-fur-con-2027",
+      "name": "Golden State Fur Con 2027",
+      "url": "https://gsfurcon.org",
+      "startDate": "2027-04-02",
+      "endDate": "2027-04-04",
+      "venue": "Hilton Los Angeles Airport",
+      "address": "5711 W Century Blvd, Los Angeles, CA 90045, USA",
+      "locale": "en-US",
+      "latLng": [
+        33.9462252,
+        -118.3816294
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    },
+    {
       "id": "golden-state-fur-con-2026",
       "name": "Golden State Fur Con 2026",
       "url": "https://gsfurcon.org",

@@ -538,5 +538,14 @@
     "reason": "FloorWars is a separate dance battle, not a correction of the Dance Comp and Talent Show deadline",
     "by": "sparkyfen",
     "at": "2026-10-15T04:26:44Z"
+  },
+  {
+    "event_id": "midwest-furfest-2026",
+    "category": "performances",
+    "kind": "closes",
+    "date": "2026-10-09",
+    "reason": "The post is about DJ dance applications, which already set djs.closes. The Dance Competition deadline (11-23) stays.",
+    "by": "sparkyfen",
+    "at": "2026-10-19T04:15:33Z"
   }
 ]

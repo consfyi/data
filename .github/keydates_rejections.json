@@ -556,5 +556,14 @@
     "reason": "This post is about the dealers-only hotel block.",
     "by": "sparkyfen",
     "at": "2026-10-19T04:15:37Z"
+  },
+  {
+    "event_id": "furnal-equinox-2027",
+    "category": "dealers",
+    "kind": "closes",
+    "date": "2026-11-01",
+    "reason": "Dealer applications closed 07-15, and the earlier date wins.",
+    "by": "sparkyfen",
+    "at": "2026-10-19T04:15:41Z"
   }
 ]

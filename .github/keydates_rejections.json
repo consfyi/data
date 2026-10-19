@@ -583,5 +583,14 @@
     "reason": "The Pawchestra and Nordic Opera auditions closed earlier (08-31), so that date stays.",
     "by": "sparkyfen",
     "at": "2026-10-19T04:15:49Z"
+  },
+  {
+    "event_id": "confuror-2026",
+    "category": "performances",
+    "kind": "closes",
+    "date": "2026-10-20",
+    "reason": "This is the Fursuit Dance Competition sign-up. Floor Wars 2026: Fight Club is a separate sign-up that closes 10-18, and the earlier date wins.",
+    "by": "sparkyfen",
+    "at": "2026-10-19T06:46:26Z"
   }
 ]

@@ -574,5 +574,14 @@
     "reason": "This is the Fashion Show sign-up. Attendee registration closes earlier (10-11), so that date stays.",
     "by": "sparkyfen",
     "at": "2026-10-19T04:15:45Z"
+  },
+  {
+    "event_id": "nordicfuzzcon-2027",
+    "category": "performances",
+    "kind": "closes",
+    "date": "2026-11-01",
+    "reason": "The Pawchestra and Nordic Opera auditions closed earlier (08-31), so that date stays.",
+    "by": "sparkyfen",
+    "at": "2026-10-19T04:15:49Z"
   }
 ]

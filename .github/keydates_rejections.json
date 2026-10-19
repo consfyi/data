@@ -565,5 +565,14 @@
     "reason": "Dealer applications closed 07-15, and the earlier date wins.",
     "by": "sparkyfen",
     "at": "2026-10-19T04:15:41Z"
+  },
+  {
+    "event_id": "furry-blacklight-2026",
+    "category": "registration",
+    "kind": "closes",
+    "date": "2026-10-21",
+    "reason": "This is the Fashion Show sign-up. Attendee registration closes earlier (10-11), so that date stays.",
+    "by": "sparkyfen",
+    "at": "2026-10-19T04:15:45Z"
   }
 ]

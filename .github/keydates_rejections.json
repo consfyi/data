@@ -547,5 +547,14 @@
     "reason": "The post is about DJ dance applications, which already set djs.closes. The Dance Competition deadline (11-23) stays.",
     "by": "sparkyfen",
     "at": "2026-10-19T04:15:33Z"
+  },
+  {
+    "event_id": "furnal-equinox-2027",
+    "category": "hotel",
+    "kind": "opens",
+    "date": "2026-10-17",
+    "reason": "This post is about the dealers-only hotel block.",
+    "by": "sparkyfen",
+    "at": "2026-10-19T04:15:37Z"
   }
 ]

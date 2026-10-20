@@ -592,5 +592,14 @@
     "reason": "This is the Fursuit Dance Competition sign-up. Floor Wars 2026: Fight Club is a separate sign-up that closes 10-18, and the earlier date wins.",
     "by": "sparkyfen",
     "at": "2026-10-19T06:46:26Z"
+  },
+  {
+    "event_id": "confuror-2026",
+    "category": "registration",
+    "kind": "closes",
+    "date": "2026-09-30",
+    "reason": "\"Closes today\" was posted on 09-29 local time; the bot read the UTC date. 09-29 stays.",
+    "by": "sparkyfen",
+    "at": "2026-10-20T19:45:22Z"
   }
 ]

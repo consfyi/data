@@ -19,6 +19,14 @@
         -97.4786414
       ],
       "keyDates": {
+        "registration": {
+          "opens": {
+            "date": "2026-10-16",
+            "source": "https://bsky.app/profile/did:plc:2yyx6fpki4ibgkmljp6yjtnw/post/3mxz2htakzp22",
+            "asOf": "2026-10-16T17:00:55.000Z",
+            "confidence": 1.0
+          }
+        },
         "volunteers": {
           "opens": {
             "date": "2026-06-03",

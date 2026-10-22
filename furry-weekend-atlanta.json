@@ -26,6 +26,14 @@
             "asOf": "2026-07-01T19:11:49.641Z",
             "confidence": 0.95
           }
+        },
+        "hotel": {
+          "opens": {
+            "date": "2026-10-30",
+            "source": "https://bsky.app/profile/did:plc:7ekpvrg7ne2oltxiiag4zcvo/post/3myg6ywjmmq2y",
+            "asOf": "2026-10-21T22:26:41.073Z",
+            "confidence": 0.95
+          }
         }
       }
     },

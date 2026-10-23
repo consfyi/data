@@ -601,5 +601,14 @@
     "reason": "\"Closes today\" was posted on 09-29 local time; the bot read the UTC date. 09-29 stays.",
     "by": "sparkyfen",
     "at": "2026-10-20T19:45:22Z"
+  },
+  {
+    "event_id": "infurnity-2026",
+    "category": "registration",
+    "kind": "opens",
+    "date": "2026-10-01",
+    "reason": "on-site registration at the shelter, not pre-reg; lands after the existing closes 2026-09-10",
+    "by": "sparkyfen",
+    "at": "2026-10-23T23:04:16Z"
   }
 ]

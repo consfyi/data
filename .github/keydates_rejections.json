@@ -610,5 +610,14 @@
     "reason": "on-site registration at the shelter, not pre-reg; lands after the existing closes 2026-09-10",
     "by": "sparkyfen",
     "at": "2026-10-23T23:04:16Z"
+  },
+  {
+    "event_id": "fur-eh-2027",
+    "category": "dealers",
+    "kind": "opens",
+    "date": "2026-09-30",
+    "reason": "Christmas Party vending, a separate event",
+    "by": "sparkyfen",
+    "at": "2026-10-24T23:27:53Z"
   }
 ]

@@ -73,6 +73,14 @@
             "asOf": "2026-09-01T23:00:11.663Z",
             "confidence": 0.9
           }
+        },
+        "volunteers": {
+          "closes": {
+            "date": "2026-11-01",
+            "source": "https://bsky.app/profile/did:plc:g7b4ncbjtguyen43rp2434w5/post/3mykkgotp6p2t",
+            "asOf": "2026-10-23T16:01:53.406Z",
+            "confidence": 0.95
+          }
         }
       }
     },

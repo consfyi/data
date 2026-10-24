@@ -619,5 +619,14 @@
     "reason": "Christmas Party vending, a separate event",
     "by": "sparkyfen",
     "at": "2026-10-24T23:27:53Z"
+  },
+  {
+    "event_id": "fur-eh-2027",
+    "category": "panels",
+    "kind": "opens",
+    "date": "2026-10-22",
+    "reason": "Christmas Party panels (Dec 19), a separate event",
+    "by": "sparkyfen",
+    "at": "2026-10-24T23:27:57Z"
   }
 ]

@@ -1,11 +1,12 @@
 #!/usr/bin/env bash
 #
-# Self-guard for the "Decide and post" step in .github/workflows/ops_alert.yml.
+# Tests the "Decide and post" step in .github/workflows/ops_alert.yml.
 # Runs the step's real run: block (extracted from the YAML, never duplicated)
 # under GitHub's shell with a stubbed python3, and checks that only a manual
 # dispatch with dry_run left on adds --dry-run, so workflow_run triggers send.
-# Also checks that dry_run defaults on and that the step reads the same ops
-# secrets as deploy.yml's trigger alert.
+# Also checks that dry_run defaults on, that workflow_run fires only on
+# completed runs, and that the step reads the same ops secrets as deploy.yml's
+# trigger alert.
 #
 # Needs PyYAML: uv run -q --no-project --with pyyaml -- bash .github/scripts/test_ops_alert_workflow.sh
 
@@ -35,7 +36,7 @@ sys.stderr.write("step not found: %s\n" % sys.argv[2])
 sys.exit(2)
 PY
 [ -s "$TMP/run.sh" ] || { echo "FAIL: extracted run block is empty"; exit 1; }
-bash -n "$TMP/run.sh" && pass "run block parses" || fail "run block does not parse"
+if bash -n "$TMP/run.sh"; then pass "run block parses"; else fail "run block does not parse"; fi
 
 # python3 stub: records its arguments, one per line.
 mkdir -p "$TMP/stub"
@@ -54,18 +55,30 @@ run() {
 }
 
 run DRY_RUN=
-grep -qx -- "--dry-run" "$TMP/args" && fail "workflow_run (DRY_RUN empty): passes --dry-run" \
-  || pass "workflow_run (DRY_RUN empty): sends"
-grep -A1 -x -- "--run-id" "$TMP/args" | grep -qx 12345 \
-  && pass "passes --run-id \$RUN_ID" || fail "does not pass --run-id \$RUN_ID"
+if grep -qx -- "--dry-run" "$TMP/args"; then
+  fail "workflow_run (DRY_RUN empty): passes --dry-run"
+else
+  pass "workflow_run (DRY_RUN empty): sends"
+fi
+if grep -A1 -x -- "--run-id" "$TMP/args" | grep -qx 12345; then
+  pass "passes --run-id \$RUN_ID"
+else
+  fail "does not pass --run-id \$RUN_ID"
+fi
 
 run DRY_RUN=false
-grep -qx -- "--dry-run" "$TMP/args" && fail "DRY_RUN=false: passes --dry-run" \
-  || pass "DRY_RUN=false: sends"
+if grep -qx -- "--dry-run" "$TMP/args"; then
+  fail "DRY_RUN=false: passes --dry-run"
+else
+  pass "DRY_RUN=false: sends"
+fi
 
 run DRY_RUN=true
-grep -qx -- "--dry-run" "$TMP/args" && pass "DRY_RUN=true: passes --dry-run" \
-  || fail "DRY_RUN=true: no --dry-run"
+if grep -qx -- "--dry-run" "$TMP/args"; then
+  pass "DRY_RUN=true: passes --dry-run"
+else
+  fail "DRY_RUN=true: no --dry-run"
+fi
 
 if python3 - "$WORKFLOW" "$STEP" "$DEPLOY" "$DEPLOY_STEP" <<'PY'
 import sys, yaml
@@ -78,9 +91,13 @@ wf, ops = step(sys.argv[1], "alert", sys.argv[2])
 _, deploy = step(sys.argv[3], "deploy", sys.argv[4])
 ok = True
 # PyYAML reads the bare key `on` as True.
-dry_run = wf.get("on", wf.get(True))["workflow_dispatch"]["inputs"]["dry_run"]
+on = wf.get("on", wf.get(True))
+dry_run = on["workflow_dispatch"]["inputs"]["dry_run"]
 if dry_run.get("default") is not True:
     print("FAIL: workflow_dispatch input dry_run does not default to true")
+    ok = False
+if on["workflow_run"].get("types") != ["completed"]:
+    print(f"FAIL: workflow_run types are {on['workflow_run'].get('types')!r}, not ['completed']")
     ok = False
 for var in ("OPS_TOKEN", "OPS_CHAT"):
     if ops["env"].get(var) != deploy["env"][var]:
@@ -89,7 +106,7 @@ for var in ("OPS_TOKEN", "OPS_CHAT"):
 sys.exit(0 if ok else 1)
 PY
 then
-  pass "dry_run defaults to true; OPS_TOKEN and OPS_CHAT match deploy.yml's trigger alert"
+  pass "dry_run defaults to true; workflow_run fires on completed; OPS_TOKEN and OPS_CHAT match deploy.yml's trigger alert"
 else
   FAILURES=$((FAILURES + 1))
 fi

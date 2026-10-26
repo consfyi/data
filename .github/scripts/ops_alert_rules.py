@@ -51,9 +51,9 @@ RULES = [
             r"|Imported data failed tools/materialize\.py"
         ),
         verdict=Verdict.ACTION,
-        advice="The imported data failed the format or schema check, so "
-        "nothing was committed and this import is held back. Read the run's "
-        "errors to find the bad record.",
+        advice="The format or schema check failed, so nothing was committed "
+        "and this import is held back. If no other line here explains why, "
+        "read the run's errors to find the bad record.",
     ),
     Rule(
         id="source-blocked",

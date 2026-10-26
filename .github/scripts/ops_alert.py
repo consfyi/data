@@ -11,9 +11,9 @@ It keeps no state: every decision comes from the workflow's own run history.
   past Policy.remind_hour_utc and at least Policy.remind_quiet after the
   alert.
 - The first success after an alerted streak posts a recovery notice.
-- A re-run attempt never alerts or reminds (its first attempt already
-  decided). A re-run of the newest run that passes where its previous
-  attempt failed can post the recovery notice; any other re-run is quiet.
+- A re-run attempt never alerts or reminds, because its first attempt
+  already did. A passing re-run of the newest run can post the recovery
+  notice unless its previous attempt already passed.
 - Only scheduled and manually dispatched runs from this repository count;
   anything else, such as a fork's pull request, is ignored.
 
@@ -128,24 +128,25 @@ def decide(runs, run_id, policy=Policy(), previous_attempt=None):
         return None
     history = _counted(runs[idx:])
 
-    if previous_attempt is not None:
-        # The first attempt already alerted or reminded if it was due. A
-        # re-run can only end a streak that is still open: it must be the
-        # newest counted run, pass, and replace an attempt that failed.
-        if _counted(runs[:idx]):
-            return None
-        if this.conclusion not in PASSED or previous_attempt not in FAILED:
-            return None
-        failed = dataclasses.replace(this, conclusion=previous_attempt)
-        streak = [failed] + _leading_failures(history[1:])
+    if this.conclusion in PASSED:
+        streak = _leading_failures(history[1:])
+        if previous_attempt is not None:
+            # A re-run can only end a streak that is still open, so it must
+            # be the newest counted run. A previous attempt that passed
+            # already posted any recovery; one that failed was the streak's
+            # newest failure; any other (cancelled, say) didn't count.
+            if _counted(runs[:idx]) or previous_attempt in PASSED:
+                return None
+            if previous_attempt in FAILED:
+                failed = dataclasses.replace(this, conclusion=previous_attempt)
+                streak = [failed] + streak
         if _qualifies(streak, policy):
             return Event(Kind.RECOVERED, streak, this)
         return None
 
-    if this.conclusion in PASSED:
-        streak = _leading_failures(history[1:])
-        if _qualifies(streak, policy):
-            return Event(Kind.RECOVERED, streak, this)
+    if previous_attempt is not None:
+        # A failed re-run: its first attempt already alerted or reminded if
+        # it was due.
         return None
 
     streak = _leading_failures(history)
@@ -289,7 +290,7 @@ def format_message(workflow, event, diagnosis=None, truncated=False):
         end = _when(event.streak[0].created_at)
         return (
             f"No action needed: {workflow} is passing again "
-            f"after {n} failed {runs} ({start} to {end} UTC).\n{event.run.url}"
+            f"after {n} failed {runs} ({start} to {end} UTC).\nRun: {event.run.url}"
         )
     label = VERDICT_LABELS[diagnosis.verdict]
     if event.kind is Kind.ALERT:
@@ -347,7 +348,8 @@ def _to_run(d):
 
 def _watched(d, repo):
     """Whether an API run object counts: a scheduled or dispatched run from
-    `repo` itself, not, say, a fork's pull request from a branch named main."""
+    `repo` itself. A fork's pull request doesn't count, even from a branch
+    named main."""
     head_repo = (d.get("head_repository") or {}).get("full_name")
     return d["event"] in {"schedule", "workflow_dispatch"} and head_repo == repo
 
@@ -402,10 +404,11 @@ def main(argv=None, gh=_gh, send=send_telegram, env=os.environ):
     run = json.loads(gh("api", f"repos/{args.repo}/actions/runs/{args.run_id}"))
     workflow = run["name"]
     # workflow_run matches by name, so a fork's pull request can trigger this
-    # too, even from a branch it named main.
+    # too, even from a branch it named main. This check is the only filter:
+    # ops_alert.yml has none.
     if not _watched(run, args.repo):
-        head_repo = (run.get("head_repository") or {}).get("full_name")
-        print(f"{workflow} run {args.run_id} is a {run['event']} run from {head_repo}; ignoring")
+        print(f"{workflow} run {args.run_id} ({run['event']}) is not a scheduled or "
+              f"dispatched run from {args.repo}; ignoring")
         return 0
     # The run's embedded repository object omits default_branch.
     branch = json.loads(gh("api", f"repos/{args.repo}"))["default_branch"]

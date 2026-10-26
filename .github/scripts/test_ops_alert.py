@@ -205,6 +205,16 @@ class TestDecide(unittest.TestCase):
         runs = timeline("P" + "F" * 5 + "P")
         self.assertIsNone(decide(runs, 7, previous_attempt="success"))
 
+    def test_rerun_that_passes_after_a_cancelled_attempt_recovers(self):
+        # Runs 2 to 7 failed and alerted. Run 8's first attempt was cancelled,
+        # which posted nothing, so its passing re-run ends the streak.
+        runs = timeline("P" + "F" * 6 + "P")
+        for previous in ("cancelled", ""):
+            with self.subTest(previous=previous):
+                event = decide(runs, 8, previous_attempt=previous)
+                self.assertEqual(event.kind, Kind.RECOVERED)
+                self.assertEqual([r.id for r in event.streak], [7, 6, 5, 4, 3, 2])
+
 
 class TestClassify(unittest.TestCase):
     def fixture(self, name):
@@ -310,6 +320,30 @@ class TestClassify(unittest.TestCase):
              "failing step's errors."],
         )
         self.assertEqual(d.evidence, "KeyError: 'conventions'")
+
+    def test_last_error_line_in_the_failing_step_is_the_evidence(self):
+        # Plain output after the error line isn't the failure.
+        log = log_lines(
+            "##[group]Run ./import.sh",
+            "##[error]Real cause",
+            "Cleaning up temp files",
+            "##[error]Process completed with exit code 1.",
+        )
+        self.assertEqual(classify(log).evidence, "Real cause")
+
+    def test_cancelled_step_without_a_timeout_line_is_the_failing_step(self):
+        # The 403 was in an earlier step that passed.
+        log = log_lines(
+            "##[group]Run ./tools/data-importers/import_concat_all.sh",
+            "httpx.HTTPStatusError: Client error '403 Forbidden'",
+            "##[group]Run uv run tools/format.py *.json",
+            "Formatting 250 files",
+            "##[error]The operation was canceled.",
+            "Post job cleanup.",
+        )
+        d = classify(log)
+        self.assertNotIn("source-blocked", d.rule_ids)
+        self.assertEqual(d.evidence, "Formatting 250 files")
 
     def test_timed_out_step_is_the_failing_step(self):
         # No exit-code line: the job timed out mid-step. The 403 was in an
@@ -418,7 +452,7 @@ class TestMessage(unittest.TestCase):
             text,
             "No action needed: import_rams is passing again after 7+ failed runs "
             "(2026-10-24 21:15 to 2026-10-25 03:15 UTC).\n"
-            "https://example.test/runs/9",
+            "Run: https://example.test/runs/9",
         )
 
     def test_one_run_is_singular(self):
@@ -610,6 +644,18 @@ class TestMain(unittest.TestCase):
         self.assertEqual(len(texts), 1)
         self.assertTrue(texts[0].startswith("No action needed: import_fancons is passing again"))
 
+    def test_rerun_with_no_previous_conclusion_does_not_realert(self):
+        gh = FakeGh(self.ALERTING, attempt=2, previous=None)
+        self.assertEqual(self.texts(gh, 3), [])
+
+    def test_rerun_that_passes_after_a_cancelled_attempt_posts_recovery(self):
+        for previous in ("cancelled", None):
+            with self.subTest(previous=previous):
+                gh = FakeGh(timeline("P" + "F" * 6 + "P"), attempt=2, previous=previous)
+                texts = self.texts(gh, 8)
+                self.assertEqual(len(texts), 1)
+                self.assertIn("is passing again after 6 failed runs (", texts[0])
+
     def test_rerun_whose_previous_attempt_passed_posts_nothing(self):
         gh = FakeGh(timeline("P" + "F" * 5 + "P"), attempt=2, previous="success")
         self.assertEqual(self.texts(gh, 7), [])
@@ -680,6 +726,21 @@ class TestMain(unittest.TestCase):
         self.assertFalse(truncated)
         self.assertEqual(len(got), 151)
 
+    def test_recovery_after_a_streak_spanning_pages_counts_it_all(self):
+        runs = timeline("P" + "F" * 150 + "P")
+        calls = []
+        gh = FakeGh(runs)
+
+        def counting(*a):
+            if "workflows/" in a[-1]:
+                calls.append(a)
+            return gh(*a)
+
+        texts = self.texts(counting, runs[0].id)
+        self.assertEqual(len(calls), 2)
+        self.assertEqual(len(texts), 1)
+        self.assertIn("is passing again after 150 failed runs (", texts[0])
+
     def test_short_history_takes_one_call(self):
         runs = timeline("F" * 30)
         calls = []
@@ -723,6 +784,18 @@ class TestWorkflow(unittest.TestCase):
         self.assertTrue(watched)
         for name in watched:
             self.assertIn(name, names)
+
+    def test_every_scheduled_importer_is_watched(self):
+        watched = re.search(r"^    workflows:\n((?:      - .+\n)+)", self.text, re.M)
+        watched = set(re.findall(r"- (\S+)", watched.group(1)))
+        importers = set()
+        for path in WORKFLOWS.glob("*.yml"):
+            text = path.read_text()
+            m = re.search(r"^name:\s*(import_\S+)\s*$", text, re.M)
+            if m and re.search(r"^\s+schedule:", text, re.M):
+                importers.add(m.group(1))
+        self.assertTrue(importers)
+        self.assertLessEqual(importers, watched)
 
 
 if __name__ == "__main__":

@@ -34,9 +34,6 @@ permissions:
 
 jobs:
   alert:
-    # workflow_run matches by workflow name, so a fork's pull request would
-    # trigger this too. ops_alert.py checks again, by the run's event.
-    if: github.event_name == 'workflow_dispatch' || (github.event.workflow_run.head_repository.full_name == github.repository && github.event.workflow_run.event != 'pull_request')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5

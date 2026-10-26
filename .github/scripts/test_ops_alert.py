@@ -675,21 +675,25 @@ class TestMain(unittest.TestCase):
         texts = self.texts(gh, 3)
         self.assertEqual(len(texts), 1)
         self.assertIn("is passing again after 2 failed runs (", texts[0])
-        self.assertEqual(gh.requested, [2, 1])
 
     def test_rerun_after_a_passed_then_cancelled_attempt_posts_nothing(self):
-        gh = FakeGh(self.RERUN_PASSED, attempt=3, attempts={1: "success", 2: "cancelled"})
-        self.assertEqual(self.texts(gh, 3), [])
+        # Runs 2 to 7 qualify, so only the passed first attempt keeps it quiet.
+        gh = FakeGh(timeline("P" + "F" * 6 + "P"), attempt=3,
+                    attempts={1: "success", 2: "cancelled"})
+        self.assertEqual(self.texts(gh, 8), [])
 
-    def test_rerun_fetches_only_the_attempts_it_needs(self):
-        gh = FakeGh(self.RERUN_PASSED, attempt=2, attempts={1: "failure"})
-        self.assertEqual(len(self.texts(gh, 3)), 1)
-        self.assertEqual(gh.requested, [1])
-        # The newest counted attempt is enough: older ones aren't fetched.
+    def test_rerun_after_a_passed_then_failed_attempt_posts_nothing(self):
+        # Attempt 1 passed and already posted any recovery, so attempt 2's
+        # failure doesn't let attempt 3 post a second one.
+        gh = FakeGh(timeline("P" + "F" * 6 + "P"), attempt=3,
+                    attempts={1: "success", 2: "failure"})
+        self.assertEqual(self.texts(gh, 8), [])
+
+    def test_rerun_reads_every_earlier_attempt(self):
         gh = FakeGh(self.RERUN_PASSED, attempt=4,
-                    attempts={1: "success", 2: "failure", 3: "cancelled"})
-        self.assertEqual(len(self.texts(gh, 3)), 1)
-        self.assertEqual(gh.requested, [3, 2])
+                    attempts={1: "cancelled", 2: "cancelled", 3: "failure"})
+        self.texts(gh, 3)
+        self.assertEqual(sorted(gh.requested), [1, 2, 3])
 
     def test_rerun_of_an_older_run_posts_nothing(self):
         gh = FakeGh(timeline("P" + "F" * 5 + "PF"), attempt=2, attempts={1: "failure"})

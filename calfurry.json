@@ -6,6 +6,20 @@
   },
   "events": [
     {
+      "id": "calfurry-2027",
+      "name": "Calfurry 2027",
+      "url": "https://www.calfurry.ca",
+      "startDate": "2027-08-13",
+      "endDate": "2027-08-15",
+      "venue": "Hyatt Regency Calgary",
+      "address": "700 Centre St S, Calgary, AB T2G 5P6, Canada",
+      "locale": "en-CA",
+      "latLng": [
+        51.0460723,
+        -114.0626399
+      ]
+    },
+    {
       "id": "calfurry-2026",
       "name": "Calfurry 2026",
       "url": "https://www.calfurry.ca",

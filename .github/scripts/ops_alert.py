@@ -13,7 +13,7 @@ It keeps no state: every decision comes from the workflow's own run history.
 - The first success after an alerted streak posts a recovery notice.
 - A re-run attempt never alerts or reminds, because its first attempt
   already did. A passing re-run of the newest run can post the recovery
-  notice unless its previous attempt already passed.
+  notice unless the newest earlier attempt that passed or failed passed.
 - Only scheduled and manually dispatched runs from this repository count;
   anything else, such as a fork's pull request, is ignored.
 
@@ -118,7 +118,8 @@ def decide(runs, run_id, policy=Policy(), previous_attempt=None):
     `runs` is the workflow's completed runs, newest first. Runs newer than
     `run_id` are ignored, so the decision is the same whenever it is made.
     `previous_attempt` is None for a run's first attempt; for a re-run, it
-    is the conclusion of the attempt before it.
+    is the conclusion of the newest earlier attempt that passed or failed,
+    or "" if none did.
     """
     idx = next((i for i, r in enumerate(runs) if r.id == run_id), None)
     if idx is None:
@@ -419,10 +420,17 @@ def main(argv=None, gh=_gh, send=send_telegram, env=os.environ):
     attempt = run.get("run_attempt", 1)
     previous = None
     if attempt > 1:
-        # "" rather than None if it has no conclusion, so it stays a re-run.
-        previous = json.loads(gh(
-            "api", f"repos/{args.repo}/actions/runs/{args.run_id}/attempts/{attempt - 1}"
-        ))["conclusion"] or ""
+        # The newest earlier attempt that passed or failed: a cancelled one
+        # in between posted nothing. "" rather than None if none did, so it
+        # stays a re-run.
+        previous = ""
+        for k in range(attempt - 1, 0, -1):
+            conclusion = json.loads(gh(
+                "api", f"repos/{args.repo}/actions/runs/{args.run_id}/attempts/{k}"
+            ))["conclusion"] or ""
+            if conclusion in FAILED | PASSED:
+                previous = conclusion
+                break
     event = decide(runs, args.run_id, POLICIES.get(workflow, Policy()), previous)
     if event is None:
         print(f"{workflow} run {args.run_id} attempt {attempt} ({run['conclusion']}): nothing to post")

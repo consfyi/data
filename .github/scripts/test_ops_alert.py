@@ -202,8 +202,11 @@ class TestDecide(unittest.TestCase):
         self.assertIsNone(decide(runs, 7, previous_attempt="failure"))
 
     def test_rerun_whose_first_attempt_passed_posts_nothing(self):
-        runs = timeline("P" + "F" * 5 + "P")
-        self.assertIsNone(decide(runs, 7, previous_attempt="success"))
+        # Runs 2 to 7 qualify, so only the passed first attempt keeps run 8
+        # quiet: that attempt already posted the recovery.
+        runs = timeline("P" + "F" * 6 + "P")
+        self.assertEqual(decide(runs, 8).kind, Kind.RECOVERED)
+        self.assertIsNone(decide(runs, 8, previous_attempt="success"))
 
     def test_rerun_that_passes_after_a_cancelled_attempt_recovers(self):
         # Runs 2 to 7 failed and alerted. Run 8's first attempt was cancelled,
@@ -533,13 +536,14 @@ class FakeGh:
 
     def __init__(self, runs, log="", head_branch="main", log_fails=False,
                  event="schedule", head_repo="o/r", attempt=1, listed=None,
-                 previous=None, fork_ids=()):
+                 attempts=None, fork_ids=()):
         self.runs, self.log, self.head_branch, self.log_fails = runs, log, head_branch, log_fails
         self.event, self.head_repo, self.attempt = event, head_repo, attempt
         # What the runs listing returns, if it lags behind self.runs.
         self.listed = runs if listed is None else listed
-        # The previous attempt's conclusion, served when attempt > 1.
-        self.previous = previous
+        # Earlier attempts' conclusions by attempt number, served when
+        # attempt > 1, and the attempt numbers asked for, in order.
+        self.attempts, self.requested = attempts or {}, []
         # Runs the listing shows as a fork's pull request runs.
         self.fork_ids = set(fork_ids)
 
@@ -553,10 +557,11 @@ class FakeGh:
             return json.dumps({"default_branch": "main"})
         if "/attempts/" in path:
             run_id, n = re.fullmatch(r"repos/o/r/actions/runs/(\d+)/attempts/(\d+)", path).groups()
-            # Only the attempt before the current one exists to be asked for.
-            assert int(n) == self.attempt - 1, path
+            # Only attempts before the current one exist to be asked for.
+            assert 1 <= int(n) < self.attempt, path
+            self.requested.append(int(n))
             return json.dumps({"id": int(run_id), "run_attempt": int(n),
-                               "conclusion": self.previous})
+                               "conclusion": self.attempts.get(int(n))})
         if "/runs/" in path and "workflows" not in path:
             run_id = int(path.rsplit("/", 1)[1])
             r = next(r for r in self.runs if r.id == run_id)
@@ -635,33 +640,59 @@ class TestMain(unittest.TestCase):
                 self.assertEqual(len(self.texts(FakeGh(self.ALERTING, event=event), 3)), 1)
 
     def test_rerun_attempt_does_not_realert(self):
-        gh = FakeGh(self.ALERTING, attempt=2, previous="failure")
+        gh = FakeGh(self.ALERTING, attempt=2, attempts={1: "failure"})
         self.assertEqual(self.texts(gh, 3), [])
 
     def test_rerun_that_passes_posts_recovery(self):
-        gh = FakeGh(timeline("P" + "F" * 5 + "P"), attempt=2, previous="failure")
+        gh = FakeGh(timeline("P" + "F" * 5 + "P"), attempt=2, attempts={1: "failure"})
         texts = self.texts(gh, 7)
         self.assertEqual(len(texts), 1)
         self.assertTrue(texts[0].startswith("No action needed: import_fancons is passing again"))
 
     def test_rerun_with_no_previous_conclusion_does_not_realert(self):
-        gh = FakeGh(self.ALERTING, attempt=2, previous=None)
+        gh = FakeGh(self.ALERTING, attempt=2, attempts={1: None})
         self.assertEqual(self.texts(gh, 3), [])
 
     def test_rerun_that_passes_after_a_cancelled_attempt_posts_recovery(self):
         for previous in ("cancelled", None):
             with self.subTest(previous=previous):
-                gh = FakeGh(timeline("P" + "F" * 6 + "P"), attempt=2, previous=previous)
+                gh = FakeGh(timeline("P" + "F" * 6 + "P"), attempt=2, attempts={1: previous})
                 texts = self.texts(gh, 8)
                 self.assertEqual(len(texts), 1)
                 self.assertIn("is passing again after 6 failed runs (", texts[0])
 
     def test_rerun_whose_previous_attempt_passed_posts_nothing(self):
-        gh = FakeGh(timeline("P" + "F" * 5 + "P"), attempt=2, previous="success")
-        self.assertEqual(self.texts(gh, 7), [])
+        # Runs 2 to 7 qualify, so only the passed first attempt keeps it quiet.
+        gh = FakeGh(timeline("P" + "F" * 6 + "P"), attempt=2, attempts={1: "success"})
+        self.assertEqual(self.texts(gh, 8), [])
+
+    # Run 3 of a 6-hourly workflow passed on its third attempt. Only its
+    # first attempt's failure makes the streak long enough to have alerted.
+    RERUN_PASSED = timeline("PFP", every=datetime.timedelta(hours=6))
+
+    def test_rerun_after_a_failed_then_cancelled_attempt_posts_recovery(self):
+        gh = FakeGh(self.RERUN_PASSED, attempt=3, attempts={1: "failure", 2: "cancelled"})
+        texts = self.texts(gh, 3)
+        self.assertEqual(len(texts), 1)
+        self.assertIn("is passing again after 2 failed runs (", texts[0])
+        self.assertEqual(gh.requested, [2, 1])
+
+    def test_rerun_after_a_passed_then_cancelled_attempt_posts_nothing(self):
+        gh = FakeGh(self.RERUN_PASSED, attempt=3, attempts={1: "success", 2: "cancelled"})
+        self.assertEqual(self.texts(gh, 3), [])
+
+    def test_rerun_fetches_only_the_attempts_it_needs(self):
+        gh = FakeGh(self.RERUN_PASSED, attempt=2, attempts={1: "failure"})
+        self.assertEqual(len(self.texts(gh, 3)), 1)
+        self.assertEqual(gh.requested, [1])
+        # The newest counted attempt is enough: older ones aren't fetched.
+        gh = FakeGh(self.RERUN_PASSED, attempt=4,
+                    attempts={1: "success", 2: "failure", 3: "cancelled"})
+        self.assertEqual(len(self.texts(gh, 3)), 1)
+        self.assertEqual(gh.requested, [3, 2])
 
     def test_rerun_of_an_older_run_posts_nothing(self):
-        gh = FakeGh(timeline("P" + "F" * 5 + "PF"), attempt=2, previous="failure")
+        gh = FakeGh(timeline("P" + "F" * 5 + "PF"), attempt=2, attempts={1: "failure"})
         self.assertEqual(self.texts(gh, 7), [])
 
     def test_fork_runs_in_the_history_do_not_extend_a_streak(self):

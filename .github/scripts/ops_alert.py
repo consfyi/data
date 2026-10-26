@@ -15,7 +15,7 @@ It keeps no state: every decision comes from the workflow's own run history.
   already did. A passing re-run of the newest run can post the recovery
   notice, unless an earlier attempt of the same run passed. Attempts that
   neither passed nor failed, such as cancelled ones, don't count.
-- A run that is being re-run counts with its newest completed attempt.
+- A run that's being re-run counts as its newest completed attempt.
 - Only scheduled and manually dispatched runs from this repository count;
   anything else, such as a fork's pull request, is ignored.
 
@@ -357,16 +357,20 @@ def _watched(d, repo):
     return d["event"] in {"schedule", "workflow_dispatch"} and head_repo == repo
 
 
+def _attempt(repo, run_id, k, gh):
+    return json.loads(gh("api", f"repos/{repo}/actions/runs/{run_id}/attempts/{k}"))
+
+
 def _listed_run(d, repo, this, gh):
-    """The Run a listing entry counts as, or None. `this` stands for its own
-    run. A run being re-run counts with its newest completed attempt; a first
-    attempt still in progress has no result yet."""
+    """The Run a listing entry counts as, or None. `this`, the Run being
+    decided, replaces its own entry. A run being re-run counts as its newest
+    completed attempt; a first attempt still in progress has no result yet."""
     if d["id"] == this.id:
         return this
     if d["status"] == "completed":
         return _to_run(d)
     for k in range(d.get("run_attempt", 1) - 1, 0, -1):
-        a = json.loads(gh("api", f"repos/{repo}/actions/runs/{d['id']}/attempts/{k}"))
+        a = _attempt(repo, d["id"], k, gh)
         if a["status"] == "completed":
             return dataclasses.replace(_to_run(d), conclusion=a["conclusion"] or "")
     return None
@@ -404,9 +408,10 @@ def fetch_runs(repo, workflow_id, branch, this, gh=_gh):
     return runs, True
 
 
-def fetch_failed_log(repo, run_id, gh=_gh):
+def fetch_failed_log(repo, run_id, attempt, gh=_gh):
     try:
-        return gh("run", "view", str(run_id), "-R", repo, "--log-failed")
+        return gh("run", "view", str(run_id), "-R", repo, "--attempt", str(attempt),
+                  "--log-failed")
     except subprocess.CalledProcessError:
         return ""
 
@@ -414,7 +419,7 @@ def fetch_failed_log(repo, run_id, gh=_gh):
 def main(argv=None, gh=_gh, send=send_telegram, env=os.environ):
     p = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     p.add_argument("--run-id", type=int, required=True)
-    # The attempt that triggered this, since the run itself shows its latest.
+    # The attempt that triggered this job. The run itself reports only its latest attempt.
     p.add_argument("--run-attempt", type=int)
     p.add_argument("--repo", default=env.get("GITHUB_REPOSITORY"))
     p.add_argument("--dry-run", action="store_true", help="print, don't send")
@@ -438,22 +443,20 @@ def main(argv=None, gh=_gh, send=send_telegram, env=os.environ):
         return 0
     attempt = run.get("run_attempt", 1)
     if args.run_attempt:
-        # Decide as the triggering attempt, even if a newer one has started.
+        # Judge the triggering attempt, even if a newer one has started.
         attempt = args.run_attempt
-        run["conclusion"] = json.loads(gh(
-            "api", f"repos/{args.repo}/actions/runs/{args.run_id}/attempts/{attempt}"
-        ))["conclusion"]
+        run["conclusion"] = _attempt(args.repo, args.run_id, attempt, gh)["conclusion"]
+    # An attempt's html_url is the run's, so name the attempt in the link.
+    run["html_url"] += f"/attempts/{attempt}"
     runs, truncated = fetch_runs(args.repo, run["workflow_id"], branch, _to_run(run), gh=gh)
     previous = None
     if attempt > 1:
-        # Summarize every earlier attempt: if any passed, it already posted
-        # any recovery; else if any failed, the run's earlier result was a
-        # failure. Cancelled attempts posted nothing. "" rather than None if
-        # none passed or failed, so it stays a re-run.
+        # Summarize every earlier attempt: if one passed, it already posted
+        # the recovery notice if one was due; else if one failed, the run's
+        # earlier result was a failure. Cancelled attempts posted nothing. ""
+        # rather than None if none passed or failed, so it stays a re-run.
         conclusions = [
-            json.loads(gh(
-                "api", f"repos/{args.repo}/actions/runs/{args.run_id}/attempts/{k}"
-            ))["conclusion"] or ""
+            _attempt(args.repo, args.run_id, k, gh)["conclusion"] or ""
             for k in range(1, attempt)
         ]
         previous = next((c for c in conclusions if c in PASSED), None)
@@ -465,7 +468,7 @@ def main(argv=None, gh=_gh, send=send_telegram, env=os.environ):
         return 0
     diagnosis = None
     if event.kind is not Kind.RECOVERED:
-        diagnosis = classify(fetch_failed_log(args.repo, args.run_id, gh=gh))
+        diagnosis = classify(fetch_failed_log(args.repo, args.run_id, attempt, gh=gh))
     text = format_message(workflow, event, diagnosis, truncated)
     rules = f" [{', '.join(diagnosis.rule_ids)}]" if diagnosis and diagnosis.rule_ids else ""
     print(f"--- {event.kind.value}{rules} ---\n{text}\n---")

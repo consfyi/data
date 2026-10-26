@@ -6,8 +6,9 @@
 # dispatch with dry_run left on adds --dry-run, so workflow_run triggers send,
 # and that --run-attempt is passed only when RUN_ATTEMPT is set.
 # Also checks that dry_run defaults on, that workflow_run fires only on
-# completed runs, that RUN_ATTEMPT comes from the triggering workflow_run, and
-# that the step reads the same ops secrets as deploy.yml's trigger alert.
+# completed runs, that RUN_ATTEMPT comes from the triggering workflow_run or
+# else the run_attempt input, and that the step reads the same ops secrets as
+# deploy.yml's trigger alert.
 #
 # Needs PyYAML: uv run -q --no-project --with pyyaml -- bash .github/scripts/test_ops_alert_workflow.sh
 
@@ -112,7 +113,7 @@ if dry_run.get("default") is not True:
 if on["workflow_run"].get("types") != ["completed"]:
     print(f"FAIL: workflow_run types are {on['workflow_run'].get('types')!r}, not ['completed']")
     ok = False
-attempt = "${{ github.event.workflow_run.run_attempt }}"
+attempt = "${{ github.event.workflow_run.run_attempt || inputs.run_attempt }}"
 if ops["env"].get("RUN_ATTEMPT") != attempt:
     print(f"FAIL: RUN_ATTEMPT is {ops['env'].get('RUN_ATTEMPT')!r}, not {attempt!r}")
     ok = False
@@ -123,7 +124,7 @@ for var in ("OPS_TOKEN", "OPS_CHAT"):
 sys.exit(0 if ok else 1)
 PY
 then
-  pass "dry_run defaults to true; workflow_run fires on completed; RUN_ATTEMPT is the workflow_run's; OPS_TOKEN and OPS_CHAT match deploy.yml's trigger alert"
+  pass "dry_run defaults to true; workflow_run fires on completed; RUN_ATTEMPT is the workflow_run's or the input's; OPS_TOKEN and OPS_CHAT match deploy.yml's trigger alert"
 else
   FAILURES=$((FAILURES + 1))
 fi

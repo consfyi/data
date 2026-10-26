@@ -543,8 +543,10 @@ class FakeGh:
 
     def __init__(self, runs, log="", head_branch="main", log_fails=False,
                  event="schedule", head_repo="o/r", attempt=1, listed=None,
-                 attempts=None, fork_ids=(), in_progress=None):
+                 attempts=None, fork_ids=(), in_progress=None, logs=None):
         self.runs, self.log, self.head_branch, self.log_fails = runs, log, head_branch, log_fails
+        # Failed-step logs by attempt number, where they differ from `log`.
+        self.logs = logs or {}
         self.event, self.head_repo, self.attempt = event, head_repo, attempt
         # What the runs listing returns, if it lags behind self.runs.
         self.listed = runs if listed is None else listed
@@ -557,11 +559,21 @@ class FakeGh:
         # where None is an attempt that hasn't completed.
         self.in_progress = in_progress or {}
 
+    def latest(self, run_id):
+        """The run's latest attempt number."""
+        attempts = self.in_progress.get(run_id)
+        return self.attempt if attempts is None else len(attempts) + 1
+
     def __call__(self, *args):
         if args[0] == "run":
             if self.log_fails:
                 raise subprocess.CalledProcessError(1, "gh")
-            return self.log
+            # Without --attempt, gh shows the run's latest attempt.
+            run_id = int(args[2])
+            n = self.latest(run_id)
+            if "--attempt" in args:
+                n = int(args[args.index("--attempt") + 1])
+            return self.logs.get(n, self.log)
         path = args[1]
         if path == "repos/o/r":
             return json.dumps({"default_branch": "main"})
@@ -587,7 +599,7 @@ class FakeGh:
             return json.dumps({
                 **api_run(r, attempts=self.in_progress.get(run_id)),
                 "name": "import_fancons", "workflow_id": 42, "event": self.event,
-                "head_branch": self.head_branch, "run_attempt": self.attempt,
+                "head_branch": self.head_branch, "run_attempt": self.latest(run_id),
                 "head_repository": {"full_name": self.head_repo},
                 "repository": {"full_name": "o/r"},
             })
@@ -771,6 +783,21 @@ class TestMain(unittest.TestCase):
         texts = self.texts(gh, 7, run_attempt=1)
         self.assertEqual(len(texts), 1)
         self.assertIn("has failed 6 runs in a row", texts[0])
+
+    def test_triggering_attempt_log_and_link_are_its_own(self):
+        # Run 7's attempt 1 failed to build a dependency and is due to alert.
+        # By the time its job runs, attempt 2 failed on a 403 and attempt 3
+        # has started, so gh's default log is a newer attempt's.
+        runs = timeline("P" + "F" * 6)
+        blocked = log_lines("##[error]HTTP Error 403 Forbidden")
+        gh = FakeGh(runs, in_progress={7: {1: "failure", 2: "failure"}}, log=blocked,
+                    logs={1: (FIXTURES / "pyicu_build_failure.log").read_text()})
+        sent, out = self.run_main(gh, 7, run_attempt=1)
+        self.assertEqual(len(sent), 1)
+        self.assertIn("--- alert [dependency-build] ---", out)
+        self.assertIn("error: Failed to build `pyicu==2.15.2`", sent[0][0])
+        self.assertNotIn("403", sent[0][0])
+        self.assertTrue(sent[0][0].endswith("Run: https://example.test/runs/7/attempts/1"))
 
     def test_fork_runs_in_the_history_do_not_extend_a_streak(self):
         # Runs 2 to 6 are a fork's failing pull requests from its own main;

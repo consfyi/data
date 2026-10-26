@@ -6,3 +6,4 @@ import	UNKNOWN STEP	2026-10-09T22:37:24.1416241Z   File "/home/runner/work/data/
 import	UNKNOWN STEP	2026-10-09T22:37:24.1417424Z     for convention in config["conventions"]:
 import	UNKNOWN STEP	2026-10-09T22:37:24.1418295Z                       ~~~~~~^^^^^^^^^^^^^^^
 import	UNKNOWN STEP	2026-10-09T22:37:24.1418950Z KeyError: 'conventions'
+import	UNKNOWN STEP	2026-10-09T22:37:24.1420000Z ##[error]Process completed with exit code 1.

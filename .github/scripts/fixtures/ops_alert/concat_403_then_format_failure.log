@@ -1,0 +1,20 @@
+import	UNKNOWN STEP	2026-10-11T05:45:12.4772033Z ##[group]Run actions/checkout@v5
+import	UNKNOWN STEP	2026-10-11T05:45:15.0580854Z ##[group]Run astral-sh/setup-uv@v7
+import	UNKNOWN STEP	2026-10-11T05:45:20.3241322Z ##[group]Run git config --global user.name "cons.fyi GitHub bot"
+import	UNKNOWN STEP	2026-10-11T05:45:20.3679463Z ##[group]Run ./tools/data-importers/import_concat_all.sh
+import	UNKNOWN STEP	2026-10-11T05:45:20.3680287Z ^[[36;1m./tools/data-importers/import_concat_all.sh^[[0m
+import	UNKNOWN STEP	2026-10-11T05:45:27.7797331Z httpx.HTTPStatusError: Client error '403 Forbidden' for url 'https://reg.palmettofurtheseason.org/api/config'
+import	UNKNOWN STEP	2026-10-11T05:45:27.7798726Z For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+import	UNKNOWN STEP	2026-10-11T05:45:28.3890033Z ##[error]import_concat: 19 source(s) failed and were skipped:
+import	UNKNOWN STEP	2026-10-11T05:45:28.3912571Z ##[error]  - palmetto-fur-the-season.json https://reg.palmettofurtheseason.org
+import	UNKNOWN STEP	2026-10-11T05:45:28.3966180Z ##[group]Run uv run tools/format.py *.json
+import	UNKNOWN STEP	2026-10-11T05:45:28.3966869Z ^[[36;1muv run tools/format.py *.json^[[0m
+import	UNKNOWN STEP	2026-10-11T05:45:29.6091952Z    Building orjson==3.11.3
+import	UNKNOWN STEP	2026-10-11T05:45:33.7444957Z error: Failed to build `orjson==3.11.3`
+import	UNKNOWN STEP	2026-10-11T05:45:33.7483288Z          💥 maturin failed
+import	UNKNOWN STEP	2026-10-11T05:45:33.7489527Z hint: Build failures usually indicate a problem with the package or the build environment
+import	UNKNOWN STEP	2026-10-11T05:45:33.7492370Z ##[error]Process completed with exit code 1.
+import	UNKNOWN STEP	2026-10-11T05:45:33.7568720Z ##[group]Run echo "::error::tools/format.py failed on the imported data, so nothing was committed and main is unaffected. Schema validation never ran. Every source is held back until this is resolved, so treat it as actionable."
+import	UNKNOWN STEP	2026-10-11T05:45:33.7570274Z ^[[36;1mecho "::error::tools/format.py failed on the imported data, so nothing was committed and main is unaffected. Schema validation never ran. Every source is held back until this is resolved, so treat it as actionable."^[[0m
+import	UNKNOWN STEP	2026-10-11T05:45:33.7714182Z ##[error]tools/format.py failed on the imported data, so nothing was committed and main is unaffected. Schema validation never ran. Every source is held back until this is resolved, so treat it as actionable.
+import	UNKNOWN STEP	2026-10-11T05:45:33.7838965Z Post job cleanup.

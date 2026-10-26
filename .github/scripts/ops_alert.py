@@ -11,13 +11,17 @@ It keeps no state: every decision comes from the workflow's own run history.
   past Policy.remind_hour_utc and at least Policy.remind_quiet after the
   alert.
 - The first success after an alerted streak posts a recovery notice.
+- A re-run attempt never alerts or reminds (its first attempt already
+  decided), but a re-run that passes can post the recovery notice.
+- Only scheduled and manually dispatched runs from this repository count;
+  anything else, such as a fork's pull request, is ignored.
 
 To watch another workflow, add its name to ops_alert.yml's workflow_run
 list, and to POLICIES below if the defaults don't fit its schedule. To
 teach it a new kind of failure, add a rule to ops_alert_rules.py.
 
-Missing secrets or a Telegram outage degrade to a log warning: alerting
-problems never turn the watched run's red/green, and never fail this one.
+Missing secrets or a Telegram outage only log a warning. They never change
+the watched run's result and never fail this one.
 
 Usage: ops_alert.py --run-id <id> [--repo owner/name] [--dry-run]
 """
@@ -47,13 +51,15 @@ LOG_LINE_MAX = 200
 @dataclasses.dataclass(frozen=True)
 class Policy:
     min_failures: int = 2
-    min_span: datetime.timedelta = datetime.timedelta(hours=6)
+    # Under 6 hours: GitHub starts scheduled runs late by varying amounts, so
+    # two consecutive 6-hourly runs can start as little as ~5h40m apart.
+    min_span: datetime.timedelta = datetime.timedelta(hours=5)
     remind_hour_utc: int = 16
     remind_quiet: datetime.timedelta = datetime.timedelta(hours=12)
 
 
 # Per-workflow overrides, keyed by workflow name. The default suits hourly,
-# 6-hourly, and daily schedules alike: it waits 6 hours, or 2 runs, whichever
+# 6-hourly, and daily schedules alike: it waits 5 hours, or 2 runs, whichever
 # is later.
 POLICIES: dict[str, Policy] = {}
 
@@ -105,11 +111,12 @@ def _remind_day(t, policy):
     return (t - datetime.timedelta(hours=policy.remind_hour_utc)).date()
 
 
-def decide(runs, run_id, policy=Policy()):
+def decide(runs, run_id, policy=Policy(), attempt=1):
     """Return the Event that run `run_id` should post, or None.
 
     `runs` is the workflow's completed runs, newest first. Runs newer than
     `run_id` are ignored, so the decision is the same whenever it is made.
+    `attempt` is the run's attempt number; above 1, it is a re-run.
     """
     idx = next((i for i, r in enumerate(runs) if r.id == run_id), None)
     if idx is None:
@@ -121,8 +128,14 @@ def decide(runs, run_id, policy=Policy()):
 
     if this.conclusion in PASSED:
         streak = _leading_failures(history[1:])
+        if attempt > 1:
+            # The earlier attempt failed, so the streak ran up to this run.
+            streak = [dataclasses.replace(this, conclusion="failure")] + streak
         if _qualifies(streak, policy):
             return Event(Kind.RECOVERED, streak, this)
+        return None
+    if attempt > 1:
+        # The first attempt already alerted or reminded if it was due.
         return None
 
     streak = _leading_failures(history)
@@ -158,31 +171,55 @@ class Diagnosis:
     verdict: Verdict
     advice: list  # one line per matched rule, most severe first
     evidence: str  # the log line behind the leading verdict, or ""
+    rule_ids: tuple = ()  # the matched rules, in advice order
 
 
 _LOG_PREFIX = re.compile(r"^[^\t]*\t[^\t]*\t(?:\S+Z )?")
+_STEP_START = "##[group]Run "
+_STEP_FAILED = "##[error]Process completed with exit code"
+_COMMAND_ECHO = "[36;1m"  # the colour code on a step header's script lines
 
 
 def _clean(line):
     line = _LOG_PREFIX.sub("", line).strip()
+    line = line.removeprefix("##[error]")
     return line[: LOG_LINE_MAX - 1] + "…" if len(line) > LOG_LINE_MAX else line
+
+
+def _failing_step(lines):
+    """The failing step and the steps after it (the failure handlers).
+
+    `gh run view --log-failed` returns the whole job log, including steps
+    that succeeded, such as an importer that skipped a 403ing source.
+    Without step markers or an exit-code line, the whole log is all we have.
+    """
+    start = None
+    for i, l in enumerate(lines):
+        if _STEP_START in l:
+            start = i
+        elif _STEP_FAILED in l and start is not None:
+            return lines[start:]
+    return lines
 
 
 def classify(log, rules=RULES):
     """Match a failed run's log against the rules."""
     if not log.strip():
         return Diagnosis(Verdict.UNCLEAR, ["Couldn't read the run's log."], "")
-    lines = log.splitlines()
+    lines = _failing_step(log.splitlines())
+    # A step's header echoes its script, such as `echo "::error::..."`; match
+    # what the step printed instead, so the evidence is the message itself.
+    output = [l for l in lines if _STEP_START not in l and _COMMAND_ECHO not in l]
     hits = []
     for rule in rules:
-        line = next((l for l in lines if rule.pattern.search(l)), None)
+        line = next((l for l in output if rule.pattern.search(l)), None)
         if line is not None:
             hits.append((rule, line))
     if not hits:
         last_error = next(
             (l for l in reversed(lines) if "##[error]" in l and "exit code" not in l),
             None,
-        ) or next((l for l in reversed(lines) if l.strip()), "")
+        ) or next((l for l in reversed(lines) if l.strip() and _STEP_FAILED not in l), "")
         return Diagnosis(
             Verdict.UNCLEAR,
             ["No known failure pattern matched the log."],
@@ -191,7 +228,10 @@ def classify(log, rules=RULES):
     # sorted() is stable, so rules of equal severity keep their file order.
     hits.sort(key=lambda h: h[0].verdict, reverse=True)
     return Diagnosis(
-        hits[0][0].verdict, [r.advice for r, _ in hits], _clean(hits[0][1])
+        hits[0][0].verdict,
+        [r.advice for r, _ in hits],
+        _clean(hits[0][1]),
+        tuple(r.id for r, _ in hits),
     )
 
 
@@ -199,27 +239,30 @@ def _when(t):
     return t.strftime("%Y-%m-%d %H:%M")
 
 
-def _count(streak, truncated):
-    return f"{len(streak)}+" if truncated else str(len(streak))
-
-
 def format_message(workflow, event, diagnosis=None, truncated=False):
-    n = _count(event.streak, truncated)
+    # The verdict label leads, so a phone's notification preview shows it.
+    n = f"{len(event.streak)}+" if truncated else str(len(event.streak))
+    runs = "run" if n == "1" else "runs"
     start = _when(event.streak[-1].created_at)
     if event.kind is Kind.RECOVERED:
         end = _when(event.streak[0].created_at)
         return (
-            f"{workflow} is passing again after {n} failed runs "
-            f"({start} to {end} UTC).\n{event.run.url}"
+            f"No action needed: {workflow} is passing again "
+            f"after {n} failed {runs} ({start} to {end} UTC).\n{event.run.url}"
         )
+    label = VERDICT_LABELS[diagnosis.verdict]
     if event.kind is Kind.ALERT:
-        head = f"{workflow} has failed {n} runs in a row, since {start} UTC."
+        head = f"{label}: {workflow} has failed {n} {runs} in a row since {start} UTC."
     else:
-        head = f"{workflow} is still failing: {n} runs in a row since {start} UTC."
-    parts = [head, "", f"{VERDICT_LABELS[diagnosis.verdict]}."]
+        head = f"{label}: {workflow} is still failing, {n} {runs} in a row since {start} UTC."
+    parts = [head, ""]
     parts += [f"- {a}" for a in diagnosis.advice]
     if diagnosis.evidence:
-        parts += ["", f"Log: {diagnosis.evidence}"]
+        parts += [
+            "",
+            "Log (quoted from the run, may include text from source sites): "
+            + diagnosis.evidence,
+        ]
     parts += [event.run.url]
     return "\n".join(parts)
 
@@ -277,7 +320,8 @@ def fetch_runs(repo, workflow_id, branch, run_id, gh=_gh):
         )
         batch = [_to_run(d) for d in data["workflow_runs"]]
         runs += batch
-        older = _counted(runs[next((i for i, r in enumerate(runs) if r.id == run_id), len(runs)):])
+        idx = next((i for i, r in enumerate(runs) if r.id == run_id), len(runs))
+        older = _counted(runs[idx:])
         # One success past the streak is enough: decide() looks no further.
         if any(r.conclusion in PASSED for r in older[1:]) or len(batch) < 100:
             return runs, False
@@ -298,23 +342,39 @@ def main(argv=None, gh=_gh, send=send_telegram, env=os.environ):
     p.add_argument("--dry-run", action="store_true", help="print, don't send")
     args = p.parse_args(argv)
 
+    # A failing gh call raises, which fails this run: a red ops_alert run is
+    # the visible sign that alerting itself is broken.
     run = json.loads(gh("api", f"repos/{args.repo}/actions/runs/{args.run_id}"))
     workflow = run["name"]
+    # workflow_run matches by name, so a fork's pull request can trigger this
+    # too, even from a branch it named main.
+    head_repo = (run.get("head_repository") or {}).get("full_name")
+    if run["event"] not in {"schedule", "workflow_dispatch"} or head_repo != args.repo:
+        print(f"{workflow} run {args.run_id} is a {run['event']} run from {head_repo}; ignoring")
+        return 0
     # The run's embedded repository object omits default_branch.
     branch = json.loads(gh("api", f"repos/{args.repo}"))["default_branch"]
     if run["head_branch"] != branch:
         print(f"{workflow} run {args.run_id} is on {run['head_branch']}, not {branch}; ignoring")
         return 0
     runs, truncated = fetch_runs(args.repo, run["workflow_id"], branch, args.run_id, gh=gh)
-    event = decide(runs, args.run_id, POLICIES.get(workflow, Policy()))
+    if not any(r.id == args.run_id for r in runs):
+        # The listing can lag behind a run that just completed.
+        print(f"run {args.run_id} is not in the run listing yet; adding it")
+        this = _to_run(run)
+        at = next((i for i, r in enumerate(runs) if r.created_at <= this.created_at), len(runs))
+        runs.insert(at, this)
+    attempt = run.get("run_attempt", 1)
+    event = decide(runs, args.run_id, POLICIES.get(workflow, Policy()), attempt)
     if event is None:
-        print(f"{workflow} run {args.run_id} ({run['conclusion']}): nothing to post")
+        print(f"{workflow} run {args.run_id} attempt {attempt} ({run['conclusion']}): nothing to post")
         return 0
     diagnosis = None
     if event.kind is not Kind.RECOVERED:
         diagnosis = classify(fetch_failed_log(args.repo, args.run_id, gh=gh))
     text = format_message(workflow, event, diagnosis, truncated)
-    print(f"--- {event.kind.value} ---\n{text}\n---")
+    rules = f" [{', '.join(diagnosis.rule_ids)}]" if diagnosis and diagnosis.rule_ids else ""
+    print(f"--- {event.kind.value}{rules} ---\n{text}\n---")
     if not args.dry_run:
         send(text, env.get("OPS_TOKEN"), env.get("OPS_CHAT"))
     return 0

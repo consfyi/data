@@ -1,7 +1,7 @@
 """What a failed run's log means, for the ops channel alert in ops_alert.py.
 
-Each rule is a regex over the failed steps' log plus a verdict and one line
-telling the reader what to do. To teach the alert a new kind of failure, add
+Each rule is a regex over the failing step's log, a verdict, and a short note
+that says what happened and what to do next. To teach the alert a new kind of failure, add
 a Rule here and a fixture log under fixtures/ops_alert/ with a test in
 test_ops_alert.py. Every matching rule is listed in the alert; the most
 severe verdict among them leads it. A log no rule matches is UNCLEAR.
@@ -12,7 +12,7 @@ import re
 
 
 class Verdict(enum.IntEnum):
-    # Ordered by severity, so max() picks the verdict that leads the alert.
+    # Ordered by severity, so sorting the matches puts the leading verdict first.
     NO_ACTION = 0
     UNCLEAR = 1
     ACTION = 2
@@ -20,8 +20,8 @@ class Verdict(enum.IntEnum):
 
 VERDICT_LABELS = {
     Verdict.ACTION: "Action needed",
-    Verdict.UNCLEAR: "Unclear, take a look",
-    Verdict.NO_ACTION: "Probably no action",
+    Verdict.UNCLEAR: "Check the run",
+    Verdict.NO_ACTION: "Probably no action needed",
 }
 
 
@@ -38,9 +38,9 @@ RULES = [
         id="dependency-build",
         pattern=re.compile(r"Failed to build `|maturin failed|Failed building wheel"),
         verdict=Verdict.ACTION,
-        advice="A dependency failed to build. The build environment probably "
-        "changed (runner image, Python, or a system library), so this won't "
-        "fix itself.",
+        advice="A dependency failed to build, probably because the runner "
+        "image, Python, or a system library changed. It won't fix itself: "
+        "update the pin for the package in the log line.",
     ),
     Rule(
         id="data-invalid",
@@ -52,15 +52,16 @@ RULES = [
         ),
         verdict=Verdict.ACTION,
         advice="The imported data failed the format or schema check, so "
-        "nothing was committed.",
+        "nothing was committed and this import is held back. Read the run's "
+        "errors to find the bad record.",
     ),
     Rule(
         id="source-blocked",
         pattern=re.compile(r"\b403 Forbidden\b|\b429 Too Many Requests\b"),
         verdict=Verdict.ACTION,
         advice="A source site returned 403 or 429 and may be blocking the "
-        "importer. Don't rerun it by hand; more requests can make a block "
-        "permanent.",
+        "importer. Don't rerun the importer by hand, because more requests "
+        "can make a block permanent. Ask the site owner before you retry.",
     ),
     Rule(
         id="source-down",
@@ -71,8 +72,8 @@ RULES = [
         ),
         verdict=Verdict.NO_ACTION,
         advice="A source site timed out or returned a server error. The "
-        "importer retries on its schedule; look again if it's still failing "
-        "tomorrow.",
+        "importer retries on its schedule. If tomorrow's reminder still shows "
+        "this, check whether the site is up.",
     ),
     Rule(
         id="push-race",

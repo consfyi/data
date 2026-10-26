@@ -15,6 +15,7 @@ It keeps no state: every decision comes from the workflow's own run history.
   already did. A passing re-run of the newest run can post the recovery
   notice, unless an earlier attempt of the same run passed. Attempts that
   neither passed nor failed, such as cancelled ones, don't count.
+- A run that is being re-run counts with its newest completed attempt.
 - Only scheduled and manually dispatched runs from this repository count;
   anything else, such as a fork's pull request, is ignored.
 
@@ -25,7 +26,7 @@ teach it a new kind of failure, add a rule to ops_alert_rules.py.
 Missing secrets or a Telegram outage only log a warning. They never change
 the watched run's result and never fail this one.
 
-Usage: ops_alert.py --run-id <id> [--repo owner/name] [--dry-run]
+Usage: ops_alert.py --run-id <id> [--run-attempt <n>] [--repo owner/name] [--dry-run]
 """
 import argparse
 import dataclasses
@@ -356,22 +357,38 @@ def _watched(d, repo):
     return d["event"] in {"schedule", "workflow_dispatch"} and head_repo == repo
 
 
+def _listed_run(d, repo, this, gh):
+    """The Run a listing entry counts as, or None. `this` stands for its own
+    run. A run being re-run counts with its newest completed attempt; a first
+    attempt still in progress has no result yet."""
+    if d["id"] == this.id:
+        return this
+    if d["status"] == "completed":
+        return _to_run(d)
+    for k in range(d.get("run_attempt", 1) - 1, 0, -1):
+        a = json.loads(gh("api", f"repos/{repo}/actions/runs/{d['id']}/attempts/{k}"))
+        if a["status"] == "completed":
+            return dataclasses.replace(_to_run(d), conclusion=a["conclusion"] or "")
+    return None
+
+
 def fetch_runs(repo, workflow_id, branch, this, gh=_gh):
-    """Completed runs that count, newest first, back to the first success
-    before the failure streak of `this`, the Run being decided. Returns
-    (runs, truncated)."""
+    """Runs that count, newest first, back to the first success before the
+    failure streak of `this`, the Run being decided. Returns (runs,
+    truncated)."""
     runs = []
     for page in range(1, MAX_PAGES + 1):
         data = json.loads(
             gh(
                 "api",
                 f"repos/{repo}/actions/workflows/{workflow_id}/runs"
-                f"?status=completed&branch={urllib.parse.quote(branch)}"
+                f"?branch={urllib.parse.quote(branch)}"
                 f"&per_page=100&page={page}",
             )
         )
         batch = data["workflow_runs"]
-        runs += [_to_run(d) for d in batch if _watched(d, repo)]
+        listed = (_listed_run(d, repo, this, gh) for d in batch if _watched(d, repo))
+        runs += [r for r in listed if r is not None]
         if all(r.id != this.id for r in runs) and (
             len(batch) < 100 or this.created_at >= _parse_time(batch[-1]["created_at"])
         ):
@@ -397,6 +414,8 @@ def fetch_failed_log(repo, run_id, gh=_gh):
 def main(argv=None, gh=_gh, send=send_telegram, env=os.environ):
     p = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     p.add_argument("--run-id", type=int, required=True)
+    # The attempt that triggered this, since the run itself shows its latest.
+    p.add_argument("--run-attempt", type=int)
     p.add_argument("--repo", default=env.get("GITHUB_REPOSITORY"))
     p.add_argument("--dry-run", action="store_true", help="print, don't send")
     args = p.parse_args(argv)
@@ -417,8 +436,14 @@ def main(argv=None, gh=_gh, send=send_telegram, env=os.environ):
     if run["head_branch"] != branch:
         print(f"{workflow} run {args.run_id} is on {run['head_branch']}, not {branch}; ignoring")
         return 0
-    runs, truncated = fetch_runs(args.repo, run["workflow_id"], branch, _to_run(run), gh=gh)
     attempt = run.get("run_attempt", 1)
+    if args.run_attempt:
+        # Decide as the triggering attempt, even if a newer one has started.
+        attempt = args.run_attempt
+        run["conclusion"] = json.loads(gh(
+            "api", f"repos/{args.repo}/actions/runs/{args.run_id}/attempts/{attempt}"
+        ))["conclusion"]
+    runs, truncated = fetch_runs(args.repo, run["workflow_id"], branch, _to_run(run), gh=gh)
     previous = None
     if attempt > 1:
         # Summarize every earlier attempt: if any passed, it already posted

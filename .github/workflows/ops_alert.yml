@@ -45,8 +45,11 @@ jobs:
           OPS_TOKEN: ${{ secrets.OPS_TELEGRAM_BOT_TOKEN }}
           OPS_CHAT: ${{ secrets.OPS_TELEGRAM_CHAT_ID }}
           RUN_ID: ${{ github.event.workflow_run.id || inputs.run_id }}
+          # The attempt that completed; empty for a manual dispatch.
+          RUN_ATTEMPT: ${{ github.event.workflow_run.run_attempt }}
           DRY_RUN: ${{ inputs.dry_run }}
         run: |
           args=(--run-id "$RUN_ID")
+          if [ -n "$RUN_ATTEMPT" ]; then args+=(--run-attempt "$RUN_ATTEMPT"); fi
           if [ "$DRY_RUN" = true ]; then args+=(--dry-run); fi
           python3 .github/scripts/ops_alert.py "${args[@]}"

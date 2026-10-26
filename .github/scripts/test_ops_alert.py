@@ -520,10 +520,17 @@ class TestSend(unittest.TestCase):
         self.assertIn(b"disable_web_page_preview=true", sent["data"])
 
 
-def api_run(r, event="schedule", head_repo="o/r"):
+def api_run(r, event="schedule", head_repo="o/r", attempts=None):
+    """`attempts` maps a run in progress's earlier attempts to their
+    conclusions; its current attempt is the one after them."""
+    if attempts is not None:
+        return {**api_run(r, event, head_repo), "conclusion": None,
+                "status": "in_progress", "run_attempt": len(attempts) + 1}
     return {
         "id": r.id,
         "conclusion": r.conclusion,
+        "status": "completed",
+        "run_attempt": 1,
         "created_at": r.created_at.isoformat().replace("+00:00", "Z"),
         "html_url": r.url,
         "event": event,
@@ -536,7 +543,7 @@ class FakeGh:
 
     def __init__(self, runs, log="", head_branch="main", log_fails=False,
                  event="schedule", head_repo="o/r", attempt=1, listed=None,
-                 attempts=None, fork_ids=()):
+                 attempts=None, fork_ids=(), in_progress=None):
         self.runs, self.log, self.head_branch, self.log_fails = runs, log, head_branch, log_fails
         self.event, self.head_repo, self.attempt = event, head_repo, attempt
         # What the runs listing returns, if it lags behind self.runs.
@@ -546,6 +553,9 @@ class FakeGh:
         self.attempts, self.requested = attempts or {}, []
         # Runs the listing shows as a fork's pull request runs.
         self.fork_ids = set(fork_ids)
+        # Runs in progress, mapped to their earlier attempts' conclusions,
+        # where None is an attempt that hasn't completed.
+        self.in_progress = in_progress or {}
 
     def __call__(self, *args):
         if args[0] == "run":
@@ -556,28 +566,39 @@ class FakeGh:
         if path == "repos/o/r":
             return json.dumps({"default_branch": "main"})
         if "/attempts/" in path:
-            run_id, n = re.fullmatch(r"repos/o/r/actions/runs/(\d+)/attempts/(\d+)", path).groups()
-            # Only attempts before the current one exist to be asked for.
-            assert 1 <= int(n) < self.attempt, path
-            self.requested.append(int(n))
-            return json.dumps({"id": int(run_id), "run_attempt": int(n),
-                               "conclusion": self.attempts.get(int(n))})
+            run_id, n = map(int, re.fullmatch(
+                r"repos/o/r/actions/runs/(\d+)/attempts/(\d+)", path).groups())
+            attempts = self.in_progress.get(run_id)
+            if attempts is None:
+                attempts, latest = self.attempts, self.attempt
+                self.requested.append(n)
+            else:
+                latest = len(attempts) + 1
+            # Only attempts up to the latest exist to be asked for.
+            assert 1 <= n <= latest, path
+            conclusion = attempts.get(n)
+            return json.dumps({"id": run_id, "run_attempt": n, "conclusion": conclusion,
+                               "status": "in_progress" if conclusion is None else "completed"})
         if "/runs/" in path and "workflows" not in path:
             run_id = int(path.rsplit("/", 1)[1])
             r = next(r for r in self.runs if r.id == run_id)
             # Same shape as the real API: the embedded repository object
             # has no default_branch.
             return json.dumps({
-                **api_run(r),
+                **api_run(r, attempts=self.in_progress.get(run_id)),
                 "name": "import_fancons", "workflow_id": 42, "event": self.event,
                 "head_branch": self.head_branch, "run_attempt": self.attempt,
                 "head_repository": {"full_name": self.head_repo},
                 "repository": {"full_name": "o/r"},
             })
         page = int(path.rsplit("page=", 1)[1])
-        batch = self.listed[(page - 1) * 100 : page * 100]
+        listed = self.listed
+        if "status=completed" in path:
+            listed = [r for r in listed if r.id not in self.in_progress]
+        batch = listed[(page - 1) * 100 : page * 100]
         return json.dumps({"workflow_runs": [
-            api_run(r, "pull_request", "someone/r") if r.id in self.fork_ids else api_run(r)
+            api_run(r, "pull_request", "someone/r") if r.id in self.fork_ids
+            else api_run(r, attempts=self.in_progress.get(r.id))
             for r in batch
         ]})
 
@@ -585,10 +606,12 @@ class FakeGh:
 class TestMain(unittest.TestCase):
     ENV = {"OPS_TOKEN": "tok-123", "OPS_CHAT": "chat-456"}
 
-    def run_main(self, gh, run_id, dry_run=False):
+    def run_main(self, gh, run_id, dry_run=False, run_attempt=None):
         """Returns the (text, token, chat) of each send, and stdout."""
         sent = []
         argv = ["--run-id", str(run_id), "--repo", "o/r"] + (["--dry-run"] if dry_run else [])
+        if run_attempt is not None:
+            argv += ["--run-attempt", str(run_attempt)]
         with unittest.mock.patch("sys.stdout", new_callable=io.StringIO) as out:
             code = ops_alert.main(
                 argv, gh=gh, send=lambda text, tok, chat: sent.append((text, tok, chat)),
@@ -597,8 +620,8 @@ class TestMain(unittest.TestCase):
         self.assertEqual(code, 0)
         return sent, out.getvalue()
 
-    def texts(self, gh, run_id):
-        return [text for text, _, _ in self.run_main(gh, run_id)[0]]
+    def texts(self, gh, run_id, run_attempt=None):
+        return [text for text, _, _ in self.run_main(gh, run_id, run_attempt=run_attempt)[0]]
 
     def test_end_to_end_alert_with_verdict(self):
         log = (FIXTURES / "pyicu_build_failure.log").read_text()
@@ -698,6 +721,56 @@ class TestMain(unittest.TestCase):
     def test_rerun_of_an_older_run_posts_nothing(self):
         gh = FakeGh(timeline("P" + "F" * 5 + "PF"), attempt=2, attempts={1: "failure"})
         self.assertEqual(self.texts(gh, 7), [])
+
+    # Runs 2 to 7 failed hourly and run 7 alerted. Run 7 is being re-run when
+    # run 8 completes: the listing shows run 7 in progress on attempt 2.
+    RACING = timeline("P" + "F" * 6 + "P")
+
+    def test_newer_run_that_passes_during_a_rerun_posts_recovery(self):
+        gh = FakeGh(self.RACING, in_progress={7: {1: "failure"}})
+        texts = self.texts(gh, 8)
+        self.assertEqual(len(texts), 1)
+        self.assertIn("is passing again after 6 failed runs (", texts[0])
+
+    def test_newer_run_that_fails_during_a_rerun_does_not_realert(self):
+        runs = timeline("P" + "F" * 7)
+        self.assertEqual(self.texts(FakeGh(runs, in_progress={7: {1: "failure"}}), 8), [])
+
+    def test_rerun_in_progress_counts_its_newest_completed_attempt(self):
+        # Attempt 3 is running and attempt 2 never completed, so attempt 1's
+        # failure is run 7's result.
+        gh = FakeGh(self.RACING, in_progress={7: {1: "failure", 2: None}})
+        self.assertEqual(len(self.texts(gh, 8)), 1)
+
+    def test_first_attempt_in_progress_is_ignored(self):
+        # Run 150 is still on its first attempt, so it has no result yet. It
+        # neither ends the streak nor stops the paging as a success would.
+        runs = timeline("P" + "F" * 150)
+        gh = FakeGh(runs, in_progress={150: {}})
+        with unittest.mock.patch("sys.stdout", new_callable=io.StringIO):
+            got, truncated = ops_alert.fetch_runs("o/r", 42, "main", runs[0], gh=gh)
+        self.assertFalse(truncated)
+        self.assertEqual(len(got), 150)
+        self.assertNotIn(150, [r.id for r in got])
+        self.assertEqual(got[-1].conclusion, "success")
+
+    def test_triggering_attempt_decides_while_a_newer_attempt_runs(self):
+        # Run 7's attempt 1 failed, ending a 5-hour streak, and attempt 2
+        # passed. Attempt 2's job runs only after attempt 3 has started.
+        runs = timeline("P" + "F" * 5 + "P")
+        gh = FakeGh(runs, in_progress={7: {1: "failure", 2: "success"}})
+        texts = self.texts(gh, 7, run_attempt=2)
+        self.assertEqual(len(texts), 1)
+        self.assertIn("is passing again after 6 failed runs (", texts[0])
+
+    def test_triggering_attempt_decides_after_a_newer_attempt_passed(self):
+        # Run 7's attempt 1 failed and is due to alert, but its job runs
+        # only after attempt 2 passed, so the run and the listing show a pass.
+        runs = timeline("P" + "F" * 5 + "P")
+        gh = FakeGh(runs, attempt=2, attempts={1: "failure"})
+        texts = self.texts(gh, 7, run_attempt=1)
+        self.assertEqual(len(texts), 1)
+        self.assertIn("has failed 6 runs in a row", texts[0])
 
     def test_fork_runs_in_the_history_do_not_extend_a_streak(self):
         # Runs 2 to 6 are a fork's failing pull requests from its own main;

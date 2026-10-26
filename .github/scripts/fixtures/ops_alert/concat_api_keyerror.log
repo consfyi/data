@@ -1,0 +1,8 @@
+import	UNKNOWN STEP	2026-10-09T22:37:24.1401692Z Traceback (most recent call last):
+import	UNKNOWN STEP	2026-10-09T22:37:24.1414044Z   File "/home/runner/work/data/data/./tools/data-importers/import_concat.py", line 395, in <module>
+import	UNKNOWN STEP	2026-10-09T22:37:24.1415068Z     main()
+import	UNKNOWN STEP	2026-10-09T22:37:24.1415437Z     ~~~~^^
+import	UNKNOWN STEP	2026-10-09T22:37:24.1416241Z   File "/home/runner/work/data/data/./tools/data-importers/import_concat.py", line 374, in main
+import	UNKNOWN STEP	2026-10-09T22:37:24.1417424Z     for convention in config["conventions"]:
+import	UNKNOWN STEP	2026-10-09T22:37:24.1418295Z                       ~~~~~~^^^^^^^^^^^^^^^
+import	UNKNOWN STEP	2026-10-09T22:37:24.1418950Z KeyError: 'conventions'

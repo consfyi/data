@@ -1,0 +1,8 @@
+import	UNKNOWN STEP	2026-10-24T23:09:49.5831309Z    Building pyicu==2.15.2
+import	UNKNOWN STEP	2026-10-24T23:09:54.7358788Z error: Failed to build `pyicu==2.15.2`
+import	UNKNOWN STEP	2026-10-24T23:09:54.7365821Z          Building pyicu 2.15.2 for ICU 78.2 (max ICU major version supported: 77)
+import	UNKNOWN STEP	2026-10-24T23:09:54.7396240Z          arg.h:856:37: error: static assertion failed
+import	UNKNOWN STEP	2026-10-24T23:09:54.7400041Z          arg.h:856:37: error: static assertion failed
+import	UNKNOWN STEP	2026-10-24T23:09:54.7403358Z          arg.h:856:37: error: static assertion failed
+import	UNKNOWN STEP	2026-10-24T23:09:54.7406619Z          arg.h:856:37: error: static assertion failed
+import	UNKNOWN STEP	2026-10-24T23:09:54.7410090Z          arg.h:856:37: error: static assertion failed

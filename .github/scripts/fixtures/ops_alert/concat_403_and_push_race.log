@@ -1,0 +1,7 @@
+import	UNKNOWN STEP	2026-07-31T03:48:12.8032116Z httpx.HTTPStatusError: Client error '403 Forbidden' for url 'https://reg.palmettofurtheseason.org/api/config'
+import	UNKNOWN STEP	2026-07-31T03:48:12.9902168Z ##[error]import_concat: 1 source(s) failed and were skipped:
+import	UNKNOWN STEP	2026-07-31T03:48:12.9911336Z ##[error]  - palmetto-fur-the-season.json https://reg.palmettofurtheseason.org
+import	UNKNOWN STEP	2026-07-31T03:48:13.5340803Z  ! [rejected]        main -> main (fetch first)
+import	UNKNOWN STEP	2026-07-31T03:48:13.5352067Z error: failed to push some refs to 'https://github.com/consfyi/data'
+import	UNKNOWN STEP	2026-07-31T03:48:13.5358584Z hint: Updates were rejected because the remote contains work that you do not
+import	UNKNOWN STEP	2026-07-31T03:48:13.5367946Z ##[error]Process completed with exit code 1.

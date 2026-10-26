@@ -12,7 +12,8 @@ It keeps no state: every decision comes from the workflow's own run history.
   alert.
 - The first success after an alerted streak posts a recovery notice.
 - A re-run attempt never alerts or reminds (its first attempt already
-  decided), but a re-run that passes can post the recovery notice.
+  decided). A re-run of the newest run that passes where its previous
+  attempt failed can post the recovery notice; any other re-run is quiet.
 - Only scheduled and manually dispatched runs from this repository count;
   anything else, such as a fork's pull request, is ignored.
 
@@ -111,12 +112,13 @@ def _remind_day(t, policy):
     return (t - datetime.timedelta(hours=policy.remind_hour_utc)).date()
 
 
-def decide(runs, run_id, policy=Policy(), attempt=1):
+def decide(runs, run_id, policy=Policy(), previous_attempt=None):
     """Return the Event that run `run_id` should post, or None.
 
     `runs` is the workflow's completed runs, newest first. Runs newer than
     `run_id` are ignored, so the decision is the same whenever it is made.
-    `attempt` is the run's attempt number; above 1, it is a re-run.
+    `previous_attempt` is None for a run's first attempt; for a re-run, it
+    is the conclusion of the attempt before it.
     """
     idx = next((i for i, r in enumerate(runs) if r.id == run_id), None)
     if idx is None:
@@ -126,16 +128,24 @@ def decide(runs, run_id, policy=Policy(), attempt=1):
         return None
     history = _counted(runs[idx:])
 
-    if this.conclusion in PASSED:
-        streak = _leading_failures(history[1:])
-        if attempt > 1:
-            # The earlier attempt failed, so the streak ran up to this run.
-            streak = [dataclasses.replace(this, conclusion="failure")] + streak
+    if previous_attempt is not None:
+        # The first attempt already alerted or reminded if it was due. A
+        # re-run can only end a streak that is still open: it must be the
+        # newest counted run, pass, and replace an attempt that failed.
+        if _counted(runs[:idx]):
+            return None
+        if this.conclusion not in PASSED or previous_attempt not in FAILED:
+            return None
+        failed = dataclasses.replace(this, conclusion=previous_attempt)
+        streak = [failed] + _leading_failures(history[1:])
         if _qualifies(streak, policy):
             return Event(Kind.RECOVERED, streak, this)
         return None
-    if attempt > 1:
-        # The first attempt already alerted or reminded if it was due.
+
+    if this.conclusion in PASSED:
+        streak = _leading_failures(history[1:])
+        if _qualifies(streak, policy):
+            return Event(Kind.RECOVERED, streak, this)
         return None
 
     streak = _leading_failures(history)
@@ -176,7 +186,13 @@ class Diagnosis:
 
 _LOG_PREFIX = re.compile(r"^[^\t]*\t[^\t]*\t(?:\S+Z )?")
 _STEP_START = "##[group]Run "
-_STEP_FAILED = "##[error]Process completed with exit code"
+# The lines that end a failing step: a nonzero exit, or a timeout or
+# cancellation that stopped it.
+_STEP_FAILED = (
+    "##[error]Process completed with exit code",
+    "##[error]The operation was canceled",
+    "has exceeded the maximum execution time",
+)
 _COMMAND_ECHO = "[36;1m"  # the colour code on a step header's script lines
 
 
@@ -184,6 +200,10 @@ def _clean(line):
     line = _LOG_PREFIX.sub("", line).strip()
     line = line.removeprefix("##[error]")
     return line[: LOG_LINE_MAX - 1] + "…" if len(line) > LOG_LINE_MAX else line
+
+
+def _ends_step(line):
+    return any(marker in line for marker in _STEP_FAILED)
 
 
 def _failing_step(lines):
@@ -197,15 +217,39 @@ def _failing_step(lines):
     for i, l in enumerate(lines):
         if _STEP_START in l:
             start = i
-        elif _STEP_FAILED in l and start is not None:
+        elif _ends_step(l) and start is not None:
             return lines[start:]
     return lines
+
+
+def _last_error(lines):
+    """The last error line before the failing step ended, else the last line.
+
+    Searching back from the step's end skips the failure handlers and the
+    post-job cleanup that follow it in the log.
+    """
+    end = len(lines)
+    for i, l in enumerate(lines):
+        if _ends_step(l):
+            end = i
+            break
+    for l in reversed(lines[:end]):
+        if "##[error]" in l:
+            return l
+    for l in reversed(lines[:end]):
+        if l.strip():
+            return l
+    return ""
 
 
 def classify(log, rules=RULES):
     """Match a failed run's log against the rules."""
     if not log.strip():
-        return Diagnosis(Verdict.UNCLEAR, ["Couldn't read the run's log."], "")
+        return Diagnosis(
+            Verdict.UNCLEAR,
+            ["Couldn't read the run's log. Open the run to see which step failed."],
+            "",
+        )
     lines = _failing_step(log.splitlines())
     # A step's header echoes its script, such as `echo "::error::..."`; match
     # what the step printed instead, so the evidence is the message itself.
@@ -216,14 +260,11 @@ def classify(log, rules=RULES):
         if line is not None:
             hits.append((rule, line))
     if not hits:
-        last_error = next(
-            (l for l in reversed(lines) if "##[error]" in l and "exit code" not in l),
-            None,
-        ) or next((l for l in reversed(lines) if l.strip() and _STEP_FAILED not in l), "")
         return Diagnosis(
             Verdict.UNCLEAR,
-            ["No known failure pattern matched the log."],
-            _clean(last_error),
+            ["No known failure pattern matched. Open the run and read the "
+             "failing step's errors."],
+            _clean(_last_error(lines)),
         )
     # sorted() is stable, so rules of equal severity keep their file order.
     hits.sort(key=lambda h: h[0].verdict, reverse=True)
@@ -260,10 +301,9 @@ def format_message(workflow, event, diagnosis=None, truncated=False):
     if diagnosis.evidence:
         parts += [
             "",
-            "Log (quoted from the run, may include text from source sites): "
-            + diagnosis.evidence,
+            "Log line (may include text from source sites): " + diagnosis.evidence,
         ]
-    parts += [event.run.url]
+    parts += ["Run: " + event.run.url]
     return "\n".join(parts)
 
 
@@ -305,9 +345,17 @@ def _to_run(d):
     return Run(d["id"], d["conclusion"] or "", _parse_time(d["created_at"]), d["html_url"])
 
 
-def fetch_runs(repo, workflow_id, branch, run_id, gh=_gh):
-    """Completed runs, newest first, back to the first success before
-    `run_id`'s failure streak. Returns (runs, truncated)."""
+def _watched(d, repo):
+    """Whether an API run object counts: a scheduled or dispatched run from
+    `repo` itself, not, say, a fork's pull request from a branch named main."""
+    head_repo = (d.get("head_repository") or {}).get("full_name")
+    return d["event"] in {"schedule", "workflow_dispatch"} and head_repo == repo
+
+
+def fetch_runs(repo, workflow_id, branch, this, gh=_gh):
+    """Completed runs that count, newest first, back to the first success
+    before the failure streak of `this`, the Run being decided. Returns
+    (runs, truncated)."""
     runs = []
     for page in range(1, MAX_PAGES + 1):
         data = json.loads(
@@ -318,9 +366,16 @@ def fetch_runs(repo, workflow_id, branch, run_id, gh=_gh):
                 f"&per_page=100&page={page}",
             )
         )
-        batch = [_to_run(d) for d in data["workflow_runs"]]
-        runs += batch
-        idx = next((i for i, r in enumerate(runs) if r.id == run_id), len(runs))
+        batch = data["workflow_runs"]
+        runs += [_to_run(d) for d in batch if _watched(d, repo)]
+        if all(r.id != this.id for r in runs) and (
+            len(batch) < 100 or this.created_at >= _parse_time(batch[-1]["created_at"])
+        ):
+            # The listing can lag behind a run that just completed.
+            print(f"run {this.id} is not in the run listing yet; adding it")
+            at = next((i for i, r in enumerate(runs) if r.created_at <= this.created_at), len(runs))
+            runs.insert(at, this)
+        idx = next((i for i, r in enumerate(runs) if r.id == this.id), len(runs))
         older = _counted(runs[idx:])
         # One success past the streak is enough: decide() looks no further.
         if any(r.conclusion in PASSED for r in older[1:]) or len(batch) < 100:
@@ -348,8 +403,8 @@ def main(argv=None, gh=_gh, send=send_telegram, env=os.environ):
     workflow = run["name"]
     # workflow_run matches by name, so a fork's pull request can trigger this
     # too, even from a branch it named main.
-    head_repo = (run.get("head_repository") or {}).get("full_name")
-    if run["event"] not in {"schedule", "workflow_dispatch"} or head_repo != args.repo:
+    if not _watched(run, args.repo):
+        head_repo = (run.get("head_repository") or {}).get("full_name")
         print(f"{workflow} run {args.run_id} is a {run['event']} run from {head_repo}; ignoring")
         return 0
     # The run's embedded repository object omits default_branch.
@@ -357,15 +412,15 @@ def main(argv=None, gh=_gh, send=send_telegram, env=os.environ):
     if run["head_branch"] != branch:
         print(f"{workflow} run {args.run_id} is on {run['head_branch']}, not {branch}; ignoring")
         return 0
-    runs, truncated = fetch_runs(args.repo, run["workflow_id"], branch, args.run_id, gh=gh)
-    if not any(r.id == args.run_id for r in runs):
-        # The listing can lag behind a run that just completed.
-        print(f"run {args.run_id} is not in the run listing yet; adding it")
-        this = _to_run(run)
-        at = next((i for i, r in enumerate(runs) if r.created_at <= this.created_at), len(runs))
-        runs.insert(at, this)
+    runs, truncated = fetch_runs(args.repo, run["workflow_id"], branch, _to_run(run), gh=gh)
     attempt = run.get("run_attempt", 1)
-    event = decide(runs, args.run_id, POLICIES.get(workflow, Policy()), attempt)
+    previous = None
+    if attempt > 1:
+        # "" rather than None if it has no conclusion, so it stays a re-run.
+        previous = json.loads(gh(
+            "api", f"repos/{args.repo}/actions/runs/{args.run_id}/attempts/{attempt - 1}"
+        ))["conclusion"] or ""
+    event = decide(runs, args.run_id, POLICIES.get(workflow, Policy()), previous)
     if event is None:
         print(f"{workflow} run {args.run_id} attempt {attempt} ({run['conclusion']}): nothing to post")
         return 0

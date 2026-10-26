@@ -1,9 +1,9 @@
 """What a failed run's log means, for the ops channel alert in ops_alert.py.
 
 Each rule is a regex over the failing step's log, a verdict, and a short note
-that says what happened and what to do next. To teach the alert a new kind of failure, add
-a Rule here and a fixture log under fixtures/ops_alert/ with a test in
-test_ops_alert.py. Every matching rule is listed in the alert; the most
+that says what happened and what to do next. To teach the alert a new kind of
+failure, add a Rule here and a fixture log under fixtures/ops_alert/ with a
+test in test_ops_alert.py. Every matching rule is listed in the alert; the most
 severe verdict among them leads it. A log no rule matches is UNCLEAR.
 """
 import dataclasses

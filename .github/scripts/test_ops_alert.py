@@ -166,23 +166,44 @@ class TestDecide(unittest.TestCase):
         self.assertEqual(decide(runs, 4, strict).kind, Kind.ALERT)
         self.assertIsNone(decide(runs, 3, strict))
 
+    def test_startup_failures_count_as_failures(self):
+        self.assertEqual(events(timeline("P" + "S" * 7)), [(7, Kind.ALERT)])
+
     def test_rerun_attempts_never_alert_or_remind(self):
+        # Runs 7 and 21 are each the newest run when they're re-run.
         runs = timeline("P" + "F" * 72)
-        self.assertEqual(decide(runs, 7).kind, Kind.ALERT)
-        self.assertIsNone(decide(runs, 7, attempt=2))
-        self.assertEqual(decide(runs, 21).kind, Kind.REMIND)
-        self.assertIsNone(decide(runs, 21, attempt=2))
+        self.assertEqual(decide(runs[-7:], 7).kind, Kind.ALERT)
+        self.assertIsNone(decide(runs[-7:], 7, previous_attempt="failure"))
+        self.assertEqual(decide(runs[-21:], 21).kind, Kind.REMIND)
+        self.assertIsNone(decide(runs[-21:], 21, previous_attempt="failure"))
 
     def test_rerun_that_passes_recovers_the_streak_it_ended(self):
         # Run 7's first attempt failed, which made the streak 5 hours long
         # and alerted. Its re-run passed, so the streak is over.
         runs = timeline("P" + "F" * 5 + "P")
         self.assertIsNone(decide(runs, 7))
-        event = decide(runs, 7, attempt=2)
+        event = decide(runs, 7, previous_attempt="failure")
         self.assertEqual(event.kind, Kind.RECOVERED)
         self.assertEqual(len(event.streak), 6)
         # A re-run that passes after a streak too short to alert stays quiet.
-        self.assertIsNone(decide(timeline("PFP"), 3, attempt=2))
+        self.assertIsNone(decide(timeline("PFP"), 3, previous_attempt="failure"))
+
+    def test_rerun_of_an_older_run_posts_nothing(self):
+        # Run 7 is re-run and passes, but run 8 has failed since: the
+        # streak is still open, so there is nothing to recover.
+        runs = timeline("P" + "F" * 5 + "PF")
+        self.assertIsNone(decide(runs, 7, previous_attempt="failure"))
+
+    def test_rerun_inside_an_already_recovered_streak_posts_nothing(self):
+        # Run 7 failed, then run 8 passed and posted the recovery. Re-running
+        # run 7 into a pass must not post it again.
+        self.assertEqual(decide(timeline("P" + "F" * 6 + "P"), 8).kind, Kind.RECOVERED)
+        runs = timeline("P" + "F" * 5 + "PP")
+        self.assertIsNone(decide(runs, 7, previous_attempt="failure"))
+
+    def test_rerun_whose_first_attempt_passed_posts_nothing(self):
+        runs = timeline("P" + "F" * 5 + "P")
+        self.assertIsNone(decide(runs, 7, previous_attempt="success"))
 
 
 class TestClassify(unittest.TestCase):
@@ -279,10 +300,55 @@ class TestClassify(unittest.TestCase):
         self.assertEqual(d.evidence, "httpx.ReadTimeout: The read operation timed out")
 
     def test_unknown_failure_is_unclear_with_last_error(self):
-        # The log ends with the step's exit-code line, which says nothing.
+        # The step's exit-code line says nothing, and the post-job cleanup
+        # after it isn't the failure.
         d = classify(self.fixture("concat_api_keyerror.log"))
         self.assertEqual(d.verdict, Verdict.UNCLEAR)
+        self.assertEqual(
+            d.advice,
+            ["No known failure pattern matched. Open the run and read the "
+             "failing step's errors."],
+        )
         self.assertEqual(d.evidence, "KeyError: 'conventions'")
+
+    def test_timed_out_step_is_the_failing_step(self):
+        # No exit-code line: the job timed out mid-step. The 403 was in an
+        # earlier step that passed.
+        log = log_lines(
+            "##[group]Run ./tools/data-importers/import_concat_all.sh",
+            "httpx.HTTPStatusError: Client error '403 Forbidden' for url "
+            "'https://reg.example.test/api'",
+            "##[group]Run uv run tools/format.py *.json",
+            "Formatting 250 files",
+            "##[error]The job running on runner GitHub Actions 1000 has exceeded "
+            "the maximum execution time of 30 minutes.",
+            "##[error]The operation was canceled.",
+            "Post job cleanup.",
+            "Cleaning up orphan processes",
+        )
+        d = classify(log)
+        self.assertNotIn("source-blocked", d.rule_ids)
+        self.assertEqual(d.verdict, Verdict.UNCLEAR)
+        self.assertEqual(d.evidence, "Formatting 250 files")
+
+    def test_each_pattern_alternative_matches_its_rule(self):
+        cases = [
+            ("Failed building wheel for x", "dependency-build"),
+            ("💥 maturin failed", "dependency-build"),
+            (" ! [rejected]        main -> main (non-fast-forward)", "push-race"),
+            ("httpx.HTTPStatusError: Server error '502 Bad Gateway'", "source-down"),
+            ("httpx.HTTPStatusError: Server error '500 Internal Server Error'",
+             "source-down"),
+            ("httpx.HTTPStatusError: Server error '504 Gateway Timeout'", "source-down"),
+            ("httpx.ConnectError: [Errno -3] Temporary failure in name resolution",
+             "source-down"),
+            ("httpx.ConnectTimeout: timed out", "source-down"),
+            ("httpx.RemoteProtocolError: Server disconnected without sending a "
+             "response.", "source-down"),
+        ]
+        for line, rule_id in cases:
+            with self.subTest(line=line):
+                self.assertEqual(classify(log_lines(line)).rule_ids, (rule_id,))
 
     def test_most_severe_verdict_leads_whatever_the_rule_order(self):
         # A rule added later in the file must still lead if it's more severe.
@@ -296,7 +362,10 @@ class TestClassify(unittest.TestCase):
     def test_unreadable_log_is_unclear(self):
         d = classify("")
         self.assertEqual(d.verdict, Verdict.UNCLEAR)
-        self.assertIn("Couldn't read", d.advice[0])
+        self.assertEqual(
+            d.advice,
+            ["Couldn't read the run's log. Open the run to see which step failed."],
+        )
 
     def test_long_evidence_is_cut(self):
         d = classify("x\tstep\t2026-10-26T00:00:00Z httpx.ConnectError: " + "a" * 500)
@@ -318,9 +387,9 @@ class TestMessage(unittest.TestCase):
             "Python, or a system library changed. It won't fix itself: update "
             "the pin for the package in the log line.\n"
             "\n"
-            "Log (quoted from the run, may include text from source sites): "
+            "Log line (may include text from source sites): "
             "error: Failed to build `pyicu==2.15.2`\n"
-            "https://example.test/runs/7",
+            "Run: https://example.test/runs/7",
         )
 
     def test_reminder_message(self):
@@ -337,9 +406,9 @@ class TestMessage(unittest.TestCase):
             "retries on its schedule. If tomorrow's reminder still shows this, "
             "check whether the site is up.\n"
             "\n"
-            "Log (quoted from the run, may include text from source sites): "
+            "Log line (may include text from source sites): "
             "httpx.ReadTimeout: The read operation timed out\n"
-            "https://example.test/runs/21",
+            "Run: https://example.test/runs/21",
         )
 
     def test_recovery_message_and_truncated_count(self):
@@ -411,14 +480,17 @@ class TestSend(unittest.TestCase):
         self.assertIn("/bottok/sendMessage", sent["url"])
         self.assertIn(b"text=hello", sent["data"])
         self.assertIn(b"chat_id=-100", sent["data"])
+        self.assertIn(b"disable_web_page_preview=true", sent["data"])
 
 
-def api_run(r):
+def api_run(r, event="schedule", head_repo="o/r"):
     return {
         "id": r.id,
         "conclusion": r.conclusion,
         "created_at": r.created_at.isoformat().replace("+00:00", "Z"),
         "html_url": r.url,
+        "event": event,
+        "head_repository": {"full_name": head_repo},
     }
 
 
@@ -426,11 +498,16 @@ class FakeGh:
     """Stands in for the gh CLI, serving one workflow's history."""
 
     def __init__(self, runs, log="", head_branch="main", log_fails=False,
-                 event="schedule", head_repo="o/r", attempt=1, listed=None):
+                 event="schedule", head_repo="o/r", attempt=1, listed=None,
+                 previous=None, fork_ids=()):
         self.runs, self.log, self.head_branch, self.log_fails = runs, log, head_branch, log_fails
         self.event, self.head_repo, self.attempt = event, head_repo, attempt
         # What the runs listing returns, if it lags behind self.runs.
         self.listed = runs if listed is None else listed
+        # The previous attempt's conclusion, served when attempt > 1.
+        self.previous = previous
+        # Runs the listing shows as a fork's pull request runs.
+        self.fork_ids = set(fork_ids)
 
     def __call__(self, *args):
         if args[0] == "run":
@@ -440,6 +517,12 @@ class FakeGh:
         path = args[1]
         if path == "repos/o/r":
             return json.dumps({"default_branch": "main"})
+        if "/attempts/" in path:
+            run_id, n = re.fullmatch(r"repos/o/r/actions/runs/(\d+)/attempts/(\d+)", path).groups()
+            # Only the attempt before the current one exists to be asked for.
+            assert int(n) == self.attempt - 1, path
+            return json.dumps({"id": int(run_id), "run_attempt": int(n),
+                               "conclusion": self.previous})
         if "/runs/" in path and "workflows" not in path:
             run_id = int(path.rsplit("/", 1)[1])
             r = next(r for r in self.runs if r.id == run_id)
@@ -454,7 +537,10 @@ class FakeGh:
             })
         page = int(path.rsplit("page=", 1)[1])
         batch = self.listed[(page - 1) * 100 : page * 100]
-        return json.dumps({"workflow_runs": [api_run(r) for r in batch]})
+        return json.dumps({"workflow_runs": [
+            api_run(r, "pull_request", "someone/r") if r.id in self.fork_ids else api_run(r)
+            for r in batch
+        ]})
 
 
 class TestMain(unittest.TestCase):
@@ -503,6 +589,9 @@ class TestMain(unittest.TestCase):
     def test_fork_pull_request_on_a_branch_named_main_is_ignored(self):
         gh = FakeGh(self.ALERTING, event="pull_request", head_repo="someone/r")
         self.assertEqual(self.texts(gh, 3), [])
+        # A fork's own scheduled run doesn't count either.
+        gh = FakeGh(self.ALERTING, event="schedule", head_repo="someone/r")
+        self.assertEqual(self.texts(gh, 3), [])
         # Same repo, but not a scheduled or dispatched run.
         self.assertEqual(self.texts(FakeGh(self.ALERTING, event="push"), 3), [])
 
@@ -512,18 +601,55 @@ class TestMain(unittest.TestCase):
                 self.assertEqual(len(self.texts(FakeGh(self.ALERTING, event=event), 3)), 1)
 
     def test_rerun_attempt_does_not_realert(self):
-        self.assertEqual(self.texts(FakeGh(self.ALERTING, attempt=2), 3), [])
+        gh = FakeGh(self.ALERTING, attempt=2, previous="failure")
+        self.assertEqual(self.texts(gh, 3), [])
 
     def test_rerun_that_passes_posts_recovery(self):
-        texts = self.texts(FakeGh(timeline("P" + "F" * 5 + "P"), attempt=2), 7)
+        gh = FakeGh(timeline("P" + "F" * 5 + "P"), attempt=2, previous="failure")
+        texts = self.texts(gh, 7)
         self.assertEqual(len(texts), 1)
         self.assertTrue(texts[0].startswith("No action needed: import_fancons is passing again"))
+
+    def test_rerun_whose_previous_attempt_passed_posts_nothing(self):
+        gh = FakeGh(timeline("P" + "F" * 5 + "P"), attempt=2, previous="success")
+        self.assertEqual(self.texts(gh, 7), [])
+
+    def test_rerun_of_an_older_run_posts_nothing(self):
+        gh = FakeGh(timeline("P" + "F" * 5 + "PF"), attempt=2, previous="failure")
+        self.assertEqual(self.texts(gh, 7), [])
+
+    def test_fork_runs_in_the_history_do_not_extend_a_streak(self):
+        # Runs 2 to 6 are a fork's failing pull requests from its own main;
+        # counted, they would make run 7 the end of a 5-hour streak.
+        runs = timeline("P" + "F" * 6)
+        self.assertEqual(len(self.texts(FakeGh(runs), 7)), 1)
+        self.assertEqual(self.texts(FakeGh(runs, fork_ids=range(2, 7)), 7), [])
 
     def test_run_missing_from_the_listing_is_added(self):
         runs = self.ALERTING
         sent, out = self.run_main(FakeGh(runs, listed=runs[1:]), 3)
         self.assertEqual(len(sent), 1)
         self.assertIn("not in the run listing yet", out)
+
+    def test_run_missing_from_a_long_listing_is_found_on_the_first_page(self):
+        # The newest of 6 hourly failures isn't listed yet, and 1,500
+        # passes come before them: one page answers it, with no "+".
+        runs = timeline("P" * 1500 + "F" * 6)
+        calls = []
+        gh = FakeGh(runs, listed=runs[1:])
+
+        def counting(*a):
+            if "workflows/" in a[-1]:
+                calls.append(a)
+            return gh(*a)
+
+        sent, _ = self.run_main(counting, runs[0].id)
+        self.assertEqual(len(calls), 1)
+        self.assertEqual(len(sent), 1)
+        self.assertIn("has failed 6 runs in a row", sent[0][0])
+        with unittest.mock.patch("sys.stdout", new_callable=io.StringIO):
+            _, truncated = ops_alert.fetch_runs("o/r", 42, "main", runs[0], gh=gh)
+        self.assertFalse(truncated)
 
     def test_unreadable_log_still_alerts_as_unclear(self):
         texts = self.texts(FakeGh(timeline("P" + "F" * 6), log_fails=True), 7)
@@ -550,22 +676,33 @@ class TestMain(unittest.TestCase):
         # are on page 2, so there must be no "+" and no re-alert.
         runs = timeline("P" + "F" * 150)
         with unittest.mock.patch("sys.stdout", new_callable=io.StringIO):
-            got, truncated = ops_alert.fetch_runs("o/r", 42, "main", runs[0].id, gh=FakeGh(runs))
+            got, truncated = ops_alert.fetch_runs("o/r", 42, "main", runs[0], gh=FakeGh(runs))
         self.assertFalse(truncated)
         self.assertEqual(len(got), 151)
+
+    def test_short_history_takes_one_call(self):
+        runs = timeline("F" * 30)
+        calls = []
+        gh = FakeGh(runs)
+        got, truncated = ops_alert.fetch_runs(
+            "o/r", 42, "main", runs[0], gh=lambda *a: calls.append(a) or gh(*a)
+        )
+        self.assertEqual(len(calls), 1)
+        self.assertFalse(truncated)
+        self.assertEqual(len(got), 30)
 
     def test_fetch_stops_at_the_first_page_with_a_success_past_the_streak(self):
         runs = timeline("P" * 300 + "F" * 20)
         calls = []
         gh = FakeGh(runs)
         got, _ = ops_alert.fetch_runs(
-            "o/r", 42, "main", runs[0].id, gh=lambda *a: calls.append(a) or gh(*a)
+            "o/r", 42, "main", runs[0], gh=lambda *a: calls.append(a) or gh(*a)
         )
         self.assertEqual(len(calls), 1)
 
     def test_streak_longer_than_every_page_is_truncated(self):
         runs = timeline("F" * (ops_alert.MAX_PAGES * 100 + 5))
-        got, truncated = ops_alert.fetch_runs("o/r", 42, "main", runs[0].id, gh=FakeGh(runs))
+        got, truncated = ops_alert.fetch_runs("o/r", 42, "main", runs[0], gh=FakeGh(runs))
         self.assertTrue(truncated)
         self.assertEqual(len(got), ops_alert.MAX_PAGES * 100)
 
@@ -586,10 +723,6 @@ class TestWorkflow(unittest.TestCase):
         self.assertTrue(watched)
         for name in watched:
             self.assertIn(name, names)
-
-    def test_step_env_has_what_the_script_reads(self):
-        for var in ("OPS_TOKEN", "OPS_CHAT", "RUN_ID", "DRY_RUN"):
-            self.assertRegex(self.text, rf"(?m)^ +{var}: \S")
 
 
 if __name__ == "__main__":

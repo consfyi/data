@@ -9,6 +9,7 @@ import re
 import subprocess
 import unittest
 import unittest.mock
+import urllib.error
 
 import ops_alert
 from ops_alert import Kind, Policy, Run, classify, decide
@@ -524,12 +525,14 @@ class TestSend(unittest.TestCase):
         self.assertFalse(ok)
         self.assertNotIn("SECRET123", out)
 
-    def test_non_200_is_a_warning(self):
-        ok, out = self.quiet(
-            ops_alert.send_telegram, "hi", "t", "c", urlopen=lambda *a, **k: FakeResponse(502)
-        )
+    def test_telegram_error_reports_its_status_without_the_token(self):
+        def reject(url, **kw):
+            raise urllib.error.HTTPError(url, 401, "Unauthorized", {}, None)
+
+        ok, out = self.quiet(ops_alert.send_telegram, "hi", "SECRET123", "c", urlopen=reject)
         self.assertFalse(ok)
-        self.assertIn("HTTP 502", out)
+        self.assertIn("HTTP 401", out)
+        self.assertNotIn("SECRET123", out)
 
     def test_delivers(self):
         sent = {}

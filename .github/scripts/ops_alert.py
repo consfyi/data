@@ -47,6 +47,7 @@ import os
 import re
 import subprocess
 import sys
+import urllib.error
 import urllib.parse
 import urllib.request
 
@@ -339,6 +340,9 @@ def send_telegram(text, token, chat, urlopen=urllib.request.urlopen):
             f"https://api.telegram.org/bot{token}/sendMessage", data=body, timeout=20
         ) as resp:
             status = resp.status
+    except urllib.error.HTTPError as e:
+        # Telegram's error replies (400, 401, 429) arrive as HTTPError.
+        status = e.code
     except Exception as e:  # noqa: BLE001 -- any failure here is log-only
         # str(e) can include the request URL, which holds the bot token.
         print(f"::warning::ops alert could not be delivered ({type(e).__name__})")

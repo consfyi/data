@@ -75,5 +75,17 @@ jobs:
           if [ -s "$failures" ]; then
             echo "::error::$(wc -l < "$failures" | tr -d ' ') ConCat source(s) failed. The other sources were committed."
             while IFS= read -r line; do echo "::error::$line"; done < "$failures"
+            # Actions keeps only 10 error annotations per step, so the summary
+            # carries the full list. Backticks are dropped so upstream error
+            # text can't close the code block and render as Markdown.
+            if [ -n "${GITHUB_STEP_SUMMARY:-}" ]; then
+              {
+                echo "### Failed ConCat sources"
+                echo
+                echo '```'
+                tr -d '`' < "$failures"
+                echo '```'
+              } >> "$GITHUB_STEP_SUMMARY"
+            fi
             exit 1
           fi

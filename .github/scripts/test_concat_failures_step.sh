@@ -41,11 +41,13 @@ PY
 [ -s "$TMP/run.sh" ] && pass "step found after the push" || fail "extracted run block is empty"
 bash -n "$TMP/run.sh" && pass "run block parses" || fail "run block does not parse"
 
-# Runs the block with RUNNER_TEMP=$TMP/runner; prints its exit code.
+# Runs the block with RUNNER_TEMP=$TMP/runner and a fresh step summary file;
+# prints its exit code.
 mkdir -p "$TMP/runner"
 run() {
   local rc=0
-  RUNNER_TEMP="$TMP/runner" bash --noprofile --norc -eo pipefail "$TMP/run.sh" >"$TMP/out" 2>&1 || rc=$?
+  : >"$TMP/summary"
+  GITHUB_STEP_SUMMARY="$TMP/summary" RUNNER_TEMP="$TMP/runner" bash --noprofile --norc -eo pipefail "$TMP/run.sh" >"$TMP/out" 2>&1 || rc=$?
   echo "$rc"
 }
 
@@ -66,5 +68,13 @@ grep -q "^::error::2 ConCat source(s) failed" "$TMP/out" && pass "counts the fai
 grep -q "^::error::palmetto-fur-the-season.json .*403 Forbidden" "$TMP/out" \
   && grep -q "^::error::furski.json .*KeyError" "$TMP/out" \
   && pass "names each source and its error" || fail "missing a source line: $(cat "$TMP/out")"
+
+# Annotations stop at 10 per step; the summary must still list every source.
+for i in $(seq 1 12); do echo "source-$i.json https://reg.example: KeyError: 'x\`\`\`'"; done >"$TMP/runner/concat_failures.txt"
+rc=$(run)
+[ "$rc" = 1 ] && [ "$(grep -c '^source-[0-9]*\.json ' "$TMP/summary")" = 12 ] \
+  && pass "12 failures: the summary lists all of them" || fail "12 failures: exit $rc, summary: $(cat "$TMP/summary")"
+[ "$(grep -c '^```$' "$TMP/summary")" = 2 ] && ! grep -q "x\`" "$TMP/summary" \
+  && pass "upstream backticks can't close the code block" || fail "backticks reached the summary"
 
 [ "$FAILURES" = 0 ] && echo "all passed" || { echo "$FAILURES failed"; exit 1; }

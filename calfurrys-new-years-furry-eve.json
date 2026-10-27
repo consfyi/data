@@ -1,0 +1,23 @@
+{
+  "name": "Calfurry's New Year's Furry Eve",
+  "bluesky": {
+    "did": "did:plc:jimdwyslsqmqwqsa7oxujv75",
+    "handle": "calfurry.ca"
+  },
+  "events": [
+    {
+      "id": "calfurrys-new-years-furry-eve-2027",
+      "name": "Calfurry's New Year's Furry Eve 2027",
+      "url": "https://www.calfurry.ca",
+      "startDate": "2026-12-31",
+      "endDate": "2027-01-01",
+      "venue": "Edmonton Inn & Conference Centre",
+      "address": "11834 Kingsway NW, Edmonton, AB T5G 3J5, Canada",
+      "locale": "en-CA",
+      "latLng": [
+        53.568624,
+        -113.5242702
+      ]
+    }
+  ]
+}

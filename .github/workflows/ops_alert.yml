@@ -1,0 +1,58 @@
+# Page the ops Telegram channel when a watched workflow keeps failing, with a
+# verdict on whether it needs a person. One-off failures stay quiet; see
+# .github/scripts/ops_alert.py for the thresholds and ops_alert_rules.py for
+# the verdicts. Same ops bot and secrets as deploy.yml's trigger alert.
+#
+# To watch another workflow, add its name below.
+name: ops_alert
+on:
+  workflow_run:
+    workflows:
+      - import_fancons
+      - import_concat
+      - import_furrynz
+      - import_rams
+    types:
+      - completed
+
+  # Replays the decision for any past run, to check a threshold or a new
+  # rule against real history. Prints the message; sends only if dry_run is
+  # turned off.
+  workflow_dispatch:
+    inputs:
+      run_id:
+        description: "ID of a watched workflow's run to evaluate"
+        required: true
+      run_attempt:
+        description: "Attempt number to evaluate. Leave blank for the latest attempt."
+        required: false
+      dry_run:
+        description: "Print the message without sending it"
+        type: boolean
+        default: true
+
+permissions:
+  contents: read
+  actions: read # run history and failed-step logs
+
+jobs:
+  alert:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
+      - name: Decide and post
+        env:
+          GH_TOKEN: ${{ github.token }}
+          OPS_TOKEN: ${{ secrets.OPS_TELEGRAM_BOT_TOKEN }}
+          OPS_CHAT: ${{ secrets.OPS_TELEGRAM_CHAT_ID }}
+          RUN_ID: ${{ github.event.workflow_run.id || inputs.run_id }}
+          # The attempt that completed; empty if a dispatch leaves run_attempt blank.
+          RUN_ATTEMPT: ${{ github.event.workflow_run.run_attempt || inputs.run_attempt }}
+          DRY_RUN: ${{ inputs.dry_run }}
+        run: |
+          args=(--run-id "$RUN_ID")
+          if [ -n "$RUN_ATTEMPT" ]; then args+=(--run-attempt "$RUN_ATTEMPT"); fi
+          if [ "$DRY_RUN" = true ]; then args+=(--dry-run); fi
+          python3 .github/scripts/ops_alert.py "${args[@]}"

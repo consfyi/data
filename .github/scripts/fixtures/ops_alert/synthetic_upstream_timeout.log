@@ -1,0 +1,5 @@
+import	UNKNOWN STEP	2026-10-26T12:15:41.1000000Z Traceback (most recent call last):
+import	UNKNOWN STEP	2026-10-26T12:15:41.1000001Z   File "/home/runner/work/data/data/./tools/data-importers/import_fancons.py", line 61, in fetch_bytes
+import	UNKNOWN STEP	2026-10-26T12:15:41.1000002Z     resp = await client.get(url)
+import	UNKNOWN STEP	2026-10-26T12:15:41.1000003Z httpx.ReadTimeout: The read operation timed out
+import	UNKNOWN STEP	2026-10-26T12:15:41.2000000Z ##[error]Process completed with exit code 1.

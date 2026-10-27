@@ -1,0 +1,24 @@
+import	UNKNOWN STEP	2026-10-11T05:45:20.3679463Z ##[group]Run ./tools/data-importers/import_concat_all.sh
+import	UNKNOWN STEP	2026-10-11T05:45:20.3680287Z ^[[36;1m./tools/data-importers/import_concat_all.sh^[[0m
+import	UNKNOWN STEP	2026-10-11T05:45:20.3743007Z shell: /usr/bin/bash -e {0}
+import	UNKNOWN STEP	2026-10-11T05:45:20.3743281Z env:
+import	UNKNOWN STEP	2026-10-11T05:45:20.3743579Z   UV_PYTHON_INSTALL_DIR: /home/runner/work/_temp/uv-python-dir
+import	UNKNOWN STEP	2026-10-11T05:45:20.3744006Z   UV_CACHE_DIR: /home/runner/work/_temp/setup-uv-cache
+import	UNKNOWN STEP	2026-10-11T05:45:20.3746002Z ##[endgroup]
+import	UNKNOWN STEP	2026-10-09T22:37:24.1401692Z Traceback (most recent call last):
+import	UNKNOWN STEP	2026-10-09T22:37:24.1414044Z   File "/home/runner/work/data/data/./tools/data-importers/import_concat.py", line 395, in <module>
+import	UNKNOWN STEP	2026-10-09T22:37:24.1415068Z     main()
+import	UNKNOWN STEP	2026-10-09T22:37:24.1415437Z     ~~~~^^
+import	UNKNOWN STEP	2026-10-09T22:37:24.1416241Z   File "/home/runner/work/data/data/./tools/data-importers/import_concat.py", line 374, in main
+import	UNKNOWN STEP	2026-10-09T22:37:24.1417424Z     for convention in config["conventions"]:
+import	UNKNOWN STEP	2026-10-09T22:37:24.1418295Z                       ~~~~~~^^^^^^^^^^^^^^^
+import	UNKNOWN STEP	2026-10-09T22:37:24.1418950Z KeyError: 'conventions'
+import	UNKNOWN STEP	2026-10-09T22:37:24.1420000Z ##[error]Process completed with exit code 1.
+import	UNKNOWN STEP	2026-10-11T05:45:33.7838965Z Post job cleanup.
+import	UNKNOWN STEP	2026-10-11T05:45:33.8722291Z [command]/usr/bin/git version
+import	UNKNOWN STEP	2026-10-11T05:45:33.8768098Z git version 2.55.0
+import	UNKNOWN STEP	2026-10-11T05:45:33.8805229Z Copying '/home/runner/.gitconfig' to '/home/runner/work/_temp/a4701e30-0f92-4e9c-a259-de83376b1c65/.gitconfig'
+import	UNKNOWN STEP	2026-10-11T05:45:33.8816763Z Temporarily overriding HOME='/home/runner/work/_temp/a4701e30-0f92-4e9c-a259-de83376b1c65' before making global git config changes
+import	UNKNOWN STEP	2026-10-11T05:45:33.9961791Z file:/home/runner/work/data/data/.git/modules/tools/data-importers/config	remote.origin.url
+import	UNKNOWN STEP	2026-10-11T05:45:34.0015105Z [command]/usr/bin/git config --file /home/runner/work/data/data/.git/modules/tools/data-importers/config --name-only --get-regexp ^includeIf\.gitdir:
+import	UNKNOWN STEP	2026-10-11T05:45:34.0206616Z Cleaning up orphan processes

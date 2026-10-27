@@ -1,0 +1,8 @@
+import	UNKNOWN STEP	2026-10-09T22:37:36.6057978Z error: Failed to build `orjson==3.11.3`
+import	UNKNOWN STEP	2026-10-09T22:37:36.6059030Z   cause: Call to `maturin.build_wheel` failed (exit status: 1)
+import	UNKNOWN STEP	2026-10-09T22:37:36.6060784Z          Running `maturin pep517 build-wheel -i /home/runner/work/_temp/setup-uv-cache/builds-v0/.tmp0Dof9C/bin/python --compatibility off`
+import	UNKNOWN STEP	2026-10-09T22:37:36.6084373Z            error: the configured Python interpreter version (3.15) is newer than PyO3's maximum supported version (3.14)
+import	UNKNOWN STEP	2026-10-09T22:37:36.6085073Z            = help: please check if an updated version of PyO3 is available. Current version: 0.25.1
+import	UNKNOWN STEP	2026-10-09T22:37:36.6087312Z          💥 maturin failed
+import	UNKNOWN STEP	2026-10-09T22:37:36.6087877Z            Caused by: Failed to build a native library through cargo
+import	UNKNOWN STEP	2026-10-09T22:37:36.6092616Z          Error: command ['maturin', 'pep517', 'build-wheel', '-i', '/home/runner/work/_temp/setup-uv-cache/builds-v0/.tmp0Dof9C/bin/python', '--compatibility', 'off'] returned non-zero exit status 1

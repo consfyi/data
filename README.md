@@ -8,11 +8,17 @@ If there is an issue with data accuracy, you would like a convention listed, or 
 
 ## Listing policy
 
-In order for a convention to be listed by data.cons.fyi, it must fulfill the following requirements:
+data.cons.fyi lists furry conventions and other furry events. To be listed, an event must meet all of these requirements:
 
-- The target audience must be furries. Conventions that are primarily not targeted towards furries but contain some furry programming do not meet this requirement.
-- The convention must be at least 8 hours in length.
-- An authorized representative of the convention may [request delisting](https://github.com/consfyi/data/issues/new?template=edit-convention.yml&delist=true) at any time.
+- The target audience must be furries. Events that mainly target another audience but have some furry programming don't qualify.
+- The event must be at least 6 hours long. If an event doesn't publish its hours, we use the hours its organizer states.
+- The organizer must have announced the event's dates and venue officially, on its website or on its official social media account.
+
+Each recurring event is one series. Editions of the same event, including several in one year, are entries in that series. Each entry needs its own dates, a name or number that tells it apart from other editions, and a page or post announcing that edition. Regular meetups without a fixed venue and announced dates don't qualify.
+
+We list editions people tell us about or that our importers find. We don't monitor organizers' calendars.
+
+An authorized representative of an event may [request delisting](https://github.com/consfyi/data/issues/new?template=edit-convention.yml&delist=true) at any time.
 
 This policy is subject to change without notice.
 

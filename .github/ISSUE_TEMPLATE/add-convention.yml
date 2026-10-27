@@ -1,5 +1,5 @@
 name: Add convention
-description: Request listing of a convention
+description: Request listing of a convention or event
 title: "Add convention: [INSERT NAME HERE]"
 labels:
   - add
@@ -9,13 +9,13 @@ body:
       value: |
         Please make sure to review the [listing policy](https://data.cons.fyi/#listing-policy) first.
 
-        All information must be verifiable from official sources for the convention.
+        All information must be verifiable from official sources for the event.
 
   - id: name
     type: input
     attributes:
       label: Name
-      description: The name of the convention.
+      description: The name of the event.
       placeholder: e.g. My Cool Furry Con
     validations:
       required: true
@@ -24,28 +24,28 @@ body:
     type: input
     attributes:
       label: Website
-      description: The convention's website.
+      description: The event's website.
       placeholder: e.g. https://mycoolfurrycon.com
 
   - id: startDate
     type: input
     attributes:
       label: Start date
-      description: The start date of the convention, as yyyy-MM-dd.
+      description: The start date of the event, as yyyy-MM-dd.
       placeholder: e.g. 2000-02-03
 
   - id: endDate
     type: input
     attributes:
       label: End date
-      description: The end date of the convention, as yyyy-MM-dd.
+      description: The end date of the event, as yyyy-MM-dd.
       placeholder: e.g. 2000-02-09
 
   - id: venue
     type: input
     attributes:
       label: Venue
-      description: The convention's venue.
+      description: The event's venue.
       placeholder: e.g. Fuzz E. Wuzzy Convention Center
 
   - id: comments

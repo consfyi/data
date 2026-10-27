@@ -6,6 +6,20 @@
   },
   "events": [
     {
+      "id": "furry-down-under-2027",
+      "name": "Furry Down Under 2027",
+      "url": "https://furdu.com.au",
+      "startDate": "2027-04-16",
+      "endDate": "2027-04-18",
+      "venue": "Crowne Plaza Surfers Paradise, an IHG Hotel",
+      "address": "2807 Gold Coast Hwy, Surfers Paradise QLD 4217, Australia",
+      "locale": "en-AU",
+      "latLng": [
+        -28.0176652,
+        153.4299021
+      ]
+    },
+    {
       "id": "furry-down-under-2026",
       "name": "Furry Down Under 2026",
       "url": "https://furdu.com.au",

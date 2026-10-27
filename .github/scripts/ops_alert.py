@@ -419,7 +419,8 @@ def fetch_failed_log(repo, run_id, attempt, gh=_gh):
 def main(argv=None, gh=_gh, send=send_telegram, env=os.environ):
     p = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     p.add_argument("--run-id", type=int, required=True)
-    # The attempt that triggered this job. The run itself reports only its latest attempt.
+    # The attempt that triggered this job. The run itself reports only its
+    # latest attempt.
     p.add_argument("--run-attempt", type=int)
     p.add_argument("--repo", default=env.get("GITHUB_REPOSITORY"))
     p.add_argument("--dry-run", action="store_true", help="print, don't send")

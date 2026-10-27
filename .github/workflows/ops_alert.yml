@@ -24,7 +24,7 @@ on:
         description: "ID of a watched workflow's run to evaluate"
         required: true
       run_attempt:
-        description: "Attempt of that run to evaluate; blank means its latest"
+        description: "Attempt number to evaluate. Leave blank for the latest attempt."
         required: false
       dry_run:
         description: "Print the message without sending it"
@@ -48,7 +48,7 @@ jobs:
           OPS_TOKEN: ${{ secrets.OPS_TELEGRAM_BOT_TOKEN }}
           OPS_CHAT: ${{ secrets.OPS_TELEGRAM_CHAT_ID }}
           RUN_ID: ${{ github.event.workflow_run.id || inputs.run_id }}
-          # The attempt that completed; empty for a dispatch left blank.
+          # The attempt that completed; empty if a dispatch leaves run_attempt blank.
           RUN_ATTEMPT: ${{ github.event.workflow_run.run_attempt || inputs.run_attempt }}
           DRY_RUN: ${{ inputs.dry_run }}
         run: |

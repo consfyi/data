@@ -110,6 +110,10 @@ dry_run = on["workflow_dispatch"]["inputs"]["dry_run"]
 if dry_run.get("default") is not True:
     print("FAIL: workflow_dispatch input dry_run does not default to true")
     ok = False
+run_attempt = on["workflow_dispatch"]["inputs"].get("run_attempt")
+if run_attempt is None or run_attempt.get("required") is not False:
+    print("FAIL: workflow_dispatch input run_attempt is missing or not required: false")
+    ok = False
 if on["workflow_run"].get("types") != ["completed"]:
     print(f"FAIL: workflow_run types are {on['workflow_run'].get('types')!r}, not ['completed']")
     ok = False
@@ -124,7 +128,7 @@ for var in ("OPS_TOKEN", "OPS_CHAT"):
 sys.exit(0 if ok else 1)
 PY
 then
-  pass "dry_run defaults to true; workflow_run fires on completed; RUN_ATTEMPT is the workflow_run's or the input's; OPS_TOKEN and OPS_CHAT match deploy.yml's trigger alert"
+  pass "dry_run defaults to true; run_attempt input is optional; workflow_run fires on completed; RUN_ATTEMPT is the workflow_run's or the input's; OPS_TOKEN and OPS_CHAT match deploy.yml's trigger alert"
 else
   FAILURES=$((FAILURES + 1))
 fi

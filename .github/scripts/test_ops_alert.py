@@ -176,6 +176,26 @@ class TestDecide(unittest.TestCase):
         self.assertIsNone(decide(runs[-7:], 7, previous_attempt="failure"))
         self.assertEqual(decide(runs[-21:], 21).kind, Kind.REMIND)
         self.assertIsNone(decide(runs[-21:], 21, previous_attempt="failure"))
+        self.assertIsNone(decide(runs[-7:], 7, previous_attempt="success"))
+
+    def test_failed_rerun_after_only_cancelled_attempts_decides_like_a_first(self):
+        # Run 7's earlier attempts were cancelled and posted nothing, so its
+        # failed re-run is the first to count it.
+        runs = timeline("P" + "F" * 72)
+        for previous in ("", "cancelled"):
+            with self.subTest(previous=previous):
+                event = decide(runs[-7:], 7, previous_attempt=previous)
+                self.assertEqual(event.kind, Kind.ALERT)
+                self.assertEqual(len(event.streak), 6)
+                self.assertEqual(
+                    decide(runs[-21:], 21, previous_attempt=previous).kind, Kind.REMIND)
+
+    def test_failed_rerun_after_only_cancelled_attempts_of_an_older_run_posts_nothing(self):
+        # Run 8 failed while run 7 counted as cancelled, so run 8 alerted.
+        runs = timeline("P" + "F" * 5 + "CF")
+        self.assertEqual(decide(runs, 8).kind, Kind.ALERT)
+        runs = timeline("P" + "F" * 7)
+        self.assertIsNone(decide(runs, 7, previous_attempt=""))
 
     def test_rerun_that_passes_recovers_the_streak_it_ended(self):
         # Run 7's first attempt failed, which made the streak 5 hours long
@@ -543,7 +563,8 @@ class FakeGh:
 
     def __init__(self, runs, log="", head_branch="main", log_fails=False,
                  event="schedule", head_repo="o/r", attempt=1, listed=None,
-                 attempts=None, fork_ids=(), in_progress=None, logs=None):
+                 attempts=None, fork_ids=(), in_progress=None, logs=None,
+                 reruns=None):
         self.runs, self.log, self.head_branch, self.log_fails = runs, log, head_branch, log_fails
         # Failed-step logs by attempt number, where they differ from `log`.
         self.logs = logs or {}
@@ -558,10 +579,13 @@ class FakeGh:
         # Runs in progress, mapped to their earlier attempts' conclusions,
         # where None is an attempt that hasn't completed.
         self.in_progress = in_progress or {}
+        # Completed runs, mapped to their earlier attempts' conclusions; the
+        # latest attempt's is the run's own.
+        self.reruns = reruns or {}
 
     def latest(self, run_id):
         """The run's latest attempt number."""
-        attempts = self.in_progress.get(run_id)
+        attempts = self.in_progress.get(run_id, self.reruns.get(run_id))
         return self.attempt if attempts is None else len(attempts) + 1
 
     def __call__(self, *args):
@@ -580,7 +604,7 @@ class FakeGh:
         if "/attempts/" in path:
             run_id, n = map(int, re.fullmatch(
                 r"repos/o/r/actions/runs/(\d+)/attempts/(\d+)", path).groups())
-            attempts = self.in_progress.get(run_id)
+            attempts = self.in_progress.get(run_id, self.reruns.get(run_id))
             if attempts is None:
                 attempts, latest = self.attempts, self.attempt
                 self.requested.append(n)
@@ -610,6 +634,7 @@ class FakeGh:
         batch = listed[(page - 1) * 100 : page * 100]
         return json.dumps({"workflow_runs": [
             api_run(r, "pull_request", "someone/r") if r.id in self.fork_ids
+            else {**api_run(r), "run_attempt": self.latest(r.id)} if r.id in self.reruns
             else api_run(r, attempts=self.in_progress.get(r.id))
             for r in batch
         ]})
@@ -684,9 +709,19 @@ class TestMain(unittest.TestCase):
         self.assertEqual(len(texts), 1)
         self.assertTrue(texts[0].startswith("No action needed: import_fancons is passing again"))
 
-    def test_rerun_with_no_previous_conclusion_does_not_realert(self):
-        gh = FakeGh(self.ALERTING, attempt=2, attempts={1: None})
-        self.assertEqual(self.texts(gh, 3), [])
+    def test_failed_rerun_after_a_cancelled_attempt_alerts(self):
+        # Attempt 1 posted nothing, so attempt 2's failure is the first to
+        # count run 3.
+        for previous in ("cancelled", None):
+            with self.subTest(previous=previous):
+                gh = FakeGh(self.ALERTING, attempt=2, attempts={1: previous})
+                texts = self.texts(gh, 3)
+                self.assertEqual(len(texts), 1)
+                self.assertIn("has failed 2 runs in a row", texts[0])
+
+    def test_failed_rerun_after_a_cancelled_attempt_of_an_older_run_posts_nothing(self):
+        gh = FakeGh(timeline("P" + "F" * 7), attempt=2, attempts={1: "cancelled"})
+        self.assertEqual(self.texts(gh, 7), [])
 
     def test_rerun_that_passes_after_a_cancelled_attempt_posts_recovery(self):
         for previous in ("cancelled", None):
@@ -753,6 +788,20 @@ class TestMain(unittest.TestCase):
         # failure is run 7's result.
         gh = FakeGh(self.RACING, in_progress={7: {1: "failure", 2: None}})
         self.assertEqual(len(self.texts(gh, 8)), 1)
+
+    def test_rerun_in_progress_after_a_cancelled_attempt_counts_the_failure(self):
+        # Attempt 2 was cancelled, so attempt 1's failure is run 7's result.
+        gh = FakeGh(self.RACING, in_progress={7: {1: "failure", 2: "cancelled"}})
+        texts = self.texts(gh, 8)
+        self.assertEqual(len(texts), 1)
+        self.assertIn("is passing again after 6 failed runs (", texts[0])
+
+    def test_run_whose_latest_attempt_was_cancelled_counts_its_failure(self):
+        # Run 7's attempt 1 failed and alerted; its re-run was cancelled.
+        # Counted as cancelled, run 7 would let run 8 alert a second time.
+        runs = timeline("P" + "F" * 5 + "CF")
+        self.assertEqual(len(self.texts(FakeGh(runs), 8)), 1)
+        self.assertEqual(self.texts(FakeGh(runs, reruns={7: {1: "failure"}}), 8), [])
 
     def test_first_attempt_in_progress_is_ignored(self):
         # Run 150 is still on its first attempt, so it has no result yet. It

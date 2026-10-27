@@ -11,11 +11,14 @@ It keeps no state: every decision comes from the workflow's own run history.
   past Policy.remind_hour_utc and at least Policy.remind_quiet after the
   alert.
 - The first success after an alerted streak posts a recovery notice.
-- A re-run attempt never alerts or reminds, because its first attempt
-  already did. A passing re-run of the newest run can post the recovery
-  notice, unless an earlier attempt of the same run passed. Attempts that
-  neither passed nor failed, such as cancelled ones, don't count.
-- A run that's being re-run counts as its newest completed attempt.
+- A failed re-run alerts or reminds only if no earlier attempt passed or
+  failed and no newer run has counted since; otherwise an earlier attempt
+  or a newer run already did. A passing re-run of the newest run can post
+  the recovery notice, unless an earlier attempt of the same run passed.
+  Attempts that neither passed nor failed, such as cancelled ones, don't
+  count.
+- A re-run or cancelled run counts as its newest attempt that passed or
+  failed.
 - Only scheduled and manually dispatched runs from this repository count;
   anything else, such as a fork's pull request, is ignored.
 
@@ -148,9 +151,12 @@ def decide(runs, run_id, policy=Policy(), previous_attempt=None):
         return None
 
     if previous_attempt is not None:
-        # A failed re-run: its first attempt already alerted or reminded if
-        # it was due.
-        return None
+        # A failed re-run. An earlier attempt that failed already alerted or
+        # reminded if it was due, and one that passed already posted any
+        # recovery. If none counted, newer runs were decided while this one
+        # counted as cancelled, so one of them may already have alerted.
+        if previous_attempt in FAILED | PASSED or _counted(runs[:idx]):
+            return None
 
     streak = _leading_failures(history)
     if not _qualifies(streak, policy):
@@ -363,17 +369,19 @@ def _attempt(repo, run_id, k, gh):
 
 def _listed_run(d, repo, this, gh):
     """The Run a listing entry counts as, or None. `this`, the Run being
-    decided, replaces its own entry. A run being re-run counts as its newest
-    completed attempt; a first attempt still in progress has no result yet."""
+    decided, replaces its own entry. A run being re-run, or whose latest
+    attempt was cancelled, counts as its newest attempt that passed or
+    failed; a first attempt still in progress has no result yet."""
     if d["id"] == this.id:
         return this
-    if d["status"] == "completed":
-        return _to_run(d)
+    run = _to_run(d)
+    if run.conclusion in FAILED | PASSED:
+        return run
     for k in range(d.get("run_attempt", 1) - 1, 0, -1):
-        a = _attempt(repo, d["id"], k, gh)
-        if a["status"] == "completed":
-            return dataclasses.replace(_to_run(d), conclusion=a["conclusion"] or "")
-    return None
+        conclusion = _attempt(repo, d["id"], k, gh)["conclusion"] or ""
+        if conclusion in FAILED | PASSED:
+            return dataclasses.replace(run, conclusion=conclusion)
+    return run if d["status"] == "completed" else None
 
 
 def fetch_runs(repo, workflow_id, branch, this, gh=_gh):

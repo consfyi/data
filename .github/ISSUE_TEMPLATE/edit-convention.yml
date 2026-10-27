@@ -1,5 +1,5 @@
 name: Edit convention
-description: Request an edit to or delisting of a convention
+description: Request an edit to or delisting of a convention or event
 title: "Edit convention: [INSERT NAME HERE]"
 labels:
   - edit
@@ -23,13 +23,13 @@ body:
   - id: delist
     type: checkboxes
     attributes:
-      label: Delist this convention
+      label: Delist this convention or event
       description: |
-        If you are an authorized representative of the convention, you may request delisting of this convention.
+        If you are an authorized representative of the convention or event, you may request its delisting.
 
         **There is no need to fill out the remainder of the form.**
       options:
-        - label: I am requesting delisting of this convention.
+        - label: I am requesting delisting of this convention or event.
 
   - id: url
     type: input

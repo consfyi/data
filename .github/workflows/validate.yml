@@ -36,3 +36,5 @@ jobs:
         run: uv run -q --no-project --with pyyaml -- bash .github/scripts/test_ops_alert_workflow.sh
       - name: Ops alert tests
         run: python3 .github/scripts/test_ops_alert.py
+      - name: Concat failed-source step tests
+        run: uv run -q --no-project --with pyyaml -- bash .github/scripts/test_concat_failures_step.sh

@@ -26,6 +26,7 @@ jobs:
           CONCAT_PROXY: ${{ secrets.CONCAT_PROXY }}
           CONCAT_PROXY_SECRET: ${{ secrets.CONCAT_PROXY_SECRET }}
           CONCAT_PROXY_HOSTS: ${{ secrets.CONCAT_PROXY_HOSTS }}
+          CONCAT_FAILURES_FILE: ${{ runner.temp }}/concat_failures.txt
 
       # This job pushes straight to main, and validate.yml only triggers on
       # pull_request, so nothing checks what the bot writes. A bad import
@@ -63,3 +64,16 @@ jobs:
           git add .
           git diff-index --quiet HEAD || git commit -m "via import_concat"
           git push
+
+      # import_concat_all.sh exits 0 so the sources that worked get committed
+      # above. Fail the run afterwards if any source failed: a run that stays
+      # green while sources fail is how ConCat's 2026-08-18 API change went
+      # unnoticed for two months.
+      - name: Fail if any source failed
+        run: |
+          failures="$RUNNER_TEMP/concat_failures.txt"
+          if [ -s "$failures" ]; then
+            echo "::error::$(wc -l < "$failures" | tr -d ' ') ConCat source(s) failed. The other sources were committed."
+            while IFS= read -r line; do echo "::error::$line"; done < "$failures"
+            exit 1
+          fi

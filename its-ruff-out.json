@@ -2,6 +2,20 @@
   "name": "It's Ruff Out",
   "events": [
     {
+      "id": "its-ruff-out-2027",
+      "name": "It's Ruff Out 2027",
+      "url": "https://ruffout.org",
+      "startDate": "2027-05-01",
+      "endDate": "2027-05-31",
+      "venue": "State Park in the North East",
+      "address": "State Park Rd NE, Northern Township, MN 56601, USA",
+      "locale": "en-US",
+      "latLng": [
+        47.5367885,
+        -94.8311549
+      ]
+    },
+    {
       "id": "its-ruff-out-2026",
       "name": "It's Ruff Out 2026",
       "url": "https://ruffout.org",

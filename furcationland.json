@@ -6,6 +6,20 @@
   },
   "events": [
     {
+      "id": "furcationland-2027",
+      "name": "Furcationland 2027",
+      "url": "https://furcationland.org",
+      "startDate": "2027-04-08",
+      "endDate": "2027-04-11",
+      "venue": "Holiday Inn Portland-By The Bay",
+      "address": "88 Spring St, Portland, ME 04101, United States",
+      "locale": "en-US",
+      "latLng": [
+        43.6534888,
+        -70.2608888
+      ]
+    },
+    {
       "id": "furcationland-2026",
       "name": "Furcationland 2026",
       "url": "https://furcationland.org",

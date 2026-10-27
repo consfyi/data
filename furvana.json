@@ -6,6 +6,20 @@
   },
   "events": [
     {
+      "id": "furvana-2027",
+      "name": "Furvana 2027",
+      "url": "https://www.furvana.org",
+      "startDate": "2027-09-10",
+      "endDate": "2027-09-12",
+      "venue": "Ocean Shores, WA",
+      "address": "Ocean Shores, WA, USA",
+      "locale": "en-US",
+      "latLng": [
+        47.0074167,
+        -124.1613653
+      ]
+    },
+    {
       "id": "furvana-2025",
       "name": "Furvana 2025",
       "url": "https://www.furvana.org",

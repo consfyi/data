@@ -30,6 +30,14 @@
             "confidence": 1.0
           }
         },
+        "hotel": {
+          "opens": {
+            "date": "2026-10-30",
+            "source": "https://bsky.app/profile/did:plc:g7b4ncbjtguyen43rp2434w5/post/3myrv5v66i32i",
+            "asOf": "2026-10-26T14:02:27.379Z",
+            "confidence": 1
+          }
+        },
         "dealers": {
           "closes": {
             "date": "2026-07-15",

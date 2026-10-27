@@ -22,6 +22,13 @@ It keeps no state: every decision comes from the workflow's own run history.
 - Only scheduled and manually dispatched runs from this repository count;
   anything else, such as a fork's pull request, is ignored.
 
+Known limits: the history is replayed in the order runs started, so a run
+that finishes after newer runs were decided can be miscounted. A run that
+hangs until it times out can post a second alert, or an alert after the
+recovery notice. A cancelled run that is re-run and fails after the next
+run was decided can leave the streak without an alert, so the first
+message is the next day's reminder.
+
 To watch another workflow, add its name to ops_alert.yml's workflow_run
 list, and to POLICIES below if the defaults don't fit its schedule. To
 teach it a new kind of failure, add a rule to ops_alert_rules.py.
@@ -120,8 +127,10 @@ def _remind_day(t, policy):
 def decide(runs, run_id, policy=Policy(), previous_attempt=None):
     """Return the Event that run `run_id` should post, or None.
 
-    `runs` is the workflow's completed runs, newest first. Runs newer than
-    `run_id` are ignored, so the decision is the same whenever it is made.
+    `runs` is the workflow's completed runs, newest first. A first attempt
+    ignores runs newer than `run_id`, so its decision is the same whenever
+    it is made. A re-run also checks whether newer runs have counted, so
+    replaying one later can give a different answer.
     `previous_attempt` is None for a run's first attempt; for a re-run, it
     summarizes the earlier attempts: a passing conclusion if any passed,
     else a failing one if any failed, else "".

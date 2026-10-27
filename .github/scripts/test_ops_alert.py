@@ -197,6 +197,12 @@ class TestDecide(unittest.TestCase):
         runs = timeline("P" + "F" * 7)
         self.assertIsNone(decide(runs, 7, previous_attempt=""))
 
+    def test_failed_rerun_is_not_silenced_by_a_newer_cancelled_run(self):
+        # Run 8 was cancelled, so it posted nothing and run 7 still alerts.
+        event = decide(timeline("P" + "F" * 6 + "C"), 7, previous_attempt="cancelled")
+        self.assertEqual(event.kind, Kind.ALERT)
+        self.assertEqual(len(event.streak), 6)
+
     def test_rerun_that_passes_recovers_the_streak_it_ended(self):
         # Run 7's first attempt failed, which made the streak 5 hours long
         # and alerted. Its re-run passed, so the streak is over.

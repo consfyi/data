@@ -523,8 +523,8 @@ class TestMessage(unittest.TestCase):
         text = ops_alert.format_message("import_fancons", event, d)
         self.assertEqual(
             text,
-            "Probably no action needed: import_fancons has now failed 20 "
-            "times in a row since 2026-10-24 21:15 UTC.\n"
+            "Probably no action needed: import_fancons is still failing (20 "
+            "times in a row since 2026-10-24 21:15 UTC).\n"
             "\n"
             "- A source site timed out or returned a server error. The importer "
             "retries on its schedule. If tomorrow's reminder still shows this, "
@@ -544,6 +544,20 @@ class TestMessage(unittest.TestCase):
             "(2026-10-24 21:15 to 2026-10-25 03:15 UTC).\n"
             "Run: https://example.test/runs/9",
         )
+
+    def test_times_shown_are_when_attempts_finished(self):
+        # One run fails, is re-run 5 hours later and fails again, then the
+        # next run passes. Both failures share the run's created_at.
+        runs = timeline("PF")
+        first = dataclasses.replace(at(runs, 2), completed_at=T0 + hours(1.5))
+        second = rerun(first, "failure", T0 + hours(6.5))
+        passed = Run(3, "success", T0 + hours(7), T0 + hours(7.25),
+                     "https://example.test/runs/3")
+        runs = [passed, second, first, at(runs, 1)]
+        alert = ops_alert.format_message("import_rams", decide(runs, second), classify(""))
+        self.assertIn("in a row since 2026-10-24 21:45 UTC.", alert)
+        recovered = ops_alert.format_message("import_rams", decide(runs, passed))
+        self.assertIn("(2026-10-24 21:45 to 2026-10-25 02:45 UTC)", recovered)
 
     def test_one_failure_is_singular(self):
         run = timeline("F")[0]
@@ -952,7 +966,7 @@ class TestMain(unittest.TestCase):
         runs = timeline("F" * 1029)
         texts = self.texts(FakeGh(runs), 1029)
         self.assertEqual(len(texts), 1)
-        self.assertIn(f"has now failed {ops_alert.MAX_PAGES * 100}+ times in a row", texts[0])
+        self.assertIn(f"is still failing ({ops_alert.MAX_PAGES * 100}+ times in a row", texts[0])
 
     def test_failing_gh_api_call_fails_this_run(self):
         # A red ops_alert run is the visible sign that alerting is broken.

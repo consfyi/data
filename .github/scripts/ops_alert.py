@@ -22,8 +22,10 @@ It keeps no state: every decision comes from the workflow's own run history.
   anything else, such as a fork's pull request, is ignored.
 
 The job for each attempt replays every attempt that finished before it,
-so every job agrees on what was already posted. Known limit: that holds
-only if the run listing is current. An attempt that finished seconds
+so every job agrees on what was already posted. This assumes an attempt's
+updated_at doesn't change after it completes, which held on week-old runs
+but GitHub doesn't document. Known limit: the jobs agree only if the run
+listing is current. An attempt that finished seconds
 before this one but still shows as in progress is left out, which can
 post a second alert, reminder, or recovery, or delay or miss one.
 
@@ -285,9 +287,9 @@ def format_message(workflow, event, diagnosis=None, truncated=False):
     n = f"{len(event.streak)}+" if truncated else str(len(event.streak))
     times = "time" if n == "1" else "times"
     failures = "failure" if n == "1" else "failures"
-    start = _when(event.streak[-1].created_at)
+    start = _when(event.streak[-1].completed_at)
     if event.kind is Kind.RECOVERED:
-        end = _when(event.streak[0].created_at)
+        end = _when(event.streak[0].completed_at)
         return (
             f"No action needed: {workflow} is passing again "
             f"after {n} {failures} ({start} to {end} UTC).\nRun: {event.run.url}"
@@ -296,7 +298,7 @@ def format_message(workflow, event, diagnosis=None, truncated=False):
     if event.kind is Kind.ALERT:
         head = f"{label}: {workflow} has failed {n} {times} in a row since {start} UTC."
     else:
-        head = f"{label}: {workflow} has now failed {n} {times} in a row since {start} UTC."
+        head = f"{label}: {workflow} is still failing ({n} {times} in a row since {start} UTC)."
     parts = [head, ""]
     parts += [f"- {a}" for a in diagnosis.advice]
     if diagnosis.evidence:

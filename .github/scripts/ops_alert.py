@@ -25,7 +25,7 @@ The job for each attempt replays every attempt that finished before it,
 so every job agrees on what was already posted. Known limit: that holds
 only if the run listing is current. An attempt that finished seconds
 before this one but still shows as in progress is left out, which can
-post a second alert or reminder, or miss a recovery.
+post a second alert, reminder, or recovery, or delay or miss one.
 
 To watch another workflow, add its name to ops_alert.yml's workflow_run
 list, and to POLICIES below if the defaults don't fit its schedule. To
@@ -92,8 +92,10 @@ class Run:
 
     @property
     def key(self):
-        # Attempts that finish in the same second still sort the same way
-        # in every job.
+        # Attempts with identical timestamps still sort the same way in
+        # every job. The run and attempt endpoints can report an attempt's
+        # time a second apart, so attempts that finish within a second of
+        # each other may not.
         return (self.completed_at, self.id, self.attempt)
 
 
@@ -132,8 +134,9 @@ def _replay(runs, policy):
     in the order they finished. `reset` is whether it ended the streak."""
     streak, alert_at, reminded, passed = [], None, None, None
     for r in sorted(filter(_counts, runs), key=lambda r: r.key):
-        newest = max([f.created_at for f in streak] + [passed or r.created_at])
-        if r.created_at < newest:
+        # streak[0] is the newest-created failure, never older than `passed`.
+        newest = streak[0].created_at if streak else passed
+        if newest is not None and r.created_at < newest:
             # An older run's result, such as a re-run of an earlier commit,
             # says nothing about whether the newer runs' code works.
             yield r, None, False
@@ -280,19 +283,20 @@ def _when(t):
 def format_message(workflow, event, diagnosis=None, truncated=False):
     # The verdict label leads, so a phone's notification preview shows it.
     n = f"{len(event.streak)}+" if truncated else str(len(event.streak))
-    runs = "run" if n == "1" else "runs"
+    times = "time" if n == "1" else "times"
+    failures = "failure" if n == "1" else "failures"
     start = _when(event.streak[-1].created_at)
     if event.kind is Kind.RECOVERED:
         end = _when(event.streak[0].created_at)
         return (
             f"No action needed: {workflow} is passing again "
-            f"after {n} failed {runs} ({start} to {end} UTC).\nRun: {event.run.url}"
+            f"after {n} {failures} ({start} to {end} UTC).\nRun: {event.run.url}"
         )
     label = VERDICT_LABELS[diagnosis.verdict]
     if event.kind is Kind.ALERT:
-        head = f"{label}: {workflow} has failed {n} {runs} in a row since {start} UTC."
+        head = f"{label}: {workflow} has failed {n} {times} in a row since {start} UTC."
     else:
-        head = f"{label}: {workflow} is still failing, {n} {runs} in a row since {start} UTC."
+        head = f"{label}: {workflow} is still failing: {n} {failures} in a row since {start} UTC."
     parts = [head, ""]
     parts += [f"- {a}" for a in diagnosis.advice]
     if diagnosis.evidence:
@@ -377,7 +381,7 @@ def fetch_runs(repo, workflow_id, branch, this, gh=_gh):
     """Completed attempts, back far enough to include the last pass that
     ended a streak before `this`, the attempt being decided. Returns
     (attempts, truncated)."""
-    found = {this.key[1:]: this}
+    found = {(this.id, this.attempt): this}
     for page in range(1, MAX_PAGES + 1):
         data = json.loads(
             gh(
@@ -394,7 +398,7 @@ def fetch_runs(repo, workflow_id, branch, this, gh=_gh):
                     # Keyed by (run, attempt): a run that shifts onto the next
                     # page between calls is listed twice. `this` is already
                     # known, and the listing can lag behind it.
-                    found.setdefault(r.key[1:], r)
+                    found.setdefault((r.id, r.attempt), r)
         runs = list(found.values())
         if len(batch) < 100:
             return runs, False
@@ -450,7 +454,7 @@ def main(argv=None, gh=_gh, send=send_telegram, env=os.environ):
     this = dataclasses.replace(
         _to_run(done, _parse_time(run["created_at"])),
         # An attempt's html_url is the run's, so name the attempt in the link.
-        url=f"{run['html_url']}/attempts/{attempt}", attempt=attempt,
+        url=f"{run['html_url']}/attempts/{attempt}",
     )
     runs, truncated = fetch_runs(args.repo, run["workflow_id"], branch, this, gh=gh)
     event = decide(runs, this, POLICIES.get(workflow, Policy()))

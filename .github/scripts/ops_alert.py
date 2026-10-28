@@ -296,7 +296,7 @@ def format_message(workflow, event, diagnosis=None, truncated=False):
     if event.kind is Kind.ALERT:
         head = f"{label}: {workflow} has failed {n} {times} in a row since {start} UTC."
     else:
-        head = f"{label}: {workflow} is still failing: {n} {failures} in a row since {start} UTC."
+        head = f"{label}: {workflow} has now failed {n} {times} in a row since {start} UTC."
     parts = [head, ""]
     parts += [f"- {a}" for a in diagnosis.advice]
     if diagnosis.evidence:

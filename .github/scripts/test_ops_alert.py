@@ -225,6 +225,15 @@ class TestDecide(unittest.TestCase):
         self.assertEqual(events(runs), [(7, Kind.ALERT), (10, Kind.RECOVERED)])
         self.assertEqual(len(decide(runs, at(runs, 10)).streak), 8)
 
+    def test_rerun_of_an_older_run_inside_the_streak_does_not_count(self):
+        # Run 2's re-run fails during the streak, but run 3 is newer.
+        runs = timeline("PFF")
+        late = rerun(at(runs, 2), "failure", T0 + hours(6))
+        self.assertIsNone(decide(runs + [late], late))
+        # The same re-run of run 3, the newest-created run, counts.
+        late = rerun(at(runs, 3), "failure", T0 + hours(6))
+        self.assertEqual(decide(runs + [late], late).kind, Kind.ALERT)
+
     def test_hung_run_that_times_out_late_does_not_realert(self):
         # Run 3 hangs until GitHub's 6-hour limit, finishing after run 8.
         runs = timeline("P" + "F" * 7)
@@ -514,8 +523,8 @@ class TestMessage(unittest.TestCase):
         text = ops_alert.format_message("import_fancons", event, d)
         self.assertEqual(
             text,
-            "Probably no action needed: import_fancons is still failing: 20 "
-            "failures in a row since 2026-10-24 21:15 UTC.\n"
+            "Probably no action needed: import_fancons has now failed 20 "
+            "times in a row since 2026-10-24 21:15 UTC.\n"
             "\n"
             "- A source site timed out or returned a server error. The importer "
             "retries on its schedule. If tomorrow's reminder still shows this, "
@@ -545,6 +554,12 @@ class TestMessage(unittest.TestCase):
         recovered = ops_alert.format_message(
             "import_rams", ops_alert.Event(Kind.RECOVERED, [run], run))
         self.assertIn("after 1 failure (", recovered)
+
+    def test_eleven_failures_are_plural(self):
+        runs = timeline("F" * 11)
+        alert = ops_alert.format_message(
+            "import_rams", ops_alert.Event(Kind.ALERT, runs, runs[0]), classify(""))
+        self.assertIn("has failed 11 times in a row", alert)
 
 
 class FakeResponse:
@@ -628,7 +643,7 @@ class FakeGh:
 
     def __init__(self, runs, log="", head_branch="main", log_fails=False,
                  event="schedule", head_repo="o/r", listed=None, fork_ids=(),
-                 in_progress=None, logs=None):
+                 in_progress=None, logs=None, listing_lag=None):
         self.runs, self.log, self.head_branch, self.log_fails = runs, log, head_branch, log_fails
         # Failed-step logs by attempt number, where they differ from `log`.
         self.logs = logs or {}
@@ -641,6 +656,9 @@ class FakeGh:
         # Runs with an attempt in progress, mapped to its number. A run with
         # no completed attempt yet has an entry here and none in `runs`.
         self.in_progress = in_progress or {}
+        # Runs whose listing entry reports updated_at this much earlier
+        # than the run endpoint does.
+        self.listing_lag = listing_lag or {}
 
     def attempts(self, run_id):
         return sorted((r for r in self.runs if r.id == run_id), key=lambda r: r.attempt)
@@ -691,11 +709,16 @@ class FakeGh:
             })
         page = int(path.rsplit("page=", 1)[1])
         batch = self.run_ids()[(page - 1) * 100 : page * 100]
-        return json.dumps({"workflow_runs": [
+        entries = [
             self.entry(i, event="pull_request", head_repo="someone/r")
             if i in self.fork_ids else self.entry(i)
             for i in batch
-        ]})
+        ]
+        for d in entries:
+            if d["id"] in self.listing_lag:
+                updated = ops_alert._parse_time(d["updated_at"]) - self.listing_lag[d["id"]]
+                d["updated_at"] = updated.isoformat().replace("+00:00", "Z")
+        return json.dumps({"workflow_runs": entries})
 
 
 class TestMain(unittest.TestCase):
@@ -905,6 +928,14 @@ class TestMain(unittest.TestCase):
         self.assertIn("has failed 6 times in a row", sent[0][0])
         self.assertFalse(self.fetch(gh, runs[0])[1])
 
+    def test_listing_copy_of_the_triggering_attempt_counts_once(self):
+        # The listing reports run 3 a second earlier than the run endpoint.
+        # Counted twice, its failure would be the third that alerts.
+        gh = FakeGh(self.ALERTING, listing_lag={3: datetime.timedelta(seconds=1)})
+        with unittest.mock.patch.dict(ops_alert.POLICIES,
+                                      {"import_fancons": Policy(min_failures=3)}):
+            self.assertEqual(self.texts(gh, 3), [])
+
     def test_run_listed_on_two_pages_counts_once(self):
         # Run 52 shifted onto page 2 between the two calls.
         runs = timeline("P" + "F" * 150 + "P")
@@ -921,7 +952,7 @@ class TestMain(unittest.TestCase):
         runs = timeline("F" * 1029)
         texts = self.texts(FakeGh(runs), 1029)
         self.assertEqual(len(texts), 1)
-        self.assertIn(f"still failing: {ops_alert.MAX_PAGES * 100}+ failures in a row", texts[0])
+        self.assertIn(f"has now failed {ops_alert.MAX_PAGES * 100}+ times in a row", texts[0])
 
     def test_failing_gh_api_call_fails_this_run(self):
         # A red ops_alert run is the visible sign that alerting is broken.

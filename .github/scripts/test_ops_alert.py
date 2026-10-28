@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
 """Tests for the ops channel alert. Run directly:
 python3 .github/scripts/test_ops_alert.py"""
+import dataclasses
 import datetime
 import io
 import json
 import pathlib
+import random
 import re
 import subprocess
 import unittest
@@ -22,17 +24,32 @@ T0 = datetime.datetime(2026, 10, 24, 20, 15, tzinfo=datetime.timezone.utc)
 
 def timeline(pattern, every=datetime.timedelta(hours=1), start=T0):
     """Runs from a string, oldest first: F failed, T timed out, S startup
-    failure, P passed, C cancelled. Returned newest first, the order the API
-    gives."""
+    failure, P passed, C cancelled. Each finishes as it starts. Returned
+    newest first."""
     codes = {
         "F": "failure", "T": "timed_out", "S": "startup_failure",
         "P": "success", "C": "cancelled",
     }
     runs = [
-        Run(i + 1, codes[c], start + i * every, f"https://example.test/runs/{i + 1}")
+        Run(i + 1, codes[c], start + i * every, start + i * every,
+            f"https://example.test/runs/{i + 1}")
         for i, c in enumerate(pattern)
     ]
     return runs[::-1]
+
+
+def at(runs, run_id):
+    return next(r for r in runs if r.id == run_id)
+
+
+def rerun(r, conclusion, completed_at):
+    """The next attempt of attempt `r`."""
+    return dataclasses.replace(r, conclusion=conclusion, completed_at=completed_at,
+                               attempt=r.attempt + 1)
+
+
+def hours(n):
+    return datetime.timedelta(hours=n)
 
 
 def log_lines(*lines):
@@ -44,9 +61,11 @@ def log_lines(*lines):
 
 
 def events(runs):
-    """The event every run would post, oldest first, as (run id, kind)."""
+    """The event every attempt would post, in the order they finished, as
+    (run id, kind)."""
     return [
-        (r.id, e.kind) for r in runs[::-1] if (e := decide(runs, r.id)) is not None
+        (r.id, e.kind) for r in sorted(runs, key=lambda r: r.key)
+        if (e := decide(runs, r)) is not None
     ]
 
 
@@ -64,19 +83,19 @@ class TestDecide(unittest.TestCase):
         self.assertEqual(got, [(7, Kind.ALERT)])
 
     def test_six_hourly_workflow_alerts_on_second_failure(self):
-        got = events(timeline("PFFF", every=datetime.timedelta(hours=6)))
+        got = events(timeline("PFFF", every=hours(6)))
         self.assertEqual(got, [(3, Kind.ALERT)])
 
     def test_jittered_six_hourly_runs_alert_on_second_failure(self):
         # Scheduled runs start late by varying amounts: these two failures
-        # are 5h40m apart, not 6h.
+        # finish 5h40m apart, not 6h.
         times = ["10-25 18:25", "10-26 00:40", "10-26 06:20"]
         runs = [
-            Run(i + 1, "success" if i == 0 else "failure",
+            Run(i + 1, "success" if i == 0 else "failure", t, t)
+            for i, t in enumerate(
                 datetime.datetime.strptime("2026-" + t, "%Y-%m-%d %H:%M").replace(
-                    tzinfo=datetime.timezone.utc))
-            for i, t in enumerate(times)
-        ][::-1]
+                    tzinfo=datetime.timezone.utc) for t in times)
+        ]
         self.assertEqual(events(runs), [(3, Kind.ALERT)])
 
     def test_timed_out_runs_count_as_failures(self):
@@ -90,6 +109,9 @@ class TestDecide(unittest.TestCase):
         got = events(timeline("PFF", every=datetime.timedelta(days=1)))
         self.assertEqual(got, [(3, Kind.ALERT)])
 
+    def test_startup_failures_count_as_failures(self):
+        self.assertEqual(events(timeline("P" + "S" * 7)), [(7, Kind.ALERT)])
+
     def test_recovery_only_after_an_alert(self):
         self.assertEqual(events(timeline("PFFP")), [])
         got = events(timeline("P" + "F" * 7 + "P"))
@@ -98,22 +120,20 @@ class TestDecide(unittest.TestCase):
     def test_cancelled_runs_neither_break_nor_extend_a_streak(self):
         got = events(timeline("P" + "FC" * 7))
         # Failures at hours 1,3,...,13; the alert lands on the 7-hour one.
-        alert = [k for _, k in got]
-        self.assertEqual(alert, [Kind.ALERT])
+        self.assertEqual(got, [(8, Kind.ALERT)])
         self.assertEqual(events(timeline("PFCCCCCCCCP")), [])
 
-    def test_decision_ignores_newer_runs(self):
+    def test_decision_ignores_attempts_that_finished_later(self):
         runs = timeline("P" + "F" * 7 + "P")
-        # Run 7 alerted when it finished; a later success doesn't change that.
-        self.assertEqual(decide(runs, 7).kind, Kind.ALERT)
+        # Run 7 alerted when it finished; a later pass doesn't change that.
+        self.assertEqual(decide(runs, at(runs, 7)).kind, Kind.ALERT)
 
     def test_reminds_once_a_day_and_not_right_after_the_alert(self):
         # Hourly failures from 2026-10-24 21:15 for three days.
         runs = timeline("P" + "F" * 72)
         got = events(runs)
-        kinds = [k for _, k in got]
-        self.assertEqual(kinds[0], Kind.ALERT)
-        reminders = [runs[::-1][i - 1].created_at for i, k in got if k is Kind.REMIND]
+        self.assertEqual(got[0], (7, Kind.ALERT))
+        reminders = [at(runs, i).completed_at for i, k in got if k is Kind.REMIND]
         # Alert at 10-25 02:15. The 10-25 16:15 run is 14h later: first
         # reminder. Then one per day at the first run after 16:00 UTC.
         self.assertEqual(
@@ -126,7 +146,7 @@ class TestDecide(unittest.TestCase):
         # the alert. That day's reminder goes to the first run 12h on.
         start = datetime.datetime(2026, 10, 25, 8, 15, tzinfo=datetime.timezone.utc)
         runs = timeline("P" + "F" * 24, start=start)
-        got = [(runs[::-1][i - 1].created_at.strftime("%m-%d %H:%M"), k) for i, k in events(runs)]
+        got = [(at(runs, i).completed_at.strftime("%m-%d %H:%M"), k) for i, k in events(runs)]
         self.assertEqual(
             got, [("10-25 14:15", Kind.ALERT), ("10-26 02:15", Kind.REMIND)]
         )
@@ -139,11 +159,11 @@ class TestDecide(unittest.TestCase):
                  "10-25 11:21", "10-25 16:12", "10-25 19:02", "10-25 21:44",
                  "10-26 00:19", "10-26 06:09", "10-26 12:55", "10-26 19:15"]
         runs = [
-            Run(i + 1, "success" if i == 0 else "failure",
+            Run(i + 1, "success" if i == 0 else "failure", t, t)
+            for i, t in enumerate(
                 datetime.datetime.strptime("2026-" + t, "%Y-%m-%d %H:%M").replace(
-                    tzinfo=datetime.timezone.utc))
-            for i, t in enumerate(times)
-        ][::-1]
+                    tzinfo=datetime.timezone.utc) for t in times)
+        ]
         got = [(times[i - 1], k) for i, k in events(runs)]
         self.assertEqual(got, [
             ("10-25 06:04", Kind.ALERT),
@@ -154,96 +174,136 @@ class TestDecide(unittest.TestCase):
     def test_streak_past_fetched_history_does_not_realert(self):
         # Only the newest 50 runs were fetched, all failures.
         runs = timeline("F" * 200)[:50]
-        newest = runs[0].id
-        event = decide(runs, newest)
+        event = decide(runs, runs[0])
         self.assertNotEqual(getattr(event, "kind", None), Kind.ALERT)
 
-    def test_unknown_run_posts_nothing(self):
-        self.assertIsNone(decide(timeline("FFFFFFFF"), 999))
+    def test_attempt_that_does_not_count_posts_nothing(self):
+        runs = timeline("P" + "F" * 6 + "C")
+        self.assertIsNone(decide(runs, at(runs, 8)))
 
     def test_policy_override(self):
         strict = Policy(min_failures=3, min_span=datetime.timedelta(0))
         runs = timeline("PFFF")
-        self.assertEqual(decide(runs, 4, strict).kind, Kind.ALERT)
-        self.assertIsNone(decide(runs, 3, strict))
+        self.assertEqual(decide(runs, at(runs, 4), strict).kind, Kind.ALERT)
+        self.assertIsNone(decide(runs, at(runs, 3), strict))
 
-    def test_startup_failures_count_as_failures(self):
-        self.assertEqual(events(timeline("P" + "S" * 7)), [(7, Kind.ALERT)])
+    def test_failed_rerun_extends_the_streak_without_realerting(self):
+        runs = timeline("P" + "F" * 6)
+        runs.append(rerun(at(runs, 7), "failure", T0 + hours(6.5)))
+        self.assertEqual(events(runs), [(7, Kind.ALERT)])
 
-    def test_rerun_attempts_never_alert_or_remind(self):
-        # Runs 7 and 21 are each the newest run when they're re-run.
-        runs = timeline("P" + "F" * 72)
-        self.assertEqual(decide(runs[-7:], 7).kind, Kind.ALERT)
-        self.assertIsNone(decide(runs[-7:], 7, previous_attempt="failure"))
-        self.assertEqual(decide(runs[-21:], 21).kind, Kind.REMIND)
-        self.assertIsNone(decide(runs[-21:], 21, previous_attempt="failure"))
-        self.assertIsNone(decide(runs[-7:], 7, previous_attempt="success"))
-
-    def test_failed_rerun_after_only_cancelled_attempts_decides_like_a_first(self):
-        # Run 7's earlier attempts were cancelled and posted nothing, so its
-        # failed re-run is the first to count it.
-        runs = timeline("P" + "F" * 72)
-        for previous in ("", "cancelled"):
-            with self.subTest(previous=previous):
-                event = decide(runs[-7:], 7, previous_attempt=previous)
-                self.assertEqual(event.kind, Kind.ALERT)
-                self.assertEqual(len(event.streak), 6)
-                self.assertEqual(
-                    decide(runs[-21:], 21, previous_attempt=previous).kind, Kind.REMIND)
-
-    def test_failed_rerun_after_only_cancelled_attempts_of_an_older_run_posts_nothing(self):
-        # Run 8 failed while run 7 counted as cancelled, so run 8 alerted.
-        runs = timeline("P" + "F" * 5 + "CF")
-        self.assertEqual(decide(runs, 8).kind, Kind.ALERT)
-        runs = timeline("P" + "F" * 7)
-        self.assertIsNone(decide(runs, 7, previous_attempt=""))
-
-    def test_failed_rerun_is_not_silenced_by_a_newer_cancelled_run(self):
-        # Run 8 was cancelled, so it posted nothing and run 7 still alerts.
-        event = decide(timeline("P" + "F" * 6 + "C"), 7, previous_attempt="cancelled")
-        self.assertEqual(event.kind, Kind.ALERT)
-        self.assertEqual(len(event.streak), 6)
+    def test_failed_rerun_can_be_the_one_that_alerts(self):
+        # Run 6's re-run finishes 5 hours after run 2's failure.
+        runs = timeline("P" + "F" * 5)
+        runs.append(rerun(at(runs, 6), "failure", T0 + hours(6)))
+        self.assertEqual(events(runs), [(6, Kind.ALERT)])
+        self.assertEqual(decide(runs, runs[-1]).kind, Kind.ALERT)
 
     def test_rerun_that_passes_recovers_the_streak_it_ended(self):
-        # Run 7's first attempt failed, which made the streak 5 hours long
-        # and alerted. Its re-run passed, so the streak is over.
-        runs = timeline("P" + "F" * 5 + "P")
-        self.assertIsNone(decide(runs, 7))
-        event = decide(runs, 7, previous_attempt="failure")
+        runs = timeline("P" + "F" * 6)
+        passed = rerun(at(runs, 7), "success", T0 + hours(6.5))
+        event = decide(runs + [passed], passed)
         self.assertEqual(event.kind, Kind.RECOVERED)
         self.assertEqual(len(event.streak), 6)
         # A re-run that passes after a streak too short to alert stays quiet.
-        self.assertIsNone(decide(timeline("PFP"), 3, previous_attempt="failure"))
-
-    def test_rerun_of_an_older_run_posts_nothing(self):
-        # Run 7 is re-run and passes, but run 8 has failed since: the
-        # streak is still open, so there is nothing to recover.
-        runs = timeline("P" + "F" * 5 + "PF")
-        self.assertIsNone(decide(runs, 7, previous_attempt="failure"))
+        runs = timeline("PFF")
+        self.assertIsNone(decide(runs, rerun(at(runs, 3), "success", T0 + hours(3))))
 
     def test_rerun_inside_an_already_recovered_streak_posts_nothing(self):
-        # Run 7 failed, then run 8 passed and posted the recovery. Re-running
-        # run 7 into a pass must not post it again.
-        self.assertEqual(decide(timeline("P" + "F" * 6 + "P"), 8).kind, Kind.RECOVERED)
-        runs = timeline("P" + "F" * 5 + "PP")
-        self.assertIsNone(decide(runs, 7, previous_attempt="failure"))
-
-    def test_rerun_whose_first_attempt_passed_posts_nothing(self):
-        # Runs 2 to 7 qualify, so only the passed first attempt keeps run 8
-        # quiet: that attempt already posted the recovery.
         runs = timeline("P" + "F" * 6 + "P")
-        self.assertEqual(decide(runs, 8).kind, Kind.RECOVERED)
-        self.assertIsNone(decide(runs, 8, previous_attempt="success"))
+        self.assertEqual(decide(runs, at(runs, 8)).kind, Kind.RECOVERED)
+        passed = rerun(at(runs, 7), "success", T0 + hours(8))
+        self.assertIsNone(decide(runs + [passed], passed))
 
-    def test_rerun_that_passes_after_a_cancelled_attempt_recovers(self):
-        # Runs 2 to 7 failed and alerted. Run 8's first attempt was cancelled,
-        # which posted nothing, so its passing re-run ends the streak.
-        runs = timeline("P" + "F" * 6 + "P")
-        for previous in ("cancelled", ""):
-            with self.subTest(previous=previous):
-                event = decide(runs, 8, previous_attempt=previous)
-                self.assertEqual(event.kind, Kind.RECOVERED)
-                self.assertEqual([r.id for r in event.streak], [7, 6, 5, 4, 3, 2])
+    def test_pass_from_an_older_run_does_not_end_the_streak(self):
+        # A re-run of run 1, before the commit that broke the import,
+        # passes during the streak. The newer runs are still failing.
+        runs = timeline("P" + "F" * 7 + "FP")
+        old = rerun(at(runs, 1), "success", T0 + hours(7.5))
+        runs.append(old)
+        self.assertIsNone(decide(runs, old))
+        self.assertEqual(events(runs), [(7, Kind.ALERT), (10, Kind.RECOVERED)])
+        self.assertEqual(len(decide(runs, at(runs, 10)).streak), 8)
+
+    def test_rerun_of_an_older_run_inside_the_streak_does_not_count(self):
+        # Run 2's re-run fails during the streak, but run 3 is newer.
+        runs = timeline("PFF")
+        late = rerun(at(runs, 2), "failure", T0 + hours(6))
+        self.assertIsNone(decide(runs + [late], late))
+        # The same re-run of run 3, the newest-created run, counts.
+        late = rerun(at(runs, 3), "failure", T0 + hours(6))
+        self.assertEqual(decide(runs + [late], late).kind, Kind.ALERT)
+
+    def test_hung_run_that_times_out_late_does_not_realert(self):
+        # Run 3 hangs until GitHub's 6-hour limit, finishing after run 8.
+        runs = timeline("P" + "F" * 7)
+        hung = dataclasses.replace(at(runs, 3), conclusion="timed_out",
+                                   completed_at=T0 + hours(8))
+        runs = [hung if r.id == 3 else r for r in runs]
+        got = events(runs)
+        self.assertEqual([k for _, k in got], [Kind.ALERT])
+
+    def test_hung_run_that_times_out_after_recovery_posts_nothing(self):
+        runs = timeline("P" + "F" * 7 + "P")
+        hung = dataclasses.replace(at(runs, 5), conclusion="timed_out",
+                                   completed_at=T0 + hours(9))
+        runs = [hung if r.id == 5 else r for r in runs]
+        # Runs 2 to 7 still span 5 hours without it. After run 9's pass,
+        # run 5's timeout is an older run's result and starts no streak.
+        self.assertEqual(events(runs), [(7, Kind.ALERT), (9, Kind.RECOVERED)])
+        self.assertIsNone(decide(runs, at(runs, 5)))
+
+    def test_cancelled_run_rerun_counts_unless_a_newer_run_passed(self):
+        # 6-hourly: run 3 was cancelled, run 4 passed, then run 3's re-run
+        # fails. Run 3 is older than run 4's pass, so it doesn't count.
+        runs = timeline("PFCPF", every=hours(6))
+        runs.append(rerun(at(runs, 3), "failure", T0 + hours(19)))
+        self.assertEqual(events(runs), [])
+        # Without the pass, run 3's re-run is the streak's second failure.
+        runs = timeline("PFC", every=hours(6))
+        runs.append(rerun(at(runs, 3), "failure", T0 + hours(13)))
+        runs += [Run(4, "failure", T0 + hours(18), T0 + hours(18))]
+        self.assertEqual(events(runs), [(3, Kind.ALERT)])
+
+    def test_attempt_long_after_its_run_was_created_does_not_count(self):
+        runs = timeline("P" + "F" * 6)
+        late = rerun(at(runs, 1), "success", T0 + ops_alert.LOOKBACK + hours(7))
+        self.assertIsNone(decide(runs + [late], late))
+        runs.append(late)
+        runs.append(Run(8, "failure", T0 + hours(8), T0 + hours(8)))
+        self.assertEqual(events(runs), [(7, Kind.ALERT)])
+
+    def test_late_rerun_of_the_streaks_newest_run_does_not_count(self):
+        runs = timeline("P" + "F" * 6)
+        created = at(runs, 7).created_at
+        late = rerun(at(runs, 7), "success", created + ops_alert.LOOKBACK + hours(1))
+        self.assertIsNone(decide(runs + [late], late))
+        # Finishing exactly a LOOKBACK after the run was created still counts.
+        due = rerun(at(runs, 7), "success", created + ops_alert.LOOKBACK)
+        self.assertEqual(decide(runs + [due], due).kind, Kind.RECOVERED)
+
+    def test_posts_always_follow_alert_remind_recover(self):
+        # Random histories with hung runs, cancels, and re-runs. Whatever
+        # order attempts finish in, a streak alerts at most once, and
+        # reminders and recoveries only follow an alert.
+        rng = random.Random(72)
+        for trial in range(300):
+            runs = []
+            for i in range(rng.randrange(5, 60)):
+                created = T0 + i * hours(rng.choice([1, 1, 6]))
+                for k in range(1, rng.choice([2, 2, 2, 3, 4])):
+                    done = created + hours(rng.choice([0, 0, 0.5, 3, 6, 30]))
+                    runs.append(Run(i + 1, rng.choice(
+                        ["failure", "failure", "success", "cancelled", "timed_out"]),
+                        created, done, attempt=k))
+            alerted = False
+            for _, kind in events(runs):
+                with self.subTest(trial=trial):
+                    if kind is Kind.ALERT:
+                        self.assertFalse(alerted)
+                    else:
+                        self.assertTrue(alerted)
+                alerted = kind is not Kind.RECOVERED
 
 
 class TestClassify(unittest.TestCase):
@@ -439,12 +499,12 @@ class TestClassify(unittest.TestCase):
 class TestMessage(unittest.TestCase):
     def test_alert_message(self):
         runs = timeline("P" + "F" * 6)
-        event = decide(runs, 7)
+        event = decide(runs, at(runs, 7))
         d = classify((FIXTURES / "pyicu_build_failure.log").read_text())
         text = ops_alert.format_message("import_fancons", event, d)
         self.assertEqual(
             text,
-            "Action needed: import_fancons has failed 6 runs in a row since "
+            "Action needed: import_fancons has failed 6 times in a row since "
             "2026-10-24 21:15 UTC.\n"
             "\n"
             "- A dependency failed to build, probably because the runner image, "
@@ -458,13 +518,13 @@ class TestMessage(unittest.TestCase):
 
     def test_reminder_message(self):
         runs = timeline("P" + "F" * 72)
-        event = decide(runs, 21)
+        event = decide(runs, at(runs, 21))
         d = classify((FIXTURES / "synthetic_upstream_timeout.log").read_text())
         text = ops_alert.format_message("import_fancons", event, d)
         self.assertEqual(
             text,
-            "Probably no action needed: import_fancons is still failing, 20 runs "
-            "in a row since 2026-10-24 21:15 UTC.\n"
+            "Probably no action needed: import_fancons is still failing (20 "
+            "times in a row since 2026-10-24 21:15 UTC).\n"
             "\n"
             "- A source site timed out or returned a server error. The importer "
             "retries on its schedule. If tomorrow's reminder still shows this, "
@@ -477,23 +537,43 @@ class TestMessage(unittest.TestCase):
 
     def test_recovery_message_and_truncated_count(self):
         runs = timeline("P" + "F" * 7 + "P")
-        text = ops_alert.format_message("import_rams", decide(runs, 9), truncated=True)
+        text = ops_alert.format_message("import_rams", decide(runs, at(runs, 9)), truncated=True)
         self.assertEqual(
             text,
-            "No action needed: import_rams is passing again after 7+ failed runs "
+            "No action needed: import_rams is passing again after 7+ failures "
             "(2026-10-24 21:15 to 2026-10-25 03:15 UTC).\n"
             "Run: https://example.test/runs/9",
         )
 
-    def test_one_run_is_singular(self):
+    def test_times_shown_are_when_attempts_finished(self):
+        # One run fails, is re-run 5 hours later and fails again, then the
+        # next run passes. Both failures share the run's created_at.
+        runs = timeline("PF")
+        first = dataclasses.replace(at(runs, 2), completed_at=T0 + hours(1.5))
+        second = rerun(first, "failure", T0 + hours(6.5))
+        passed = Run(3, "success", T0 + hours(7), T0 + hours(7.25),
+                     "https://example.test/runs/3")
+        runs = [passed, second, first, at(runs, 1)]
+        alert = ops_alert.format_message("import_rams", decide(runs, second), classify(""))
+        self.assertIn("in a row since 2026-10-24 21:45 UTC.", alert)
+        recovered = ops_alert.format_message("import_rams", decide(runs, passed))
+        self.assertIn("(2026-10-24 21:45 to 2026-10-25 02:45 UTC)", recovered)
+
+    def test_one_failure_is_singular(self):
         run = timeline("F")[0]
         d = classify("")
         alert = ops_alert.format_message("import_rams", ops_alert.Event(Kind.ALERT, [run], run), d)
         self.assertTrue(alert.startswith(
-            "Check the run: import_rams has failed 1 run in a row since"), alert)
+            "Check the run: import_rams has failed 1 time in a row since"), alert)
         recovered = ops_alert.format_message(
             "import_rams", ops_alert.Event(Kind.RECOVERED, [run], run))
-        self.assertIn("after 1 failed run (", recovered)
+        self.assertIn("after 1 failure (", recovered)
+
+    def test_eleven_failures_are_plural(self):
+        runs = timeline("F" * 11)
+        alert = ops_alert.format_message(
+            "import_rams", ops_alert.Event(Kind.ALERT, runs, runs[0]), classify(""))
+        self.assertIn("has failed 11 times in a row", alert)
 
 
 class FakeResponse:
@@ -549,61 +629,76 @@ class TestSend(unittest.TestCase):
         self.assertIn(b"disable_web_page_preview=true", sent["data"])
 
 
-def api_run(r, event="schedule", head_repo="o/r", attempts=None):
-    """`attempts` maps a run in progress's earlier attempts to their
-    conclusions; its current attempt is the one after them."""
-    if attempts is not None:
-        return {**api_run(r, event, head_repo), "conclusion": None,
-                "status": "in_progress", "run_attempt": len(attempts) + 1}
-    return {
+def api_run(r, event="schedule", head_repo="o/r", running=None):
+    """The API object for attempt `r`. `running` is the number of an attempt
+    in progress after it, which the run object shows instead."""
+    d = {
         "id": r.id,
         "conclusion": r.conclusion,
         "status": "completed",
-        "run_attempt": 1,
+        "run_attempt": r.attempt,
         "created_at": r.created_at.isoformat().replace("+00:00", "Z"),
+        "updated_at": r.completed_at.isoformat().replace("+00:00", "Z"),
         "html_url": r.url,
         "event": event,
         "head_repository": {"full_name": head_repo},
     }
+    if running is not None:
+        # It started after `r` finished, so it was updated later.
+        later = r.completed_at + datetime.timedelta(hours=2)
+        d.update(conclusion=None, status="in_progress", run_attempt=running,
+                 updated_at=later.isoformat().replace("+00:00", "Z"))
+    return d
 
 
 class FakeGh:
-    """Stands in for the gh CLI, serving one workflow's history."""
+    """Stands in for the gh CLI, serving one workflow's history: a list of
+    completed attempts."""
 
     def __init__(self, runs, log="", head_branch="main", log_fails=False,
-                 event="schedule", head_repo="o/r", attempt=1, listed=None,
-                 attempts=None, fork_ids=(), in_progress=None, logs=None,
-                 reruns=None):
+                 event="schedule", head_repo="o/r", listed=None, fork_ids=(),
+                 in_progress=None, logs=None, listing_lag=None):
         self.runs, self.log, self.head_branch, self.log_fails = runs, log, head_branch, log_fails
         # Failed-step logs by attempt number, where they differ from `log`.
         self.logs = logs or {}
-        self.event, self.head_repo, self.attempt = event, head_repo, attempt
-        # What the runs listing returns, if it lags behind self.runs.
-        self.listed = runs if listed is None else listed
-        # Earlier attempts' conclusions by attempt number, served when
-        # attempt > 1, and the attempt numbers asked for, in order.
-        self.attempts, self.requested = attempts or {}, []
+        self.event, self.head_repo = event, head_repo
+        # The run ids the listing returns, in order, if it differs from the
+        # runs': it can lag, or repeat a run that shifted pages.
+        self.listed = listed
         # Runs the listing shows as a fork's pull request runs.
         self.fork_ids = set(fork_ids)
-        # Runs in progress, mapped to their earlier attempts' conclusions,
-        # where None is an attempt that hasn't completed.
+        # Runs with an attempt in progress, mapped to its number. A run with
+        # no completed attempt yet has an entry here and none in `runs`.
         self.in_progress = in_progress or {}
-        # Completed runs, mapped to their earlier attempts' conclusions; the
-        # latest attempt's is the run's own.
-        self.reruns = reruns or {}
+        # Runs whose listing entry reports updated_at this much earlier
+        # than the run endpoint does.
+        self.listing_lag = listing_lag or {}
 
-    def latest(self, run_id):
-        """The run's latest attempt number."""
-        attempts = self.in_progress.get(run_id, self.reruns.get(run_id))
-        return self.attempt if attempts is None else len(attempts) + 1
+    def attempts(self, run_id):
+        return sorted((r for r in self.runs if r.id == run_id), key=lambda r: r.attempt)
+
+    def entry(self, run_id, **kw):
+        """The run's latest attempt, as the run and listing objects show it."""
+        done = self.attempts(run_id)
+        running = self.in_progress.get(run_id)
+        if not done:
+            created = T0 + datetime.timedelta(hours=run_id - 1)
+            done = [Run(run_id, "", created, created, f"https://example.test/runs/{run_id}")]
+        return api_run(done[-1], running=running, **kw)
+
+    def run_ids(self):
+        if self.listed is not None:
+            return self.listed
+        ids = list(dict.fromkeys(r.id for r in self.runs))
+        ids += [i for i in self.in_progress if i not in ids]
+        return sorted(ids, key=lambda i: self.entry(i)["created_at"], reverse=True)
 
     def __call__(self, *args):
         if args[0] == "run":
             if self.log_fails:
                 raise subprocess.CalledProcessError(1, "gh")
             # Without --attempt, gh shows the run's latest attempt.
-            run_id = int(args[2])
-            n = self.latest(run_id)
+            n = self.entry(int(args[2]))["run_attempt"]
             if "--attempt" in args:
                 n = int(args[args.index("--attempt") + 1])
             return self.logs.get(n, self.log)
@@ -613,40 +708,31 @@ class FakeGh:
         if "/attempts/" in path:
             run_id, n = map(int, re.fullmatch(
                 r"repos/o/r/actions/runs/(\d+)/attempts/(\d+)", path).groups())
-            attempts = self.in_progress.get(run_id, self.reruns.get(run_id))
-            if attempts is None:
-                attempts, latest = self.attempts, self.attempt
-                self.requested.append(n)
-            else:
-                latest = len(attempts) + 1
-            # Only attempts up to the latest exist to be asked for.
-            assert 1 <= n <= latest, path
-            conclusion = attempts.get(n)
-            return json.dumps({"id": run_id, "run_attempt": n, "conclusion": conclusion,
-                               "status": "in_progress" if conclusion is None else "completed"})
+            r = next(r for r in self.attempts(run_id) if r.attempt == n)
+            # An attempt object's created_at is the attempt's own start.
+            return json.dumps({**api_run(r), "created_at": "2099-01-01T00:00:00Z"})
         if "/runs/" in path and "workflows" not in path:
             run_id = int(path.rsplit("/", 1)[1])
-            r = next(r for r in self.runs if r.id == run_id)
             # Same shape as the real API: the embedded repository object
             # has no default_branch.
             return json.dumps({
-                **api_run(r, attempts=self.in_progress.get(run_id)),
-                "name": "import_fancons", "workflow_id": 42, "event": self.event,
-                "head_branch": self.head_branch, "run_attempt": self.latest(run_id),
-                "head_repository": {"full_name": self.head_repo},
+                **self.entry(run_id, event=self.event, head_repo=self.head_repo),
+                "name": "import_fancons", "workflow_id": 42,
+                "head_branch": self.head_branch,
                 "repository": {"full_name": "o/r"},
             })
         page = int(path.rsplit("page=", 1)[1])
-        listed = self.listed
-        if "status=completed" in path:
-            listed = [r for r in listed if r.id not in self.in_progress]
-        batch = listed[(page - 1) * 100 : page * 100]
-        return json.dumps({"workflow_runs": [
-            api_run(r, "pull_request", "someone/r") if r.id in self.fork_ids
-            else {**api_run(r), "run_attempt": self.latest(r.id)} if r.id in self.reruns
-            else api_run(r, attempts=self.in_progress.get(r.id))
-            for r in batch
-        ]})
+        batch = self.run_ids()[(page - 1) * 100 : page * 100]
+        entries = [
+            self.entry(i, event="pull_request", head_repo="someone/r")
+            if i in self.fork_ids else self.entry(i)
+            for i in batch
+        ]
+        for d in entries:
+            if d["id"] in self.listing_lag:
+                updated = ops_alert._parse_time(d["updated_at"]) - self.listing_lag[d["id"]]
+                d["updated_at"] = updated.isoformat().replace("+00:00", "Z")
+        return json.dumps({"workflow_runs": entries})
 
 
 class TestMain(unittest.TestCase):
@@ -669,12 +755,15 @@ class TestMain(unittest.TestCase):
     def texts(self, gh, run_id, run_attempt=None):
         return [text for text, _, _ in self.run_main(gh, run_id, run_attempt=run_attempt)[0]]
 
+    def fetch(self, gh, this):
+        return ops_alert.fetch_runs("o/r", 42, "main", this, gh=gh)
+
     def test_end_to_end_alert_with_verdict(self):
         log = (FIXTURES / "pyicu_build_failure.log").read_text()
         sent, out = self.run_main(FakeGh(timeline("P" + "F" * 6), log), 7)
         self.assertEqual(len(sent), 1)
         text, tok, chat = sent[0]
-        self.assertTrue(text.startswith("Action needed: import_fancons has failed 6 runs"))
+        self.assertTrue(text.startswith("Action needed: import_fancons has failed 6 times"))
         self.assertEqual((tok, chat), ("tok-123", "chat-456"))
         # The matched rule ids go to the job log only, not to Telegram.
         self.assertIn("--- alert [dependency-build] ---", out)
@@ -692,7 +781,7 @@ class TestMain(unittest.TestCase):
         self.assertEqual(self.texts(FakeGh(timeline("P" + "F" * 6), head_branch="x"), 7), [])
 
     # Run 3 of a 6-hourly workflow's second failure, which would alert.
-    ALERTING = timeline("PFF", every=datetime.timedelta(hours=6))
+    ALERTING = timeline("PFF", every=hours(6))
 
     def test_fork_pull_request_on_a_branch_named_main_is_ignored(self):
         gh = FakeGh(self.ALERTING, event="pull_request", head_repo="someone/r")
@@ -709,146 +798,113 @@ class TestMain(unittest.TestCase):
                 self.assertEqual(len(self.texts(FakeGh(self.ALERTING, event=event), 3)), 1)
 
     def test_rerun_attempt_does_not_realert(self):
-        gh = FakeGh(self.ALERTING, attempt=2, attempts={1: "failure"})
-        self.assertEqual(self.texts(gh, 3), [])
+        runs = self.ALERTING + [rerun(at(self.ALERTING, 3), "failure", T0 + hours(13))]
+        self.assertEqual(self.texts(FakeGh(runs), 3), [])
 
     def test_rerun_that_passes_posts_recovery(self):
-        gh = FakeGh(timeline("P" + "F" * 5 + "P"), attempt=2, attempts={1: "failure"})
-        texts = self.texts(gh, 7)
+        runs = timeline("P" + "F" * 6)
+        runs.append(rerun(at(runs, 7), "success", T0 + hours(6.5)))
+        texts = self.texts(FakeGh(runs), 7)
         self.assertEqual(len(texts), 1)
-        self.assertTrue(texts[0].startswith("No action needed: import_fancons is passing again"))
+        self.assertIn("is passing again after 6 failures (", texts[0])
 
     def test_failed_rerun_after_a_cancelled_attempt_alerts(self):
-        # Attempt 1 posted nothing, so attempt 2's failure is the first to
-        # count run 3.
-        for previous in ("cancelled", None):
-            with self.subTest(previous=previous):
-                gh = FakeGh(self.ALERTING, attempt=2, attempts={1: previous})
-                texts = self.texts(gh, 3)
-                self.assertEqual(len(texts), 1)
-                self.assertIn("has failed 2 runs in a row", texts[0])
-
-    def test_failed_rerun_after_a_cancelled_attempt_of_an_older_run_posts_nothing(self):
-        gh = FakeGh(timeline("P" + "F" * 7), attempt=2, attempts={1: "cancelled"})
-        self.assertEqual(self.texts(gh, 7), [])
-
-    def test_rerun_that_passes_after_a_cancelled_attempt_posts_recovery(self):
-        for previous in ("cancelled", None):
-            with self.subTest(previous=previous):
-                gh = FakeGh(timeline("P" + "F" * 6 + "P"), attempt=2, attempts={1: previous})
-                texts = self.texts(gh, 8)
-                self.assertEqual(len(texts), 1)
-                self.assertIn("is passing again after 6 failed runs (", texts[0])
-
-    def test_rerun_whose_previous_attempt_passed_posts_nothing(self):
-        # Runs 2 to 7 qualify, so only the passed first attempt keeps it quiet.
-        gh = FakeGh(timeline("P" + "F" * 6 + "P"), attempt=2, attempts={1: "success"})
-        self.assertEqual(self.texts(gh, 8), [])
-
-    # Run 3 of a 6-hourly workflow passed on its third attempt. Only its
-    # first attempt's failure makes the streak long enough to have alerted.
-    RERUN_PASSED = timeline("PFP", every=datetime.timedelta(hours=6))
-
-    def test_rerun_after_a_failed_then_cancelled_attempt_posts_recovery(self):
-        gh = FakeGh(self.RERUN_PASSED, attempt=3, attempts={1: "failure", 2: "cancelled"})
-        texts = self.texts(gh, 3)
+        runs = timeline("PFC", every=hours(6))
+        runs.append(rerun(at(runs, 3), "failure", T0 + hours(13)))
+        texts = self.texts(FakeGh(runs), 3)
         self.assertEqual(len(texts), 1)
-        self.assertIn("is passing again after 2 failed runs (", texts[0])
+        self.assertIn("has failed 2 times in a row", texts[0])
 
-    def test_rerun_after_a_passed_then_cancelled_attempt_posts_nothing(self):
-        # Runs 2 to 7 qualify, so only the passed first attempt keeps it quiet.
-        gh = FakeGh(timeline("P" + "F" * 6 + "P"), attempt=3,
-                    attempts={1: "success", 2: "cancelled"})
-        self.assertEqual(self.texts(gh, 8), [])
+    def test_rerun_counts_every_earlier_attempt(self):
+        # Run 2's attempt 1 failed, attempts 2 and 3 were cancelled, and
+        # attempt 4 failed. Attempts 1 and 4 are the streak.
+        for gap, alerts in ((5, 1), (4, 0)):
+            with self.subTest(gap=gap):
+                runs = timeline("PF", every=hours(6))
+                first = at(runs, 2)
+                runs.append(rerun(first, "cancelled", first.completed_at + hours(1)))
+                runs.append(rerun(runs[-1], "cancelled", first.completed_at + hours(2)))
+                runs.append(rerun(runs[-1], "failure", first.completed_at + hours(gap)))
+                texts = self.texts(FakeGh(runs), 2)
+                self.assertEqual(len(texts), alerts)
+                if alerts:
+                    self.assertIn("has failed 2 times in a row", texts[0])
 
-    def test_rerun_after_a_passed_then_failed_attempt_posts_nothing(self):
-        # Attempt 1 passed and already posted any recovery, so attempt 2's
-        # failure doesn't let attempt 3 post a second one.
-        gh = FakeGh(timeline("P" + "F" * 6 + "P"), attempt=3,
-                    attempts={1: "success", 2: "failure"})
-        self.assertEqual(self.texts(gh, 8), [])
+    def test_rerun_is_ordered_by_when_it_finished(self):
+        # Run 6's re-run finishes 5 hours after run 2's failure, so it alerts.
+        runs = timeline("P" + "F" * 5)
+        runs.append(rerun(at(runs, 6), "failure", T0 + hours(6)))
+        self.assertEqual(len(self.texts(FakeGh(runs), 6)), 1)
 
-    def test_rerun_reads_every_earlier_attempt(self):
-        gh = FakeGh(self.RERUN_PASSED, attempt=4,
-                    attempts={1: "cancelled", 2: "cancelled", 3: "failure"})
-        self.texts(gh, 3)
-        self.assertEqual(sorted(gh.requested), [1, 2, 3])
-
-    def test_rerun_of_an_older_run_posts_nothing(self):
-        gh = FakeGh(timeline("P" + "F" * 5 + "PF"), attempt=2, attempts={1: "failure"})
-        self.assertEqual(self.texts(gh, 7), [])
+    def test_rerun_that_passed_ends_the_streak_before_the_next_run(self):
+        # Run 7's re-run posted the recovery, so run 8's pass posts nothing.
+        runs = timeline("P" + "F" * 6)
+        runs.append(rerun(at(runs, 7), "success", T0 + hours(6.5)))
+        runs.append(Run(8, "success", T0 + hours(7), T0 + hours(7)))
+        self.assertEqual(self.texts(FakeGh(runs), 8), [])
 
     # Runs 2 to 7 failed hourly and run 7 alerted. Run 7 is being re-run when
-    # run 8 completes: the listing shows run 7 in progress on attempt 2.
+    # run 8 finishes: the listing shows run 7 in progress on attempt 2.
     RACING = timeline("P" + "F" * 6 + "P")
 
     def test_newer_run_that_passes_during_a_rerun_posts_recovery(self):
-        gh = FakeGh(self.RACING, in_progress={7: {1: "failure"}})
-        texts = self.texts(gh, 8)
+        texts = self.texts(FakeGh(self.RACING, in_progress={7: 2}), 8)
         self.assertEqual(len(texts), 1)
-        self.assertIn("is passing again after 6 failed runs (", texts[0])
+        self.assertIn("is passing again after 6 failures (", texts[0])
 
     def test_newer_run_that_fails_during_a_rerun_does_not_realert(self):
         runs = timeline("P" + "F" * 7)
-        self.assertEqual(self.texts(FakeGh(runs, in_progress={7: {1: "failure"}}), 8), [])
-
-    def test_rerun_in_progress_counts_its_newest_completed_attempt(self):
-        # Attempt 3 is running and attempt 2 never completed, so attempt 1's
-        # failure is run 7's result.
-        gh = FakeGh(self.RACING, in_progress={7: {1: "failure", 2: None}})
-        self.assertEqual(len(self.texts(gh, 8)), 1)
-
-    def test_rerun_in_progress_after_a_cancelled_attempt_counts_the_failure(self):
-        # Attempt 2 was cancelled, so attempt 1's failure is run 7's result.
-        gh = FakeGh(self.RACING, in_progress={7: {1: "failure", 2: "cancelled"}})
-        texts = self.texts(gh, 8)
-        self.assertEqual(len(texts), 1)
-        self.assertIn("is passing again after 6 failed runs (", texts[0])
+        self.assertEqual(self.texts(FakeGh(runs, in_progress={7: 2}), 8), [])
 
     def test_run_whose_latest_attempt_was_cancelled_counts_its_failure(self):
         # Run 7's attempt 1 failed and alerted; its re-run was cancelled.
-        # Counted as cancelled, run 7 would let run 8 alert a second time.
-        runs = timeline("P" + "F" * 5 + "CF")
-        self.assertEqual(len(self.texts(FakeGh(runs), 8)), 1)
-        self.assertEqual(self.texts(FakeGh(runs, reruns={7: {1: "failure"}}), 8), [])
+        runs = timeline("P" + "F" * 7)
+        runs.append(rerun(at(runs, 7), "cancelled", T0 + hours(6.5)))
+        self.assertEqual(self.texts(FakeGh(runs), 8), [])
+
+    def test_hung_run_that_times_out_late_does_not_realert(self):
+        runs = timeline("P" + "F" * 7)
+        runs = [dataclasses.replace(r, conclusion="timed_out", completed_at=T0 + hours(8))
+                if r.id == 3 else r for r in runs]
+        self.assertEqual(self.texts(FakeGh(runs), 3), [])
 
     def test_first_attempt_in_progress_is_ignored(self):
-        # Run 150 is still on its first attempt, so it has no result yet. It
-        # neither ends the streak nor stops the paging as a success would.
+        # Run 152 is still on its first attempt, so it has no result yet. It
+        # neither ends the streak nor stops the paging as a pass would.
         runs = timeline("P" + "F" * 150)
-        gh = FakeGh(runs, in_progress={150: {}})
-        with unittest.mock.patch("sys.stdout", new_callable=io.StringIO):
-            got, truncated = ops_alert.fetch_runs("o/r", 42, "main", runs[0], gh=gh)
+        got, truncated = self.fetch(FakeGh(runs, in_progress={152: 1}), runs[0])
         self.assertFalse(truncated)
-        self.assertEqual(len(got), 150)
-        self.assertNotIn(150, [r.id for r in got])
-        self.assertEqual(got[-1].conclusion, "success")
+        self.assertEqual(len(got), 151)
+        self.assertNotIn(152, [r.id for r in got])
 
     def test_triggering_attempt_decides_while_a_newer_attempt_runs(self):
-        # Run 7's attempt 1 failed, ending a 5-hour streak, and attempt 2
-        # passed. Attempt 2's job runs only after attempt 3 has started.
-        runs = timeline("P" + "F" * 5 + "P")
-        gh = FakeGh(runs, in_progress={7: {1: "failure", 2: "success"}})
-        texts = self.texts(gh, 7, run_attempt=2)
+        # Run 7's attempt 1 failed and attempt 2 passed, ending the streak.
+        # Run 8 then failed. Attempt 2's job runs only after attempt 3 has
+        # started, so the run object shows attempt 3, updated after run 8.
+        runs = timeline("P" + "F" * 6)
+        runs.append(rerun(at(runs, 7), "success", T0 + hours(6.5)))
+        runs.append(Run(8, "failure", T0 + hours(7), T0 + hours(7)))
+        texts = self.texts(FakeGh(runs, in_progress={7: 3}), 7, run_attempt=2)
         self.assertEqual(len(texts), 1)
-        self.assertIn("is passing again after 6 failed runs (", texts[0])
+        self.assertIn("is passing again after 6 failures (", texts[0])
 
     def test_triggering_attempt_decides_after_a_newer_attempt_passed(self):
         # Run 7's attempt 1 failed and is due to alert, but its job runs
         # only after attempt 2 passed, so the run and the listing show a pass.
-        runs = timeline("P" + "F" * 5 + "P")
-        gh = FakeGh(runs, attempt=2, attempts={1: "failure"})
-        texts = self.texts(gh, 7, run_attempt=1)
+        runs = timeline("P" + "F" * 6)
+        runs.append(rerun(at(runs, 7), "success", T0 + hours(6.5)))
+        texts = self.texts(FakeGh(runs), 7, run_attempt=1)
         self.assertEqual(len(texts), 1)
-        self.assertIn("has failed 6 runs in a row", texts[0])
+        self.assertIn("has failed 6 times in a row", texts[0])
 
     def test_triggering_attempt_log_and_link_are_its_own(self):
         # Run 7's attempt 1 failed to build a dependency and is due to alert.
         # By the time its job runs, attempt 2 failed on a 403 and attempt 3
         # has started, so gh's default log is a newer attempt's.
         runs = timeline("P" + "F" * 6)
+        runs.append(rerun(at(runs, 7), "failure", T0 + hours(6.5)))
         blocked = log_lines("##[error]HTTP Error 403 Forbidden")
-        gh = FakeGh(runs, in_progress={7: {1: "failure", 2: "failure"}}, log=blocked,
+        gh = FakeGh(runs, in_progress={7: 3}, log=blocked,
                     logs={1: (FIXTURES / "pyicu_build_failure.log").read_text()})
         sent, out = self.run_main(gh, 7, run_attempt=1)
         self.assertEqual(len(sent), 1)
@@ -864,18 +920,16 @@ class TestMain(unittest.TestCase):
         self.assertEqual(len(self.texts(FakeGh(runs), 7)), 1)
         self.assertEqual(self.texts(FakeGh(runs, fork_ids=range(2, 7)), 7), [])
 
-    def test_run_missing_from_the_listing_is_added(self):
-        runs = self.ALERTING
-        sent, out = self.run_main(FakeGh(runs, listed=runs[1:]), 3)
+    def test_run_missing_from_the_listing_still_counts(self):
+        sent, _ = self.run_main(FakeGh(self.ALERTING, listed=[2, 1]), 3)
         self.assertEqual(len(sent), 1)
-        self.assertIn("not in the run listing yet", out)
 
     def test_run_missing_from_a_long_listing_is_found_on_the_first_page(self):
         # The newest of 6 hourly failures isn't listed yet, and 1,500
         # passes come before them: one page answers it, with no "+".
         runs = timeline("P" * 1500 + "F" * 6)
         calls = []
-        gh = FakeGh(runs, listed=runs[1:])
+        gh = FakeGh(runs, listed=[r.id for r in runs[1:]])
 
         def counting(*a):
             if "workflows/" in a[-1]:
@@ -885,10 +939,23 @@ class TestMain(unittest.TestCase):
         sent, _ = self.run_main(counting, runs[0].id)
         self.assertEqual(len(calls), 1)
         self.assertEqual(len(sent), 1)
-        self.assertIn("has failed 6 runs in a row", sent[0][0])
-        with unittest.mock.patch("sys.stdout", new_callable=io.StringIO):
-            _, truncated = ops_alert.fetch_runs("o/r", 42, "main", runs[0], gh=gh)
-        self.assertFalse(truncated)
+        self.assertIn("has failed 6 times in a row", sent[0][0])
+        self.assertFalse(self.fetch(gh, runs[0])[1])
+
+    def test_listing_copy_of_the_triggering_attempt_counts_once(self):
+        # The listing reports run 3 a second earlier than the run endpoint.
+        # Counted twice, its failure would be the third that alerts.
+        gh = FakeGh(self.ALERTING, listing_lag={3: datetime.timedelta(seconds=1)})
+        with unittest.mock.patch.dict(ops_alert.POLICIES,
+                                      {"import_fancons": Policy(min_failures=3)}):
+            self.assertEqual(self.texts(gh, 3), [])
+
+    def test_run_listed_on_two_pages_counts_once(self):
+        # Run 52 shifted onto page 2 between the two calls.
+        runs = timeline("P" + "F" * 150 + "P")
+        ids = [r.id for r in runs]
+        texts = self.texts(FakeGh(runs, listed=ids[:100] + ids[99:]), runs[0].id)
+        self.assertIn("is passing again after 150 failures (", texts[0])
 
     def test_unreadable_log_still_alerts_as_unclear(self):
         texts = self.texts(FakeGh(timeline("P" + "F" * 6), log_fails=True), 7)
@@ -899,7 +966,7 @@ class TestMain(unittest.TestCase):
         runs = timeline("F" * 1029)
         texts = self.texts(FakeGh(runs), 1029)
         self.assertEqual(len(texts), 1)
-        self.assertIn(f"still failing, {ops_alert.MAX_PAGES * 100}+ runs in a row", texts[0])
+        self.assertIn(f"is still failing ({ops_alert.MAX_PAGES * 100}+ times in a row", texts[0])
 
     def test_failing_gh_api_call_fails_this_run(self):
         # A red ops_alert run is the visible sign that alerting is broken.
@@ -911,11 +978,10 @@ class TestMain(unittest.TestCase):
                 ops_alert.main(["--run-id", "7", "--repo", "o/r"], gh=gh, env=self.ENV)
 
     def test_history_spanning_pages_finds_the_streak_start(self):
-        # 150 hourly failures: the streak's start and the success before it
+        # 150 hourly failures: the streak's start and the pass before it
         # are on page 2, so there must be no "+" and no re-alert.
         runs = timeline("P" + "F" * 150)
-        with unittest.mock.patch("sys.stdout", new_callable=io.StringIO):
-            got, truncated = ops_alert.fetch_runs("o/r", 42, "main", runs[0], gh=FakeGh(runs))
+        got, truncated = self.fetch(FakeGh(runs), runs[0])
         self.assertFalse(truncated)
         self.assertEqual(len(got), 151)
 
@@ -932,31 +998,37 @@ class TestMain(unittest.TestCase):
         texts = self.texts(counting, runs[0].id)
         self.assertEqual(len(calls), 2)
         self.assertEqual(len(texts), 1)
-        self.assertIn("is passing again after 150 failed runs (", texts[0])
+        self.assertIn("is passing again after 150 failures (", texts[0])
 
     def test_short_history_takes_one_call(self):
         runs = timeline("F" * 30)
         calls = []
         gh = FakeGh(runs)
-        got, truncated = ops_alert.fetch_runs(
-            "o/r", 42, "main", runs[0], gh=lambda *a: calls.append(a) or gh(*a)
-        )
+        got, truncated = self.fetch(lambda *a: calls.append(a) or gh(*a), runs[0])
         self.assertEqual(len(calls), 1)
         self.assertFalse(truncated)
         self.assertEqual(len(got), 30)
 
-    def test_fetch_stops_at_the_first_page_with_a_success_past_the_streak(self):
-        runs = timeline("P" * 300 + "F" * 20)
+    def test_fetch_stops_once_the_last_pass_is_a_lookback_behind(self):
+        # Page 1's oldest run was created 29 hours before the last pass.
+        runs = timeline("P" * 300 + "F" * 70)
         calls = []
         gh = FakeGh(runs)
-        got, _ = ops_alert.fetch_runs(
-            "o/r", 42, "main", runs[0], gh=lambda *a: calls.append(a) or gh(*a)
-        )
+        self.fetch(lambda *a: calls.append(a) or gh(*a), runs[0])
         self.assertEqual(len(calls), 1)
+
+    def test_fetch_reads_a_lookback_past_the_last_pass(self):
+        # Page 1's oldest run was created 9 hours before the last pass. A
+        # run on page 2 could have finished after the pass, so it is read.
+        runs = timeline("P" * 300 + "F" * 90)
+        calls = []
+        gh = FakeGh(runs)
+        self.fetch(lambda *a: calls.append(a) or gh(*a), runs[0])
+        self.assertEqual(len(calls), 2)
 
     def test_streak_longer_than_every_page_is_truncated(self):
         runs = timeline("F" * (ops_alert.MAX_PAGES * 100 + 5))
-        got, truncated = ops_alert.fetch_runs("o/r", 42, "main", runs[0], gh=FakeGh(runs))
+        got, truncated = self.fetch(FakeGh(runs), runs[0])
         self.assertTrue(truncated)
         self.assertEqual(len(got), ops_alert.MAX_PAGES * 100)
 

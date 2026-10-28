@@ -4,30 +4,30 @@
 Runs from .github/workflows/ops_alert.yml after each watched run completes.
 It keeps no state: every decision comes from the workflow's own run history.
 
-- A single failure posts nothing; one-off failures clear on the next run.
-- A failure streak that reaches Policy.min_failures runs AND spans
+- Each completed attempt of a run is one step in the history, taken in the
+  order the attempts finished. A re-run is just another attempt.
+- A single failure posts nothing; one-off failures clear on the next pass.
+- A failure streak that reaches Policy.min_failures attempts AND spans
   Policy.min_span posts one alert, led by a verdict from ops_alert_rules.py.
-- While the streak lasts, one reminder a day: the first failed run that is
+- While the streak lasts, one reminder a day: the first failure that is
   past Policy.remind_hour_utc and at least Policy.remind_quiet after the
   alert.
-- The first success after an alerted streak posts a recovery notice.
-- A failed re-run alerts or reminds only if no earlier attempt passed or
-  failed and no newer run has counted since; otherwise an earlier attempt
-  or a newer run already did. A passing re-run of the newest run can post
-  the recovery notice, unless an earlier attempt of the same run passed.
-  Attempts that neither passed nor failed, such as cancelled ones, don't
-  count.
-- A re-run or cancelled run counts as its newest attempt that passed or
-  failed.
+- The first pass after an alerted streak posts a recovery notice.
+- Attempts that neither passed nor failed, such as cancelled ones, don't
+  count. Neither does an attempt from a run older than the last pass or
+  one of the streak's failures, such as a re-run of an earlier commit or
+  a hung run that times out after a recovery, nor an attempt that
+  finished more than LOOKBACK after its run was created.
 - Only scheduled and manually dispatched runs from this repository count;
   anything else, such as a fork's pull request, is ignored.
 
-Known limits: the history is replayed in the order runs started, so a run
-that finishes after newer runs were decided can be miscounted. A run that
-hangs until it times out can post a second alert, or an alert after the
-recovery notice. A cancelled run that is re-run and fails after the next
-run was decided can leave the streak without an alert, so the first
-message is the next day's reminder.
+The job for each attempt replays every attempt that finished before it,
+so every job agrees on what was already posted. This assumes an attempt's
+updated_at doesn't change after it completes, which held on week-old runs
+but GitHub doesn't document. Known limit: the jobs agree only if the run
+listing is current. An attempt that finished seconds
+before this one but still shows as in progress is left out, which can
+post a second alert, reminder, or recovery, or delay or miss one.
 
 To watch another workflow, add its name to ops_alert.yml's workflow_run
 list, and to POLICIES below if the defaults don't fit its schedule. To
@@ -59,6 +59,10 @@ PASSED = {"success"}
 # whether the workflow works, so it neither extends nor breaks a streak.
 
 MAX_PAGES = 10  # 100 runs a page; import_fancons is hourly, so ~40 days
+# How long after its run was created an attempt still counts. It covers a
+# run that hangs until GitHub's 6-hour job limit and a same-day re-run, and
+# bounds how far back the run listing must be read.
+LOOKBACK = datetime.timedelta(days=1)
 LOG_LINE_MAX = 200
 
 
@@ -80,10 +84,21 @@ POLICIES: dict[str, Policy] = {}
 
 @dataclasses.dataclass(frozen=True)
 class Run:
+    """One completed attempt of a workflow run."""
     id: int
     conclusion: str
-    created_at: datetime.datetime
+    created_at: datetime.datetime  # when the run, not this attempt, was created
+    completed_at: datetime.datetime
     url: str = ""
+    attempt: int = 1
+
+    @property
+    def key(self):
+        # Attempts with identical timestamps still sort the same way in
+        # every job. The run and attempt endpoints can report an attempt's
+        # time a second apart, so attempts that finish within a second of
+        # each other may not.
+        return (self.completed_at, self.id, self.attempt)
 
 
 class Kind(enum.Enum):
@@ -95,104 +110,71 @@ class Kind(enum.Enum):
 @dataclasses.dataclass(frozen=True)
 class Event:
     kind: Kind
-    streak: list  # failed Runs, newest first
-    run: Run  # the run this event is about
+    streak: list  # failed attempts, newest first
+    run: Run  # the attempt this event is about
 
 
-def _counted(runs):
-    return [r for r in runs if r.conclusion in FAILED | PASSED]
-
-
-def _leading_failures(runs):
-    streak = []
-    for r in runs:
-        if r.conclusion not in FAILED:
-            break
-        streak.append(r)
-    return streak
+def _counts(r):
+    return r.conclusion in FAILED | PASSED and r.completed_at - r.created_at <= LOOKBACK
 
 
 def _qualifies(streak, policy):
     return (
         len(streak) >= policy.min_failures
-        and streak[0].created_at - streak[-1].created_at >= policy.min_span
+        and streak[0].completed_at - streak[-1].completed_at >= policy.min_span
     )
 
 
 def _remind_day(t, policy):
-    # The "day" rolls over at remind_hour_utc, so comparing two runs' days
-    # tells whether that hour fell between them.
+    # The "day" rolls over at remind_hour_utc, so comparing two attempts'
+    # days tells whether that hour fell between them.
     return (t - datetime.timedelta(hours=policy.remind_hour_utc)).date()
 
 
-def decide(runs, run_id, policy=Policy(), previous_attempt=None):
-    """Return the Event that run `run_id` should post, or None.
+def _replay(runs, policy):
+    """Yield (attempt, Event or None, reset) for each attempt that counts,
+    in the order they finished. `reset` is whether it ended the streak."""
+    streak, alert_at, reminded, passed = [], None, None, None
+    for r in sorted(filter(_counts, runs), key=lambda r: r.key):
+        # streak[0] is the newest-created failure, never older than `passed`.
+        newest = streak[0].created_at if streak else passed
+        if newest is not None and r.created_at < newest:
+            # An older run's result, such as a re-run of an earlier commit,
+            # says nothing about whether the newer runs' code works.
+            yield r, None, False
+            continue
+        if r.conclusion in PASSED:
+            event = Event(Kind.RECOVERED, streak, r) if alert_at else None
+            streak, alert_at, reminded, passed = [], None, None, r.created_at
+            yield r, event, True
+            continue
+        streak = [r] + streak
+        event = None
+        if alert_at is None:
+            if _qualifies(streak, policy):
+                alert_at = r.completed_at
+                event = Event(Kind.ALERT, streak, r)
+        elif (
+            _remind_day(r.completed_at, policy) > _remind_day(alert_at, policy)
+            and r.completed_at - alert_at >= policy.remind_quiet
+            and _remind_day(r.completed_at, policy) != reminded
+        ):
+            reminded = _remind_day(r.completed_at, policy)
+            event = Event(Kind.REMIND, streak, r)
+        yield r, event, False
 
-    `runs` is the workflow's completed runs, newest first. A first attempt
-    ignores runs newer than `run_id`, so its decision is the same whenever
-    it is made. A re-run also checks whether newer runs have counted, so
-    replaying one later can give a different answer.
-    `previous_attempt` is None for a run's first attempt; for a re-run, it
-    summarizes the earlier attempts: a passing conclusion if any passed,
-    else a failing one if any failed, else "".
+
+def decide(runs, this, policy=Policy()):
+    """Return the Event that attempt `this` should post, or None.
+
+    `runs` is the workflow's completed attempts, in any order. Only those
+    that finished before `this` matter, so the decision is the same
+    whenever it is made.
     """
-    idx = next((i for i, r in enumerate(runs) if r.id == run_id), None)
-    if idx is None:
-        return None
-    this = runs[idx]
-    if this.conclusion not in FAILED | PASSED:
-        return None
-    history = _counted(runs[idx:])
-
-    if this.conclusion in PASSED:
-        streak = _leading_failures(history[1:])
-        if previous_attempt is not None:
-            # A re-run can only end a streak that is still open, so it must
-            # be the newest counted run. A previous attempt that passed
-            # already posted any recovery; one that failed was the streak's
-            # newest failure; any other (cancelled, say) didn't count.
-            if _counted(runs[:idx]) or previous_attempt in PASSED:
-                return None
-            if previous_attempt in FAILED:
-                failed = dataclasses.replace(this, conclusion=previous_attempt)
-                streak = [failed] + streak
-        if _qualifies(streak, policy):
-            return Event(Kind.RECOVERED, streak, this)
-        return None
-
-    if previous_attempt is not None:
-        # A failed re-run. An earlier attempt that failed already alerted or
-        # reminded if it was due, and one that passed already posted any
-        # recovery. If none counted, newer runs were decided while this one
-        # counted as cancelled, so one of them may already have alerted.
-        if previous_attempt in FAILED | PASSED or _counted(runs[:idx]):
-            return None
-
-    streak = _leading_failures(history)
-    if not _qualifies(streak, policy):
-        return None
-    # The run at which the streak first qualified is the one that alerted.
-    alerted = next(
-        i for i in range(len(streak) - 1, -1, -1) if _qualifies(streak[i:], policy)
-    )
-    if alerted == 0:
-        return Event(Kind.ALERT, streak, this)
-    alert_at = streak[alerted].created_at
-
-    def due(t):
-        # Past a reminder hour since the alert, and out of its quiet period.
-        return (
-            _remind_day(t, policy) > _remind_day(alert_at, policy)
-            and t - alert_at >= policy.remind_quiet
-        )
-
-    # The first due run in each day sends that day's reminder.
-    previous = streak[1].created_at
-    already = due(previous) and _remind_day(previous, policy) == _remind_day(
-        this.created_at, policy
-    )
-    if due(this.created_at) and not already:
-        return Event(Kind.REMIND, streak, this)
+    earlier = [r for r in runs if r.key < this.key]
+    for r, event, _ in _replay(earlier + [this], policy):
+        if r == this:
+            return event
     return None
 
 
@@ -303,19 +285,20 @@ def _when(t):
 def format_message(workflow, event, diagnosis=None, truncated=False):
     # The verdict label leads, so a phone's notification preview shows it.
     n = f"{len(event.streak)}+" if truncated else str(len(event.streak))
-    runs = "run" if n == "1" else "runs"
-    start = _when(event.streak[-1].created_at)
+    times = "time" if n == "1" else "times"
+    failures = "failure" if n == "1" else "failures"
+    start = _when(event.streak[-1].completed_at)
     if event.kind is Kind.RECOVERED:
-        end = _when(event.streak[0].created_at)
+        end = _when(event.streak[0].completed_at)
         return (
             f"No action needed: {workflow} is passing again "
-            f"after {n} failed {runs} ({start} to {end} UTC).\nRun: {event.run.url}"
+            f"after {n} {failures} ({start} to {end} UTC).\nRun: {event.run.url}"
         )
     label = VERDICT_LABELS[diagnosis.verdict]
     if event.kind is Kind.ALERT:
-        head = f"{label}: {workflow} has failed {n} {runs} in a row since {start} UTC."
+        head = f"{label}: {workflow} has failed {n} {times} in a row since {start} UTC."
     else:
-        head = f"{label}: {workflow} is still failing, {n} {runs} in a row since {start} UTC."
+        head = f"{label}: {workflow} is still failing ({n} {times} in a row since {start} UTC)."
     parts = [head, ""]
     parts += [f"- {a}" for a in diagnosis.advice]
     if diagnosis.evidence:
@@ -364,8 +347,13 @@ def _parse_time(s):
     return datetime.datetime.fromisoformat(s.replace("Z", "+00:00"))
 
 
-def _to_run(d):
-    return Run(d["id"], d["conclusion"] or "", _parse_time(d["created_at"]), d["html_url"])
+def _to_run(d, created_at):
+    """The Run for an API run or attempt object. An attempt object's
+    created_at is the attempt's own start, so the run's is passed in."""
+    return Run(
+        d["id"], d["conclusion"] or "", created_at, _parse_time(d["updated_at"]),
+        d["html_url"], d.get("run_attempt", 1),
+    )
 
 
 def _watched(d, repo):
@@ -380,28 +368,22 @@ def _attempt(repo, run_id, k, gh):
     return json.loads(gh("api", f"repos/{repo}/actions/runs/{run_id}/attempts/{k}"))
 
 
-def _listed_run(d, repo, this, gh):
-    """The Run a listing entry counts as, or None. `this`, the Run being
-    decided, replaces its own entry. A run being re-run, or whose latest
-    attempt was cancelled, counts as its newest attempt that passed or
-    failed; a first attempt still in progress has no result yet."""
-    if d["id"] == this.id:
-        return this
-    run = _to_run(d)
-    if run.conclusion in FAILED | PASSED:
-        return run
-    for k in range(d.get("run_attempt", 1) - 1, 0, -1):
-        conclusion = _attempt(repo, d["id"], k, gh)["conclusion"] or ""
-        if conclusion in FAILED | PASSED:
-            return dataclasses.replace(run, conclusion=conclusion)
-    return run if d["status"] == "completed" else None
+def _listed_attempts(d, repo, gh):
+    """The completed attempts of a listing entry. The entry shows only its
+    latest attempt; earlier ones have all completed."""
+    created_at = _parse_time(d["created_at"])
+    latest = d.get("run_attempt", 1)
+    found = [_to_run(_attempt(repo, d["id"], k, gh), created_at) for k in range(1, latest)]
+    if d["status"] == "completed":
+        found.append(_to_run(d, created_at))
+    return found
 
 
 def fetch_runs(repo, workflow_id, branch, this, gh=_gh):
-    """Runs that count, newest first, back to the first success before the
-    failure streak of `this`, the Run being decided. Returns (runs,
-    truncated)."""
-    runs = []
+    """Completed attempts, back far enough to include the last pass that
+    ended a streak before `this`, the attempt being decided. Returns
+    (attempts, truncated)."""
+    found = {(this.id, this.attempt): this}
     for page in range(1, MAX_PAGES + 1):
         data = json.loads(
             gh(
@@ -412,19 +394,21 @@ def fetch_runs(repo, workflow_id, branch, this, gh=_gh):
             )
         )
         batch = data["workflow_runs"]
-        listed = (_listed_run(d, repo, this, gh) for d in batch if _watched(d, repo))
-        runs += [r for r in listed if r is not None]
-        if all(r.id != this.id for r in runs) and (
-            len(batch) < 100 or this.created_at >= _parse_time(batch[-1]["created_at"])
-        ):
-            # The listing can lag behind a run that just completed.
-            print(f"run {this.id} is not in the run listing yet; adding it")
-            at = next((i for i, r in enumerate(runs) if r.created_at <= this.created_at), len(runs))
-            runs.insert(at, this)
-        idx = next((i for i, r in enumerate(runs) if r.id == this.id), len(runs))
-        older = _counted(runs[idx:])
-        # One success past the streak is enough: decide() looks no further.
-        if any(r.conclusion in PASSED for r in older[1:]) or len(batch) < 100:
+        for d in batch:
+            if _watched(d, repo):
+                for r in _listed_attempts(d, repo, gh):
+                    # Keyed by (run, attempt): a run that shifts onto the next
+                    # page between calls is listed twice. `this` is already
+                    # known, and the listing can lag behind it.
+                    found.setdefault((r.id, r.attempt), r)
+        runs = list(found.values())
+        if len(batch) < 100:
+            return runs, False
+        earlier = [r for r in runs if r.key < this.key]
+        resets = [r for r, _, reset in _replay(earlier, Policy()) if reset]
+        # Any attempt that finished after the last reset belongs to a run
+        # created at most LOOKBACK before it.
+        if resets and _parse_time(batch[-1]["created_at"]) < resets[-1].completed_at - LOOKBACK:
             return runs, False
     return runs, True
 
@@ -463,30 +447,21 @@ def main(argv=None, gh=_gh, send=send_telegram, env=os.environ):
     if run["head_branch"] != branch:
         print(f"{workflow} run {args.run_id} is on {run['head_branch']}, not {branch}; ignoring")
         return 0
-    attempt = run.get("run_attempt", 1)
-    if args.run_attempt:
-        # Judge the triggering attempt, even if a newer one has started.
-        attempt = args.run_attempt
-        run["conclusion"] = _attempt(args.repo, args.run_id, attempt, gh)["conclusion"]
-    # An attempt's html_url is the run's, so name the attempt in the link.
-    run["html_url"] += f"/attempts/{attempt}"
-    runs, truncated = fetch_runs(args.repo, run["workflow_id"], branch, _to_run(run), gh=gh)
-    previous = None
-    if attempt > 1:
-        # Summarize every earlier attempt: if one passed, it already posted
-        # the recovery notice if one was due; else if one failed, the run's
-        # earlier result was a failure. Cancelled attempts posted nothing. ""
-        # rather than None if none passed or failed, so it stays a re-run.
-        conclusions = [
-            _attempt(args.repo, args.run_id, k, gh)["conclusion"] or ""
-            for k in range(1, attempt)
-        ]
-        previous = next((c for c in conclusions if c in PASSED), None)
-        if previous is None:
-            previous = next((c for c in reversed(conclusions) if c in FAILED), "")
-    event = decide(runs, args.run_id, POLICIES.get(workflow, Policy()), previous)
+    # Judge the triggering attempt, even if a newer one has started. The
+    # run object shows only its latest attempt.
+    attempt = args.run_attempt or run.get("run_attempt", 1)
+    done = run
+    if attempt != run.get("run_attempt", 1):
+        done = _attempt(args.repo, args.run_id, attempt, gh)
+    this = dataclasses.replace(
+        _to_run(done, _parse_time(run["created_at"])),
+        # An attempt's html_url is the run's, so name the attempt in the link.
+        url=f"{run['html_url']}/attempts/{attempt}",
+    )
+    runs, truncated = fetch_runs(args.repo, run["workflow_id"], branch, this, gh=gh)
+    event = decide(runs, this, POLICIES.get(workflow, Policy()))
     if event is None:
-        print(f"{workflow} run {args.run_id} attempt {attempt} ({run['conclusion']}): nothing to post")
+        print(f"{workflow} run {args.run_id} attempt {attempt} ({done['conclusion']}): nothing to post")
         return 0
     diagnosis = None
     if event.kind is not Kind.RECOVERED:

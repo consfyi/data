@@ -349,6 +349,15 @@ class TestClassify(unittest.TestCase):
         self.assertFalse(any("403" in a for a in d.advice))
         self.assertNotIn("403", d.evidence)
 
+    def test_skipped_source_403_in_the_failure_summary_needs_action(self):
+        # The real 2026-10-28 import_concat run: the import step skipped a
+        # source that returned 403, and the last step failed the job with a
+        # summary that keeps only httpx's hint line.
+        d = classify(self.fixture("concat_skipped_source_403.log"))
+        self.assertEqual(d.verdict, Verdict.ACTION)
+        self.assertEqual(d.rule_ids, ("source-blocked",))
+        self.assertIn("palmetto-fur-the-season.json", d.evidence)
+
     def test_push_race_in_the_failing_step_outweighs_an_earlier_403(self):
         d = classify(self.fixture("concat_403_then_push_race_sectioned.log"))
         self.assertEqual(d.verdict, Verdict.NO_ACTION)

@@ -1,0 +1,110 @@
+import	UNKNOWN STEP	2026-10-28T22:33:44.4198511Z ##[group]Run ./tools/data-importers/import_concat_all.sh
+import	UNKNOWN STEP	2026-10-28T22:33:44.4199048Z ^[[36;1m./tools/data-importers/import_concat_all.sh^[[0m
+import	UNKNOWN STEP	2026-10-28T22:33:44.4229305Z shell: /usr/bin/bash -e {0}
+import	UNKNOWN STEP	2026-10-28T22:33:44.4233141Z ##[endgroup]
+import	UNKNOWN STEP	2026-10-28T22:33:47.3176746Z INFO:googlemaps.client:API queries_quota: 60
+import	UNKNOWN STEP	2026-10-28T22:33:47.3177255Z Traceback (most recent call last):
+import	UNKNOWN STEP	2026-10-28T22:33:47.3184952Z   File "/home/runner/work/data/data/./tools/data-importers/import_concat.py", line 434, in <module>
+import	UNKNOWN STEP	2026-10-28T22:33:47.3185516Z     main()
+import	UNKNOWN STEP	2026-10-28T22:33:47.3185716Z     ~~~~^^
+import	UNKNOWN STEP	2026-10-28T22:33:47.3186168Z   File "/home/runner/work/data/data/./tools/data-importers/import_concat.py", line 384, in main
+import	UNKNOWN STEP	2026-10-28T22:33:47.3186663Z     resp.raise_for_status()
+import	UNKNOWN STEP	2026-10-28T22:33:47.3186914Z     ~~~~~~~~~~~~~~~~~~~~~^^
+import	UNKNOWN STEP	2026-10-28T22:33:47.3187695Z   File "/home/runner/work/_temp/setup-uv-cache/environments-v2/import-concat-a7f39979acd996fe/lib/python3.14/site-packages/httpx/_models.py", line 829, in raise_for_status
+import	UNKNOWN STEP	2026-10-28T22:33:47.3188601Z     raise HTTPStatusError(message, request=request, response=self)
+import	UNKNOWN STEP	2026-10-28T22:33:47.3189241Z httpx.HTTPStatusError: Client error '403 Forbidden' for url 'https://reg.palmettofurtheseason.org/api/config'
+import	UNKNOWN STEP	2026-10-28T22:33:47.3189961Z For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+import	UNKNOWN STEP	2026-10-28T22:33:47.5171529Z INFO:googlemaps.client:API queries_quota: 60
+import	UNKNOWN STEP	2026-10-28T22:33:47.5211370Z INFO:googlemaps.client:API queries_quota: 60
+import	UNKNOWN STEP	2026-10-28T22:33:47.5291263Z INFO:googlemaps.client:API queries_quota: 60
+import	UNKNOWN STEP	2026-10-28T22:33:47.6236958Z INFO:googlemaps.client:API queries_quota: 60
+import	UNKNOWN STEP	2026-10-28T22:33:47.6238250Z /home/runner/work/_temp/setup-uv-cache/environments-v2/import-concat-a7f39979acd996fe/lib/python3.14/site-packages/anyio/from_thread.py:119: SyntaxWarning: 'return' in a 'finally' block
+import	UNKNOWN STEP	2026-10-28T22:33:47.6239100Z   return result
+import	UNKNOWN STEP	2026-10-28T22:33:47.6263792Z INFO:googlemaps.client:API queries_quota: 60
+import	UNKNOWN STEP	2026-10-28T22:33:47.7141497Z INFO:googlemaps.client:API queries_quota: 60
+import	UNKNOWN STEP	2026-10-28T22:33:47.7161256Z INFO:googlemaps.client:API queries_quota: 60
+import	UNKNOWN STEP	2026-10-28T22:33:47.7197025Z INFO:googlemaps.client:API queries_quota: 60
+import	UNKNOWN STEP	2026-10-28T22:33:47.7248059Z INFO:googlemaps.client:API queries_quota: 60
+import	UNKNOWN STEP	2026-10-28T22:33:47.7277562Z INFO:googlemaps.client:API queries_quota: 60
+import	UNKNOWN STEP	2026-10-28T22:33:47.7306947Z INFO:googlemaps.client:API queries_quota: 60
+import	UNKNOWN STEP	2026-10-28T22:33:47.7344568Z    Building googlemaps==4.10.0
+import	UNKNOWN STEP	2026-10-28T22:33:47.7345320Z       Built googlemaps==4.10.0
+import	UNKNOWN STEP	2026-10-28T22:33:47.7345963Z Installed 12 packages in 4ms
+import	UNKNOWN STEP	2026-10-28T22:33:47.7346559Z INFO:googlemaps.client:API queries_quota: 60
+import	UNKNOWN STEP	2026-10-28T22:33:47.7388376Z INFO:googlemaps.client:API queries_quota: 60
+import	UNKNOWN STEP	2026-10-28T22:33:47.7424270Z INFO:googlemaps.client:API queries_quota: 60
+import	UNKNOWN STEP	2026-10-28T22:33:47.7480583Z INFO:googlemaps.client:API queries_quota: 60
+import	UNKNOWN STEP	2026-10-28T22:33:47.7507192Z INFO:googlemaps.client:API queries_quota: 60
+import	UNKNOWN STEP	2026-10-28T22:33:47.7533625Z INFO:googlemaps.client:API queries_quota: 60
+import	UNKNOWN STEP	2026-10-28T22:33:47.7559696Z INFO:googlemaps.client:API queries_quota: 60
+import	UNKNOWN STEP	2026-10-28T22:33:47.7585445Z ##[error]import_concat: 1 source(s) failed and were skipped:
+import	UNKNOWN STEP	2026-10-28T22:33:47.7596367Z ##[error]  - palmetto-fur-the-season.json https://reg.palmettofurtheseason.org: For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+import	UNKNOWN STEP	2026-10-28T22:33:47.7639675Z ##[group]Run uv run tools/format.py *.json
+import	UNKNOWN STEP	2026-10-28T22:33:47.7640359Z ^[[36;1muv run tools/format.py *.json^[[0m
+import	UNKNOWN STEP	2026-10-28T22:33:47.7671347Z shell: /usr/bin/bash -e {0}
+import	UNKNOWN STEP	2026-10-28T22:33:47.7672713Z ##[endgroup]
+import	UNKNOWN STEP	2026-10-28T22:33:47.8481561Z Installed 1 package in 1ms
+import	UNKNOWN STEP	2026-10-28T22:33:47.9096702Z ##[group]Run mkdir -p "$RUNNER_TEMP/out"
+import	UNKNOWN STEP	2026-10-28T22:33:47.9097105Z ^[[36;1mmkdir -p "$RUNNER_TEMP/out"^[[0m
+import	UNKNOWN STEP	2026-10-28T22:33:47.9127666Z shell: /usr/bin/bash -e {0}
+import	UNKNOWN STEP	2026-10-28T22:33:47.9128980Z ##[endgroup]
+import	UNKNOWN STEP	2026-10-28T22:33:47.9259539Z ##[group]Run uv run tools/materialize.py "$RUNNER_TEMP/out"
+import	UNKNOWN STEP	2026-10-28T22:33:47.9260019Z ^[[36;1muv run tools/materialize.py "$RUNNER_TEMP/out"^[[0m
+import	UNKNOWN STEP	2026-10-28T22:33:47.9288141Z shell: /usr/bin/bash -e {0}
+import	UNKNOWN STEP	2026-10-28T22:33:47.9289454Z ##[endgroup]
+import	UNKNOWN STEP	2026-10-28T22:33:48.0297125Z Downloading tzfpy (6.0MiB)
+import	UNKNOWN STEP	2026-10-28T22:33:48.0793545Z  Downloaded tzfpy
+import	UNKNOWN STEP	2026-10-28T22:33:48.0981875Z Installed 11 packages in 18ms
+import	UNKNOWN STEP	2026-10-28T22:33:48.9644835Z ##[group]Run git add .
+import	UNKNOWN STEP	2026-10-28T22:33:48.9645135Z ^[[36;1mgit add .^[[0m
+import	UNKNOWN STEP	2026-10-28T22:33:48.9645489Z ^[[36;1mgit diff-index --quiet HEAD || git commit -m "via import_concat"^[[0m
+import	UNKNOWN STEP	2026-10-28T22:33:48.9645890Z ^[[36;1mgit push^[[0m
+import	UNKNOWN STEP	2026-10-28T22:33:48.9675047Z shell: /usr/bin/bash -e {0}
+import	UNKNOWN STEP	2026-10-28T22:33:48.9676387Z ##[endgroup]
+import	UNKNOWN STEP	2026-10-28T22:33:49.2529393Z Everything up-to-date
+import	UNKNOWN STEP	2026-10-28T22:33:49.2611332Z ##[group]Run failures="$RUNNER_TEMP/concat_failures.txt"
+import	UNKNOWN STEP	2026-10-28T22:33:49.2612096Z ^[[36;1mfailures="$RUNNER_TEMP/concat_failures.txt"^[[0m
+import	UNKNOWN STEP	2026-10-28T22:33:49.2612686Z ^[[36;1mif [ -s "$failures" ]; then^[[0m
+import	UNKNOWN STEP	2026-10-28T22:33:49.2613568Z ^[[36;1m  echo "::error::$(wc -l < "$failures" | tr -d ' ') ConCat source(s) failed. The other sources were committed."^[[0m
+import	UNKNOWN STEP	2026-10-28T22:33:49.2614659Z ^[[36;1m  while IFS= read -r line; do echo "::error::$line"; done < "$failures"^[[0m
+import	UNKNOWN STEP	2026-10-28T22:33:49.2615573Z ^[[36;1m  # Actions keeps only 10 error annotations per step, so the summary^[[0m
+import	UNKNOWN STEP	2026-10-28T22:33:49.2616440Z ^[[36;1m  # carries the full list. Backticks are dropped so upstream error^[[0m
+import	UNKNOWN STEP	2026-10-28T22:33:49.2617260Z ^[[36;1m  # text can't close the code block and render as Markdown.^[[0m
+import	UNKNOWN STEP	2026-10-28T22:33:49.2617975Z ^[[36;1m  if [ -n "${GITHUB_STEP_SUMMARY:-}" ]; then^[[0m
+import	UNKNOWN STEP	2026-10-28T22:33:49.2618524Z ^[[36;1m    {^[[0m
+import	UNKNOWN STEP	2026-10-28T22:33:49.2619066Z ^[[36;1m      echo "### Failed ConCat sources"^[[0m
+import	UNKNOWN STEP	2026-10-28T22:33:49.2619605Z ^[[36;1m      echo^[[0m
+import	UNKNOWN STEP	2026-10-28T22:33:49.2620015Z ^[[36;1m      echo '```'^[[0m
+import	UNKNOWN STEP	2026-10-28T22:33:49.2620702Z ^[[36;1m      tr -d '`' < "$failures"^[[0m
+import	UNKNOWN STEP	2026-10-28T22:33:49.2621200Z ^[[36;1m      echo '```'^[[0m
+import	UNKNOWN STEP	2026-10-28T22:33:49.2621651Z ^[[36;1m    } >> "$GITHUB_STEP_SUMMARY"^[[0m
+import	UNKNOWN STEP	2026-10-28T22:33:49.2622145Z ^[[36;1m  fi^[[0m
+import	UNKNOWN STEP	2026-10-28T22:33:49.2622491Z ^[[36;1m  exit 1^[[0m
+import	UNKNOWN STEP	2026-10-28T22:33:49.2622863Z ^[[36;1mfi^[[0m
+import	UNKNOWN STEP	2026-10-28T22:33:49.2664433Z shell: /usr/bin/bash -e {0}
+import	UNKNOWN STEP	2026-10-28T22:33:49.2666596Z ##[endgroup]
+import	UNKNOWN STEP	2026-10-28T22:33:49.2778135Z ##[error]1 ConCat source(s) failed. The other sources were committed.
+import	UNKNOWN STEP	2026-10-28T22:33:49.2782511Z ##[error]palmetto-fur-the-season.json https://reg.palmettofurtheseason.org: For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+import	UNKNOWN STEP	2026-10-28T22:33:49.2812048Z ##[error]Process completed with exit code 1.
+import	UNKNOWN STEP	2026-10-28T22:33:49.2944359Z Post job cleanup.
+import	UNKNOWN STEP	2026-10-28T22:33:49.3810002Z [command]/usr/bin/git version
+import	UNKNOWN STEP	2026-10-28T22:33:49.3856620Z git version 2.56.0
+import	UNKNOWN STEP	2026-10-28T22:33:49.3891868Z Copying '/home/runner/.gitconfig' to '/home/runner/work/_temp/fc374f64-0a08-4e81-84de-4fa1d42e30f8/.gitconfig'
+import	UNKNOWN STEP	2026-10-28T22:33:49.3902072Z Temporarily overriding HOME='/home/runner/work/_temp/fc374f64-0a08-4e81-84de-4fa1d42e30f8' before making global git config changes
+import	UNKNOWN STEP	2026-10-28T22:33:49.3903537Z Adding repository directory to the temporary git global config as a safe directory
+import	UNKNOWN STEP	2026-10-28T22:33:49.3908416Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/data/data
+import	UNKNOWN STEP	2026-10-28T22:33:49.3951363Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+import	UNKNOWN STEP	2026-10-28T22:33:49.3992356Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+import	UNKNOWN STEP	2026-10-28T22:33:49.4282902Z Entering 'tools/data-importers'
+import	UNKNOWN STEP	2026-10-28T22:33:49.4362914Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+import	UNKNOWN STEP	2026-10-28T22:33:49.4394178Z http.https://github.com/.extraheader
+import	UNKNOWN STEP	2026-10-28T22:33:49.4406574Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+import	UNKNOWN STEP	2026-10-28T22:33:49.4445141Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+import	UNKNOWN STEP	2026-10-28T22:33:49.4728321Z Entering 'tools/data-importers'
+import	UNKNOWN STEP	2026-10-28T22:33:49.4752609Z http.https://github.com/.extraheader
+import	UNKNOWN STEP	2026-10-28T22:33:49.4805081Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+import	UNKNOWN STEP	2026-10-28T22:33:49.4851791Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+import	UNKNOWN STEP	2026-10-28T22:33:49.5141234Z Entering 'tools/data-importers'
+import	UNKNOWN STEP	2026-10-28T22:33:49.5162133Z file:/home/runner/work/data/data/.git/modules/tools/data-importers/config	remote.origin.url
+import	UNKNOWN STEP	2026-10-28T22:33:49.5201751Z [command]/usr/bin/git config --file /home/runner/work/data/data/.git/modules/tools/data-importers/config --name-only --get-regexp ^includeIf\.gitdir:
+import	UNKNOWN STEP	2026-10-28T22:33:49.5403566Z Cleaning up orphan processes

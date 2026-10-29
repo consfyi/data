@@ -628,5 +628,14 @@
     "reason": "Christmas Party panels (Dec 19), a separate event",
     "by": "sparkyfen",
     "at": "2026-10-24T23:27:57Z"
+  },
+  {
+    "event_id": "furnal-equinox-2027",
+    "category": "dealers",
+    "kind": "opens",
+    "date": "2026-10-28",
+    "reason": "Artists Alley opening lands after the existing dealers close of 2026-07-15; the dealers dates need a manual fix",
+    "by": "sparkyfen",
+    "at": "2026-10-29T02:29:02Z"
   }
 ]

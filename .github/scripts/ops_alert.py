@@ -36,7 +36,8 @@ teach it a new kind of failure, add a rule to ops_alert_rules.py.
 Missing secrets or a Telegram outage only log a warning. They never change
 the watched run's result and never fail this one.
 
-Usage: ops_alert.py --run-id <id> [--run-attempt <n>] [--repo owner/name] [--dry-run]
+Usage: ops_alert.py --run-id <id> [--run-attempt <n>] [--repo owner/name]
+                    [--default-branch <name>] [--dry-run]
 """
 import argparse
 import dataclasses
@@ -69,15 +70,17 @@ LOG_LINE_MAX = 200
 @dataclasses.dataclass(frozen=True)
 class Policy:
     min_failures: int = 2
-    # Under 6 hours: GitHub starts scheduled runs late by varying amounts, so
-    # two consecutive 6-hourly runs can start as little as ~5h40m apart.
-    min_span: datetime.timedelta = datetime.timedelta(hours=5)
+    # GitHub starts scheduled runs late by varying amounts. In October 2026,
+    # the 6-hourly importers' runs started as little as 4h13m apart, and the
+    # hourly import_fancons ran only every 2 to 9 hours. 3 hours keeps two
+    # failed 6-hourly runs enough to alert.
+    min_span: datetime.timedelta = datetime.timedelta(hours=3)
     remind_hour_utc: int = 16
     remind_quiet: datetime.timedelta = datetime.timedelta(hours=12)
 
 
 # Per-workflow overrides, keyed by workflow name. The default suits hourly,
-# 6-hourly, and daily schedules alike: it waits 5 hours, or 2 runs, whichever
+# 6-hourly, and daily schedules alike: it waits 3 hours, or 2 runs, whichever
 # is later.
 POLICIES: dict[str, Policy] = {}
 
@@ -428,6 +431,8 @@ def main(argv=None, gh=_gh, send=send_telegram, env=os.environ):
     # latest attempt.
     p.add_argument("--run-attempt", type=int)
     p.add_argument("--repo", default=env.get("GITHUB_REPOSITORY"))
+    # The event payload has it; without it, one more API call looks it up.
+    p.add_argument("--default-branch")
     p.add_argument("--dry-run", action="store_true", help="print, don't send")
     args = p.parse_args(argv)
 
@@ -442,8 +447,10 @@ def main(argv=None, gh=_gh, send=send_telegram, env=os.environ):
         print(f"{workflow} run {args.run_id} ({run['event']}) is not a scheduled or "
               f"dispatched run from {args.repo}; ignoring")
         return 0
-    # The run's embedded repository object omits default_branch.
-    branch = json.loads(gh("api", f"repos/{args.repo}"))["default_branch"]
+    branch = args.default_branch
+    if not branch:
+        # The run's embedded repository object omits default_branch.
+        branch = json.loads(gh("api", f"repos/{args.repo}"))["default_branch"]
     if run["head_branch"] != branch:
         print(f"{workflow} run {args.run_id} is on {run['head_branch']}, not {branch}; ignoring")
         return 0

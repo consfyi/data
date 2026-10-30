@@ -646,5 +646,14 @@
     "reason": "fashion-show model call, not a performer call; runways and fashion shows aren't performances.",
     "by": "sparkyfen",
     "at": "2026-10-30T03:52:52Z"
+  },
+  {
+    "event_id": "palmetto-anthro-weekend-2027",
+    "category": "performances",
+    "kind": "closes",
+    "date": "2027-02-01",
+    "reason": "Fursuit Runway deadline, not a performer deadline; runways and fashion shows aren't performances.",
+    "by": "sparkyfen",
+    "at": "2026-10-30T03:52:59Z"
   }
 ]

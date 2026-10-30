@@ -664,5 +664,14 @@
     "reason": "\"apply today\" reminder, not the opening; the post gives no open date",
     "by": "sparkyfen",
     "at": "2026-10-30T17:52:14Z"
+  },
+  {
+    "event_id": "furpocalypse-2026",
+    "category": "performances",
+    "kind": "opens",
+    "date": "2026-10-30",
+    "reason": "at-con show starting (\"Furpoc Freestyle starts in 1 hour\"), not a performer application opening",
+    "by": "sparkyfen",
+    "at": "2026-10-30T21:23:13Z"
   }
 ]

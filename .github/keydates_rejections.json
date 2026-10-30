@@ -637,5 +637,14 @@
     "reason": "Artists Alley opening lands after the existing dealers close of 2026-07-15; the dealers dates need a manual fix",
     "by": "sparkyfen",
     "at": "2026-10-29T02:29:02Z"
+  },
+  {
+    "event_id": "furpocalypse-2026",
+    "category": "performances",
+    "kind": "opens",
+    "date": "2026-09-14",
+    "reason": "fashion-show model call, not a performer call; runways and fashion shows aren't performances.",
+    "by": "sparkyfen",
+    "at": "2026-10-30T03:52:52Z"
   }
 ]

@@ -655,5 +655,14 @@
     "reason": "Fursuit Runway deadline, not a performer deadline; runways and fashion shows aren't performances.",
     "by": "sparkyfen",
     "at": "2026-10-30T03:52:59Z"
+  },
+  {
+    "event_id": "furpocalypse-2026",
+    "category": "volunteers",
+    "kind": "opens",
+    "date": "2026-10-09",
+    "reason": "\"apply today\" reminder, not the opening; the post gives no open date",
+    "by": "sparkyfen",
+    "at": "2026-10-30T17:52:14Z"
   }
 ]

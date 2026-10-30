@@ -6,6 +6,23 @@
   },
   "events": [
     {
+      "id": "furcamp-2027",
+      "name": "Furcamp 2027",
+      "url": "https://www.furcamp.com.br",
+      "startDate": "2027-02-05",
+      "endDate": "2027-02-09",
+      "venue": "Aruanã Acampamentos e Eventos",
+      "address": "R. João Antonio Carlos, 250 - Chácara dos Amigos, Embu-Guaçu - SP, 06909-470, Brasil",
+      "locale": "pt-BR",
+      "latLng": [
+        -23.778726,
+        -46.80845619999999
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    },
+    {
       "id": "furcamp-2026",
       "name": "Furcamp 2026",
       "url": "https://www.furcamp.com.br",

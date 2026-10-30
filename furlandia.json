@@ -6,6 +6,23 @@
   },
   "events": [
     {
+      "id": "furlandia-2027",
+      "name": "Furlandia 2027",
+      "url": "https://furlandia.org",
+      "startDate": "2027-05-07",
+      "endDate": "2027-05-09",
+      "venue": "Portland Marriott Downtown Waterfront",
+      "address": "1401 SW Naito Pkwy, Portland, OR 97201, USA",
+      "locale": "en-US",
+      "latLng": [
+        45.5123849,
+        -122.6759331
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    },
+    {
       "id": "furlandia-2026",
       "name": "Furlandia 2026",
       "url": "https://furlandia.org",

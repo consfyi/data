@@ -6,6 +6,23 @@
   },
   "events": [
     {
+      "id": "denfur-2027",
+      "name": "DenFur 2027",
+      "url": "https://denfur.org",
+      "startDate": "2027-09-03",
+      "endDate": "2027-09-05",
+      "venue": "Sheraton Denver Downtown Hotel",
+      "address": "1550 Court Pl, Denver, CO 80202, USA",
+      "locale": "en-US",
+      "latLng": [
+        39.7421248,
+        -104.989906
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    },
+    {
       "id": "denfur-2026",
       "name": "DenFur 2026",
       "url": "https://denfur.org",

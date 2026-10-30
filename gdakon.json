@@ -6,6 +6,23 @@
   },
   "events": [
     {
+      "id": "gdakon-2027",
+      "name": "Gdakon 2027",
+      "url": "https://gdakon.pl",
+      "startDate": "2027-03-17",
+      "endDate": "2027-03-21",
+      "venue": "Radisson Blu",
+      "address": "Bitwy pod Płowcami 54, 81-731 Sopot, Polska",
+      "locale": "pl-PL",
+      "latLng": [
+        54.4334073,
+        18.579679
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    },
+    {
       "id": "gdakon-2026",
       "name": "Gdakon 2026",
       "url": "https://gdakon.pl",

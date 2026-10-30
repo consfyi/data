@@ -6,6 +6,23 @@
   },
   "events": [
     {
+      "id": "brasil-furfest-2027",
+      "name": "Brasil FurFest 2027",
+      "url": "https://brasilfurfest.com.br",
+      "startDate": "2027-09-10",
+      "endDate": "2027-09-12",
+      "venue": "Cenacon NacionalInn",
+      "address": "Av. Ver. Edmundo Cardilo, 3500 - Parque Vivaldi Leite Ribeiro, Poços de Caldas - MG, Brasil",
+      "locale": "pt-BR",
+      "latLng": [
+        -21.8120043,
+        -46.5553125
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    },
+    {
       "id": "brasil-furfest-2026",
       "name": "Brasil FurFest 2026",
       "url": "https://brasilfurfest.com.br",

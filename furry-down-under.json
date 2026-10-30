@@ -17,7 +17,47 @@
       "latLng": [
         -28.0176652,
         153.4299021
-      ]
+      ],
+      "keyDates": {
+        "registration": {
+          "opens": {
+            "date": "2026-09-04",
+            "source": "https://bsky.app/profile/did:plc:cit3srdvvirtppe6a3ouaom5/post/3munyzgmj2s2g",
+            "asOf": "2026-09-04T03:20:07.415Z",
+            "confidence": 0.95
+          }
+        },
+        "dealers": {
+          "opens": {
+            "date": "2026-09-04",
+            "source": "https://bsky.app/profile/did:plc:cit3srdvvirtppe6a3ouaom5/post/3mujrrqvlzc2w",
+            "asOf": "2026-09-02T10:59:54.620Z",
+            "confidence": 0.95
+          },
+          "closes": {
+            "date": "2026-10-09",
+            "source": "https://bsky.app/profile/did:plc:cit3srdvvirtppe6a3ouaom5/post/3mutvjvbznk2i",
+            "asOf": "2026-09-06T11:33:43.129Z",
+            "confidence": 0.95
+          }
+        },
+        "performances": {
+          "closes": {
+            "date": "2026-10-09",
+            "source": "https://bsky.app/profile/did:plc:cit3srdvvirtppe6a3ouaom5/post/3mutvjvbznk2i",
+            "asOf": "2026-09-06T11:33:43.129Z",
+            "confidence": 0.95
+          }
+        },
+        "djs": {
+          "closes": {
+            "date": "2026-10-09",
+            "source": "https://bsky.app/profile/did:plc:cit3srdvvirtppe6a3ouaom5/post/3mutvjvbznk2i",
+            "asOf": "2026-09-06T11:33:43.129Z",
+            "confidence": 0.95
+          }
+        }
+      }
     },
     {
       "id": "furry-down-under-2026",

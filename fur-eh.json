@@ -36,6 +36,12 @@
             "source": "https://bsky.app/profile/did:plc:xekssaocuarinic2wxunlmnm/post/3myqjh77ern2j",
             "asOf": "2026-10-26T01:00:14.812760522Z",
             "confidence": 1
+          },
+          "closes": {
+            "date": "2026-12-05",
+            "source": "https://bsky.app/profile/did:plc:xekssaocuarinic2wxunlmnm/post/3mz4l2csakb22",
+            "asOf": "2026-10-30T20:00:46.563046287Z",
+            "confidence": 0.95
           }
         }
       }

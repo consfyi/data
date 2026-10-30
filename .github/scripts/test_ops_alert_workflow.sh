@@ -4,10 +4,12 @@
 # Runs the step's real run: block (extracted from the YAML, never duplicated)
 # under GitHub's shell with a stubbed python3, and checks that only a manual
 # dispatch with dry_run left on adds --dry-run, so workflow_run triggers send,
-# and that --run-attempt is passed only when RUN_ATTEMPT is set.
+# and that --run-attempt and --default-branch are passed only when
+# RUN_ATTEMPT and DEFAULT_BRANCH are set.
 # Also checks that dry_run defaults on, that workflow_run fires only on
 # completed runs, that RUN_ATTEMPT comes from the triggering workflow_run or
-# else the run_attempt input, and that the step reads the same ops secrets as
+# else the run_attempt input, that DEFAULT_BRANCH comes from the event's
+# repository object, and that the step reads the same ops secrets as
 # deploy.yml's trigger alert.
 #
 # Needs PyYAML: uv run -q --no-project --with pyyaml -- bash .github/scripts/test_ops_alert_workflow.sh
@@ -80,6 +82,20 @@ else
   fail "RUN_ATTEMPT=3: does not pass --run-attempt 3"
 fi
 
+run DRY_RUN= DEFAULT_BRANCH=
+if grep -qx -- "--default-branch" "$TMP/args"; then
+  fail "DEFAULT_BRANCH empty: passes --default-branch"
+else
+  pass "DEFAULT_BRANCH empty: omits --default-branch"
+fi
+
+run DRY_RUN= DEFAULT_BRANCH=main
+if grep -A1 -x -- "--default-branch" "$TMP/args" | grep -qx main; then
+  pass "DEFAULT_BRANCH=main: passes --default-branch main"
+else
+  fail "DEFAULT_BRANCH=main: does not pass --default-branch main"
+fi
+
 run DRY_RUN=false
 if grep -qx -- "--dry-run" "$TMP/args"; then
   fail "DRY_RUN=false: passes --dry-run"
@@ -121,6 +137,10 @@ attempt = "${{ github.event.workflow_run.run_attempt || inputs.run_attempt }}"
 if ops["env"].get("RUN_ATTEMPT") != attempt:
     print(f"FAIL: RUN_ATTEMPT is {ops['env'].get('RUN_ATTEMPT')!r}, not {attempt!r}")
     ok = False
+branch = "${{ github.event.repository.default_branch }}"
+if ops["env"].get("DEFAULT_BRANCH") != branch:
+    print(f"FAIL: DEFAULT_BRANCH is {ops['env'].get('DEFAULT_BRANCH')!r}, not {branch!r}")
+    ok = False
 for var in ("OPS_TOKEN", "OPS_CHAT"):
     if ops["env"].get(var) != deploy["env"][var]:
         print(f"FAIL: {var} is {ops['env'].get(var)!r}, deploy.yml uses {deploy['env'][var]!r}")
@@ -128,7 +148,7 @@ for var in ("OPS_TOKEN", "OPS_CHAT"):
 sys.exit(0 if ok else 1)
 PY
 then
-  pass "dry_run defaults to true; run_attempt input is optional; workflow_run fires on completed; RUN_ATTEMPT is the workflow_run's or the input's; OPS_TOKEN and OPS_CHAT match deploy.yml's trigger alert"
+  pass "dry_run defaults to true; run_attempt input is optional; workflow_run fires on completed; RUN_ATTEMPT is the workflow_run's or the input's; DEFAULT_BRANCH is the event repository's; OPS_TOKEN and OPS_CHAT match deploy.yml's trigger alert"
 else
   FAILURES=$((FAILURES + 1))
 fi

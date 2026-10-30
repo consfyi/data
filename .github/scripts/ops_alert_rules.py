@@ -57,7 +57,11 @@ RULES = [
     ),
     Rule(
         id="source-blocked",
-        pattern=re.compile(r"\b403 Forbidden\b|\b429 Too Many Requests\b"),
+        # The second form is httpx's hint line, which is all import_concat's
+        # failure summary keeps of the error.
+        pattern=re.compile(
+            r"\b403 Forbidden\b|\b429 Too Many Requests\b|/HTTP/Status/(?:403|429)\b"
+        ),
         verdict=Verdict.ACTION,
         advice="A source site returned 403 or 429 and may be blocking the "
         "importer. Don't rerun the importer by hand, because more requests "

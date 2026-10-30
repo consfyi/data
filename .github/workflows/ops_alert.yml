@@ -50,9 +50,12 @@ jobs:
           RUN_ID: ${{ github.event.workflow_run.id || inputs.run_id }}
           # The attempt that completed; empty if a dispatch leaves run_attempt blank.
           RUN_ATTEMPT: ${{ github.event.workflow_run.run_attempt || inputs.run_attempt }}
+          # Saves an API call. If it's empty, the script looks it up instead.
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
           DRY_RUN: ${{ inputs.dry_run }}
         run: |
           args=(--run-id "$RUN_ID")
           if [ -n "$RUN_ATTEMPT" ]; then args+=(--run-attempt "$RUN_ATTEMPT"); fi
+          if [ -n "$DEFAULT_BRANCH" ]; then args+=(--default-branch "$DEFAULT_BRANCH"); fi
           if [ "$DRY_RUN" = true ]; then args+=(--dry-run); fi
           python3 .github/scripts/ops_alert.py "${args[@]}"

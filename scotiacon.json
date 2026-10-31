@@ -28,6 +28,12 @@
             "source": "https://bsky.app/profile/scotiacon.bsky.social/post/3mph45tk7ls2e",
             "asOf": "2026-06-29T18:21:40.116Z",
             "confidence": 0.95
+          },
+          "closes": {
+            "date": "2026-11-30",
+            "source": "https://bsky.app/profile/did:plc:ykiko7fa24cbv2bmffeylfys/post/3mz74lcxegc2v",
+            "asOf": "2026-10-31T20:19:50.854Z",
+            "confidence": 1
           }
         },
         "dealers": {

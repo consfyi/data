@@ -17,7 +17,25 @@
       "latLng": [
         43.6534888,
         -70.2608888
-      ]
+      ],
+      "keyDates": {
+        "registration": {
+          "opens": {
+            "date": "2026-10-24",
+            "source": "https://bsky.app/profile/did:plc:clgiak22ikoxswjcxn6prgw7/post/3mydlesidqk2v",
+            "asOf": "2026-10-20T21:30:05.693Z",
+            "confidence": 1.0
+          }
+        },
+        "volunteers": {
+          "opens": {
+            "date": "2026-07-01",
+            "source": "https://bsky.app/profile/did:plc:clgiak22ikoxswjcxn6prgw7/post/3mpmfxds7de2r",
+            "asOf": "2026-07-01T21:00:18.325Z",
+            "confidence": 1.0
+          }
+        }
+      }
     },
     {
       "id": "furcationland-2026",

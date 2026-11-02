@@ -20,7 +20,17 @@
       ],
       "sources": [
         "fancons.com"
-      ]
+      ],
+      "keyDates": {
+        "registration": {
+          "opens": {
+            "date": "2026-10-11",
+            "source": "https://bsky.app/profile/did:plc:5qadfstdsv7yd2nvezahdlxq/post/3mxmplcosxj2v",
+            "asOf": "2026-10-11T19:14:04.927Z",
+            "confidence": 0.9
+          }
+        }
+      }
     },
     {
       "id": "denfur-2026",

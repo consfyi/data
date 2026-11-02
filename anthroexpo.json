@@ -27,6 +27,14 @@
             "confidence": 1.0
           }
         },
+        "panels": {
+          "opens": {
+            "date": "2026-11-02",
+            "source": "https://bsky.app/profile/did:plc:2yyx6fpki4ibgkmljp6yjtnw/post/3mzdvpbyxuy22",
+            "asOf": "2026-11-02T18:00:06.000Z",
+            "confidence": 0.95
+          }
+        },
         "volunteers": {
           "opens": {
             "date": "2026-06-03",

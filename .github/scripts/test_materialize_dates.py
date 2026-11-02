@@ -45,20 +45,28 @@ def make_series(start_date, end_date):
 def run_materialize(series):
     """Write ``series`` as a fixture and run materialize.py against it via uv.
 
-    Returns the CompletedProcess. materialize only globs *.json in its cwd, so
-    out/ can live alongside the fixture without being picked up as a series
-    file."""
+    Returns the CompletedProcess, with ``out_files`` set to the sorted paths
+    (relative to out/) of every file materialize wrote, since out/ is gone by
+    the time the caller sees the result. materialize only globs *.json in its
+    cwd, so out/ can live alongside the fixture without being picked up as a
+    series file."""
     with tempfile.TemporaryDirectory() as data_dir:
         with open(os.path.join(data_dir, "testcon.json"), "w") as f:
             json.dump(series, f)
         out_dir = os.path.join(data_dir, "out")
         os.mkdir(out_dir)
-        return subprocess.run(
+        result = subprocess.run(
             ["uv", "run", "--script", str(MATERIALIZE), out_dir],
             cwd=data_dir,
             capture_output=True,
             text=True,
         )
+        result.out_files = sorted(
+            path.relative_to(out_dir).as_posix()
+            for path in pathlib.Path(out_dir).rglob("*")
+            if path.is_file()
+        )
+        return result
 
 
 @unittest.skipUnless(
@@ -73,9 +81,15 @@ class TestDateOrder(unittest.TestCase):
         self.assertEqual(result.returncode, 0, result.stderr)
 
     def test_single_day_event_passes(self):
-        """A single-day event (endDate == startDate) validates."""
+        """A single-day event (endDate == startDate) validates.
+
+        Also pins the output layout that
+        test_schema_invalid_series_is_not_written filters on, so renaming
+        series/ or events/ can't make that test pass vacuously."""
         result = run_materialize(make_series("2027-04-02", "2027-04-02"))
         self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertIn("series/testcon.json", result.out_files)
+        self.assertIn("events/testcon-2027.json", result.out_files)
 
     def test_end_before_start_fails(self):
         """An event whose endDate precedes startDate fails with a clear message.
@@ -120,6 +134,26 @@ class TestDateOrder(unittest.TestCase):
         self.assertIn("required property", result.stderr)
         self.assertIn("locale", result.stderr)
         self.assertNotIn("Traceback", result.stderr)
+
+    def test_schema_invalid_series_is_not_written(self):
+        """A schema-invalid series is skipped, not written to series/ or events/.
+
+        Regression for the has_errors fix: a series-level type error does not
+        crash the event loop, so without the fix the invalid series and its
+        events were materialized before the script exited 1. This covers schema
+        errors only: the date-order and duplicate-id checks still run after a
+        series is written."""
+        series = make_series("2027-04-02", "2027-04-04")
+        series["name"] = 12345
+        result = run_materialize(series)
+        self.assertEqual(result.returncode, 1, result.stderr)
+        self.assertIn("$.name", result.stderr)
+        written = [
+            path
+            for path in result.out_files
+            if path.startswith(("series/", "events/"))
+        ]
+        self.assertEqual(written, [])
 
 
 if __name__ == "__main__":

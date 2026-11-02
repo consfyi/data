@@ -28,6 +28,14 @@
         "fancons.com"
       ],
       "keyDates": {
+        "registration": {
+          "closes": {
+            "date": "2026-11-08",
+            "source": "https://bsky.app/profile/did:plc:umwjtg42a4hn6ywn36rg72po/post/3mzah2tikel2z",
+            "asOf": "2026-11-01T09:00:08.476Z",
+            "confidence": 0.9
+          }
+        },
         "hotel": {
           "opens": {
             "date": "2026-09-27",

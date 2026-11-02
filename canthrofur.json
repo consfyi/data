@@ -6,6 +6,23 @@
   },
   "events": [
     {
+      "id": "canthrofur-2027",
+      "name": "CanthroFur 2027",
+      "url": "https://canthrofur.org",
+      "startDate": "2027-01-14",
+      "endDate": "2027-01-18",
+      "venue": "Village vacances VTF Le Domaine des Puys",
+      "address": "Guérinot, 63950 Saint-Sauves-d'Auvergne, France",
+      "locale": "fr-FR",
+      "latLng": [
+        45.6231121,
+        2.6952037
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    },
+    {
       "id": "canthrofur-2026",
       "name": "CanthroFur 2026",
       "url": "https://canthrofur.org",

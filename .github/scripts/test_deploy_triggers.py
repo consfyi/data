@@ -37,17 +37,25 @@ def trigger_block(workflow):
     return workflow.get("on", workflow.get(True))
 
 
+def is_import(name, filename):
+    return name.startswith("import_") or filename.startswith("import_")
+
+
+def workflow_name(path):
+    # GitHub names a workflow after its file path when name: is missing.
+    return load(path).get("name") or ".github/workflows/" + path.name
+
+
 def problems(workflows_dir):
     """Returns a list of mismatches between deploy.yml and the import workflows."""
     out = []
     names = {}
     for path in sorted(workflows_dir.glob("*.y*ml")):
-        # GitHub names a workflow after its file path when name: is missing.
-        name = load(path).get("name") or ".github/workflows/" + path.name
+        name = workflow_name(path)
         if name in names:
             out.append("%s and %s are both named %s" % (names[name], path.name, name))
         names[name] = path.name
-    imports = {n for n, f in names.items() if n.startswith("import_") or f.startswith("import_")}
+    imports = {n for n, f in names.items() if is_import(n, f)}
     if not imports:
         return out + ["found no import_* workflows in %s" % workflows_dir]
 
@@ -147,8 +155,9 @@ def main():
     # No import workflows at all must not pass silently.
     with tempfile.TemporaryDirectory() as tmp:
         def drop_imports(d):
-            for p in d.glob("import_*.yml"):
-                p.unlink()
+            for p in d.glob("*.y*ml"):
+                if is_import(workflow_name(p), p.name):
+                    p.unlink()
         found = problems(altered_copy(tmp, drop_imports))
         check("fails when it finds no import workflows",
               any("found no import_* workflows" in p for p in found))

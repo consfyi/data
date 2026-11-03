@@ -5,10 +5,14 @@ on:
       - main
 
   workflow_run:
+    # Every import_* workflow must be listed here: imports push with the
+    # workflow GITHUB_TOKEN, which never triggers the push event above.
+    # .github/scripts/test_deploy_triggers.py, run by validate.yml on PRs and
+    # on pushes to main that touch workflows, fails if one is missing.
     workflows:
-      - import_eventdrake
-      - import_fancons
       - import_concat
+      - import_fancons
+      - import_furrynz
       - import_rams
     types:
       - completed

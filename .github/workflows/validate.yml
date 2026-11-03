@@ -5,6 +5,15 @@
 name: validate
 on:
   pull_request:
+  # Workflow changes sometimes land on main by direct push, which skips the
+  # pull_request run. This catches a new import workflow that deploy.yml
+  # doesn't follow (test_deploy_triggers.py).
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/**"
+      - ".github/scripts/test_deploy_triggers.py"
   workflow_dispatch:
 
 permissions:
@@ -38,3 +47,5 @@ jobs:
         run: python3 .github/scripts/test_ops_alert.py
       - name: Concat failed-source step tests
         run: uv run -q --no-project --with pyyaml -- bash .github/scripts/test_concat_failures_step.sh
+      - name: Deploy follows every import workflow
+        run: uv run -q --no-project --with pyyaml -- python3 .github/scripts/test_deploy_triggers.py

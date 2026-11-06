@@ -25,6 +25,12 @@
             "source": "https://bsky.app/profile/did:plc:5tccqxugf2h7pocamiydvsth/post/3mwtwphtf7t2f",
             "asOf": "2026-10-01T22:45:07.340Z",
             "confidence": 0.9
+          },
+          "closes": {
+            "date": "2027-02-20",
+            "source": "https://bsky.app/profile/did:plc:5tccqxugf2h7pocamiydvsth/post/3mzje5npaty2u",
+            "asOf": "2026-11-04T22:01:59.650Z",
+            "confidence": 0.9
           }
         },
         "hotel": {
@@ -47,6 +53,14 @@
             "source": "https://bsky.app/profile/did:plc:5tccqxugf2h7pocamiydvsth/post/3mw7tu7ac2h2o",
             "asOf": "2026-09-23T23:00:50.104Z",
             "confidence": 0.9
+          }
+        },
+        "panels": {
+          "opens": {
+            "date": "2026-10-29",
+            "source": "https://bsky.app/profile/did:plc:5tccqxugf2h7pocamiydvsth/post/3myzxbjqswt25",
+            "asOf": "2026-10-29T19:01:35.011Z",
+            "confidence": 0.95
           }
         },
         "djs": {

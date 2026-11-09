@@ -25,6 +25,12 @@
             "source": "https://bsky.app/profile/did:plc:uwoi7anxjcden4hkzck6h6c7/post/3mtcla3o6hc2m",
             "asOf": "2026-08-17T20:48:49.687Z",
             "confidence": 1
+          },
+          "closes": {
+            "date": "2026-11-17",
+            "source": "https://bsky.app/profile/did:plc:uwoi7anxjcden4hkzck6h6c7/post/3mzgqarepmy2a",
+            "asOf": "2026-11-03T21:00:29.549410740Z",
+            "confidence": 1
           }
         },
         "hotel": {

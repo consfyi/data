@@ -6,6 +6,23 @@
   },
   "events": [
     {
+      "id": "aberacon-2027",
+      "name": "Aberacon 2027",
+      "url": "https://aberacon.wales",
+      "startDate": "2027-09-03",
+      "endDate": "2027-09-05",
+      "venue": "Best Western Aberavon Beach Hotel",
+      "address": "Swansea, Port Talbot SA12 6QP, UK",
+      "locale": "en-GB",
+      "latLng": [
+        51.593402,
+        -3.8149049
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    },
+    {
       "id": "aberacon-2026",
       "name": "Aberacon 2026",
       "url": "https://aberacon.wales",

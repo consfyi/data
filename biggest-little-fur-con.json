@@ -6,6 +6,20 @@
   },
   "events": [
     {
+      "id": "biggest-little-fur-con-2027",
+      "name": "Biggest Little Fur Con 2027",
+      "url": "https://goblfc.org",
+      "startDate": "2027-10-28",
+      "endDate": "2027-10-31",
+      "venue": "Grand Sierra Resort, Reno, NV",
+      "address": "2500 E 2nd St, Reno, NV 89595, USA",
+      "locale": "en-US",
+      "latLng": [
+        39.5230411,
+        -119.7812235
+      ]
+    },
+    {
       "id": "biggest-little-fur-con-2026",
       "name": "Biggest Little Fur Con 2026",
       "url": "https://goblfc.org",

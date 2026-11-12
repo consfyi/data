@@ -1,0 +1,22 @@
+{
+  "name": "Fur Feast",
+  "events": [
+    {
+      "id": "fur-feast-2026",
+      "name": "Fur Feast 2026",
+      "url": "https://furrycons.com/event/29202/fur-feast-2026",
+      "startDate": "2026-11-14",
+      "endDate": "2026-11-15",
+      "venue": "Lake Afton",
+      "address": "Lake Afton, Afton Township, KS 67052, USA",
+      "locale": "en-US",
+      "latLng": [
+        37.6120075,
+        -97.6283674
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "name": "FurXmas",
+  "events": [
+    {
+      "id": "furxmas-14",
+      "name": "FurXmas 14",
+      "url": "https://ticketscandy.com/e/furxmas-14-21668",
+      "startDate": "2026-12-19",
+      "endDate": "2026-12-19",
+      "venue": "Domaine de Maizerets",
+      "address": "2000, boulevard Montmorency, Québec (Québec) G1J 5E7, Canada",
+      "locale": "fr-CA",
+      "latLng": [
+        46.8375384,
+        -71.2120602
+      ]
+    }
+  ]
+}

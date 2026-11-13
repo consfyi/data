@@ -1,0 +1,14 @@
+{
+  "name": "Furality Flower Festival",
+  "events": [
+    {
+      "id": "furality-flower-festival-2027",
+      "name": "Furality Flower Festival 2027",
+      "url": "https://furality.org/festival",
+      "startDate": "2027-01-22",
+      "endDate": "2027-01-24",
+      "venue": "VRChat",
+      "locale": "en-US"
+    }
+  ]
+}

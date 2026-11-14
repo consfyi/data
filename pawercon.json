@@ -2,6 +2,23 @@
   "name": "Pawercon",
   "events": [
     {
+      "id": "pawercon-2027",
+      "name": "Pawercon 2027",
+      "url": "https://imfur.org",
+      "startDate": "2027-05-21",
+      "endDate": "2027-05-23",
+      "venue": "Expo Reforma",
+      "address": "Av. Morelos 67, Juárez, Cuauhtémoc, 06600 Ciudad de México, CDMX, México",
+      "locale": "es-MX",
+      "latLng": [
+        19.4330201,
+        -99.1518279
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    },
+    {
       "id": "pawercon-2025",
       "name": "Pawercon 2025",
       "url": "https://imfur.org",

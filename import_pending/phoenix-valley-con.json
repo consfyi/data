@@ -1,0 +1,22 @@
+{
+  "name": "Phoenix Valley Con",
+  "events": [
+    {
+      "id": "phoenix-valley-con-2027",
+      "name": "Phoenix Valley Con 2027",
+      "url": "https://furrycons.com/event/29211/phoenix-valley-con-2027",
+      "startDate": "2027-08-06",
+      "endDate": "2027-08-08",
+      "venue": "Embassy Suites by Hilton Phoenix Scottsdale",
+      "address": "4415 E Paradise Vlg Pkwy S, Phoenix, AZ 85032, Amerika Birləşmiş Ştatları",
+      "locale": "en-US",
+      "latLng": [
+        33.5956174,
+        -111.9858098
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    }
+  ]
+}

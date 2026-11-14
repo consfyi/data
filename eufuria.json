@@ -6,6 +6,23 @@
   },
   "events": [
     {
+      "id": "eufuria-2027",
+      "name": "Eufuria 2027",
+      "url": "https://eufuria.org",
+      "startDate": "2027-07-22",
+      "endDate": "2027-07-24",
+      "venue": "Albany Capital Center",
+      "address": "55 Eagle St, Albany, NY 12207, USA",
+      "locale": "en-US",
+      "latLng": [
+        42.6498772,
+        -73.7560941
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    },
+    {
       "id": "eufuria-2026",
       "name": "Eufuria 2026",
       "url": "https://eufuria.org",

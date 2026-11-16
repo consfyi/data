@@ -673,5 +673,14 @@
     "reason": "at-con show starting (\"Furpoc Freestyle starts in 1 hour\"), not a performer application opening",
     "by": "sparkyfen",
     "at": "2026-10-30T21:23:13Z"
+  },
+  {
+    "event_id": "fur-the-more-2027",
+    "category": "dealers",
+    "kind": "opens",
+    "date": "2026-11-12",
+    "reason": "The post is a reminder that applications are already open, so 2026-11-12 is the post date, not the opening date.",
+    "by": "sparkyfen",
+    "at": "2026-11-16T17:54:26Z"
   }
 ]

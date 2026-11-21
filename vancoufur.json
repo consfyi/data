@@ -61,6 +61,12 @@
             "source": "https://bsky.app/profile/did:plc:5tccqxugf2h7pocamiydvsth/post/3myzxbjqswt25",
             "asOf": "2026-10-29T19:01:35.011Z",
             "confidence": 0.95
+          },
+          "closes": {
+            "date": "2026-12-14",
+            "source": "https://bsky.app/profile/did:plc:5tccqxugf2h7pocamiydvsth/post/3n2h7lvc65y2y",
+            "asOf": "2026-11-16T19:00:20.835Z",
+            "confidence": 0.9
           }
         },
         "djs": {
@@ -71,10 +77,10 @@
             "confidence": 0.95
           },
           "closes": {
-            "date": "2026-11-14",
-            "source": "https://bsky.app/profile/did:plc:5tccqxugf2h7pocamiydvsth/post/3mxp4jizmbs2j",
-            "asOf": "2026-10-12T18:11:02.645Z",
-            "confidence": 0.95
+            "date": "2026-11-13",
+            "source": "https://bsky.app/profile/did:plc:5tccqxugf2h7pocamiydvsth/post/3n27hqy5lff2a",
+            "asOf": "2026-11-13T17:05:03.628Z",
+            "confidence": 0.9
           }
         }
       }

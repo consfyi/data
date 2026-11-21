@@ -50,6 +50,12 @@
             "source": "https://bsky.app/profile/did:plc:vkij4nukia5yta6xjaep6esl/post/3myxjdqslqb2h",
             "asOf": "2026-10-28T19:46:57.654Z",
             "confidence": 0.95
+          },
+          "closes": {
+            "date": "2026-11-30",
+            "source": "https://bsky.app/profile/did:plc:vkij4nukia5yta6xjaep6esl/post/3n2epcs2txo2t",
+            "asOf": "2026-11-15T19:03:36.115Z",
+            "confidence": 0.9
           }
         },
         "volunteers": {

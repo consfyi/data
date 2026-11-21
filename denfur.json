@@ -28,6 +28,12 @@
             "source": "https://bsky.app/profile/did:plc:5qadfstdsv7yd2nvezahdlxq/post/3mxmplcosxj2v",
             "asOf": "2026-10-11T19:14:04.927Z",
             "confidence": 0.9
+          },
+          "closes": {
+            "date": "2026-11-01",
+            "source": "https://bsky.app/profile/did:plc:5qadfstdsv7yd2nvezahdlxq/post/3mxmplcosxj2v",
+            "asOf": "2026-10-11T19:14:04.927Z",
+            "confidence": 0.95
           }
         }
       }

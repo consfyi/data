@@ -20,7 +20,17 @@
       ],
       "sources": [
         "fancons.com"
-      ]
+      ],
+      "keyDates": {
+        "volunteers": {
+          "opens": {
+            "date": "2026-11-17",
+            "source": "https://bsky.app/profile/did:plc:hnrit3a6bvynnpaqq37pc7qq/post/3n2j7e3to7c2b",
+            "asOf": "2026-11-17T14:01:18.740Z",
+            "confidence": 0.9
+          }
+        }
+      }
     },
     {
       "id": "eufuria-2026",

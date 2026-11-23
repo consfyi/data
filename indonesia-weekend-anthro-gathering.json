@@ -6,6 +6,23 @@
   },
   "events": [
     {
+      "id": "indonesia-weekend-anthro-gathering-2027",
+      "name": "Indonesia Weekend Anthro Gathering 2027",
+      "url": "https://iwag.furries.id",
+      "startDate": "2027-07-03",
+      "endDate": "2027-07-04",
+      "venue": "Hotel Ciputra Jakarta",
+      "address": "Jl. Letjen S. Parman, RT.11/RW.1, Tj. Duren Utara, Kec. Grogol petamburan, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11470, Indonesia",
+      "locale": "id-ID",
+      "latLng": [
+        -6.168163,
+        106.7864179
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    },
+    {
       "id": "indonesia-weekend-anthro-gathering-2026",
       "name": "Indonesia Weekend Anthro Gathering 2026",
       "url": "https://iwag.furries.id",

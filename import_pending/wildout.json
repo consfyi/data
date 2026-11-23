@@ -1,0 +1,22 @@
+{
+  "name": "WildOut",
+  "events": [
+    {
+      "id": "wildout-2027",
+      "name": "WildOut 2027",
+      "url": "https://furrycons.com/event/29270/wildout-2027",
+      "startDate": "2027-04-23",
+      "endDate": "2027-04-25",
+      "venue": "RHI Porta Bologna",
+      "address": "Via Ponte Nuovo, 42, 40066 Pieve di Cento BO, Italia",
+      "locale": "it-IT",
+      "latLng": [
+        44.7155154,
+        11.2989375
+      ],
+      "sources": [
+        "fancons.com"
+      ]
+    }
+  ]
+}

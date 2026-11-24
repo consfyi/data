@@ -682,5 +682,14 @@
     "reason": "The post is a reminder that applications are already open, so 2026-11-12 is the post date, not the opening date.",
     "by": "sparkyfen",
     "at": "2026-11-16T17:54:26Z"
+  },
+  {
+    "event_id": "denfur-2027",
+    "category": "registration",
+    "kind": "closes",
+    "date": "2026-11-01",
+    "reason": "\"till November 1st\" is the end of the $50 badge tier, not the close of registration.",
+    "by": "sparkyfen",
+    "at": "2026-11-24T01:02:27Z"
   }
 ]

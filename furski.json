@@ -6,6 +6,20 @@
   },
   "events": [
     {
+      "id": "furski-2027",
+      "name": "Furski 2027",
+      "url": "https://fur.ski",
+      "startDate": "2027-01-01",
+      "endDate": "2027-01-01",
+      "venue": "Nordic Mountain",
+      "address": "W5806 County Road W, Mount Morris, WI 54984, United States",
+      "locale": "en-US",
+      "latLng": [
+        44.1203196,
+        -89.1819797
+      ]
+    },
+    {
       "id": "furski-2026",
       "name": "Furski 2026",
       "url": "https://fur.ski",

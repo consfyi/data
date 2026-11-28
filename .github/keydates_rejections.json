@@ -727,5 +727,14 @@
     "reason": "November 15 ended sponsor upgrades and T-shirts; convention tickets stay on sale until December 25",
     "by": "sparkyfen",
     "at": "2026-11-28T02:33:09Z"
+  },
+  {
+    "event_id": "furvester-7",
+    "category": "registration",
+    "kind": "closes",
+    "date": "2026-10-31",
+    "reason": "convention tickets stay on sale until December 25, per furvester.org/attending/registration",
+    "by": "sparkyfen",
+    "at": "2026-11-28T10:16:07Z"
   }
 ]

@@ -34,6 +34,34 @@
             "asOf": "2026-10-21T22:26:41.073Z",
             "confidence": 0.95
           }
+        },
+        "dealers": {
+          "opens": {
+            "date": "2026-11-24",
+            "source": "https://bsky.app/profile/did:plc:7ekpvrg7ne2oltxiiag4zcvo/post/3n32w64f4xl2w",
+            "asOf": "2026-11-24T15:04:48.591Z",
+            "confidence": 0.98
+          },
+          "closes": {
+            "date": "2026-12-18",
+            "source": "https://bsky.app/profile/did:plc:7ekpvrg7ne2oltxiiag4zcvo/post/3n32w64f4xl2w",
+            "asOf": "2026-11-24T15:04:48.591Z",
+            "confidence": 0.98
+          }
+        },
+        "djs": {
+          "opens": {
+            "date": "2026-11-26",
+            "source": "https://bsky.app/profile/did:plc:7ekpvrg7ne2oltxiiag4zcvo/post/3n2tsu5n6j72x",
+            "asOf": "2026-11-21T19:16:55.937Z",
+            "confidence": 0.9
+          },
+          "closes": {
+            "date": "2027-01-31",
+            "source": "https://bsky.app/profile/did:plc:7ekpvrg7ne2oltxiiag4zcvo/post/3n3aictyiss2r",
+            "asOf": "2026-11-26T20:12:54.094Z",
+            "confidence": 0.98
+          }
         }
       }
     },

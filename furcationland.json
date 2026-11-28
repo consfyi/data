@@ -27,6 +27,14 @@
             "confidence": 1.0
           }
         },
+        "hotel": {
+          "opens": {
+            "date": "2026-12-11",
+            "source": "https://bsky.app/profile/did:plc:clgiak22ikoxswjcxn6prgw7/post/3n2hjnonr6n2x",
+            "asOf": "2026-11-16T22:00:18.401Z",
+            "confidence": 0.95
+          }
+        },
         "volunteers": {
           "opens": {
             "date": "2026-07-01",

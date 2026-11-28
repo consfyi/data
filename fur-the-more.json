@@ -30,6 +30,14 @@
             "confidence": 0.95
           }
         },
+        "dealers": {
+          "opens": {
+            "date": "2026-11-07",
+            "source": "https://bsky.app/profile/did:plc:ex4dpm3lgpjwjuhvfpbw3duq/post/3mzqa2ol3lx2b",
+            "asOf": "2026-11-07T15:37:21.358003Z",
+            "confidence": 1
+          }
+        },
         "panels": {
           "opens": {
             "date": "2026-07-06",

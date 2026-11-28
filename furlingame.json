@@ -48,6 +48,20 @@
             "asOf": "2026-09-01T12:22:34.467Z",
             "confidence": 0.9
           }
+        },
+        "panels": {
+          "opens": {
+            "date": "2026-11-24",
+            "source": "https://bsky.app/profile/did:plc:bwf4zux2gax2kkmplggshyxd/post/3n33q7rbgb225",
+            "asOf": "2026-11-24T22:51:02.346Z",
+            "confidence": 1.0
+          },
+          "closes": {
+            "date": "2027-01-22",
+            "source": "https://bsky.app/profile/did:plc:bwf4zux2gax2kkmplggshyxd/post/3n33q7rbgb225",
+            "asOf": "2026-11-24T22:51:02.346Z",
+            "confidence": 1.0
+          }
         }
       }
     },

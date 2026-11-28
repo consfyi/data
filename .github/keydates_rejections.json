@@ -700,5 +700,14 @@
     "reason": "September 12 is when dealer applications open, not when they close",
     "by": "sparkyfen",
     "at": "2026-11-28T02:25:57Z"
+  },
+  {
+    "event_id": "fur-eh-2027",
+    "category": "panels",
+    "kind": "closes",
+    "date": "2026-11-29",
+    "reason": "this deadline is for the December 19 Christmas party, not the 2027 convention",
+    "by": "sparkyfen",
+    "at": "2026-11-28T02:26:03Z"
   }
 ]

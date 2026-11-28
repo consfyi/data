@@ -709,5 +709,14 @@
     "reason": "this deadline is for the December 19 Christmas party, not the 2027 convention",
     "by": "sparkyfen",
     "at": "2026-11-28T02:26:03Z"
+  },
+  {
+    "event_id": "texas-furry-fiesta-2027",
+    "category": "hotel",
+    "kind": "closes",
+    "date": "2026-12-01",
+    "reason": "December 1 closes Dallas Suite applications, not the hotel block",
+    "by": "sparkyfen",
+    "at": "2026-11-28T02:28:09Z"
   }
 ]

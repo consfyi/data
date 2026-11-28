@@ -691,5 +691,14 @@
     "reason": "\"till November 1st\" is the end of the $50 badge tier, not the close of registration.",
     "by": "sparkyfen",
     "at": "2026-11-24T01:02:27Z"
+  },
+  {
+    "event_id": "texas-furry-fiesta-2027",
+    "category": "dealers",
+    "kind": "closes",
+    "date": "2026-09-12",
+    "reason": "September 12 is when dealer applications open, not when they close",
+    "by": "sparkyfen",
+    "at": "2026-11-28T02:25:57Z"
   }
 ]
